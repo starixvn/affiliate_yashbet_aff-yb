@@ -1,0 +1,3 @@
+# aff-yashbet
+
+YashBet Affiliate
