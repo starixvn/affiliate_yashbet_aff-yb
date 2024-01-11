@@ -1,0 +1,6 @@
+﻿<Functions>
+  <Function Name="N88Licensee">
+    <Setting Key="N8G_AffiliateSel" SpName="N8G_AffiliateSel" DbName="N88Licensee" />
+    <Setting Key="Aff_CustomerSel" SpName="Aff_CustomerSel" DbName="N88Licensee" />
+  </Function>
+</Functions>

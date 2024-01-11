@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - LEGION / YASHBET AFF ADMIN Nexcel CSharp" ToolsVersion="16.0">
+  <Include Path="..\..\.sonarlint\aff.yb.usersitecsharp.ruleset" Action="Default" />
+  <Include Path="..\..\sonarqube\aff.yb.admincsharp.ruleset" Action="Default" />
+  <Include Path="..\..\sonarqube\aff.yb.usercsharp.ruleset" Action="Default" />
+</RuleSet>

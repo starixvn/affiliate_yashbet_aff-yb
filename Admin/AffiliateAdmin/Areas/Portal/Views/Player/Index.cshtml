@@ -1,0 +1,24 @@
+﻿@{
+    var isFromOtherPages = Model.IsFromOtherPages;
+}
+
+@model Fanex.Affiliate.Admin.Core.ViewModels.Member.MemberListViewModel
+
+@section pagecss{
+    <link href="@Url.VersionedLink("~/Areas/Portal/www/dist/style/pages/member/member-list.css")" rel="stylesheet" />
+}
+
+@{
+    Html.RenderPartial("~/Areas/Portal/Views/Player/_MemberSubMenu.cshtml", Model.SubMenuList);
+}
+
+@section pagejs{
+    <script type="text/javascript">
+        window.initialState = {
+            affName: '@Model.AffName',
+            isFromOtherPages: '@isFromOtherPages'.toLowerCase() === 'true' ? true : false,
+            today: '@DateTimeOffset.Now.ToOffset(new TimeSpan(8, 0, 0)).ToString("MM/dd/yyyy")',
+        }
+    </script>
+    <script type="text/javascript" src="@Url.VersionedLink("~/Areas/Portal/www/dist/js/pages/member/member-list.js")"></script>
+}

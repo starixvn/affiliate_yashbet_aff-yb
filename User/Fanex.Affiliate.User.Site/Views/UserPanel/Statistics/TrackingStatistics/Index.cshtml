@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+@model Fanex.Affiliate.User.Core.ViewModels.UserPanel.Statistics.TrackingStatisticsViewModel
+
+@Html.InlineStyles("~/www/build/styles/css/statistics.css")
+    <div class="sub-content">
+        <div class="page-title">
+            <span class="text">@Lang.TrackingStatistics</span>
+        </div>
+
+        <div class="info-group">
+            <form class="form-inline form-filter">
+                <div class="form-group">
+                    <label class="w150">@Lang.TrackingCode:</label>
+                    <select class="form-control" id="TrackingCode">
+                        <option value="">[@Lang.All]</option>
+                        <option value="[None]">[@Lang.none]</option>
+                        @foreach (var code in Model.TrackingCodeList)
+                        {
+                            <option value="@code">@code</option>
+                        }
+                    </select>
+                </div>
+                <button type="button" class="btn btn-submit btn-statistics" id="btnStatisticsSubmit">@Lang.Submit</button>
+            </form>
+
+            <div class="report-container">
+                <div class="table table-responsive" id="statisticsTable">
+                    @{ Html.RenderPartial("~/Views/UserPanel/Statistics/StatisticsPartial/_TrackingStatisticsContent.cshtml", Model); }
+                </div>
+
+                <div class="table detail" id="statisticsDetailTable">
+                </div>
+            </div>
+        </div>
+
+        <script src="@Url.RenderLink("~/www/build/js/trackingstatistics.js")"></script>
+    </div>

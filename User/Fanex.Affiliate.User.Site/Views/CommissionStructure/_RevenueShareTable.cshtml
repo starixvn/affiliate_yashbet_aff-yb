@@ -1,0 +1,20 @@
+﻿@model string
+
+<div class="table table-responsive">
+    <table>
+        <thead>
+            <tr>
+                <th width="35%">@Lang.CompanyNetProfitYB</th>
+                <th width="35%">@Lang.TotalActivePlayer</th>
+                <th width="30%">@Lang.CommissionRate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">@Lang.TwentyFiveThousandAndAbove</td>
+                <td class="text-center word">@Html.Raw(Lang.QualifyingMembers)</td>
+                <td class="text-center">@Model</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

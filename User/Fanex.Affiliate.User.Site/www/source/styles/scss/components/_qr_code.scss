@@ -1,0 +1,92 @@
+﻿.qr-panel {
+    margin: -20px;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px;
+    padding-top: 0px;
+
+}
+.qr-item {
+    margin: 20px;
+
+    .main-panel {
+        padding: 10px;
+    }
+
+    .toggle-btn {
+        margin-right: -30px;
+    }
+
+    .toggle, .toggle-on, .toggle-off {
+        border-radius: 13px;
+        height: 13px;
+        width: 27px;
+    }
+
+    .toggle-on, .toggle-off {
+        line-height: 13px;
+        font-size: 11px;
+    }
+
+    label {
+        margin: 0px;
+    }
+}
+
+.qr-img{
+    img{
+        height: 100px;
+        width: 100px;
+        &.default{
+            display: none;
+        }
+    }
+    &.disabled{
+        img.default{
+            display: block;
+        }
+        img.qrcode{
+            display:none;
+        }
+    }
+}
+
+.qr-btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    button {
+        border-radius: 2px;
+        display: block;
+        width: 124px;
+        height: 30px;
+        padding: 0px;
+        border:0px;
+
+        &:disabled{
+            opacity: 0.5;
+        }
+    }
+}
+.qr-action{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    .qr-btn-group{
+        flex-grow:1;
+    }
+}
+
+.qr-footer {
+    text-align: center;
+    margin-top: 10px;
+
+    button {
+        border: 0px;
+
+        &:disabled {
+            opacity: 0.3;
+        }
+    }
+}

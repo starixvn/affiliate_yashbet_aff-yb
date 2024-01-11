@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`message - components - AppContainer render correctly 1`] = `
+<AppLayout>
+  <Loader
+    show={true}
+  />
+  <div
+    className="message mt-2"
+  >
+    <Connect(Component) />
+    <Connect(Component) />
+    <Connect(Component) />
+    <Connect(Component) />
+  </div>
+</AppLayout>
+`;

@@ -1,0 +1,72 @@
+﻿@using Fanex.Affiliate.User.Core.DTO.UserPanel;
+@using System.Linq;
+@model IEnumerable<IGrouping<string, MarketingPageStatistics>>
+
+@helper RenderItem(IGrouping<string, MarketingPageStatistics> item, int index)
+{
+
+    var channelName = item.First().ChannelName;
+
+
+    <tr data-id='@item.Key' class='parent-item'>
+        <td class="text-center">@index</td>
+        <td class="text-bold">
+            <div class="flex">
+                <span class="flex-0">@channelName</span>
+                <div class="flex-middle">
+                    <button class="btn btn-transparent btn-dropdown-table">
+                    </button>
+                </div>
+            </div>
+        </td>
+        <td class="text-center">-</td>
+        <td class="text-right">@item.Sum(l => l.TotalClick) </td>
+        <td class="text-right">@item.Sum(l => l.UniqueClick) </td>
+    </tr>
+    foreach (var link in item)
+    {
+        @RenderLinkRow(link);
+    }
+}
+
+@helper RenderLinkRow(MarketingPageStatistics link)
+{
+    <tr data-parent="@link.ChannelName" class="display-none parent-tr">
+        <td></td>
+        <td>@link.AffMediaLink</td>
+        <td class="text-center">@link.MarketName</td>
+        <td class="text-right">@link.TotalClick</td>
+        <td class="text-right">@link.UniqueClick</td>
+    </tr>
+}
+
+<table style="table-layout: fixed; width: 100%" class="row-toogleable-table">
+    <thead>
+        <tr>
+            <th width="5%"></th>
+            <th width="50%">@Lang.PageName</th>
+            <th width="15%">@Lang.Language</th>
+            <th width="15%">@Lang.TotalClick</th>
+            <th width="15%">@Lang.UniqueClick</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if (Model != null && Model.Any())
+            {
+                var index = 1;
+                foreach (var item in Model)
+                {
+                    @RenderItem(item, index);
+                    index++;
+                }
+            }
+            else
+            {
+                <tr>
+                    <td class="text-center no-info" colspan="5">@Lang.NoInfo</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

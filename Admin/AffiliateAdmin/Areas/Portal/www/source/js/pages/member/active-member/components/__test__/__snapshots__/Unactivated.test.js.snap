@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`active member - components - Unactivated  render correctly 1`] = `
+<div
+  className="data-content"
+>
+  <div
+    className="active-member-content table-responsive table-striped my-2"
+  >
+    <div
+      className="title-text"
+    >
+      Members have not been activated
+    </div>
+    <t
+      adjustedHeight={0}
+      autoHeight={true}
+      autoWidth={true}
+      body={
+        Array [
+          <t>
+            <t
+              asc={true}
+              className="text-center"
+              header={false}
+              onClick={[Function]}
+              sortable={false}
+              sorting={false}
+              title={1}
+            >
+              1
+            </t>
+            <t
+              asc={true}
+              className="text-center"
+              header={false}
+              onClick={[Function]}
+              sortable={false}
+              sorting={false}
+              title="xyl157"
+            >
+              xyl157
+            </t>
+            <t
+              asc={true}
+              className="text-center"
+              header={false}
+              onClick={[Function]}
+              sortable={false}
+              sorting={false}
+              title=""
+            >
+              ---
+            </t>
+            <t
+              asc={true}
+              className="text-center"
+              header={false}
+              onClick={[Function]}
+              sortable={false}
+              sorting={false}
+              title=""
+            >
+              ---
+            </t>
+            <t
+              asc={true}
+              className="text-center"
+              header={false}
+              onClick={[Function]}
+              sortable={false}
+              sorting={false}
+              title="Active"
+            >
+              <Button
+                color="link p-0"
+                onClick={[Function]}
+                tag="button"
+              >
+                Active
+              </Button>
+            </t>
+          </t>,
+        ]
+      }
+      bodyHeight={300}
+      containerPadding={20}
+      header={
+        <t>
+          <t
+            asc={true}
+            colWidth={20}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+            title="#"
+          >
+            #
+          </t>
+          <t
+            asc={true}
+            colWidth={100}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+            title="User Name"
+          >
+            User Name
+          </t>
+          <t
+            asc={true}
+            colWidth={100}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+            title="First Name"
+          >
+            First Name
+          </t>
+          <t
+            asc={true}
+            colWidth={100}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+            title="Last Name"
+          >
+            Last Name
+          </t>
+          <t
+            asc={true}
+            colWidth={50}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+          >
+            <Button
+              color="link p-0"
+              onClick={[Function]}
+              tag="button"
+            >
+              Active All
+            </Button>
+          </t>
+        </t>
+      }
+      isPaging={false}
+      maxWidth={690}
+      shouldResetScrollPosition={true}
+      width={0}
+    />
+  </div>
+</div>
+`;
+
+exports[`active member - components - Unactivated  render correctly with unactivatedGridData is empty 1`] = `
+<div
+  className="data-content"
+>
+  <div
+    className="active-member-content table-responsive table-striped my-2"
+  >
+    <div
+      className="title-text"
+    >
+      Members have not been activated
+    </div>
+    <t
+      adjustedHeight={0}
+      autoHeight={true}
+      autoWidth={true}
+      body={
+        Array [
+          <t>
+            <t
+              asc={true}
+              className="text-center"
+              colSpan="4"
+              header={false}
+              onClick={[Function]}
+              sortable={false}
+              sorting={false}
+            >
+              There is no information available
+            </t>
+          </t>,
+        ]
+      }
+      bodyHeight={300}
+      containerPadding={20}
+      header={
+        <t>
+          <t
+            asc={true}
+            colWidth={20}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+            title="#"
+          >
+            #
+          </t>
+          <t
+            asc={true}
+            colWidth={100}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+            title="User Name"
+          >
+            User Name
+          </t>
+          <t
+            asc={true}
+            colWidth={100}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+            title="First Name"
+          >
+            First Name
+          </t>
+          <t
+            asc={true}
+            colWidth={100}
+            header={true}
+            onClick={[Function]}
+            sortable={false}
+            sorting={false}
+            title="Last Name"
+          >
+            Last Name
+          </t>
+        </t>
+      }
+      isPaging={false}
+      maxWidth={690}
+      shouldResetScrollPosition={true}
+      width={0}
+    />
+  </div>
+</div>
+`;
+
+exports[`active member - components - Unactivated  render correctly with unactivatedGridData is null 1`] = `""`;

@@ -1,0 +1,24 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="Microsoft.Web.XmlTransform.dll" #>
+<#@ import namespace="System.Xml" #>
+<#@ output extension=".txt" #>
+<#
+string projectPath = Host.ResolveAssemblyReference("$(SolutionDir)") + @"\User\Fanex.Affiliate.User.Site\";
+var environments = new string[] {"local", "sit", "uat", "production" };
+var sites = new string[] {"yb"};
+foreach(var environment in environments)
+{
+	foreach(var site in sites)
+	{
+		var fileName = string.Format("{0}.{1}.config", site, environment);
+		using(var transform = new Microsoft.Web.XmlTransform.XmlTransformation(projectPath + @"Configurations\AppSetting\Transform\" + fileName))
+		{
+			var document = new XmlDocument();
+			document.Load(projectPath + "AppSetting.config");
+			transform.Apply(document);
+			document.Save(projectPath + @"Configurations\AppSetting\AppSetting.user-" + fileName);
+		}
+	}
+}
+#>

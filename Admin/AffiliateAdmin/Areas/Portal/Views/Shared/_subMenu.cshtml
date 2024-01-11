@@ -1,0 +1,10 @@
+﻿
+@model IEnumerable<Fanex.Affiliate.Admin.Core.DTO.SubMenu>
+<ul class="nav">
+    @foreach (var item in Model)
+    {
+        <li class="nav-item">
+            <a class="nav-link @(item.IsActive? "active" : string.Empty)" href="@item.Url" target="_self">@item.Name</a>
+        </li>
+    }
+</ul>

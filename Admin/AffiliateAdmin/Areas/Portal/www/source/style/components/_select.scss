@@ -1,0 +1,19 @@
+﻿@import "../vendors/select";
+
+.select {
+    &-options-container {
+        top: 23px;
+    }
+
+    &-label {
+        height: 24px;
+        padding: 2px 20px 0 6px;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+
+        .caret {
+            right: 4px;
+            top: calc(50% - 2px);
+        }
+    }
+}

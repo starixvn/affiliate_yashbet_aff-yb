@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`member list - components - AppContainer render correctly 1`] = `
+<AppLayout>
+  <Loader
+    show={true}
+  />
+  <Connect(Component) />
+  <Connect(Content) />
+  <Connect(EditMemberPopup) />
+</AppLayout>
+`;

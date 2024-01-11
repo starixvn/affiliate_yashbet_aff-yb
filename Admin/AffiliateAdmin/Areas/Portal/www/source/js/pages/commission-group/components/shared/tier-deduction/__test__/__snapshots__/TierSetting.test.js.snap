@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`commission group - TierSetting Should render correctly 1`] = `
+<table
+  className="table table-bordered tier-setting-table"
+  style={
+    Object {
+      "marginLeft": 42,
+      "width": "495px",
+    }
+  }
+>
+  <thead>
+    <tr>
+      <th
+        style={
+          Object {
+            "width": 40,
+          }
+        }
+      >
+        Tier
+      </th>
+      <th>
+        Min Net Win
+      </th>
+      <th>
+        Min Active Player
+      </th>
+      <th
+        style={
+          Object {
+            "width": 85,
+          }
+        }
+      >
+        Rev. Share%
+      </th>
+      <th
+        style={
+          Object {
+            "width": 50,
+          }
+        }
+      >
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <TierSettingItem
+      btnText="+"
+      data={
+        Object {
+          "Commission": 0,
+          "GroupProductId": 123,
+          "MinAmount": 0,
+          "MinAp": 5,
+          "TierId": 1,
+        }
+      }
+      handleClick={[Function]}
+      key="tier-0"
+      onChange={[Function]}
+    />
+    <TierSettingItem
+      btnText="-"
+      data={
+        Object {
+          "Commission": 0.1,
+          "GroupProductId": 123,
+          "MinAmount": 1,
+          "MinAp": 5,
+          "TierId": 2,
+        }
+      }
+      handleClick={[Function]}
+      key="tier-1"
+      onChange={[Function]}
+    />
+  </tbody>
+</table>
+`;
+
+exports[`commission group - TierSetting Should render correctly with TierSettingList is null 1`] = `
+<table
+  className="table table-bordered tier-setting-table"
+  style={
+    Object {
+      "marginLeft": 42,
+      "width": "495px",
+    }
+  }
+>
+  <thead>
+    <tr>
+      <th
+        style={
+          Object {
+            "width": 40,
+          }
+        }
+      >
+        Tier
+      </th>
+      <th>
+        Min Net Win
+      </th>
+      <th>
+        Min Active Player
+      </th>
+      <th
+        style={
+          Object {
+            "width": 85,
+          }
+        }
+      >
+        Rev. Share%
+      </th>
+      <th
+        style={
+          Object {
+            "width": 50,
+          }
+        }
+      >
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;

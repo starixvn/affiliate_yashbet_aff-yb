@@ -1,0 +1,7 @@
+﻿// Generated helper templates
+// Generated items
+// Fanex.Affiliate.User.Site\App_Data\SpConfig\SpName.user-yb.local.xml
+// Fanex.Affiliate.User.Site\App_Data\SpConfig\SpName.user-yb.sit.xml
+// Fanex.Affiliate.User.Site\App_Data\SpConfig\SpName.user-yb.production.xml
+// Fanex.Affiliate.User.Site\App_Data\SpConfig\SpName.user-yb.uat.xml
+// Fanex.Affiliate.User.Site\App_Data\SpConfig\SpName.xml

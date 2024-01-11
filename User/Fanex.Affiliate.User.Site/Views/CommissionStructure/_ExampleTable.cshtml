@@ -1,0 +1,48 @@
+﻿@model Fanex.Affiliate.User.Core.ViewModels.RevenueSharingStructureViewModel
+
+<div class="table table-responsive" style="max-width: 1000px; margin: 15px auto;">
+    <table>
+        <thead>
+            <tr>
+                <th width="10%"></th>
+                <th width="40%">@Lang.ActiveReferredPlayers</th>
+                <th width="40%">@string.Format(Lang.NetWinLossYB, Model.DefaultCurrency)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">1</td>
+                <td class="text-center">P1</td>
+                <td class="text-center">@Lang.P1YB</td>
+            </tr>
+            <tr>
+                <td class="text-center">2</td>
+                <td class="text-center">P2</td>
+                <td class="text-center">@Lang.P2YB</td>
+            </tr>
+            <tr>
+                <td class="text-center">3</td>
+                <td class="text-center">P3</td>
+                <td class="text-center">@Lang.P3YB</td>
+            </tr>
+            <tr>
+                <td class="text-center">4</td>
+                <td class="text-center">P4</td>
+                <td class="text-center">@Lang.P4YB</td>
+            </tr>
+            <tr>
+                <td class="text-center">5</td>
+                <td class="text-center">P5</td>
+                <td class="text-center">@Lang.P5YB</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">@Lang.Total</td>
+                <td class="text-center">@Lang.TotalYB (@Lang.Tier 3)</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">@Lang.YourRevenueShare</td>
+                <td class="text-center">@Lang.TotalYB x @Model.MaxCommission = <strong>@Lang.YourRevenueShareYB</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

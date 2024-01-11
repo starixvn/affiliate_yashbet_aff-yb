@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`commission group - FeeSettingItem Should render correctly 1`] = `
+<FormGroup
+  className="align-items-center"
+  row={true}
+  tag="div"
+>
+  <Label
+    className="font-weight-bold"
+    sm={3}
+    tag="label"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    Operational Fee%
+  </Label>
+  <Col
+    sm={
+      Object {
+        "offset": 1,
+        "size": 4,
+      }
+    }
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <Form
+      inline={true}
+      tag="form"
+    >
+      <Memo(DeductedPercentageGroup)
+        label="| Gross Win Loss |"
+        onChange={[Function]}
+        value={0.07}
+      />
+    </Form>
+  </Col>
+  <Col
+    sm={3}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <Form
+      inline={true}
+      tag="form"
+    >
+      <FormGroup
+        check={true}
+        tag="div"
+      >
+        <Label
+          check={true}
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <Input
+            checked={false}
+            name="IsDeductionPercent"
+            onChange={[Function]}
+            type="checkbox"
+          />
+           Fixed Amount
+        </Label>
+      </FormGroup>
+    </Form>
+  </Col>
+</FormGroup>
+`;
+
+exports[`commission group - FeeSettingItem Should render correctly with is fixed amount 1`] = `
+<FormGroup
+  className="align-items-center"
+  row={true}
+  tag="div"
+>
+  <Label
+    className="font-weight-bold"
+    sm={3}
+    tag="label"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    Operational Fee%
+  </Label>
+  <Col
+    sm={4}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <Form
+      inline={true}
+      tag="form"
+    >
+      <FormGroup
+        className="label-group"
+        tag="div"
+      >
+        <Label
+          className="label-amount"
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          Amount
+        </Label>
+      </FormGroup>
+      <FormGroup
+        tag="div"
+      >
+        <Input
+          className="form-control"
+          name="DeductedAmount"
+          onChange={[Function]}
+          style={
+            Object {
+              "width": 120,
+            }
+          }
+          type="text"
+          value=""
+        />
+      </FormGroup>
+    </Form>
+  </Col>
+  <Col
+    sm={1}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <p
+      className="deducted-amount"
+    >
+      <span
+        className="text-danger required"
+      >
+        *
+      </span>
+       (undefined)
+    </p>
+  </Col>
+  <Col
+    sm={3}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <Form
+      inline={true}
+      tag="form"
+    >
+      <FormGroup
+        check={true}
+        tag="div"
+      >
+        <Label
+          check={true}
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <Input
+            checked={true}
+            name="IsDeductionPercent"
+            onChange={[Function]}
+            type="checkbox"
+          />
+           Fixed Amount
+        </Label>
+      </FormGroup>
+    </Form>
+  </Col>
+</FormGroup>
+`;

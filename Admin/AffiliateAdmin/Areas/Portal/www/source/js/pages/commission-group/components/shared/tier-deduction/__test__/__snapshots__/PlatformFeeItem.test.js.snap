@@ -1,0 +1,263 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`commission group - PlatformFeeItem Should render correctly 1`] = `
+<div
+  className="mb-2"
+>
+  <FormGroup
+    className="align-items-center"
+    row={true}
+    tag="div"
+  >
+    <Col
+      sm={4}
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <span
+        className="group-index"
+      >
+        .
+      </span>
+      <div
+        className="select-product is-invalid"
+      >
+        <MultipleSelect
+          dataSource={
+            Array [
+              Object {
+                "Checked": false,
+                "ProductId": 1,
+                "ProductName": "Sportsbook",
+              },
+              Object {
+                "Checked": false,
+                "ProductId": 3,
+                "ProductName": "Playtech Casino",
+              },
+              Object {
+                "Checked": false,
+                "ProductId": 4,
+                "ProductName": "Number Game",
+              },
+            ]
+          }
+          hasAllOption={false}
+          hasInputOption={true}
+          isDisable={false}
+          keyField="ProductId"
+          maxDisplayItemCount={1}
+          noneSelectedLabel="Please Select"
+          onChange={[Function]}
+          statusField="Checked"
+          valueField="ProductName"
+        />
+      </div>
+    </Col>
+    <Col
+      className="pl-0"
+      sm={5}
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <Form
+        inline={true}
+        tag="form"
+      >
+        <Label
+          className="font-weight-bold pr-2"
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          Royalty Fee:
+        </Label>
+        <Memo(DeductedPercentageGroup)
+          label="| Gross Game Revenue |"
+          onChange={[Function]}
+          value={0.12}
+        />
+      </Form>
+    </Col>
+    <Col
+      className="pl-0"
+      sm={3}
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <button
+        className="btn btn-action"
+        onClick={[MockFunction]}
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "width": "100%",
+          }
+        }
+        type="button"
+      >
+        -
+      </button>
+    </Col>
+  </FormGroup>
+  <Connect(TierSetting) />
+</div>
+`;
+
+exports[`commission group - PlatformFeeItem Should render correctly with only one row 1`] = `
+<div
+  className="mb-2"
+>
+  <FormGroup
+    className="align-items-center"
+    row={true}
+    tag="div"
+  >
+    <Col
+      sm={4}
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <span
+        className="group-index"
+      >
+        .
+      </span>
+      <div
+        className="select-product "
+      >
+        <MultipleSelect
+          dataSource={
+            Array [
+              Object {
+                "Checked": true,
+                "ProductId": 1,
+                "ProductName": "Sportsbook",
+              },
+            ]
+          }
+          hasAllOption={false}
+          hasInputOption={true}
+          isDisable={false}
+          keyField="ProductId"
+          maxDisplayItemCount={1}
+          noneSelectedLabel="None"
+          onChange={[Function]}
+          statusField="Checked"
+          valueField="ProductName"
+        />
+      </div>
+    </Col>
+    <Col
+      className="pl-0"
+      sm={5}
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <Form
+        inline={true}
+        tag="form"
+      >
+        <Label
+          className="font-weight-bold pr-2"
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          Royalty Fee:
+        </Label>
+        <Memo(DeductedPercentageGroup)
+          label="| Gross Game Revenue |"
+          onChange={[Function]}
+        />
+      </Form>
+    </Col>
+    <Col
+      className="pl-0"
+      sm={3}
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <button
+        className="btn btn-action"
+        disabled={true}
+        onClick={[MockFunction]}
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "width": "100%",
+          }
+        }
+        type="button"
+      >
+        +
+      </button>
+    </Col>
+  </FormGroup>
+  <Connect(TierSetting) />
+</div>
+`;

@@ -1,0 +1,64 @@
+﻿@import "../scss/abstracts/mixins";
+@import "../scss/components/pikaday";
+@import "../scss/components/pager";
+@import '../scss/components/table-sticky';
+@import '../scss/components/group-control';
+
+.btn-statistics {
+    margin-right: 0;
+}
+
+#statisticsDetailTable {
+    margin-top: 15px;
+}
+
+#statisticsDetailPager {
+    //width: 70%;
+    margin: 4rem 0 1.6rem;
+
+    @include TableAndMobile {
+        width: 100%;
+    }
+
+    @include Mobile {
+        margin: 2.4rem 0 .8rem;
+    }
+
+    & + #statisticsDetailTable {
+        margin-top: 0;
+    }
+}
+
+.overview-table {
+    //width: 70%;
+    margin: 0;
+
+    @include TableAndMobile {
+        width: 100% !important;
+    }
+}
+
+#TrackingCode {
+    width: 150px;
+}
+
+.marketing-statistics {
+    //width: 77%;
+
+    table {
+        td {
+            background-color: #FFFFFF;
+        }
+
+        .parent-tr {
+            td {
+                background: #EEEEEE !important;
+                font-weight: 400;
+            }
+
+            td:nth-child(2) {
+                color: #025EB1;
+            }
+        }
+    }
+}

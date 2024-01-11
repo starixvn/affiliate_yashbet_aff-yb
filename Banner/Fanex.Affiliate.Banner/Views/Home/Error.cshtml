@@ -1,0 +1,11 @@
+﻿@model HandleErrorInfo
+
+@{
+    ViewBag.Title = "Affiliate Banner Error";
+}
+
+Error!
+@if (Model != null)
+{
+    @Model.Exception.Message
+}

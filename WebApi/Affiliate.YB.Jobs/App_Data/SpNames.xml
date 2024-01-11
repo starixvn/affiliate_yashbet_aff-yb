@@ -1,0 +1,20 @@
+﻿<Functions>
+  <Function Name="Affiliate_YB">
+    <Setting Key="YB_Task_Aff_MemberInfo_Import" SpName="Task_Aff_MemberInfo_Import" DbName="Affiliate_YB"/>
+    <Setting Key="YB_Task_Aff_GetSetting" SpName ="Task_Aff_GetSetting" DbName="Affiliate_YB" />
+  </Function>
+  <Funtion Name="ThirdPartyImport">
+    <Setting Key="Master_Task_API_Queue_Import" SpName="Task_API_Queue_Import" DbName="Master_bodb_YB"/>
+    <Setting Key="Slave_Task_API_Queue_Import" SpName="Task_API_Queue_Import" DbName="Slave_bodb_YB"/>
+    <Setting Key="Master_Task_API_TimeTracker_Sel" SpName="Task_API_TimeTracker_Sel" DbName="Master_bodb_YB"/>
+    <Setting Key="Slave_Task_API_TimeTracker_Sel" SpName="Task_API_TimeTracker_Sel" DbName="Slave_bodb_YB"/>
+    <Setting Key="Master_Task_API_TimeTracker_Import" SpName="Task_API_TimeTracker_Import" DbName="Master_bodb_YB"/>
+    <Setting Key="Slave_Task_API_TimeTracker_Import" SpName="Task_API_TimeTracker_Import" DbName="Slave_bodb_YB"/>
+  </Funtion>
+  <Function Name="DataTracker">
+    <Setting Key="Master_Task_API_PushDataTracker_Sel" SpName="Task_API_PushDataTracker_Sel" DbName="Master_bodb_YB"/>
+    <Setting Key="Slave_Task_API_PushDataTracker_Sel" SpName="Task_API_PushDataTracker_Sel" DbName="Slave_bodb_YB"/>
+    <Setting Key="Master_Task_API_PushDataTracker_Upd" SpName="Task_API_PushDataTracker_Upd" DbName="Master_bodb_YB"/>
+    <Setting Key="Slave_Task_API_PushDataTracker_Upd" SpName="Task_API_PushDataTracker_Upd" DbName="Slave_bodb_YB"/>
+  </Function>
+</Functions>

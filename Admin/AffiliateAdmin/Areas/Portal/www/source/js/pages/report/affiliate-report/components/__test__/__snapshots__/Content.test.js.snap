@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`affiliate report - Content  N8B - should render correctly when currentViewLevel is Main view 1`] = `
+<div
+  className="data-content my-2 report-content-container"
+>
+  <p
+    className="affiliate-report-note"
+  >
+    Notes: First Comm Rate and Earning will calculate at 5th July 2020
+  </p>
+  <ForwardRef
+    content={
+      <div
+        className="d-flex align-items-center"
+      >
+        Report Title - currentViewLevel is Main view
+        <button
+          className="ml-auto btn btn-link btn-excel"
+          onClick={[Function]}
+          title="Export Excel"
+          type="button"
+        >
+          <span
+            className="oi icon-excel"
+          />
+        </button>
+      </div>
+    }
+  />
+  <Connect(GridData) />
+</div>
+`;
+
+exports[`affiliate report - Content  should render correctly when currentViewLevel is Main view 1`] = `
+<div
+  className="data-content my-2 report-content-container"
+>
+  <ForwardRef
+    content={
+      <div
+        className="d-flex align-items-center"
+      >
+        Report Title - currentViewLevel is Main view
+        <button
+          className="ml-auto btn btn-link btn-excel"
+          onClick={[Function]}
+          title="Export Excel"
+          type="button"
+        >
+          <span
+            className="oi icon-excel"
+          />
+        </button>
+      </div>
+    }
+  />
+  <Connect(GridData) />
+</div>
+`;
+
+exports[`affiliate report - Content  should render correctly when currentViewLevel is Month on Month view 1`] = `
+<div
+  className="data-content my-2 report-content-container"
+>
+  <ForwardRef
+    content={
+      <div
+        className="d-flex align-items-center"
+      >
+        <a
+          className="btn-link font-weight-bold"
+          href="javascript:;"
+          onClick={[Function]}
+        >
+          AFFILIATE REPORT
+        </a>
+         &gt; 
+        Report Title - currentViewLevel is Month on Month view
+        <button
+          className="ml-auto btn btn-link btn-excel"
+          onClick={[Function]}
+          title="Export Excel"
+          type="button"
+        >
+          <span
+            className="oi icon-excel"
+          />
+        </button>
+      </div>
+    }
+  />
+  <Connect(GridData) />
+</div>
+`;
+
+exports[`affiliate report - Content  should render correctly with _buildReportTitle when currentViewLevel is Main view 1`] = `
+<div>
+  <div
+    className="d-flex align-items-center"
+  >
+    <button
+      className="ml-auto btn btn-link btn-excel"
+      onClick={[Function]}
+      title="Export Excel"
+      type="button"
+    >
+      <span
+        className="oi icon-excel"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`affiliate report - Content  should render correctly with _buildReportTitle when currentViewLevel is Month on Month view 1`] = `
+<div>
+  <div
+    className="d-flex align-items-center"
+  >
+    <a
+      className="btn-link font-weight-bold"
+      href="javascript:;"
+      onClick={[Function]}
+    >
+      AFFILIATE REPORT
+    </a>
+     &gt; 
+    <button
+      className="ml-auto btn btn-link btn-excel"
+      onClick={[Function]}
+      title="Export Excel"
+      type="button"
+    >
+      <span
+        className="oi icon-excel"
+      />
+    </button>
+  </div>
+</div>
+`;

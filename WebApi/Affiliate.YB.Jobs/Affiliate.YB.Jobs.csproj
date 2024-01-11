@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	<OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App_Data\SpNames.xml" />
+    <None Remove="Deployment.ignore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Data\SpNames.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Deployment.ignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fanex.Data.Repository" Version="4.2.2" />
+    <PackageReference Include="Fanex.Data.SqlServer" Version="4.2.2" />
+    <PackageReference Include="Fanex.Logging.Extensions.AspNetCore" Version="1.0.1-beta1" />
+    <PackageReference Include="Fanex.Logging.Sentry.RavenClient" Version="1.0.1" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.11" />
+    <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.WindowsServices" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="refit" Version="5.0.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Affiliate.YB.Infrastructure\Affiliate.YB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.local.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.pro.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.uat.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`commission group - P2pDeductionSetting should render correctly 1`] = `
+<fieldset
+  className="p2p-product-group"
+>
+  <legend>
+    <h6
+      className="font-weight-bold"
+    >
+      P2P Products Deduction
+    </h6>
+  </legend>
+  <P2pDeductionItem
+    btnText="+"
+    data={
+      Object {
+        "commission": 0.1,
+        "deductedPercentage": 0.15,
+        "productList": Array [
+          Object {
+            "Checked": false,
+            "ProductId": 1,
+            "ProductName": "Sportsbook",
+          },
+          Object {
+            "Checked": true,
+            "ProductId": 2,
+            "ProductName": "Poker",
+          },
+          Object {
+            "Checked": false,
+            "ProductId": 3,
+            "ProductName": "Playtech Casino",
+          },
+          Object {
+            "Checked": false,
+            "ProductId": 4,
+            "ProductName": "Number Game",
+          },
+          Object {
+            "Checked": false,
+            "ProductId": 5,
+            "ProductName": "V8 Poker",
+          },
+        ],
+      }
+    }
+    handleClick={[Function]}
+    index={1}
+    isFirst={true}
+    isOnlyOneP2pDeductionRow={false}
+    key="p2p-0"
+    onChangeCommission={[Function]}
+    onSelectProduct={[Function]}
+  />
+  <P2pDeductionItem
+    btnText="-"
+    data={
+      Object {
+        "commission": 0.15,
+        "deductedPercentage": 0.1,
+        "productList": Array [
+          Object {
+            "Checked": false,
+            "ProductId": 1,
+            "ProductName": "Sportsbook",
+          },
+          Object {
+            "Checked": false,
+            "ProductId": 3,
+            "ProductName": "Playtech Casino",
+          },
+          Object {
+            "Checked": false,
+            "ProductId": 4,
+            "ProductName": "Number Game",
+          },
+          Object {
+            "Checked": true,
+            "ProductId": 5,
+            "ProductName": "V8 Poker",
+          },
+        ],
+      }
+    }
+    handleClick={[Function]}
+    index={2}
+    isFirst={false}
+    isOnlyOneP2pDeductionRow={false}
+    key="p2p-1"
+    onChangeCommission={[Function]}
+    onSelectProduct={[Function]}
+  />
+</fieldset>
+`;

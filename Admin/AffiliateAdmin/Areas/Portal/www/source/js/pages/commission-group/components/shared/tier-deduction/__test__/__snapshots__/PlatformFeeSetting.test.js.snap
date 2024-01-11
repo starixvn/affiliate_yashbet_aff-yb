@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`commission group - platform fee setting should render correctly 1`] = `
+<div
+  className="platformfee-group"
+>
+  <div
+    className="d-flex"
+  >
+    <p
+      className="font-weight-bold mr-5"
+    >
+      Product Groups
+    </p>
+    <Form
+      inline={true}
+      tag="form"
+    >
+      <FormGroup
+        check={true}
+        tag="div"
+      >
+        <Label
+          check={true}
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <Input
+            name="IsActivePlayerSum"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          Count Active Player across all products(exclude Free Bet)
+        </Label>
+      </FormGroup>
+    </Form>
+  </div>
+  <PlatformFeeItem
+    btnText={
+      <React.Fragment>
+        <span>
+          Add Product Group
+        </span>
+        <span>
+          +
+        </span>
+      </React.Fragment>
+    }
+    data={
+      Object {
+        "commission": 0.17,
+        "groupProductId": 123,
+        "productList": Array [
+          Object {
+            "Checked": true,
+            "ProductId": 1,
+            "ProductName": "Sportsbook",
+          },
+          Object {
+            "Checked": true,
+            "ProductId": 3,
+            "ProductName": "Playtech Casino",
+          },
+          Object {
+            "Checked": false,
+            "ProductId": 4,
+            "ProductName": "Number Game",
+          },
+        ],
+      }
+    }
+    handleClick={[Function]}
+    index={1}
+    isFirst={true}
+    isOnlyOnePlatformFeeRow={false}
+    key="platformfee-0"
+    onChangeCommission={[Function]}
+    onSelectProduct={[Function]}
+  />
+  <PlatformFeeItem
+    btnText={
+      <React.Fragment>
+        <span>
+          Remove Product Group
+        </span>
+        <span>
+          -
+        </span>
+      </React.Fragment>
+    }
+    data={
+      Object {
+        "commission": 0.12,
+        "groupProductId": 234,
+        "productList": Array [
+          Object {
+            "Checked": false,
+            "ProductId": 1,
+            "ProductName": "Sportsbook",
+          },
+          Object {
+            "Checked": false,
+            "ProductId": 3,
+            "ProductName": "Playtech Casino",
+          },
+          Object {
+            "Checked": true,
+            "ProductId": 4,
+            "ProductName": "Number Game",
+          },
+        ],
+      }
+    }
+    handleClick={[Function]}
+    index={2}
+    isFirst={false}
+    isOnlyOnePlatformFeeRow={false}
+    key="platformfee-1"
+    onChangeCommission={[Function]}
+    onSelectProduct={[Function]}
+  />
+</div>
+`;

@@ -1,0 +1,2 @@
+﻿export const SET_PARAM = 'SET_PARAM';
+export const SET_TRANSACTION_ID = 'SET_TRANSACTION_ID';

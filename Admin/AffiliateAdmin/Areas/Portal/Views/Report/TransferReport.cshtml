@@ -1,0 +1,15 @@
+﻿@model Fanex.Affiliate.Admin.Core.ViewModels.Report.ReportCommonViewModel
+@section pagecss{
+    <link href="@Url.VersionedLink("~/Areas/Portal/www/dist/style/pages/report.css")" rel="stylesheet" />
+}
+
+@section pagejs{
+    <script type="text/javascript">
+        window.initialState = {
+            today: '@DateTimeOffset.Now.ToOffset(new TimeSpan(8, 0, 0)).ToString("MM/dd/yyyy")',
+            baseCurrencyList: @Html.Raw(Json.Encode(Model.BaseCurrencyList)),
+            isProduction: '@(AppSetting.Instance.Environment)'.toLowerCase() === 'production',
+        }
+    </script>
+    <script type="text/javascript" src="@Url.VersionedLink("~/Areas/Portal/www/dist/js/pages/report.js")"></script>
+}

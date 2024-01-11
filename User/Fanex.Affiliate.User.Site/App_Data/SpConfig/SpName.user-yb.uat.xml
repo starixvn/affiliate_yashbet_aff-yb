@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Functions SiteId="2000003" SiteName="YB">
+  <Function Name="Authorization">
+    <Setting Key="Aff_SessionIdSel" SpName="Aff_SessionIdSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_User_Login_UserInfoSel" SpName="Aff_User_Login_UserInfoSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_Login_UserInfoSel_view" SpName="Aff_User_Login_UserInfoSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_User_Login_ResultUpd" SpName="Aff_User_Login_ResultUpd" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_Login_ResultUpd_view" SpName="Aff_User_Login_ResultUpd" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_CheckIn" SpName="Aff_CheckIn" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_CheckIn_view" SpName="Aff_CheckIn" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_Recheckin" SpName="Aff_Recheckin" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Recheckin_view" SpName="Aff_Recheckin" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_User_VerificationInfoSel" SpName="Aff_User_VerificationInfoSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_VerificationUpd" SpName="Aff_User_VerificationUpd" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_VerificationSuccessIns" SpName="Aff_User_VerificationSuccessIns" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+  </Function>
+
+  <Function Name="AccountInformation">
+    <Setting Key="Aff_User_UserInfoSel" SpName="Aff_User_UserInfoSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_UserInfoSel_view" SpName="Aff_User_UserInfoSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_User_UserInfoUpd" SpName="Aff_User_UserInfoUpd" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_AffiliateUpdPwd" SpName="Aff_AffiliateUpdPwd" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_SecretKeyIns" SpName="Aff_User_SecretKeyIns" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+
+    <Setting Key="Aff_User_GeneralInfo_Sel" SpName="Aff_User_GeneralInfo_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_GeneralInfo_Sel_view" SpName="Aff_User_GeneralInfo_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+  </Function>
+
+  <Function Name="Statistics">
+    <Setting Key="Aff_AffiliateSelTrackingCode" SpName="Aff_AffiliateSelTrackingCode" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_AffiliateSelTrackingCode_view" SpName="Aff_AffiliateSelTrackingCode" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_AffiliateSelClickStatisticsAllMonths" SpName="Aff_AffiliateSelClickStatisticsAllMonths" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_AffiliateSelClickStatisticsAllMonths_view" SpName="Aff_AffiliateSelClickStatisticsAllMonths" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_AffiliateSelClickStatisticsMonthDetail" SpName="Aff_AffiliateSelClickStatisticsMonthDetail" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_AffiliateSelClickStatisticsMonthDetail_view" SpName="Aff_AffiliateSelClickStatisticsMonthDetail" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_ClickStatisticsSelBySite" SpName="Aff_ClickStatisticsSelBySite" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_ClickStatisticsSelBySite_view" SpName="Aff_ClickStatisticsSelBySite" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_ClickStatisticsDetailBySite" SpName="Aff_ClickStatisticsDetailBySite" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_ClickStatisticsDetailBySite_view" SpName="Aff_ClickStatisticsDetailBySite" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_ClickStatisticsSelByPage" SpName="Aff_ClickStatisticsSelByPage" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_ClickStatisticsSelByPage_view" SpName="Aff_ClickStatisticsSelByPage" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_User_StatisticsSel" SpName="Aff_User_StatisticsSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_StatisticsSel_view" SpName="Aff_User_StatisticsSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_User_Rpt_MarketingPage_Statistics" SpName="Aff_User_Rpt_MarketingPage_Statistics" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_Rpt_MarketingPage_Statistics_view" SpName="Aff_User_Rpt_MarketingPage_Statistics" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+  </Function>
+
+  <Function Name="HotNews">
+    <Setting Key="Aff_HotNewsDetail" SpName="Aff_HotNewsDetail" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_HotNewsDetail_view" SpName="Aff_HotNewsDetail" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_HotNewsSel" SpName="Aff_HotNewsSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_HotNewsSel_view" SpName="Aff_HotNewsSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+  </Function>
+
+  <Function Name="Password">
+    <Setting Key="Aff_User_ForgotPassword" SpName="Aff_User_ForgotPassword" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_RecoverPassWord" SpName="Aff_User_RecoverPassWord" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+  </Function>
+
+  <Function Name="Statement History">
+    <Setting Key="Aff_User_StatementHistory_Sel" SpName="Aff_User_StatementHistory_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_StatementHistory_Sel_view" SpName="Aff_User_StatementHistory_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_ProductList_Sel" SpName="Aff_ProductList_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_ProductList_Sel_view" SpName="Aff_ProductList_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_DailyEarning_Sel" SpName="Aff_DailyEarning_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_DailyEarning_Sel_view" SpName="Aff_DailyEarning_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_AffiliateUser_ExtraUserInfoSel" SpName="Aff_AffiliateUser_ExtraUserInfoSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_AffiliateUser_ExtraUserInfoSel_view" SpName="Aff_AffiliateUser_ExtraUserInfoSel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_SubAffiliate_Commission_Sel" SpName="Aff_SubAffiliate_Commission_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet"/>
+    <Setting Key="Aff_SubAffiliate_Commission_Sel_view" SpName="Aff_SubAffiliate_Commission_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet"/>
+  </Function>
+
+  <Function Name="Commission">
+    <Setting Key="Aff_User_CommSetting_Sel" SpName="Aff_User_CommSetting_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_CommSetting_Sel_view" SpName="Aff_User_CommSetting_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+  </Function>
+
+  <Function Name="Payment">
+    <Setting Key="Aff_User_PaymentRequest_Sel" SpName="Aff_User_PaymentRequest_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_PaymentRequest_Sel_view" SpName="Aff_User_PaymentRequest_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_User_PaymentRequest_Upd" SpName="Aff_User_PaymentRequest_Upd" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_PaymentRequest_Ins" SpName="Aff_User_PaymentRequest_Ins" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_PaymentMethod_Sel" SpName="Aff_PaymentMethod_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet"/>
+  </Function>
+
+  <Function Name="SignUp">
+    <Setting Key="Aff_User_Affiliate_Ins" SpName="Aff_User_Affiliate_Ins" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Get_GeneralAffInfo" SpName="Aff_Get_GeneralAffInfo" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+  </Function>
+
+  <Function Name="Member">
+    <Setting Key="Aff_MemberList_Sel" SpName="Aff_MemberList_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_MemberList_Sel_view" SpName="Aff_MemberList_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+  </Function>
+
+  <Function Name="CommissionReport">
+    <Setting Key="Aff_User_Rpt_Commission" SpName="Aff_User_Rpt_Commission" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet"></Setting>
+  </Function>
+  <Function Name="SecurityQuestion">
+    <Setting Key="Aff_User_SecurityQuestions_Sel" SpName="Aff_User_SecurityQuestions_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+  </Function>
+  <Function Name="AccountOverview">
+    <Setting Key="Aff_User_Overview_PlayersDetail_Sel" SpName="Aff_User_Overview_PlayersDetail_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_Overview_Detail_Sel" SpName="Aff_User_Overview_Detail_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_Overview_Summary_Sel" SpName="Aff_User_Overview_Summary_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_LoginInfo_Sel" SpName="Aff_User_LoginInfo_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+
+    <Setting Key="Aff_Admin_MediaCategory_Sel" SpName="Aff_Admin_MediaCategory_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Market_Sel" SpName="Aff_Market_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Admin_MediaCurrency_Sel" SpName="Aff_Admin_MediaCurrency_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Admin_MediaType_Sel" SpName="Aff_Admin_MediaType_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Admin_MediaSize_Sel" SpName="Aff_Admin_MediaSize_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_Domain_Sel" SpName="Aff_User_Domain_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_SubAffiliateDomain_Sel" SpName="Aff_User_SubAffiliateDomain_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Admin_LandingPage_Sel" SpName="Aff_Admin_LandingPage_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Admin_Text_Sel" SpName="Aff_Admin_Text_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_Admin_Banner_Sel" SpName="Aff_Admin_Banner_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_Overview_SubAffiliate_Sel" SpName="Aff_User_Overview_SubAffiliate_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+
+    <Setting Key="Aff_Admin_MediaCategory_Sel_view" SpName="Aff_Admin_MediaCategory_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_Market_Sel_view" SpName="Aff_Market_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_Admin_MediaCurrency_Sel_view" SpName="Aff_Admin_MediaCurrency_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_Admin_MediaType_Sel_view" SpName="Aff_Admin_MediaType_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_Admin_MediaSize_Sel_view" SpName="Aff_Admin_MediaSize_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_User_Domain_Sel_view" SpName="Aff_User_Domain_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_User_SubAffiliateDomain_Sel_view" SpName="Aff_User_SubAffiliateDomain_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_Admin_LandingPage_Sel_view" SpName="Aff_Admin_LandingPage_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_Admin_Text_Sel_view" SpName="Aff_Admin_Text_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+    <Setting Key="Aff_Admin_Banner_Sel_view" SpName="Aff_Admin_Banner_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
+
+    <Setting Key="Aff_User_AffMediaChannel_Sel" SpName="Aff_User_AffMediaChannel_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_AffMediaChannel_Ins" SpName="Aff_User_AffMediaChannel_Ins" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_AffMediaChannel_Statistics" SpName="Aff_User_AffMediaChannel_Statistics" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_AffMediaLink_ToggleChannel" SpName="Aff_User_AffMediaLink_ToggleChannel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+  </Function>
+
+  <Function Name="Currency">
+    <Setting Key="Aff_BaseCurrency_Sel" SpName="Aff_BaseCurrency_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+  </Function>
+
+  <Function Name="PlayerTransferBalance">
+    <Setting Key="Aff_TransferBalanceHistory_Sel" SpName="Aff_TransferBalanceHistory_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_User_TransferBalanceInfo_Sel" SpName="Aff_User_TransferBalanceInfo_Sel" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_TransferBalanceHistory_Ins" SpName="Aff_TransferBalanceHistory_Ins" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+    <Setting Key="Aff_TransferBalanceHistory_Upd" SpName="Aff_TransferBalanceHistory_Upd" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
+
+  </Function>
+</Functions>
+		

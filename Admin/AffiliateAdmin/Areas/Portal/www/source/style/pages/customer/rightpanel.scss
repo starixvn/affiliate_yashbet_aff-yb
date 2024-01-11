@@ -1,0 +1,10 @@
+﻿@import "customer-statistics";
+@import "../user-panel/main";
+
+.right-panel {
+    .loader {
+        .backdrop, .spinner {
+            margin-left: 270px;
+        }
+    }
+}

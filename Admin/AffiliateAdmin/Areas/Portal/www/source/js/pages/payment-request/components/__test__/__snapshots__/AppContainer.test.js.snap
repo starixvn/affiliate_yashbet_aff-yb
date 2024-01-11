@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`payment request - components - AppContainer  render correctly 1`] = `
+<AppLayout>
+  <Loader
+    show={true}
+  />
+  <Connect(Filter) />
+  <Connect(Content) />
+  <Connect(PaymentRequestUpdateForm)
+    handleClosePopup={[Function]}
+    handleFetchData={[Function]}
+    transactionId={123}
+  />
+</AppLayout>
+`;
