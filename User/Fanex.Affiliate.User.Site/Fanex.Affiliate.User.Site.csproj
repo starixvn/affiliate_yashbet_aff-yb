@@ -394,7 +394,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Web.txt</LastGenOutput>
     </Content>
-    <Content Include="favicon.ico" />
+    <Content Include="favicon-yb.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -683,9 +683,9 @@
     <Content Include="www\build\styles\css\verification-account.min.css">
       <DependentUpon>verification-account.css</DependentUpon>
     </Content>
-    <Content Include="www\build\styles\css\yashbet.css" />
-    <Content Include="www\build\styles\css\yashbet.min.css">
-      <DependentUpon>yashbet.css</DependentUpon>
+    <Content Include="www\build\styles\css\yb.css" />
+    <Content Include="www\build\styles\css\yb.min.css">
+      <DependentUpon>yb.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\fonts\Montserrat\font.css" />
     <Content Include="www\build\styles\fonts\Montserrat\font.min.css">
@@ -734,8 +734,6 @@
     <Content Include="www\build\styles\Images\apply\3step.mobile.id-ID.svg" />
     <Content Include="www\build\styles\Images\apply\3step.mobile.ms-MY.svg" />
     <Content Include="www\build\styles\Images\apply\3step.mobile.th-TH.svg" />
-    <Content Include="www\build\styles\Images\bg-Commission-Structure_Banner.png" />
-    <Content Include="www\build\styles\Images\bg-FAQ_banner.png" />
     <Content Include="www\build\styles\Images\contact-in-home\bg_contact.desktop.png" />
     <Content Include="www\build\styles\Images\contact-in-home\bg_contact.mobile.png" />
     <Content Include="www\build\styles\Images\contact-in-home\bg_contact.tablet.png" />
@@ -790,7 +788,7 @@
     <Content Include="www\build\styles\Images\icons\dropdown.svg" />
     <Content Include="www\build\styles\Images\ipad-login.svg" />
     <Content Include="www\build\styles\Images\account-overview\qr-disabled.png" />
-    <Content Include="www\build\styles\Images\notify\maintenance-logo.png" />
+    <Content Include="www\build\styles\Images\notify\maintenance-yb.png" />
     <Content Include="www\build\styles\Images\notify\note_icon.png" />
     <Content Include="www\build\styles\Images\products\product.desktop.bn-BD.jpg" />
     <Content Include="www\build\styles\Images\products\product.desktop.km-KH.jpg" />
@@ -837,7 +835,7 @@
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.ms-MY.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.zh-CN.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.th-TH.png" />
-    <Content Include="www\build\styles\Images\themes\logo.png" />
+    <Content Include="www\build\styles\Images\themes\yb.png" />
     <Content Include="www\source\js\layout-after-login.js" />
     <Content Include="www\source\js\lib\bootstrap2-toggle.js" />
     <Content Include="www\source\js\lib\jsencrypt-2.3.1.min.js" />
@@ -849,13 +847,11 @@
     <Content Include="www\source\js\pages\promotion.js" />
     <Content Include="www\source\js\pages\statistics\marketing-statistics.js" />
     <Content Include="www\source\styles\Images\arrrow.png" />
-    <Content Include="www\source\styles\Images\bg-Terms_&amp;_conditions_banner-bwing.png" />
-    <Content Include="www\build\styles\Images\bg-Terms_&amp;_conditions_banner.png" />
     <Content Include="www\build\styles\Images\icon-1.png" />
     <Content Include="www\build\styles\Images\icon-2.png" />
     <Content Include="www\build\styles\Images\icon-3.png" />
     <Content Include="www\build\styles\Images\notify\note_icon.gif" />
-    <Content Include="www\build\styles\Images\themes\logo-qrcode.png" />
+    <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />
     <Content Include="www\source\js\components\authhelper.js" />
     <Content Include="www\source\js\components\clipboard.js" />
     <Content Include="www\source\js\components\clipboard.min.js" />
@@ -1058,9 +1054,6 @@
     <Content Include="Views\Shared\Email\VerificationAccount\Content.vi-VN.cshtml" />
     <Content Include="Views\Shared\Email\VerificationAccount\Content.zh-CN.cshtml" />
     <Content Include="Views\Signup\_SecurityQuestion.cshtml" />
-    <Content Include="www\build\styles\Images\bg-Commission-Structure_Banner.webp" />
-    <Content Include="www\build\styles\Images\bg-FAQ_banner.webp" />
-    <Content Include="www\build\styles\Images\bg-Terms_&amp;_conditions_banner.webp" />
     <Content Include="Views\UserPanel\AccountOverView\Partial\_BannerFilter.cshtml" />
     <Content Include="Views\UserPanel\AccountOverView\Partial\_BannerList.cshtml" />
     <Content Include="Views\UserPanel\AccountOverView\Partial\_LinkForm.cshtml" />
@@ -1072,10 +1065,9 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="www\source\styles\scss\abstracts\_variables.scss" />
-    <Content Include="www\source\styles\scss\themes\yashbet.scss" />
+    <Content Include="www\source\styles\scss\themes\yb.scss" />
     <Content Include="www\source\styles\fonts\myriadPro\Myriad-Pro-Semibold.ttf" />
     <Content Include="www\build\styles\fonts\myriadPro\Myriad-Pro-Semibold.ttf" />
-    <Content Include="www\source\styles\Images\bg-Terms_&amp;_conditions_banner-bwing.webp" />
     <Content Include="Views\CommissionStructure\_Content.en-US.cshtml" />
     <Content Include="Views\CommissionStructure\_Content.id-ID.cshtml" />
     <Content Include="Views\CommissionStructure\_Content.th-TH.cshtml" />
@@ -1235,6 +1227,7 @@
     <Content Include="Views\Shared\Email\VerificationAccount\Content.bn-BD.cshtml" />
     <Content Include="Views\Shared\Email\VerificationAccount\Content.km-KH.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Product\_CasinoProductTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

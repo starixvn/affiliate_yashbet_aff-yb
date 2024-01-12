@@ -29,7 +29,7 @@
       padding-bottom: 4px; }
       .um-container .um-wrapper .um-header:before {
         content: "";
-        background: url("../../../../build/styles/Images/notify/note_icon.png") no-repeat center center/cover;
+        background: url("../Images/notify/note_icon.png") no-repeat center center/cover;
         width: 24px;
         height: 24px;
         left: 0;

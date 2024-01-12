@@ -2,9 +2,7 @@
 @{
     var siteFriendlyName = Model;
 }
-@*<div class="adv text-center">
-        <img src="~/www/build/styles/Images/products/upper-banner.id-ID.jpg?v=158572" alt="upper product banner" />
-    </div>*@
+
 @{ Html.RenderPartial("~/Views/Product/_CarouselItems.cshtml", "id-ID"); }
 <div class="info-group">
     <p class="text-block">
@@ -60,9 +58,6 @@
             </tbody>
         </table>
     </div>
-    @*<div class="adv text-center">
-            <img src="~/www/build/styles/Images/products/lower-banner.id-ID.jpg?v=158572" alt="lower product banner" />
-        </div>*@
 </section>
 <section class="info-group">
     <p class="text-bold text-uppercase title-block left-menu-title" id="AsiaGaming">@Lang.CasinoProducts</p>

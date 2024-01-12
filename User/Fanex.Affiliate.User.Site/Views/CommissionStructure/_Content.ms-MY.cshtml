@@ -110,12 +110,12 @@
     <p class="text">
         <i>Rajah 1:</i> Contoh tunjuk kepada anda kaedah pengiraan pengagihan keuntungan yang anda perolehi daripada pemain yang dirujuk oleh anda.
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/{Model.SiteName}/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>Rajah 2:</i> Contoh untuk tunjukkan pengiraan kepada anda cara pengagihan keuntungan anda yang diperoleh daripada ahli affliate yang dirujuk anda (dan ahli affliate mereka)
     </p>
     <div class="img-support" style="max-width: 600px; margin: 15px auto;">
-        <img class="img-responsive" src="~/www/build/styles/Images/revenue-share-structure/@(Model.SiteName)/revenue_share_hierarchy.@(Model.CurrentLanguage).png?v=174504" alt="hierarchy banner" />
+        <img class="img-responsive" src="~/www/build/styles/Images/revenue-share-structure/revenue_share_hierarchy.@(Model.CurrentLanguage).png?v=174504" alt="hierarchy banner" />
     </div>
     <p class="text">
         Pengagihan keuntungan anda yang diperoleh daripada ahli affliate yang dirujuk:

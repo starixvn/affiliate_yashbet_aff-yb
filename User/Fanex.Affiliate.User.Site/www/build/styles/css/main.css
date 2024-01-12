@@ -303,25 +303,25 @@ input[type="checkbox"], input[type="radio"] {
   background-size: cover;
   vertical-align: middle; }
   .flag-en-US {
-    background-image: url("../../../../build/styles/Images/icons/flags/England.png"); }
+    background-image: url("../Images/icons/flags/England.png"); }
   .flag-zh-CN {
-    background-image: url("../../../../build/styles/Images/icons/flags/China.png"); }
+    background-image: url("../Images/icons/flags/China.png"); }
   .flag-zh-TW {
-    background-image: url("../../../../build/styles/Images/icons/flags/Taiwan.png"); }
+    background-image: url("../Images/icons/flags/Taiwan.png"); }
   .flag-id-ID {
-    background-image: url("../../../../build/styles/Images/icons/flags/Indonesia.png"); }
+    background-image: url("../Images/icons/flags/Indonesia.png"); }
   .flag-vi-VN {
-    background-image: url("../../../../build/styles/Images/icons/flags/Vietnam.png"); }
+    background-image: url("../Images/icons/flags/Vietnam.png"); }
   .flag-th-TH {
-    background-image: url("../../../../build/styles/Images/icons/flags/Thailand.png"); }
+    background-image: url("../Images/icons/flags/Thailand.png"); }
   .flag-bn-BD {
-    background-image: url("../../../../build/styles/Images/icons/flags/Bangladeshi.png"); }
+    background-image: url("../Images/icons/flags/Bangladeshi.png"); }
   .flag-km-KH {
-    background-image: url("../../../../build/styles/Images/icons/flags/Cambodian.png"); }
+    background-image: url("../Images/icons/flags/Cambodian.png"); }
   .flag-hi-IN {
-    background-image: url("../../../../build/styles/Images/icons/flags/Hindi.png"); }
+    background-image: url("../Images/icons/flags/Hindi.png"); }
   .flag-ms-MY {
-    background-image: url("../../../../build/styles/Images/icons/flags/Malaysia.png"); }
+    background-image: url("../Images/icons/flags/Malaysia.png"); }
 
 .after-login-content .header-top {
   max-width: 100%;

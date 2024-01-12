@@ -109,12 +109,12 @@
     <p class="text">
         <i>চিত্র 1:</i> আপনার রেফার করা খেলোয়াড়দের থেকে আপনার উপার্জনের ভাগ কীভাবে গণনা করা হয় তা দেখানোর জন্য একটি উদাহরণ
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/{Model.SiteName}/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>চিত্র 2:</i> আপনার রেফার করা অ্যাফিলিয়েট (এবং তাদের সাব-অ্যাফিলিয়েট) থেকে আপনার উপার্জনের ভাগ কীভাবে গণনা করা হয় তা দেখানোর জন্য একটি উদাহরণ
     </p>
     <div class="img-support" style="max-width: 600px; margin: 15px auto;">
-        <img class="img-responsive" src="~/www/build/styles/Images/revenue-share-structure/@(Model.SiteName)/revenue_share_hierarchy.@(Model.CurrentLanguage).png?v=174504" alt="hierarchy banner" />
+        <img class="img-responsive" src="~/www/build/styles/Images/revenue-share-structure/revenue_share_hierarchy.@(Model.CurrentLanguage).png?v=174504" alt="hierarchy banner" />
     </div>
     <p class="text">
         রেফারেড আফিয়াটস হইতে রাজস্ব ভাগ অর্জন

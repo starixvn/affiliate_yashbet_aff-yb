@@ -29,14 +29,6 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
         }
 
         [Fact]
-        public void EmailTemplateViewModel_ReturnCorrect()
-        {
-            var model = new EmailTemplateViewModel();
-
-            Assert.Equal("YB", model.SiteName);
-        }
-
-        [Fact]
         public void SendCodeReoverPasswordEmail_WhenCall_SendMail()
         {
             var service = CreateService();

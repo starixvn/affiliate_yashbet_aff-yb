@@ -9,6 +9,7 @@
     var languageList = languageService.GetLanguageList();
     var currentLanguage = languageList.FirstOrDefault(l => l.Code.Equals(sessionService.CurrentLanguage))?.NativeName;
     var siteFriendlyName = settingService.SiteFriendlyName;
+    var siteName = settingService.SiteName.ToLower();
     var isLogin = HttpContext.Current.User.Identity.IsAuthenticated && userSession != null;
 }
 
@@ -19,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@(string.IsNullOrEmpty(ViewBag.Title) ? siteFriendlyName + " " + Lang.Affiliate : ViewBag.Title)</title>
-    <link rel="icon" href=@Url.Content("~/favicon.ico")>
+    <link rel="icon" href=@Url.Content($"~/favicon-{siteName}.ico")>
 
     <meta name="google-site-verification" content="iFkj5nsimoERnX2jd-9krswREsacSaFCr3Q22CJtQe0" />
     <meta name="msvalidate.01" content="D40D4C0F9E67ABAAAFA183F5D313FEFD" />
@@ -42,7 +43,7 @@
 
     <link href="@Url.RenderLink("~/www/build/styles/css/main.css")" rel="stylesheet" />
 
-    <link href="@Url.RenderLink("~/www/build/styles/css/yashbet.css")" rel="stylesheet" />
+    <link href="@Url.RenderLink("~/www/build/styles/css/" + siteName + ".css")" rel="stylesheet" />
     @RenderSection("styles", required: false)
 
 </head>
@@ -51,7 +52,7 @@
         <div class="header-top">
             <div class="logo">
                 <a href="@Url.Content("~")">
-                    <img src=@Url.Content("~/www/build/styles/Images/themes/logo.png?v=" + settingService.JsVersion) alt="logo" class="logo-image" />
+                    <img src=@Url.Content("~/www/build/styles/Images/themes/" + siteName + ".png?v=" + settingService.JsVersion) alt="logo" class="logo-image" />
                 </a>
             </div>
             <div class="login">

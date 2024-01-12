@@ -109,12 +109,12 @@
     <p class="text">
         <i>图1:</i> 举例展示如何计算你所推荐的玩家负盈利获得佣金盈利
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/{Model.SiteName}/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>图2:</i> 举例展示如何计算从你所推荐的下线合营伙伴（与他们再推荐的下线合营伙伴）的佣金盈利。
     </p>
     <div class="img-support" style="max-width: 600px; margin: 15px auto;">
-        <img class="img-responsive" src="~/www/build/styles/Images/revenue-share-structure/@(Model.SiteName)/revenue_share_hierarchy.@(Model.CurrentLanguage).png?v=174504" alt="hierarchy banner" />
+        <img class="img-responsive" src="~/www/build/styles/Images/revenue-share-structure/revenue_share_hierarchy.@(Model.CurrentLanguage).png?v=174504" alt="hierarchy banner" />
     </div>
     <p class="text">
         您下线合营伙伴的佣金盈利计算:

@@ -2,9 +2,7 @@
 @{
     var siteFriendlyName = Model;
 }
-@*<div class="adv text-center">
-        <img src="~/www/build/styles/Images/products/upper-banner.zh-CN.jpg?v=158572" alt="upper product banner" />
-    </div>*@
+
 @{ Html.RenderPartial("~/Views/Product/_CarouselItems.cshtml", "zh-CN"); }
 <div class="info-group">
     <p class="text-block">
@@ -58,9 +56,6 @@
             </tbody>
         </table>
     </div>
-    @*<div class="adv text-center">
-            <img src="~/www/build/styles/Images/products/lower-banner.zh-CN.jpg?v=158572" alt="lower product banner" />
-        </div>*@
 </section>
 <section class="info-group">
     <p class="text-bold text-uppercase title-block left-menu-title" id="AsiaGaming">@Lang.CasinoProducts</p>

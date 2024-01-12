@@ -4,6 +4,9 @@
 @{
     var from = ViewBag.UmTimeFrom as string;
     var to = ViewBag.UmTimeTo as string;
+
+    var settingService = DependencyResolver.Current.GetService<IAppSetting>();
+    var siteName = settingService.SiteName.ToLower();
 }
 
 <!DOCTYPE html>
@@ -14,14 +17,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Under Maintenance</title>
-    <link rel="icon" href=@Url.Content("~/favicon.ico")>
+    <link rel="icon" href=@Url.Content("~/favicon-"+ siteName +".ico")>
     <link href="~/www/build/styles/css/bootstrap.min.css" rel="stylesheet" />
     <link href="@Url.RenderLink("~/www/build/styles/css/maintenance.css")" rel="stylesheet" />
 </head>
 <body>
     <div class="main-container">
         <div class="logo">
-            <img src=@(Url.Content($"~/www/build/styles/Images/notify/maintenance-logo.png")) alt="logo" />
+            <img src=@(Url.Content($"~/www/build/styles/Images/notify/maintenance-{siteName}.png")) alt="logo" />
         </div>
         <div class="content">
             <div class="um-container">
