@@ -53,7 +53,7 @@ module.exports = {
     [`${styleDist}/pages/administrator/administrator`]: clientRoot + "/style/pages/administrator/administrator.scss",
     [`${styleDist}/pages/administrator/department`]: clientRoot + "/style/pages/administrator/department.scss",
     [`${styleDist}/home`]: clientRoot + "/style/pages/home.scss",
-    [`${styleDist}/N88`]: clientRoot + "/style/themes/N88.scss",
-    [`${styleDist}/N88-lightmode`]: clientRoot + "/style/themes/N88-lightmode.scss",
-    [`${styleDist}/N88-darkmode`]: clientRoot + "/style/themes/N88-darkmode.scss",
+    [`${styleDist}/YB`]: clientRoot + "/style/themes/YB.scss",
+    [`${styleDist}/YB-lightmode`]: clientRoot + "/style/themes/YB-lightmode.scss",
+    [`${styleDist}/YB-darkmode`]: clientRoot + "/style/themes/YB-darkmode.scss",
 };

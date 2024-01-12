@@ -1,7 +1,4 @@
 ﻿@model Fanex.Affiliate.Admin.Core.DTO.Email.AffInformationEmail
-@{
-    var isN88 = string.Equals("Nova88", Model.SiteFriendlyName);
-}
 
 <div>
     Dear @Raw(Model.FirstName),<br /><br />
@@ -10,7 +7,7 @@
 
     We are glad to have you as part of our Affiliates family and we are looking forward to building a profitable business relationship with you.  Please use the below information to sign into your @(Model.SiteFriendlyName) affiliate account:<br /><br />
 
-    Text link: @(isN88 ? "Website (Insert backlink" : "") <a href="@Model.UserSiteUrl">@Model.UserSiteUrl</a>@(isN88 ? ")" : "")<br />
+    Text link: Website (Insert backlink <a href="@Model.UserSiteUrl">@Model.UserSiteUrl</a>)<br />
     Username: @Model.UserName<br />
     Password: @Model.Password<br />
     Affiliate ID: @Model.AffCode<br /><br />

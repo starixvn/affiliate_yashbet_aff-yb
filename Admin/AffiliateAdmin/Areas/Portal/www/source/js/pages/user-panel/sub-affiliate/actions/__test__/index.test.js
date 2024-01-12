@@ -25,7 +25,7 @@ describe('sub-affiliate actions', () => {
                 MainData: [
                     {
                         AffId: 3,
-                        SubName: "N88AFF004",
+                        SubName: "YBAFF004",
                         Commission: 0.88,
                         SubEarning: 0.09
                     }

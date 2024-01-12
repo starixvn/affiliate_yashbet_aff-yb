@@ -174,7 +174,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Repository.Affiliate
         {
             return new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase)
             {
-                ["AffName"] = "N88AFF001",
+                ["AffName"] = "YBAFF001",
                 ["Transid"] = 123,
                 ["Status"] = "Processing",
                 ["Amount"] = 100m,

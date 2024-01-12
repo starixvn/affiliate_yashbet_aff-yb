@@ -1,8 +1,5 @@
-﻿@using Fanex.Affiliate.Admin.Core.Configurations;
-@{
+﻿@{
     Layout = null;
-    var appSetting = DependencyResolver.Current.GetService<IAppSetting>();
-    var siteName = appSetting.SiteName;
 }
 
 <!DOCTYPE html>
@@ -15,14 +12,8 @@
     <base href="@Url.Content("~")" />
     <link href="~/Areas/Portal/www/dist/vendors/bootstrap.css?v=4.3.1" rel="stylesheet" />
     <link href="@Url.VersionedLink("~/Areas/Portal/www/dist/style/login.css")" rel="stylesheet" />
-    @if (string.Equals(siteName, "N88", StringComparison.CurrentCultureIgnoreCase))
-    {
-        <link id="n88-link" rel="stylesheet" />
-    }
-    else
-    {
-        <link href="@Url.VersionedLink("~/Areas/Portal/www/dist/style/n88-lightmode.css")" rel="stylesheet" />
-    }
+    <link id="yb-link" rel="stylesheet" />
+
     <title>Affiliate Admin</title>
 </head>
 <body>

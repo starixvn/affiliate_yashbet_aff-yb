@@ -17,13 +17,13 @@ describe('customer member - components - Content', () => {
     const gridData = [
         {
             AffId: 123,
-            AffName: "N88AFF003",
+            AffName: "YBAFF003",
             Commission: 123,
             SubAffiliateEarning: 123
         },
         {
             AffId: 234,
-            AffName: "N88AFF004",
+            AffName: "YBAFF004",
             Commission: 234,
             SubAffiliateEarning: 234
         }

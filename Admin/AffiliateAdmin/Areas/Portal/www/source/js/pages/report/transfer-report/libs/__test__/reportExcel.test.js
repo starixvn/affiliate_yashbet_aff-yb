@@ -30,7 +30,7 @@ describe('transfer report - Report Excel ', () => {
         {
             TransId: 123,
             CreatedDateText: '10/28/2021 00:00:00',
-            AffName: 'N88AFF001',
+            AffName: 'YBAFF001',
             AffPlayerName: 'test',
             PlayerName: 'abc',
             AffPlayerCurrency: 'USD',

@@ -39,7 +39,7 @@ describe('player ggr report - Report Excel ', () => {
         {
             FdmDateText: '10/28/2021 00:00:00',
             RegistrationDateText: '10/28/2021 00:00:00',
-            AffName: 'N88AFF001',
+            AffName: 'YBAFF001',
             PlayerName: 'abc',
             TotalTurnover: 100,
             TotalGgr: 100,

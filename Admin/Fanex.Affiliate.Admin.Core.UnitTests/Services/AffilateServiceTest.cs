@@ -78,14 +78,14 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services
                 ["AffId"] = 1271808,
                 ["AffCode"] = "123456",
                 ["GroupId"] = 123,
-                ["UserName"] = "N88Aff002",
+                ["UserName"] = "YBAff002",
                 ["FirstName"] = "abc",
                 ["Email"] = "abc@gmail.com",
                 ["MailOption"] = true,
                 ["PreferredLanguage"] = "vi-VN",
                 ["PlayerUsername"] = "123abc",
                 ["PlayerCustId"] = 123,
-                ["ParentAffName"] = "N88Aff001",
+                ["ParentAffName"] = "YBAff001",
                 ["AffType"] = 2,
                 ["IsPrivate"] = false
             };

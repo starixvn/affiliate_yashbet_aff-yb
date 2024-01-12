@@ -32,19 +32,19 @@ describe('left panel - components - SearchBox', () => {
     });
 
     it('componentDidUpdate - should call setState if param change', () => {
-        const props = { affName: "N88AFF001" };
+        const props = { affName: "YBAFF001" };
         const wrapper = new SearchBox(props);
         wrapper.setState = jest.fn();
         wrapper.componentDidUpdate({ affName: '' });
 
-        expect(wrapper.setState).toHaveBeenCalledWith({ affName: "N88AFF001" });
+        expect(wrapper.setState).toHaveBeenCalledWith({ affName: "YBAFF001" });
     });
 
     it('componentDidUpdate - should not call setState', () => {
-        const props = { affName: "N88AFF001" };
+        const props = { affName: "YBAFF001" };
         const wrapper = new SearchBox(props);
         wrapper.setState = jest.fn();
-        wrapper.componentDidUpdate({ affName: 'N88AFF001' });
+        wrapper.componentDidUpdate({ affName: 'YBAFF001' });
 
         expect(wrapper.setState).not.toHaveBeenCalled();
     });

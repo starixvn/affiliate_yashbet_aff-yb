@@ -21,8 +21,8 @@ export const getCookie = (cookieName) => {
 export const renderMode = () => {
     const mode = getCookie("mode");
 
-    const n88Link = document.getElementById('n88-link');
-    n88Link && n88Link.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/N88-${mode || 'lightmode'}.css`));
+    const ybLink = document.getElementById('yb-link');
+    ybLink && ybLink.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/YB-${mode || 'lightmode'}.css`));
 
     if (!mode) {
         document.cookie = "mode=lightmode; path=/";
@@ -34,8 +34,8 @@ export const renderMode = () => {
 export const changeMode = (isLightMode) => {
     const mode = isLightMode ? 'darkmode' : 'lightmode';
 
-    const n88Link = document.getElementById('n88-link');
-    n88Link && n88Link.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/N88-${mode}.css`));
+    const ybLink = document.getElementById('yb-link');
+    ybLink && ybLink.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/YB-${mode}.css`));
 
     document.cookie = "mode=" + mode + "; path=/";
 }

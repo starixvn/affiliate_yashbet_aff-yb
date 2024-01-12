@@ -1,7 +1,4 @@
 ﻿@model Fanex.Affiliate.Admin.Core.DTO.Email.AffInformationEmail
-@{
-    var isN88 = string.Equals("Nova88", Model.SiteFriendlyName);
-}
 
 <div>
     尊敬的 @(Model.FirstName),<br /><br />
@@ -10,7 +7,7 @@
 
     欢迎您成为@(Model.SiteFriendlyName)合作大家庭中的一员，并祝愿我们之间的合作能成为现代商业共赢典范.  请使用以下信息登入您的@(Model.SiteFriendlyName)合作伙伴帐号：<br /><br />
 
-    链接: @(isN88 ? "网站 (Insert backlink" : "") <a href="@Model.UserSiteUrl">@Model.UserSiteUrl</a>@(isN88 ? ")" : "")<br />
+    链接: 网站 (Insert backlink <a href="@Model.UserSiteUrl">@Model.UserSiteUrl</a>)<br />
     用户名: @Model.UserName<br />
     密码: @Model.Password<br />
     推荐代码: @Model.AffCode<br />

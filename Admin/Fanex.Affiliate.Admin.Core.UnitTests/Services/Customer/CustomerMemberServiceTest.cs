@@ -106,7 +106,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         {
             return new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase)
             {
-                ["UserName"] = "N88AFF001",
+                ["UserName"] = "YBAFF001",
                 ["FirstName"] = "123",
                 ["LastName"] = "abc",
                 ["Email"] = "abc@gmail.com",
@@ -119,7 +119,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         {
             return new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase)
             {
-                ["UserName"] = "N88AFF001",
+                ["UserName"] = "YBAFF001",
                 ["FirstName"] = DBNull.Value,
                 ["LastName"] = DBNull.Value,
                 ["Email"] = DBNull.Value,

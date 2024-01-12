@@ -7,8 +7,8 @@ describe('left panel - components - Content', () => {
         const affiliateInfo = {
             AffId: 1271808,
             AffLink: "http://localhost:55690/Auth/AdminLogin?chalengeStr=esh5u7&accKey=E16156C28&custName=B2CAFF226&accId=1000000026&accOnId=8405",
-            ParentAffName: "N88AFF001",
-            AffName: "N88AFF002",
+            ParentAffName: "YBAFF001",
+            AffName: "YBAFF002",
             AffType: 2,
             BalanceBf: 9802280.5446,
             CommGroupName: "NoCommission",
@@ -36,8 +36,8 @@ describe('left panel - components - Content', () => {
         const affiliateInfo = {
             AffId: 927841,
             AffLink: "http://localhost:55690/Auth/AdminLogin?chalengeStr=640eh6&accKey=3F9ADA82AD&custName=B2CAFF001&accId=1000000026&accOnId=8405",
-            ParentAffName: "N88AFF001",
-            AffName: "N88AFF002",
+            ParentAffName: "YBAFF001",
+            AffName: "YBAFF002",
             AffType: 2,
             ApprovedBy: 'sa',
             BalanceBf: 4953349.1635,
@@ -66,8 +66,8 @@ describe('left panel - components - Content', () => {
         const affiliateInfo = {
             AffId: 927841,
             AffLink: "http://localhost:55690/Auth/AdminLogin?chalengeStr=640eh6&accKey=3F9ADA82AD&custName=B2CAFF001&accId=1000000026&accOnId=8405",
-            ParentAffName: "N88AFF001",
-            AffName: "N88AFF002",
+            ParentAffName: "YBAFF001",
+            AffName: "YBAFF002",
             AffType: 2,
             ApprovedBy: 'sa',
             BalanceBf: 4953349.1635,
@@ -96,8 +96,8 @@ describe('left panel - components - Content', () => {
         const affiliateInfo = {
             AffId: 1219631,
             AffLink: "http://localhost:55690/Auth/AdminLogin?chalengeStr=5omp0h&accKey=6B8465&custName=B2CAFF016&accId=1000000026&accOnId=8405",
-            ParentAffName: "N88AFF001",
-            AffName: "N88AFF002",
+            ParentAffName: "YBAFF001",
+            AffName: "YBAFF002",
             AffType: 2,
             ApprovedBy: '',
             BalanceBf: 0,
@@ -127,8 +127,8 @@ describe('left panel - components - Content', () => {
         const affiliateInfo = {
             AffId: 1219631,
             AffLink: "http://localhost:55690/Auth/AdminLogin?chalengeStr=5omp0h&accKey=6B8465&custName=B2CAFF016&accId=1000000026&accOnId=8405",
-            ParentAffName: "N88AFF001",
-            AffName: "N88AFF002",
+            ParentAffName: "YBAFF001",
+            AffName: "YBAFF002",
             AffType: 2,
             ApprovedBy: '',
             BalanceBf: 0,
@@ -154,7 +154,7 @@ describe('left panel - components - Content', () => {
 
         result.find('Button').at(0).simulate('click');
 
-        expect(props.setAffName).toHaveBeenCalledWith("N88AFF001");
-        expect(props.getAffiliateInfo).toHaveBeenCalledWith("N88AFF001");
+        expect(props.setAffName).toHaveBeenCalledWith("YBAFF001");
+        expect(props.getAffiliateInfo).toHaveBeenCalledWith("YBAFF001");
     });
 });

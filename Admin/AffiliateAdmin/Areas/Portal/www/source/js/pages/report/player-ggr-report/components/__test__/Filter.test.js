@@ -169,7 +169,7 @@ describe('player ggr report - component - Filter - ', () => {
     });
 
     it('componentDidMount - should call handleClickSearch', () => {
-        document.cookie = 'paramFromAffReport={"affName":"N88AFF001","baseCurrencyId":20,"fromDate":"10/1/2021","toDate":"10/1/2021","productIds":"1,2"}'
+        document.cookie = 'paramFromAffReport={"affName":"YBAFF001","baseCurrencyId":20,"fromDate":"10/1/2021","toDate":"10/1/2021","productIds":"1,2"}'
 
         const productList = [
             {
@@ -187,14 +187,14 @@ describe('player ggr report - component - Filter - ', () => {
         const props = Object.assign({}, defaultProps, { setParam: jest.fn(), productList, setReportTitle: jest.fn(), setProductList: jest.fn() })
         shallow(<Filter {...props} />);
 
-        expect(props.setReportTitle).toHaveBeenCalledWith("PLAYER GGR REPORT - Affiliate contains 'N88AFF001' - All Products - FROM 10/1/2021 TO 10/27/2021 - Base Currency VND");
+        expect(props.setReportTitle).toHaveBeenCalledWith("PLAYER GGR REPORT - Affiliate contains 'YBAFF001' - All Products - FROM 10/1/2021 TO 10/27/2021 - Base Currency VND");
         expect(props.setParam).toHaveBeenCalled();
 
         document.cookie = 'paramFromAffReport='
     });
 
     it('componentDidMount - should call handleClickSearch 2', () => {
-        document.cookie = 'paramFromAffReport={"affName":"N88AFF001","baseCurrencyId":20,"fromDate":"9/1/2021","toDate":"9/1/2021","productIds":"1,2"}'
+        document.cookie = 'paramFromAffReport={"affName":"YBAFF001","baseCurrencyId":20,"fromDate":"9/1/2021","toDate":"9/1/2021","productIds":"1,2"}'
 
         const productList = [
             {
@@ -212,7 +212,7 @@ describe('player ggr report - component - Filter - ', () => {
         const props = Object.assign({}, defaultProps, { setParam: jest.fn(), productList, setReportTitle: jest.fn(), setProductList: jest.fn() })
         shallow(<Filter {...props} />);
 
-        expect(props.setReportTitle).toHaveBeenCalledWith("PLAYER GGR REPORT - Affiliate contains 'N88AFF001' - All Products - FROM 9/1/2021 TO 9/30/2021 - Base Currency VND");
+        expect(props.setReportTitle).toHaveBeenCalledWith("PLAYER GGR REPORT - Affiliate contains 'YBAFF001' - All Products - FROM 9/1/2021 TO 9/30/2021 - Base Currency VND");
         expect(props.setParam).toHaveBeenCalled();
 
         document.cookie = 'paramFromAffReport='

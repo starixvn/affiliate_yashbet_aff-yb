@@ -77,7 +77,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(ap => ap.SiteFriendlyName).Returns("N88");
+            appSetting.Setup(ap => ap.SiteFriendlyName).Returns("YB");
             var repository = new Mock<IUserAccountRepository>();
             repository.Setup(r => r.GetUserAccountInfo(It.IsAny<int>())).Returns(new UserAccount { PlayerUsername = "Abc" });
             var licenseeService = new Mock<ILicenseeService>();
