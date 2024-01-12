@@ -296,18 +296,6 @@
     <Content Include="Areas\Portal\www\dist\imgs\email\n88\bgMain.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\n88\button.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\n88\header.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8b\banner.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8b\banner_en-US.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8b\banner_vi-VN.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8b\bgMain.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8b\button.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8b\header.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8g\banner.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8g\banner_en-US.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8g\banner_vi-VN.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8g\bgMain.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8g\button.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\n8g\header.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\note.png" />
     <Content Include="Areas\Portal\www\dist\imgs\i_admin.png" />
     <Content Include="Areas\Portal\www\dist\imgs\i_affiliateslist.png" />
@@ -1448,8 +1436,6 @@
     <Content Include="Areas\Portal\www\source\style\abstracts\_variables-coral.scss" />
     <Content Include="Areas\Portal\www\source\style\abstracts\_variables-green.scss" />
     <Content Include="Areas\Portal\www\source\style\abstracts\_variables-violet.scss" />
-    <Content Include="Areas\Portal\www\source\style\abstracts\variables_N8B.scss" />
-    <Content Include="Areas\Portal\www\source\style\abstracts\variables_N8G.scss" />
     <Content Include="Areas\Portal\www\source\style\pages\user-panel\statement-history.scss" />
     <Content Include="Areas\Portal\www\source\style\themes\N88-darkmode.scss" />
     <Content Include="Areas\Portal\www\source\style\abstracts\_variables-darkmode-N88.scss" />
