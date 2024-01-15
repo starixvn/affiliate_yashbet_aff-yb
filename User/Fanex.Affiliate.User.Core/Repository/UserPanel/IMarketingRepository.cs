@@ -21,8 +21,6 @@ namespace Fanex.Affiliate.User.Core.Repository.UserPanel
 
         IEnumerable<MarketingItem> GetBannerList(MarketingBannerParam bannerParam);
 
-        IEnumerable<MarketingItem> GetTextList(MarketingTextParam textParam);
-
         IEnumerable<LandingPage> GetLandingPageList(bool isInternal);
 
         (int Code, string ErrMsg) AddMarketingChannel(int userId, string channelCode, string channelName);

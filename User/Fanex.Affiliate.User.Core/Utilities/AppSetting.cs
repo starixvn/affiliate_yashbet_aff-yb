@@ -34,8 +34,6 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         public string BannerDomain => GetValue("BannerDomain");
 
-        public string MediaScriptUrl => GetValue("MediaScriptUrl");
-
         public string MailContact => GetValue("MailContact");
 
         public string GetMailContactByLanguageCode(string languageCode) => GetValue("MailContact" + SystemLanguage.GetUppercaseShortedCode(languageCode)) ?? MailContact;

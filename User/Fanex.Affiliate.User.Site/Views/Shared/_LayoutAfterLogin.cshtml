@@ -6,7 +6,6 @@
 }
 
 @using Fanex.Affiliate.User.Core.CoreService
-@using Fanex.Affiliate.User.Core.Constants
 
 @section styles{
     <link href="@Url.RenderLink("~/www/build/styles/css/main-after-login.css")" rel="stylesheet" />
@@ -19,10 +18,6 @@
         <div class="content-menu">
             <ul class="menu list-unstyled content-menu-pc" id="mainMenu">
                 <li><a class="menu-item" id="menuAccountOverview" href="@Url.Content("~/UserPanel/Main/#AccountOverview")">@Lang.AccOverview</a></li>
-                @if (string.Equals(groupName, CommGroupName.KoreanAgentComm))
-                {
-                    <li><a class="menu-item @(ViewContext.RouteData.Values["Controller"].ToString() == "Member" ? "active" : string.Empty)" id="menuYourCustomer" href="@(Url.Content("~/UserPanel/Member/Index"))">@Lang.YourCustomers</a></li>
-                }
                 <li><a class="menu-item" id="menuStatementHistory" href="@Url.Content("~/UserPanel/Main/#StatementHistory")">@Lang.StatementHistory</a></li>
                 <li><a class="menu-item" id="menuMyAccount" href="@Url.Content("~/UserPanel/Main/#MyAccount")">@Lang.MyAccount</a></li>
                 <li><a class="menu-item" id="menuPaymentRequest" href="@Url.Content("~/UserPanel/Main/#PaymentRequest")">@Lang.PaymentRequest</a></li>
@@ -55,10 +50,6 @@
                 </div>
                 <ul class="dropdown-content-menu">
                     <li><a href="@Url.Content("~/UserPanel/Main/#AccountOverview")" class="menu-item" id="menuAccountOverviewMobile">@Lang.AccOverview</a></li>
-                    @if (string.Equals(groupName, CommGroupName.KoreanAgentComm))
-                    {
-                        <li><a class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Member" ? "active" : string.Empty)" id="menuYourCustomer" href="@(Url.Content("~/UserPanel/Member/Index"))">@Lang.YourCustomers</a></li>
-                    }
                     <li><a id="menuStatementHistoryMobile" class="menu-item" href="@Url.Content("~/UserPanel/Main/#StatementHistory")">@Lang.StatementHistory</a></li>
                     <li><a id="menuMyAccountMobile" class="menu-item" href="@Url.Content("~/UserPanel/Main/#MyAccount")">@Lang.MyAccount</a></li>
                     <li><a id="menuPaymentRequestMobile" class="menu-item" href="@Url.Content("~/UserPanel/Main/#PaymentRequest")">@Lang.PaymentRequest</a></li>

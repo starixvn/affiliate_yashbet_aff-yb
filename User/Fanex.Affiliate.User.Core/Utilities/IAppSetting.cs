@@ -39,8 +39,6 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         string BannerDomain { get; }
 
-        string MediaScriptUrl { get; }
-
         string MailCc { get; }
 
         string MailBcc { get; }

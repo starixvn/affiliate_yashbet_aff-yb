@@ -282,39 +282,6 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
             Assert.Empty(result);
         }
 
-        [Theory]
-        [InlineData("English")]
-        [InlineData("Thai")]
-        public void GetTextLink_WhenCall_RepoCall(string language)
-        {
-            var service = CreateService();
-            var param = CreateMarketingTextParam();
-            var textList = CreateMarketingItemList(language);
-            Repo.GetTextList(param).Returns(textList);
-            LanguageService.GetLanguageList().Returns(GetLanguageList());
-            SetUpContext();
-
-            var result = service.GetTextList(param);
-
-            Repo.Received().GetTextList(param);
-            Assert.Equal(textList, result);
-        }
-
-        [Fact]
-        public void GetTextLink_WhenCall_RepoCallReturnNull()
-        {
-            var service = CreateService();
-            var param = CreateMarketingTextParam();
-            Repo.GetTextList(param).Returns(new List<MarketingItem>());
-            LanguageService.GetLanguageList().Returns(GetLanguageList());
-            SetUpContext();
-
-            var result = service.GetTextList(param);
-
-            Repo.Received().GetTextList(param);
-            Assert.Empty(result);
-        }
-
         [Fact]
         public void GetLandingPageList_WhenCall_RepoCall()
         {
@@ -436,7 +403,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
                 SelectedDomain = new Domain { DomainId = 1, DomainName = "abc.com", IsSsl = false },
                 SelectedDomainId = 1,
                 SelectedPage = "SignUp",
-                TextLinkTemplate = "{scheme}://{domain}/{custid}/{target}/{lang}/index.html",
+                TextLinkTemplate = "{scheme}://{domain}/{affCode}/{target}/{lang}/index.html",
                 TotalPages = 30,
                 ScriptUrl = "banner.com"
             };
@@ -460,7 +427,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
                 SelectedPage = "SignUp",
                 Size = "1020x90",
                 SubCategory = "sub",
-                TextLinkTemplate = "{scheme}://{domain}/{custid}/{target}/{lang}/index.html",
+                TextLinkTemplate = "{scheme}://{domain}/{affCode}/{target}/{lang}/index.html",
                 TotalPages = 30
             };
 
@@ -518,7 +485,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
                 SelectedDomainId = 1,
                 SelectedLanguage = "vi-VN",
                 SelectedPage = "SignUp",
-                TextLinkTemplate = "{scheme}://{domain}/{custid}/{target}/{lang}/index.html"
+                TextLinkTemplate = "{scheme}://{domain}/{affCode}/{target}/{lang}/index.html"
             };
 
         private static void SetUpContext(string lang = null)

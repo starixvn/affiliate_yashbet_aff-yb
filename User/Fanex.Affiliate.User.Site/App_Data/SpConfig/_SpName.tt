@@ -13,9 +13,8 @@
 		var spConfigs = Helper.GetListOfSpConfig();
 		var allSpNames = Helper.GetAllSpNames();
         manager.StartNewFile(fileName);
-		#>
-<#=site.GenerateSpName(allSpNames, spConfigs)#>
-		<#
+#><#=site.GenerateSpName(allSpNames, spConfigs)#>
+<#
     }
     manager.Process();
 #>

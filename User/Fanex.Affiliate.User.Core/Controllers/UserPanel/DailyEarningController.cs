@@ -7,7 +7,6 @@
     using Fanex.Affiliate.User.Core.Utilities;
     using Filters;
     using MetalModels.UserPanel;
-    using System;
     using System.Web.Mvc;
     using ViewModels.UserPanel;
 

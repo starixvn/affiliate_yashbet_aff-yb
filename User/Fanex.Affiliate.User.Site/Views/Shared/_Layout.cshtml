@@ -37,8 +37,9 @@
     <script src="~/www/build/js/lib/bootstrap.min.js"></script>
 
     <link href="~/www/build/styles/css/bootstrap-3.3.7.min.css" rel="stylesheet" />
-    <link href="~/www/build/styles/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
 
+    <link href="~/www/build/styles/fonts/materialdesignicons/font.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/www/build/styles/fonts/tahoma/font.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap">
 
     <link href="@Url.RenderLink("~/www/build/styles/css/main.css")" rel="stylesheet" />
@@ -184,7 +185,6 @@
     <input type="hidden" id="RootUrl" value="@Url.Content("~")" />
     <input type="hidden" id="Language" value="@sessionService.CurrentLanguage" />
     @Html.Raw(Fanex.Logging.LogManager.RenderJavascriptLogger())
-    <script src="https://cdn.ravenjs.com/3.27.0/raven.min.js" crossorigin="anonymous"></script>
     <script>
         window.Lang = {
             ServerError: '@Lang.ServerError'

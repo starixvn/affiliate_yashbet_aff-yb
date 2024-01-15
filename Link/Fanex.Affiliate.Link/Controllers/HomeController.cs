@@ -4,7 +4,6 @@ namespace Fanex.Affiliate.Link.Controllers
 {
     using System;
     using System.Collections.Specialized;
-    using System.Globalization;
     using System.Text;
     using System.Web.Mvc;
     using Commands;
@@ -57,24 +56,7 @@ namespace Fanex.Affiliate.Link.Controllers
             return View();
         }
 
-        public ActionResult Link(string affId, string pageId, string lang = null, string deviceType = null)
-        {
-            try
-            {
-                var affInfo = _generalAffiliateInfoService.GetGeneralAffiliateInfo(affId: Convert.ToInt32(affId));
-                var affDomain = GetFullAffDomain(GetOriginalUrl(), affId.ToString());
-
-                return InsertAffiliate(affInfo.affId, affInfo.affCode, pageId, lang, affDomain);
-            }
-            catch(Exception ex)
-            {
-                LogService.Error($"{ex.Message}", ex);
-                ViewBag.Result = LinkIsIncorrectMessage;
-                return View("Link");
-            }
-        }
-
-        public ActionResult NewLink(string pageId, string affCode = null, string lang = null)
+        public ActionResult Link(string pageId, string affCode = null, string lang = null, string channel = null)
         {
             try
             {

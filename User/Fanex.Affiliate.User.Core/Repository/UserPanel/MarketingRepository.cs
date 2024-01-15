@@ -84,17 +84,6 @@ namespace Fanex.Affiliate.User.Core.Repository.UserPanel
             }
         }
 
-        public IEnumerable<MarketingItem> GetTextList(MarketingTextParam textParam)
-        {
-            const string uSpKey = "Aff_Admin_Text_Sel";
-            var dbMode = textParam.IsInternal ? DBMode.View : DBMode.Main;
-
-            using (var objectDb = _builder.Build(uSpKey, dbMode))
-            {
-                return objectDb.Query<MarketingItem>(textParam);
-            }
-        }
-
         public IEnumerable<LandingPage> GetLandingPageList(bool isInternal)
         {
             const string SpKey = "Aff_Admin_LandingPage_Sel";

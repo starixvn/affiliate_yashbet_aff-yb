@@ -122,7 +122,6 @@
     <Setting Key="Aff_User_Domain_Sel" SpName="Aff_User_Domain_Sel" DbName="" />
     <Setting Key="Aff_User_SubAffiliateDomain_Sel" SpName="Aff_User_SubAffiliateDomain_Sel" DbName="" />
     <Setting Key="Aff_Admin_LandingPage_Sel" SpName="Aff_Admin_LandingPage_Sel" DbName="" />
-    <Setting Key="Aff_Admin_Text_Sel" SpName="Aff_Admin_Text_Sel" DbName="" />
     <Setting Key="Aff_Admin_Banner_Sel" SpName="Aff_Admin_Banner_Sel" DbName="" />
     <Setting Key="Aff_User_Overview_SubAffiliate_Sel" SpName="Aff_User_Overview_SubAffiliate_Sel" DbName="" />
 

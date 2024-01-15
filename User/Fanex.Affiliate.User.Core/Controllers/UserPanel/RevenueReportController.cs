@@ -1,6 +1,5 @@
 ﻿namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
 {
-    using System.Web.Mvc;
     using Fanex.Affiliate.User.Core.BusinessService;
     using Fanex.Affiliate.User.Core.CoreService;
     using Fanex.Affiliate.User.Core.MetalModels.UserPanel;
@@ -8,6 +7,7 @@
     using Fanex.Affiliate.User.Core.Utilities;
     using Fanex.Affiliate.User.Core.ViewModels.UserPanel;
     using Filters;
+    using System.Web.Mvc;
 
     [CustomAuthorize]
     public class RevenueReportController : BaseController

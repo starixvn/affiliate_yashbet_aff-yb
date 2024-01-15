@@ -154,26 +154,6 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Repository.UserPanel
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public void GetTextList_WhenCall_QueryTextList(bool isInternal)
-        {
-            var param = new MarketingTextParam();
-            param.IsInternal = isInternal;
-            const string uSpKey = "Aff_Admin_Text_Sel";
-            var dbMode = isInternal ? DBMode.View : DBMode.Main;
-            var key = uSpKey + dbMode;
-            var repo = CreateRepo();
-            var db = Builder.Build(uSpKey, dbMode);
-            db.Query<MarketingItem>(param).Returns(new List<MarketingItem> { new MarketingItem() });
-
-            var result = repo.GetTextList(param);
-
-            Assert.Equal(key, db.SettingKey);
-            Assert.NotEmpty(result);
-        }
-
-        [Theory]
-        [InlineData(true)]
-        [InlineData(false)]
         public void GetLandingPageList_WhenCall_QueryLandingPage(bool isInternal)
         {
             const string SpKey = "Aff_Admin_LandingPage_Sel";

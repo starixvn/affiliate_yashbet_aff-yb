@@ -1,9 +1,5 @@
 ﻿namespace Fanex.Affiliate.User.Core.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web.Mvc;
     using Constants;
     using DTO.UserPanel;
     using Fanex.Affiliate.User.Core.BusinessService;
@@ -11,6 +7,10 @@
     using Fanex.Affiliate.User.Core.Repository.UserPanel;
     using Filters;
     using MetalModels.UserPanel;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
     using Utilities;
     using ViewModels.UserPanel.Statistics;
 
