@@ -18,13 +18,13 @@ exports[`affiliate info - GridData  _buildDataRow - should render correctly with
     </td>
     <td
       className="freeze-column-body freeze-column-body-2"
-      title="N8BAFF001"
+      title="YBAFF001"
     >
       <a
-        href="/Portal/Customer?user=N8BAFF001"
+        href="/Portal/Customer?user=YBAFF001"
         target="_top"
       >
-        N8BAFF001
+        YBAFF001
       </a>
       <span
         className="favor-uncheck"
@@ -66,14 +66,14 @@ exports[`affiliate info - GridData  _buildDataRow - should render correctly with
       05/22/2008 06:50:00
     </td>
     <td
-      title="N8BAFF001"
+      title="YBAFF001"
     >
       <Button
         color="link"
         onClick={[Function]}
         tag="button"
       >
-        N8BAFF001
+        YBAFF001
       </Button>
     </td>
     <td
@@ -94,7 +94,7 @@ exports[`affiliate info - GridData  _buildDataRow - should render correctly with
       title="6"
     >
       <a
-        href="/Portal/Player?AffName=N8BAFF001"
+        href="/Portal/Player?AffName=YBAFF001"
         target="_top"
       >
         6
@@ -141,13 +141,13 @@ exports[`affiliate info - GridData  _buildDataRow - should render correctly with
     </td>
     <td
       className="freeze-column-body freeze-column-body-2"
-      title="N8BAFF001"
+      title="YBAFF001"
     >
       <a
-        href="/Portal/Customer?user=N8BAFF001"
+        href="/Portal/Customer?user=YBAFF001"
         target="_top"
       >
-        N8BAFF001
+        YBAFF001
       </a>
       <span
         className=""
@@ -363,13 +363,13 @@ exports[`affiliate info - GridData  should render correctly 1`] = `
           </td>
           <td
             className="freeze-column-body freeze-column-body-2"
-            title="N8BAFF001"
+            title="YBAFF001"
           >
             <a
-              href="/Portal/Customer?user=N8BAFF001"
+              href="/Portal/Customer?user=YBAFF001"
               target="_top"
             >
-              N8BAFF001
+              YBAFF001
             </a>
             <span
               className="favor-uncheck"
@@ -411,14 +411,14 @@ exports[`affiliate info - GridData  should render correctly 1`] = `
             05/22/2008 06:50:00
           </td>
           <td
-            title="N8BAFF001"
+            title="YBAFF001"
           >
             <Button
               color="link"
               onClick={[Function]}
               tag="button"
             >
-              N8BAFF001
+              YBAFF001
             </Button>
           </td>
           <td
@@ -433,7 +433,7 @@ exports[`affiliate info - GridData  should render correctly 1`] = `
             title="6"
           >
             <a
-              href="/Portal/Player?AffName=N8BAFF001"
+              href="/Portal/Player?AffName=YBAFF001"
               target="_top"
             >
               6
@@ -475,13 +475,13 @@ exports[`affiliate info - GridData  should render correctly 1`] = `
           </td>
           <td
             className="freeze-column-body freeze-column-body-2"
-            title="N8BAFF001"
+            title="YBAFF001"
           >
             <a
-              href="/Portal/Customer?user=N8BAFF001"
+              href="/Portal/Customer?user=YBAFF001"
               target="_top"
             >
-              N8BAFF001
+              YBAFF001
             </a>
             <span
               className="favor-uncheck"
@@ -545,7 +545,7 @@ exports[`affiliate info - GridData  should render correctly 1`] = `
             title="6"
           >
             <a
-              href="/Portal/Player?AffName=N8BAFF001"
+              href="/Portal/Player?AffName=YBAFF001"
               target="_top"
             >
               6
@@ -614,13 +614,13 @@ exports[`affiliate info - GridData  should render correctly with _renderDataSect
     </td>
     <td
       className="freeze-column-body freeze-column-body-2"
-      title="N8BAFF001"
+      title="YBAFF001"
     >
       <a
-        href="/Portal/Customer?user=N8BAFF001"
+        href="/Portal/Customer?user=YBAFF001"
         target="_top"
       >
-        N8BAFF001
+        YBAFF001
       </a>
       <span
         className="favor-uncheck"
@@ -662,14 +662,14 @@ exports[`affiliate info - GridData  should render correctly with _renderDataSect
       05/22/2008 06:50:00
     </td>
     <td
-      title="N8BAFF001"
+      title="YBAFF001"
     >
       <Button
         color="link"
         onClick={[Function]}
         tag="button"
       >
-        N8BAFF001
+        YBAFF001
       </Button>
     </td>
     <td
@@ -690,7 +690,7 @@ exports[`affiliate info - GridData  should render correctly with _renderDataSect
       title="6"
     >
       <a
-        href="/Portal/Player?AffName=N8BAFF001"
+        href="/Portal/Player?AffName=YBAFF001"
         target="_top"
       >
         6
@@ -732,13 +732,13 @@ exports[`affiliate info - GridData  should render correctly with _renderDataSect
     </td>
     <td
       className="freeze-column-body freeze-column-body-2"
-      title="N8BAFF001"
+      title="YBAFF001"
     >
       <a
-        href="/Portal/Customer?user=N8BAFF001"
+        href="/Portal/Customer?user=YBAFF001"
         target="_top"
       >
-        N8BAFF001
+        YBAFF001
       </a>
       <span
         className="favor-uncheck"
@@ -808,7 +808,7 @@ exports[`affiliate info - GridData  should render correctly with _renderDataSect
       title="6"
     >
       <a
-        href="/Portal/Player?AffName=N8BAFF001"
+        href="/Portal/Player?AffName=YBAFF001"
         target="_top"
       >
         6

@@ -26,7 +26,7 @@ describe('domain - components - Content ', () => {
         isAffDomain: true,
         gridData,
         fetchData: jest.fn(),
-        licenseeName: 'Bwing'
+        licenseeName: 'YashBet'
     };
 
     it('render correctly', () => {
@@ -97,7 +97,7 @@ describe('domain - components - Content ', () => {
         dataRow.find('Button').at(1).simulate('click');
 
         expect(props.setShouldResetScrollPosition).toHaveBeenCalledWith(false);
-        expect(wrapper.setState).toHaveBeenCalledWith({ message: `Are you sure you want to delete this Bwing domain?`, isConfirmPopup: true, selectedDomainId: 2438 });
+        expect(wrapper.setState).toHaveBeenCalledWith({ message: `Are you sure you want to delete this YashBet domain?`, isConfirmPopup: true, selectedDomainId: 2438 });
     });
 
     it('_handleEditDomain - should be called when click edit button', () => {

@@ -22,7 +22,7 @@ export const renderMode = () => {
     const mode = getCookie("mode");
 
     const ybLink = document.getElementById('yb-link');
-    ybLink && ybLink.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/YB-${mode || 'lightmode'}.css`));
+    ybLink && ybLink.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/${mode || 'lightmode'}.css`));
 
     if (!mode) {
         document.cookie = "mode=lightmode; path=/";
@@ -35,7 +35,7 @@ export const changeMode = (isLightMode) => {
     const mode = isLightMode ? 'darkmode' : 'lightmode';
 
     const ybLink = document.getElementById('yb-link');
-    ybLink && ybLink.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/YB-${mode}.css`));
+    ybLink && ybLink.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/${mode}.css`));
 
     document.cookie = "mode=" + mode + "; path=/";
 }

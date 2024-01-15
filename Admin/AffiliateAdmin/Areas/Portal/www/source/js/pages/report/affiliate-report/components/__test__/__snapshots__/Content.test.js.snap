@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`affiliate report - Content  N8B - should render correctly when currentViewLevel is Main view 1`] = `
+exports[`affiliate report - Content  YB - should render correctly when currentViewLevel is Main view 1`] = `
 <div
   className="data-content my-2 report-content-container"
 >

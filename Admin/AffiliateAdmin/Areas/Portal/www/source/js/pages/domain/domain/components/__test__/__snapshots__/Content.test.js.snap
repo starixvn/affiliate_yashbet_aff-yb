@@ -339,7 +339,7 @@ exports[`domain - components - Content  render correctly with gridData is empty 
       tag="button"
       type="button"
     >
-      Add Bwing Domain
+      Add YashBet Domain
       <span
         className="oi oi-plus ml-2"
       />

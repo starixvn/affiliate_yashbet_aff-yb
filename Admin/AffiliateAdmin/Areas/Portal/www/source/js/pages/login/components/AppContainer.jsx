@@ -4,8 +4,6 @@ import { Alert, Form, FormGroup, Label, Input } from 'reactstrap';
 import { post } from '../../../modules/ajaxRequest';
 import { resolveClientUrl, changeMode, renderMode } from '../../../modules/utils';
 
-const nova88 = 'Nova88';
-
 export default class AppContainer extends PureComponent {
     constructor(props) {
         super(props);
@@ -23,11 +21,9 @@ export default class AppContainer extends PureComponent {
     }
 
     componentDidMount() {
-        if (window.initialState.licenseeName === nova88) {
-            const isLightMode = renderMode();
+        const isLightMode = renderMode();
 
-            this.setState({ isLightMode });
-        }
+        this.setState({ isLightMode });
     }
 
     _handleShowAlert = (isSuccess, message) => {
@@ -116,11 +112,9 @@ export default class AppContainer extends PureComponent {
                             <div>Welcome to {licenseeName}<span> Login</span></div>
                             <p>Please sign in to continue to work</p>
                         </div>
-                        {
-                            licenseeName === nova88 && <div className="switch-mode-theme">
-                                <input type="checkbox" id="switch" checked={!isLightMode} onChange={this._handleChangeMode} /><Label for="switch"></Label>
-                            </div>
-                        }
+                        <div className="switch-mode-theme">
+                            <input type="checkbox" id="switch" checked={!isLightMode} onChange={this._handleChangeMode} /><Label for="switch"></Label>
+                        </div>
                     </div>
                     <div className="war-box">
                         <Alert color='danger' isOpen={isShowMessage}>

@@ -59,9 +59,9 @@ exports[`transfer report - GridData  should render correctly 1`] = `
               onClick={[Function]}
               sortable={false}
               sorting={false}
-              title="N88AFF001"
+              title="YBAFF001"
             >
-              N88AFF001
+              YBAFF001
             </t>
             <t
               asc={true}
