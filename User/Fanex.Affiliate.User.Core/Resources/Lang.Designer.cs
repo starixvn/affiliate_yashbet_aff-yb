@@ -1096,15 +1096,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Revenue Sharing Structure.
-        /// </summary>
-        public static string CommissionStructure {
-            get {
-                return ResourceManager.GetString("CommissionStructure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Revenue Rate.
         /// </summary>
         public static string CommRate {
@@ -4206,6 +4197,15 @@ namespace Fanex.Affiliate.User.Core.Resources {
         public static string RevenueSharingAndPayment {
             get {
                 return ResourceManager.GetString("RevenueSharingAndPayment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revenue Sharing Structure.
+        /// </summary>
+        public static string RevenueSharingStructure {
+            get {
+                return ResourceManager.GetString("RevenueSharingStructure", resourceCulture);
             }
         }
         

@@ -1203,7 +1203,7 @@
   <data name="TermAndCondition" xml:space="preserve">
     <value>ข้อกำหนดและเงื่อนไข</value>
   </data>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>โครงสร้างรายได้ส่วนแบ่ง</value>
   </data>
   <data name="Product" xml:space="preserve">

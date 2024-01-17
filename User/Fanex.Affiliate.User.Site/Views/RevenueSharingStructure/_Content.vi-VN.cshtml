@@ -45,7 +45,7 @@
     <ol type="i">
         <li class="text-block">
             <strong>Chia sẻ doanh thu cố định:</strong>
-            @{ Html.RenderPartial("~/Views/CommissionStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
+            @{ Html.RenderPartial("~/Views/RevenueSharingStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
             <ul>
                 <li class="text" style="margin-top: 15px;">
                     <strong>Tiền lãi thực của công ty:</strong> tiền lãi từ những người chơi được bạn giới thiệu cho YashBet.
@@ -111,7 +111,7 @@
     <p class="text">
         <i>Hình 1:</i> ví dụ về cách tính tiền hoa hồng bạn nhận được từ người chơi được bạn giới thiệu
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/RevenueSharingStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>Hình 2:</i> ví dụ về cách tính tiền hoa hồng bạn nhận được từ Đại Lý được bạn giới thiệu, và từ Đại Lý Cấp Dưới của họ
     </p>

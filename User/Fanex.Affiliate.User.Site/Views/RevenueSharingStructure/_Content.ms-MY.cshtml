@@ -45,7 +45,7 @@
     <ol type="i">
         <li class="text-block">
             <strong>Bahagian Hasil Tetap:</strong>
-            @{ Html.RenderPartial("~/Views/CommissionStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
+            @{ Html.RenderPartial("~/Views/RevenueSharingStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
             <ul>
                 <li class="text" style="margin-top: 15px;">
                     <strong>Keuntungan Bersih:</strong> Jumlah kerugian bersih bulanan untuk semua pemain yang dirujuk oleh anda kepada @Model.SiteFriendlyName.
@@ -110,7 +110,7 @@
     <p class="text">
         <i>Rajah 1:</i> Contoh tunjuk kepada anda kaedah pengiraan pengagihan keuntungan yang anda perolehi daripada pemain yang dirujuk oleh anda.
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/RevenueSharingStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>Rajah 2:</i> Contoh untuk tunjukkan pengiraan kepada anda cara pengagihan keuntungan anda yang diperoleh daripada ahli affliate yang dirujuk anda (dan ahli affliate mereka)
     </p>

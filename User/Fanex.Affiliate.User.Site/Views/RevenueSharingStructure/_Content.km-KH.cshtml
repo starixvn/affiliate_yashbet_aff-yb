@@ -45,7 +45,7 @@
     <ol type="i">
         <li class="text-block">
             <strong>ការបែងចែកប្រាក់ចំណូលថេរ៖</strong>
-            @{ Html.RenderPartial("~/Views/CommissionStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
+            @{ Html.RenderPartial("~/Views/RevenueSharingStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
             <ul>
                 <li class="text" style="margin-top: 15px;">
                     <strong>ប្រាក់ចំណេញសុទ្ធរបស់ក្រុមហ៊ុន៖</strong> ការបាត់បង់សុទ្ធប្រចាំខែរបស់អ្នកលេងទាំងអស់ដែលបានណែនាំដោយអ្នកទៅកាន់ @Model.SiteFriendlyName ។
@@ -109,7 +109,7 @@
     <p class="text">
         <i>ទី 1៖</i> ឧទាហរណ៍មួយដើម្បីបង្ហាញអ្នកពីរបៀបដែលចំណែកប្រាក់ចំណូលរបស់អ្នកទទួលបានពីអ្នកលេងដែលត្រូវបានណែនាំរបស់អ្នកត្រូវបានគណនា
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/RevenueSharingStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>ទី 2៖</i> ជាឧទាហរណ៍ដើម្បីបង្ហាញអ្នកពីរបៀបដែលចំណែកប្រាក់ចំណូលរបស់អ្នកទទួលបានពីសាខាដែលបានណែនាំ (និងសាខារងរបស់ពួកគេ) ត្រូវបានគណនា
     </p>

@@ -22,7 +22,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers
 
             var result = controller.Index() as ViewResult;
 
-            Assert.Contains("Views/CommissionStructure/Index.cshtml", result.ViewName);
+            Assert.Contains("Views/RevenueSharingStructure/Index.cshtml", result.ViewName);
         }
     }
 }

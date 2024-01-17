@@ -2,11 +2,11 @@
 @model Fanex.Affiliate.User.Core.ViewModels.RevenueSharingStructureViewModel
 
 @{
-    ViewBag.Title = Lang.CommissionStructure;
+    ViewBag.Title = Lang.RevenueSharingStructure;
     Layout = "~/Views/Shared/_LayoutBeforeLogin.cshtml";
 }
 @{
-    var htmlString = Html.RenderPartialByLanguage("~/Views/CommissionStructure/_Content", Model.CurrentLanguage, Model).ToHtmlString();
+    var htmlString = Html.RenderPartialByLanguage("~/Views/RevenueSharingStructure/_Content", Model.CurrentLanguage, Model).ToHtmlString();
 }
 
 @section scripts{
@@ -17,7 +17,7 @@
     @RazorHelper.RenderLeftPanel(Menu.RevenueSharingMenuList)
     <div class="content">
         <div class="page-title">
-            <span class="text">@Lang.CommissionStructure</span>
+            <span class="text">@Lang.RevenueSharingStructure</span>
         </div>
 
         @Html.Raw(htmlString)

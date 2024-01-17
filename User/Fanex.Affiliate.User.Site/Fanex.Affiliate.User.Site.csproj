@@ -736,7 +736,6 @@
     <Content Include="www\build\styles\Images\contact-us\whatsapp.png" />
     <Content Include="www\build\styles\Images\copy-link.png" />
     <Content Include="www\build\styles\Images\gift.svg" />
-    <Content Include="www\build\styles\Images\header-bg.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.mobile.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.png" />
     <Content Include="www\build\styles\Images\home\bg-news.mobile.png" />
@@ -780,8 +779,8 @@
     <Content Include="www\build\styles\Images\icons\dropdown.svg" />
     <Content Include="www\build\styles\Images\ipad-login.svg" />
     <Content Include="www\build\styles\Images\account-overview\qr-disabled.png" />
-    <Content Include="www\build\styles\Images\notify\maintenance-yb.png" />
     <Content Include="www\build\styles\Images\notify\note_icon.png" />
+    <Content Include="www\build\styles\Images\notify\maintenance-yb.png" />
     <Content Include="www\build\styles\Images\products\product.desktop.bn-BD.jpg" />
     <Content Include="www\build\styles\Images\products\product.desktop.km-KH.jpg" />
     <Content Include="www\build\styles\Images\products\product.desktop.vi-VN.jpg" />
@@ -827,6 +826,7 @@
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.ms-MY.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.zh-CN.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.th-TH.png" />
+    <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />
     <Content Include="www\build\styles\Images\themes\yb.png" />
     <Content Include="www\source\js\layout-after-login.js" />
     <Content Include="www\source\js\lib\bootstrap2-toggle.js" />
@@ -844,7 +844,6 @@
     <Content Include="www\build\styles\Images\icon-2.png" />
     <Content Include="www\build\styles\Images\icon-3.png" />
     <Content Include="www\build\styles\Images\notify\note_icon.gif" />
-    <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />
     <Content Include="www\source\js\components\authhelper.js" />
     <Content Include="www\source\js\components\clipboard.js" />
     <Content Include="www\source\js\components\clipboard.min.js" />
@@ -980,8 +979,6 @@
     <Content Include="www\source\styles\Images\gift.svg" />
     <Content Include="www\source\styles\Images\ipad-login.png" />
     <Content Include="www\source\styles\Images\ipad-login.svg" />
-    <Content Include="www\source\styles\Images\mode\darkmode.svg" />
-    <Content Include="www\source\styles\Images\mode\lightmode.svg" />
     <Content Include="www\source\styles\Images\notify\404.png" />
     <Content Include="www\source\styles\Images\notify\bgMain.jpg" />
     <Content Include="www\source\styles\Images\notify\Error.png" />
@@ -1019,10 +1016,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="www\source\styles\scss\abstracts\_variables.scss" />
     <Content Include="www\source\styles\scss\themes\yb.scss" />
-    <Content Include="Views\CommissionStructure\_Content.en-US.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.id-ID.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.th-TH.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.zh-CN.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.en-US.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.id-ID.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.th-TH.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.zh-CN.cshtml" />
     <Content Include="Views\Faq\_Content.en-US.cshtml" />
     <Content Include="Views\Faq\_Content.id-ID.cshtml" />
     <Content Include="Views\Faq\_Content.th-TH.cshtml" />
@@ -1034,7 +1031,7 @@
     <Content Include="Views\Product\_Content.th-TH.cshtml" />
     <Content Include="Views\Product\_Content.zh-CN.cshtml" />
     <Content Include="Views\Product\_CarouselItems.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.hi-IN.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.hi-IN.cshtml" />
     <Content Include="Views\Faq\_Content.hi-IN.cshtml" />
     <Content Include="Views\Product\_Content.hi-IN.cshtml" />
     <Content Include="Views\Shared\Email\NewPassword\Content.hi-IN.cshtml" />
@@ -1043,7 +1040,7 @@
     <Content Include="Views\Shared\Email\RecoverPassword\Content.hi-IN.cshtml" />
     <Content Include="Views\Shared\Email\VerificationAccount\Content.hi-IN.cshtml" />
     <Content Include="Views\Product\_Content.ms-MY.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.ms-MY.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.ms-MY.cshtml" />
     <Content Include="Views\Faq\_Content.ms-MY.cshtml" />
     <Content Include="Views\Shared\Email\NewPassword\Content.ms-MY.cshtml" />
     <Content Include="Views\Shared\Email\PaymentCancel\Content.ms-MY.cshtml" />
@@ -1066,8 +1063,8 @@
     <Content Include="www\source\styles\scss\layout\_footer.scss" />
     <Content Include="www\source\styles\scss\layout\_content.scss" />
     <Content Include="Views\Auth\AuthenticationForm.cshtml" />
-    <Content Include="Views\CommissionStructure\_ExampleTable.cshtml" />
-    <Content Include="Views\CommissionStructure\_RevenueShareTable.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_ExampleTable.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_RevenueShareTable.cshtml" />
     <Content Include="Views\TermAndCondition\_Content.en-US.cshtml" />
     <Content Include="Views\TermAndCondition\_Content.hi-IN.cshtml" />
     <Content Include="Views\TermAndCondition\_Content.id-ID.cshtml" />
@@ -1086,7 +1083,7 @@
     <Content Include="www\source\styles\scss\main-after-login.scss" />
     <Content Include="www\source\styles\pages\update-password.scss" />
     <Content Include="www\source\styles\scss\components\_left-panel-menu.scss" />
-    <Content Include="Views\CommissionStructure\Index.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\Index.cshtml" />
     <Content Include="Views\ContactUs\Index.cshtml" />
     <Content Include="www\source\styles\pages\contact-us.scss" />
     <Content Include="Views\Faq\Index.cshtml" />
@@ -1152,9 +1149,9 @@
     <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_LandingPageStatisticsContent.cshtml" />
     <Content Include="Views\UserPanel\Statistics\TrackingStatistics\Index.cshtml" />
     <Content Include="Views\Password\RecoverPasswordResult.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.vi-VN.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.km-KH.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.bn-BD.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.vi-VN.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.km-KH.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.bn-BD.cshtml" />
     <Content Include="Views\Faq\_Content.km-KH.cshtml" />
     <Content Include="Views\Faq\_Content.vi-VN.cshtml" />
     <Content Include="Views\Faq\_Content.bn-BD.cshtml" />

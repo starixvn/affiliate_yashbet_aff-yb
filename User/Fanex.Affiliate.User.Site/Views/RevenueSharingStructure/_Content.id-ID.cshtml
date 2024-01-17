@@ -45,7 +45,7 @@
     <ol type="i">
         <li class="text-block">
             <strong>Bagi Hasil Tetap:</strong>
-            @{ Html.RenderPartial("~/Views/CommissionStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
+            @{ Html.RenderPartial("~/Views/RevenueSharingStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
             <ul>
                 <li class="text" style="margin-top: 15px;">
                     <strong>Net Win/Loss:</strong> kekalahan bersih bulanan dari semua pemain yang Anda rekomendasikan ke @Model.SiteFriendlyName.
@@ -110,7 +110,7 @@
     <p class="text">
         <i>Gambaran 1:</i> contoh untuk menunjukkan kepada Anda bagaimana perhitungan pembagian hasil Anda dari pemain yang Anda referensikan.
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/RevenueSharingStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>Gambaran 2:</i> contoh untuk menunjukkan kepada Anda bagaimana perhitungan pembagian penghasilan Anda dari afiliasi yang anda referensikan (dan sub-afiliasi mereka)
     </p>

@@ -1245,7 +1245,7 @@
   <data name="_B2CPlayerAcc" xml:space="preserve">
     <value>B2C Player Account</value>
   </data>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>Revenue Sharing Structure</value>
     <comment>87923</comment>
   </data>

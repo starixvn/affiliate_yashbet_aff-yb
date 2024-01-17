@@ -25,7 +25,7 @@ namespace Fanex.Affiliate.User.Core.Controllers
             };
             AssignBaseLayoutViewModel(model);
 
-            return View($"~/Views/CommissionStructure/Index.cshtml", model);
+            return View($"~/Views/RevenueSharingStructure/Index.cshtml", model);
         }
     }
 }

@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>រចនាសម្ព័ន្ធការចែករំលែកប្រាក់ចំណូល</value>
   </data>
   <data name="ListCategory" xml:space="preserve">

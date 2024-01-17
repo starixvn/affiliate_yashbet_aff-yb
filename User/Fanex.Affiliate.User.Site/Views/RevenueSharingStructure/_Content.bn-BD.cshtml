@@ -45,7 +45,7 @@
     <ol type="i">
         <li class="text-block">
             <strong>স্থায়ী রাজস্ব ভাগ:</strong>
-            @{ Html.RenderPartial("~/Views/CommissionStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
+            @{ Html.RenderPartial("~/Views/RevenueSharingStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
             <ul>
                 <li class="text" style="margin-top: 15px;">
                     <strong>কোম্পানির নেট লাভ:</strong> @(Model.SiteFriendlyName)-এ আপনার দ্বারা সুপারিশকৃত সমস্ত খেলোয়াড়ের মাসিক নিট ক্ষতি।
@@ -109,7 +109,7 @@
     <p class="text">
         <i>চিত্র 1:</i> আপনার রেফার করা খেলোয়াড়দের থেকে আপনার উপার্জনের ভাগ কীভাবে গণনা করা হয় তা দেখানোর জন্য একটি উদাহরণ
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/RevenueSharingStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>চিত্র 2:</i> আপনার রেফার করা অ্যাফিলিয়েট (এবং তাদের সাব-অ্যাফিলিয়েট) থেকে আপনার উপার্জনের ভাগ কীভাবে গণনা করা হয় তা দেখানোর জন্য একটি উদাহরণ
     </p>

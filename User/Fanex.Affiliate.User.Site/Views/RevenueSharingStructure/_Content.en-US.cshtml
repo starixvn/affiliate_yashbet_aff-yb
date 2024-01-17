@@ -45,7 +45,7 @@
     <ol type="i">
         <li class="text-block">
             <strong>Fixed Revenue Share:</strong>
-            @{ Html.RenderPartial("~/Views/CommissionStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
+            @{ Html.RenderPartial("~/Views/RevenueSharingStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
             <ul>
                 <li class="text" style="margin-top: 15px;">
                     <strong>Company's Net Profit:</strong> the monthly net loss of all players recommended by you to @Model.SiteFriendlyName.
@@ -110,7 +110,7 @@
     <p class="text">
         <i>Figure 1:</i> An example to show you how your revenue share earned from your referred players is calculated
     </p>
-    @{ Html.RenderPartial($"~/Views/CommissionStructure/_ExampleTable.cshtml", Model); }
+    @{ Html.RenderPartial($"~/Views/RevenueSharingStructure/_ExampleTable.cshtml", Model); }
     <p class="text">
         <i>Figure 2:</i> An example to show you how your revenue share earned from your referred affiliates (and their sub-affiliates) is calculated
     </p>
