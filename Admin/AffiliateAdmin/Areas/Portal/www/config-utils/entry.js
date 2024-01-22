@@ -54,6 +54,4 @@ module.exports = {
     [`${styleDist}/pages/administrator/department`]: clientRoot + "/style/pages/administrator/department.scss",
     [`${styleDist}/home`]: clientRoot + "/style/pages/home.scss",
     [`${styleDist}/YB`]: clientRoot + "/style/themes/YB.scss",
-    [`${styleDist}/lightmode`]: clientRoot + "/style/themes/lightmode.scss",
-    [`${styleDist}/darkmode`]: clientRoot + "/style/themes/darkmode.scss",
 };

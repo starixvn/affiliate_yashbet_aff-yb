@@ -18,28 +18,6 @@ export const getCookie = (cookieName) => {
     return "";
 }
 
-export const renderMode = () => {
-    const mode = getCookie("mode");
-
-    const ybLink = document.getElementById('yb-link');
-    ybLink && ybLink.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/${mode || 'lightmode'}.css`));
-
-    if (!mode) {
-        document.cookie = "mode=lightmode; path=/";
-    }
-
-    return mode !== 'darkmode';
-}
-
-export const changeMode = (isLightMode) => {
-    const mode = isLightMode ? 'darkmode' : 'lightmode';
-
-    const ybLink = document.getElementById('yb-link');
-    ybLink && ybLink.setAttribute('href', resolveClientUrl(`Areas/Portal/www/dist/style/${mode}.css`));
-
-    document.cookie = "mode=" + mode + "; path=/";
-}
-
 export const formatUnit = (value) => {
     return value < 10 ? '0' + value : value;
 }

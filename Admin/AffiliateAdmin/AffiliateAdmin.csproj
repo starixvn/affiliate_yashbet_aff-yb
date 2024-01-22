@@ -282,6 +282,7 @@
     </Content>
     <Content Include="App_Data\SpConfig\_SpNameConfig.xml" />
     <Content Include="App_Data\SpConfig\_SpNameOriginal.xml" />
+    <Content Include="Areas\Portal\www\config-utils\layoutEntry.js" />
     <Content Include="Areas\Portal\www\dist\imgs\email\banner.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\banner_bn-BD.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\banner_en-US.png" />
@@ -319,10 +320,6 @@
     <Content Include="Areas\Portal\www\dist\style\layout.js" />
     <Content Include="Areas\Portal\www\dist\style\login.css" />
     <Content Include="Areas\Portal\www\dist\style\login.js" />
-    <Content Include="Areas\Portal\www\dist\style\darkmode.css" />
-    <Content Include="Areas\Portal\www\dist\style\darkmode.js" />
-    <Content Include="Areas\Portal\www\dist\style\lightmode.css" />
-    <Content Include="Areas\Portal\www\dist\style\lightmode.js" />
     <Content Include="Areas\Portal\www\dist\style\YB.css" />
     <Content Include="Areas\Portal\www\dist\style\YB.js" />
     <Content Include="Areas\Portal\www\dist\style\pages\administrator\administrator.css" />
@@ -379,7 +376,9 @@
     <Content Include="Areas\Portal\www\source\js\components\select\components\__tests__\SelectOptionList.test.js" />
     <Content Include="Areas\Portal\www\source\js\components\select\components\__tests__\Option.test.js" />
     <Content Include="Areas\Portal\www\source\js\components\select\index.jsx" />
+    <Content Include="Areas\Portal\www\source\js\modules\globalResource.js" />
     <Content Include="Areas\Portal\www\source\js\modules\permissions.js" />
+    <Content Include="Areas\Portal\www\source\js\modules\reducerRegistry.js" />
     <Content Include="Areas\Portal\www\source\js\modules\__test__\utils.test.js" />
     <Content Include="Areas\Portal\www\source\js\pages\administrator\administrator\components\__test__\redux\AppContainer.redux.test.js" />
     <Content Include="Areas\Portal\www\source\js\pages\administrator\department\components\__test__\redux\Content.redux.test.js" />
@@ -1432,15 +1431,7 @@
     <Content Include="Areas\Portal\www\source\style\components\_department-popup.scss" />
     <Content Include="Areas\Portal\www\source\style\pages\home.scss" />
     <Content Include="Areas\Portal\www\source\js\pages\user-panel\player-detail\components\SortingCell.jsx" />
-    <Content Include="Areas\Portal\www\source\style\abstracts\_variables-blue.scss" />
-    <Content Include="Areas\Portal\www\source\style\abstracts\_variables-coral.scss" />
-    <Content Include="Areas\Portal\www\source\style\abstracts\_variables-green.scss" />
-    <Content Include="Areas\Portal\www\source\style\abstracts\_variables-violet.scss" />
     <Content Include="Areas\Portal\www\source\style\pages\user-panel\statement-history.scss" />
-    <Content Include="Areas\Portal\www\source\style\themes\darkmode.scss" />
-    <Content Include="Areas\Portal\www\source\style\abstracts\_variables-darkmode.scss" />
-    <Content Include="Areas\Portal\www\source\style\themes\lightmode.scss" />
-    <Content Include="Areas\Portal\www\source\style\abstracts\_variables-lightmode.scss" />
     <Content Include="Areas\Portal\www\source\style\themes\YB.scss" />
     <Content Include="Areas\Portal\www\source\style\abstracts\variables.scss" />
     <Content Include="Areas\Portal\www\source\style\vendors\select.scss" />

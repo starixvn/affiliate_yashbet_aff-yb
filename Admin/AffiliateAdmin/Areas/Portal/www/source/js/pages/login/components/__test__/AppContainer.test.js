@@ -43,15 +43,6 @@ describe('Login - components - AppContainer', () => {
         expect(wrapper.setState).toHaveBeenCalledWith({ password: '123' });
     });
 
-    it('_handleChangeMode - should call setState when change mode', () => {
-        const wrapper = shallow(<AppContainer />);
-        wrapper.setState = jest.fn();
-
-        wrapper.find('input[type="checkbox"][id="switch"]').simulate('change');
-
-        expect(wrapper.setState).toHaveBeenCalledWith({ isLightMode: false });
-    });
-
     it('handlePressEnter - should call handleSubmit when press Enter in userName input', () => {
         const event = { charCode: 13, preventDefault: jest.fn() };
         const wrapper = shallow(<AppContainer />);

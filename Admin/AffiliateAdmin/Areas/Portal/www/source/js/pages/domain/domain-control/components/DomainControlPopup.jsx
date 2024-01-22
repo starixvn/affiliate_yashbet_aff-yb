@@ -82,7 +82,7 @@ export class DomainControlPopup extends PureComponent {
         const title = isInsert ? "Add New Domain Control" : "Edit Domain Control";
         const buttonLabel = isInsert ? "Add" : "Submit";
 
-        return selectedDomain && affDomainList && redirectDomainList && (
+        return selectedDomain && (
             <Modal isOpen={isShowPopup} toggle={this._handleClosePopup} backdrop='static'>
                 <ModalHeader toggle={this._handleClosePopup}><span className="iconpopup"></span>{title}</ModalHeader>
                 <ModalBody>
@@ -109,7 +109,7 @@ export class DomainControlPopup extends PureComponent {
                                     <Col sm={8}>
                                         <Input type="select" name="affDomainId" className="mt-1" value={selectedDomain.affDomainId} onChange={this._handleChange}>
                                             {
-                                                affDomainList.map(item => {
+                                                affDomainList && affDomainList.map(item => {
                                                     return (<option key={`affDomain-${item.DomainId}`} value={item.DomainId}>{item.DomainName}</option>)
                                                 })
                                             }
@@ -121,7 +121,7 @@ export class DomainControlPopup extends PureComponent {
                                     <Col sm={8}>
                                         <Input type="select" name="redirectDomainId" className="mt-1" value={selectedDomain.redirectDomainId} onChange={this._handleChange}>
                                             {
-                                                redirectDomainList.map(item => {
+                                                redirectDomainList && redirectDomainList.map(item => {
                                                     return (<option key={`redirectDomain-${item.DomainId}`} value={item.DomainId}>{item.DomainName}</option>)
                                                 })
                                             }

@@ -131,7 +131,7 @@ export class Content extends PureComponent {
     render() {
         const { gridData, shouldResetScrollPosition, selectedMarket, affDomainList, redirectDomainList, marketList } = this.props;
         const { message, isConfirmPopup } = this.state;
-        const languageCode = selectedMarket || (marketList[0].LanguageCode || 'en-US');
+        const languageCode = selectedMarket || (marketList.length && marketList[0].LanguageCode || 'en-US');
 
         return gridData && (
             <div className="data-content">

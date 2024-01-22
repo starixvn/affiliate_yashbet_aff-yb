@@ -311,7 +311,7 @@ $height-hotnew: 30px;
         font-weight: 700;
 
         &:before {
-            content: url("../../../../../www/build/styles/Images/home/hot-news/left-badge-after.png");
+            content: url("../../../../www/build/styles/Images/home/hot-news/left-badge-after.png");
             width: 30px;
             height: 30px;
             position: absolute;
@@ -320,7 +320,7 @@ $height-hotnew: 30px;
         }
 
         &:after {
-            content: url("../../../../../www/build/styles/Images/home/hot-news/right-badge.png");
+            content: url("../../../../www/build/styles/Images/home/hot-news/right-badge.png");
             width: 40px;
             height: 30px;
             border: 0 !important;
@@ -349,7 +349,7 @@ $height-hotnew: 30px;
 
 // --------------------------------- image responsive ------------------- //
 .adv-contact {
-    background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.desktop.png");
+    background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.desktop.png");
     position: relative;
     z-index: 1;
 
@@ -367,7 +367,7 @@ $height-hotnew: 30px;
 }
 /*
 .adv-contact {
-    background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.webp");
+    background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.webp");
 }*/
 
 .adv-contact {
@@ -451,7 +451,7 @@ $height-hotnew: 30px;
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
     .adv-contact {
         padding: 6px 27% 18px 18px;
-        background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.tablet2.png");
+        background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.tablet2.png");
 
         .text-1 {
             margin-top: 13px;
@@ -473,7 +473,7 @@ $height-hotnew: 30px;
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
     .adv-contact {
         padding: 17px 27% 26px 26px;
-        background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.tablet.png");
+        background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.tablet.png");
 
         .text-3 {
             padding-right: 130px;
@@ -494,7 +494,7 @@ $height-hotnew: 30px;
 
             &:before {
                 content: "";
-                background: url("../../../../../www/build/styles/Images/home/hot-news/left-badge.mobile.png") no-repeat center center / cover;
+                background: url("../../../../www/build/styles/Images/home/hot-news/left-badge.mobile.png") no-repeat center center / cover;
                 width: 26px;
                 height: 26px;
                 left: -18px;
@@ -503,7 +503,7 @@ $height-hotnew: 30px;
 
             &:after {
                 content: "";
-                background: url("../../../../../www/build/styles/Images/home/hot-news/right-badge.mobile.png") no-repeat center center/ cover;
+                background: url("../../../../www/build/styles/Images/home/hot-news/right-badge.mobile.png") no-repeat center center/ cover;
                 width: 26px;
                 height: 26px;
                 right: -18px;
@@ -520,7 +520,7 @@ $height-hotnew: 30px;
 
     .adv-contact {
         padding: 7px 31% 7px 7px;
-        background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.mobile.png");
+        background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.mobile.png");
 
         .text-1 {
             margin-bottom: 0;
