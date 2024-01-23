@@ -6,39 +6,6 @@ function toggleCollapseButton(btn) {
     $(btn).toggleClass("active-btn");
 }
 
-function handleSetTop() {
-    let isOverviewTable = $("#overview-table").length;
-
-    if (isOverviewTable) {
-        let headerHeight = $('#overview-table-header').height();
-        $('#overview-table-total > th').css({ top: `${SUB_MENU_HEIGHT + headerHeight + 7}px` });
-    }
-}
-
-function handleScroll() {
-    let isSummaryPanel = $("#summary").length;
-
-    if (isSummaryPanel) {
-        if (window.innerWidth < SUPPORT_MIN_WITDH) {
-            $("#details-section-menu").removeClass("details-section-sticky");
-        } else {
-            let stickyPoint = $("#details-section").offset().top;
-
-            if (window.pageYOffset >= stickyPoint) {
-                $("#details-section-menu").addClass("details-section-sticky");
-            }
-            if (window.pageYOffset < stickyPoint - DETAILS_SECTION_MENU_HEIGHT) {
-                $("#details-section-menu").removeClass("details-section-sticky");
-            }
-        }
-    }
-}
-
-function handleResize() {
-    handleScroll();
-    handleSetTop()
-}
-
 var UserPanel = (function ($) {
     var DEFAULT_ACTION = 'AccountOverview';
     var allowedActionList = ["AccountOverview", "StatementHistory", "MyAccount", "PaymentRequest",
@@ -61,7 +28,6 @@ var UserPanel = (function ($) {
                 _me.renderView();
             });
 
-            //fix issue hover after click(still show dropdown menu) on ipad 12.x
             $('#mainMenu .parent .submenu-container').hover(function () {
                 $(this).addClass("hover");
             }, function () {
@@ -74,8 +40,14 @@ var UserPanel = (function ($) {
             $("#mainMenu .menu-item").removeClass(activeClassName);
             $("#menu" + actionName).addClass(activeClassName);
 
-            //fix issue hover after click(still show dropdown menu) on ipad 12.x
-            $('#mainMenu .parent .hover').removeClass('hover');
+            //fix issue hover after click on ipad
+            $('#mainMenu .parent .submenu-container').removeClass('hover');
+
+            if ($('.content-menu-mobile').length) {
+                $(".content-menu-mobile .menu-item").removeClass(activeClassName);
+                $("#menu" + actionName + "Mobile").addClass(activeClassName);
+                $('.content-menu-mobile .show-name-menu').html($("#menu" + actionName + "Mobile").html());
+            }
         },
 
         renderView: function () {
@@ -108,7 +80,7 @@ var UserPanel = (function ($) {
             });
         },
 
-        clearEventListener: function(){
+        clearEventListener: function () {
             $("#mainPanel *").off();
             if (_me.datepicker) {
                 for (var i = 0; i < _me.datepicker.length; i++) {
@@ -118,9 +90,6 @@ var UserPanel = (function ($) {
                 }
                 _me.datepicker = [];
             }
-
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleResize);
         },
 
         getActionUrl: function (onlyAction) {
@@ -140,7 +109,7 @@ var UserPanel = (function ($) {
             var queryString = (!onlyAction && urlPartList[1]) ? '?' + urlPartList[1] : '';
 
             return actionName + queryString;
-        }
+        },
     };
 
     return _me;

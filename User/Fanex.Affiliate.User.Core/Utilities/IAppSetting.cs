@@ -31,7 +31,7 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         string JsVersion { get; }
 
-        string PromotionYashBetLink { get; }
+        string PromotionYBLink { get; }
 
         bool IsEuroSite { get; }
 

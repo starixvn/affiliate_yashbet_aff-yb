@@ -1,5 +1,7 @@
 var Layout = (function ($) {
-    var DEFAULT_SPEED = 20;
+    const DEFAULT_SPEED = 20;
+    let isOpenMenuMobile = false;
+    let isTriggerClick = false;
 
     function initSlider() {
         //var $mainBanner = $('#mainBanner');

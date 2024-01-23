@@ -34,8 +34,8 @@ var AccountOverview = (function ($) {
             }
 
             _me.activeMenu(actionName);
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleResize);
+            //window.removeEventListener("scroll", handleScroll);
+            //window.removeEventListener("resize", handleResize);
 
             $.ajax({
                 type: "GET",

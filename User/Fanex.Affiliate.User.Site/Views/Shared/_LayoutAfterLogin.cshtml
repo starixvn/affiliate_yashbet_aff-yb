@@ -2,7 +2,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
     var sessionService = DependencyResolver.Current.GetService<ISessionService>();
-    var groupName = sessionService.UserSession.GroupName;
 }
 
 @using Fanex.Affiliate.User.Core.CoreService

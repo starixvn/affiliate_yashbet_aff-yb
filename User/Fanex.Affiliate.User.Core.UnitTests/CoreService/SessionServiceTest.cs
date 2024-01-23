@@ -12,7 +12,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.CoreService
 {
     public class SessionServiceTest
     {
-        private const string UserSessionKey = "AffiliateB2C.UserSessionKey";
+        private const string UserSessionKey = "AffiliateYB.UserSessionKey";
 
         private static HttpSessionState Session => HttpContext.Current.Session;
 

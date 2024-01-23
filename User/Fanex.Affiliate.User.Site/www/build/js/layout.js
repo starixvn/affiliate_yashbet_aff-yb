@@ -1,5 +1,9 @@
+﻿"use strict";
+
 var Layout = (function ($) {
     var DEFAULT_SPEED = 20;
+    var isOpenMenuMobile = false;
+    var isTriggerClick = false;
 
     function initSlider() {
         //var $mainBanner = $('#mainBanner');
@@ -7,13 +11,13 @@ var Layout = (function ($) {
     }
 
     var _me = {
-        initialize: function () {
+        initialize: function initialize() {
             initSlider();
             _me.registerAjaxHandlerError();
             _me.initEvent();
             _me.renderHotNews();
         },
-        initEvent: function () {
+        initEvent: function initEvent() {
             $("#selectedLanguage").on("click", function (e) {
                 if ($(this).hasClass('active')) {
                     $(this).blur();
@@ -62,8 +66,7 @@ var Layout = (function ($) {
                 var aTop = 111;
                 if ($(this).scrollTop() >= aTop) {
                     $(".mobile-left-panel").addClass("fixed");
-                }
-                else {
+                } else {
                     $(".mobile-left-panel").removeClass("fixed");
                 }
 
@@ -75,8 +78,8 @@ var Layout = (function ($) {
             });
         },
 
-        handleBindingClickBodyEvent: function () {
-            const hasClass = $('body').hasClass("menu-open");
+        handleBindingClickBodyEvent: function handleBindingClickBodyEvent() {
+            var hasClass = $('body').hasClass("menu-open");
 
             if (hasClass) {
                 $('body').unbind("click");
@@ -92,12 +95,12 @@ var Layout = (function ($) {
             }
         },
 
-        handleClickOutAfterOpenMenu: function () {
+        handleClickOutAfterOpenMenu: function handleClickOutAfterOpenMenu() {
             isTriggerClick = true;
             $("#btn-menu").trigger("click");
         },
 
-        handleCloseMenu: function () {
+        handleCloseMenu: function handleCloseMenu() {
             isTriggerClick = false;
             isOpenMenuMobile = false;
             $('body').unbind("click");
@@ -105,7 +108,7 @@ var Layout = (function ($) {
             $('.navbar-header.menu-open').removeClass('menu-open');
         },
 
-        registerAjaxHandlerError: function () {
+        registerAjaxHandlerError: function registerAjaxHandlerError() {
             $(document).ajaxError(function (event, jqXHR) {
                 var status = jqXHR.status;
 
@@ -125,28 +128,29 @@ var Layout = (function ($) {
                 }
             });
         },
-        renderHotNews: function () {
+        renderHotNews: function renderHotNews() {
             $.ajax({
                 type: "GET",
                 url: Site.resolveRelativeUrl("News/LatestHotNews"),
                 dataType: "html",
                 cache: false,
-                success: function (response) {
+                success: function success(response) {
                     var $marquee = $("#marquee");
                     $marquee.html(response);
 
-                    const containerWidth = $("#marqueeContainer").outerWidth();
-                    const hotNewsWidth = $marquee.outerWidth();
-                    const speedRate = hotNewsWidth / containerWidth;
-                    const speed = speedRate < 1 ? DEFAULT_SPEED : (speedRate + 0.25) * DEFAULT_SPEED;
+                    var containerWidth = $("#marqueeContainer").outerWidth();
+                    var hotNewsWidth = $marquee.outerWidth();
+                    var speedRate = hotNewsWidth / containerWidth;
+                    var speed = speedRate < 1 ? DEFAULT_SPEED : (speedRate + 0.25) * DEFAULT_SPEED;
 
                     $marquee.css("animation-duration", speed + "s");
                 }
             });
         }
-    }
+    };
 
     return _me;
 })(jQuery);
 
 Layout.initialize();
+
