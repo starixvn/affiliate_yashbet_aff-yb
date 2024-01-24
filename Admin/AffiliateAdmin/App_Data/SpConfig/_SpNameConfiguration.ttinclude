@@ -15,8 +15,8 @@
 
 	sites.Add(new SiteInfo(){
 				Environment = "DEV",
-				LicenseeName = "n88",
-				DbName = licenseeDbNameList["n88"]
+				LicenseeName = "yb",
+				DbName = licenseeDbNameList["yb"]
 			});
 
 	foreach(var environment in environments)

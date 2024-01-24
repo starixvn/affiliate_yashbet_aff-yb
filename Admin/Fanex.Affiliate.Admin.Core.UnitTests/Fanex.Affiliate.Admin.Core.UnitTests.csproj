@@ -165,7 +165,6 @@
     <Compile Include="Controllers\Affiliate\AffiliateControllerTest.cs" />
     <Compile Include="Controllers\Affiliate\RevenueShareGroupControllerTest.cs" />
     <Compile Include="Controllers\Affiliate\CommGroupAssignmentControllerTest.cs" />
-    <Compile Include="Controllers\Affiliate\EmailHistoryControllerTest.cs" />
     <Compile Include="Controllers\Affiliate\PaymentRequestControllerTest.cs" />
     <Compile Include="Controllers\AuthControllerTest.cs" />
     <Compile Include="Controllers\ChangeAdminPasswordControllerTest.cs" />
@@ -191,8 +190,6 @@
     <Compile Include="Controllers\LoginControllerTest.cs" />
     <Compile Include="Controllers\MediaGallery\LandingPageControllerTest.cs" />
     <Compile Include="Controllers\MediaGallery\MediaGalleryControllerTest.cs" />
-    <Compile Include="Controllers\MediaGallery\TextListControllerTest.cs" />
-    <Compile Include="Controllers\Player\ActiveMemberControllerTest.cs" />
     <Compile Include="Controllers\Player\PlayerControllerTest.cs" />
     <Compile Include="Controllers\Message\MessageControllerTest.cs" />
     <Compile Include="Controllers\Report\TransferReportControllerTest.cs" />
@@ -215,7 +212,6 @@
     <Compile Include="Repository\LanguageRepositoryTest.cs" />
     <Compile Include="Repository\MediaGallery\BannerListReppositoryTest.cs" />
     <Compile Include="Repository\MediaGallery\LandingPageRepositoryTest.cs" />
-    <Compile Include="Repository\Member\ActiveMemberRepositoryTest.cs" />
     <Compile Include="Repository\Member\MemberRepositoryTest.cs" />
     <Compile Include="Repository\CurrencyRepositoryTest.cs" />
     <Compile Include="Repository\ProductRepositoryTest.cs" />
@@ -244,7 +240,6 @@
     <Compile Include="Services\Domain\DomainControlServiceTest.cs" />
     <Compile Include="Services\Domain\SubAffDomainServiceTest.cs" />
     <Compile Include="Services\Domain\DomainServiceTest.cs" />
-    <Compile Include="Services\EmailHistory\EmailHistoryServiceTest.cs" />
     <Compile Include="Services\EmailServiceTest.cs" />
     <Compile Include="Services\Home\HomeServiceTest.cs" />
     <Compile Include="Services\LanguageServiceTest.cs" />
@@ -253,8 +248,6 @@
     <Compile Include="Services\MediaGallery\BannerValidationServiceTest.cs" />
     <Compile Include="Services\MediaGallery\CommonMediaGalleryServiceTest.cs" />
     <Compile Include="Services\MediaGallery\LandingPageServiceTest.cs" />
-    <Compile Include="Services\MediaGallery\TextListServiceTest.cs" />
-    <Compile Include="Services\Member\ActiveMemberServiceTest.cs" />
     <Compile Include="Services\Member\MemberServiceTest.cs" />
     <Compile Include="Services\Message\MessageServiceTest.cs" />
     <Compile Include="Services\Payment\PaymentRequestServiceTest.cs" />

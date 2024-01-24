@@ -26,7 +26,6 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.MediaGallery
             var subMenu = new List<SubMenu>
             {
                 new SubMenu { Name = Lang.BannerList, Url = Url.Content("~/Portal/MediaGallery") },
-                new SubMenu { Name = Lang.TextList, Url = Url.Content("~/Portal/TextList") },
                 new SubMenu { Name = Lang.LandingPageList, Url = Url.Content("~/Portal/LandingPageList"), IsActive = true }
             };
 
