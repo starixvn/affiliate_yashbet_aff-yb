@@ -41,6 +41,8 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 return validInfo;
             }
 
+
+
             signUpParam.Player_CustId = cust.CustId;
             signUpParam.Player_Currency = cust.IsTest.GetValueOrDefault(true) ? TEST_CURRENCY : cust.CurrencyId.GetValueOrDefault();
 

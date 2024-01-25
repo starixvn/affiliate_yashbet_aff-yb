@@ -582,12 +582,14 @@ export class EditBannerForm extends PureComponent {
                                     </FormGroup>
                                     {
                                         isInsert ? inputFileNames && inputFileNames.map((value, index) => {
+                                            let inputFileName = `inputFileName${index}`;
+
                                             return (<FormGroup row className="mb-2" key={`FileName${index + 1}`}>
-                                                <Label sm={3} for="inputFileName">{`File Name ${index + 1}`}</Label>
+                                                <Label sm={3} for={inputFileName}>{`File Name ${index + 1}`}</Label>
                                                 <Col sm={7}>
                                                     <Input type="text"
-                                                        name="inputFileName"
-                                                        id={`inputFileName${index}`}
+                                                        name={inputFileName}
+                                                        id={inputFileName}
                                                         value={value} onChange={(e) => this._handleChangeInputFileName(e, index)}
                                                         onKeyPress={this._handlePressEnter} />
                                                 </Col>
@@ -595,7 +597,6 @@ export class EditBannerForm extends PureComponent {
                                                     <Button className="mr-3"
                                                         type="button"
                                                         color="danger"
-                                                        for="inputFileName"
                                                         disabled={files && !files.length}
                                                         onClick={() => this._handleRemoveImageAt(index)}>
                                                         {globalResource.Remove}
