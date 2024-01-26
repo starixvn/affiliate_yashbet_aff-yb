@@ -57,8 +57,8 @@ namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
             ViewBag.BaseCurrencies = _currencyRepository.GetBaseCurrencyList();
             ViewBag.SelectedBaseCurrency = param.BaseCurrency;
             var path = param.IsOnlyContent
-                ? "UserPanel/StatementHistory/StatementHistoryPartial/_SubAffEarningContent"
-                : "UserPanel/StatementHistory/SubAffEarning";
+                ? "~/Views/UserPanel/StatementHistory/StatementHistoryPartial/_SubAffEarningContent.cshtml"
+                : "~/Views/UserPanel/StatementHistory/SubAffEarning.cshtml";
             return View(path, vms);
         }
     }

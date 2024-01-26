@@ -296,7 +296,6 @@
     <Compile Include="Controllers\UserPanel\SubAffLinkController.cs" />
     <Compile Include="Controllers\UserPanel\SubAffMediaGalleryController.cs" />
     <Compile Include="Controllers\UserPanel\SummaryController.cs" />
-    <Compile Include="Controllers\UserPanel\TrackingStatisticsController.cs" />
     <Compile Include="Controllers\UserPanel\AffiliateLinkController.cs" />
     <Compile Include="Controllers\UserPanel\MediaGalleryController.cs" />
     <Compile Include="Controllers\UserPanel\MarketingController.cs" />
@@ -422,7 +421,6 @@
     <Compile Include="DTO\UserPanel\ReferrerStatistics.cs" />
     <Compile Include="DTO\UserPanel\StatementHistory.cs" />
     <Compile Include="DTO\UserPanel\StatisticsBase.cs" />
-    <Compile Include="DTO\UserPanel\TrackingStatistics.cs" />
     <Compile Include="DTO\UserSession.cs" />
     <Compile Include="DTO\ResultInfo.cs" />
     <Compile Include="DTO\VerificationAccount\VerificationInfo.cs" />
@@ -481,7 +479,6 @@
     <Compile Include="MetalModels\UserPanel\StatisticsBySiteBaseParam.cs" />
     <Compile Include="MetalModels\UserPanel\StatisticsDetailBySiteParam.cs" />
     <Compile Include="MetalModels\UserPanel\StatisticsOverviewParam.cs" />
-    <Compile Include="MetalModels\UserPanel\TrackingStatisticsDetailParam.cs" />
     <Compile Include="MetalModels\UserSignUpParam.cs" />
     <Compile Include="MetalModels\VerificationAccountParam.cs" />
     <Compile Include="MetalModels\VerificationOtpParam.cs" />
@@ -592,7 +589,6 @@
     <Compile Include="ViewModels\UserPanel\Statistics\LandingPageStatisticsViewModel.cs" />
     <Compile Include="ViewModels\UserPanel\Statistics\MarketingPageStatisticsViewModel.cs" />
     <Compile Include="ViewModels\UserPanel\Statistics\ReferrerStatisticsViewModel.cs" />
-    <Compile Include="ViewModels\UserPanel\Statistics\TrackingStatisticsViewModel.cs" />
     <Compile Include="ViewModels\UserPanel\SubAffComViewModel.cs" />
     <Compile Include="ViewModels\UserPanel\TransMoneyRequestViewModel.cs" />
     <Compile Include="ViewModels\VerificationAccountViewModel.cs" />

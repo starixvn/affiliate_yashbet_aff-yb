@@ -1,17 +1,5 @@
 [
   //{
-  //  "outputFileName": "www/build/js/layout.js",
-  //  "inputFiles": [
-  //    "www/source/js/layout.js"
-  //  ]
-  //},
-  //{
-  //  "outputFileName": "www/build/js/user-panel.js",
-  //  "inputFiles": [
-  //    "www/source/js/pages/user-panel.js"
-  //  ]
-  //},
-  //{
   //  "outputFileName": "www/build/js/user-panel.js",
   //  "inputFiles": [
   //    "www/source/js/pages/user-panel.js"

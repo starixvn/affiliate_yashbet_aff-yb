@@ -314,7 +314,6 @@
     <AdditionalFiles Include="..\..\.sonarlint\aff.yb.usersite\CSharp\SonarLint.xml">
       <Link>SonarLint.xml</Link>
     </AdditionalFiles>
-    <Content Include="12monitor.aspx" />
     <Content Include="App_Data\SpConfig\SpName.user-yb.local.xml">
       <DependentUpon>_SpName.tt</DependentUpon>
     </Content>
@@ -399,7 +398,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="karma.conf.js" />
     <Content Include="Configurations\AppSetting\Transform\yb.local.config" />
     <Content Include="Configurations\Web\Transform\yb.local.config" />
     <Content Include="Configurations\ConnectionString\ConnectionString.user-yb.local.config" />
@@ -735,7 +733,6 @@
     <Content Include="www\build\styles\Images\contact-us\telegram.png" />
     <Content Include="www\build\styles\Images\contact-us\whatsapp.png" />
     <Content Include="www\build\styles\Images\copy-link.png" />
-    <Content Include="www\build\styles\Images\gift.svg" />
     <Content Include="www\build\styles\Images\home\bg-left-login.mobile.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.png" />
     <Content Include="www\build\styles\Images\home\bg-news.mobile.png" />
@@ -777,7 +774,6 @@
     <Content Include="www\build\styles\Images\icons\dropdown-table.svg" />
     <Content Include="www\build\styles\Images\icons\dropdown-white.svg" />
     <Content Include="www\build\styles\Images\icons\dropdown.svg" />
-    <Content Include="www\build\styles\Images\ipad-login.svg" />
     <Content Include="www\build\styles\Images\account-overview\qr-disabled.png" />
     <Content Include="www\build\styles\Images\notify\note_icon.png" />
     <Content Include="www\build\styles\Images\notify\maintenance-yb.png" />
@@ -839,11 +835,10 @@
     <Content Include="www\source\js\pages\promotion.js" />
     <Content Include="www\source\js\pages\statistics\marketing-statistics.js" />
     <Content Include="www\source\styles\fonts\materialdesignicons\font.css" />
-    <Content Include="www\source\styles\Images\arrrow.png" />
+    <Content Include="www\build\styles\Images\arrrow.png" />
     <Content Include="www\build\styles\Images\icon-1.png" />
     <Content Include="www\build\styles\Images\icon-2.png" />
     <Content Include="www\build\styles\Images\icon-3.png" />
-    <Content Include="www\build\styles\Images\notify\note_icon.gif" />
     <Content Include="www\source\js\components\authhelper.js" />
     <Content Include="www\source\js\components\clipboard.js" />
     <Content Include="www\source\js\components\clipboard.min.js" />
@@ -951,7 +946,6 @@
     <Content Include="www\source\js\pages\statement-history.js" />
     <Content Include="www\source\js\pages\statistics\landingpagestatistics.js" />
     <Content Include="www\source\js\pages\statistics\referrerstatistics.js" />
-    <Content Include="www\source\js\pages\statistics\trackingstatistics.js" />
     <Content Include="www\source\js\pages\sub-affiliate-earning.js" />
     <Content Include="www\source\js\pages\test.js" />
     <Content Include="www\source\js\pages\account-overview\affiliate-link.js" />
@@ -960,33 +954,22 @@
     <Content Include="www\source\js\recheckin.js" />
     <Content Include="www\source\js\site.js" />
     <Content Include="www\source\js\spec\layout.spec.js" />
-    <Content Include="www\source\styles\Images\arrow_drop_down.png" />
-    <Content Include="www\source\styles\Images\email\banner.png" />
-    <Content Include="www\source\styles\Images\email\banner_vi-VN.png" />
-    <Content Include="www\source\styles\Images\email\banner_bn-BD.png" />
-    <Content Include="www\source\styles\Images\email\banner_km-KH.png" />
-    <Content Include="www\source\styles\Images\email\banner_ms-MY.png" />
-    <Content Include="www\source\styles\Images\email\banner_en-US.png" />
-    <Content Include="www\source\styles\Images\email\banner_hi-IN.png" />
-    <Content Include="www\source\styles\Images\email\banner_id-ID.png" />
-    <Content Include="www\source\styles\Images\email\banner_th-TH.png" />
-    <Content Include="www\source\styles\Images\email\banner_zh-CN.png" />
-    <Content Include="www\source\styles\Images\email\bgMain.png" />
-    <Content Include="www\source\styles\Images\email\button.png" />
-    <Content Include="www\source\styles\Images\email\header.png" />
-    <Content Include="www\source\styles\Images\email\note.png" />
-    <Content Include="www\source\styles\Images\gift.png" />
-    <Content Include="www\source\styles\Images\gift.svg" />
-    <Content Include="www\source\styles\Images\ipad-login.png" />
-    <Content Include="www\source\styles\Images\ipad-login.svg" />
-    <Content Include="www\source\styles\Images\notify\404.png" />
-    <Content Include="www\source\styles\Images\notify\bgMain.jpg" />
-    <Content Include="www\source\styles\Images\notify\Error.png" />
-    <Content Include="www\source\styles\Images\notify\icon.png" />
-    <Content Include="www\source\styles\Images\notify\iconnf.png" />
-    <Content Include="www\source\styles\Images\notify\sry.png" />
-    <Content Include="www\source\styles\Images\notify\srynf.png" />
-    <Content Include="www\source\styles\Images\shadown.png" />
+    <Content Include="www\build\styles\Images\email\banner.png" />
+    <Content Include="www\build\styles\Images\email\banner_vi-VN.png" />
+    <Content Include="www\build\styles\Images\email\banner_bn-BD.png" />
+    <Content Include="www\build\styles\Images\email\banner_km-KH.png" />
+    <Content Include="www\build\styles\Images\email\banner_ms-MY.png" />
+    <Content Include="www\build\styles\Images\email\banner_en-US.png" />
+    <Content Include="www\build\styles\Images\email\banner_hi-IN.png" />
+    <Content Include="www\build\styles\Images\email\banner_id-ID.png" />
+    <Content Include="www\build\styles\Images\email\banner_th-TH.png" />
+    <Content Include="www\build\styles\Images\email\banner_zh-CN.png" />
+    <Content Include="www\build\styles\Images\email\bgMain.png" />
+    <Content Include="www\build\styles\Images\email\button.png" />
+    <Content Include="www\build\styles\Images\email\header.png" />
+    <Content Include="www\build\styles\Images\email\note.png" />
+    <Content Include="www\build\styles\Images\notify\404.png" />
+    <Content Include="www\build\styles\Images\notify\Error.png" />
     <Content Include="www\source\styles\pages\password.scss" />
     <Content Include="www\source\styles\scss\components\_login-dialog.scss" />
     <Content Include="www\source\styles\scss\components\_marquee.scss" />
@@ -1143,11 +1126,9 @@
     <Content Include="Views\UserPanel\Statistics\LandingPageStatistics\Index.cshtml" />
     <Content Include="Views\UserPanel\Statistics\MarketingPageStatistics\Index.cshtml" />
     <Content Include="Views\UserPanel\Statistics\ReferrersStatistics\Index.cshtml" />
-    <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_TrackingStatisticsContent.cshtml" />
     <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_MarketingPageStatsticsContent.cshtml" />
     <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_ReferrersStatisticsContent.cshtml" />
     <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_LandingPageStatisticsContent.cshtml" />
-    <Content Include="Views\UserPanel\Statistics\TrackingStatistics\Index.cshtml" />
     <Content Include="Views\Password\RecoverPasswordResult.cshtml" />
     <Content Include="Views\RevenueSharingStructure\_Content.vi-VN.cshtml" />
     <Content Include="Views\RevenueSharingStructure\_Content.km-KH.cshtml" />

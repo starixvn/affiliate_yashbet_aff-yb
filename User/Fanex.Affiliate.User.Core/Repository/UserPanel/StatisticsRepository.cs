@@ -29,37 +29,6 @@ namespace Fanex.Affiliate.User.Core.Repository.UserPanel
             }
         }
 
-        public IEnumerable<TrackingStatistics> GetTrackingStatistics(int affId, string trackingCode, bool isInternal)
-        {
-            const string uSpkey = "Aff_AffiliateSelClickStatisticsAllMonths";
-            var dbMode = isInternal ? DBMode.View : DBMode.Main;
-            var dataList = new List<TrackingStatistics>();
-
-            using (var objectDb = _builder.Build(uSpkey, dbMode))
-            {
-                using (var multipeReader = objectDb.QueryMultiple(new { affId, trackingCode }))
-                {
-                    while (!multipeReader.IsEmptyOrClosed)
-                    {
-                        dataList.AddRange(multipeReader.Read<TrackingStatistics>());
-                    }
-                }
-            }
-
-            return dataList;
-        }
-
-        public IEnumerable<TrackingStatistics> GetTrackingStatisticsDetail(TrackingStatisticsDetailParam trackingStatisticsDetailParam)
-        {
-            const string uSpkey = "Aff_AffiliateSelClickStatisticsMonthDetail";
-            var dbMode = trackingStatisticsDetailParam.IsInternal ? DBMode.View : DBMode.Main;
-
-            using (var objectDb = _builder.Build(uSpkey, dbMode))
-            {
-                return objectDb.Query<TrackingStatistics>(trackingStatisticsDetailParam);
-            }
-        }
-
         public IEnumerable<ReferrerStatistics> GetReferrerStatistics(ReferrerStatisticsParam referrerStatisticsParam)
         {
             const string uSpkey = "Aff_ClickStatisticsSelBySite";

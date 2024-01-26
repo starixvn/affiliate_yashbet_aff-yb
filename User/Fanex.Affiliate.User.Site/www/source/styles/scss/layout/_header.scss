@@ -295,7 +295,7 @@
             text-decoration: none;
         }
 
-        &:focus, &:active,&.active {
+        &.active {
             outline: none;
 
             & + .language-list-wrapper {

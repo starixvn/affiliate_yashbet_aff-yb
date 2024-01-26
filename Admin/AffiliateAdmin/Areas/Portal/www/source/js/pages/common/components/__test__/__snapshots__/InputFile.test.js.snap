@@ -23,6 +23,7 @@ exports[`common - components - InputFile  render correctly 1`] = `
       style={
         Object {
           "marginTop": "2px",
+          "wordBreak": "break-word",
         }
       }
     >
@@ -75,6 +76,7 @@ exports[`common - components - InputFile  render correctly with multiple files 1
       style={
         Object {
           "marginTop": "2px",
+          "wordBreak": "break-word",
         }
       }
     >

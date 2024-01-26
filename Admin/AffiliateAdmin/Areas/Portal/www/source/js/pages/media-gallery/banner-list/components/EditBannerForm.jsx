@@ -468,6 +468,7 @@ export class EditBannerForm extends PureComponent {
                                 <Form tag="form" className="mb-2 p-1 border" autoComplete="off">
                                     <Label>[Valid Types: .gif, .jpg, .png, .jpeg]</Label>
                                     <Label className="d-block">[File Size Limit: 3MB]</Label>
+
                                     {
                                         isInsert && <Label className="d-block">[Maximum files: 10]</Label>
                                     }                                    <br />

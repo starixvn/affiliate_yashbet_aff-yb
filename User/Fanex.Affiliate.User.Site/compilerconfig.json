@@ -1,16 +1,16 @@
 ﻿[
-  //{
-  //  "outputFile": "www/build/js/layout.js",
-  //  "inputFile": "www/source/js/layout.js"
-  //},
+  {
+    "outputFile": "www/build/js/layout.js",
+    "inputFile": "www/source/js/layout.js"
+  },
   //{
   //  "outputFile": "www/build/js/layout-after-login.js",
   //  "inputFile": "www/source/js/layout-after-login.js"
   //},
-  //{
-  //  "outputFile": "www/build/styles/css/main.css",
-  //  "inputFile": "www/source/styles/scss/main.scss"
-  //},
+  {
+    "outputFile": "www/build/styles/css/main.css",
+    "inputFile": "www/source/styles/scss/main.scss"
+  },
   //{
   //  "outputFile": "www/build/styles/css/main-after-login.css",
   //  "inputFile": "www/source/styles/scss/main-after-login.scss"
@@ -66,10 +66,6 @@
   //{
   //  "outputFile": "www/build/js/recheckin.js",
   //  "inputFile": "www/source/js/recheckin.js"
-  //},
-  //{
-  //  "outputFile": "www/build/js/trackingstatistics.js",
-  //  "inputFile": "www/source/js/pages/statistics/trackingstatistics.js"
   //},
   //{
   //  "outputFile": "www/build/styles/css/statistics.css",

@@ -5,7 +5,6 @@ using Fanex.Affiliate.User.Core.Repository.UserPanel;
 using NSubstitute;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace Fanex.Affiliate.User.Core.UnitTests.Repository.UserPanel
@@ -25,51 +24,6 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Repository.UserPanel
 
             var repo = CreateRepo();
             var result = repo.GetTrackingCode(1, isInternal);
-
-            Assert.Equal(key, db.SettingKey);
-            Assert.NotEmpty(result);
-        }
-
-        [Theory]
-        [InlineData(true)]
-        [InlineData(false)]
-        public void GetTrackingStatistics_WhenCall_ReturnTrackingList(bool isInternal)
-        {
-            const string uSpkey = "Aff_AffiliateSelClickStatisticsAllMonths";
-            var dbMode = isInternal ? DBMode.View : DBMode.Main;
-            var key = uSpkey + dbMode;
-            var db = Builder.Build(uSpkey, dbMode);
-            var multipleReader = db.QueryMultiple();
-            multipleReader.IsEmptyOrClosed.Returns(false, false, true);
-            multipleReader.Read<TrackingStatistics>().ReturnsForAnyArgs(
-                new List<TrackingStatistics>
-                {
-                    new TrackingStatistics { Date = DateTime.Now, Fdm = 1, SignUps = 1, TotalClick = 1, UniqueClick = 1 },
-                    new TrackingStatistics { Date = DateTime.Now, Fdm = 1, SignUps = 1, TotalClick = 1, UniqueClick = 1 }
-                }
-                , new List<TrackingStatistics>());
-            var repo = CreateRepo();
-
-            var result = repo.GetTrackingStatistics(1, "", isInternal);
-
-            Assert.Equal(key, db.SettingKey);
-            Assert.Equal(2, result.Count());
-        }
-
-        [Theory]
-        [InlineData(true)]
-        [InlineData(false)]
-        public void GetTrackingStatisticsDetail_WhenCall_QueryTrackingStatisticsDetail(bool isInternal)
-        {
-            const string uSpkey = "Aff_AffiliateSelClickStatisticsMonthDetail";
-            var dbMode = isInternal ? DBMode.View : DBMode.Main;
-            var key = uSpkey + dbMode;
-            var param = new TrackingStatisticsDetailParam { IsInternal = isInternal };
-            var db = Builder.Build(uSpkey, dbMode);
-            db.Query<TrackingStatistics>(param).Returns(new List<TrackingStatistics> { new TrackingStatistics { } });
-            var repo = CreateRepo();
-
-            var result = repo.GetTrackingStatisticsDetail(param);
 
             Assert.Equal(key, db.SettingKey);
             Assert.NotEmpty(result);

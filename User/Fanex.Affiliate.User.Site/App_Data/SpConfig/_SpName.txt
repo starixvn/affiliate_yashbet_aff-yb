@@ -5,10 +5,6 @@
 
 
 
-
-
-
-
 // Generated helper templates
 // Generated items
 // Fanex.Affiliate.User.Site\App_Data\SpConfig\SpName.user-yb.local.xml

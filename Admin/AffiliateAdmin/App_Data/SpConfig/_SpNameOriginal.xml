@@ -149,7 +149,7 @@
     <Setting Key="Aff_PaymentCurrency_Sel" SpName="Aff_PaymentCurrency_Sel" DbName="" />
   </Function>
   <Function Name="DataTracker">
-    <Setting Key="Task_API_PushDataTracker_Import" SpName="Task_API_PushDataTracker_Import" DbName="DBN88.bodb_N88.bodbLicenseeNet" />
-    <Setting Key="Task_API_PushDataTracker_Upd" SpName="Task_API_PushDataTracker_Upd" DbName="DBN88.bodb_N88.bodbLicenseeNet" />
+    <Setting Key="Task_API_PushDataTracker_Import" SpName="Task_API_PushDataTracker_Import" DbName="DBYashBet.bodb_YashBet.bodbLicenseeNet" />
+    <Setting Key="Task_API_PushDataTracker_Upd" SpName="Task_API_PushDataTracker_Upd" DbName="DBYashBet.bodb_YashBet.bodbLicenseeNet" />
   </Function>
 </Functions>

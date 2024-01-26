@@ -30,12 +30,6 @@
     <Setting Key="Aff_AffiliateSelTrackingCode" SpName="Aff_AffiliateSelTrackingCode" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
     <Setting Key="Aff_AffiliateSelTrackingCode_view" SpName="Aff_AffiliateSelTrackingCode" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
 
-    <Setting Key="Aff_AffiliateSelClickStatisticsAllMonths" SpName="Aff_AffiliateSelClickStatisticsAllMonths" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
-    <Setting Key="Aff_AffiliateSelClickStatisticsAllMonths_view" SpName="Aff_AffiliateSelClickStatisticsAllMonths" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
-
-    <Setting Key="Aff_AffiliateSelClickStatisticsMonthDetail" SpName="Aff_AffiliateSelClickStatisticsMonthDetail" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
-    <Setting Key="Aff_AffiliateSelClickStatisticsMonthDetail_view" SpName="Aff_AffiliateSelClickStatisticsMonthDetail" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
-
     <Setting Key="Aff_ClickStatisticsSelBySite" SpName="Aff_ClickStatisticsSelBySite" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNet" />
     <Setting Key="Aff_ClickStatisticsSelBySite_view" SpName="Aff_ClickStatisticsSelBySite" DbName="DBAFF.Affiliate_YashBet.bodbDownlineNetView" />
 

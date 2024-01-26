@@ -520,9 +520,9 @@ input[type="checkbox"], input[type="radio"] {
     border-radius: 3px; }
     .language-container .select-language:hover {
       text-decoration: none; }
-    .language-container .select-language:focus, .language-container .select-language:active, .language-container .select-language.active {
+    .language-container .select-language.active {
       outline: none; }
-      .language-container .select-language:focus + .language-list-wrapper, .language-container .select-language:active + .language-list-wrapper, .language-container .select-language.active + .language-list-wrapper {
+      .language-container .select-language.active + .language-list-wrapper {
         display: block; }
     .language-container .select-language + .language-list-wrapper {
       display: none; }

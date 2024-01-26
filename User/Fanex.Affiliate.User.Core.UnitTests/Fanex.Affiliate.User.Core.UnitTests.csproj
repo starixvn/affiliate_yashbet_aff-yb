@@ -194,7 +194,6 @@
     <Compile Include="Controllers\UserPanel\SubAffLinkControllerTest.cs" />
     <Compile Include="Controllers\UserPanel\SubAffMediaGalleryControllerTest.cs" />
     <Compile Include="Controllers\UserPanel\SummaryControllerTest.cs" />
-    <Compile Include="Controllers\UserPanel\TrackingStatisticsControllerTest.cs" />
     <Compile Include="Controllers\VerificationAccountControllerTest.cs" />
     <Compile Include="CoreService\MemoryCacheServiceTest.cs" />
     <Compile Include="CoreService\SessionServiceTest.cs" />

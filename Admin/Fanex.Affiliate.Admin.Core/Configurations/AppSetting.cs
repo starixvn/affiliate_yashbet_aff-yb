@@ -1,7 +1,6 @@
 ﻿using Fanex.Affiliate.Admin.Core.Resources;
 using System;
 using System.Configuration;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Fanex.Affiliate.Admin.Core.Configurations
 {
@@ -21,9 +20,7 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         public string BccMail => GetValue("bccMail");
 
-
         public string EuropeanAffSiteUrl => GetValue("EuropeanAffiliateURL");
-
 
         public string AsianAffSiteUrl => GetValue("AsianAffiliateURL");
 
@@ -49,7 +46,6 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         public string RabbitMQConnectionString => GetValue("RabbitMQConnectionString");
 
-
         public string BannerRootUrl => GetValue("BannerUrl");
 
         public string[] BannerFolders => GetValue("BannerFolders").Split(';');
@@ -70,11 +66,9 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         public string DefaultCurrency => GetValue("DefaultCurrency");
 
-
         public string MemberSiteApiUrl => GetValue("MemberSiteApiUrl");
 
         public int MemberSiteId => Convert.ToInt32(GetValue("MemberSiteId"));
-
 
         public string MemberSiteProxyUrl => GetValue("MemberSiteProxyUrl");
 
@@ -82,10 +76,8 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         public bool IsUseMemberSiteProxy => Convert.ToBoolean(GetValue("IsUseProxyToGetMemberSiteApi"));
 
-
         public string AffSiteUrl => GetValue("AffSiteUrl");
 
-        [SuppressMessage("Major Code Smell", "S3995:URI return values should not be strings", Justification = "Reviewed. Suppression is OK here.")]
         public string GetAffSiteUrlByShortedLanguageCode(string shortedLanguageCode) => GetValue("AffSiteUrl_" + shortedLanguageCode) ?? AffSiteUrl;
 
     }

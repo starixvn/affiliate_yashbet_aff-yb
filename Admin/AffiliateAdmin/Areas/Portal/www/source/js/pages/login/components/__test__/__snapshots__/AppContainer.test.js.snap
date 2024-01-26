@@ -12,7 +12,8 @@ exports[`Login - components - AppContainer render correctly 1`] = `
     >
       <div>
         <div>
-          Welcome to YashBet
+          Welcome to 
+          YashBet
           <span>
              Login
           </span>
@@ -20,29 +21,6 @@ exports[`Login - components - AppContainer render correctly 1`] = `
         <p>
           Please sign in to continue to work
         </p>
-      </div>
-      <div
-        className="switch-mode-theme"
-      >
-        <input
-          checked={false}
-          id="switch"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <Label
-          for="switch"
-          tag="label"
-          widths={
-            Array [
-              "xs",
-              "sm",
-              "md",
-              "lg",
-              "xl",
-            ]
-          }
-        />
       </div>
     </div>
     <div
