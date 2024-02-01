@@ -3,8 +3,8 @@
 
 body {
   font-family: 'Open Sans',sans-serif;
-  color: #333333;
-  background: #F8F9FA; }
+  color: #333;
+  background: #fff; }
   body.km-KH {
     word-break: break-word; }
   body a:focus {
@@ -26,7 +26,7 @@ body.menu-open {
     left: 0; }
 
 header {
-  background-color: #001942; }
+  background-color: #fff; }
 
 .language-container {
   display: inline-block;
@@ -56,11 +56,11 @@ header {
     font-size: 14px; }
     .language-container .select-language .caret {
       border: 0;
-      width: 12px;
-      height: 7px;
+      width: 20px;
+      height: 20px;
       background: url("../Images/icons/dropdown.svg");
       position: absolute;
-      top: 10px;
+      top: 3px;
       right: 0; }
     .language-container .select-language .flag {
       width: 24px;
@@ -102,7 +102,7 @@ header {
     border-radius: 4px; }
 
 .bg-highlight {
-  background-color: #001942;
+  background-color: #fff;
   color: #fff; }
 
 .news {
@@ -191,38 +191,34 @@ header {
   padding: 0; }
 
 .navbar {
-  background: #001332; }
+  background: #fff; }
   .navbar ul li:hover a, .navbar ul:focus a, .navbar ul:visited a {
-    color: #FF5D00; }
+    color: #F42A41; }
   .navbar .nav > li > a:focus {
-    color: #FF5D00; }
+    color: #F42A41; }
   .navbar .menu .menu-item {
-    color: #FFFFFF; }
+    color: #333; }
     .navbar .menu .menu-item:hover, .navbar .menu .menu-item:focus, .navbar .menu .menu-item.active {
-      color: #FF5D00; }
+      color: #F42A41; }
 
 .user-login .text-field {
   background: #fff;
-  border: 1px solid #000; }
+  border: 1px solid #D2D2D2; }
   .user-login .text-field::-webkit-input-placeholder {
-    color: #333333; }
+    color: #8D8D8D; }
   .user-login .text-field:-ms-input-placeholder {
-    color: #333333; }
-  .user-login .text-field:hover {
-    background: #FFF4EE; }
+    color: #8D8D8D; }
   .user-login .text-field:focus {
-    background: #DFEBFF; }
+    background: #fff;
+    border: 1px solid #D2D2D2; }
 
 .hot-news {
-  background: #FFFFFF; }
+  background: #000000; }
   .hot-news .title {
-    background: #FF5D00;
-    color: #F8F9FA; }
-    .hot-news .title:after {
-      border-left: 11px solid #FF5D00; }
+    color: #AE8F56; }
   .hot-news .message {
-    color: #D43311;
-    background: #fff; }
+    color: #F8F9FA;
+    background: #000000; }
     .hot-news .message .marquee-container .marquee-content a {
       color: #BF4600 !important; }
 
@@ -293,14 +289,14 @@ header {
   border: 1px solid #c1c1c1; }
 
 .table table th {
-  background: #001942;
+  background: #fff;
   color: #fff; }
 
 .table table td {
   border: 1px solid #C7C7C7; }
 
 .table table .overview-table-header, .table table .player-detail-table-header {
-  background: #001942 !important; }
+  background: #fff !important; }
   .table table .overview-table-header th, .table table .player-detail-table-header th {
     border: 1px solid #c1c1c1; }
 
@@ -462,37 +458,36 @@ select.form-control:focus {
     color: #001942; }
 
 .btn-signup {
-  background: #FFF3ED;
-  color: #EA5500;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 0 20px; }
-  .btn-signup:hover, .btn-signup:focus {
-    color: #FFF;
-    background: #EA5500;
-    border-color: #EA5500; }
-  .btn-signup .icon {
-    color: #EA5500; }
+  background-color: #F42A41;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 8px 0 28px;
+  border-radius: 100px !important;
+  background-image: url("../Images/icons/account-pin-box-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 8px; }
+  .btn-signup:hover {
+    color: #fff; }
 
 .btn-login, .btn-link, .btn-login-mobile {
-  background: #FF5D00;
-  color: #FAFAFA;
-  box-shadow: 0px 2px 5px rgba(101, 101, 101, 0.25);
-  border-radius: 4px;
-  padding: 0 20px !important;
-  font-weight: 700;
-  font-size: 14px; }
-  .btn-login:hover, .btn-login:focus, .btn-link:hover, .btn-link:focus, .btn-login-mobile:hover, .btn-login-mobile:focus {
-    color: #EA5500;
-    background: #FFF3ED;
-    box-shadow: 0px 5px 6px rgba(65, 65, 65, 0.25); }
-  @media only screen and (max-width: 767px) {
-    .btn-login:hover, .btn-login:focus, .btn-link:hover, .btn-link:focus, .btn-login-mobile:hover, .btn-login-mobile:focus {
-      color: #FAFAFA;
-      background: #FF5D00;
-      box-shadow: none; } }
-  .btn-login .icon, .btn-link .icon, .btn-login-mobile .icon {
-    color: #FAFAFA; }
+  color: #ae8f56;
+  padding: 4px 8px 4px 28px !important;
+  font-weight: 600;
+  font-size: 13px;
+  background-image: url("../Images/icons/login-box-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 8px;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid #AE8F56;
+  text-transform: capitalize;
+  line-height: 1; }
+  .btn-login:hover, .btn-link:hover, .btn-login-mobile:hover {
+    color: #AE8F56; }
+
+.btn-link {
+  background: none; }
 
 .btn-submit {
   background-color: #FF5D00;
@@ -775,31 +770,19 @@ select.form-control:focus {
     padding: 11px 10px 6px 10px; }
   .header-top .user-signup {
     flex-direction: column-reverse; }
-    .header-top .user-signup .btn-signup, .header-top .user-signup .btn-login-mobile, .header-top .user-signup .language-container .select-language, .header-top .user-signup .btn-login {
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 18px;
-      height: 20px; }
     .header-top .user-signup .language-container {
       margin-right: 5px; }
       .header-top .user-signup .language-container .select-language {
-        font-weight: 400;
-        padding: 0 16px 0 20px;
-        top: 4px; }
+        font-weight: 400; }
         .header-top .user-signup .language-container .select-language .caret {
-          top: 5px; }
-    .header-top .user-signup .btn-signup, .header-top .user-signup .btn-login-mobile, .header-top .user-signup .btn-login {
-      padding: 1px 7px !important; }
-    .header-top .user-signup .btn-login-mobile {
-      margin: 0 !important; }
+          top: 3px;
+          right: -3px; }
   .header-top .sign-up {
     border: 0; }
   .header-top .language-login {
     padding-top: 9px; }
   .header-top .logo, .header-top .login {
     padding: 0; }
-  .hot-news {
-    padding: 0 !important; }
   .news {
     padding: 7px 10px 5px !important;
     background: #F8F9FA url("../Images/home/bg-news.mobile.png") no-repeat top 55px center/100% auto;

@@ -53,7 +53,7 @@
         <div class="header-top">
             <div class="logo">
                 <a href="@Url.Content("~")">
-                    <img src=@Url.Content("~/www/build/styles/Images/themes/" + siteName + ".png") alt="logo" class="logo-image" />
+                    <img src=@Url.Content("~/www/build/styles/Images/themes/" + siteName + ".svg") alt="logo" class="logo-image" />
                 </a>
             </div>
             <div class="login">
@@ -108,59 +108,55 @@
         <div class="overlay"></div>
         <div class="navbar">
             <div class="@RenderSection("classNav", required: false) layout-page-container">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="navbar-header">
-                            <button type="button" id="btn-menu" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse menu" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                @{
-                                    var controllerName = ViewContext.RouteData.Values["Controller"].ToString();
-                                }
-                                <li>
-                                    <a class="menu-item @(controllerName == "Home" ? "active" : string.Empty)" href="@Url.Content("~/Home")">
-                                        @Lang.Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="menu-item @(controllerName == "RevenueSharingStructure" ? "active" : string.Empty)" href="@Url.Content("~/RevenueSharingStructure")">
-                                        @Lang.RevenueSharingStructure
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="menu-item @(controllerName == "Product" ? "active" : string.Empty)" href="@Url.Content("~/Product")">
-                                        @Lang.Product
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="menu-item @(controllerName == "TermAndCondition" ? "active" : string.Empty)" href="@Url.Content("~/TermAndCondition")">
-                                        @Lang.TermAndCondition
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="menu-item @(controllerName == "Promotion" ? "active" : string.Empty)" href="@Url.Content("~/Promotion")">
-                                        @Lang.Promotion
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="menu-item @(controllerName == "FAQ" ? "active" : string.Empty)" href="@Url.Content("~/FAQ")">
-                                        @Lang.Faqs
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="menu-item @(controllerName == "ContactUs" ? "active" : string.Empty)" href="@Url.Content("~/ContactUs")">
-                                        @Lang.ContactUs
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="navbar-header">
+                    <button type="button" id="btn-menu" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse menu" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        @{
+                            var controllerName = ViewContext.RouteData.Values["Controller"].ToString();
+                        }
+                        <li>
+                            <a class="menu-item @(controllerName == "Home" ? "active" : string.Empty)" href="@Url.Content("~/Home")">
+                                @Lang.Home
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-item @(controllerName == "RevenueSharingStructure" ? "active" : string.Empty)" href="@Url.Content("~/RevenueSharingStructure")">
+                                @Lang.RevenueSharingStructure
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-item @(controllerName == "Product" ? "active" : string.Empty)" href="@Url.Content("~/Product")">
+                                @Lang.Product
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-item @(controllerName == "TermAndCondition" ? "active" : string.Empty)" href="@Url.Content("~/TermAndCondition")">
+                                @Lang.TermAndCondition
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-item @(controllerName == "Promotion" ? "active" : string.Empty)" href="@Url.Content("~/Promotion")">
+                                @Lang.Promotion
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-item @(controllerName == "FAQ" ? "active" : string.Empty)" href="@Url.Content("~/FAQ")">
+                                @Lang.Faqs
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu-item @(controllerName == "ContactUs" ? "active" : string.Empty)" href="@Url.Content("~/ContactUs")">
+                                @Lang.ContactUs
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Open Sans',sans-serif;
-    color: $text-color;
-    background: $bg-main-color;
+    color: #333;
+    background: #fff;
 
     //line break for firefox
     &.km-KH {
@@ -77,11 +77,11 @@ header {
 
         .caret {
             border: 0;
-            width: 12px;
-            height: 7px;
+            width: 20px;
+            height: 20px;
             background: url("../../../../build/styles/Images/icons/dropdown.svg");
             position: absolute;
-            top: 10px;
+            top: 3px;
             right: 0;
         }
 
@@ -286,25 +286,25 @@ header {
 }
 
 .navbar {
-    background: #001332;
+    background: #fff;
 
     ul {
         li:hover, &:focus, &:visited {
             a {
-                color: $nav-color-active;
+                color: #F42A41;
             }
         }
     }
 
     .nav > li > a:focus {
-        color: $nav-color-focus;
+        color: #F42A41;
     }
 
     .menu .menu-item {
-        color: $nav-color;
+        color: #333;
 
         &:hover, &:focus, &.active {
-            color: $nav-color-active;
+            color: #F42A41;
         }
     }
 }
@@ -321,30 +321,23 @@ header {
         color: $user-text-color;
     }
 
-    &:hover {
-        background: #FFF4EE;
-    }
 
     &:focus {
-        background: #DFEBFF;
+        background: #fff;
+        border: 1px solid $user-login-control-border-color;
     }
 }
 
 .hot-news {
-    background: $hot-news-bg-color;
+    background: #000000;
 
     .title {
-        background: $hot-news-title-bg-color;
-        color: $hot-news-title-color;
-
-        &:after {
-            border-left: 11px solid $hot-news-title-bg-color;
-        }
+        color: #AE8F56;
     }
 
     .message {
-        color: $hot-news-content-color;
-        background: $hot-news-content-bg-color;
+        color: $hot-news-title-color;
+        background: #000000;
 
         .marquee-container {
             .marquee-content {
@@ -704,49 +697,43 @@ select.form-control {
 
 // Button
 .btn-signup {
-    background: $button-signup-bg-color;
-    color: $button-signup-color;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 0 20px;
+    background-color: #F42A41;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 8px 0 28px;
+    border-radius: 100px !important;
+    background-image: url('../../../../build/styles/Images/icons/account-pin-box-fill.svg');
+    background-repeat: no-repeat;
+    background-position: 8px;
 
-    &:hover, &:focus {
-        color: $button-signup-color-hover;
-        background: $button-signup-bg-color-hover;
-        border-color: $button-signup-border-color;
-    }
-
-    .icon {
-        color: $button-signup-color;
+    &:hover {
+        color: #fff;
     }
 }
 
-.btn-login, .btn-link, .btn-login-mobile {
-    background: $button-login-bg-color;
-    color: $button-login-color;
-    box-shadow: 0px 2px 5px rgba(101, 101, 101, 0.25);
-    border-radius: 4px;
-    padding: 0 20px !important;
-    font-weight: 700;
-    font-size: 14px;
+.btn-login, .btn-login-mobile {
+    color: #ae8f56;
+    padding: 4px 8px 4px 28px !important;
+    font-weight: 600;
+    font-size: 13px;
+    background-image: url('../../../../build/styles/Images/icons/login-box-fill.svg');
+    background-repeat: no-repeat;
+    background-position: 8px;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #AE8F56;
+    text-transform: capitalize;
+    line-height: 1;
 
-    &:hover, &:focus {
-        color: $button-login-color-hover;
-        background: $button-login-bg-color-hover;
-        box-shadow: 0px 5px 6px rgba(65, 65, 65, 0.25);
+    &:hover {
+        color: #AE8F56;
     }
+}
 
-    @media only screen and (max-width: 767px) {
-        &:hover, &:focus {
-            color: $button-login-color;
-            background: $button-login-bg-color;
-            box-shadow: none;
-        }
-    }
-
-    .icon {
-        color: $button-login-color;
-    }
+.btn-link {
+    @extend .btn-login;
+    background : none;
 }
 
 .btn-submit {
@@ -1214,33 +1201,16 @@ select.form-control {
         .user-signup {
             flex-direction: column-reverse;
 
-            .btn-signup, .btn-login-mobile, .language-container .select-language, .btn-login {
-                font-weight: 700;
-                font-size: 12px;
-                line-height: 18px;
-                height: 20px;
-            }
-
             .language-container {
                 margin-right: 5px;
 
                 .select-language {
                     font-weight: 400;
-                    padding: 0 16px 0 20px;
-                    top: 4px;
-
                     .caret {
-                        top: 5px;
+                        top: 3px;
+                        right : -3px;
                     }
                 }
-            }
-
-            .btn-signup, .btn-login-mobile, .btn-login {
-                padding: 1px 7px !important;
-            }
-
-            .btn-login-mobile {
-                margin: 0 !important;
             }
         }
 
@@ -1256,11 +1226,6 @@ select.form-control {
             padding: 0;
         }
     }
-
-    .hot-news {
-        padding: 0 !important;
-    }
-
     .news {
         padding: 7px 10px 5px !important;
         background: #F8F9FA url("../../../../build/styles/Images/home/bg-news.mobile.png") no-repeat top 55px center / 100% auto;
