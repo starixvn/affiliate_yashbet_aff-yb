@@ -385,6 +385,8 @@
     <Content Include="App_Data\SpConfig\_SpNameOriginal.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="www\source\js\lib\swiper.min.js" />
+    <Content Include="www\source\styles\scss\vendors\swiper.css" />
     <None Include="Configurations\AppSetting\AppSetting.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AppSetting.txt</LastGenOutput>
