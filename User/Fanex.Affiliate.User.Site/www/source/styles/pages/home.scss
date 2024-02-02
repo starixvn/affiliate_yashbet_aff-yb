@@ -89,3 +89,85 @@
         background: url('../../../build/styles/Images/icons/contacts-fill.svg') #F42A41 no-repeat 20px;
     }
 }
+
+.news-block {
+    padding-top: 0;
+    padding-bottom: 100px;
+
+    @include Mobile500 {
+        padding-bottom: 50px;
+    }
+
+    .title-block {
+        margin: 0 auto 52px;
+
+        @include Mobile500 {
+            margin: 0 auto 30px;
+        }
+
+        span {
+            color: #fff;
+        }
+    }
+
+    .flex-2-column {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @include Mobile500 {
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    .card-items {
+        padding: 28px 24px;
+        background: #FFF1DE;
+        border: 1px solid #FFF1DE;
+        border-radius: 10px;
+        transition: box-shadow ease-in .1s;
+        position: relative;
+
+        &:hover {
+            border: 1px solid #D1B37D;
+            background: linear-gradient(90deg, #D1B37D 1.78%, #FFEBD0 100%);
+            box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        &-header {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 8px;
+        }
+
+        &-body {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .new-bage {
+            background: url('../../../build/styles/Images/home/box.svg') no-repeat;
+            position: absolute;
+            top: -8px;
+            right: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            width: 105px;
+            height: 30px;
+
+            img {
+                margin-right: 4px;
+            }
+        }
+    }
+}

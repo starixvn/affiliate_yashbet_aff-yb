@@ -1289,22 +1289,23 @@ body {
   bottom: 16px !important; }
 
 .footer {
-  text-align: center;
-  padding: 21px 0 !important;
-  margin-top: auto;
-  background: #001435; }
-  .footer .footer-text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #FAFAFA; }
-
-@media only screen and (max-width: 768px) {
-  .footer {
-    padding: 8px 10px 6px !important; }
-    .footer .footer-text {
-      font-size: 12px;
-      line-height: 18px; } }
+  background: #222328; }
+  .footer-line {
+    display: block;
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(87deg, #A7804D 2.45%, #F6E3BD 51.19%, #A7804D 98.02%); }
+  .footer-logo {
+    padding: 50px 0; }
+  .footer-text {
+    text-align: center;
+    padding: 16px 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #E5C589;
+    border-top: 1px solid #E5C589; }
 
 .blocker {
   display: block;
@@ -1642,7 +1643,8 @@ ul.dash-style {
   font-weight: 700;
   line-height: normal;
   padding: 8px 20px 8px 45px;
-  border-radius: 100px; }
+  border-radius: 100px;
+  display: inline-block; }
   .button-bg:hover {
     text-decoration: none;
     color: #fff; }

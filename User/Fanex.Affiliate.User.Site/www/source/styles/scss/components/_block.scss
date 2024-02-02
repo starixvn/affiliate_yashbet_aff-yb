@@ -11,7 +11,8 @@
     text-transform: uppercase;
     max-width: 23vw;
     position: relative;
-
+    margin-top : 0;
+    overflow : hidden;
     @include TableAndMobile {
         max-width: 453px;
     }
