@@ -1,4 +1,5 @@
-﻿.swiper {
+﻿@import '../abstracts/mixins';
+.swiper {
     width: 100%;
     height: 100%;
     max-width: 100%;
@@ -9,9 +10,9 @@
     .swiper-slide {
         img {
             display: block;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            max-width : 100%;
-            height : auto;
         }
     }
 
@@ -19,35 +20,33 @@
 
         span {
             margin: 0 4px;
-            width: 8px;
-            height: 8px;
-            border: 1px solid #D90F0F;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #fff;
             background: transparent;
             opacity: 1;
 
-            &:hover {
-                background: #D90F0F;
-            }
-
             @include Mobile {
-                border: 1px solid #EC828D;
+                border: 1px solid #fff;
                 background: transparent;
+                width: 8px;
+                height: 8px;
             }
 
             &:hover {
-                background: #D90F0F;
+                background: #fff;
 
                 @include Mobile {
-                    background: #D90F0F
+                    background: #fff;
                 }
             }
         }
 
         .swiper-pagination-bullet-active {
-            background: #D90F0F;
+            background: #fff;
 
             @include Mobile {
-                border: 1px solid #D90F0F;
+                border: 1px solid #fff;
             }
         }
     }
@@ -68,32 +67,25 @@
 
 
 .top-banner {
-    @include Mobile {
-        background: #F6F6F6;
-    }
-
-
     .swiper-slide {
         position: relative;
+    }
 
-        .show-pc {
-            display: block;
-
-            @include Mobile {
-                display: none;
-            }
+    img {
+       /* @include Tablet {
+            min-height: 240px;
         }
 
-        .show-mobile {
-            display: none;
-
-            @include Mobile {
-                display: block;
-            }
-        }
+        @include Mobile {
+            min-height: 270px;
+        }*/
     }
 
     .swiper-pagination {
-        bottom: 16px !important;
+        bottom: 30px !important;
+
+        @include Mobile {
+            bottom: 15px !important;
+        }
     }
 }

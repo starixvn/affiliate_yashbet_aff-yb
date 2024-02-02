@@ -10,22 +10,27 @@ body {
   body a:focus {
     outline: none !important; }
 
-body.menu-open {
-  overflow: hidden;
-  background-color: #001942;
-  /*.header-top {
+/*body.menu-open {
+    overflow: hidden;
+    background-color: #001942;
+
+    .header-top {
         filter: blur(2px);
         pointer-events: none;
-    }*/ }
-  body.menu-open .main-container, body.menu-open .footer {
-    display: none; }
-  body.menu-open .overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; }
+    }
 
+    .main-container, .footer {
+        display: none;
+    }
+
+    .overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}*/
 header {
   background-color: #fff; }
 
@@ -484,7 +489,7 @@ select.form-control:focus {
   border-radius: 100px;
   border: 1px solid #AE8F56;
   text-transform: capitalize;
-  line-height: 1; }
+  line-height: 1.4; }
   .btn-login:hover, .btn-link:hover, .btn-login-mobile:hover {
     color: #AE8F56; }
 
@@ -750,9 +755,12 @@ select.form-control:focus {
     display: none; }
   .navbar-collapse {
     width: 100%;
-    height: calc(100vh - 114px);
+    /*height: calc(100vh - 114px);*/
     background: #001942;
-    border: 0; }
+    border: 0;
+    position: absolute;
+    z-index: 99999999;
+    top: 28px; }
   .navbar .layout-page-container {
     margin-left: 0;
     padding: 0;

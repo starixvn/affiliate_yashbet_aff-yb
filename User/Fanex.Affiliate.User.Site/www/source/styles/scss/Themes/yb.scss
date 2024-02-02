@@ -20,14 +20,14 @@ body {
     }
 }
 
-body.menu-open {
+/*body.menu-open {
     overflow: hidden;
     background-color: #001942;
 
-    /*.header-top {
+    .header-top {
         filter: blur(2px);
         pointer-events: none;
-    }*/
+    }
 
     .main-container, .footer {
         display: none;
@@ -40,7 +40,7 @@ body.menu-open {
         top: 0;
         left: 0;
     }
-}
+}*/
 
 // Header
 header {
@@ -725,7 +725,7 @@ select.form-control {
     border-radius: 100px;
     border: 1px solid #AE8F56;
     text-transform: capitalize;
-    line-height: 1;
+    line-height: 1.4;
 
     &:hover {
         color: #AE8F56;
@@ -1158,9 +1158,12 @@ select.form-control {
 
     .navbar-collapse {
         width: 100%;
-        height: calc(100vh - 114px);
+        /*height: calc(100vh - 114px);*/
         background: #001942;
         border: 0;
+        position: absolute;
+        z-index: 99999999;
+        top: 28px;
     }
 
     .navbar .layout-page-container {
