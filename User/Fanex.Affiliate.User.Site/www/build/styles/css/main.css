@@ -1290,7 +1290,8 @@ body {
       bottom: 15px !important; } }
 
 .footer {
-  background: #222328; }
+  background: #222328;
+  margin-top: auto; }
   .footer-line {
     display: block;
     width: 100%;
