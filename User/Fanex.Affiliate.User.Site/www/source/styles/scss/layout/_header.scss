@@ -144,18 +144,22 @@
 }
 
 .navbar {
-    display : flex;
-    justify-content : center;
+    display: flex;
+    justify-content: center;
+
     .layout-page-container {
         max-width: 100%;
-        flex-basis : auto;
+        flex-basis: auto;
     }
 
     @include border-radius(0);
-    min-height : inherit;
-    /*overflow: hidden;*/
+    min-height: inherit;
     margin-bottom: 0;
     border: none;
+
+    @include Mobile {
+        justify-content: flex-start;
+    }
 
     ul {
         li {
@@ -217,11 +221,19 @@
 
     .menu-item {
         position: relative;
-        padding: 15px 32px;
+        padding: 15px;
         line-height: normal;
         text-transform: uppercase;
         font-weight: 600;
         font-size: 14px;
+
+        @media (min-width : 1200px) {
+            padding: 15px 2vw;
+        }
+
+        @media (min-width : 1360px) {
+            padding: 10px 32px;
+        }
 
         &:hover, &:focus, &.active {
             color: #fff;

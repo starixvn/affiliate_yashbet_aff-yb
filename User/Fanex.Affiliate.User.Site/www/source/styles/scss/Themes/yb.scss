@@ -342,8 +342,9 @@ header {
 
         .marquee-container {
             .marquee-content {
+                margin-bottom : 0;
                 a {
-                    color: #BF4600 !important;
+                    color: #fff !important;
                 }
             }
         }
@@ -1131,6 +1132,10 @@ select.form-control {
     }
 }
 
+.navbar-nav {
+    margin: 0 !important;
+}
+
 @media only screen and (max-width: 767px) {
     .mobile-left-panel {
         top: 15rem;
@@ -1215,6 +1220,7 @@ select.form-control {
 
         .sign-up {
             border: 0;
+            text-align : right;
         }
 
         .language-login {

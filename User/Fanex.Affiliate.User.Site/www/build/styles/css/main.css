@@ -424,12 +424,14 @@ input[type="checkbox"], input[type="radio"] {
   -o-border-radius: 0;
   border-radius: 0;
   min-height: inherit;
-  /*overflow: hidden;*/
   margin-bottom: 0;
   border: none; }
   .navbar .layout-page-container {
     max-width: 100%;
     flex-basis: auto; }
+  @media (max-width: 767px) {
+    .navbar {
+      justify-content: flex-start; } }
   .navbar ul li {
     line-height: 30px; }
     .navbar ul li a {
@@ -466,11 +468,17 @@ input[type="checkbox"], input[type="radio"] {
   padding-right: 0; }
   .menu .menu-item {
     position: relative;
-    padding: 15px 32px;
+    padding: 15px;
     line-height: normal;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px; }
+    @media (min-width: 1200px) {
+      .menu .menu-item {
+        padding: 15px 2vw; } }
+    @media (min-width: 1360px) {
+      .menu .menu-item {
+        padding: 10px 32px; } }
     .menu .menu-item:hover, .menu .menu-item:focus, .menu .menu-item.active {
       color: #fff; }
     .menu .menu-item.active {
@@ -1621,8 +1629,7 @@ ul.dash-style {
     outline: none; }
 
 .btn-login-mobile {
-  display: inline-block;
-  margin-right: 8px !important; }
+  display: inline-block; }
 
 .btn-transparent {
   background-color: transparent; }
@@ -1820,12 +1827,13 @@ input[type="radio"], input[type="checkbox"] {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  white-space: nowrap; }
+  white-space: nowrap;
+  display: flex;
+  align-items: center; }
   .marquee-container .marquee-content {
     text-indent: 0;
     white-space: nowrap;
     position: absolute;
-    /* Apply animation to this element */
     -moz-animation: marquee linear infinite;
     -webkit-animation: marquee linear infinite;
     animation: marqueekey linear infinite;

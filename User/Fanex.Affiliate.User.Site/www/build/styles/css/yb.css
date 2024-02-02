@@ -226,8 +226,10 @@ header {
   .hot-news .message {
     color: #F8F9FA;
     background: #000000; }
-    .hot-news .message .marquee-container .marquee-content a {
-      color: #BF4600 !important; }
+    .hot-news .message .marquee-container .marquee-content {
+      margin-bottom: 0; }
+      .hot-news .message .marquee-container .marquee-content a {
+        color: #fff !important; }
 
 .page-title {
   background: #F8F9FA;
@@ -737,6 +739,9 @@ select.form-control:focus {
         margin-bottom: 0;
         padding-bottom: 8px; } }
 
+.navbar-nav {
+  margin: 0 !important; }
+
 @media only screen and (max-width: 767px) {
   .mobile-left-panel {
     top: 15rem;
@@ -789,7 +794,8 @@ select.form-control:focus {
           top: 3px;
           right: -3px; }
   .header-top .sign-up {
-    border: 0; }
+    border: 0;
+    text-align: right; }
   .header-top .language-login {
     padding-top: 9px; }
   .header-top .logo, .header-top .login {
