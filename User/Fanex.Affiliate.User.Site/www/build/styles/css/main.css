@@ -479,27 +479,14 @@ input[type="checkbox"], input[type="radio"] {
 .user-signup {
   display: flex;
   justify-content: flex-end;
-  text-align: right;
-  margin-bottom: 3px;
-  /*    @media (max-width: 767px) {
-        align-items: flex-end;
-
-        .language-container .flag {
-            width: 16px !important;
-            height: 16px !important;
-        }
-
-        .btn-login-mobile {
-            margin: 0 !important;
-        }
-    }*/ }
+  text-align: right; }
 
 .sign-up {
   display: inline-block;
   vertical-align: middle; }
 
 #btnLogin {
-  margin-right: 11px; }
+  margin-right: 8px; }
 
 .language-container {
   display: inline-block;
@@ -730,8 +717,10 @@ body {
   min-height: 1px; }
 
 .page-container {
-  max-width: calc(100% - 400px);
-  flex-basis: calc(100% - 400px);
+  /*max-width: calc(100% - 400px);
+    flex-basis: calc(100% - 400px);*/
+  max-width: 1224px;
+  padding: 0 12px;
   margin: 0 auto; }
 
 #mainBanner {
@@ -1236,316 +1225,68 @@ body {
   .adv-contact {
     padding: 7px 13% 7px 7px; } }
 
-.carousel.slide .carousel-control {
-  width: 2.5rem;
-  background: transparent;
-  text-shadow: 0 0 #fff; }
-  .carousel.slide .carousel-control .chevron {
-    background: rgba(255, 255, 255, 0.5);
-    top: calc(50% - 24px);
-    width: 100%;
-    padding: 10px 0; }
-
-.carousel.slide .carousel-inner > .item {
-  height: 100%; }
-  .carousel.slide .carousel-inner > .item .img-responsive {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
-
-.banner-text {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  max-width: 650px; }
-  .banner-text .txt-lang {
-    color: #fff;
-    margin: 0;
-    line-height: 1.2; }
-  .banner-text .text-logo {
-    color: #EB7816; }
-  .banner-text h2 {
-    font-size: 56px;
-    margin-bottom: 11px !important; }
-  .banner-text h3 {
-    font-size: 36px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin: 0;
-    color: #fff; }
-  .banner-text h5 {
-    font-size: 20px;
-    font-weight: normal;
-    letter-spacing: 0.02em;
-    margin-bottom: 12px; }
-  .banner-text .nounderline {
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: center;
-    display: inline-block;
-    color: #000; }
-
-.casino-banner-text {
-  max-width: 35rem;
-  padding-bottom: 1.5rem; }
-
-.casino-banner-btn {
-  width: 20.6rem;
-  height: 5.05rem;
-  display: inline-block;
-  background-size: cover;
-  text-align: center;
-  padding-top: 1.5rem; }
-  .casino-banner-btn .btn-text {
-    width: 12rem;
-    height: 2rem; }
-
-@media screen and (max-width: 767px) {
-  .casino-banner-text {
-    max-width: 24rem; }
-  .casino-banner-btn {
-    width: 12.25rem;
-    height: 3rem;
-    padding-top: 0.5rem; }
-    .casino-banner-btn .btn-text {
-      width: 7.5rem;
-      height: 1.2rem; } }
-
-@media screen and (max-width: 530px) {
-  .casino-banner-text {
-    max-width: 16rem; } }
-
-@media screen and (max-width: 374px) {
-  .casino-banner-text {
-    max-width: 14rem; } }
-
-.no-webp .casino-banner-btn {
-  background-image: url("../Images/casino-banners/btn-background.png"); }
-  .no-webp .casino-banner-btn:hover {
-    background-image: url("../Images/casino-banners/btn-background-hover.png"); }
-
-.webp .casino-banner-btn {
-  background-image: url("../Images/casino-banners/btn-background.webp"); }
-  .webp .casino-banner-btn:hover {
-    background-image: url("../Images/casino-banners/btn-background-hover.webp"); }
-
-.banner-side {
-  background: #010187; }
-  .banner-side > img {
-    margin: 0; }
-
-.no-webp .banner-commission-structure {
-  background-image: url("../Images/bg-Commission-Structure_Banner.png"); }
-
-.webp .banner-commission-structure {
-  background-image: url("../Images/bg-Commission-Structure_Banner.webp"); }
-
-.banner-commission-structure {
-  display: block;
-  max-width: 600px;
+.swiper {
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
-  padding: 30px 20px 70px 30px;
-  font-family: "Myriad Pro", sans-serif;
-  background-position: center center;
-  background-repeat: no-repeat;
-  text-align: left; }
-  .banner-commission-structure .text-content {
-    font-weight: 600;
-    line-height: 1;
-    transform: rotate(-5deg); }
-    .banner-commission-structure .text-content.cn .text-small {
-      margin-left: 0; }
-    .banner-commission-structure .text-content .text-big-yellow {
-      position: relative;
-      display: inline-block;
-      margin-left: 10px;
-      font-size: 60px;
-      color: #FFFF28;
-      text-shadow: #5b450a 1px 0px 0px, #5b450a 0.5403px 0.84147px 0px, #5b450a -0.41615px 0.9093px 0px, #5b450a -0.98999px 0.14112px 0px, #5b450a -0.65364px -0.7568px 0px, #5b450a 0.28366px -0.95892px 0px, #5b450a 0.96017px -0.27942px 0px; }
-    .banner-commission-structure .text-content .text-big-white {
-      font-size: 25px;
-      color: #fff;
-      text-shadow: #5b450a 1px 0px 0px, #5b450a 0.5403px 0.84147px 0px, #5b450a -0.41615px 0.9093px 0px, #5b450a -0.98999px 0.14112px 0px, #5b450a -0.65364px -0.7568px 0px, #5b450a 0.28366px -0.95892px 0px, #5b450a 0.96017px -0.27942px 0px;
-      font-style: italic; }
-    .banner-commission-structure .text-content .text-small-white {
-      font-size: 20px;
-      color: #fff;
-      text-shadow: #5b450a 1px 0px 0px, #5b450a 0.5403px 0.84147px 0px, #5b450a -0.41615px 0.9093px 0px, #5b450a -0.98999px 0.14112px 0px, #5b450a -0.65364px -0.7568px 0px, #5b450a 0.28366px -0.95892px 0px, #5b450a 0.96017px -0.27942px 0px;
-      font-style: italic; }
-    .banner-commission-structure .text-content .text-small {
-      margin-left: 20px;
-      margin-bottom: 0; }
-    .banner-commission-structure .text-content .text-yellow {
-      position: relative;
-      display: inline-block;
-      font-size: 40px;
-      color: #FFFF28;
-      text-shadow: #5b450a 1px 0px 0px, #5b450a 0.5403px 0.84147px 0px, #5b450a -0.41615px 0.9093px 0px, #5b450a -0.98999px 0.14112px 0px, #5b450a -0.65364px -0.7568px 0px, #5b450a 0.28366px -0.95892px 0px, #5b450a 0.96017px -0.27942px 0px;
-      font-weight: 600;
-      font-style: normal; }
-  @media screen and (max-width: 767px) {
-    .banner-commission-structure {
-      padding-left: 15px; }
-      .banner-commission-structure .text-content .text-big-yellow {
-        font-size: 40px; }
-      .banner-commission-structure .text-content .text-big-white {
-        font-size: 18px; }
-      .banner-commission-structure .text-content .text-small-white {
-        font-size: 15px; }
-      .banner-commission-structure .text-content .text-yellow {
-        font-size: 30px; } }
-
-.no-webp .banner-product-sport {
-  background-image: url("../Images/products/bg-sports_affiliate.jpg?v=000001"); }
-
-.webp .banner-product-sport {
-  background-image: url("../Images/products/bg-sports_affiliate.webp?v=000001"); }
-
-.no-webp .banner-product-casino {
-  background-image: url("../Images/products/bg-casino_affiliate.jpg?v=000001"); }
-
-.webp .banner-product-casino {
-  background-image: url("../Images/products/bg-casino_affiliate.webp?v=000001"); }
-
-.banner-product {
-  display: flex;
-  max-width: 1120px;
-  height: 300px;
-  margin: 0 auto;
-  padding: 50px 10px;
-  font-family: Tahoma, sans-serif;
-  background-position: center center;
-  background-repeat: no-repeat;
-  text-align: left;
-  background-size: cover;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
   position: relative; }
-  .banner-product .text-red {
-    font-weight: 500;
-    line-height: 1.204;
-    font-size: 4rem;
-    color: #ffffff;
-    line-height: 1.204545;
-    position: absolute;
-    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.5);
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%); }
-    .banner-product .text-red span {
-      font-weight: 600;
-      color: #FFD235;
-      font-size: 109.091%;
-      display: block;
-      text-transform: uppercase;
-      margin-bottom: 4px; }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .banner-product {
-      height: 200px; } }
-  @media screen and (max-width: 767px) {
-    .banner-product {
-      height: 120px; } }
-  .banner-product.banner-product-sport {
-    flex-direction: column;
-    justify-content: center; }
-    .banner-product.banner-product-sport .text-red {
-      text-align: left;
-      left: 76px;
-      max-width: 52%; }
-    @media screen and (max-width: 1500px) {
-      .banner-product.banner-product-sport .text-red {
-        max-width: 57%;
-        left: 20px;
-        font-size: 3rem; } }
-    @media screen and (max-width: 767px) {
-      .banner-product.banner-product-sport .text-red {
-        left: 10px;
-        font-size: 2rem; } }
-    @media screen and (max-width: 530px) {
-      .banner-product.banner-product-sport .text-red {
-        font-size: 16px;
-        max-width: 58%; } }
-  .banner-product.banner-product-casino .text-red {
-    text-align: right;
-    right: 49px;
-    margin: 3px 0 0 0;
-    padding: 0;
-    max-width: 53%; }
-  @media screen and (max-width: 1500px) {
-    .banner-product.banner-product-casino .text-red {
-      max-width: 57%;
-      right: 35px;
-      font-size: 30px; } }
-  @media screen and (max-width: 991px) {
-    .banner-product.banner-product-casino .text-red {
-      right: 25px;
-      font-size: 22px; } }
-  @media screen and (max-width: 767px) {
-    .banner-product.banner-product-casino .text-red {
-      right: 10px;
-      font-size: 22px; } }
-  @media screen and (max-width: 600px) {
-    .banner-product.banner-product-casino .text-red {
-      right: 15px;
-      font-size: 17px; } }
-  @media screen and (max-width: 530px) {
-    .banner-product.banner-product-casino .text-red {
-      right: 15px;
-      max-width: 58%;
-      font-size: 15px; } }
+  .swiper .swiper-slide img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto; }
+  .swiper .swiper-pagination span {
+    margin: 0 4px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #D90F0F;
+    background: transparent;
+    opacity: 1; }
+    .swiper .swiper-pagination span:hover {
+      background: #D90F0F; }
+    @media (max-width: 767px) {
+      .swiper .swiper-pagination span {
+        border: 1px solid #EC828D;
+        background: transparent; } }
+    .swiper .swiper-pagination span:hover {
+      background: #D90F0F; }
+      @media (max-width: 767px) {
+        .swiper .swiper-pagination span:hover {
+          background: #D90F0F; } }
+  .swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: #D90F0F; }
+    @media (max-width: 767px) {
+      .swiper .swiper-pagination .swiper-pagination-bullet-active {
+        border: 1px solid #D90F0F; } }
+  .swiper .swiper-button-next {
+    right: 0; }
+  .swiper .swiper-button-prev {
+    left: 0; }
+  .swiper .swiper-button-next, .swiper .swiper-button-prev {
+    background-image: none;
+    margin-top: -18px; }
 
-.no-webp .banner-terms-condition {
-  background-image: url("../Images/bg-Terms_&_conditions_banner.png"); }
+@media (max-width: 767px) {
+  .top-banner {
+    background: #F6F6F6; } }
 
-.webp .banner-terms-condition {
-  background-image: url("../Images/bg-Terms_&_conditions_banner.webp"); }
+.top-banner .swiper-slide {
+  position: relative; }
+  .top-banner .swiper-slide .show-pc {
+    display: block; }
+    @media (max-width: 767px) {
+      .top-banner .swiper-slide .show-pc {
+        display: none; } }
+  .top-banner .swiper-slide .show-mobile {
+    display: none; }
+    @media (max-width: 767px) {
+      .top-banner .swiper-slide .show-mobile {
+        display: block; } }
 
-.no-webp .banner-faqs {
-  background-image: url("../Images/bg-FAQ_banner.png"); }
-
-.webp .banner-faqs {
-  background-image: url("../Images/bg-FAQ_banner.webp"); }
-
-.banner-terms-condition, .banner-faqs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 570px;
-  height: 95px;
-  margin: 0 auto;
-  padding-left: 108px;
-  background-repeat: no-repeat;
-  background-size: contain; }
-  .banner-terms-condition p, .banner-faqs p {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1; }
-  @media screen and (max-width: 767px) {
-    .banner-terms-condition, .banner-faqs {
-      padding-left: 70px;
-      height: 65px;
-      width: 350px; }
-      .banner-terms-condition p, .banner-faqs p {
-        font-size: 13px; } }
-  @media screen and (max-width: 320px) {
-    .banner-terms-condition, .banner-faqs {
-      height: 52px;
-      width: 100%;
-      padding-left: 60px; } }
-
-.banner-faqs {
-  padding-left: 130px; }
-  @media screen and (max-width: 767px) {
-    .banner-faqs {
-      width: 330px;
-      padding-left: 80px; } }
-  @media screen and (max-width: 375px) {
-    .banner-faqs {
-      width: 100%;
-      justify-content: flex-start;
-      padding-top: 17px;
-      height: 55px; } }
+.top-banner .swiper-pagination {
+  bottom: 16px !important; }
 
 .footer {
   text-align: center;
@@ -1831,7 +1572,7 @@ ul.dash-style {
 .btn {
   display: inline-block;
   padding: 0 8px;
-  height: 25px;
+  height: 28px;
   line-height: 1;
   text-transform: uppercase;
   transition: all .2s ease;
@@ -1851,7 +1592,7 @@ ul.dash-style {
 
 .btn-signup, .btn-login, .btn-link, .btn-login-mobile {
   font-size: 13px;
-  line-height: 22px; }
+  line-height: 24px; }
   .btn-signup:focus, .btn-login:focus, .btn-link:focus, .btn-login-mobile:focus {
     outline: none; }
   .btn-signup .icon, .btn-login .icon, .btn-link .icon, .btn-login-mobile .icon {
@@ -1894,6 +1635,17 @@ ul.dash-style {
 
 .btn.btn-transparent :hover {
   color: cornflowerblue; }
+
+.button-bg {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 8px 20px 8px 45px;
+  border-radius: 100px; }
+  .button-bg:hover {
+    text-decoration: none;
+    color: #fff; }
 
 @media (min-width: 992px) {
   #mobileLogin {
@@ -2138,7 +1890,10 @@ input[type="radio"], input[type="checkbox"] {
       width: 150px; }
   .page-container {
     max-width: 100%;
-    flex-basis: 100%; } }
+    flex-basis: 100%; }
+  .before-login-content .page-container {
+    max-width: calc(100% - 220px);
+    flex-basis: calc(100% - 220px); } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .banner-side.banner-left, .banner-side.banner-right {
@@ -2149,9 +1904,9 @@ input[type="radio"], input[type="checkbox"] {
   .news .item-wrapper {
     flex-basis: 100%;
     max-width: 100%; }
-  /*.user-signup {
-        margin-top: 30px;
-    }*/
+  .before-login-content .page-container {
+    max-width: calc(100% - 80px);
+    flex-basis: calc(100% - 80px); }
   .content-menu #mainMenu {
     white-space: nowrap;
     /* [1] */
@@ -2195,14 +1950,16 @@ input[type="radio"], input[type="checkbox"] {
     -webkit-overflow-scrolling: touch;
     /* [3] */
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    /* [4] */
-    /*&::-webkit-scrollbar {
-            display: none;
-        }*/ }
+    /* [4] */ }
   .login-dialog .modal-content .modal-banner {
     text-align: center; }
   .header-top .logo {
     padding: 1.7rem 0; } }
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 980px) and (orientation: landscape) {
+  .page-container {
+    max-width: calc(100% - 100px);
+    flex-basis: calc(100% - 100px); } }
 
 .login-dialog .modal-content {
   background-color: #000;

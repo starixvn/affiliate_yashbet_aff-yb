@@ -1,0 +1,32 @@
+﻿.block {
+    padding: 50px 0;
+
+    @include Mobile {
+        padding: 24px 0;
+    }
+}
+.title-block {
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    max-width: 23vw;
+    position: relative;
+
+    @include TableAndMobile {
+        max-width: 453px;
+    }
+
+    span {
+        position: absolute;
+        top: 44%;
+        left: 10%;
+        display: block;
+        width: 100%;
+        transform: translate(0, -50%);
+        font-size: 1.4vw;
+
+        @include TableAndMobile {
+            font-size: 20px;
+        }
+    }
+}

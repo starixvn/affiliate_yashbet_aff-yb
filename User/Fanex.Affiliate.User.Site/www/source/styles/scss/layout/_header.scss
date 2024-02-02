@@ -237,20 +237,6 @@
     display: flex;
     justify-content: flex-end;
     text-align: right;
-    margin-bottom: 3px;
-
-/*    @media (max-width: 767px) {
-        align-items: flex-end;
-
-        .language-container .flag {
-            width: 16px !important;
-            height: 16px !important;
-        }
-
-        .btn-login-mobile {
-            margin: 0 !important;
-        }
-    }*/
 }
 
 .sign-up {
@@ -259,7 +245,7 @@
 }
 
 #btnLogin {
-    margin-right: 11px;
+    margin-right: 8px;
 }
 
 .language-container {

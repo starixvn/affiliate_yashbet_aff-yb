@@ -12,10 +12,11 @@ body {
 
 body.menu-open {
   overflow: hidden;
-  background-color: #001942; }
-  body.menu-open .header-top {
-    filter: blur(2px);
-    pointer-events: none; }
+  background-color: #001942;
+  /*.header-top {
+        filter: blur(2px);
+        pointer-events: none;
+    }*/ }
   body.menu-open .main-container, body.menu-open .footer {
     display: none; }
   body.menu-open .overlay {
@@ -95,10 +96,8 @@ header {
         background-image: url("../Images/icons/flags/Cambodian.png"); }
 
 .sign-up {
-  position: relative;
-  border-left: 1px solid #BDBDBD; }
+  position: relative; }
   .sign-up .btn-signup {
-    margin-left: 10px;
     border-radius: 4px; }
 
 .bg-highlight {
@@ -192,6 +191,9 @@ header {
 
 .navbar {
   background: #fff; }
+  @media (max-width: 767px) {
+    .navbar {
+      background: linear-gradient(87deg, #A7804D 2.45%, #F6E3BD 51.19%, #A7804D 98.02%); } }
   .navbar ul li:hover a, .navbar ul:focus a, .navbar ul:visited a {
     color: #F42A41; }
   .navbar .nav > li > a:focus {
@@ -685,16 +687,19 @@ select.form-control:focus {
   .news, .table-casino {
     padding-left: 62px !important;
     padding-right: 62px !important; }
-  .main .content {
-    margin-left: 62px !important;
-    margin-right: 62px !important; } }
+  /*    .main .content {
+        margin-left: 62px !important;
+        margin-right: 62px !important;
+    }*/ }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .news, .table-casino {
     padding-left: 40px !important;
     padding-right: 40px !important; }
-  .main .content {
-    margin: 0 40px !important; }
+  /*
+    .main .content {
+        margin: 0 40px !important;
+    }*/
   .menu .menu-item {
     padding-right: 15px; }
   .mobile-left-panel {
@@ -739,9 +744,6 @@ select.form-control:focus {
       font-weight: 600;
       font-size: 1.4rem;
       line-height: 2.2rem; }
-  .main .content {
-    padding: 0 10px;
-    margin: 0 !important; }
   .table-casino {
     padding: 0 10px !important; }
   #btnLogin {
@@ -753,7 +755,8 @@ select.form-control:focus {
     border: 0; }
   .navbar .layout-page-container {
     margin-left: 0;
-    padding: 0; }
+    padding: 0;
+    width: 100%; }
     .navbar .layout-page-container .navbar-nav {
       margin: 16px; }
     .navbar .layout-page-container .menu .menu-item {

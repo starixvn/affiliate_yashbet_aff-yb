@@ -1,32 +1,25 @@
 ﻿var Home = (function ($) {
+    function topBanner() {
+        var swiper = new Swiper(".top-banner", {
+            loop: true,
+            speed: 900,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        });
+    }
     var _me = {
         initialize: function () {
+            topBanner();
             _me.initEvent();
         },
         initEvent: function () {
-            $('#sportBanner').on('click', function (event) {
-                event.preventDefault();
-                var redirectLink = $(this).attr('href');
-                PageTracking.addTrackingForSignUpPage();
-
-                setTimeout(function () {
-                    Site.redirect(redirectLink);
-                }, 10);
-            })
-
-            $('#casinoBanner').on('click', function (event) {
-                event.preventDefault();
-                var $this = $(this);
-                var isLoggedIn = !$this.hasClass('mediaLoginLink');
-
-                if (isLoggedIn) {
-                    PageTracking.addTrackingForMediaPage();
-
-                    setTimeout(function () {
-                        Site.redirect($this.attr('href'));
-                    }, 10);
-                }
-            })
+      
         }
     };
 
