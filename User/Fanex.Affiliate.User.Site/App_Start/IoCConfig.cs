@@ -4,6 +4,7 @@ using Fanex.Affiliate.User.Core.Apis;
 using Fanex.Affiliate.User.Core.BusinessService;
 using Fanex.Affiliate.User.Core.CoreService;
 using Fanex.Affiliate.User.Core.Infrastructure;
+using Fanex.Affiliate.User.Core.MetalModels.Api;
 using Fanex.Affiliate.User.Core.Repository;
 using Fanex.Affiliate.User.Core.Repository.UserPanel;
 using Fanex.Affiliate.User.Core.Utilities;
@@ -16,7 +17,6 @@ using ONEbook.UM.Transport;
 using Refit;
 using System;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Reflection;
 using System.Web.Compilation;
@@ -123,13 +123,9 @@ namespace Fanex.Affiliate.User.Site
         private static void RegisterMemberSiteApi(ContainerBuilder builder)
         {
             var appSetting = AppSetting.Instance;
-            var handler = new AuthenticatedHttpClientHandler(appSetting.MemberSiteApiAuthenticationKey)
-            {
-                Proxy = appSetting.IsUseMemberSiteProxy
-                            ? new WebProxy(new Uri(appSetting.MemberSiteProxyUrl))
-                            : null
 
-            };
+            var handler = new AuthenticatedHttpClientHandler(appSetting);
+
             builder.RegisterInstance(RestService.For<ILicenseeApi>(
                 new HttpClient(handler)
                 {

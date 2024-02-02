@@ -15,6 +15,7 @@ namespace AffiliateAdmin
             MvcHandler.DisableMvcResponseHeader = true;
 
             IoCConfig.Register();
+            SslConfig.RegisterHttpSecurityProtocol(); //Fix abort https request
 
             UMConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 

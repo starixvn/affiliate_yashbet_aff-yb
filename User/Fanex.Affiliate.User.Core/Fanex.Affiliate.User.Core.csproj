@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -226,6 +226,7 @@
   <ItemGroup>
     <Compile Include="Apis\IAccountApi.cs" />
     <Compile Include="Apis\ILicenseeApi.cs" />
+    <Compile Include="Apis\ITokenApi.cs" />
     <Compile Include="BusinessService\AccountService.cs" />
     <Compile Include="BusinessService\AuthService.cs" />
     <Compile Include="BusinessService\CaptchaService.cs" />
@@ -268,6 +269,8 @@
     <Compile Include="DTO\Api\AccountApiResult.cs" />
     <Compile Include="DTO\Api\ApiResultInfo.cs" />
     <Compile Include="DTO\Api\CustomerBalanceInfo.cs" />
+    <Compile Include="DTO\Api\TokenInfo.cs" />
+    <Compile Include="MetalModels\Api\TokenRequestParam.cs" />
     <Compile Include="DTO\UserPanel\MarketingPageStatistics.cs" />
     <Compile Include="DTO\UserPanel\PlayerTransferBalance\PlayerTransferBalanceHistoryInfo.cs" />
     <Compile Include="DTO\UserPanel\PlayerTransferBalance\PlayerTransferBalanceHistoryResult.cs" />

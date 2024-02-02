@@ -68,7 +68,9 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         string MemberSiteProxyUrl { get; }
 
-        string MemberSiteApiAuthenticationKey { get; }
+        string MemberSiteApiUsername { get; }
+
+        string MemberSiteApiPassword { get; }
 
         bool IsUseMemberSiteProxy { get; }
 

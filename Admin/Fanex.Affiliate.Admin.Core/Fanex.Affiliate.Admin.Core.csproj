@@ -218,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Apis\ILicenseeApi.cs" />
+    <Compile Include="Apis\ITokenApi.cs" />
     <Compile Include="Attributes\AllowByPassFunctionAuthorizeAttribute.cs" />
     <Compile Include="Attributes\CustomAuthorizeAttribute .cs" />
     <Compile Include="Attributes\FunctionAuthorizeAttribute.cs" />
@@ -227,6 +228,7 @@
     <Compile Include="Configurations\AppSetting.cs" />
     <Compile Include="Configurations\IAppSetting.cs" />
     <Compile Include="Configurations\LoggingConfig.cs" />
+    <Compile Include="Configurations\SslConfig.cs" />
     <Compile Include="Configurations\UMConfig.cs" />
     <Compile Include="Constants\AffStatus.cs" />
     <Compile Include="Constants\AffType.cs" />
@@ -296,6 +298,7 @@
     <Compile Include="DTO\Api\ApiResultInfo.cs" />
     <Compile Include="DTO\Api\MemberSiteCustomerInfo.cs" />
     <Compile Include="DTO\Api\PaymentRequestInfo.cs" />
+    <Compile Include="DTO\Api\TokenInfo.cs" />
     <Compile Include="DTO\CommissionGroup\DeductionSetting.cs" />
     <Compile Include="DTO\Currency.cs" />
     <Compile Include="DTO\Customer\TransferLimitSettingInfo.cs" />
@@ -339,6 +342,7 @@
     <Compile Include="MetaModels\Administrator\UpdatePasswordParam.cs" />
     <Compile Include="MetaModels\Administrator\UpdatePolicyParam.cs" />
     <Compile Include="MetaModels\Administrator\UpdateUserParam.cs" />
+    <Compile Include="MetaModels\Api\TokenRequestParam.cs" />
     <Compile Include="MetaModels\ChangeAdminPassword\ChangeAdminPasswordParam.cs" />
     <Compile Include="MetaModels\CheckPermissionParam.cs" />
     <Compile Include="MetaModels\CommissionGroup\AffInfoParam.cs" />

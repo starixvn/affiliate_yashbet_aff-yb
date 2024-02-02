@@ -83,8 +83,8 @@ export const headerText = {
 
 export const messages = {
     PleaseSelect: 'Please select items to delete',
-    AreYouSureDeleteItems: 'Are you sure to delete the selected email(s)?',
-    DeleteItemsSuccessfully: 'Delete Email(s) Successfully',
+    AreYouSureDeleteItems: 'Are you sure to delete the selected message(s)?',
+    DeleteItemsSuccessfully: 'Delete Message(s) Successfully',
     PleaseEnter: 'Please enter the content of message, one language at least.',
     AreYouWant: 'Are you sure you want to update this message?'
 }

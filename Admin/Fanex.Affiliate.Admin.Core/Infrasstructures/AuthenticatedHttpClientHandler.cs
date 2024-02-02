@@ -1,81 +1,84 @@
-﻿using Fanex.Affiliate.Admin.Core.Utilities;
+﻿using Fanex.Affiliate.Admin.Core.Apis;
+using Fanex.Affiliate.Admin.Core.Configurations;
+using Fanex.Affiliate.Admin.Core.DTO.Api;
+using Fanex.Affiliate.Admin.Core.MetaModels.Api;
+using Fanex.Affiliate.Admin.Core.Utilities;
+using Refit;
 using System;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Net.Sockets;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace Fanex.Affiliate.User.Core.Infrastructure
 {
     public class AuthenticatedHttpClientHandler : HttpClientHandler
     {
-        private readonly string machineIP;
-        private readonly string secretKey;
+        private readonly IAppSetting _appSetting;
+        private readonly ITokenApi _tokenApi;
 
-        public AuthenticatedHttpClientHandler(string secretKey)
+        public AuthenticatedHttpClientHandler(IAppSetting appSetting)
         {
-            this.secretKey = secretKey;
-            machineIP = GetLocalIPAddress();
+            _appSetting = appSetting;
+            base.Proxy = appSetting.IsUseMemberSiteProxy ? new WebProxy(new Uri(appSetting.MemberSiteProxyUrl)) : null;
+            _tokenApi = TokenApiInstance(base.Proxy, appSetting.MemberSiteApiUrl);
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            // See if the request has an authorize header
-            request.Headers.Authorization = AuthenticationHeaderValue.Parse(Authenticate(request));
+            await SetJwtToken(request);
 
             return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
         }
 
-        public string Authenticate(HttpRequestMessage request)
+        private async Task SetJwtToken(HttpRequestMessage request)
         {
-            var requestUri = HttpUtility.UrlEncode(request.RequestUri.PathAndQuery.ToLowerInvariant().Replace("api//", "api/"));
-            string requestHttpMethod = request.Method.ToString();
+            var tokenInfo = await GetJwtToken();
 
-            //Calculate UNIX time
-            DateTimeOffset epochStart = new DateTimeOffset(1970, 01, 01, 0, 0, 0, 0, TimeSpan.Zero);
-            TimeSpan timeSpan = DateTimeHelper.UtcNowDateTimeOffset - epochStart;
-            string requestTimeStamp = Convert.ToUInt64(timeSpan.TotalSeconds).ToString();
+            // Use the UriBuilder to parse and modify the url
+            var uriBuilder = new UriBuilder(request.RequestUri);
 
-            //create random nonce for each request
-            string nonce = Guid.NewGuid().ToString("N");
+            uriBuilder.Query = string.IsNullOrEmpty(uriBuilder.Query)
+                ? $"access_token={tokenInfo.AccessToken}"
+                : $"{uriBuilder.Query.Trim('?')}&access_token={tokenInfo.AccessToken}";
 
-            //Creating the raw signature string
-            string signatureRawData = $"{machineIP}{requestHttpMethod}{requestUri}{requestTimeStamp}{nonce}";
+            request.RequestUri = uriBuilder.Uri;
+        }
 
-            var secretKeyByteArray = Convert.FromBase64String(secretKey);
-
-            byte[] signature = Encoding.UTF8.GetBytes(signatureRawData);
-
-            using (var hmac = new HMACSHA256(secretKeyByteArray))
+        private async Task<TokenInfo> GetJwtToken()
+        {
+            var tokenRequestParam = new TokenRequestParam
             {
-                byte[] signatureBytes = hmac.ComputeHash(signature);
-                string requestSignatureBase64String = Convert.ToBase64String(signatureBytes);
+                Username = $"{_appSetting.SiteName}_{_appSetting.MemberSiteApiUsername}",
+                Password = _appSetting.MemberSiteApiPassword
+            };
 
-                // Setting the values in the Authorization header using custom scheme (amx)
-                var authHeader = $"amx {machineIP}:{requestSignatureBase64String}:{nonce}:{requestTimeStamp}";
+            try
+            {
+                var token = await _tokenApi.GetToken(tokenRequestParam);
+                return token;
 
-                return authHeader;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteError(ex);
+
+                throw new InvalidOperationException($"Can't get JwtSecurityToken for {tokenRequestParam.Username}!");
             }
         }
 
-        public static string GetLocalIPAddress()
+        private static ITokenApi TokenApiInstance(IWebProxy proxy, string tokenApiUrl)
         {
-            var host = Dns.GetHostEntry(Dns.GetHostName());
-
-            foreach (var ip in host.AddressList)
+            var handler = new HttpClientHandler
             {
-                if (ip.AddressFamily == AddressFamily.InterNetwork)
-                {
-                    return ip.ToString().Replace(":", "_");
-                }
-            }
+                Proxy = proxy
+            };
 
-            throw new InvalidOperationException("Local IP Address Not Found!");
+            return RestService.For<ITokenApi>(
+                new HttpClient(handler)
+                {
+                    BaseAddress = new Uri(tokenApiUrl)
+                });
         }
     }
 }

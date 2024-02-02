@@ -385,6 +385,20 @@
     <Content Include="App_Data\SpConfig\_SpNameOriginal.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="www\build\styles\Images\home\aplly.png" />
+    <Content Include="www\build\styles\Images\home\box.svg" />
+    <Content Include="www\build\styles\Images\home\main-banners\banner-pc-1.jpg" />
+    <Content Include="www\build\styles\Images\home\titlebg.png" />
+    <Content Include="www\build\styles\Images\home\what-new.png" />
+    <Content Include="www\build\styles\Images\icons\account-pin-box-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\achment.svg" />
+    <Content Include="www\build\styles\Images\icons\contacts-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\lock-password-line.svg" />
+    <Content Include="www\build\styles\Images\icons\login-box-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\star-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\user-line.svg" />
+    <Content Include="www\build\styles\Images\icons\u_pen.svg" />
+    <Content Include="www\build\styles\Images\themes\yb.svg" />
     <Content Include="www\source\js\lib\swiper.min.js" />
     <Content Include="www\source\styles\scss\vendors\swiper.css" />
     <None Include="Configurations\AppSetting\AppSetting.tt">
@@ -1163,6 +1177,8 @@
     <Content Include="www\build\styles\fonts\materialdesignicons\materialdesignicons-webfont.ttf" />
     <Content Include="www\build\styles\fonts\materialdesignicons\materialdesignicons-webfont.woff" />
     <Content Include="www\build\styles\fonts\materialdesignicons\materialdesignicons-webfont.woff2" />
+    <Content Include="www\source\styles\scss\components\_block.scss" />
+    <Content Include="www\build\styles\Images\home\main-banners\banner-pc-1.webp" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

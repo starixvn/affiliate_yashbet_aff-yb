@@ -72,7 +72,9 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         public string MemberSiteProxyUrl => GetValue("MemberSiteProxyUrl");
 
-        public string MemberSiteApiAuthenticationKey => GetValue("MemberSiteApiAuthenticationKey");
+        public string MemberSiteApiUsername => GetValue("MemberSiteApiUsername");
+
+        public string MemberSiteApiPassword => GetValue("MemberSiteApiPassword");
 
         public bool IsUseMemberSiteProxy => Convert.ToBoolean(GetValue("IsUseProxyToGetMemberSiteApi"));
 
