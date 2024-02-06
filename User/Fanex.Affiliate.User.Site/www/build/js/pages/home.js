@@ -33,7 +33,7 @@ var Home = (function ($) {
             _me.initEvent();
         },
         initEvent: function () {
-      
+            
         }
     };
 

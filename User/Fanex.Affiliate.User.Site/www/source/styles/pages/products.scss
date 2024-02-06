@@ -1,70 +1,100 @@
-﻿.signup-block {
-    margin: 24px auto;
-
-    .btn-link {
-        height: 40px;
-        line-height: 40px;
-        margin-right: 0;
-
-        &:hover {
-            background-color: #c11b00;
-        }
-    }
-
-    @media screen and (max-width: 374px) {
-        .btn-link {
-            font-size: 11px;
-        }
-    }
+﻿@import '../scss/abstracts/mixins';
+.signup-block {
+    text-align : center;
+    margin : 32px 0;
 }
 
 .adv img {
     max-width: 100%;
 }
 
+
+
 .table {
-    border: 0;
+    border: 1px solid #D1B37D;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &.table-game {
+        @include Mobile {
+            border: none;
+        }
+    }
 
     .game-list {
-        tr {
-            background: transparent;
+        font-size: 16px;
+        border: none;
+        margin-top: 0;
 
-            @media screen and (max-width: 768px) {
+        td {
+            border-top: none;
+            border-right: 1px solid #D1B37D;
+            border-bottom: 1px solid #D1B37D;
+            border-left: none;
+
+            @include Mobile {
+                border-bottom: none;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        tr {
+            background: #F5F5F5;
+
+            @include Mobile {
                 display: flex;
                 flex-wrap: wrap;
                 padding: 0;
 
                 td {
                     width: 100%;
+
+                    &:first-child {
+                        padding: 0;
+
+                        .img-item {
+                            margin-bottom: 16px;
+                        }
+                    }
                 }
             }
 
             .game-name {
                 width: 200px;
-                background: #BDCFEC;
+                background: #E5C589;
                 font-weight: 700;
+                font-size: 20px;
 
                 @media (max-width: 1023px) {
-                    width: 100px;
+                    width: 150px;
+                    font-size: 16px;
                 }
 
                 @media (max-width: 768px) {
                     width: 100%;
                     text-align: left;
-                    border-top: 0;
-                    border-bottom: 0;
+                    border: none;
+                    background: none;
                 }
+            }
+
+            &:nth-child(even) {
+                background: #FFF1DE !important;
             }
 
             &:first-child td:first-child {
                 @media (max-width: 768px) {
-                    border-top: 1px solid #8A9CB9;
-                    border-bottom: 0;
+                    border: none;
                 }
             }
 
-            td {
-                border: 1px solid #8A9CB9;
+            &:last-child {
+                td {
+                    border-bottom: none;
+                }
             }
         }
     }
@@ -74,20 +104,7 @@
     }
 }
 
-.text-block-bottom, .signup-block {
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-        padding: 0 40px;
-    }
 
-    @media only screen and (max-width: 767px) {
-        padding: 0 10px;
-    }
-}
-
-.text-block-bottom, .signup-block {
-    max-width: 90rem;
-    width: 100%;
-}
 
 .text-block-bottom {
     margin: 24px auto 0;
@@ -120,7 +137,7 @@
 
         @media (max-width: 768px) {
             max-width: 688px;
-            overflow: scroll;
+            overflow-x: scroll;
         }
 
         tbody tr > :first-child, thead tr:first-child th:first-child {
@@ -170,11 +187,19 @@
             tr:nth-child(odd) td:first-child {
                 background-color: #FFFFFF;
             }
+            tr{
+                td{
+                   &:first-child{
+                       border-left : none;
+                   }
+                }
+            }
         }
 
         th {
+            border-top : none;
             border-right: none;
-            border-bottom: none;
+            background : #333;
         }
     }
 }
@@ -197,6 +222,17 @@
     z-index: 1;
     margin: auto;
     overflow: auto;
+    border-radius: 8px;
+
+    &::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background: #888;
+    }
 }
 
 .table-scroll table {
@@ -205,7 +241,6 @@
     margin: auto;
     border-collapse: separate;
     border-spacing: 0;
-    border-right: 1px solid #C7C7C7;
 }
 
 .table-wrap {
@@ -217,4 +252,23 @@
     vertical-align: top;
     border-top: none !important;
     border-right: none !important;
+}
+
+.info-question {
+    p {
+        margin-bottom: 12px;
+    }
+}
+
+.body-result {
+    @include Mobile {
+        padding-left: 8px !important;
+    }
+}
+
+.name-game-mobile, .body-game-mobile {
+    @include Mobile {
+        padding: 0 16px !important;
+        margin-bottom : 20px;
+    }
 }

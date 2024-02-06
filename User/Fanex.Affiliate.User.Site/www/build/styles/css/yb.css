@@ -218,14 +218,14 @@ header {
 
 .user-login .text-field {
   background: #fff;
-  border: 1px solid #D2D2D2; }
+  border: 1px solid #A7A7A7; }
   .user-login .text-field::-webkit-input-placeholder {
     color: #8D8D8D; }
   .user-login .text-field:-ms-input-placeholder {
     color: #8D8D8D; }
   .user-login .text-field:focus {
     background: #fff;
-    border: 1px solid #D2D2D2; }
+    border: 1px solid #A7A7A7; }
 
 .hot-news {
   background: #000000; }
@@ -713,7 +713,7 @@ select.form-control:focus {
     height: auto; } }
 
 @media only screen and (max-width: 1199px) {
-  .news, .table-casino {
+  .news {
     padding-left: 62px !important;
     padding-right: 62px !important; }
   /*    .main .content {

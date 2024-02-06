@@ -26,12 +26,15 @@
     </div>
     <div class="left-panel" id="left-panel-menu">
         <div class="menu">
+            <div class="heading-left-panel">
+                Contents
+            </div>
             <ul class="nav navbar-nav" id="left-panel-nav">
                 @RenderLeftPanelItems(menuList)
             </ul>
         </div>
     </div>
-    <div class="modal fade leftmenu-dialog" tabindex="-1" role="dialog" id="leftmenu">
+    @*<div class="modal fade leftmenu-dialog" tabindex="-1" role="dialog" id="leftmenu">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-main-content">
@@ -45,9 +48,9 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal-->
+            </div>
+        </div>
+    </div>*@
 }
 
 @helper RenderHotNews()

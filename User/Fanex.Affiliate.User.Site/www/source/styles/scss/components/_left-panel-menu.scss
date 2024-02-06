@@ -1,15 +1,32 @@
 ﻿.left-panel {
-    width: 32.6rem;
+    width: 34.2rem;
     position: sticky;
     max-height: 65rem;
     height: 100%;
     top: 15px;
-    margin-top: 4rem;
     display: block;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 11px 7px rgba(201, 201, 201, 0.25);
-    border-radius: 8px;
+    background: #FFF1DE;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
+    border: 1px solid #D1B37D;
+    border-radius: 10px;
     overflow: auto;
+
+/*    &::-webkit-scrollbar {
+        width: 10px;
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        border-radius: 8px;
+    }*/
 
     @include TableAndMobile {
         display: none;
@@ -31,69 +48,70 @@
     }
 
     .menu {
+        .heading-left-panel {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            padding: 13px 16px;
+            background: linear-gradient(90deg, #000 0%, #3E3E3E 62.94%);
+            color: #fff;
+            border-bottom: 4px solid #AE8F56;
+        }
+
         .navbar-nav {
             margin: 1.2rem;
+            width: 100%;
 
             li {
                 width: 100%;
                 position: relative;
 
                 a {
-                    font-weight: 600;
                     font-size: 1.6rem;
                     line-height: 2.4rem;
-                    color: #616161;
+                    color: #333;
                     text-transform: inherit;
-                    padding: .4rem .8rem;
-                    margin-left: .8rem;
-                    border-bottom: 1px solid #F8F9FA;
-                    border-radius: 4px;
+                    padding: .9rem 1.6rem;
+                    font-weight: 400;
 
                     &.active {
-                        background: #FFF3ED;
+                        background: linear-gradient(90deg, #D1B37D 1.78%, #FFEBD0 100%);
                         border: none;
-                        color: #EA5500;
                         margin-top: .8rem;
-                        margin-bottom: .8rem;
                         font-weight: 700;
 
                         &:after {
                             content: "";
                             display: block;
-                            width: 4px;
+                            width: 5px;
                             height: 100%;
-                            background: #EA5500;
+                            background: #F42A41;
                             position: absolute;
                             top: 0;
-                            left: -10px;
-                            border-radius: 5px;
+                            right: 0;
                         }
                     }
 
                     &:hover {
-                        background-color: #EDF4FF;
-                        color: #001942;
+                        background: linear-gradient(90deg, #D1B37D 1.78%, #FFEBD0 100%);
+                        font-weight: 700;
                     }
                 }
 
                 .sub-menu {
-                    list-style: none;
-                    padding-left: 0;
-                    margin: .8rem 0 .8rem .8rem;
+                    list-style: initial;
+                    padding-left: 50px;
 
                     li {
-                        margin-bottom: .8rem;
-
                         a {
-                            background: #FAFAFA;
-                            border-radius: 4px;
                             display: block;
                             text-decoration: none;
-                            border: 1px solid #FAFAFA;
+                            padding: .9rem 0 1.6rem;
 
                             &.active {
-                                background: #FFF3ED;
-                                color: #EA5500;
+                                font-weight: 700;
+                                background: none;
 
                                 &:after {
                                     display: none;
@@ -101,7 +119,7 @@
                             }
 
                             &:hover {
-                                background-color: #EDF4FF;
+                                background: none;
                             }
                         }
 
@@ -144,7 +162,7 @@
         top: 16.3rem;
         right: auto;
         left: 6.2rem;
-        z-index: 1;
+        z-index: 9;
         cursor: pointer;
         transition: 0.2s;
 
@@ -190,6 +208,10 @@
             max-height: 29rem;
         }
     }
+
+    .navbar-nav{
+        padding-top : 0;
+    }
 }
 
 .overflow-left-panel {
@@ -206,11 +228,6 @@
     }
 }
 
-@include Mobile {
-    .main-content-left-panel {
-        padding-top: 20px;
-    }
-}
 
 .left-panel-popup {
     .mobile-left-panel {

@@ -1,14 +1,13 @@
-﻿"use strict";
-
 var Product = (function ($) {
-    function initSlider() {
-        //var $productBanner = $('#productBanner');
-        //$productBanner.carousel();
-    }
-
     var _me = {
-        initialize: function initialize() {
-            initSlider();
+        initialize: function () {
+            _me.initEvent();
+        },
+        initEvent: function () {
+            $('.info-question .button-toggle').addClass("open");
+            $('.button-toggle').click(function () {
+                $(this).toggleClass('open').parent().next().slideToggle(300);
+            });
         }
     };
 
@@ -16,4 +15,3 @@ var Product = (function ($) {
 })(jQuery);
 
 Product.initialize();
-

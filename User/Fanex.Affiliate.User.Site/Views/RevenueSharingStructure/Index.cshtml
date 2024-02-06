@@ -8,20 +8,49 @@
 @{
     var htmlString = Html.RenderPartialByLanguage("~/Views/RevenueSharingStructure/_Content", Model.CurrentLanguage, Model).ToHtmlString();
 }
+@section styles{
+    <link href="@Url.RenderLink("~/www/build/styles/css/sharing-structure.css")" rel="stylesheet" />
+}
 
 @section scripts{
     @Html.InlineScripts("~/www/build/js/left-menu-panel.js")
+    @Html.InlineScripts("~/www/build/js/pages/sharing-structure.js")
 }
 
-<div class="main-content">
-    @RazorHelper.RenderLeftPanel(Menu.RevenueSharingMenuList)
-    <div class="content">
-        <div class="page-title">
-            <span class="text">@Lang.RevenueSharingStructure</span>
+<div class="page-container">
+    <div class="main-content">
+        @RazorHelper.RenderLeftPanel(Menu.RevenueSharingMenuList)
+        <div class="content">
+            <div class="page-heading">
+                <span class="text">@Lang.RevenueSharingStructure</span>
+            </div>
+
+            @Html.Raw(htmlString)
+
+            @RazorHelper.RenderMovingTopButton()
         </div>
-
-        @Html.Raw(htmlString)
-
-        @RazorHelper.RenderMovingTopButton()
     </div>
 </div>
+
+
+<div class="modal fade leftmenu-dialog" tabindex="-1" role="dialog" id="leftmenu">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-main-content">
+                <div class="modal-body">
+                    <div class="left-panel">
+                        <div class="menu">
+                            <ul class="nav navbar-nav" id="left-panel-nav">
+                                <li>
+                                    <a class="parent-menu menu-item left-menu-item active" href="javascript:;">
+                                        saddasdasadsasd
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

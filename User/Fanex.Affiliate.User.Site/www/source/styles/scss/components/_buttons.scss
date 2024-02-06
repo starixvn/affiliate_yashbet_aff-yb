@@ -129,4 +129,20 @@
         align-items: center;
         justify-content: center;
     }
-} 
+}
+
+.custom-button {
+    background: #F42A41;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    display :inline-block;
+    color : #fff;
+    text-decoration : none;
+    padding : 8px 20px;
+    border-radius : 100px;
+    &:hover{
+        text-decoration : none;
+        color : #fff;
+    }
+}

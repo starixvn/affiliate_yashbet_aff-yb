@@ -19,7 +19,7 @@
             _me.initEvent();
         },
         initEvent: function () {
-      
+            
         }
     };
 

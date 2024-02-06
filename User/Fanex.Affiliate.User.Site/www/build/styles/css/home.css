@@ -1,35 +1,4 @@
-﻿.block {
-  padding: 50px 0; }
-  @media (max-width: 767px) {
-    .block {
-      padding: 24px 0; } }
-
-.title-block {
-  font-weight: 800;
-  line-height: normal;
-  text-transform: uppercase;
-  max-width: 23vw;
-  position: relative;
-  margin-top: 0;
-  overflow: hidden; }
-  @media screen and (max-width: 1024px) {
-    .title-block {
-      max-width: 312px;
-      margin: 0 auto; } }
-  .title-block span {
-    position: absolute;
-    top: 44%;
-    left: 10%;
-    display: block;
-    width: 100%;
-    transform: translate(0, -50%);
-    font-size: 1.4vw; }
-    @media screen and (max-width: 1024px) {
-      .title-block span {
-        font-size: 20px;
-        left: 8%; } }
-
-/**
+﻿/**
  * Swiper 4.3.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
