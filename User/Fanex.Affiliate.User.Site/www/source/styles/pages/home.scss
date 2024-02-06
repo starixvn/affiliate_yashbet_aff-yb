@@ -17,7 +17,7 @@
         margin-top: 12px;
 
         @include Mobile {
-            font-size: 14px;
+            font-size: 16px;
         }
     }
 }
@@ -30,7 +30,7 @@
 
         @include Mobile500 {
             flex-direction: column;
-            gap : 0;
+            gap: 0;
         }
 
         .column {
@@ -50,34 +50,45 @@
 
     .group-contact {
         max-width: 621px;
+    }
 
-        .title-block {
-            color: #D9D9D9;
-            margin-bottom: 12px;
+    .title-block {
+        color: #D9D9D9;
+        margin-bottom: 12px;
+
+        &.show-mobile {
+            margin-bottom: 28px;
         }
+    }
 
-        .slogan-block {
-            font-size: 16px;
-            font-style: italic;
-            font-weight: 700;
-            line-height: 30px;
-            margin-bottom: 12px;
+    .slogan-block {
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+
+    .heading-block {
+        font-size: 24px;
+        font-weight: 800;
+        line-height: normal;
+        text-transform: uppercase;
+        color: #AE8F56;
+        margin-bottom: 12px;
+        @include Mobile{
+            font-size : 20px;
+            font-weight : 700;
         }
+    }
 
-        .heading-block {
-            font-size: 24px;
-            font-weight: 800;
-            line-height: normal;
-            text-transform: uppercase;
-            color: #AE8F56;
-            margin-bottom: 12px;
-        }
-
-        .txt-block {
-            font-size: 18px;
-            font-weight: 400;
-            line-height: normal;
-            margin-bottom: 32px;
+    .txt-block {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 32px;
+        @include Mobile{
+            font-size : 16px;
         }
     }
 
@@ -95,7 +106,7 @@
     padding-bottom: 100px;
 
     @include Mobile500 {
-        padding-bottom: 50px;
+        padding : 30px 0;
     }
 
     .title-block {
@@ -133,6 +144,15 @@
             border: 1px solid #D1B37D;
             background: linear-gradient(90deg, #D1B37D 1.78%, #FFEBD0 100%);
             box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
+
+            .new-bage {
+                img {
+                    animation-name: spin;
+                    animation-duration: 2000ms;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+            }
         }
 
         &-header {
@@ -169,5 +189,17 @@
                 margin-right: 4px;
             }
         }
+    }
+}
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

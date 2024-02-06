@@ -11,10 +11,12 @@
     text-transform: uppercase;
     max-width: 23vw;
     position: relative;
-    margin-top : 0;
-    overflow : hidden;
+    margin-top: 0;
+    overflow: hidden;
+
     @include TableAndMobile {
-        max-width: 453px;
+        max-width: 312px;
+        margin : 0 auto;
     }
 
     span {
@@ -28,6 +30,7 @@
 
         @include TableAndMobile {
             font-size: 20px;
+            left: 8%;
         }
     }
 }

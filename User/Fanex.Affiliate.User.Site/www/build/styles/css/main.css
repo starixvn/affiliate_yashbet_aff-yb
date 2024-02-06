@@ -395,6 +395,9 @@ input[type="checkbox"], input[type="radio"] {
   justify-content: space-between;
   margin: 0 auto;
   width: 100%; }
+  @media (max-width: 767px) {
+    .header-top {
+      display: block; } }
   .header-top .logo {
     display: inline-block;
     margin-top: 8px; }
@@ -404,13 +407,16 @@ input[type="checkbox"], input[type="radio"] {
         margin: 0; } }
     .header-top .logo a {
       outline: none; }
+    @media only screen and (max-width: 767px) {
+      .header-top .logo {
+        display: block; } }
   .header-top .logo-image {
     display: inline-block;
     width: 137px; }
     @media only screen and (max-width: 767px) {
       .header-top .logo-image {
-        width: 110px;
-        padding-bottom: 4px; } }
+        width: 150px;
+        margin: 20px 0; } }
   .header-top .btn {
     margin-right: 0; }
 
@@ -434,6 +440,10 @@ input[type="checkbox"], input[type="radio"] {
       justify-content: flex-start; } }
   .navbar ul li {
     line-height: 30px; }
+    @media (max-width: 767px) {
+      .navbar ul li {
+        text-align: center;
+        margin-bottom: 12px; } }
     .navbar ul li a {
       display: block;
       font-size: 13px;
@@ -449,19 +459,27 @@ input[type="checkbox"], input[type="radio"] {
     padding-top: 0;
     padding-bottom: 0;
     float: left; }
-    @media only screen and (max-width: 375px) {
+    @media (max-width: 767px) {
       .navbar .navbar-toggle {
-        margin-top: 6px;
-        margin-bottom: 6px; } }
+        margin: 0;
+        padding: 0; } }
     .navbar .navbar-toggle .icon-bar {
-      background: #fff;
-      width: 20px; }
+      background: #333;
+      width: 28px;
+      margin-top: 5px; }
   .navbar.navbar-default .navbar-toggle {
     border-color: transparent; }
     .navbar.navbar-default .navbar-toggle:hover, .navbar.navbar-default .navbar-toggle:focus {
       background: transparent; }
   .navbar.navbar-default .navbar-collapse {
     border-color: transparent; }
+
+@media (max-width: 767px) {
+  .navbar-header {
+    position: absolute;
+    top: -45px;
+    left: 16px;
+    z-index: 999999; } }
 
 .menu {
   padding-left: 0;
@@ -483,6 +501,9 @@ input[type="checkbox"], input[type="radio"] {
       color: #fff; }
     .menu .menu-item.active {
       border-bottom: 3px solid #F42A41; }
+      @media (max-width: 767px) {
+        .menu .menu-item.active {
+          border: none; } }
 
 .user-signup {
   display: flex;
@@ -541,7 +562,6 @@ input[type="checkbox"], input[type="radio"] {
     min-width: 241px;
     font-size: 13px;
     top: 36px;
-    background: #FFFFFF;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow: hidden; }
@@ -911,6 +931,9 @@ body {
 .hot-news {
   position: relative;
   padding: 8px 0; }
+  @media (max-width: 767px) {
+    .hot-news {
+      padding: 4px 0; } }
   .hot-news .inner {
     max-width: 1224px;
     display: flex;
@@ -969,7 +992,6 @@ body {
     color: #fff; }
   .adv-contact .text-1 {
     margin-top: 10px;
-    font-size: 23px;
     font-style: italic;
     font-weight: 700;
     font-size: 20px;
@@ -1650,6 +1672,10 @@ ul.dash-style {
     text-decoration: none;
     color: #fff; }
 
+@media (max-width: 767px) {
+  .view-more {
+    text-align: center; } }
+
 @media (min-width: 992px) {
   #mobileLogin {
     display: none; } }
@@ -2039,7 +2065,6 @@ input[type="radio"], input[type="checkbox"] {
   max-height: 65rem;
   height: 100%;
   top: 15px;
-  margin-left: -6.4rem;
   margin-top: 4rem;
   display: block;
   background: #FFFFFF;

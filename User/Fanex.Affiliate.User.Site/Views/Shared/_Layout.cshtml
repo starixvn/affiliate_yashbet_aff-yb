@@ -60,43 +60,44 @@
             <div class="login">
                 @{Html.RenderAction("AuthenticationForm", "Auth", new { v = DateTime.UtcNow.Ticks });}
                 <div class="user-signup">
-                    <div class="language-login">
-                        <div class="language-container desktop @sessionService.CurrentLanguage">
-                            <div class="language-selection">
-                                <button class="select-language" id="selectedLanguage">
-                                    <span><i class="flag flag-@sessionService.CurrentLanguage"></i>@(currentLanguage)</span>
-                                    <i class="caret"></i>
-                                </button>
+                    <div class="language-container desktop @sessionService.CurrentLanguage">
+                        <div class="language-selection">
+                            <button class="select-language" id="selectedLanguage">
+                                <span>
+                                    <i class="flag flag-@sessionService.CurrentLanguage"></i>
+                                    <span class="name-lang">@(currentLanguage)</span>
+                                </span>
+                                <i class="caret"></i>
+                            </button>
 
-                                <div class="language-list-wrapper" id="languageList">
-                                    <ul class="list-unstyled language-list">
-                                        @foreach (var language in languageList)
-                                        {
-                                            <li>
-                                                <a href="javascript:;" class="language-item" data-option="@language.ShortedCode"><i class="flag flag-@language.Code"></i>@language.NativeName</a>
-                                            </li>
-                                        }
-                                    </ul>
-                                </div>
+                            <div class="language-list-wrapper" id="languageList">
+                                <ul class="list-unstyled language-list">
+                                    @foreach (var language in languageList)
+                                    {
+                                        <li>
+                                            <a href="javascript:;" class="language-item" data-option="@language.ShortedCode"><i class="flag flag-@language.Code"></i>@language.NativeName</a>
+                                        </li>
+                                    }
+                                </ul>
                             </div>
                         </div>
-                        @if (!isLogin)
-                        {
-                            <a class="btn btn-login-mobile" id="mobileLogin">
-                                <span>@Lang.Login</span>
-                            </a>
-                            <button class="btn btn-login" id="btnLogin" type="button">@Lang.Login</button>
-                        }
-                        else
-                        {
-                            <div class="login-after user-login">
-                                <a href="@Url.Content("~/UserPanel/Main/#AccountOverview")" class="btn btn-signup"><span class="icon glyphicon glyphicon-user"></span>@Lang.MyAccount - @sessionService.UserSession.UserName</a>
-                                <div class="btn-logout">
-                                    <a href="@Url.Content("~/Auth/SignOut/")" class="btn btn-login">@Lang.Logout</a>
-                                </div>
-                            </div>
-                        }
                     </div>
+                    @if (!isLogin)
+                    {
+                        <a class="btn btn-login-mobile" id="mobileLogin">
+                            <span>@Lang.Login</span>
+                        </a>
+                        <button class="btn btn-login" id="btnLogin" type="button">@Lang.Login</button>
+                    }
+                    else
+                    {
+                        <div class="login-after user-login">
+                            <a href="@Url.Content("~/UserPanel/Main/#AccountOverview")" class="btn btn-signup"><span class="icon glyphicon glyphicon-user"></span>@Lang.MyAccount - @sessionService.UserSession.UserName</a>
+                            <div class="btn-logout">
+                                <a href="@Url.Content("~/Auth/SignOut/")" class="btn btn-login">@Lang.Logout</a>
+                            </div>
+                        </div>
+                    }
                     @if (!isLogin)
                     {
                         <div class="sign-up">

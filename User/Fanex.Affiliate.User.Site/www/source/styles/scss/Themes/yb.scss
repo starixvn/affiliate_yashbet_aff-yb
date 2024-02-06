@@ -20,10 +20,25 @@ body {
     }
 }
 
-/*body.menu-open {
-    overflow: hidden;
-    background-color: #001942;
+.show-pc {
+    display: block;
 
+    @include Mobile {
+        display: none;
+    }
+}
+
+.show-mobile {
+    display: none;
+
+    @include Mobile {
+        display: block;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+/*
     .header-top {
         filter: blur(2px);
         pointer-events: none;
@@ -39,8 +54,8 @@ body {
         height: 100%;
         top: 0;
         left: 0;
-    }
-}*/
+    }*/
+}
 
 // Header
 header {
@@ -284,11 +299,6 @@ header {
 
 .navbar {
     background: #fff;
-
-    @include Mobile {
-        background: linear-gradient(87deg, #A7804D 2.45%, #F6E3BD 51.19%, #A7804D 98.02%);
-    }
-
     ul {
         li:hover, &:focus, &:visited {
             a {
@@ -712,6 +722,13 @@ select.form-control {
     &:hover {
         color: #fff;
     }
+
+    @include Mobile {
+        padding: 6px 8px 6px 28px;
+        height: auto;
+        line-height: normal;
+        min-width: 120px;
+    }
 }
 
 .btn-login, .btn-login-mobile {
@@ -730,6 +747,15 @@ select.form-control {
 
     &:hover {
         color: #AE8F56;
+    }
+
+    @include Mobile {
+        padding: 6px 8px 6px 28px !important;
+        height: auto;
+        line-height: normal;
+        margin-right: 12px !important;
+        min-width: 120px;
+        background-position: 30px;
     }
 }
 
@@ -1134,6 +1160,9 @@ select.form-control {
 
 .navbar-nav {
     margin: 0 !important;
+    @include Mobile{
+        padding-top : 120px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1163,12 +1192,12 @@ select.form-control {
 
     .navbar-collapse {
         width: 100%;
-        /*height: calc(100vh - 114px);*/
-        background: #001942;
+        background: #fff;
         border: 0;
-        position: absolute;
-        z-index: 99999999;
-        top: 28px;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        height : 100%
     }
 
     .navbar .layout-page-container {
@@ -1196,35 +1225,56 @@ select.form-control {
             border-bottom: 0;
         }
     }
-
-    .page-content .header-top {
-        padding: 11px 10px 6px 10px;
-    }
-
     .header-top {
         .user-signup {
-            flex-direction: column-reverse;
-
+            justify-content :center;
+            margin-bottom : 16px;
+            position : relative;
             .language-container {
-                margin-right: 5px;
-
+                margin-right: 0;
+                height: auto;
+                position : absolute;
+                top : 0;
+                right : 0;
+                .language-list-wrapper{
+                    right : 0;
+                }
                 .select-language {
                     font-weight: 400;
+                    padding: 0;
+                    width: 32px;
+                    height: 32px;
+
+                    .name-lang {
+                        @include Mobile {
+                            display: none;
+                        }
+                    }
+
                     .caret {
                         top: 3px;
-                        right : -3px;
+                        right: -3px;
+
+                        @include Mobile {
+                            display: none;
+                        }
                     }
+
+                    .flag {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+
+                .language-selection{
+                    height : auto;
                 }
             }
         }
 
         .sign-up {
             border: 0;
-            text-align : right;
-        }
-
-        .language-login {
-            padding-top: 9px
+            text-align: right;
         }
 
         .logo, .login {

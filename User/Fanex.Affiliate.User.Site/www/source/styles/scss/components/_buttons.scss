@@ -105,6 +105,12 @@
     }
 }
 
+.view-more{
+    @include Mobile{
+        text-align : center;
+    }
+}
+
 
 
 

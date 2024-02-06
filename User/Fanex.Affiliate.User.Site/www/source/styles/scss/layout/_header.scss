@@ -113,6 +113,9 @@
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
+    @include Mobile{
+        display : block;
+    }
 
     .logo {
         display: inline-block;
@@ -126,6 +129,10 @@
         a {
             outline: none;
         }
+
+        @media only screen and (max-width: 767px) {
+            display : block;
+        }
     }
 
     .logo-image {
@@ -133,8 +140,8 @@
         width: 137px;
 
         @media only screen and (max-width: 767px) {
-            width: 110px;
-            padding-bottom: 4px;
+            width: 150px;
+            margin : 20px 0;
         }
     }
 
@@ -164,7 +171,10 @@
     ul {
         li {
             line-height: 30px;
-
+            @include Mobile{
+                text-align : center;
+                margin-bottom : 12px;
+            }
             a {
                 display: block;
                 font-size: 13px;
@@ -191,14 +201,15 @@
         padding-bottom: 0;
         float: left;
 
-        @media only screen and (max-width: 375px) {
-            margin-top: 6px;
-            margin-bottom: 6px;
+        @include Mobile {
+            margin: 0;
+            padding: 0;
         }
 
         .icon-bar {
-            background: #fff;
-            width: 20px;
+            background: #333;
+            width: 28px;
+            margin-top : 5px;
         }
     }
 
@@ -212,6 +223,14 @@
 
     &.navbar-default .navbar-collapse {
         border-color: transparent;
+    }
+}
+.navbar-header {
+    @include Mobile {
+        position: absolute;
+        top: -45px;
+        left: 16px;
+        z-index: 999999;
     }
 }
 
@@ -241,6 +260,9 @@
 
         &.active {
             border-bottom: 3px solid #F42A41;
+            @include Mobile{
+                border : none;
+            }
         }
     }
 }
@@ -326,7 +348,6 @@
         min-width: 241px;
         font-size: 13px;
         top: 36px;
-        background: #FFFFFF;
         box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10);
         border-radius: 12px;
         overflow: hidden;

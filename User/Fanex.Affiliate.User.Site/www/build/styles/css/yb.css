@@ -10,10 +10,21 @@ body {
   body a:focus {
     outline: none !important; }
 
-/*body.menu-open {
-    overflow: hidden;
-    background-color: #001942;
+.show-pc {
+  display: block; }
+  @media (max-width: 767px) {
+    .show-pc {
+      display: none; } }
 
+.show-mobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .show-mobile {
+      display: block; } }
+
+body.menu-open {
+  overflow: hidden;
+  /*
     .header-top {
         filter: blur(2px);
         pointer-events: none;
@@ -29,8 +40,8 @@ body {
         height: 100%;
         top: 0;
         left: 0;
-    }
-}*/
+    }*/ }
+
 header {
   background-color: #fff; }
 
@@ -196,9 +207,6 @@ header {
 
 .navbar {
   background: #fff; }
-  @media (max-width: 767px) {
-    .navbar {
-      background: linear-gradient(87deg, #A7804D 2.45%, #F6E3BD 51.19%, #A7804D 98.02%); } }
   .navbar ul li:hover a, .navbar ul:focus a, .navbar ul:visited a {
     color: #F42A41; }
   .navbar .nav > li > a:focus {
@@ -478,6 +486,12 @@ select.form-control:focus {
   background-position: 8px; }
   .btn-signup:hover {
     color: #fff; }
+  @media (max-width: 767px) {
+    .btn-signup {
+      padding: 6px 8px 6px 28px;
+      height: auto;
+      line-height: normal;
+      min-width: 120px; } }
 
 .btn-login, .btn-link, .btn-login-mobile {
   color: #ae8f56;
@@ -494,6 +508,14 @@ select.form-control:focus {
   line-height: 1.4; }
   .btn-login:hover, .btn-link:hover, .btn-login-mobile:hover {
     color: #AE8F56; }
+  @media (max-width: 767px) {
+    .btn-login, .btn-link, .btn-login-mobile {
+      padding: 6px 8px 6px 28px !important;
+      height: auto;
+      line-height: normal;
+      margin-right: 12px !important;
+      min-width: 120px;
+      background-position: 30px; } }
 
 .btn-link {
   background: none; }
@@ -741,6 +763,9 @@ select.form-control:focus {
 
 .navbar-nav {
   margin: 0 !important; }
+  @media (max-width: 767px) {
+    .navbar-nav {
+      padding-top: 120px; } }
 
 @media only screen and (max-width: 767px) {
   .mobile-left-panel {
@@ -760,12 +785,12 @@ select.form-control:focus {
     display: none; }
   .navbar-collapse {
     width: 100%;
-    /*height: calc(100vh - 114px);*/
-    background: #001942;
+    background: #fff;
     border: 0;
-    position: absolute;
-    z-index: 99999999;
-    top: 28px; }
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    height: 100%; }
   .navbar .layout-page-container {
     margin-left: 0;
     padding: 0;
@@ -782,22 +807,44 @@ select.form-control:focus {
         border-bottom: 1px solid #FF5D00; }
     .navbar .layout-page-container ul li:last-child .menu-item {
       border-bottom: 0; }
-  .page-content .header-top {
-    padding: 11px 10px 6px 10px; }
   .header-top .user-signup {
-    flex-direction: column-reverse; }
+    justify-content: center;
+    margin-bottom: 16px;
+    position: relative; }
     .header-top .user-signup .language-container {
-      margin-right: 5px; }
+      margin-right: 0;
+      height: auto;
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .header-top .user-signup .language-container .language-list-wrapper {
+        right: 0; }
       .header-top .user-signup .language-container .select-language {
-        font-weight: 400; }
+        font-weight: 400;
+        padding: 0;
+        width: 32px;
+        height: 32px; } }
+      @media only screen and (max-width: 767px) and (max-width: 767px) {
+        .header-top .user-signup .language-container .select-language .name-lang {
+          display: none; } }
+
+@media only screen and (max-width: 767px) {
         .header-top .user-signup .language-container .select-language .caret {
           top: 3px;
-          right: -3px; }
+          right: -3px; } }
+        @media only screen and (max-width: 767px) and (max-width: 767px) {
+          .header-top .user-signup .language-container .select-language .caret {
+            display: none; } }
+
+@media only screen and (max-width: 767px) {
+        .header-top .user-signup .language-container .select-language .flag {
+          width: 32px;
+          height: 32px; }
+      .header-top .user-signup .language-container .language-selection {
+        height: auto; }
   .header-top .sign-up {
     border: 0;
     text-align: right; }
-  .header-top .language-login {
-    padding-top: 9px; }
   .header-top .logo, .header-top .login {
     padding: 0; }
   .news {
