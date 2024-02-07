@@ -9,19 +9,26 @@
     var htmlString = Html.RenderPartialByLanguage($"~/Views/TermAndCondition/_Content", Model.CurrentLanguage, Model.SiteFriendlyName);
 }
 
-@section scripts{
-    @Html.InlineScripts("~/www/build/js/left-menu-panel.js")
+@section styles{
+    @Html.InlineStyles("~/www/build/styles/css/products.css")
 }
 
-<div class="main-content main-content-left-panel">
-    @RazorHelper.RenderLeftPanel(Menu.TermAndConditionMenuList)
-    <div class="content">
-        <div class="page-title">
-            <span class="text">@Lang.TermAndCondition</span>
+@section scripts{
+    @Html.InlineScripts("~/www/build/js/left-menu-panel.js")
+    @Html.InlineScripts("~/www/build/js/pages/term-and-codition.js")
+}
+
+<div class="page-container">
+    <div class="main-content main-content-left-panel">
+        @RazorHelper.RenderLeftPanel(Menu.TermAndConditionMenuList)
+        <div class="content">
+            <div class="page-heading">
+                <span class="text">@Lang.TermAndCondition</span>
+            </div>
+
+            @Html.Raw(htmlString)
+
+            @RazorHelper.RenderMovingTopButton()
         </div>
-
-        @Html.Raw(htmlString)
-
-        @RazorHelper.RenderMovingTopButton()
     </div>
 </div>

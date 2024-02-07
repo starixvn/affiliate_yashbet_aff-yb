@@ -53,8 +53,6 @@
 
     .title-block {
         color: #D9D9D9;
-        margin-bottom: 12px;
-
         &.show-mobile {
             margin-bottom: 28px;
         }
@@ -109,12 +107,6 @@
     }
 
     .title-block {
-        margin: 0 auto 52px;
-
-        @include Mobile500 {
-            margin: 0 auto 30px;
-        }
-
         span {
             color: #fff;
         }

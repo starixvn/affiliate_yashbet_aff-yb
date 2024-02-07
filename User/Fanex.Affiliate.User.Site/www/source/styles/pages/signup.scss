@@ -1,34 +1,31 @@
-﻿.chk-agree {
-    padding-left: 15px;
+﻿@import '../scss/abstracts/mixins';
+
+.top-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom : 32px;
+}
+.red-color {
+    color: #F42A41;
 }
 
-.help-block {
-    margin-top: 0;
+.info-question .title {
+    padding: 5px 0 5px 8px;
 }
 
-#websiteInfo {
-    .btn-submit {
-        font-size: 10px;
-        height: 20px;
-        width: 20px;
-        padding: 5px;
-        margin-top: 3px;
 
-        .glyphicon {
-            top: -1px;
-            left: -1px;
+
+.group-button {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 52px;
+
+    .custom-button {
+        padding: 8px 20px 8px 45px;
+
+        &-outline {
+            background-image: url('../../../build/styles/Images/icons/reset.svg');
         }
-    }
-}
-
-.error-content {
-    .img-support {
-        max-width: 40rem;
-        margin: auto;
-        margin-bottom: 8rem;
-    }
-
-    .error-text{
-        font-size: 1.5rem;
     }
 }

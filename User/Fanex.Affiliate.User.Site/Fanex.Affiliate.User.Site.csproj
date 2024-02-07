@@ -389,6 +389,10 @@
     <Content Include="www\build\js\pages\sharing-structure.min.js">
       <DependentUpon>sharing-structure.js</DependentUpon>
     </Content>
+    <Content Include="www\build\js\pages\term-and-codition.js" />
+    <Content Include="www\build\js\pages\term-and-codition.min.js">
+      <DependentUpon>term-and-codition.js</DependentUpon>
+    </Content>
     <Content Include="www\build\styles\css\sharing-structure.css" />
     <Content Include="www\build\styles\css\sharing-structure.min.css">
       <DependentUpon>sharing-structure.css</DependentUpon>
@@ -408,9 +412,9 @@
     <Content Include="www\build\styles\Images\icons\u_pen.svg" />
     <Content Include="www\build\styles\Images\themes\yb.svg" />
     <Content Include="www\source\js\lib\swiper.min.js" />
+    <Content Include="www\source\js\pages\term-and-codition.js" />
     <Content Include="www\source\js\pages\product.js" />
     <Content Include="www\source\js\pages\sharing-structure.js" />
-    <Content Include="www\source\styles\scss\vendors\jquery.mCustomScrollbar.css" />
     <Content Include="www\source\styles\scss\vendors\swiper.css" />
     <None Include="Configurations\AppSetting\AppSetting.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -5,8 +5,89 @@
         padding: 24px 0;
     }
 }
+.wraper-title{
+    text-align : center;
+    margin-bottom : 52px;
+}
+
+.group-title {
+    display: inline-block;
+    position: relative;
+}
 .title-block {
-    font-weight: 800;
+    background: linear-gradient(90deg, #000 0%, #3E3E3E 62.94%);
+    background-size: 100%;
+    padding: 18px 15px 25px 15px;
+    position: relative;
+    margin: 0 25px;
+
+    @include Mobile {
+        padding: 10px 15px 16px 15px;
+        margin: 0 15px;
+    }
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 73px;
+        position: absolute;
+        top: 0;
+        background-size: cover !important;
+
+        @include Mobile {
+            background-size: 100% !important;
+        }
+    }
+
+    &:before {
+        background: url('../../../build/styles/Images/titlebg-left.svg') no-repeat;
+        left: -22px;
+        width: 24px;
+
+        @include Mobile {
+            background: url('../../../build/styles/Images/titlebg-left-mb.svg') no-repeat;
+            width: 16px;
+            left: -13px;
+        }
+    }
+
+    &:after {
+        background: url('../../../build/styles/Images/titlebg-right.svg') no-repeat;
+        right: -23px;
+        width: 25px;
+
+        @include Mobile {
+            background: url('../../../build/styles/Images/titlebg-right-mb.svg') no-repeat;
+            width: 16px;
+            right: -13px;
+        }
+    }
+
+    span {
+        font-size: 28px;
+        text-transform: uppercase;
+        font-weight: 800;
+
+        @include TableAndMobile {
+            font-size: 20px;
+            left: 8%;
+        }
+    }
+
+    .line {
+        display: block;
+        background: radial-gradient(36.25% 699.47% at 50% 50%, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.00) 100%),#D1B37D;
+        height: 11px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @include Mobile {
+            height: 6px;
+        }
+    }
+    /*font-weight: 800;
     line-height: normal;
     text-transform: uppercase;
     max-width: 23vw;
@@ -32,6 +113,20 @@
             font-size: 20px;
             left: 8%;
         }
+    }*/
+}
+
+.line-out {
+    display: block;
+    background: #D1B37D;
+    height: 11px;
+    width: 35px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include Mobile {
+        height: 6px;
     }
 }
 

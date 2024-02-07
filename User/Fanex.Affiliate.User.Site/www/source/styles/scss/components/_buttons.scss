@@ -136,13 +136,27 @@
     font-size: 20px;
     font-weight: 700;
     line-height: normal;
-    display :inline-block;
-    color : #fff;
-    text-decoration : none;
-    padding : 8px 20px;
-    border-radius : 100px;
-    &:hover{
-        text-decoration : none;
-        color : #fff;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid #f42a41;
+
+    &:hover {
+        text-decoration: none;
+        color: #fff;
     }
+
+    &-outline {
+        background: #fff;
+        color: #F42A41;
+
+        &:hover {
+            color: #F42A41;
+        }
+    }
+}
+.custom-button[disabled] {
+    cursor: no-drop;
 }

@@ -5,6 +5,11 @@
 .adv img {
   max-width: 100%; }
 
+/*.left-panel {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}*/
 .table {
   border: 1px solid #D1B37D;
   border-radius: 10px;

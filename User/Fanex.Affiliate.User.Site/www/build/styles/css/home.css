@@ -597,8 +597,7 @@ button.swiper-pagination-bullet {
   max-width: 621px; }
 
 .what-new-block .title-block {
-  color: #D9D9D9;
-  margin-bottom: 12px; }
+  color: #D9D9D9; }
   .what-new-block .title-block.show-mobile {
     margin-bottom: 28px; }
 
@@ -642,13 +641,8 @@ button.swiper-pagination-bullet {
   @media (max-width: 500px) {
     .news-block {
       padding: 30px 0; } }
-  .news-block .title-block {
-    margin: 0 auto 52px; }
-    @media (max-width: 500px) {
-      .news-block .title-block {
-        margin: 0 auto 30px; } }
-    .news-block .title-block span {
-      color: #fff; }
+  .news-block .title-block span {
+    color: #fff; }
   .news-block .flex-2-column {
     display: flex;
     align-items: center;
