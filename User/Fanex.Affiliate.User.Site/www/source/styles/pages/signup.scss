@@ -21,11 +21,11 @@
     margin-top: 16px;
     margin-bottom: 52px;
 
+    @include Mobile {
+        justify-content: center;
+    }
+
     .custom-button {
         padding: 8px 20px 8px 45px;
-
-        &-outline {
-            background-image: url('../../../build/styles/Images/icons/reset.svg');
-        }
     }
 }

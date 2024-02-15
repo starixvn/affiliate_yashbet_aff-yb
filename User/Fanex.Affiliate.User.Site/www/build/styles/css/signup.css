@@ -14,7 +14,8 @@
   gap: 16px;
   margin-top: 16px;
   margin-bottom: 52px; }
+  @media (max-width: 767px) {
+    .group-button {
+      justify-content: center; } }
   .group-button .custom-button {
     padding: 8px 20px 8px 45px; }
-    .group-button .custom-button-outline {
-      background-image: url("../Images/icons/reset.svg"); }

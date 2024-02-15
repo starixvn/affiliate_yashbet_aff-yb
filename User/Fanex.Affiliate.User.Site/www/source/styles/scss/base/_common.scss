@@ -54,20 +54,36 @@ label {
 
 .moving-block {
     position: fixed;
-    bottom: 15px;
-    right: 135px;
-    z-index: 1;
+    z-index: 99999;
+    bottom: 28%;
+    right: 80px;
 
-    @media (max-width: 769px) {
-        right: 0;
-
-        .btn-move-top {
-            margin-right: 10px;
-        }
+    @media (min-width : 1600px) {
+        right: 280px;
     }
 
-    @media (max-width: 1199px) and (min-width: 1024px) {
-        right: 85px;
+    @include Mobile {
+        bottom: 35%;
+        right: 16px;
+    }
+
+    .btn-move-top {
+        border-radius: 100%;
+        background: #D90F0F;
+        height: 52px;
+        width: 52px;
+        margin-right: 0;
+        border: none;
+        outline: none;
+        padding: 0;
+
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+        &:focus {
+            outline: none;
+        }
     }
 }
 

@@ -63,19 +63,6 @@
     line-height: 1.42857;
 }
 
-.btn-move-top {
-    background: #dcdc1a;
-    opacity: 0.3;
-
-    &:hover {
-        background: #fbfb07;
-        opacity: 1;
-    }
-
-    &:focus {
-        outline: none;
-    }
-}
 
 .btn-login-mobile {
     display: inline-block;
@@ -148,12 +135,32 @@
         color: #fff;
     }
 
+
     &-outline {
-        background: #fff;
+        background-image: url('../../../build/styles/Images/icons/reset.svg');
         color: #F42A41;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: 20px center;
 
         &:hover {
             color: #F42A41;
+        }
+
+        @include Mobile {
+            width: 50%;
+            background-position: 40px center;
+        }
+    }
+
+    &-dash {
+        background-image: url('../../../build/styles/Images/icons/send-plane-fill.svg');
+        background-repeat: no-repeat;
+        background-position: 20px center;
+
+        @include Mobile {
+            width: 50%;
+            background-position: 30px center;
         }
     }
 }
