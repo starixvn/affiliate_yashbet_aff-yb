@@ -50,10 +50,14 @@
     .group-contact {
         max-width: 621px;
     }
-    .group-title{
-        text-align : left;
-        @include Mobile{
-            text-align : center;
+
+    .group-title {
+        text-align: left;
+        margin-bottom: 10px;
+
+        @include Mobile {
+            text-align: center;
+            margin-bottom: 28px;
         }
     }
 
@@ -78,9 +82,10 @@
         text-transform: uppercase;
         color: #AE8F56;
         margin-bottom: 12px;
-        @include Mobile{
-            font-size : 20px;
-            font-weight : 700;
+
+        @include Mobile {
+            font-size: 20px;
+            font-weight: 700;
         }
     }
 
@@ -89,8 +94,9 @@
         font-weight: 400;
         line-height: normal;
         margin-bottom: 32px;
-        @include Mobile{
-            font-size : 16px;
+
+        @include Mobile {
+            font-size: 16px;
         }
     }
 

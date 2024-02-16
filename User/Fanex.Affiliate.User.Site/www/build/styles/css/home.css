@@ -597,10 +597,12 @@ button.swiper-pagination-bullet {
   max-width: 621px; }
 
 .what-new-block .group-title {
-  text-align: left; }
+  text-align: left;
+  margin-bottom: 10px; }
   @media (max-width: 767px) {
     .what-new-block .group-title {
-      text-align: center; } }
+      text-align: center;
+      margin-bottom: 28px; } }
 
 .what-new-block .title-block.show-mobile {
   margin-bottom: 28px; }

@@ -13,6 +13,9 @@
 .group-title {
     text-align: center;
     margin-bottom: 32px;
+    @include Mobile{
+        margin-bottom : 28px;
+    }
 }
 .title-block {
     font-weight: 800;
@@ -28,6 +31,7 @@
 
     @include Mobile {
         padding: 9px 20px 14px 20px;
+        font-weight: 700;
     }
 
     &:after {
