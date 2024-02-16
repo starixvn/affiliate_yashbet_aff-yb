@@ -181,10 +181,11 @@
         </div>
 
         <div class="content product-page">
-            <div class="page-heading">
-                <span class="text">@Lang.Product</span>
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span class="text">@Lang.Product</span>
+                </h2>
             </div>
-
             @Html.RenderPartialByLanguage("~/Views/Product/_Content", Model.CurrentLanguage, siteFriendlyName)
 
 

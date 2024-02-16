@@ -21,8 +21,10 @@
     <div class="main-content">
         @RazorHelper.RenderLeftPanel(Menu.RevenueSharingMenuList)
         <div class="content">
-            <div class="page-heading">
-                <span class="text">@Lang.RevenueSharingStructure</span>
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span class="text">@Lang.RevenueSharingStructure</span>
+                </h2>
             </div>
 
             @Html.Raw(htmlString)

@@ -22,8 +22,10 @@
     <div class="main-content main-content-left-panel">
         @RazorHelper.RenderLeftPanel(Menu.TermAndConditionMenuList)
         <div class="content">
-            <div class="page-heading">
-                <span class="text">@Lang.TermAndCondition</span>
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span class="text">@Lang.TermAndCondition</span>
+                </h2>
             </div>
 
             @Html.Raw(htmlString)

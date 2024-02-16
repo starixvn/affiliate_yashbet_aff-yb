@@ -596,10 +596,14 @@ button.swiper-pagination-bullet {
 .what-new-block .group-contact {
   max-width: 621px; }
 
-.what-new-block .title-block {
-  color: #D9D9D9; }
-  .what-new-block .title-block.show-mobile {
-    margin-bottom: 28px; }
+.what-new-block .group-title {
+  text-align: left; }
+  @media (max-width: 767px) {
+    .what-new-block .group-title {
+      text-align: center; } }
+
+.what-new-block .title-block.show-mobile {
+  margin-bottom: 28px; }
 
 .what-new-block .slogan-block {
   font-size: 16px;

@@ -36,8 +36,10 @@
 <div class="page-container">
     <div class="main-content">
         <div class="content">
-            <div class="page-heading">
-                <span class="text">@Lang.Promotion</span>
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span class="text">@Lang.Promotion</span>
+                </h2>
             </div>
             <div class="main-content">
                 <div class="promotion-text">
@@ -46,26 +48,26 @@
                 </div>
                 @Html.RenderPartialByLanguage("~/Views/Promotion/_Content", Model.CurrentLanguage)
                 @*<div class="count-down">
-                        <div class="count-down-content">
-                        <div class="count-down-item day">
-                            <div class="number">0</div>
-                            <div class="count-down-text">@Lang.Day</div>
-                        </div>
-                        <div class="count-down-item hour">
-                            <div class="number">0</div>
-                            <div class="count-down-text">@Lang.Hour</div>
-                        </div>
-                        <div class="count-down-item min">
-                            <div class="number">0</div>
-                            <div class="count-down-text">@Lang.Min</div>
-                        </div>
-                        <div class="count-down-item sec">
-                            <div class="number">0</div>
-                            <div class="count-down-text">@Lang.Sec</div>
-                        </div>
-                    </div>
+                <div class="count-down-content">
+                <div class="count-down-item day">
+                    <div class="number">0</div>
+                    <div class="count-down-text">@Lang.Day</div>
+                </div>
+                <div class="count-down-item hour">
+                    <div class="number">0</div>
+                    <div class="count-down-text">@Lang.Hour</div>
+                </div>
+                <div class="count-down-item min">
+                    <div class="number">0</div>
+                    <div class="count-down-text">@Lang.Min</div>
+                </div>
+                <div class="count-down-item sec">
+                    <div class="number">0</div>
+                    <div class="count-down-text">@Lang.Sec</div>
+                </div>
+            </div>
 
-                    </div>*@
+            </div>*@
             </div>
 
             @RazorHelper.RenderMovingTopButton()

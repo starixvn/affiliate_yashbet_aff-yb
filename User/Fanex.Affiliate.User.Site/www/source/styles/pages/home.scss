@@ -50,9 +50,14 @@
     .group-contact {
         max-width: 621px;
     }
+    .group-title{
+        text-align : left;
+        @include Mobile{
+            text-align : center;
+        }
+    }
 
     .title-block {
-        color: #D9D9D9;
         &.show-mobile {
             margin-bottom: 28px;
         }
