@@ -9,6 +9,9 @@
 .info-question .title {
   padding: 5px 0 5px 8px; }
 
+.main-content {
+  display: block; }
+
 .group-button {
   display: flex;
   gap: 16px;

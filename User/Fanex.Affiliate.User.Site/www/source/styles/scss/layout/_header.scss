@@ -215,12 +215,32 @@
         @include Mobile {
             margin: 0;
             padding: 0;
+            top: 5px;
+            left: -5px;
         }
 
         .icon-bar {
             background: #333;
             width: 28px;
-            margin-top: 5px;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+            position: absolute;
+            margin-top: 0;
+
+            &:nth-of-type(2) {
+                top: 0px;
+                left: 5px;
+            }
+
+            &:nth-of-type(3) {
+                top: 6px;
+                left: 5px;
+            }
+
+            &:nth-of-type(4) {
+                top: 12px;
+                left: 5px;
+            }
         }
     }
 
@@ -543,6 +563,28 @@
     border-radius : 100px;
     overflow : hidden;
 }
+
+
+.menu-open {
+    .icon-bar {
+        &:nth-of-type(2) {
+            transform: rotate(45deg);
+            top: 0px;
+            left: 5px;
+        }
+
+        &:nth-of-type(3) {
+            opacity: 0;
+        }
+
+        &:nth-of-type(4) {
+            transform: rotate(-45deg);
+            top: 0 !important;
+            left: 5px;
+        }
+    }
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .menu.navbar-collapse {

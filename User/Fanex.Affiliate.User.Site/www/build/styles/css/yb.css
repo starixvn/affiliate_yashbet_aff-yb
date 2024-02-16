@@ -788,7 +788,7 @@ select.form-control:focus {
     background: #fff;
     border: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 99;
     top: 0;
     height: 100%; }
   .navbar .layout-page-container {

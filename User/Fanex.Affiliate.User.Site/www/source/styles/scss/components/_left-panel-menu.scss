@@ -1,32 +1,12 @@
 ﻿.left-panel {
     width: 34.2rem;
     position: sticky;
-    max-height: 65rem;
     height: 100%;
     top: 15px;
     display: block;
-    background: #FFF1DE;
-    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10);
     border: 1px solid #D1B37D;
     border-radius: 10px;
     overflow: auto;
-
-/*    &::-webkit-scrollbar {
-        width: 10px;
-        border-radius: 8px;
-    }
-    &::-webkit-scrollbar-track {
-        background: transparent;
-        border-radius: 8px;
-    }
-    &::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 8px;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-        background: #555;
-        border-radius: 8px;
-    }*/
 
     @include TableAndMobile {
         display: none;
@@ -48,6 +28,24 @@
     }
 
     .menu {
+        max-height: 65rem;
+        height: 100%;
+        display: block;
+        background: #FFF1DE;
+        overflow: auto;
+       /* scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba($color: #A7A7A7, $alpha: .5);
+        }
+*/
         .heading-left-panel {
             font-size: 16px;
             font-weight: 700;
