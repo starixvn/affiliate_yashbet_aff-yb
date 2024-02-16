@@ -11,12 +11,13 @@
     <script src="@Url.RenderLink("~/www/build/js/forgotpassword.js")"></script>
 }
 
-<div class="main-content">
-    <div class="content">
-        <div class="page-title">
-            <span class="text">@Lang.ForgetPassword</span>
+<div class="page-container">
+    <div class="main-content">
+        <div class="group-title">
+            <h2 class="title-block">
+                <span class="text">@Lang.ForgetPassword</span>
+            </h2>
         </div>
-
         <div class="alert" role="alert" id="messageResult" style="display: none"></div>
         <div id="mainContent">
             <p class="forget-content">@Html.Raw(Lang.TitelForgetPass.Replace("{0}", Url.Content("~/ContactUs")))</p>

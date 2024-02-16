@@ -455,6 +455,24 @@ input[type="checkbox"], input[type="radio"] {
     .menu-main .menu li:last-child .menu-item {
       margin-right: 0; }
 
+.logout-mobile {
+  display: none !important; }
+  @media (max-width: 767px) {
+    .logout-mobile {
+      display: block !important;
+      margin: 0 16px; }
+      .logout-mobile a {
+        padding: 15px 0 !important;
+        border: 1px solid #f42a41;
+        border-radius: 100px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 20px !important;
+        font-weight: 700;
+        color: #f42a41; } }
+
 .navbar {
   display: flex;
   justify-content: flex-start;
