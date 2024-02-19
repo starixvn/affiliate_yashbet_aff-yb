@@ -21,20 +21,20 @@
         <div class="alert" role="alert" id="messageResult" style="display: none"></div>
         <div id="mainContent">
             <p class="forget-content">@Html.Raw(Lang.TitelForgetPass.Replace("{0}", Url.Content("~/ContactUs")))</p>
-            <form id="forgotPasswordForm" class="form-horizontal form-valid form-valid-pasword">
+            <form id="forgotPasswordForm" class="form form-horizontal form-valid form-valid-pasword">
                 @Html.AntiForgeryToken()
 
                 <div id="emailInputGroup">
-                    <div class="group-form group-input-label">
-                        <label for="email">@Lang.YourEmail <span class="red-start">*</span></label>
-                        <input class="form-control" name="Email" id="Email" type="text" autocomplete="off" />
+                    <div class="items validate-group">
+                        <label class="custom-label" for="email">@Lang.YourEmail <span class="red-color">*</span></label>
+                        <input class="form-input" name="Email" id="Email" type="text" autocomplete="off" />
+                        <p class="validation-input">
+                            <span class="validate-input hide">@Lang.EmailAddressIsInvalid</span>
+                        </p>
                     </div>
-                    <p class="validation-input">
-                        <span class="help-block hide">@Lang.EmailAddressIsInvalid</span>
-                    </p>
-                    <div class="group-form group-button">
-                        <button id="btnSubmit" class="btn btn-submit" type="submit">@Lang.Submit</button>
-                        <button id="btnReset" class="btn btn-reset" type="reset">@Lang.Reset</button>
+                    <div class="group-button">
+                        <button id="btnSubmit" class="custom-button custom-button-dash" type="submit">@Lang.Submit</button>
+                        <button id="btnReset" class="custom-button custom-button-outline" type="reset">@Lang.Reset</button>
                     </div>
                 </div>
             </form>

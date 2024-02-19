@@ -11,8 +11,6 @@
     border-bottom-right-radius: 0;
 }*/
 .table {
-  border: 1px solid #D1B37D;
-  border-radius: 10px;
   overflow: hidden; }
   @media (max-width: 767px) {
     .table.table-game {
@@ -82,7 +80,10 @@
 
 .table-casino {
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  border: 1px solid #D1B37D;
+  border-radius: 5px;
+  overflow: hidden; }
   .table-casino .table-responsive {
     max-width: 1540px;
     margin: 0 auto; }
@@ -135,8 +136,7 @@
   width: 100%;
   z-index: 1;
   margin: auto;
-  overflow: auto;
-  border-radius: 8px; }
+  overflow: auto; }
   .table-scroll::-webkit-scrollbar-track {
     border-radius: 8px;
     background: #fff; }

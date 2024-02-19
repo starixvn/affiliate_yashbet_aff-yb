@@ -173,15 +173,19 @@ input[type="radio"], input[type="checkbox"] {
             @include Mobile {
                 margin-bottom: 12px;
             }
-
-            .custom-label {
-                color: #333;
-                font-size: 14px;
-                font-weight: 600;
-                line-height: normal;
-                margin-bottom: 8px;
-            }
         }
+    }
+
+    .custom-label {
+        color: #333;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 8px;
+    }
+
+    .red-color {
+        color: #F42A41;
     }
 }
 
@@ -288,7 +292,7 @@ input[type="radio"], input[type="checkbox"] {
 
 .validate-input {
     margin-top: 8px !important;
-    color: #D90F0F !important;
+    color: #F42A41 !important;
     display: block;
     font-weight: 600;
     font-size: 14px;
@@ -440,5 +444,5 @@ input[type="radio"], input[type="checkbox"] {
 
 
 .has-error input, .has-error select {
-    border: 1px solid #d90f0f;
+    border: 1px solid #F42A41;
 }

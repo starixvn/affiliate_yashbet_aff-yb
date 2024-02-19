@@ -14,9 +14,8 @@
     border-bottom-right-radius: 0;
 }*/
 
+
 .table {
-    border: 1px solid #D1B37D;
-    border-radius: 10px;
     overflow: hidden;
 
     &.table-game {
@@ -123,10 +122,14 @@
     background-color: #F8F9FA !important;
 }
 
+
+
 .table-casino {
     position: relative;
     z-index: 0;
-
+    border: 1px solid #D1B37D;
+    border-radius: 5px;
+    overflow : hidden;
     .table-responsive {
         max-width: 1540px;
         margin: 0 auto;
@@ -191,19 +194,20 @@
             tr:nth-child(odd) td:first-child {
                 background-color: #FFFFFF;
             }
-            tr{
-                td{
-                   &:first-child{
-                       border-left : none;
-                   }
+
+            tr {
+                td {
+                    &:first-child {
+                        border-left: none;
+                    }
                 }
             }
         }
 
         th {
-            border-top : none;
+            border-top: none;
             border-right: none;
-            background : #333;
+            background: #333;
         }
     }
 }
@@ -226,8 +230,6 @@
     z-index: 1;
     margin: auto;
     overflow: auto;
-    border-radius: 8px;
-
     &::-webkit-scrollbar-track {
         border-radius: 8px;
         background: #fff;

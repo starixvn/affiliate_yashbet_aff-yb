@@ -2006,12 +2006,16 @@ input[type="radio"], input[type="checkbox"] {
   @media (max-width: 767px) {
     .form .form-columns .items {
       margin-bottom: 12px; } }
-  .form .form-columns .items .custom-label {
-    color: #333;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: normal;
-    margin-bottom: 8px; }
+
+.form .custom-label {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 8px; }
+
+.form .red-color {
+  color: #F42A41; }
 
 .radio-buttons {
   display: flex;
@@ -2097,7 +2101,7 @@ input[type="radio"], input[type="checkbox"] {
 
 .validate-input {
   margin-top: 8px !important;
-  color: #D90F0F !important;
+  color: #F42A41 !important;
   display: block;
   font-weight: 600;
   font-size: 14px;
@@ -2220,7 +2224,7 @@ input[type="radio"], input[type="checkbox"] {
       width: 90%; } }
 
 .has-error input, .has-error select {
-  border: 1px solid #d90f0f; }
+  border: 1px solid #F42A41; }
 
 .marquee-container {
   overflow: hidden;
