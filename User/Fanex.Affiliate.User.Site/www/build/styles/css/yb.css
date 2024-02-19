@@ -748,14 +748,8 @@ select.form-control:focus {
   .news, .table-casino {
     padding-left: 40px !important;
     padding-right: 40px !important; }
-  /*
-    .main .content {
-        margin: 0 40px !important;
-    }*/
   .menu .menu-item {
-    padding-right: 15px; }
-  .mobile-left-panel {
-    left: 4rem; } }
+    padding-right: 15px; } }
 
 @media only screen and (max-width: 991px) {
   .news-content {
@@ -792,9 +786,9 @@ select.form-control:focus {
 
 @media only screen and (max-width: 767px) {
   .mobile-left-panel {
-    top: 15rem;
+    top: 16.4rem;
     right: auto;
-    left: 1rem;
+    left: 1.3rem;
     padding: 0.2rem 0.8rem; }
     .mobile-left-panel.fixed {
       top: 4rem; }

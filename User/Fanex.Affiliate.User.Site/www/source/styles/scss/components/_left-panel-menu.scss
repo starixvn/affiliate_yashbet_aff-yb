@@ -150,22 +150,25 @@
     @include TableAndMobile {
         display: flex;
         align-items: center;
-        background: #FFFFFF;
-        border: 1px solid #EA5500;
-        color: #EA5500;
-        box-shadow: 0px 2px 5px rgba(162, 162, 162, 0.25);
-        border-radius: 4px;
+        background: #AE8F56;
+        border: 1px solid #AE8F56;
+        color: #fff;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.20);
+        border-radius: 100px;
         padding: 0.4rem 1.2rem;
         position: fixed;
-        top: 16.3rem;
+        top: 19.3rem;
         right: auto;
-        left: 6.2rem;
+        left: 2rem;
         z-index: 9;
         cursor: pointer;
         transition: 0.2s;
 
         &.fixed {
             top: 5rem;
+        }
+        svg{
+            margin-right : 8px;
         }
 
         span {

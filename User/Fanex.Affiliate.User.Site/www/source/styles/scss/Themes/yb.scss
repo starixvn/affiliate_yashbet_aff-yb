@@ -1123,17 +1123,8 @@ select.form-control {
         padding-left: 40px !important;
         padding-right: 40px !important;
     }
-/*
-    .main .content {
-        margin: 0 40px !important;
-    }*/
-
     .menu .menu-item {
         padding-right: 15px;
-    }
-
-    .mobile-left-panel {
-        left: 4rem;
     }
 }
 
@@ -1186,9 +1177,9 @@ select.form-control {
 
 @media only screen and (max-width: 767px) {
     .mobile-left-panel {
-        top: 15rem;
+        top: 16.4rem;
         right: auto;
-        left: 1rem;
+        left: 1.3rem;
         padding: 0.2rem 0.8rem;
 
         &.fixed {

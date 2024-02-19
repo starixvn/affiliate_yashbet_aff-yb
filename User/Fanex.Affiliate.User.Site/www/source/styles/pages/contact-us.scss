@@ -46,74 +46,68 @@
 
 .grid-contact-info {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2.5rem;
-    margin-top: 1.1rem;
     justify-content: center;
+    max-width: 960px;
+    margin: 116px auto 52px;
 
     @include Mobile {
-        grid-template-columns: repeat(1,auto);
-        grid-gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 7rem;
+        margin: 82px auto 52px;
+        padding : 0 24px;
     }
 
     @include Tablet {
-        grid-template-columns: repeat(1,auto);
+        grid-template-columns: repeat(3,auto);
+
     }
 
     .contact-items {
         position: relative;
 
-        &:nth-child(2) {
-            .info-social {
-                background: #3E3E3E;
-            }
-
-
-            span {
-                color: #fff;
-            }
-
-            a {
-                color: #F9E4C7 !important;
-            }
+        .icon-social {
+            display: block;
+            background: linear-gradient(90deg, #000 0%, #3E3E3E 62.94%);
+            padding: 20px;
+            border-radius: 100px;
+            border: 6px solid #fff;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translate(50%,-50%);
         }
 
         .info-social {
             list-style: none;
-            margin: 0 16px;
-            padding: 0 10px;
-            height: 97px;
+            padding: 60px 10px 12px;
             display: flex;
             align-items: center;
             gap: 12px;
             background: #F9E4C7;
+            margin-bottom: 0;
+            text-align: center;
+            border-radius: 10px;
+            justify-content  :center;
 
             li {
                 span {
                     font-size: 28px;
                     font-weight: 700;
                     line-height: normal;
+                    display: block;
                 }
 
                 a {
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 700;
                     line-height: normal;
                     color: #5B91E4;
+                    @include Tablet{
+                        font-size : 13px;
+                    }
                 }
-            }
-        }
-
-        .border {
-            position: absolute;
-            top: 0;
-
-            &-left {
-                left: -6px;
-            }
-
-            &-right {
-                right: -6px;
             }
         }
     }
