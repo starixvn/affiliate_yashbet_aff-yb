@@ -1235,8 +1235,8 @@ B2C合作伙伴团队。&lt;br /&gt;&lt;br /&gt;
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>B2C合营代理资讯</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>全新！</value>
+  <data name="New" xml:space="preserve">
+    <value>全新</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>新的横幅广告上线</value>
@@ -1314,7 +1314,7 @@ B2C合作伙伴团队。&lt;br /&gt;&lt;br /&gt;
     <value>注册合作伙伴计划，赚取每月高达{0}的佣金！</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>立即加入！</value>
+    <value>立即加入</value>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
     <value>很高兴再次见到你！</value>
@@ -1783,5 +1783,8 @@ B2C合作伙伴团队。&lt;br /&gt;&lt;br /&gt;
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>忘记?</value>
   </data>
 </root>

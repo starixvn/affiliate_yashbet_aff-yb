@@ -8,9 +8,15 @@
 
         public const int Two = 2;
 
+        public const double Four = 4;
+
+        public const int Eight = 8;
+
         public const int Ten = 10;
 
-        public const int Fourteen = 14;
+        public const int Eleven = 11;
+
+        public const int Twelve = 12;
 
         public const int Fifteen = 15;
 

@@ -1245,8 +1245,8 @@
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>Tin tức Đại lý B2C</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>MỚI!</value>
+  <data name="New" xml:space="preserve">
+    <value>MỚI</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>Banner quảng cáo đã có!</value>
@@ -1330,7 +1330,7 @@
     <value>Đăng ký chương trình đại lý và hưởng hoa hồng đến {0}!</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>Tham gia ngay!</value>
+    <value>Tham gia ngay</value>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
     <value>Chào Mừng Bạn Đã Trở Lại !</value>
@@ -2042,5 +2042,8 @@
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>Quên?</value>
   </data>
 </root>

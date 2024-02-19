@@ -397,20 +397,46 @@
     <Content Include="www\build\styles\css\sharing-structure.min.css">
       <DependentUpon>sharing-structure.css</DependentUpon>
     </Content>
+    <Content Include="www\build\styles\Images\contact-us\email.svg" />
+    <Content Include="www\build\styles\Images\contact-us\left-black-column.png" />
+    <Content Include="www\build\styles\Images\contact-us\left-black-column.svg" />
+    <Content Include="www\build\styles\Images\contact-us\left-column.png" />
+    <Content Include="www\build\styles\Images\contact-us\left-column.svg" />
+    <Content Include="www\build\styles\Images\contact-us\right-black-column.png" />
+    <Content Include="www\build\styles\Images\contact-us\right-black-column.svg" />
+    <Content Include="www\build\styles\Images\contact-us\right-column.png" />
+    <Content Include="www\build\styles\Images\contact-us\right-column.svg" />
+    <Content Include="www\build\styles\Images\contact-us\telegram.svg" />
+    <Content Include="www\build\styles\Images\contact-us\vector.svg" />
+    <Content Include="www\build\styles\Images\contact-us\whatsapp.svg" />
+    <Content Include="www\build\styles\Images\home\aplly-mb.png" />
     <Content Include="www\build\styles\Images\home\aplly.png" />
     <Content Include="www\build\styles\Images\home\box.svg" />
+    <Content Include="www\build\styles\Images\home\main-banners\banner-mb-1.jpg" />
     <Content Include="www\build\styles\Images\home\main-banners\banner-pc-1.jpg" />
     <Content Include="www\build\styles\Images\home\titlebg.png" />
     <Content Include="www\build\styles\Images\home\what-new.png" />
     <Content Include="www\build\styles\Images\icons\account-pin-box-fill.svg" />
     <Content Include="www\build\styles\Images\icons\achment.svg" />
+    <Content Include="www\build\styles\Images\icons\arrow-down-s-fill.svg" />
     <Content Include="www\build\styles\Images\icons\contacts-fill.svg" />
     <Content Include="www\build\styles\Images\icons\lock-password-line.svg" />
     <Content Include="www\build\styles\Images\icons\login-box-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\reset.svg" />
+    <Content Include="www\build\styles\Images\icons\send-plane-fill.svg" />
     <Content Include="www\build\styles\Images\icons\star-fill.svg" />
     <Content Include="www\build\styles\Images\icons\user-line.svg" />
     <Content Include="www\build\styles\Images\icons\u_pen.svg" />
+    <Content Include="www\build\styles\Images\line.svg" />
+    <Content Include="www\build\styles\Images\products\number-game.png" />
+    <Content Include="www\build\styles\Images\products\rng-keno.png" />
+    <Content Include="www\build\styles\Images\products\sportbook.png" />
+    <Content Include="www\build\styles\Images\products\virtual-sport.png" />
     <Content Include="www\build\styles\Images\themes\yb.svg" />
+    <Content Include="www\build\styles\Images\titlebg-left-mb.svg" />
+    <Content Include="www\build\styles\Images\titlebg-left.svg" />
+    <Content Include="www\build\styles\Images\titlebg-right-mb.svg" />
+    <Content Include="www\build\styles\Images\titlebg-right.svg" />
     <Content Include="www\source\js\lib\swiper.min.js" />
     <Content Include="www\source\js\pages\term-and-codition.js" />
     <Content Include="www\source\js\pages\product.js" />
@@ -1196,6 +1222,7 @@
     <Content Include="www\build\styles\Images\home\main-banners\banner-pc-1.webp" />
     <Content Include="www\source\styles\scss\components\_faq.scss" />
     <Content Include="www\source\styles\pages\sharing-structure.scss" />
+    <Content Include="www\build\styles\Images\home\main-banners\banner-mb-1.webp" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

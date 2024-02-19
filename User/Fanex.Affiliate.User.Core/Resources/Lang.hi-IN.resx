@@ -172,7 +172,7 @@
     <value>&lt;strong&gt;सोमवार - शनिवार&lt;/strong&gt;&lt;br&gt;11:00 पूर्वाह्न - 08:00 अपराह्न (जीएमटी +8)</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>अब शामिल हों!</value>
+    <value>अब शामिल हों</value>
   </data>
   <data name="Sportsbook" xml:space="preserve">
     <value>खेल पुस्तक</value>
@@ -261,8 +261,8 @@
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>नया बैनर अब उपलब्ध है!</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>खबर!</value>
+  <data name="New" xml:space="preserve">
+    <value>खबर</value>
   </data>
   <data name="YouCanNowLogInYourAffiliateAccount" xml:space="preserve">
     <value>अपनी वेबसाइट के प्रचार के लिए नए बैनर लेने के लिए अब आप अपने संबद्ध खाते में लॉग इन कर सकते हैं।</value>
@@ -2017,5 +2017,8 @@ B2C सहयोगी की टीम&lt;br/&gt;&lt;br/&gt;
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>भूल गए?</value>
   </data>
 </root>

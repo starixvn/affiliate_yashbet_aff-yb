@@ -180,8 +180,8 @@
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>Sepanduk baru kini tersedia!</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>TERBARU!</value>
+  <data name="New" xml:space="preserve">
+    <value>TERBARU</value>
   </data>
   <data name="WhatNewInOneTwoBetPromotion" xml:space="preserve">
     <value>Apakah yang terbaru dalam Promosi B2C !</value>
@@ -1338,7 +1338,7 @@ Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan
     <value>Whatsapp</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>SERTAI SEKARANG!</value>
+    <value>Sertai sekarang</value>
   </data>
   <data name="PasswordIsRequired" xml:space="preserve">
     <value>Kata laluan diperlukan</value>
@@ -2008,5 +2008,8 @@ Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>Lupa?</value>
   </data>
 </root>

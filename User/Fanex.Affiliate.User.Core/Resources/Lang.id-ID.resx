@@ -1230,8 +1230,8 @@
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>Berita affiliasi B2C</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>Baru!</value>
+  <data name="New" xml:space="preserve">
+    <value>Baru</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>Spanduk baru tersedia sekarang !!</value>
@@ -1309,7 +1309,7 @@
     <value>Daftar Afiliasi dan hasilkan komisi hingga {0}!</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>DAFTAR SEKARANG!</value>
+    <value>Daftar sekarang</value>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
     <value>Selamat datang kembali!</value>
@@ -1766,5 +1766,8 @@
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>Lupa?</value>
   </data>
 </root>

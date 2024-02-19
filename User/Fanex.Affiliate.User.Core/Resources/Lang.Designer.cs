@@ -2077,6 +2077,15 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Forgot?.
+        /// </summary>
+        public static string Forgot {
+            get {
+                return ResourceManager.GetString("Forgot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Forgot Login Details?.
         /// </summary>
         public static string ForgotLoginDetail {
@@ -2581,7 +2590,7 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to JOIN NOW!.
+        ///   Looks up a localized string similar to Join now.
         /// </summary>
         public static string JoinNow {
             get {
@@ -3238,6 +3247,15 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New.
+        /// </summary>
+        public static string New {
+            get {
+                return ResourceManager.GetString("New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New banner is now available!.
         /// </summary>
         public static string NewBannerIsNowAvailable {
@@ -3279,15 +3297,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         public static string NewSignup {
             get {
                 return ResourceManager.GetString("NewSignup", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to NEW!.
-        /// </summary>
-        public static string NewWithExclamationPoint {
-            get {
-                return ResourceManager.GetString("NewWithExclamationPoint", resourceCulture);
             }
         }
         

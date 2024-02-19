@@ -762,8 +762,8 @@
     <value>Company Net Win ({0})</value>
     <comment>87923</comment>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>NEW!</value>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
     <comment>87923</comment>
   </data>
   <data name="NewCaledonia" xml:space="preserve">
@@ -1406,7 +1406,7 @@
     <comment>87923</comment>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>JOIN NOW!</value>
+    <value>Join now</value>
     <comment>87923</comment>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
@@ -2113,5 +2113,8 @@
   </data>
   <data name="YourRevenueShareYB" xml:space="preserve">
     <value>58,050</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>Forgot?</value>
   </data>
 </root>

@@ -6,18 +6,6 @@
             "www/source/js/pages/home.js"
         ]
     },
-    {
-        "outputFileName": "www/build/js/pages/sharing-structure.js",
-        "inputFiles": [
-            "www/source/js/pages/sharing-structure.js"
-        ]
-    },
-    {
-        "outputFileName": "www/build/js/pages/product.js",
-        "inputFiles": [
-            "www/source/js/pages/product.js"
-        ]
-    }
     //{
     //  "outputFileName": "www/build/js/user-panel.js",
     //  "inputFiles": [

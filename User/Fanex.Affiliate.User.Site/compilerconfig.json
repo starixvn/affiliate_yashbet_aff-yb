@@ -124,10 +124,6 @@
     //  "inputFile": "www/source/js/lib/modernizr-webp.js"
     //},
     {
-        "outputFile": "www/build/js/pages/home.js",
-        "inputFile": "www/source/js/pages/home.js"
-    },
-    {
         "outputFile": "www/build/js/pages/sharing-structure.js",
         "inputFile": "www/source/js/pages/sharing-structure.js"
     },

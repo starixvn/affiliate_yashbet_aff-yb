@@ -483,7 +483,8 @@ select.form-control:focus {
   border-radius: 100px !important;
   background-image: url("../Images/icons/account-pin-box-fill.svg");
   background-repeat: no-repeat;
-  background-position: 8px; }
+  background-position: 8px;
+  text-transform: none; }
   .btn-signup:hover {
     color: #fff; }
   @media (max-width: 767px) {

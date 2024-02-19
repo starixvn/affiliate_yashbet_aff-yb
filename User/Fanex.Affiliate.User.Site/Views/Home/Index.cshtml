@@ -40,7 +40,7 @@
                     </picture>
                 </a>
             </div>
-            <div class="swiper-slide">
+            @*<div class="swiper-slide">
                 <a class="nounderline home-banner-tracking-flat show-pc">
                     <picture>
                         <source srcset="~/www/build/styles/Images/home/main-banners/banner-pc-1.webp" type="image/webp" />
@@ -55,9 +55,9 @@
                         <img class="img-item img-responsive" src="~/www/build/styles/Images/home/main-banners/banner-mb-1.jpg" alt="Actived Home Banner" />
                     </picture>
                 </a>
-            </div>
+            </div>*@
         </div>
-        <div class="swiper-pagination"></div>
+        @*<div class="swiper-pagination"></div>*@
     </div>
 
     <div class="page-container">
@@ -67,8 +67,7 @@
                 <img src="~/www/build/styles/Images/home/aplly-mb.png" alt="aplly" class="img-responsive show-mobile" />
             </div>
             <div class="text-apply">
-                As affiliates, you will earn revenue share on every player you referred to YashBet over the course of the player's account life.<br />
-                Your online system will be serving  you 24/7 for your usage.
+                @SiteFriendlyNameHelper.ReplaceB2C(Lang.AsAOneTwoBetYouWillEarnCommission)
             </div>
         </div>
         <div class="block what-new-block">
@@ -77,27 +76,27 @@
                     <div class="group-contact">
                         <div class="group-title show-pc">
                             <h2 class="title-block">
-                                <span>What’s new in Affiliate</span>
+                                <span>@Lang.WhatNewInAffiliate</span>
                             </h2>
                         </div>
                         <div class="slogan-block">
-                            Can't Get Enough!
+                            @Lang.CannotGetEnough
                         </div>
                         <div class="heading-block">
-                            YOUR CURRENT REVENUE SHARE?
+                            @Lang.YourCurrentCommision
                         </div>
                         <div class="txt-block">
-                            Contact your affiliates support team for exclusive revenue rate to growth bigger revenue in your monthly earning
+                            @Lang.ContactYourAffilliateSupportTeam
                         </div>
                         <div class="view-more">
-                            <a href="#" class="button-bg">Contact Now</a>
+                            <a href="@Url.Content("~/ContactUs")" class="button-bg">@Lang.ContactNow</a>
                         </div>
                     </div>
                 </div>
                 <div class="column column-right">
                     <div class="group-title show-mobile">
                         <h2 class="title-block">
-                            <span>What’s new in Affiliate</span>
+                            <span>@Lang.WhatNewInAffiliate</span>
                         </h2>
                     </div>
                     <div class="img-what-new">
@@ -109,7 +108,7 @@
         <div class="block news-block">
             <div class="group-title">
                 <h2 class="title-block">
-                    <span>Yashbet Affiliate news</span>
+                    <span>@SiteFriendlyNameHelper.ReplaceB2C(Lang.OneTwoBetAffiliateNews)</span>
                 </h2>
             </div>
             <div class="flex-2-column">
@@ -117,13 +116,13 @@
                     <div class="card-items">
                         <div class="new-bage">
                             <img src="~/www/build/styles/Images/icons/star-fill.svg" alt="start" />
-                            <span>new</span>
+                            <span>@Lang.New</span>
                         </div>
                         <div class="card-items-header">
-                            New banner is now available!
+                            @Lang.NewBannerIsNowAvailable
                         </div>
                         <div class="card-items-body">
-                            You can now log in your affiliate account to  get new banners to promote in your website.
+                            @Lang.YouCanNowLogInYourAffiliateAccount
                         </div>
                     </div>
                 </div>
@@ -131,13 +130,13 @@
                     <div class="card-items">
                         <div class="new-bage">
                             <img src="~/www/build/styles/Images/icons/star-fill.svg" alt="start" />
-                            <span>new</span>
+                            <span>@Lang.New</span>
                         </div>
                         <div class="card-items-header">
-                            What's New in YashBet Promotion !
+                            @SiteFriendlyNameHelper.ReplaceB2C(Lang.WhatNewInOneTwoBetPromotion)
                         </div>
                         <div class="card-items-body">
-                            You can now log in your affiliate account to  get new banners to promote in your website.
+                            @SiteFriendlyNameHelper.ReplaceB2C(Lang.GetToKnowHotPromotion)
                         </div>
                     </div>
                 </div>

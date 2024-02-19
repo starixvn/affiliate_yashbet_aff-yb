@@ -567,6 +567,8 @@ button.swiper-pagination-bullet {
 .apply-block .image-apply {
   max-width: 936px;
   margin: 0 auto; }
+  .apply-block .image-apply .show-mobile {
+    margin: auto; }
 
 .apply-block .text-apply {
   text-align: center;
@@ -657,6 +659,8 @@ button.swiper-pagination-bullet {
       .news-block .flex-2-column {
         flex-direction: column;
         gap: 24px; } }
+    .news-block .flex-2-column .column {
+      flex: 1; }
   .news-block .card-items {
     padding: 28px 24px;
     background: #FFF1DE;

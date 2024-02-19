@@ -718,6 +718,7 @@ select.form-control {
     background-image: url('../../../../build/styles/Images/icons/account-pin-box-fill.svg');
     background-repeat: no-repeat;
     background-position: 8px;
+    text-transform: none;
 
     &:hover {
         color: #fff;

@@ -49,7 +49,7 @@
     @RenderSection("styles", required: false)
 
 </head>
-<body class="@(isLogin ? "after-login-content" : "before-login-content") @sessionService.CurrentLanguage">
+<body class="@RenderSection("afterLogin", required: false) @sessionService.CurrentLanguage">
     <header class="@RenderSection("classHeader", required: false)">
         <div class="header-top">
             <div class="logo">
@@ -101,7 +101,7 @@
                     @if (!isLogin)
                     {
                         <div class="sign-up">
-                            <a href="@Url.Content("~/Signup/Index")" class="btn btn-signup">Join now</a>
+                            <a href="@Url.Content("~/Signup/Index")" class="btn btn-signup">@Lang.JoinNow</a>
                         </div>
                     }
                 </div>

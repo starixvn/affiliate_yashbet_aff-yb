@@ -168,8 +168,8 @@
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>B2C এফিলিয়াটস খবর</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>নতুন!</value>
+  <data name="New" xml:space="preserve">
+    <value>নতুন</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>নতুন ব্যানার এখন পাওয়া যাচ্ছে।</value>
@@ -244,7 +244,7 @@
     <value>দ্বিতীয়</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>এখনই যোগ দিন!</value>
+    <value>এখনই যোগ দিন</value>
   </data>
   <data name="Sportsbook" xml:space="preserve">
     <value>খেলাধূলার বই</value>
@@ -2022,5 +2022,8 @@
   </data>
   <data name="TcGaming" xml:space="preserve">
     <value>TC-GAMING</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>ভুলে গেছেন?</value>
   </data>
 </root>

@@ -1227,7 +1227,7 @@
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>ข่าวสารพันธมิตรของ B2C</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
+  <data name="New" xml:space="preserve">
     <value>ข่าวสาร</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
@@ -1306,7 +1306,7 @@
     <value>สมัครเข้าร่วมโปรแกรมพันธมิตร โปรโมทและรับรายได้สูงสุด {0} ทุกเดือน!</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>สมัครตอนนี้!</value>
+    <value>สมัครตอนนี้</value>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
     <value>ยินดีต้อนรับเข้าสู่โปรแกรมพันธมิตรค่ะ!</value>
@@ -1766,5 +1766,8 @@
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>ลืม?</value>
   </data>
 </root>

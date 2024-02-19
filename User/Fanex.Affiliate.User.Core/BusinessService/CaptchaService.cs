@@ -87,8 +87,8 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 else
                 {
                     // Add captcha
-                    var font = new Font("Montserrat", Number.Fourteen);
-                    graphics.DrawString(captcha, font, Brushes.White, random.Next(Number.Two, Number.Ten), random.Next(Number.Zero, Number.Two));
+                    var font = new Font("Open Sans", Number.Eleven, FontStyle.Bold);
+                    graphics.DrawString(captcha, font, Brushes.Black, x: Number.Eight, y: (float)Number.Four);
                 }
 
                 for (int i = 0; i < Number.Fifty; i++)
@@ -112,7 +112,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
             var brush = new HatchBrush(
                 hatchStyleList[random.Next(hatchStyleList.Length - 1)],
                 CreateRandomColor(random, Number.OneFiveZero, Number.TwoDoubleFive),
-                Color.White);
+                Color.Black);
             graphics.FillRectangle(brush, rectangleF);
             var matrix = new Matrix();
 
