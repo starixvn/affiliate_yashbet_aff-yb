@@ -700,7 +700,7 @@ input[type="checkbox"], input[type="radio"] {
         width: 85px; }
     .user-login .text-field input {
       border: none;
-      height: 24px;
+      height: 26px;
       width: 140px; }
       .user-login .text-field input:first-child {
         margin-left: 0; }
