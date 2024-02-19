@@ -421,7 +421,9 @@
     <Content Include="www\build\styles\Images\icons\arrow-down-s-fill.svg" />
     <Content Include="www\build\styles\Images\icons\contacts-fill.svg" />
     <Content Include="www\build\styles\Images\icons\lock-password-line.svg" />
+    <Content Include="www\build\styles\Images\icons\login-box-fill-color.svg" />
     <Content Include="www\build\styles\Images\icons\login-box-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\logo-login-popup.svg" />
     <Content Include="www\build\styles\Images\icons\reset.svg" />
     <Content Include="www\build\styles\Images\icons\send-plane-fill.svg" />
     <Content Include="www\build\styles\Images\icons\star-fill.svg" />

@@ -56,7 +56,7 @@
 </div>
 
 <div class="modal fade login-dialog" tabindex="-1" role="dialog" id="loginDialog">
-    <div class="modal-dialog " role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-main-content">
                 <div class="modal-header">
@@ -64,34 +64,44 @@
                 </div>
                 <div class="modal-body">
                     <div class="left-login-side">
-                        <img class="modal-logo" src=@(Url.Content($"~/www/build/styles/Images/themes/{siteName}.svg")) alt="logo" />
+                        <img class="modal-logo" src=@(Url.Content($"~/www/build/styles/Images/icons/logo-login-popup.svg")) alt="logo" />
                         <h2 class="logo-text">@Lang.AffiliateProgram</h2>
-                        <h3 class="title-left">@Lang.NotAffiliateMemberYet</h3>
+                        <h3 class="title-center">@Lang.NotAffiliateMemberYet</h3>
                         <p>@string.Format(Lang.SignUpToAffiliateProgram, appSetting.MaxCommission)</p>
-                        <a href="@Url.Content("~/Signup/Index")" role="button" class="btn btn-signup btn-block text-uppercase">@Lang.JoinNow!</a>
+                        <a href="@Url.Content("~/Signup/Index")" role="button" class="btn btn-signup btn-block text-uppercase">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M9.83333 14.1211L8.5 15.4544L7.16667 14.1211H3.83C3.47726 14.1211 3.13897 13.981 2.88955 13.7315C2.64012 13.4821 2.5 13.1438 2.5 12.7911V3.45109C2.5 2.71643 3.09533 2.12109 3.83 2.12109H13.17C13.9047 2.12109 14.5 2.71643 14.5 3.45109V12.7911C14.5 13.1438 14.3599 13.4821 14.1105 13.7315C13.861 13.981 13.5227 14.1211 13.17 14.1211H9.83333ZM4.738 12.1211H12.398C11.9684 11.5034 11.3957 10.9988 10.7287 10.6505C10.0618 10.3022 9.32042 10.1206 8.568 10.1211C7.81558 10.1206 7.07423 10.3022 6.40727 10.6505C5.74032 10.9988 5.16758 11.5034 4.738 12.1211ZM8.5 8.78776C8.80642 8.78776 9.10984 8.72741 9.39293 8.61015C9.67602 8.49288 9.93325 8.32101 10.1499 8.10434C10.3666 7.88767 10.5385 7.63045 10.6557 7.34735C10.773 7.06426 10.8333 6.76084 10.8333 6.45443C10.8333 6.14801 10.773 5.84459 10.6557 5.5615C10.5385 5.27841 10.3666 5.02118 10.1499 4.80451C9.93325 4.58784 9.67602 4.41597 9.39293 4.29871C9.10984 4.18145 8.80642 4.12109 8.5 4.12109C7.88116 4.12109 7.28767 4.36693 6.85008 4.80451C6.4125 5.2421 6.16667 5.83559 6.16667 6.45443C6.16667 7.07327 6.4125 7.66676 6.85008 8.10434C7.28767 8.54193 7.88116 8.78776 8.5 8.78776Z" fill="#967435" />
+                            </svg>
+                            @Lang.JoinNow
+                        </a>
                     </div>
 
                     <div class="login-side" id="dialogUserInput">
                         <h2 class="modal-title">@Lang.AffiliateLogin</h2>
                         <h3 class="title-right">@Lang.WelcomeBack</h3>
-                        <div class="form-group">
-                            <label><span class="mdi mdi-account"></span>@Lang.Username</label>
-                            <input type="text" id="dialogtxtUsername" class="form-control" placeholder="@Lang.Username" />
+
+                        <div class="items validate-group">
+                            <input type="text" id="dialogtxtUsername" class="form-input" placeholder="@Lang.Username" />
                         </div>
-                        <div class="form-group">
-                            <label><span class="mdi mdi-lock"></span>@Lang.Password</label>
-                            <input type="password" id="dialogtxtPassword" class="form-control" placeholder="@Lang.Password" />
+
+                        <div class="items validate-group">
+                            <input type="password" id="dialogtxtPassword" class="form-input" placeholder="@Lang.Password" />
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="dialogtxtValidation" class="form-control captcha-input" placeholder="@Lang.Validation" />
+                        <div class="items validate-group">
+                            <input type="text" id="dialogtxtValidation" class="form-input captcha-input" placeholder="@Lang.Validation" />
                             <div class="validation-value">
                                 <img src="" alt="captcha" id="loginDialogcaptchaImg" />
                             </div>
                         </div>
+                        <button type="button" id="btnDialogLogin" class="btn btn-login-mobile btn-block text-uppercase">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                                <path d="M7.16699 7.45459H3.16699V2.12126C3.16699 1.94445 3.23723 1.77488 3.36225 1.64985C3.48728 1.52483 3.65685 1.45459 3.83366 1.45459H13.167C13.3438 1.45459 13.5134 1.52483 13.6384 1.64985C13.7634 1.77488 13.8337 1.94445 13.8337 2.12126V14.1213C13.8337 14.2981 13.7634 14.4676 13.6384 14.5927C13.5134 14.7177 13.3438 14.7879 13.167 14.7879H3.83366C3.65685 14.7879 3.48728 14.7177 3.36225 14.5927C3.23723 14.4676 3.16699 14.2981 3.16699 14.1213V8.78792H7.16699V10.7879L10.5003 8.12126L7.16699 5.45459V7.45459Z" fill="white" />
+                            </svg>
+                            @Lang.Login
+                        </button>
                         <div class="form-group">
-                            <a href="@Url.Content("~/Password/Index")" class="link-login-popup"><span class="mdi mdi-lock-open"></span> @Lang.ForgetPassword</a>
+                            <a href="@Url.Content("~/Password/Index")" class="link-login-popup"> @Lang.ForgetPassword</a>
                         </div>
-                        <button type="button" id="btnDialogLogin" class="btn btn-login-mobile btn-block text-uppercase">@Lang.Login</button>
                     </div>
                 </div>
             </div>
