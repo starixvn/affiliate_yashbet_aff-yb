@@ -1,59 +1,101 @@
 ﻿body {
-  font-family: 'Open Sans',sans-serif; }
+  font-family: 'Open Sans',sans-serif;
+  margin: 0; }
 
-.main-container {
-  max-width: 90rem;
-  width: 100%;
-  margin: 24px auto; }
-  @media (max-width: 1023px) {
-    .main-container {
-      padding: 0 10px; } }
-  @media (max-width: 768px) {
-    .main-container .logo {
-      text-align: center; } }
+.page-container {
+  max-width: 1224px;
+  padding: 0 12px;
+  margin: 0 auto;
+  width: 100%; }
 
-.um-container {
-  width: 100%;
-  position: relative; }
-  .um-container .um-wrapper {
-    margin-top: 24px; }
-    .um-container .um-wrapper .um-header {
+.um-body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  .um-body .group-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px; }
+    @media (max-width: 767px) {
+      .um-body .group-logo {
+        flex-direction: column;
+        gap: 12px; } }
+    .um-body .group-logo .text-um {
+      font-size: 24px;
       font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 30px;
-      text-transform: capitalize;
-      color: #EA5500;
-      border-bottom: 2px solid #FFD1B6;
-      padding-left: 28px;
-      padding-bottom: 4px; }
-      .um-container .um-wrapper .um-header:before {
-        content: "";
-        background: url("../Images/notify/note_icon.png") no-repeat center center/cover;
-        width: 24px;
-        height: 24px;
-        left: 0;
-        z-index: 1;
-        position: absolute; }
-    .um-container .um-wrapper .message-content {
-      margin-top: 16px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px; }
-      .um-container .um-wrapper .message-content .info {
-        color: #AA3E00; }
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+      max-width: 224px; }
+      @media (max-width: 767px) {
+        .um-body .group-logo .text-um {
+          font-size: 24px;
+          max-width: 100%; } }
+    @media (max-width: 767px) {
+      .um-body .group-logo .main-logo {
+        margin-bottom: 12px; } }
+    .um-body .group-logo img {
+      max-width: 100%;
+      height: auto; }
+  .um-body .um-header-top {
+    margin: 40px 0; }
+  .um-body .um-content {
+    max-width: 800px;
+    margin: 0 auto 70px; }
+    .um-body .um-content .um-wrapper {
+      margin-bottom: 24px;
+      border-radius: 10px;
+      border: 1px solid #AE8F56;
+      background: #FFF;
+      overflow: hidden; }
+      .um-body .um-content .um-wrapper .um-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 10px;
+        background: #E5C589;
+        padding: 6px 16px;
+        overflow: hidden; }
+        .um-body .um-content .um-wrapper .um-header h1 {
+          margin: 0;
+          color: #353E5B;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: normal; }
+        .um-body .um-content .um-wrapper .um-header img {
+          width: 24px;
+          height: 24px; }
+      .um-body .um-content .um-wrapper .message-content {
+        color: #353E5B;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        padding: 6px 16px; }
+        .um-body .um-content .um-wrapper .message-content p {
+          margin-top: 0;
+          margin-bottom: 8px; }
+          .um-body .um-content .um-wrapper .message-content p .um-time {
+            font-weight: 700; }
+          .um-body .um-content .um-wrapper .message-content p a {
+            color: #0064FF;
+            text-decoration: underline; }
+            .um-body .um-content .um-wrapper .message-content p a:hover {
+              color: #0057DD;
+              transition: all .2s ease-in-out; }
 
 .footer {
   text-align: center;
-  padding: 21px 0 !important;
   margin-top: auto;
-  background: #001435; }
-  .footer .footer-text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #FAFAFA; }
-    @media only screen and (max-width: 768px) {
-      .footer .footer-text {
-        font-size: 12px;
-        line-height: 18px; } }
+  background: #222328; }
+  .footer-text {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #E5C589;
+    padding: 16px 0; }
+  .footer .line-footer {
+    background: linear-gradient(87deg, #A7804D 2.45%, #F6E3BD 51.19%, #A7804D 98.02%);
+    display: block;
+    height: 12px; }
