@@ -21,6 +21,7 @@
                 var hrefTarget = $(this).attr("href");
 
                 _me.handelAnimate(hrefTarget);
+                _me.handleOpenMenuContent(hrefTarget);
                 
                 setTimeout(function () {
                     $('#leftmenu').modal('hide');
@@ -105,6 +106,14 @@
                 $('#left-panel-menu').stop().animate({
                     scrollTop: newScrollTop
                 }, 400);
+            }
+        },
+
+        handleOpenMenuContent: function (hrefTarget) {
+            var btnToggleMenuContent = $(`${hrefTarget} .button-toggle`);
+
+            if (!btnToggleMenuContent.hasClass('open')) {
+                btnToggleMenuContent.toggleClass('open').parent().next().slideToggle(300);
             }
         }
     };
