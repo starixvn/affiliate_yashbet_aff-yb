@@ -204,14 +204,42 @@
         margin: 0;
         display: block;
         max-height: 45rem;
+        width: auto;
 
         @media only screen and (max-height: 500px) {
             max-height: 29rem;
         }
     }
 
-    .navbar-nav{
-        padding-top : 0;
+    .navbar-nav {
+        padding-top: 0;
+    }
+
+    .modal-content {
+        background: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .menu {
+        overflow: inherit;
+        max-height: 100%;
+    }
+
+    .btn-close {
+        background: none;
+        outline: none;
+        border: none;
+        padding: 0;
+        height: 25px;
+        width: 30px;
+    }
+
+    .heading-left-panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 0 13px 16px !important;
     }
 }
 

@@ -2596,13 +2596,37 @@ input[type="radio"], input[type="checkbox"] {
   top: auto;
   margin: 0;
   display: block;
-  max-height: 45rem; }
+  max-height: 45rem;
+  width: auto; }
   @media only screen and (max-height: 500px) {
     .leftmenu-dialog .left-panel {
       max-height: 29rem; } }
 
 .leftmenu-dialog .navbar-nav {
   padding-top: 0; }
+
+.leftmenu-dialog .modal-content {
+  background: none;
+  box-shadow: none;
+  border: none; }
+
+.leftmenu-dialog .menu {
+  overflow: inherit;
+  max-height: 100%; }
+
+.leftmenu-dialog .btn-close {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  height: 25px;
+  width: 30px; }
+
+.leftmenu-dialog .heading-left-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 0 13px 16px !important; }
 
 .overflow-left-panel {
   overflow: hidden; }
