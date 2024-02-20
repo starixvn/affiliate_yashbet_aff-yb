@@ -26,7 +26,10 @@
             <div class="page-container">
                 <div class="group-logo">
                     <div class="main-logo">
-                        <img class="logo" src="~/www/build/styles/Images/notify/maintenance-yb.svg" alt="The logo" />
+                        <img class="logo" src=@(Url.Content($"~/www/build/styles/Images/notify/maintenance-{siteName}.svg")) alt="The logo" />
+                    </div>
+                    <div class="logo-um">
+                        <img class="logo" src="~/www/build/styles/Images/notify/banner-um.svg" alt="The banner" />
                     </div>
                     <div class="text-um">
                         Under Maintenance
@@ -39,7 +42,7 @@
                 @*EN*@
                 <div class="um-wrapper">
                     <div class="um-header">
-                        <img src="~/www/build/styles/Images/notify/eng.png" alt="eng" />
+                        <img src="~/www/build/styles/Images/icons/flags/England.png" alt="England" />
                         <h1>Under Maintenance</h1>
                     </div>
 
@@ -47,49 +50,42 @@
                         <p>We are having server maintenance, website will be unavailable until <span class="um-time info">@to (HK Time GMT +8).</span></p>
                         <p>Please accept our apologies for the inconvenience caused!</p>
                         <p>
-                            To reach customer service, please <a class="info" href="https://secure.livechatinc.com/licence/7903821/open_chat.cgi?groups=1" target="_blank">click here</a> or email to
-                            <a class="info" href="mailto:support.my@12csd.com?subject=Enquiries%20sent%20from%2012BET%20website">
-                                support.my@12csd.com
-                            </a>
+                            To reach customer service, please contact CSD
                         </p>
                     </div>
                 </div>
-                @*CS*@
+
+                @*Hindi*@
                 <div class="um-wrapper">
                     <div class="um-header">
-                        <img src="~/www/build/styles/Images/notify/hi.png" alt="cs" />
-                        <h1>伺服器维护</h1>
+                        <img src="~/www/build/styles/Images/icons/flags/Hindi.png" alt="Hindi" />
+                        <h1>रखरखाव जारी</h1>
                     </div>
 
                     <div class="message-content">
-                        <p>本公司正进行伺服器维护，时间至 <span class="um-time">@to (HK Time GMT +8).</span></p>
-                        <p>所有网页将无法登入，不便之处有请见谅！</p>
+                        <p>हम सर्वर रखरखाव कर रहे हैं, वेबसाइट तब तक अनुपलब्ध रहेगी जब तक <span class="um-time info">@to (एचके टाइम जीएमटी +8).</span></p>
+                        <p>असुविधा के लिए कृपया हमारी क्षमायाचना स्वीकार करें!</p>
                         <p>
-                            如需要在线帮助，有请<a class="info" href="https://secure.livechatinc.com/licence/7903821/open_chat.cgi?groups=2" target="_blank">点击这里</a>或邮件至
-                            <a class="info" href="mailto:support.cs@12csd.com?subject=Enquiries%20sent%20from%2012BET%20website">
-                                support.cs@12csd.com
-                            </a>
+                            ग्राहक सेवा तक पहुँचने के लिए, कृपया सीएसडी से संपर्क करें
                         </p>
                     </div>
                 </div>
 
-                <div class="um-wrapper">
+                @*Banladeshi*@
+                @*<div class="um-wrapper">
                     <div class="um-header">
-                        <img src="~/www/build/styles/Images/notify/ba.png" alt="cs" />
-                        <h1>伺服器维护</h1>
+                        <img src="~/www/build/styles/Images/icons/flags/Bangladeshi.png" alt="Bangladesh" />
+                        <h1>রক্ষণাবেক্ষণের অধীনে</h1>
                     </div>
 
                     <div class="message-content">
-                        <p>本公司正进行伺服器维护，时间至 <span class="um-time">@to (HK Time GMT +8).</span></p>
-                        <p>所有网页将无法登入，不便之处有请见谅！</p>
+                        <p>আমরা সার্ভার রক্ষণাবেক্ষণ করছি, ওয়েবসাইট পর্যন্ত অনুপলব্ধ হবে <span class="um-time info">@to (HK সময় GMT +8)</span></p>
+                        <p>সৃষ্ট অসুবিধার জন্য আমাদের ক্ষমাপ্রার্থী গ্রহণ করুন!</p>
                         <p>
-                            如需要在线帮助，有请<a class="info" href="https://secure.livechatinc.com/licence/7903821/open_chat.cgi?groups=2" target="_blank">点击这里</a>或邮件至
-                            <a class="info" href="mailto:support.cs@12csd.com?subject=Enquiries%20sent%20from%2012BET%20website">
-                                support.cs@12csd.com
-                            </a>
+                            গ্রাহক সেবা পেতে, CSD-এর সাথে যোগাযোগ করুন
                         </p>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
 
@@ -97,7 +93,7 @@
             <div class="line-footer"></div>
             <div class="page-container">
                 <div class="footer-text text-center">
-                    Copyright © 2008 - 2023 | yashbet. All Rights Reserved | 18+
+                    @string.Format(SiteFriendlyNameHelper.ReplaceB2C(Lang.Copyright), DateTime.Now.Year)
                 </div>
             </div>
         </div>

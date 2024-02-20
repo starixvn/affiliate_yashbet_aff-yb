@@ -1787,4 +1787,7 @@ B2C合作伙伴团队。&lt;br /&gt;&lt;br /&gt;
   <data name="Forgot" xml:space="preserve">
     <value>忘记?</value>
   </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>常见疑问</value>
+  </data>
 </root>

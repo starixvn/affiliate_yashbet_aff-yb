@@ -37,7 +37,7 @@
         },
 
         handleActiveLeftMenuByScroll: function () {
-            const sections = $("section.info-group");
+            const sections = $("section.info-question");
 
             if (sections.length) {
                 let theFirstMenuId = sections[0].getAttribute("id");

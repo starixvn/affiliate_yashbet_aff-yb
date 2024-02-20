@@ -2025,4 +2025,7 @@
   <data name="Forgot" xml:space="preserve">
     <value>ភ្លេច?</value>
   </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>សំណួរ​ដែលគេ​ច្រើន​ជាងគេ</value>
+  </data>
 </root>

@@ -39,7 +39,7 @@ var LeftMenuPanel = (function ($) {
         },
 
         handleActiveLeftMenuByScroll: function handleActiveLeftMenuByScroll() {
-            var sections = $("section.info-group");
+            var sections = $("section.info-question");
 
             if (sections.length) {
                 var theFirstMenuId = sections[0].getAttribute("id");

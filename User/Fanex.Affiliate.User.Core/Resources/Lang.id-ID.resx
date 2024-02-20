@@ -1770,4 +1770,7 @@
   <data name="Forgot" xml:space="preserve">
     <value>Lupa?</value>
   </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>Tanya Jawab</value>
+  </data>
 </root>

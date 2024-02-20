@@ -15,14 +15,14 @@
     //  "outputFile": "www/build/styles/css/main-after-login.css",
     //  "inputFile": "www/source/styles/scss/main-after-login.scss"
     //},
-    //{
-    //  "outputFile": "www/build/js/left-menu-panel.js",
-    //  "inputFile": "www/source/js/pages/left-menu-panel.js"
-    //},
-    //{
-    //  "outputFile": "www/build/js/left-menu-panel-has-sub.js",
-    //  "inputFile": "www/source/js/pages/left-menu-panel-has-sub.js"
-    //},
+    {
+      "outputFile": "www/build/js/left-menu-panel.js",
+      "inputFile": "www/source/js/pages/left-menu-panel.js"
+    },
+    {
+      "outputFile": "www/build/js/left-menu-panel-has-sub.js",
+      "inputFile": "www/source/js/pages/left-menu-panel-has-sub.js"
+    },
     //{
     //  "outputFile": "www/build/styles/css/my-account.css",
     //  "inputFile": "www/source/styles/pages/my-account.scss"

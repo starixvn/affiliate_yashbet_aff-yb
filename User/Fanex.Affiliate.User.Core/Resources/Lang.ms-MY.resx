@@ -2012,4 +2012,7 @@ Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan
   <data name="Forgot" xml:space="preserve">
     <value>Lupa?</value>
   </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>SOALAN LAZIM</value>
+  </data>
 </root>

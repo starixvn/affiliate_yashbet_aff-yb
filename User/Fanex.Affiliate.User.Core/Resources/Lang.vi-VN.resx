@@ -2046,4 +2046,7 @@
   <data name="Forgot" xml:space="preserve">
     <value>Quên?</value>
   </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>Câu hỏi thường gặp</value>
+  </data>
 </root>

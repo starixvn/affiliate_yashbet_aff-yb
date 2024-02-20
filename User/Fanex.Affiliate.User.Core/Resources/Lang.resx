@@ -2117,4 +2117,7 @@
   <data name="Forgot" xml:space="preserve">
     <value>Forgot?</value>
   </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
 </root>

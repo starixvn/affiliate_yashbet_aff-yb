@@ -1770,4 +1770,7 @@
   <data name="Forgot" xml:space="preserve">
     <value>ลืม?</value>
   </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>SOALAN LAZIM</value>
+  </data>
 </root>

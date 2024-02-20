@@ -5,14 +5,8 @@ var Layout = (function ($) {
     var isOpenMenuMobile = false;
     var isTriggerClick = false;
 
-    function initSlider() {
-        //var $mainBanner = $('#mainBanner');
-        //$mainBanner.carousel();
-    }
-
     var _me = {
         initialize: function initialize() {
-            initSlider();
             _me.registerAjaxHandlerError();
             _me.initEvent();
             _me.renderHotNews();

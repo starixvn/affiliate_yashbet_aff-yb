@@ -1969,6 +1969,15 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Frequently Asked Questions.
+        /// </summary>
+        public static string FaqsTitle {
+            get {
+                return ResourceManager.GetString("FaqsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to FDM.
         /// </summary>
         public static string FDM {

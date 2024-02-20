@@ -1,8 +1,9 @@
 ﻿@model Fanex.Affiliate.User.Core.ViewModels.RevenueSharingStructureViewModel
 
-<section class="info-group" id="WhatWeHave">
+<section class="info-question" id="WhatWeHave">
     <div class="title">
         <span class="text">@Lang.WhatWeHave</span>
+        <span class="button-toggle"></span>
     </div>
     <ul>
         <li class="text">
@@ -16,9 +17,10 @@
         </li>
     </ul>
 </section>
-<section class="info-group" id="WhatWeOffer">
+<section class="info-question" id="WhatWeOffer">
     <div class="title">
         <span class="text">@Lang.WhatWeOffer</span>
+        <span class="button-toggle"></span>
     </div>
     <ul>
         <li class="text">
@@ -35,9 +37,10 @@
         </li>
     </ul>
 </section>
-<section class="info-group" id="OurPlan">
+<section class="info-question" id="OurPlan">
     <div class="title">
         <span class="text">@Lang.OurPlan</span>
+        <span class="button-toggle"></span>
     </div>
     <p class="text">
         आपके रेवनू शेयर में दो भाग होते हैं: (i) आपके निर्दिष्ट खिलाड़ी के सट्टेबाजी के नुकसान से और (ii) आपके संदर्भित सहयोगी के रेवनू शेयर से:
@@ -48,7 +51,7 @@
             @{ Html.RenderPartial("~/Views/RevenueSharingStructure/_RevenueShareTable.cshtml", Model.MaxCommission); }
             <ul>
                 <li class="text" style="margin-top: 15px;">
-                    <strong>कंपनी का शुद्ध लाभ:</strong> आपके द्वारा नोव88 के लिए अनुशंसित सभी खिलाड़ियों का मासिक नुकसान।
+                    <strong>कंपनी का शुद्ध लाभ:</strong> आपके द्वारा YashBet के लिए अनुशंसित सभी खिलाड़ियों का मासिक नुकसान।
                 </li>
                 <li class="text">
                     <strong>सक्रिय खिलाड़ी:</strong> वे सदस्य जिन्होंने महीने में कम से कम एक (1) बेट लगाई हो।
@@ -103,9 +106,10 @@
         </li>
     </ol>
 </section>
-<section class="info-group" id="RevenueSharePayoutExample">
+<section class="info-question" id="RevenueSharePayoutExample">
     <div class="title">
         <span class="text"><i>@Lang.RevenueSharePayoutExample</i></span>
+        <span class="button-toggle"></span>
     </div>
     <p class="text">
         <i>चित्र 1:</i> आपको यह दिखाने के लिए एक उदाहरण कि आपके रेफ़र किए गए खिलाड़ियों से अर्जित आपके रेवनू शेयर की गणना कैसे की जाती है
@@ -114,7 +118,7 @@
     <p class="text">
         <i>चित्र 2:</i> आपको यह दिखाने के लिए एक उदाहरण कि आपके संदर्भित सहयोगियों (और उनके उप-संबद्धों) से अर्जित आपकी रेवनू शेयर की गणना कैसे की जाती है
     </p>
-    <div class="img-support" style="max-width: 600px; margin: 15px auto;">
+    <div class="img-support" style="max-width: 431px; margin: 15px auto;">
         <img class="img-responsive" src="~/www/build/styles/Images/revenue-share-structure/revenue_share_hierarchy.@(Model.CurrentLanguage).png?v=174504" alt="hierarchy banner" />
     </div>
     <p class="text">
@@ -135,16 +139,17 @@
         <strong>=></strong> महीने के लिए आपका कुल रेवनू शेयर होगा: 58,050 + 7,800 = <strong>USD 65,850</strong>
     </p>
 </section>
-<section class="info-group" id="HowWePay">
+<section class="info-question" id="HowWePay">
     <div class="title">
         <span class="text">@Lang.HowWePay</span>
+        <span class="button-toggle"></span>
     </div>
     <ul>
         <li class="text">
-            महीने में एक बार, आपके नोव88 प्लेयर खाते (USD, THB, MYR, IDR, INR, CNY, BDT और VND) के माध्यम से और न्यूनतम निकासी राशि USD 100 है। अन्य मुद्राओं के लिए नोव88 एफिलिएट प्रोग्राम टीम से अनुरोध करने की आवश्यकता है।
+            महीने में एक बार, आपके YashBet प्लेयर खाते (USD, THB, MYR, IDR, INR, CNY, BDT और VND) के माध्यम से और न्यूनतम निकासी राशि USD 100 है। अन्य मुद्राओं के लिए YashBet एफिलिएट प्रोग्राम टीम से अनुरोध करने की आवश्यकता है।
         </li>
         <li class="text">
-            उसी महीने में कोई दूसरा निकासी अनुरोध नोव88 एफिलिएट प्रोग्राम टीम के अनुमोदन के अधीन होगा।
+            उसी महीने में कोई दूसरा निकासी अनुरोध YashBet एफिलिएट प्रोग्राम टीम के अनुमोदन के अधीन होगा।
         </li>
     </ul>
 </section>

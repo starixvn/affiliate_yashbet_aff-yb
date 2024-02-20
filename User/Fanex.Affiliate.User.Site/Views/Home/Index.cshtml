@@ -6,10 +6,8 @@
 @model Fanex.Affiliate.User.Core.ViewModels.HomeViewModel
 
 @{
-    var desktopBannerPath = Url.Content($"~/www/build/styles/Images/home/main-banners/main.desktop.{Model.Language}");
-    var mobileBannerPath = Url.Content($"~/www/build/styles/Images/home/main-banners/main.mobile.{Model.Language}");
-    var advMobile = Url.Content($"~/www/build/styles/Images/apply/3step.mobile.{Model.Language}");
-    var advDesktop = Url.Content($"~/www/build/styles/Images/apply/3step.desktop.{Model.Language}");
+    var desktopApplyPath = Url.Content($"~/www/build/styles/Images/home/apply/desktop.{Model.Language}.png");
+    var mobileApplyPath = Url.Content($"~/www/build/styles/Images/home/apply/mobile.{Model.Language}.png");
 }
 
 @section styles{
@@ -63,8 +61,8 @@
     <div class="page-container">
         <div class="block apply-block">
             <div class="image-apply">
-                <img src="~/www/build/styles/Images/home/aplly.png" alt="aplly" class="img-responsive show-pc" />
-                <img src="~/www/build/styles/Images/home/aplly-mb.png" alt="aplly" class="img-responsive show-mobile" />
+                <img src="@desktopApplyPath" alt="aplly" class="img-responsive show-pc" />
+                <img src="@mobileApplyPath" alt="aplly" class="img-responsive show-mobile" />
             </div>
             <div class="text-apply">
                 @SiteFriendlyNameHelper.ReplaceB2C(Lang.AsAOneTwoBetYouWillEarnCommission)
