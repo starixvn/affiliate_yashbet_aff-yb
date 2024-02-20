@@ -11,7 +11,9 @@
     border-bottom-right-radius: 0;
 }*/
 .table {
-  overflow: hidden; }
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #AE8F56; }
   @media (max-width: 767px) {
     .table.table-game {
       border: none; } }
@@ -59,6 +61,8 @@
             background: none; } }
       .table .game-list tr:nth-child(even) {
         background: #FFF1DE !important; }
+        .table .game-list tr:nth-child(even) .left-menu-title {
+          background: #D1B37D; }
       @media (max-width: 768px) {
         .table .game-list tr:first-child td:first-child {
           border: none; } }

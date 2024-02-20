@@ -17,6 +17,8 @@
 
 .table {
     overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #AE8F56;
 
     &.table-game {
         @include Mobile {
@@ -86,6 +88,10 @@
 
             &:nth-child(even) {
                 background: #FFF1DE !important;
+
+                .left-menu-title {
+                    background: #D1B37D;
+                }
             }
 
             &:first-child td:first-child {

@@ -50,7 +50,7 @@
     grid-gap: 2.5rem;
     justify-content: center;
     max-width: 960px;
-    margin: 116px auto 52px;
+    margin: 94px auto 52px;
 
     @include Mobile {
         grid-template-columns: repeat(1, 1fr);

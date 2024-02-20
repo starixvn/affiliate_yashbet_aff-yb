@@ -2455,7 +2455,8 @@ input[type="radio"], input[type="checkbox"] {
   display: block;
   border: 1px solid #D1B37D;
   border-radius: 10px;
-  overflow: auto; }
+  overflow: auto;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2); }
   @media screen and (max-width: 1024px) {
     .left-panel {
       display: none; } }
@@ -2535,7 +2536,7 @@ input[type="radio"], input[type="checkbox"] {
           .left-panel .menu .navbar-nav li .sub-menu li a {
             display: block;
             text-decoration: none;
-            padding: .9rem 0 1.6rem; }
+            padding: 8px 0; }
             .left-panel .menu .navbar-nav li .sub-menu li a.active {
               font-weight: 700;
               background: none; }
