@@ -14,12 +14,13 @@
     border-bottom-right-radius: 0;
 }*/
 
+.table-game {
+    border-radius: 10px;
+    border: 1px solid #AE8F56;
+}
 
 .table {
     overflow: hidden;
-    border-radius: 10px;
-    border: 1px solid #AE8F56;
-
     &.table-game {
         @include Mobile {
             border: none;

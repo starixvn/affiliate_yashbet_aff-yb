@@ -10,10 +10,12 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }*/
-.table {
-  overflow: hidden;
+.table-game {
   border-radius: 10px;
   border: 1px solid #AE8F56; }
+
+.table {
+  overflow: hidden; }
   @media (max-width: 767px) {
     .table.table-game {
       border: none; } }
