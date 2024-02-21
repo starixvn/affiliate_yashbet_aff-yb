@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Functions SiteId="2000003" SiteName="YB">
   <Function Name="Aff-Link">
-    <Setting Key="Aff_AffiliateInsClickStatistics" SpName="Aff_ClickStatistics_Ins" DbName="DBAFF_Affiliate_YashBet_bodbAdminNet" Plain="0" />
-    <Setting Key="Aff_Get_GeneralAffInfo" SpName="Aff_Get_GeneralAffInfo" DbName="DBAFF_Affiliate_YashBet_bodbAdminNet" Plain="0" />
+    <Setting Key="Aff_AffiliateInsClickStatistics" SpName="Aff_ClickStatistics_Ins" DbName="DBAFF.Affiliate_YashBet.bodbAdminNet" Plain="0" />
+    <Setting Key="Aff_Get_GeneralAffInfo" SpName="Aff_Get_GeneralAffInfo" DbName="DBAFF.Affiliate_YashBet.bodbAdminNet" Plain="0" />
   </Function>
 </Functions>
