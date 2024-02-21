@@ -2,6 +2,9 @@
 body {
     font-family: 'Open Sans',sans-serif;
     margin: 0;
+    display : flex;
+    flex-direction : column;
+    height : 100vh;
 }
 
 .page-container {
@@ -9,116 +12,113 @@ body {
     padding: 0 12px;
     margin: 0 auto;
     width : 100%;
+    @include Mobile{
+        width : auto;
+    }
 }
-.um-body {
+.group-logo {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
 
-    .group-logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
+    @include Mobile {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .text-um {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        text-transform: uppercase;
+        max-width: 224px;
 
         @include Mobile {
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .text-um {
             font-size: 24px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: normal;
-            text-transform: uppercase;
-            max-width: 224px;
-
-            @include Mobile {
-                font-size: 24px;
-                max-width: 100%;
-            }
-        }
-
-        .main-logo {
-            @include Mobile {
-                margin-bottom: 12px;
-            }
-        }
-
-        img {
             max-width: 100%;
-            height: auto;
         }
     }
 
-    .um-header-top {
-        margin: 40px 0;
+    .main-logo {
+        @include Mobile {
+            margin-bottom: 12px;
+        }
     }
 
-    .um-content {
-        max-width: 800px;
-        margin: 0 auto 70px;
-        .um-wrapper {
-            margin-bottom: 24px;
-            border-radius: 10px;
-            border: 1px solid #AE8F56;
-            background: #FFF;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.um-header-top {
+    margin: 40px 0;
+}
+
+.um-content {
+    max-width: 800px;
+    margin: 0 auto 70px;
+
+    .um-wrapper {
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #AE8F56;
+        background: #FFF;
+        overflow: hidden;
+
+        .um-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            background: #E5C589;
+            padding: 6px 16px;
             overflow: hidden;
 
-            .um-header {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 10px;
-                background: #E5C589;
-                padding: 6px 16px;
-                overflow: hidden;
-
-                h1 {
-                    margin: 0;
-                    color: #353E5B;
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: normal;
-                }
-
-                img {
-                    width: 24px;
-                    height: 24px;
-                }
-            }
-
-            .message-content {
+            h1 {
+                margin: 0;
                 color: #353E5B;
                 font-size: 16px;
-                font-weight: 500;
+                font-weight: 700;
                 line-height: normal;
-                padding: 6px 16px;
+            }
 
-                p {
-                    margin-top: 0;
-                    margin-bottom: 8px;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
 
-                    .um-time {
-                        font-weight: 700;
-                    }
+        .message-content {
+            color: #353E5B;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+            padding: 6px 16px;
 
-                    a {
-                        color: #0064FF;
-                        text-decoration: underline;
+            p {
+                margin-top: 0;
+                margin-bottom: 8px;
 
-                        &:hover {
-                            color: #0057DD;
-                            transition: all .2s ease-in-out;
-                        }
+                .um-time {
+                    font-weight: 700;
+                }
+
+                a {
+                    color: #0064FF;
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: #0057DD;
+                        transition: all .2s ease-in-out;
                     }
                 }
             }
         }
     }
 }
-
 .footer {
     text-align: center;
     margin-top: auto;

@@ -28,7 +28,7 @@
       .page-notify ul li .text-lang {
         display: flex;
         align-items: center;
-        padding: 6px 12px; }
+        padding: 12px; }
       .page-notify ul li:nth-child(odd) {
         background: #fff; }
       .page-notify ul li:nth-child(even) {
@@ -49,6 +49,9 @@
 .content-page {
   max-width: 800px;
   margin: 40px auto; }
+  @media (max-width: 767px) {
+    .content-page {
+      margin: 22px auto; } }
 
 .img-top-notify img {
   margin: 0 auto; }

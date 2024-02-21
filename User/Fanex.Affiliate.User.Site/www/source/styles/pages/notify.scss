@@ -39,7 +39,7 @@
             .text-lang {
                 display: flex;
                 align-items: center;
-                padding: 6px 12px;
+                padding: 12px;
             }
 
             &:nth-child(odd) {
@@ -74,6 +74,10 @@
 .content-page {
     max-width: 800px;
     margin: 40px auto;
+
+    @include Mobile {
+        margin: 22px auto;
+    }
 }
 
 .img-top-notify {
