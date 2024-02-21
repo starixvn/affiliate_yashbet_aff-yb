@@ -136,7 +136,7 @@ var LeftMenuPanel = (function ($) {
             var btnToggleMenuContent = $(hrefTarget + " .button-toggle");
 
             if (!btnToggleMenuContent.hasClass('open')) {
-                btnToggleMenuContent.toggleClass('open').parent().next().slideToggle(300);
+                btnToggleMenuContent.trigger('click');
             }
         }
     };
