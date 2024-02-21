@@ -410,9 +410,9 @@
     <Content Include="www\build\styles\Images\contact-us\vector.svg" />
     <Content Include="www\build\styles\Images\contact-us\whatsapp.svg" />
     <Content Include="www\build\styles\Images\home\apply\desktop.hi-IN.png" />
+    <Content Include="www\build\styles\Images\home\apply\desktop.en-US.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.en-US.png" />
-    <Content Include="www\build\styles\Images\home\apply\desktop.en-US.png" />
     <Content Include="www\build\styles\Images\home\box.svg" />
     <Content Include="www\build\styles\Images\home\main-banners\banner-mb-1.jpg" />
     <Content Include="www\build\styles\Images\home\main-banners\banner-pc-1.jpg" />
@@ -441,6 +441,11 @@
     <Content Include="www\build\styles\Images\products\rng-keno.png" />
     <Content Include="www\build\styles\Images\products\sportbook.png" />
     <Content Include="www\build\styles\Images\products\virtual-sport.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.en-US.jpg" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.hi-IN.jpg" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.bn-BD.jpg" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.bn-BD.jpg" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.hi-IN.jpg" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.hi-IN.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.bn-BD.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.en-US.png" />
@@ -791,12 +796,7 @@
     <Content Include="www\build\styles\Images\products\product.desktop.hi-IN.jpg" />
     <Content Include="www\build\styles\Images\products\product.mobile.en-US.jpg" />
     <Content Include="www\build\styles\Images\products\product.mobile.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.bn-BD.jpg" />
     <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.en-US.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.en-US.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.hi-IN.jpg" />
     <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />
     <Content Include="www\build\styles\Images\themes\yb.png" />
     <Content Include="www\source\js\layout-after-login.js" />

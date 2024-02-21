@@ -19,11 +19,13 @@
 }
 
 <div class="banner">
-    <picture>
-        <source media="(max-width:480px)" srcset="@(mobileBannerSrc)" type="image/jpeg" />
-        <source srcset="@(orgBannerSrc)" type="image/jpeg" />
-        <img class="img-item img-responsive" src="@(orgBannerSrc)" alt="@Lang.Promotion" />
-    </picture>
+    <a href="~/Signup/Index">
+        <picture>
+            <source media="(max-width:480px)" srcset="@(mobileBannerSrc)" type="image/jpeg" />
+            <source srcset="@(orgBannerSrc)" type="image/jpeg" />
+            <img class="img-item img-responsive" src="@(orgBannerSrc)" alt="@Lang.Promotion" />
+        </picture>
+    </a>
     @*<div class="postion-button">
             <a class="custom-button" href="~/Signup/Index">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -41,11 +43,12 @@
                     <span class="text">@Lang.Promotion</span>
                 </h2>
             </div>
+
             <div class="main-content">
-                <div class="promotion-text">
+                @*<div class="promotion-text">
                     <p>Above all, this online casino is highly geared to offer safe and secured gambling venue. Each game interface provides visually satisfying aesthetics and unique design elements that immerse players into the revolutionized gameplay.</p>
                     <p>We are very pleased to welcome everyone to join through Yashbet affiliate program. Earn as much revenue share as you can from all Yashbet products.</p>
-                </div>
+                </div>*@
                 @Html.RenderPartialByLanguage("~/Views/Promotion/_Content", Model.CurrentLanguage)
                 @*<div class="count-down">
                 <div class="count-down-content">
