@@ -753,6 +753,18 @@ input[type="checkbox"], input[type="radio"] {
   .login-after .btn-signup:hover {
     color: #333; }
 
+.after-login .menu-main {
+  margin: 0; }
+
+.after-login header {
+  padding: 0 12px; }
+  @media (max-width: 767px) {
+    .after-login header {
+      padding: 0; } }
+
+.after-login .language-selection {
+  padding: 0 10px; }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .menu.navbar-collapse {
     white-space: nowrap;
