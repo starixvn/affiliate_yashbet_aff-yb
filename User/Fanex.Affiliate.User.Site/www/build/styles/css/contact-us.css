@@ -64,6 +64,9 @@
   display: block;
   margin-bottom: 52px; }
 
+.group-title {
+  margin-bottom: 24px; }
+
 .page-heading {
   margin-bottom: 12px; }
 
@@ -81,7 +84,10 @@
     .img-contact {
       margin-bottom: 24px; } }
   .img-contact img {
-    margin: 28px auto 24px; }
+    margin: 24px auto; }
+    @media (max-width: 767px) {
+      .img-contact img {
+        max-width: 215px; } }
 
 .date-time-info {
   padding: 0; }
@@ -90,23 +96,19 @@
     font-size: 20px;
     line-height: normal;
     text-transform: uppercase; }
-    @media (max-width: 767px) {
-      .date-time-info p {
-        font-size: 16px; } }
 
 .grid-contact-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2.5rem;
+  grid-gap: 12px;
   justify-content: center;
   max-width: 960px;
-  margin: 94px auto 52px; }
+  margin: 70px auto 52px; }
   @media (max-width: 767px) {
     .grid-contact-info {
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 7rem;
-      margin: 82px auto 52px;
-      padding: 0 24px; } }
+      grid-template-columns: repeat(1, auto);
+      grid-gap: 16px;
+      margin: 20px auto 52px; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     .grid-contact-info {
       grid-template-columns: repeat(3, auto); } }
@@ -122,6 +124,16 @@
       top: 0;
       right: 50%;
       transform: translate(50%, -50%); }
+      @media (max-width: 767px) {
+        .grid-contact-info .contact-items .icon-social {
+          transform: unset;
+          position: unset;
+          padding: 10px;
+          border: 3px solid #fff; } }
+      @media (max-width: 767px) {
+        .grid-contact-info .contact-items .icon-social img {
+          width: 26px;
+          height: 26px; } }
     .grid-contact-info .contact-items .info-social {
       list-style: none;
       padding: 60px 10px 12px;
@@ -133,16 +145,24 @@
       text-align: center;
       border-radius: 10px;
       justify-content: center; }
-      .grid-contact-info .contact-items .info-social li span {
+      @media (max-width: 767px) {
+        .grid-contact-info .contact-items .info-social {
+          padding: 12px;
+          justify-content: flex-start;
+          text-align: left; } }
+      .grid-contact-info .contact-items .info-social .contact-detail span {
         font-size: 28px;
         font-weight: 700;
         line-height: normal;
         display: block; }
-      .grid-contact-info .contact-items .info-social li a {
+        @media (max-width: 767px) {
+          .grid-contact-info .contact-items .info-social .contact-detail span {
+            font-size: 24px; } }
+      .grid-contact-info .contact-items .info-social .contact-detail a {
         font-size: 16px;
         font-weight: 700;
         line-height: normal;
         color: #5B91E4; }
         @media (min-width: 768px) and (max-width: 1023px) {
-          .grid-contact-info .contact-items .info-social li a {
+          .grid-contact-info .contact-items .info-social .contact-detail a {
             font-size: 13px; } }
