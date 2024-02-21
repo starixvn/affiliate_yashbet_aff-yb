@@ -6,7 +6,6 @@
     border-radius: 5px;
     background: #FFF1DE;
     padding: 5px 0 5px 40px;
-    margin-bottom: 12px;
     position: relative; }
     .info-question .title .text {
       font-size: 22px;
@@ -50,9 +49,13 @@
     border-left: 1px solid #E5C589;
     font-size: 16px;
     font-weight: 400;
-    line-height: normal; }
+    line-height: normal;
+    margin-top: 12px; }
     .info-question .body-result ul, .info-question .body-result ol {
-      margin-left: 8px; }
+      margin-left: 8px;
+      margin-bottom: 0; }
+      .info-question .body-result ul li, .info-question .body-result ol li {
+        margin-bottom: 0; }
 
 .content {
   width: 100% !important; }
