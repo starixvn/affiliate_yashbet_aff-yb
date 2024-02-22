@@ -921,7 +921,12 @@
     <value>Application Form</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>Thank you for submitting your application.&lt;br/&gt;&lt;br/&gt;Your websites and application details will be reviewed by the team at B2C Affiliates to ensure that content is suitable for promoting our products.&lt;br/&gt;&lt;br/&gt;Within 5 days we should be able to provide you with a decision in regard to your application. If you are approved, you will be able to enjoy full access to our affiliate program.&lt;br /&gt;&lt;br /&gt;Best Regards,&lt;br /&gt;&lt;br /&gt;The team at B2C Affiliates&lt;br/&gt;&lt;br/&gt;If you have any question and require any help, please do not hesitate to &lt;a href='{0}'&gt;Contact Us&lt;/a&gt;.</value>
+    <value>Thank you for submitting your application.&lt;br/&gt;
+Your websites and application details will be reviewed by the team at B2C Affiliates to ensure that content is suitable for promoting our products.&lt;br/&gt;
+Within 5 days we should be able to provide you with a decision in regard to your application. If you are approved, you will be able to enjoy full access to our affiliate program.&lt;br/&gt;
+Best Regards,&lt;br/&gt;
+The team at B2C Affiliates&lt;br/&gt;
+If you have any question and require any help, please do not hesitate to &lt;a href='{0}'&gt;Contact Us&lt;/a&gt;.</value>
   </data>
   <data name="RegisteredDate" xml:space="preserve">
     <value>Registration Date</value>
@@ -946,7 +951,7 @@
     <value>Request Payout Successfully!</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>Fields marked &lt;font color="red"&gt;*&lt;/font&gt; must be completed</value>
+    <value>Fields marked &lt;span class="red-color"&gt;*&lt;/span&gt; must be completed</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
@@ -2119,5 +2124,8 @@
   </data>
   <data name="FaqsTitle" xml:space="preserve">
     <value>Frequently Asked Questions</value>
+  </data>
+  <data name="NonDepositedAccount" xml:space="preserve">
+    <value>non-deposited account only</value>
   </data>
 </root>

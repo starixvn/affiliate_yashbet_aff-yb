@@ -126,7 +126,7 @@
                 deleteLabel: resourceLanguage.deleteLabel
             }
 
-            WebSite.handleAddingUrl(lang);
+            WebSite.handleAddingUrl(lang, true);
         },
 
         refreshCaptcha: function () {

@@ -23,12 +23,12 @@
 
 @helper RenderLeftPanel(IDictionary<string, string> menuList)
 {
-<div class="mobile-left-panel">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-        <path d="M7.33333 3.1665H14V4.49984H7.33333V3.1665ZM7.33333 5.83317H11.3333V7.1665H7.33333V5.83317ZM7.33333 9.83317H14V11.1665H7.33333V9.83317ZM7.33333 12.4998H11.3333V13.8332H7.33333V12.4998ZM2 3.1665H6V7.1665H2V3.1665ZM3.33333 4.49984V5.83317H4.66667V4.49984H3.33333ZM2 9.83317H6V13.8332H2V9.83317ZM3.33333 11.1665V12.4998H4.66667V11.1665H3.33333Z" fill="white" />
-    </svg>
-    <span>@Fanex.Affiliate.User.Core.Resources.Lang.ListCategory</span>
-</div>
+    <div class="mobile-left-panel">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+            <path d="M7.33333 3.1665H14V4.49984H7.33333V3.1665ZM7.33333 5.83317H11.3333V7.1665H7.33333V5.83317ZM7.33333 9.83317H14V11.1665H7.33333V9.83317ZM7.33333 12.4998H11.3333V13.8332H7.33333V12.4998ZM2 3.1665H6V7.1665H2V3.1665ZM3.33333 4.49984V5.83317H4.66667V4.49984H3.33333ZM2 9.83317H6V13.8332H2V9.83317ZM3.33333 11.1665V12.4998H4.66667V11.1665H3.33333Z" fill="white" />
+        </svg>
+        <span>@Fanex.Affiliate.User.Core.Resources.Lang.ListCategory</span>
+    </div>
     <div class="left-panel" id="left-panel-menu">
         <div class="menu">
             <div class="heading-left-panel">
@@ -106,23 +106,12 @@
 
 @helper RenderAppContact(string language)
 {
-    const string firstAppName = "Skype";
-    var secondAppContactList = new Dictionary<string, string>
-    {
-        ["en-US"] = "Facebook",
-        ["ms-MY"] = "Facebook",
-        ["zh-CN"] = "QQ",
-        ["zh-TW"] = "QQ",
-        ["vi-VN"] = "Zalo",
-        ["th-TH"] = "Line",
-        ["id-ID"] = "WhatsApp",
-        ["hi-IN"] = "WhatsApp",
-        ["ko-KR"] = "Telegram",
-        ["ja-JP"] = "Facebook"
-    };
+    var firstAppName = Fanex.Affiliate.User.Core.Constants.AppContact.FirstAppContactName;
+    var secondAppContactList = Fanex.Affiliate.User.Core.Constants.AppContact.SecondAppContactList;
+
     var hasTwoContactApp = secondAppContactList.ContainsKey(language);
 
-    <div class="form-group">
+    <div class="form-group validate-group">
         <label class="col-sm-3 control-label @(hasTwoContactApp ? string.Empty : "require")">@firstAppName</label>
         @if (hasTwoContactApp)
         {
@@ -140,17 +129,17 @@
             </div>
         }
         <div class="col-sm-offset-3 col-sm-9">
-            <span class="field-validation-valid help-block hide"
+            <span class="field-validation-valid validate-input hide"
                   data-valmsg-for="ContactAppList[@(hasTwoContactApp ? 0 : 1)].Value" data-valmsg-replace="true"></span>
         </div>
         <input type="hidden" name="ContactAppList[0].Name" value="@firstAppName" />
         <input type="hidden" name="ContactAppList[0].Order" value="1" />
     </div>
 
-    if (secondAppContactList.ContainsKey(language))
+    if (hasTwoContactApp)
     {
         var secondAppName = secondAppContactList[language];
-        <div class="form-group">
+        <div class="form-group validate-group">
             <label class="col-sm-3 control-label">@secondAppName</label>
             <div class="col-sm-4">
                 <input type="text" name="ContactAppList[1].Value" id="ContactAppList[1].Value" class="form-control" value=""
@@ -158,11 +147,47 @@
                        data-val-requiredifnullorempty="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
             </div>
             <div class="col-sm-offset-3 col-sm-9">
-                <span class="field-validation-valid help-block hide"
+                <span class="field-validation-valid validate-input hide"
                       data-valmsg-for="ContactAppList[1].Value" data-valmsg-replace="true"></span>
             </div>
             <input type="hidden" name="ContactAppList[1].Name" value="@secondAppName" />
             <input type="hidden" name="ContactAppList[1].Order" value="2" />
         </div>
     }
+}
+
+@helper RenderGenderSignUp()
+{
+    <div class="items validate-group">
+        <label class="custom-label" for="male">@Fanex.Affiliate.User.Core.Resources.Lang.Gender <span class="red-color">*</span></label>
+        <div class="radio-group">
+            <label class="radio-button">
+                <input type="radio" name="Gender" id="male" value="True" checked />
+                <span class="radio-circle"></span>
+                <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Male</span>
+            </label>
+            <label class="radio-button">
+                <input type="radio" name="Gender" id="female" value="False" />
+                <span class="radio-circle"></span>
+                <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Female</span>
+            </label>
+        </div>
+    </div>
+}
+
+@helper RenderAppContactSignUp(string name, int order, string dependentProp)
+{
+    var index = order - 1;
+
+    <div class="items validate-group">
+        <label for="ContactAppList[@index].Value" class="custom-label">@name</label>
+        <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-input" value=""
+               data-val="true" data-val-requiredifnullorempty-dependentprop="@dependentProp"
+               data-val-requiredifnullorempty="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
+        <span class="field-validation-valid validate-input hide"
+              data-valmsg-for="ContactAppList[@index].Value" data-valmsg-replace="true"></span>
+
+        <input type="hidden" name="ContactAppList[@index].Name" value="@name" />
+        <input type="hidden" name="ContactAppList[@index].Order" value="@order" />
+    </div>
 }

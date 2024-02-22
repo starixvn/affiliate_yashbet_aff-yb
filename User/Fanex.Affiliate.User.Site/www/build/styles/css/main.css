@@ -2171,14 +2171,16 @@ input[type="radio"], input[type="checkbox"] {
   align-items: center;
   gap: 12px; }
   .preference-validation .validation-value {
-    cursor: pointer;
-    display: flex;
-    padding: 5px 15px;
-    border-radius: 100px;
-    background: #AE8F56;
-    height: 36px;
-    margin: 0;
-    justify-content: center; }
+    /*        cursor: pointer;
+        display: flex;
+        padding: 5px;
+        border-radius: 100px;
+        background: #AE8F56;
+        height: 36px;
+        margin: 0;
+        justify-content: center;*/ }
+    .preference-validation .validation-value img {
+      height: 36px; }
 
 .form-text {
   margin-bottom: 16px;

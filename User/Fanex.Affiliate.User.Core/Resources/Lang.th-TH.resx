@@ -883,7 +883,12 @@
     <value>แบบฟอร์มการสมัคร</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>ขอบคุณที่ส่งใบสมัครของคุณมายัง พันธมิตร B2C &lt;br/&gt;&lt;br/&gt; เมื่อทางเราได้พิจารณาเนื้อหาเวบไซด์และข้อมูล ว่าเหมาะสม เราจะทำการแจ้งคุณถึงสถานะ &lt;br/&gt;&lt;br/&gt; ภายใน 5 วันทำการ และคุณจะสามารถเข้าใช้ระบบพันธมิตรของเราได้คะ &lt;br/&gt;&lt;br/&gt; ด้วยความนับถือ &lt;br/&gt;&lt;br/&gt; ทีมงานพันธมิตร B2C.&lt;br/&gt;&lt;br/&gt;ถ้าคุณมีคำถามหรือต้องการความช่วยเหลือ กรุณา&lt;a href='{0}'&gt;อย่าลังเลที่จะติดต่อเรา&lt;/a&gt;.</value>
+    <value>ขอบคุณที่ส่งใบสมัครของคุณมายัง พันธมิตร B2C&lt;br/&gt;
+เมื่อทางเราได้พิจารณาเนื้อหาเวบไซด์และข้อมูล ว่าเหมาะสม เราจะทำการแจ้งคุณถึงสถานะ &lt;br/&gt;
+ภายใน 5 วันทำการ และคุณจะสามารถเข้าใช้ระบบพันธมิตรของเราได้คะ &lt;br/&gt;
+ด้วยความนับถือ &lt;br/&gt;
+ทีมงานพันธมิตร B2C.&lt;br/&gt;
+ถ้าคุณมีคำถามหรือต้องการความช่วยเหลือ กรุณา&lt;a href='{0}'&gt;อย่าลังเลที่จะติดต่อเรา&lt;/a&gt;.</value>
   </data>
   <data name="Rejected" xml:space="preserve">
     <value>ถูกปฏิเสธแล้ว</value>
@@ -904,7 +909,7 @@
     <value>การขอจ่ายเงิน เสร็จสมบูรณ์แล้ว</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>กรุณากรอกทุกช่องที่มีเครื่องหมาย &lt;font color="red"&gt;*&lt;/font&gt; ระบุไว้</value>
+    <value>กรุณากรอกทุกช่องที่มีเครื่องหมาย &lt;span class="red-color"&gt;*&lt;/span&gt; ระบุไว้</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>ลบข้อความ</value>
@@ -1772,5 +1777,8 @@
   </data>
   <data name="FaqsTitle" xml:space="preserve">
     <value>SOALAN LAZIM</value>
+  </data>
+  <data name="NonDepositedAccount" xml:space="preserve">
+    <value>ใช้ยูสเซอร์ที่ไม่เคยฝากเงินเท่านั้น</value>
   </data>
 </root>

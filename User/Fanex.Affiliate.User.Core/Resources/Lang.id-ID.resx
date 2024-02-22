@@ -886,7 +886,12 @@
     <value>Formulir Permohonan</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>Terima kasih telah mengajukan permohonan Anda.&lt;br/&gt;&lt;br/&gt;Rincian situs web dan permohonan Anda akan ditinjau ulang oleh tim Afiliasi B2C untuk memastikan bahwa konten dimaksud sesuai untuk mempromosikan produk kami.&lt;br/&gt;&lt;br/&gt;Dalam 5 hari kami akan memberitahu mengenai keputusan atas permohonan Anda. Jika disetujui, Anda dapat menikmati akses penuh ke program afiliasi kami.&lt;br /&gt;&lt;br /&gt;Salam Hormat,&lt;br /&gt;&lt;br /&gt;Tim Afiliasi B2C.&lt;br/&gt;&lt;br/&gt;Jika Anda memiliki pertanyaan dan memerlukan bantuan sila &lt;a href='{0}'&gt;Hubungi Kami&lt;/a&gt;.</value>
+    <value>Terima kasih telah mengajukan permohonan Anda.&lt;br/&gt;
+Rincian situs web dan permohonan Anda akan ditinjau ulang oleh tim Afiliasi B2C untuk memastikan bahwa konten dimaksud sesuai untuk mempromosikan produk kami.&lt;br/&gt;
+Dalam 5 hari kami akan memberitahu mengenai keputusan atas permohonan Anda. Jika disetujui, Anda dapat menikmati akses penuh ke program afiliasi kami.&lt;br/&gt;
+Salam Hormat,&lt;br/&gt;
+Tim Afiliasi B2C.&lt;br/&gt;
+Jika Anda memiliki pertanyaan dan memerlukan bantuan sila &lt;a href='{0}'&gt;Hubungi Kami&lt;/a&gt;.</value>
   </data>
   <data name="Rejected" xml:space="preserve">
     <value>Ditolak</value>
@@ -907,7 +912,7 @@
     <value>Permintaan Pembayaran Berhasil!</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>Kolom yang bertanda &lt;font color="red"&gt;*&lt;/font&gt; harus diisi.</value>
+    <value>Kolom yang bertanda &lt;span class="red-color"&gt;*&lt;/span&gt; harus diisi.</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
@@ -1772,5 +1777,8 @@
   </data>
   <data name="FaqsTitle" xml:space="preserve">
     <value>Tanya Jawab</value>
+  </data>
+  <data name="NonDepositedAccount" xml:space="preserve">
+    <value>akun non-deposit - jika sudah pernah Deposit, silakan buat baru khusus Afiliasi</value>
   </data>
 </root>

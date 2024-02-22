@@ -3346,6 +3346,15 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to non-deposited account only.
+        /// </summary>
+        public static string NonDepositedAccount {
+            get {
+                return ResourceManager.GetString("NonDepositedAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to None.
         /// </summary>
         public static string none {
@@ -4075,7 +4084,12 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thank you for submitting your application.&lt;br/&gt;&lt;br/&gt;Your websites and application details will be reviewed by the team at B2C Affiliates to ensure that content is suitable for promoting our products.&lt;br/&gt;&lt;br/&gt;Within 5 days we should be able to provide you with a decision in regard to your application. If you are approved, you will be able to enjoy full access to our affiliate program.&lt;br /&gt;&lt;br /&gt;Best Regards,&lt;br /&gt;&lt;br /&gt;The team at B2C Affiliates&lt;br/&gt;&lt;br/&gt;If you have any question and require any help, pleas [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Thank you for submitting your application.&lt;br/&gt;
+        ///Your websites and application details will be reviewed by the team at B2C Affiliates to ensure that content is suitable for promoting our products.&lt;br/&gt;
+        ///Within 5 days we should be able to provide you with a decision in regard to your application. If you are approved, you will be able to enjoy full access to our affiliate program.&lt;br/&gt;
+        ///Best Regards,&lt;br/&gt;
+        ///The team at B2C Affiliates&lt;br/&gt;
+        ///If you have any question and require any help, please do not hesitate t [rest of string was truncated]&quot;;.
         /// </summary>
         public static string RegisSuccess {
             get {
@@ -4165,7 +4179,7 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fields marked &lt;font color=&quot;red&quot;&gt;*&lt;/font&gt; must be completed.
+        ///   Looks up a localized string similar to Fields marked &lt;span class=&quot;red-color&quot;&gt;*&lt;/span&gt; must be completed.
         /// </summary>
         public static string RequireInfo {
             get {

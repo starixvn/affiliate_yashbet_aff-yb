@@ -388,7 +388,7 @@
     <value>Sila lengkapkan borang ini untuk mendaftar akaun affiliate B2C anda.</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>Medan bertanda &lt;font color="red"&gt;*&lt;/font&gt; mesti dilengkapkan</value>
+    <value>Medan bertanda &lt;span class="red-color"&gt;*&lt;/span&gt; mesti dilengkapkan</value>
   </data>
   <data name="ContactInfo" xml:space="preserve">
     <value>Maklumat Perhubungan</value>
@@ -580,11 +580,11 @@
     <value>Permohonan Dalam Semakan</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>Terima kasih kerana menghantar permohonan anda.&lt;br/&gt;&lt;br/&gt;
-Laman web dan butiran permohonan anda akan disemak oleh pasukan di B2C Affiliates untuk memastikan kandungan sesuai untuk mempromosikan produk kami.&lt;br/&gt;&lt;br/&gt;
-Dalam masa 5 hari kami sepatutnya dapat memberi anda keputusan berkenaan dengan permohonan anda. Jika anda diluluskan, anda akan dapat menikmati akses penuh kepada affiliate program kami.&lt;br /&gt;&lt;br /&gt;
-Salam,&lt;br /&gt;&lt;br /&gt;
-Pasukan di B2C Affiliates&lt;br/&gt;&lt;br/&gt;
+    <value>Terima kasih kerana menghantar permohonan anda.&lt;br/&gt;
+Laman web dan butiran permohonan anda akan disemak oleh pasukan di B2C Affiliates untuk memastikan kandungan sesuai untuk mempromosikan produk kami.&lt;br/&gt;
+Dalam masa 5 hari kami sepatutnya dapat memberi anda keputusan berkenaan dengan permohonan anda. Jika anda diluluskan, anda akan dapat menikmati akses penuh kepada affiliate program kami.&lt;br/&gt;
+Salam,&lt;br/&gt;
+Pasukan di B2C Affiliates&lt;br/&gt;
 Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan teragak-agak untuk &lt;a href='{0}'&gt;Hubungi Kami&lt;/a&gt;.</value>
   </data>
   <data name="YouDontHaveTheEmail" xml:space="preserve">
@@ -2014,5 +2014,8 @@ Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan
   </data>
   <data name="FaqsTitle" xml:space="preserve">
     <value>SOALAN LAZIM</value>
+  </data>
+  <data name="NonDepositedAccount" xml:space="preserve">
+    <value>akaun yang tidak didepositkan sahaja</value>
   </data>
 </root>

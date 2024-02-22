@@ -32,16 +32,16 @@
 
         <form id="updatePasswordForm" class="form-horizontal">
             @Html.AntiForgeryToken()
-            <div class="form-group">
+            <div class="form-group validate-group">
                 <label class="col-sm-3 control-label require">@Lang.OldPass</label>
                 <div class="col-sm-3">
                     @Html.PasswordFor(p => p.OldPassword, new { @class = "form-control", @autocomplete = "off" })
                 </div>
                 <div class="col-sm-offset-3 col-sm-9">
-                    @Html.ValidationMessageFor(p => p.OldPassword, string.Empty, new { @class = "help-block hide" })
+                    @Html.ValidationMessageFor(p => p.OldPassword, string.Empty, new { @class = "validate-input hide" })
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group validate-group">
                 <label class="col-sm-3 control-label require">@Lang.NewPass</label>
                 <div class="col-sm-3">
                     <input autocomplete="off" class="form-control"
@@ -50,16 +50,16 @@
                            data-val-required="@Lang.NewPasswordisre" id="NewPassword" name="NewPassword" type="password" />
                 </div>
                 <div class="col-sm-offset-3 col-sm-9">
-                    @Html.ValidationMessageFor(p => p.NewPassword, string.Empty, new { @class = "help-block hide" })
+                    @Html.ValidationMessageFor(p => p.NewPassword, string.Empty, new { @class = "validate-input hide" })
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group validate-group">
                 <label class="col-sm-3 control-label require">@Lang.RePass</label>
                 <div class="col-sm-3">
                     @Html.PasswordFor(p => p.ConfirmNewPassword, new { @class = "form-control", @autocomplete = "off" })
                 </div>
                 <div class="col-sm-offset-3 col-sm-9">
-                    @Html.ValidationMessageFor(p => p.ConfirmNewPassword, string.Empty, new { @class = "help-block hide" })
+                    @Html.ValidationMessageFor(p => p.ConfirmNewPassword, string.Empty, new { @class = "validate-input hide" })
                 </div>
             </div>
 

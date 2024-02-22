@@ -99,7 +99,7 @@ var Site = (function ($) {
 
         toggleErrorMessage: function toggleErrorMessage($container, isValid) {
             $container.toggleClass("has-error", !isValid);
-            $container.find(".help-block").toggleClass("hide", isValid);
+            $container.find(".validate-input").toggleClass("hide", isValid);
         },
 
         changeLanguage: function changeLanguage(selectedLanguage) {

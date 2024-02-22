@@ -207,7 +207,7 @@
     <script src="@Url.RenderLink("~/www/build/js/site.js")"></script>
     <script src="@Url.RenderLink("~/www/build/js/layout.js")"></script>
 
-    @if (userSession != null)
+    @if (userSession != null && !settingService.IsLocal)
     {
         <script src="@Url.RenderLink("~/www/build/js/recheckin.js")"></script>
     }

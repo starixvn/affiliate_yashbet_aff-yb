@@ -892,7 +892,12 @@
     <value>Mẫu đăng ký</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>Cám ơn bạn đã gửi thông tin đăng ký.&lt;br/&gt;&lt;br/&gt;Các trang web và thông tin về đơn của bạn sẽ được nhóm B2C Affiliate xem xét để đảm bảo rằng nội dung là phù hợp để quảng cáo sản phẩm của chúng tôi.&lt;br/&gt;&lt;br/&gt;Trong vòng 5 ngày, chúng tôi sẽ có thể cung cấp cho bạn quyết định liên quan đến đơn của bạn. Nếu bạn được chấp thuận, bạn sẽ có toàn quyền truy cập vào chương trình hội viên của chúng tôi.&lt;br /&gt;&lt;br /&gt;Trân trọng!&lt;br /&gt;&lt;br /&gt;Nhóm quản lý hội viên B2C.&lt;br/&gt;&lt;br/&gt;Mọi thắc mắc và yêu cầu xin vui lòng &lt;a href='{0}'&gt;liên hệ với chúng tôi&lt;/a&gt;.</value>
+    <value>Cám ơn bạn đã gửi thông tin đăng ký.&lt;br/&gt;
+Các trang web và thông tin về đơn của bạn sẽ được nhóm B2C Affiliate xem xét để đảm bảo rằng nội dung là phù hợp để quảng cáo sản phẩm của chúng tôi.&lt;br/&gt;
+Trong vòng 5 ngày, chúng tôi sẽ có thể cung cấp cho bạn quyết định liên quan đến đơn của bạn. Nếu bạn được chấp thuận, bạn sẽ có toàn quyền truy cập vào chương trình hội viên của chúng tôi.&lt;br/&gt;
+Trân trọng!&lt;br/&gt;
+Nhóm quản lý hội viên B2C.&lt;br/&gt;
+Mọi thắc mắc và yêu cầu xin vui lòng &lt;a href='{0}'&gt;liên hệ với chúng tôi&lt;/a&gt;.</value>
   </data>
   <data name="Rejected" xml:space="preserve">
     <value>Bị từ chối</value>
@@ -913,7 +918,7 @@
     <value>Yêu cầu thanh toán thành công!</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>Các trường có dấu &lt;font color="red"&gt;*&lt;/font&gt; phải được hoàn tất</value>
+    <value>Các trường có dấu &lt;span class="red-color"&gt;*&lt;/span&gt; phải được hoàn tất</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>Đặt lại</value>
@@ -2048,5 +2053,8 @@
   </data>
   <data name="FaqsTitle" xml:space="preserve">
     <value>Câu hỏi thường gặp</value>
+  </data>
+  <data name="NonDepositedAccount" xml:space="preserve">
+    <value>Tài khoản chưa từng gửi tiền</value>
   </data>
 </root>

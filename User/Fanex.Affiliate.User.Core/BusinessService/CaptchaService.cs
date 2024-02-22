@@ -87,8 +87,8 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 else
                 {
                     // Add captcha
-                    var font = new Font("Open Sans", Number.Eleven, FontStyle.Bold);
-                    graphics.DrawString(captcha, font, Brushes.Black, x: Number.Eight, y: (float)Number.Four);
+                    var font = new Font("Open Sans", Number.Ten, FontStyle.Bold);
+                    graphics.DrawString(captcha, font, Brushes.Black, x: Number.Ten, y: (float)Number.Six);
                 }
 
                 for (int i = 0; i < Number.Fifty; i++)

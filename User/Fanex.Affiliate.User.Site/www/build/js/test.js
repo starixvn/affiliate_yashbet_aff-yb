@@ -1,6 +1,6 @@
 ﻿"use strict";
 
-var AffB2CTesting = (function ($) {
+var AffYBTesting = (function ($) {
     function getUrl(actionName) {
         var rootAction = $("#rootAction").val();
         var format = $('input[name=Format]:checked').val() || "cshtml";
@@ -11,7 +11,7 @@ var AffB2CTesting = (function ($) {
 
     return {
         initialize: function initialize() {
-            AffB2CTesting.initEvent();
+            AffYBTesting.initEvent();
         },
 
         initEvent: function initEvent() {
@@ -61,5 +61,5 @@ var AffB2CTesting = (function ($) {
     };
 })(jQuery);
 
-AffB2CTesting.initialize();
+AffYBTesting.initialize();
 

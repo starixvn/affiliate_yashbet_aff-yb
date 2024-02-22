@@ -886,11 +886,11 @@
     <value>申请表格</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>感谢您提交申请。&lt;br /&gt;&lt;br /&gt;
-我们B2C合作伙伴团队将会就您的网站和申请详情进行审核，以确认相关内容是否适合推广我们的产品。&lt;br /&gt;&lt;br /&gt;
-我们将在5天内回复您的申请。一旦您的申请被核准，您将立即获得全权参与进入我们的合作伙伴项目。&lt;br /&gt;&lt;br /&gt;
-致以敬意，&lt;br /&gt;&lt;br /&gt;
-B2C合作伙伴团队。&lt;br /&gt;&lt;br /&gt;
+    <value>感谢您提交申请。&lt;br/&gt;
+我们B2C合作伙伴团队将会就您的网站和申请详情进行审核，以确认相关内容是否适合推广我们的产品。&lt;br/&gt;
+我们将在5天内回复您的申请。一旦您的申请被核准，您将立即获得全权参与进入我们的合作伙伴项目。&lt;br/&gt;
+致以敬意，&lt;br/&gt;
+B2C合作伙伴团队。&lt;br/&gt;
 如果您遇到任何疑问需要帮助，欢迎随时&lt;a href='{0}'&gt;联系我们&lt;/a&gt;。</value>
   </data>
   <data name="Rejected" xml:space="preserve">
@@ -912,7 +912,7 @@ B2C合作伙伴团队。&lt;br /&gt;&lt;br /&gt;
     <value>提款成功!</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>有&lt;font color="red"&gt;*&lt;/font&gt;标记的栏目为必填选项</value>
+    <value>有&lt;span class="red-color"&gt;*&lt;/span&gt;标记的栏目为必填选项</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>重设</value>
@@ -1789,5 +1789,8 @@ B2C合作伙伴团队。&lt;br /&gt;&lt;br /&gt;
   </data>
   <data name="FaqsTitle" xml:space="preserve">
     <value>常见疑问</value>
+  </data>
+  <data name="NonDepositedAccount" xml:space="preserve">
+    <value>仅限未存款玩家</value>
   </data>
 </root>

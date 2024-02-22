@@ -8,9 +8,7 @@
 
         public const int Two = 2;
 
-        public const double Four = 4;
-
-        public const int Eight = 8;
+        public const int Six = 6;
 
         public const int Ten = 10;
 
