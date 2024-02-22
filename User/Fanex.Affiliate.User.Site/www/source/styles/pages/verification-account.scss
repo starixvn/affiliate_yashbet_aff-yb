@@ -21,12 +21,14 @@
     margin-top : 40px;
     @include Mobile{
         margin-top : 24px;
+        margin-bottom : 24px;
         text-align : center;
     }
 }
 
 .main-content {
     justify-content: center;
+
     .verification-account {
         text-align: left;
         font-size: 16px;
@@ -50,7 +52,8 @@
                 line-height: normal;
                 display: flex;
                 align-items: center;
-                min-width: 140px;
+                text-wrap: nowrap;
+                /*min-width: 140px;*/
 
                 svg {
                     margin-right: 8px;
@@ -61,6 +64,10 @@
                 max-width: 456px;
                 width: 100%;
             }
+        }
+
+        .validation-value {
+            min-width: 80px;
         }
     }
 }

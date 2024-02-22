@@ -2036,4 +2036,7 @@
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>គណនីមិនដាក់ប្រាក់តែប៉ុណ្ណោះ</value>
   </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>ទៀងផ្ទាត់ព័ត៌មានលម្អិតគណនីរបស់អ្នក</value>
+  </data>
 </root>

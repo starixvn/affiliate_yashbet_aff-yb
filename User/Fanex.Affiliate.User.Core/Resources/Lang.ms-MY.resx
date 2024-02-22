@@ -2018,4 +2018,7 @@ Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>akaun yang tidak didepositkan sahaja</value>
   </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>Sahkan butiran akaun anda</value>
+  </data>
 </root>

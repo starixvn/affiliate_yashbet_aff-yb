@@ -1427,9 +1427,6 @@
   <data name="YourRevenueShare" xml:space="preserve">
     <value>ส่วนแบ่งรายได้ของคุณ</value>
   </data>
-  <data name="SupportTime" xml:space="preserve">
-    <value>Working Time:&lt;br/&gt;Monday - Saturday | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7</value>
-  </data>
   <data name="AConfirmationEmail" xml:space="preserve">
     <value>อีเมลยืนยันกำลังส่งไปยังอีเมลของคุณ</value>
   </data>
@@ -1780,5 +1777,8 @@
   </data>
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>ใช้ยูสเซอร์ที่ไม่เคยฝากเงินเท่านั้น</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>ยืนยันรายละเอียดบัญชีของท่าน</value>
   </data>
 </root>

@@ -2037,4 +2037,7 @@ B2C Affiliates এ দল&lt;br/&gt;
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>শুধুমাত্র জমা না করা অ্যাকাউন্ট</value>
   </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>আপনার অ্যাকাউন্ট বিশদ যাচাইকরণ</value>
+  </data>
 </root>

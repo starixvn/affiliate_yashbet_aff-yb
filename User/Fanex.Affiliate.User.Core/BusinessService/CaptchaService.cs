@@ -66,6 +66,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
             var RedNumber = _appSetting.RedNumberRGB;
             var GreenNumber = _appSetting.GreenNumberRGB;
             var BlueNumber = _appSetting.BlueNumberRGB;
+            var backgroundColor = Color.FromArgb(RedNumber, GreenNumber, BlueNumber);
 
             byte[] buffer = null;
 
@@ -78,11 +79,11 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 graphics.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
                 graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-                graphics.Clear(Color.FromArgb(RedNumber, GreenNumber, BlueNumber));
+                graphics.Clear(backgroundColor);
 
                 if (isComplex)
                 {
-                    DrawComplexImage(captcha, width, height, graphics, random);
+                    DrawComplexImage(captcha, width, height, graphics, random, backgroundColor);
                 }
                 else
                 {
@@ -106,13 +107,13 @@ namespace Fanex.Affiliate.User.Core.BusinessService
             return buffer;
         }
 
-        private void DrawComplexImage(string captcha, int width, int height, Graphics graphics, Random random)
+        private void DrawComplexImage(string captcha, int width, int height, Graphics graphics, Random random, Color color)
         {
             var rectangleF = new RectangleF(0, 0, width, height);
             var brush = new HatchBrush(
                 hatchStyleList[random.Next(hatchStyleList.Length - 1)],
                 CreateRandomColor(random, Number.OneFiveZero, Number.TwoDoubleFive),
-                Color.Black);
+                color);
             graphics.FillRectangle(brush, rectangleF);
             var matrix = new Matrix();
 

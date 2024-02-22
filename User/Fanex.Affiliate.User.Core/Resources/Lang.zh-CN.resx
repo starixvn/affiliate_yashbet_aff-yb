@@ -1433,9 +1433,6 @@ B2C合作伙伴团队。&lt;br/&gt;
   <data name="YourRevenueShare" xml:space="preserve">
     <value>您的佣金盈利</value>
   </data>
-  <data name="SupportTime" xml:space="preserve">
-    <value>Working Time:&lt;br/&gt;Monday - Saturday | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7</value>
-  </data>
   <data name="AConfirmationEmail" xml:space="preserve">
     <value>确认邮件已发送到您的电子邮箱。</value>
   </data>
@@ -1792,5 +1789,8 @@ B2C合作伙伴团队。&lt;br/&gt;
   </data>
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>仅限未存款玩家</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>验证您的帐户详细信息</value>
   </data>
 </root>

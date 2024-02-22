@@ -1610,12 +1610,6 @@ Mọi thắc mắc và yêu cầu xin vui lòng &lt;a href='{0}'&gt;liên hệ v
   <data name="Rebate" xml:space="preserve">
     <value>Khuyến Mãi Hoàn Trả</value>
   </data>
-  <data name="SupportTime" xml:space="preserve">
-    <value>Thời Gian Làm Việc:&lt;br/&gt;Thứ Hai - Thứ Bảy | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7</value>
-  </data>
-  <data name="Phone" xml:space="preserve">
-    <value>Điện Thoại</value>
-  </data>
   <data name="PleaseDirectAnyComment" xml:space="preserve">
     <value>Nếu có bất kỳ góp ý hay thắc mắc nào, vui lòng liên hệ:</value>
   </data>
@@ -1775,29 +1769,14 @@ Mọi thắc mắc và yêu cầu xin vui lòng &lt;a href='{0}'&gt;liên hệ v
   <data name="MiniGames" xml:space="preserve">
     <value>Mini Games</value>
   </data>
-  <data name="WithMonthlyReward" xml:space="preserve">
-    <value>* Với phần thưởng hàng tháng!</value>
-  </data>
-  <data name="StartEarningNow" xml:space="preserve">
-    <value>Kiếm Tiền &lt;br&gt;Ngay Nào!</value>
-  </data>
-  <data name="CommissionInBanner" xml:space="preserve">
-    <value>Hoa Hồng</value>
-  </data>
   <data name="EmailTittleVerificationAccount" xml:space="preserve">
     <value>Xác minh chi tiết tài khoản của bạn</value>
   </data>
   <data name="SubjectVerificationAccount" xml:space="preserve">
     <value>Chương trình Đại lý B2C - Xác minh chi tiết tài khoản của bạn</value>
   </data>
-  <data name="WithAttractiveReward" xml:space="preserve">
-    <value>* Với phần thưởng hấp dẫn!</value>
-  </data>
   <data name="CompanyNetProfit" xml:space="preserve">
     <value>Tiền lãi ròng của công ty (₫)</value>
-  </data>
-  <data name="FiveMillionAndAbove" xml:space="preserve">
-    <value>5.000.000 trở lên</value>
   </data>
   <data name="TotalActivePlayer" xml:space="preserve">
     <value>Tổng số thành viên hoạt động</value>
@@ -2056,5 +2035,8 @@ Mọi thắc mắc và yêu cầu xin vui lòng &lt;a href='{0}'&gt;liên hệ v
   </data>
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>Tài khoản chưa từng gửi tiền</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>Xác minh chi tiết tài khoản của bạn</value>
   </data>
 </root>

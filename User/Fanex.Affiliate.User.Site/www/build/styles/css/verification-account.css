@@ -14,6 +14,7 @@
   @media (max-width: 767px) {
     .center-mobile {
       margin-top: 24px;
+      margin-bottom: 24px;
       text-align: center; } }
 
 .main-content {
@@ -35,9 +36,12 @@
         line-height: normal;
         display: flex;
         align-items: center;
-        min-width: 140px; }
+        text-wrap: nowrap;
+        /*min-width: 140px;*/ }
         .main-content .verification-account #sendCodeForm .send-code svg {
           margin-right: 8px; }
       .main-content .verification-account #sendCodeForm #emailGroup {
         max-width: 456px;
         width: 100%; }
+    .main-content .verification-account .validation-value {
+      min-width: 80px; }

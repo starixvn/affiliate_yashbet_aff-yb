@@ -1436,9 +1436,6 @@ Jika Anda memiliki pertanyaan dan memerlukan bantuan sila &lt;a href='{0}'&gt;Hu
   <data name="YourRevenueShare" xml:space="preserve">
     <value>Pembagian Penghasilan Anda</value>
   </data>
-  <data name="SupportTime" xml:space="preserve">
-    <value>Working Time:&lt;br/&gt;Monday - Saturday | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7</value>
-  </data>
   <data name="AConfirmationEmail" xml:space="preserve">
     <value>Email konfirmasi dikirimkan ke email Anda.</value>
   </data>
@@ -1780,5 +1777,8 @@ Jika Anda memiliki pertanyaan dan memerlukan bantuan sila &lt;a href='{0}'&gt;Hu
   </data>
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>akun non-deposit - jika sudah pernah Deposit, silakan buat baru khusus Afiliasi</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>Verifikasi detail akun Anda</value>
   </data>
 </root>

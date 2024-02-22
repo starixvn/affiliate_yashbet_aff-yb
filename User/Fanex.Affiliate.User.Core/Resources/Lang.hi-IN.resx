@@ -1757,9 +1757,6 @@ B2C सहयोगी की टीम&lt;br/&gt;
   <data name="none" xml:space="preserve">
     <value>कोई नहीं</value>
   </data>
-  <data name="Phone" xml:space="preserve">
-    <value>फ़ोन</value>
-  </data>
   <data name="Signup" xml:space="preserve">
     <value>साइन अप करें</value>
   </data>
@@ -2026,5 +2023,8 @@ B2C सहयोगी की टीम&lt;br/&gt;
   </data>
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>केवल गैर-जमा खाता</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>अपना खाता विवरण सत्यापित करें</value>
   </data>
 </root>

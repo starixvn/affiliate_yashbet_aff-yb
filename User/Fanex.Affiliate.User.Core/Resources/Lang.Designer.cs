@@ -1069,15 +1069,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commission.
-        /// </summary>
-        public static string CommissionInBanner {
-            get {
-                return ResourceManager.GetString("CommissionInBanner", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Commission Rate.
         /// </summary>
         public static string CommissionRate {
@@ -2046,15 +2037,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         public static string FirstNameMaxLength {
             get {
                 return ResourceManager.GetString("FirstNameMaxLength", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 5,000,000 &amp; above.
-        /// </summary>
-        public static string FiveMillionAndAbove {
-            get {
-                return ResourceManager.GetString("FiveMillionAndAbove", resourceCulture);
             }
         }
         
@@ -3769,15 +3751,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Phone.
-        /// </summary>
-        public static string Phone {
-            get {
-                return ResourceManager.GetString("Phone", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Contact Number no more than 50 characters..
         /// </summary>
         public static string PhoneMaxLength {
@@ -4674,15 +4647,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start Earning &lt;br&gt;Now!.
-        /// </summary>
-        public static string StartEarningNow {
-            get {
-                return ResourceManager.GetString("StartEarningNow", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to State.
         /// </summary>
         public static string State {
@@ -4841,15 +4805,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         public static string Summary {
             get {
                 return ResourceManager.GetString("Summary", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Working Time:&lt;br/&gt;Monday - Saturday | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7.
-        /// </summary>
-        public static string SupportTime {
-            get {
-                return ResourceManager.GetString("SupportTime", resourceCulture);
             }
         }
         
@@ -5547,6 +5502,15 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Verification your account detail.
+        /// </summary>
+        public static string VerificationYourAccountDetail {
+            get {
+                return ResourceManager.GetString("VerificationYourAccountDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Verify Email Address is required.
         /// </summary>
         public static string VerifyEmailAddressIsRequired {
@@ -5682,15 +5646,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to *With attractive reward!.
-        /// </summary>
-        public static string WithAttractiveReward {
-            get {
-                return ResourceManager.GetString("WithAttractiveReward", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Withdrawal.
         /// </summary>
         public static string Withdrawal {
@@ -5705,15 +5660,6 @@ namespace Fanex.Affiliate.User.Core.Resources {
         public static string WithdrawalFee {
             get {
                 return ResourceManager.GetString("WithdrawalFee", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to *With monthly reward!.
-        /// </summary>
-        public static string WithMonthlyReward {
-            get {
-                return ResourceManager.GetString("WithMonthlyReward", resourceCulture);
             }
         }
         

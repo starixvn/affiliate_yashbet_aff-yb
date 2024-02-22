@@ -1713,15 +1713,8 @@ If you have any question and require any help, please do not hesitate to &lt;a h
   <data name="Rebate" xml:space="preserve">
     <value>Rebate</value>
   </data>
-  <data name="SupportTime" xml:space="preserve">
-    <value>Working Time:&lt;br/&gt;Monday - Saturday | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7</value>
-    <comment>87923</comment>
-  </data>
   <data name="PleaseDirectAnyComment" xml:space="preserve">
     <value>Please direct any comments or questions to following contact points:</value>
-  </data>
-  <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
   </data>
   <data name="AConfirmationEmail" xml:space="preserve">
     <value>A Confirmation Email is sending to your Email.</value>
@@ -1975,23 +1968,8 @@ If you have any question and require any help, please do not hesitate to &lt;a h
   <data name="MiniGames" xml:space="preserve">
     <value>Mini Games</value>
   </data>
-  <data name="WithMonthlyReward" xml:space="preserve">
-    <value>*With monthly reward!</value>
-  </data>
-  <data name="StartEarningNow" xml:space="preserve">
-    <value>Start Earning &lt;br&gt;Now!</value>
-  </data>
-  <data name="CommissionInBanner" xml:space="preserve">
-    <value>Commission</value>
-  </data>
-  <data name="WithAttractiveReward" xml:space="preserve">
-    <value>*With attractive reward!</value>
-  </data>
   <data name="CompanyNetProfit" xml:space="preserve">
     <value>Company's Net Profit (VND)</value>
-  </data>
-  <data name="FiveMillionAndAbove" xml:space="preserve">
-    <value>5,000,000 &amp; above</value>
   </data>
   <data name="TotalActivePlayer" xml:space="preserve">
     <value>Total Active Player</value>
@@ -2127,5 +2105,8 @@ If you have any question and require any help, please do not hesitate to &lt;a h
   </data>
   <data name="NonDepositedAccount" xml:space="preserve">
     <value>non-deposited account only</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>Verification your account detail</value>
   </data>
 </root>
