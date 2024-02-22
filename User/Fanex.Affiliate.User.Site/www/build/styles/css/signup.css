@@ -19,3 +19,6 @@
       justify-content: center; } }
   .group-button .custom-button {
     padding: 8px 20px 8px 45px; }
+
+.info-question .body-result {
+  padding-left: 8px; }
