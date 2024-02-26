@@ -41,36 +41,38 @@
 }
 
 
-<div id="channel-table" class="table overview-table marketing-table">
-    <table>
-        <thead>
-            <tr class="overview-table-header">
-                <th class="stt"></th>
-                <th class="channel">@Lang.Channel</th>
-                <th class="number-of-link text-right">@Lang.NumberOfLink </th>
-                <th class="lang">@Lang.Language</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{
-                if (Model != null && Model.Any())
-                {
-                    var id = 1;
-
-                    foreach (var item in Model)
+<div class="wraper-table">
+    <div id="channel-table" class="table overview-table marketing-table">
+        <table>
+            <thead>
+                <tr class="overview-table-header">
+                    <th class="stt"></th>
+                    <th class="channel">@Lang.Channel</th>
+                    <th class="number-of-link text-right">@Lang.NumberOfLink </th>
+                    <th class="lang">@Lang.Language</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model != null && Model.Any())
                     {
-                        @RenderItem(item, id);
-                        id++;
+                        var id = 1;
+
+                        foreach (var item in Model)
+                        {
+                            @RenderItem(item, id);
+                            id++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td class="text-center no-info" colspan="4">@Lang.NoInfo</td>
+                        </tr>
                     }
                 }
-                else
-                {
-                    <tr>
-                        <td class="text-center no-info" colspan="4">@Lang.NoInfo</td>
-                    </tr>
-                }
-            }
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </div>
 <script src="@Url.RenderLink("~/www/build/js/pages/channel-link-statistic.js")"></script>

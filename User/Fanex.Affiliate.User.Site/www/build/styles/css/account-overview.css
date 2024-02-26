@@ -70,8 +70,7 @@
   padding: 6px 0;
   font-size: 12px;
   background-color: #FFFFFF;
-  border: 1px solid #CED4DA;
-  height: 40px; }
+  border-top: 1px solid #E5C589; }
   .pager-container .icon {
     speak: none;
     font-style: normal;
@@ -271,6 +270,10 @@ span.toggle-handle {
   border: 1px solid #E5C589;
   overflow: hidden; }
 
+.player-detail-pager .page-container {
+  border: none;
+  border-top: 1px solid #D1B37D; }
+
 .overview-table {
   position: relative;
   width: 100%;
@@ -286,7 +289,6 @@ span.toggle-handle {
     margin: auto;
     border-collapse: separate;
     border-spacing: 0;
-    border-right: 1px solid #C7C7C7;
     font-size: 14px; }
     @media (max-width: 767px) {
       .overview-table table {
@@ -336,6 +338,8 @@ span.toggle-handle {
       border-bottom: none; }
       .overview-table table tr td:first-child {
         border-left: none; }
+      .overview-table table tr td:last-child {
+        border-right: 1px solid #D1B37D; }
       .overview-table table tr td a {
         font-size: 13px; }
     .overview-table table .parent-tr td.market-name {
@@ -496,7 +500,7 @@ span.toggle-handle {
       outline: none; }
 
 .account-overview #account-overview-menu {
-  background: #F8F9FA; }
+  background: #fff; }
   .account-overview #account-overview-menu .menu {
     margin: 0 !important;
     align-items: flex-end; }
@@ -545,14 +549,6 @@ span.toggle-handle {
   border: 1px solid #E5C589;
   padding: 12px;
   border-radius: 0px 6px 6px 6px; }
-
-.summary .custom-button {
-  padding: 8px 12px;
-  font-size: 14px;
-  display: flex;
-  align-items: center; }
-  .summary .custom-button svg {
-    margin-right: 8px; }
 
 .summary .select-date {
   min-width: 133px;

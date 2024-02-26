@@ -2698,6 +2698,9 @@ input[type="radio"], input[type="checkbox"] {
     .block {
       padding: 24px 0; } }
 
+.block-after {
+  margin-bottom: 16px; }
+
 .wraper-title {
   text-align: center;
   margin-bottom: 52px; }

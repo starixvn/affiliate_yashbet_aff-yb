@@ -67,8 +67,7 @@
   padding: 6px 0;
   font-size: 12px;
   background-color: #FFFFFF;
-  border: 1px solid #CED4DA;
-  height: 40px; }
+  border-top: 1px solid #E5C589; }
   .pager-container .icon {
     speak: none;
     font-style: normal;
@@ -119,53 +118,11 @@
     float: right;
     padding: 3px; }
 
-.search-container form {
-  display: flex; }
-  @media (max-width: 767px) {
-    .search-container form {
-      flex-wrap: wrap; } }
-  .search-container form .column-form {
-    width: 50%; }
-    @media (max-width: 767px) {
-      .search-container form .column-form {
-        width: 100%; } }
-    @media (max-width: 767px) {
-      .search-container form .column-form .form-group {
-        margin-bottom: 8px; } }
-    .search-container form .column-form .control-label {
-      width: 35%;
-      text-align: right;
-      padding: 0 12px; }
-      @media (max-width: 767px) {
-        .search-container form .column-form .control-label {
-          width: 100%;
-          text-align: left;
-          padding: 0; }
-          .search-container form .column-form .control-label.none-label {
-            display: none; } }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .search-container form .column-form .control-label {
-          width: 50%; } }
-    .search-container form .column-form .control-input {
-      width: 242px; }
-      @media (max-width: 767px) {
-        .search-container form .column-form .control-input {
-          width: 100%; } }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .search-container form .column-form .control-input {
-          width: 186px; } }
-    .search-container form .column-form .btn-submit {
-      box-shadow: 0px 2px 5px rgba(101, 101, 101, 0.25);
-      border-radius: 4px;
-      padding: 4px 10px;
-      color: #FFFFFF;
-      text-transform: uppercase; }
-      @media (max-width: 767px) {
-        .search-container form .column-form .btn-submit {
-          width: 100%;
-          margin: 0; } }
-  .search-container form .form-group-button {
-    margin-bottom: 0 !important; }
+.form .form-columns.form-columns-2 {
+  align-items: flex-end; }
+
+.overview-table table thead .overview-table-header th:last-child, .overview-table table tr td:last-child {
+  border-right: none; }
 
 @media (max-width: 767px) {
   #aff-link .qr-code {

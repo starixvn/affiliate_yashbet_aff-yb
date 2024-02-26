@@ -1,6 +1,7 @@
 ﻿@import "./abstracts/mixins";
 @import "./abstracts/variables";
 @import "./components/content-menu";
+@import './components/form-control';
 
 .after-login-container {
     padding-left: 16px;
@@ -11,5 +12,16 @@
     @media (max-width : 767px) {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .custom-button {
+        padding: 8px 12px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 8px;
+        }
     }
 }

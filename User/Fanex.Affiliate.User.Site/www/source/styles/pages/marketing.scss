@@ -3,78 +3,14 @@
 @import '../scss/components/qr_code';
 @import "../scss/components/pager";
 
-.search-container {
-    form {
-        display: flex;
 
-        @include Mobile {
-            flex-wrap: wrap;
-        }
-
-        .column-form {
-            width: 50%;
-
-            @include Mobile {
-                width: 100%;
-            }
-
-            .form-group {
-                @include Mobile {
-                    margin-bottom: 8px;
-                }
-            }
-
-            .control-label {
-                width: 35%;
-                text-align: right;
-                padding: 0 12px;
-
-                @include Mobile {
-                    width: 100%;
-                    text-align: left;
-                    padding: 0;
-
-                    &.none-label {
-                        display: none;
-                    }
-                }
-
-                @include Tablet {
-                    width: 50%;
-                }
-            }
-
-            .control-input {
-                width: 242px;
-
-                @include Mobile {
-                    width: 100%;
-                }
-
-                @include Tablet {
-                    width: 186px;
-                }
-            }
-
-            .btn-submit {
-                box-shadow: 0px 2px 5px rgba(101, 101, 101, 0.25);
-                border-radius: 4px;
-                padding: 4px 10px;
-                color: #FFFFFF;
-                text-transform: uppercase;
-
-                @include Mobile {
-                    width: 100%;
-                    margin: 0;
-                }
-            }
-        }
-
-        .form-group-button {
-            margin-bottom: 0 !important;
-        }
-    }
+.form .form-columns.form-columns-2{
+    align-items : flex-end;
 }
+.overview-table table thead .overview-table-header th:last-child, .overview-table table tr td:last-child {
+    border-right: none;
+}
+
 
 
 #aff-link {

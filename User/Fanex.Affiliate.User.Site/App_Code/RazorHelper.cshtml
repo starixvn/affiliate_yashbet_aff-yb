@@ -85,21 +85,19 @@
 {
     if (dataList != null)
     {
-        <div class="form-group flex-sm-boostrap flex-center @(isVisible ? string.Empty : "hide")">
-            <label class="control-label">@label</label>
-            <div class="control-input">
-                <select class="form-control" id="@id">
-                    @if (hasAllOption)
-                    {
-                        <option value="">@Fanex.Affiliate.User.Core.Resources.Lang.All</option>
-                    }
+        <div class="items validate-group @(isVisible ? string.Empty : "hide")">
+            <label class="custom-label">@label</label>
+            <select class="form-input form-select" id="@id">
+                if (hasAllOption)
+                {
+                <option value="">@Fanex.Affiliate.User.Core.Resources.Lang.All</option>
+                }
 
-                    @foreach (var item in dataList)
-                    {
-                        <option value="@item.Value" @(item.Selected ? "selected" : string.Empty)>@item.Text</option>
-                    }
-                </select>
-            </div>
+                @foreach (var item in dataList)
+                {
+                    <option value="@item.Value" @(item.Selected ? "selected" : string.Empty)>@item.Text</option>
+                }
+            </select>
         </div>
     }
 }

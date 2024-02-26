@@ -574,18 +574,16 @@ select.form-control:focus {
 .dot1, .dot2 {
   background-color: #ffffff; }
 
-.main.after-login {
-  background: #F8F9FA; }
-  .main.after-login .page-title {
-    background: #F8F9FA;
-    text-align: left;
-    margin: 8px 0 24px; }
-    @media (max-width: 767px) {
-      .main.after-login .page-title {
-        margin: 4px 0 12px; } }
-    .main.after-login .page-title .text:after {
-      border-bottom: 18px solid #F8F9FA;
-      border-right: 16px solid #F8F9FA; }
+.main.after-login .page-title {
+  background: #F8F9FA;
+  text-align: left;
+  margin: 8px 0 24px; }
+  @media (max-width: 767px) {
+    .main.after-login .page-title {
+      margin: 4px 0 12px; } }
+  .main.after-login .page-title .text:after {
+    border-bottom: 18px solid #F8F9FA;
+    border-right: 16px solid #F8F9FA; }
 
 .summary-content .dashboard-section .group-one {
   background-color: #fff1de;

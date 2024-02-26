@@ -24,7 +24,7 @@
     }
 
     #account-overview-menu {
-        background: $bg-after-login-color;
+        background: #fff;
 
         .menu {
             margin: 0 !important;
@@ -102,17 +102,6 @@
 }
 
 .summary {
-    .custom-button {
-        padding: 8px 12px;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-
-        svg {
-            margin-right: 8px;
-        }
-    }
-
     .select-date {
         min-width: 133px;
         border-radius: 100px;
