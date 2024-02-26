@@ -1842,7 +1842,8 @@ ul.dash-style {
     .table table th, .table table td {
       word-wrap: break-word;
       line-height: 24px;
-      padding: 4px 5px; }
+      padding: 4px 5px;
+      border: 1px solid #D1B37D; }
     .table table th {
       font-size: 15px;
       text-transform: capitalize;

@@ -452,16 +452,16 @@ header {
     }
 
     th, td {
-        border: 1px solid $table-header-border-color;
+        border: 1px solid #D1B37D;
     }
 
     th {
-        background: $table-header-bg-color;
-        color: $table-header-color;
+        background: #333;
+        color: #fff;
     }
 
     td {
-        border: 1px solid $table-border-color;
+        border: 1px solid #D1B37D;
     }
 
     .overview-table-header, .player-detail-table-header {
@@ -998,7 +998,7 @@ select.form-control {
         th {
             background: $table-row-total-bg-color !important;
             color: $table-color;
-
+            text-align : center;
             &.align-right {
                 text-align: right;
                 padding: 5px 10px;

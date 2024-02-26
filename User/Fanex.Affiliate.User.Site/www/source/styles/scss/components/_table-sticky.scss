@@ -1,13 +1,16 @@
-﻿.overview-table {
+﻿.wraper-table {
+    border-radius: 10px;
+    border: 1px solid #E5C589;
+    overflow: hidden;
+}
+
+.overview-table {
     position: relative;
     width: 100%;
     z-index: 1;
     margin: auto;
-
-    @include TableAndMobile {
-        overflow: auto;
-        max-height: 600px;
-    }
+    overflow: auto;
+    max-height: 600px;
 
     &.reset-top {
         thead {
@@ -50,6 +53,17 @@
                     z-index: 100;
                     top: 0;
                     border-right: none;
+                    border-top: none;
+                    border-left: 1px solid #D1B37D;
+                    border-bottom: none;
+
+                    &:first-child {
+                        border-left: none;
+                    }
+
+                    &:last-child {
+                        border-right: 1px solid #D1B37D;
+                    }
 
                     @include TableAndMobile {
                         top: 0;
@@ -63,8 +77,18 @@
                     position: sticky;
                     z-index: 100;
                     top: 50px !important;
-                    border-right: none;
                     font-weight: 700;
+                    border-left: 1px solid #D1B37D;
+                    border-top: none;
+                    border-right: none;
+
+                    &:first-child {
+                        border-left: none;
+                    }
+
+                    &:last-child {
+                        border-right: 1px solid #D1B37D;
+                    }
 
                     @include TableAndMobile {
                         top: 57px !important;
@@ -73,14 +97,18 @@
             }
         }
 
-        td {
-            padding: 5px 10px;
-            vertical-align: top;
-            border-top: none !important;
-            border-right: none !important;
-
-            a {
-                font-size: 13px;
+        tr {
+            td {
+                padding: 5px 10px;
+                vertical-align: top;
+                border-right: none;
+                border-bottom: none;
+                &:first-child{
+                    border-left : none;
+                }
+                a {
+                    font-size: 13px;
+                }
             }
         }
 

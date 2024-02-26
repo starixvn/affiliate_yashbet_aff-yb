@@ -294,14 +294,14 @@ header {
     background: #F5F5F5; }
 
 .table table th, .table table td {
-  border: 1px solid #c1c1c1; }
+  border: 1px solid #D1B37D; }
 
 .table table th {
-  background: #fff;
+  background: #333;
   color: #fff; }
 
 .table table td {
-  border: 1px solid #C7C7C7; }
+  border: 1px solid #D1B37D; }
 
 .table table .overview-table-header, .table table .player-detail-table-header {
   background: #fff !important; }
@@ -662,7 +662,8 @@ select.form-control:focus {
   background: #FFDCC8 !important; }
   .summary-content .table table thead tr.overview-table-total th {
     background: #FFDCC8 !important;
-    color: #001942; }
+    color: #001942;
+    text-align: center; }
     .summary-content .table table thead tr.overview-table-total th.align-right {
       text-align: right;
       padding: 5px 10px; }

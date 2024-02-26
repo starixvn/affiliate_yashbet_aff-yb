@@ -266,15 +266,18 @@ span.toggle-handle {
   .account-overview .account-overview-content {
     background: white; }
 
+.wraper-table {
+  border-radius: 10px;
+  border: 1px solid #E5C589;
+  overflow: hidden; }
+
 .overview-table {
   position: relative;
   width: 100%;
   z-index: 1;
-  margin: auto; }
-  @media screen and (max-width: 1024px) {
-    .overview-table {
-      overflow: auto;
-      max-height: 600px; } }
+  margin: auto;
+  overflow: auto;
+  max-height: 600px; }
   .overview-table.reset-top thead .overview-table-header th {
     top: 0; }
   .overview-table table {
@@ -299,7 +302,14 @@ span.toggle-handle {
       position: sticky;
       z-index: 100;
       top: 0;
-      border-right: none; }
+      border-right: none;
+      border-top: none;
+      border-left: 1px solid #D1B37D;
+      border-bottom: none; }
+      .overview-table table thead .overview-table-header th:first-child {
+        border-left: none; }
+      .overview-table table thead .overview-table-header th:last-child {
+        border-right: 1px solid #D1B37D; }
       @media screen and (max-width: 1024px) {
         .overview-table table thead .overview-table-header th {
           top: 0; } }
@@ -308,17 +318,25 @@ span.toggle-handle {
       position: sticky;
       z-index: 100;
       top: 50px !important;
-      border-right: none;
-      font-weight: 700; }
+      font-weight: 700;
+      border-left: 1px solid #D1B37D;
+      border-top: none;
+      border-right: none; }
+      .overview-table table thead .overview-table-total th:first-child {
+        border-left: none; }
+      .overview-table table thead .overview-table-total th:last-child {
+        border-right: 1px solid #D1B37D; }
       @media screen and (max-width: 1024px) {
         .overview-table table thead .overview-table-total th {
           top: 57px !important; } }
-    .overview-table table td {
+    .overview-table table tr td {
       padding: 5px 10px;
       vertical-align: top;
-      border-top: none !important;
-      border-right: none !important; }
-      .overview-table table td a {
+      border-right: none;
+      border-bottom: none; }
+      .overview-table table tr td:first-child {
+        border-left: none; }
+      .overview-table table tr td a {
         font-size: 13px; }
     .overview-table table .parent-tr td.market-name {
       font-size: 13px;
@@ -525,7 +543,8 @@ span.toggle-handle {
 
 .wraper-tab {
   border: 1px solid #E5C589;
-  padding: 12px; }
+  padding: 12px;
+  border-radius: 0px 6px 6px 6px; }
 
 .summary .custom-button {
   padding: 8px 12px;

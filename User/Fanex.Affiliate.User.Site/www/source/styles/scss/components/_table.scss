@@ -1,4 +1,5 @@
-﻿.table-medium {
+﻿
+.table-medium {
     width: 70%;
 }
 
@@ -10,7 +11,6 @@
     }
 
     table {
-        //table-layout: fixed;
         border-collapse: collapse;
         margin: 0;
         padding: 0;
@@ -39,6 +39,7 @@
             word-wrap: break-word;
             line-height: 24px;
             padding: 4px 5px;
+            border: 1px solid #D1B37D;
         }
 
         th {

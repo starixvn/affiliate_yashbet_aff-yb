@@ -83,7 +83,7 @@
     max-width: 1540px;
     margin: 0 auto; }
     .table-casino .table-responsive tr:nth-child(even) {
-      background-color: #FFF3ED !important; }
+      background-color: #E1E1E1 !important; }
       .table-casino .table-responsive tr:nth-child(even):hover {
         background: #F5F5F5 !important; }
     @media (max-width: 768px) {
@@ -96,18 +96,20 @@
       left: 0;
       z-index: 100; }
     .table-casino .table-responsive thead tr:first-child th {
-      border-right: 1px solid #C7C7C7;
+      border-right: 1px solid #D1B37D;
       border-left: none; }
       .table-casino .table-responsive thead tr:first-child th:last-child {
         border-right: none; }
     .table-casino .table-responsive thead tr:nth-child(2) th:first-child {
       border-left: none; }
+    .table-casino .table-responsive .glyphicon {
+      color: #D1B37D; }
     .table-casino .table-responsive tbody tr > :first-child {
-      border-right: 1px solid #C7C7C7 !important; }
+      border-right: 1px solid #D1B37D !important; }
     .table-casino .table-responsive tbody tr > :nth-child(2) {
       border-left: none; }
     .table-casino .table-responsive tbody tr:nth-child(even) td:first-child {
-      background-color: #FFF3ED; }
+      background-color: #E1E1E1; }
     .table-casino .table-responsive tbody tr:nth-child(odd) td:first-child {
       background-color: #FFFFFF; }
     .table-casino .table-responsive tbody tr td:first-child {

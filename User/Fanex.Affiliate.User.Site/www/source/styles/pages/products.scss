@@ -124,7 +124,7 @@
         margin: 0 auto;
 
         tr:nth-child(even) {
-            background-color: #FFF3ED !important;
+            background-color: #E1E1E1 !important;
 
             &:hover {
                 background: #F5F5F5 !important;
@@ -147,7 +147,7 @@
             tr {
                 &:first-child {
                     th {
-                        border-right: 1px solid #C7C7C7;
+                        border-right: 1px solid #D1B37D;
                         border-left: none;
 
                         &:last-child {
@@ -166,9 +166,12 @@
             }
         }
 
+        .glyphicon {
+            color: #D1B37D;
+        }
 
         tbody tr > :first-child {
-            border-right: 1px solid #C7C7C7 !important;
+            border-right: 1px solid #D1B37D !important;
         }
 
         tbody tr > :nth-child(2) {
@@ -177,7 +180,7 @@
 
         tbody {
             tr:nth-child(even) td:first-child {
-                background-color: #FFF3ED;
+                background-color: #E1E1E1;
             }
 
             tr:nth-child(odd) td:first-child {
