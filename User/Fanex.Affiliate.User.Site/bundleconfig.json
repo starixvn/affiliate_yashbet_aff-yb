@@ -6,52 +6,34 @@
             "www/source/js/pages/home.js"
         ]
     },
+    {
+      "outputFileName": "www/build/js/pages/user-panel.js",
+      "inputFiles": [
+        "www/source/js/pages/user-panel.js"
+      ]
+    },
     //{
-    //  "outputFileName": "www/build/js/user-panel.js",
-    //  "inputFiles": [
-    //    "www/source/js/pages/user-panel.js"
-    //  ]
-    //},
-    //{
-    //  "outputFileName": "www/build/js/account-overview.js",
-    //  "inputFiles": [
-    //    "www/source/js/pages/account-overview/account-overview.js"
-    //  ]
-    //},
-    //{
-    //  "outputFileName": "www/build/js/account-overview.js",
+    //  "outputFileName": "www/build/js/pages/account-overview.js",
     //  "inputFiles": [
     //    "www/source/js/pages/account-overview/account-overview.js"
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/summary.js",
+    //  "outputFileName": "www/build/js/pages/summary.js",
     //  "inputFiles": [
     //    "www/source/js/components/monthpicker.js",
     //    "www/source/js/pages/account-overview/summary.js"
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/player-detail.js",
+    //  "outputFileName": "www/build/js/pages/player-detail.js",
     //  "inputFiles": [
     //    "www/source/js/components/pager.js",
     //    "www/source/js/pages/account-overview/player-detail.js"
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/overview.js",
-    //  "inputFiles": [
-    //    "www/source/js/pages/account-overview/overview.js"
-    //  ]
-    //},
-    //{
-    //  "outputFileName": "www/build/js/overview.js",
-    //  "inputFiles": [
-    //    "www/source/js/pages/account-overview/overview.js"
-    //  ]
-    //},
-    //{
-    //  "outputFileName": "www/build/js/mediagallery.js",
+    //  "outputFileName": "www/build/js/pages/mediagallery.js",
     //  "inputFiles": [
     //    "www/source/js/components/clipboard.js",
     //    "www/source/js/components/pager.js",
@@ -60,7 +42,7 @@
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/affiliate-link.js",
+    //  "outputFileName": "www/build/js/pages/affiliate-link.js",
     //  "inputFiles": [
     //    "www/source/js/components/clipboard.js",
     //    "www/source/js/components/pager.js",
@@ -69,13 +51,13 @@
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/generated-qrcode.js",
+    //  "outputFileName": "www/build/js/pages/generated-qrcode.js",
     //  "inputFiles": [
     //    "www/source/js/pages/account-overview/marketingbase.js"
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/referrerstatistics.js",
+    //  "outputFileName": "www/build/js/pages/referrerstatistics.js",
     //  "inputFiles": [
     //    "www/source/js/lib/pikaday.js",
     //    "www/source/js/components/pager.js",
@@ -83,7 +65,7 @@
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/landingpagestatistics.js",
+    //  "outputFileName": "www/build/js/pages/landingpagestatistics.js",
     //  "inputFiles": [
     //    "www/source/js/lib/pikaday.js",
     //    "www/source/js/components/pager.js",
@@ -91,7 +73,7 @@
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/marketing-statistics.js",
+    //  "outputFileName": "www/build/js/pages/marketing-statistics.js",
     //  "inputFiles": [
     //    "www/source/js/lib/pikaday.js",
     //    "www/source/js/components/pager.js",
@@ -99,14 +81,14 @@
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/statement-history.js",
+    //  "outputFileName": "www/build/js/pages/statement-history.js",
     //  "inputFiles": [
     //    "www/source/js/components/pager.js",
     //    "www/source/js/pages/statement-history.js"
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/messagehistory.js",
+    //  "outputFileName": "www/build/js/pages/messagehistory.js",
     //  "inputFiles": [
     //    "www/source/js/lib/pikaday.js",
     //    "www/source/js/components/pager.js",
@@ -114,14 +96,14 @@
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/signup.js",
+    //  "outputFileName": "www/build/js/pages/signup.js",
     //  "inputFiles": [
     //    "www/source/js/components/website.js",
     //    "www/source/js/pages/signup.js"
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/myaccount.js",
+    //  "outputFileName": "www/build/js/pages/myaccount.js",
     //  "inputFiles": [
     //    "www/source/js/components/website.js",
     //    "www/source/js/pages/myaccount.js"
@@ -188,7 +170,7 @@
     //  "inputFiles": [ "www/source/js/lib/bootstrap2-toggle.js" ]
     //},
     //{
-    //  "outputFileName": "www/build/js/player-transfer-balance-history.js",
+    //  "outputFileName": "www/build/js/pages/player-transfer-balance-history.js",
     //  "inputFiles": [
     //    "www/source/js/lib/pikaday.js",
     //    "www/source/js/components/pager.js",
@@ -196,7 +178,7 @@
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/player-transfer-balance.js",
+    //  "outputFileName": "www/build/js/pages/player-transfer-balance.js",
     //  "inputFiles": [
     //    "www/source/js/pages/PlayerTransferBalance/player-transfer-balance.js"
     //  ]

@@ -54,18 +54,8 @@
     </div>
 
     @Html.InlineScripts("~/www/build/js/lib/modernizr-webp.js")
-    <script>
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            var $button = document.getElementById("moveToTop");
-            if ($button) {
-                var display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? 'block' : 'none';
-                $button.style.display = display;
-            }
-        }
-    </script>
     @Html.InlineScripts("~/www/build/js/left-menu-panel.js")
+    @Html.InlineScripts("~/www/build/js/pages/term-and-condition.js")
 
     <script>
         $(window).scroll(function () {
@@ -75,6 +65,12 @@
             }
             else {
                 $(".mobile-left-panel").removeClass("fixed");
+            }
+
+            if ($(this).scrollTop() > 200) {
+                $('#moveToTop').fadeIn(200);
+            } else {
+                $('#moveToTop').fadeOut(200);
             }
         });
     </script>

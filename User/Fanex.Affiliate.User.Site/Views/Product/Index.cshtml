@@ -2,7 +2,6 @@
 @{
     ViewBag.Title = Lang.Product;
     Layout = "~/Views/Shared/_LayoutBeforeLogin.cshtml";
-    var supportPgSoftProductMarkets = "id-ID,th-TH";
 }
 
 @{
@@ -28,10 +27,10 @@
             </svg>
             <span>@Lang.ListCategory</span>
         </div>
-        <div class="left-panel" id="left-panel-menu">
-            <div class="menu">
+        <div class="left-panel">
+            <div class="menu" id="left-panel-menu">
                 <div class="heading-left-panel">
-                    List category
+                    @Lang.ListCategory
                 </div>
                 <ul class="nav navbar-nav" id="left-panel-nav">
                     <li>
@@ -196,7 +195,7 @@
         </div>
     </div>
     <div class="table-casino">
-        @{ Html.RenderPartial("~/Views/Product/_CasinoProductTable.cshtml", supportPgSoftProductMarkets.Contains(Model.CurrentLanguage)); }
+        @{ Html.RenderPartial("~/Views/Product/_CasinoProductTable.cshtml"); }
     </div>
 
     <p class="text-block-bottom">
@@ -208,27 +207,10 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M14 10.1617V14.005C13.9998 14.1805 13.93 14.3487 13.8059 14.4727C13.6818 14.5967 13.5135 14.6663 13.338 14.6663H2.66202C2.57447 14.6657 2.4879 14.6479 2.40725 14.6138C2.3266 14.5797 2.25345 14.5301 2.19197 14.4678C2.1305 14.4054 2.08191 14.3316 2.04897 14.2505C2.01604 14.1694 1.9994 14.0826 2.00002 13.995V5.99967H6.00002C6.17683 5.99967 6.3464 5.92944 6.47142 5.80441C6.59645 5.67939 6.66668 5.50982 6.66668 5.33301V1.33301H13.3347C13.702 1.33301 14 1.63634 14 1.99434V4.50434L8.00068 10.5043L7.99668 13.3297L10.8273 13.3337L14 10.1617ZM14.5187 5.87167L15.4613 6.81434L10.276 11.9997L9.33202 11.9983L9.33335 11.057L14.5187 5.87167V5.87167ZM2.00002 4.66634L5.33335 1.33501V4.66634H2.00002Z" fill="white" />
             </svg>
-            Sign up Yashbet Now!
+            @SiteFriendlyNameHelper.ReplaceB2C(Lang.SignUpAffiliateProgramNow)
         </a>
     </div>
 </div>
-
-
-@*<p class="text-block-bottom">
-        @Lang.AllBettingProducts.Replace("{0}", siteFriendlyName)
-    </p>
-
-    @if (!Model.IsAuthenticated)
-    {
-        <div class="signup-block">
-            <a href="@Url.Content("~/SignUp")" class="btn btn-link btn-block nounderline">@SiteFriendlyNameHelper.ReplaceB2C(Lang.SignUpAffiliateProgramNow)</a>
-        </div>
-    }
-    else
-    {
-        <br>
-       <br>*@
-
 
 <div class="modal fade leftmenu-dialog" tabindex="-1" role="dialog" id="leftmenu">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -238,7 +220,7 @@
                     <div class="left-panel">
                         <div class="menu">
                             <div class="heading-left-panel">
-                                List category
+                                @Lang.ListCategory
                                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
                                         <path d="M13.9999 12.4713L19.7749 6.69629L21.4245 8.34596L15.6495 14.121L21.4245 19.896L19.7749 21.5456L13.9999 15.7706L8.22486 21.5456L6.5752 19.896L12.3502 14.121L6.5752 8.34596L8.22486 6.69629L13.9999 12.4713Z" fill="white" />

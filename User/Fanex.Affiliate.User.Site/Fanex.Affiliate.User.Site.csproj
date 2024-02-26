@@ -385,13 +385,139 @@
     <Content Include="App_Data\SpConfig\_SpNameOriginal.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="www\build\js\jquery.extension.js" />
+    <Content Include="www\build\js\jquery.extension.min.js">
+      <DependentUpon>jquery.extension.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\layout-after-login.js" />
+    <Content Include="www\build\js\layout-after-login.min.js">
+      <DependentUpon>layout-after-login.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\layout.js" />
+    <Content Include="www\build\js\layout.min.js">
+      <DependentUpon>layout.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\left-menu-panel-has-sub.js" />
+    <Content Include="www\build\js\left-menu-panel-has-sub.min.js">
+      <DependentUpon>left-menu-panel-has-sub.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\left-menu-panel.js" />
+    <Content Include="www\build\js\left-menu-panel.min.js">
+      <DependentUpon>left-menu-panel.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\account-overview.js" />
+    <Content Include="www\build\js\pages\account-overview.min.js">
+      <DependentUpon>account-overview.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\affiliate-link.js" />
+    <Content Include="www\build\js\pages\affiliate-link.min.js">
+      <DependentUpon>affiliate-link.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\channel-link-statistic.js" />
+    <Content Include="www\build\js\pages\channel-link-statistic.min.js">
+      <DependentUpon>channel-link-statistic.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\forgotpassword.js" />
+    <Content Include="www\build\js\pages\forgotpassword.min.js">
+      <DependentUpon>forgotpassword.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\generated-qrcode.js" />
+    <Content Include="www\build\js\pages\generated-qrcode.min.js">
+      <DependentUpon>generated-qrcode.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\landingpagestatistics.js" />
+    <Content Include="www\build\js\pages\landingpagestatistics.min.js">
+      <DependentUpon>landingpagestatistics.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\marketing-statistics.js" />
+    <Content Include="www\build\js\pages\marketing-statistics.min.js">
+      <DependentUpon>marketing-statistics.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\mediagallery.js" />
+    <Content Include="www\build\js\pages\mediagallery.min.js">
+      <DependentUpon>mediagallery.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\messagehistory.js" />
+    <Content Include="www\build\js\pages\messagehistory.min.js">
+      <DependentUpon>messagehistory.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\myaccount.js" />
+    <Content Include="www\build\js\pages\myaccount.min.js">
+      <DependentUpon>myaccount.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\payment-request.js" />
+    <Content Include="www\build\js\pages\payment-request.min.js">
+      <DependentUpon>payment-request.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\player-detail.js" />
+    <Content Include="www\build\js\pages\player-detail.min.js">
+      <DependentUpon>player-detail.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\player-transfer-balance-history.js" />
+    <Content Include="www\build\js\pages\player-transfer-balance-history.min.js">
+      <DependentUpon>player-transfer-balance-history.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\player-transfer-balance.js" />
+    <Content Include="www\build\js\pages\player-transfer-balance.min.js">
+      <DependentUpon>player-transfer-balance.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\referrerstatistics.js" />
+    <Content Include="www\build\js\pages\referrerstatistics.min.js">
+      <DependentUpon>referrerstatistics.js</DependentUpon>
+    </Content>
     <Content Include="www\build\js\pages\sharing-structure.js" />
     <Content Include="www\build\js\pages\sharing-structure.min.js">
       <DependentUpon>sharing-structure.js</DependentUpon>
     </Content>
+    <Content Include="www\build\js\pages\signup.js" />
+    <Content Include="www\build\js\pages\signup.min.js">
+      <DependentUpon>signup.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\statement-history.js" />
+    <Content Include="www\build\js\pages\statement-history.min.js">
+      <DependentUpon>statement-history.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\sub-affiliate-earning.js" />
+    <Content Include="www\build\js\pages\sub-affiliate-earning.min.js">
+      <DependentUpon>sub-affiliate-earning.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\summary.js" />
+    <Content Include="www\build\js\pages\summary.min.js">
+      <DependentUpon>summary.js</DependentUpon>
+    </Content>
     <Content Include="www\build\js\pages\term-and-codition.js" />
     <Content Include="www\build\js\pages\term-and-codition.min.js">
       <DependentUpon>term-and-codition.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\term-and-condition.js" />
+    <Content Include="www\build\js\pages\term-and-condition.min.js">
+      <DependentUpon>term-and-condition.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\test.js" />
+    <Content Include="www\build\js\pages\test.min.js">
+      <DependentUpon>test.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\user-panel.js" />
+    <Content Include="www\build\js\pages\user-panel.min.js">
+      <DependentUpon>user-panel.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pagetracking.js" />
+    <Content Include="www\build\js\pagetracking.min.js">
+      <DependentUpon>pagetracking.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\recheckin.js" />
+    <Content Include="www\build\js\recheckin.min.js">
+      <DependentUpon>recheckin.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\site.js" />
+    <Content Include="www\build\js\site.min.js">
+      <DependentUpon>site.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\validation.js" />
+    <Content Include="www\build\js\validation.min.js" />
+    <Content Include="www\build\styles\css\pages\home.css" />
+    <Content Include="www\build\styles\css\pages\home.min.css">
+      <DependentUpon>home.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\css\sharing-structure.css" />
     <Content Include="www\build\styles\css\sharing-structure.min.css">
@@ -455,7 +581,7 @@
     <Content Include="www\build\styles\Images\titlebg-right-mb.svg" />
     <Content Include="www\build\styles\Images\titlebg-right.svg" />
     <Content Include="www\source\js\lib\swiper.min.js" />
-    <Content Include="www\source\js\pages\term-and-codition.js" />
+    <Content Include="www\source\js\pages\term-and-condition.js" />
     <Content Include="www\source\js\pages\product.js" />
     <Content Include="www\source\js\pages\sharing-structure.js" />
     <Content Include="www\source\styles\scss\vendors\swiper.css" />
@@ -513,62 +639,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="www\build\js\account-overview.js" />
-    <Content Include="www\build\js\account-overview.min.js">
-      <DependentUpon>account-overview.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\affiliate-link.js" />
-    <Content Include="www\build\js\affiliate-link.min.js">
-      <DependentUpon>affiliate-link.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\changepassword.js" />
-    <Content Include="www\build\js\changepassword.min.js">
-      <DependentUpon>changepassword.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\channel-link-statistic.js" />
-    <Content Include="www\build\js\channel-link-statistic.min.js">
-      <DependentUpon>channel-link-statistic.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\contactus.js" />
-    <Content Include="www\build\js\contactus.min.js">
-      <DependentUpon>contactus.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\daily-earning.js" />
-    <Content Include="www\build\js\daily-earning.min.js">
-      <DependentUpon>daily-earning.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\forgotpassword.js" />
-    <Content Include="www\build\js\forgotpassword.min.js">
-      <DependentUpon>forgotpassword.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\generated-qrcode.js" />
-    <Content Include="www\build\js\generated-qrcode.min.js">
-      <DependentUpon>generated-qrcode.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\jquery.extension.js" />
-    <Content Include="www\build\js\jquery.extension.min.js">
-      <DependentUpon>jquery.extension.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\landingpagestatistics.js" />
-    <Content Include="www\build\js\landingpagestatistics.min.js">
-      <DependentUpon>landingpagestatistics.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\layout-after-login.js" />
-    <Content Include="www\build\js\layout-after-login.min.js">
-      <DependentUpon>layout-after-login.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\layout.js" />
-    <Content Include="www\build\js\layout.min.js">
-      <DependentUpon>layout.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\left-menu-panel-has-sub.js" />
-    <Content Include="www\build\js\left-menu-panel-has-sub.min.js">
-      <DependentUpon>left-menu-panel-has-sub.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\left-menu-panel.js" />
-    <Content Include="www\build\js\left-menu-panel.min.js">
-      <DependentUpon>left-menu-panel.js</DependentUpon>
-    </Content>
     <Content Include="www\build\js\lib\bootstrap.min.js" />
     <Content Include="www\build\js\lib\bootstrap2-toggle.js" />
     <Content Include="www\build\js\lib\bootstrap2-toggle.min.js">
@@ -581,30 +651,6 @@
     <Content Include="www\build\js\lib\modernizr-webp.js" />
     <Content Include="www\build\js\lib\modernizr-webp.min.js">
       <DependentUpon>modernizr-webp.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\login.js" />
-    <Content Include="www\build\js\login.min.js">
-      <DependentUpon>login.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\marketing-statistics.js" />
-    <Content Include="www\build\js\marketing-statistics.min.js">
-      <DependentUpon>marketing-statistics.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\mediagallery.js" />
-    <Content Include="www\build\js\mediagallery.min.js">
-      <DependentUpon>mediagallery.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\messagehistory.js" />
-    <Content Include="www\build\js\messagehistory.min.js">
-      <DependentUpon>messagehistory.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\myaccount.js" />
-    <Content Include="www\build\js\myaccount.min.js">
-      <DependentUpon>myaccount.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\overview.js" />
-    <Content Include="www\build\js\overview.min.js">
-      <DependentUpon>overview.js</DependentUpon>
     </Content>
     <Content Include="www\build\js\pages\changepassword.js" />
     <Content Include="www\build\js\pages\changepassword.min.js">
@@ -633,46 +679,6 @@
     <Content Include="www\build\js\pages\verification-account.js" />
     <Content Include="www\build\js\pages\verification-account.min.js">
       <DependentUpon>verification-account.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\pagetracking.js" />
-    <Content Include="www\build\js\pagetracking.min.js">
-      <DependentUpon>pagetracking.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\payment-request.js" />
-    <Content Include="www\build\js\payment-request.min.js">
-      <DependentUpon>payment-request.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\player-detail.js" />
-    <Content Include="www\build\js\player-detail.min.js">
-      <DependentUpon>player-detail.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\player-transfer-balance-history.js" />
-    <Content Include="www\build\js\player-transfer-balance-history.min.js">
-      <DependentUpon>player-transfer-balance-history.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\player-transfer-balance.js" />
-    <Content Include="www\build\js\player-transfer-balance.min.js">
-      <DependentUpon>player-transfer-balance.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\signup.js" />
-    <Content Include="www\build\js\signup.min.js">
-      <DependentUpon>signup.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\sub-affiliate-earning.js" />
-    <Content Include="www\build\js\sub-affiliate-earning.min.js">
-      <DependentUpon>sub-affiliate-earning.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\summary.js" />
-    <Content Include="www\build\js\summary.min.js">
-      <DependentUpon>summary.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\user-panel.js" />
-    <Content Include="www\build\js\user-panel.min.js">
-      <DependentUpon>user-panel.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\validation.js" />
-    <Content Include="www\build\js\validation.min.js">
-      <DependentUpon>validation.js</DependentUpon>
     </Content>
     <Content Include="www\build\styles\css\bootstrap-3.3.7.min.css" />
     <Content Include="www\build\styles\css\commissionreport.css" />
@@ -832,30 +838,6 @@
     <Content Include="www\source\js\pages\forgotpassword.js" />
     <Content Include="www\source\js\pages\messagehistory.js" />
     <Content Include="www\source\js\pages\payment-request.js" />
-    <Content Include="www\build\js\recheckin.js" />
-    <Content Include="www\build\js\recheckin.min.js">
-      <DependentUpon>recheckin.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\referrerstatistics.js" />
-    <Content Include="www\build\js\referrerstatistics.min.js">
-      <DependentUpon>referrerstatistics.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\site.js" />
-    <Content Include="www\build\js\site.min.js">
-      <DependentUpon>site.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\statement-history.js" />
-    <Content Include="www\build\js\statement-history.min.js">
-      <DependentUpon>statement-history.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\test.js" />
-    <Content Include="www\build\js\test.min.js">
-      <DependentUpon>test.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\trackingstatistics.js" />
-    <Content Include="www\build\js\trackingstatistics.min.js">
-      <DependentUpon>trackingstatistics.js</DependentUpon>
-    </Content>
     <Content Include="www\build\styles\css\account-overview.css" />
     <Content Include="www\build\styles\css\account-overview.min.css">
       <DependentUpon>account-overview.css</DependentUpon>

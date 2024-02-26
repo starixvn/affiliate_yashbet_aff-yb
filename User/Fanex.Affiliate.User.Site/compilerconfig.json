@@ -3,38 +3,38 @@
         "outputFile": "www/build/js/layout.js",
         "inputFile": "www/source/js/layout.js"
     },
-    //{
-    //  "outputFile": "www/build/js/layout-after-login.js",
-    //  "inputFile": "www/source/js/layout-after-login.js"
-    //},
+    {
+      "outputFile": "www/build/js/layout-after-login.js",
+      "inputFile": "www/source/js/layout-after-login.js"
+    },
     {
         "outputFile": "www/build/styles/css/main.css",
         "inputFile": "www/source/styles/scss/main.scss"
     },
+    {
+      "outputFile": "www/build/styles/css/main-after-login.css",
+      "inputFile": "www/source/styles/scss/main-after-login.scss"
+    },
     //{
-    //  "outputFile": "www/build/styles/css/main-after-login.css",
-    //  "inputFile": "www/source/styles/scss/main-after-login.scss"
+    //  "outputFile": "www/build/js/left-menu-panel.js",
+    //  "inputFile": "www/source/js/pages/left-menu-panel.js"
     //},
-    {
-      "outputFile": "www/build/js/left-menu-panel.js",
-      "inputFile": "www/source/js/pages/left-menu-panel.js"
-    },
-    {
-      "outputFile": "www/build/js/left-menu-panel-has-sub.js",
-      "inputFile": "www/source/js/pages/left-menu-panel-has-sub.js"
-    },
+    //{
+    //  "outputFile": "www/build/js/left-menu-panel-has-sub.js",
+    //  "inputFile": "www/source/js/pages/left-menu-panel-has-sub.js"
+    //},
     //{
     //  "outputFile": "www/build/styles/css/my-account.css",
     //  "inputFile": "www/source/styles/pages/my-account.scss"
     //},
-    {
-        "outputFile": "www/build/styles/css/home.css",
-        "inputFile": "www/source/styles/pages/home.scss"
-    },
-    {
-        "outputFile": "www/build/styles/css/sharing-structure.css",
-        "inputFile": "www/source/styles/pages/sharing-structure.scss"
-    },
+    //{
+    //    "outputFile": "www/build/styles/css/home.css",
+    //    "inputFile": "www/source/styles/pages/home.scss"
+    //},
+    //{
+    //    "outputFile": "www/build/styles/css/sharing-structure.css",
+    //    "inputFile": "www/source/styles/pages/sharing-structure.scss"
+    //},
     //{
     //  "outputFile": "www/build/styles/css/faq.css",
     //  "inputFile": "www/source/styles/pages/faq.scss"
@@ -51,16 +51,16 @@
     //  "outputFile": "www/build/styles/css/marketing.css",
     //  "inputFile": "www/source/styles/pages/marketing.scss"
     //},
-    {
-        "outputFile": "www/build/styles/css/products.css",
-        "inputFile": "www/source/styles/pages/products.scss"
-    },
+    //{
+    //    "outputFile": "www/build/styles/css/products.css",
+    //    "inputFile": "www/source/styles/pages/products.scss"
+    //},
     //{
     //  "outputFile": "www/build/js/lib/bootstrap.min.js",
     //  "inputFile": "www/source/js/lib/bootstrap.min.js"
     //},
     //{
-    //  "outputFile": "www/build/js/test.js",
+    //  "outputFile": "www/build/js/pages/test.js",
     //  "inputFile": "www/source/js/pages/test.js"
     //},
     //{
@@ -96,7 +96,7 @@
     //  "inputFile": "www/source/styles/pages/payment-request.scss"
     //},
     //{
-    //  "outputFile": "www/build/js/payment-request.js",
+    //  "outputFile": "www/build/js/pages/payment-request.js",
     //  "inputFile": "www/source/js/pages/payment-request.js"
     //},
     //{
@@ -112,7 +112,7 @@
     //  "inputFile": "www/source/styles/pages/notify.scss"
     //},
     //{
-    //  "outputFile": "www/build/js/forgotpassword.js",
+    //  "outputFile": "www/build/js/pages/forgotpassword.js",
     //  "inputFile": "www/source/js/pages/forgotpassword.js"
     //},
     //{
@@ -123,14 +123,18 @@
     //  "outputFile": "www/build/js/lib/modernizr-webp.js",
     //  "inputFile": "www/source/js/lib/modernizr-webp.js"
     //},
-    {
-        "outputFile": "www/build/js/pages/sharing-structure.js",
-        "inputFile": "www/source/js/pages/sharing-structure.js"
-    },
-    {
-        "outputFile": "www/build/js/pages/product.js",
-        "inputFile": "www/source/js/pages/product.js"
-    },
+    //{
+    //    "outputFile": "www/build/js/pages/sharing-structure.js",
+    //    "inputFile": "www/source/js/pages/sharing-structure.js"
+    //},
+    //{
+    //    "outputFile": "www/build/js/pages/product.js",
+    //    "inputFile": "www/source/js/pages/product.js"
+    //},
+    //{
+    //    "outputFile": "www/build/js/pages/term-and-condition.js",
+    //    "inputFile": "www/source/js/pages/term-and-condition.js"
+    //},
     //{
     //  "outputFile": "www/build/js/pages/promotion.js",
     //  "inputFile": "www/source/js/pages/promotion.js"
@@ -143,16 +147,16 @@
     //  "outputFile": "www/build/styles/css/verification-account.css",
     //  "inputFile": "www/source/styles/pages/verification-account.scss"
     //},
-    {
-        "outputFile": "www/build/styles/css/yb.css",
-        "inputFile": "www/source/styles/scss/themes/yb.scss"
-    }
     //{
-    //  "outputFile": "www/build/js/sub-affiliate-earning.js",
+    //    "outputFile": "www/build/styles/css/yb.css",
+    //    "inputFile": "www/source/styles/scss/themes/yb.scss"
+    //},
+    //{
+    //  "outputFile": "www/build/js/pages/sub-affiliate-earning.js",
     //  "inputFile": "www/source/js/pages/sub-affiliate-earning.js"
     //},
     //{
-    //  "outputFile": "www/build/js/channel-link-statistic.js",
+    //  "outputFile": "www/build/js/pages/channel-link-statistic.js",
     //  "inputFile": "www/source/js/pages/account-overview/channel-link-statistic.js"
     //},
     //{
@@ -163,8 +167,8 @@
     //  "outputFile": "www/build/styles/css/maintenance.css",
     //  "inputFile": "www/source/styles/pages/maintenance.scss"
     //},
-    //{
-    //  "outputFile": "www/build/styles/css/update-password.css",
-    //  "inputFile": "www/source/styles/pages/update-password.scss"
-    //}
+    {
+      "outputFile": "www/build/styles/css/update-password.css",
+      "inputFile": "www/source/styles/pages/update-password.scss"
+    }
 ]

@@ -1,6 +1,5 @@
 ﻿var LeftMenuPanel = (function ($) {
     const activeClassName = "active";
-    let isOpenLeftMenuMobile = false;
     let lastScreenTop = 0;
 
     var _me = {
@@ -38,7 +37,6 @@
         },
 
         handleCloseLeftMenu: function () {
-            isOpenLeftMenuMobile = false;
             $('body').unbind("click");
 
             $('.left-panel.active').removeClass('active');
