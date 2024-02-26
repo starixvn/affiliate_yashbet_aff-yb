@@ -2806,6 +2806,15 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LiveChat.
+        /// </summary>
+        public static string LiveChat {
+            get {
+                return ResourceManager.GetString("LiveChat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Last Name.
         /// </summary>
         public static string LName {

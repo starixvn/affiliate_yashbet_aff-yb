@@ -2109,4 +2109,7 @@ If you have any question and require any help, please do not hesitate to &lt;a h
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>Verification your account detail</value>
   </data>
+  <data name="LiveChat" xml:space="preserve">
+    <value>LiveChat</value>
+  </data>
 </root>

@@ -524,13 +524,10 @@
       <DependentUpon>sharing-structure.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\Images\contact-us\email.svg" />
-    <Content Include="www\build\styles\Images\contact-us\left-black-column.png" />
     <Content Include="www\build\styles\Images\contact-us\left-black-column.svg" />
-    <Content Include="www\build\styles\Images\contact-us\left-column.png" />
     <Content Include="www\build\styles\Images\contact-us\left-column.svg" />
-    <Content Include="www\build\styles\Images\contact-us\right-black-column.png" />
+    <Content Include="www\build\styles\Images\contact-us\livechat.svg" />
     <Content Include="www\build\styles\Images\contact-us\right-black-column.svg" />
-    <Content Include="www\build\styles\Images\contact-us\right-column.png" />
     <Content Include="www\build\styles\Images\contact-us\right-column.svg" />
     <Content Include="www\build\styles\Images\contact-us\telegram.svg" />
     <Content Include="www\build\styles\Images\contact-us\vector.svg" />
@@ -777,9 +774,6 @@
     <Content Include="www\build\styles\Images\contact-in-home\bg_contact.tablet.png" />
     <Content Include="www\build\styles\Images\contact-in-home\bg_contact.tablet2.png" />
     <Content Include="www\build\styles\Images\contact-in-home\line.png" />
-    <Content Include="www\build\styles\Images\contact-us\email.png" />
-    <Content Include="www\build\styles\Images\contact-us\telegram.png" />
-    <Content Include="www\build\styles\Images\contact-us\whatsapp.png" />
     <Content Include="www\build\styles\Images\copy-link.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.mobile.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.png" />
