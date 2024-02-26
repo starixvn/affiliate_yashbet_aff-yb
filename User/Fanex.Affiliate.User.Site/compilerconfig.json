@@ -51,10 +51,10 @@
     //  "outputFile": "www/build/styles/css/marketing.css",
     //  "inputFile": "www/source/styles/pages/marketing.scss"
     //},
-    //{
-    //    "outputFile": "www/build/styles/css/products.css",
-    //    "inputFile": "www/source/styles/pages/products.scss"
-    //},
+    {
+        "outputFile": "www/build/styles/css/products.css",
+        "inputFile": "www/source/styles/pages/products.scss"
+    },
     //{
     //  "outputFile": "www/build/js/lib/bootstrap.min.js",
     //  "inputFile": "www/source/js/lib/bootstrap.min.js"

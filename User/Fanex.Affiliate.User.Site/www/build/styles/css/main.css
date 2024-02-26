@@ -2619,7 +2619,7 @@ input[type="radio"], input[type="checkbox"] {
       max-height: 29rem; } }
 
 .leftmenu-dialog .navbar-nav {
-  padding-top: 0; }
+  padding-top: 54px; }
 
 .leftmenu-dialog .modal-content {
   background: none;
@@ -2642,7 +2642,13 @@ input[type="radio"], input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 0 13px 16px !important; }
+  padding: 13px 0 13px 16px !important;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0px;
+  left: 0px;
+  border-radius: 10px 10px 0 0; }
 
 .overflow-left-panel {
   overflow: hidden; }

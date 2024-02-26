@@ -1,7 +1,8 @@
 ﻿@import '../scss/abstracts/mixins';
+
 .signup-block {
-    text-align : center;
-    margin : 32px 0;
+    text-align: center;
+    margin: 32px 0;
 }
 
 .adv img {
@@ -21,11 +22,6 @@
 
 .table {
     overflow: hidden;
-    &.table-game {
-        @include Mobile {
-            border: none;
-        }
-    }
 
     .game-list {
         font-size: 16px;
@@ -37,10 +33,6 @@
             border-right: 1px solid #D1B37D;
             border-bottom: 1px solid #D1B37D;
             border-left: none;
-
-            @include Mobile {
-                border-bottom: none;
-            }
 
             &:last-child {
                 border-right: none;
@@ -57,14 +49,6 @@
 
                 td {
                     width: 100%;
-
-                    &:first-child {
-                        padding: 0;
-
-                        .img-item {
-                            margin-bottom: 16px;
-                        }
-                    }
                 }
             }
 
@@ -83,7 +67,6 @@
                     width: 100%;
                     text-align: left;
                     border: none;
-                    background: none;
                 }
             }
 
@@ -129,14 +112,13 @@
     background-color: #F8F9FA !important;
 }
 
-
-
 .table-casino {
     position: relative;
     z-index: 0;
     border: 1px solid #D1B37D;
     border-radius: 5px;
-    overflow : hidden;
+    overflow: hidden;
+
     .table-responsive {
         max-width: 1540px;
         margin: 0 auto;
@@ -237,6 +219,7 @@
     z-index: 1;
     margin: auto;
     overflow: auto;
+
     &::-webkit-scrollbar-track {
         border-radius: 8px;
         background: #fff;
@@ -281,7 +264,6 @@
 
 .name-game-mobile, .body-game-mobile {
     @include Mobile {
-        padding: 0 16px !important;
-        margin-bottom : 20px;
+        padding: 20px 16px !important;
     }
 }

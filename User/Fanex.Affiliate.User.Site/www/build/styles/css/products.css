@@ -16,9 +16,6 @@
 
 .table {
   overflow: hidden; }
-  @media (max-width: 767px) {
-    .table.table-game {
-      border: none; } }
   .table .game-list {
     font-size: 16px;
     border: none;
@@ -28,9 +25,6 @@
       border-right: 1px solid #D1B37D;
       border-bottom: 1px solid #D1B37D;
       border-left: none; }
-      @media (max-width: 767px) {
-        .table .game-list td {
-          border-bottom: none; } }
       .table .game-list td:last-child {
         border-right: none; }
     .table .game-list tr {
@@ -41,11 +35,7 @@
           flex-wrap: wrap;
           padding: 0; }
           .table .game-list tr td {
-            width: 100%; }
-            .table .game-list tr td:first-child {
-              padding: 0; }
-              .table .game-list tr td:first-child .img-item {
-                margin-bottom: 16px; } }
+            width: 100%; } }
       .table .game-list tr .game-name {
         width: 200px;
         background: #E5C589;
@@ -59,8 +49,7 @@
           .table .game-list tr .game-name {
             width: 100%;
             text-align: left;
-            border: none;
-            background: none; } }
+            border: none; } }
       .table .game-list tr:nth-child(even) {
         background: #FFF1DE !important; }
         .table .game-list tr:nth-child(even) .left-menu-title {
@@ -175,5 +164,4 @@
 
 @media (max-width: 767px) {
   .name-game-mobile, .body-game-mobile {
-    padding: 0 16px !important;
-    margin-bottom: 20px; } }
+    padding: 20px 16px !important; } }
