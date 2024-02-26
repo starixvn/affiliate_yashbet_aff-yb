@@ -51,22 +51,7 @@ header {
 .language-container {
   display: inline-block;
   margin-right: 10px;
-  vertical-align: middle;
-  /*    &.mobile {
-        display: none;
-    }
-
-    @media screen and (max-device-width: 480px) {
-        &.mobile {
-            display: block;
-            float: right;
-            margin-top: 4px;
-        }
-
-        &.desktop {
-            display: none;
-        }
-    }*/ }
+  vertical-align: middle; }
   .language-container .select-language {
     border: 0;
     position: relative;
@@ -113,6 +98,9 @@ header {
         background-image: url("../Images/icons/flags/Bangladeshi.png"); }
       .language-container .select-language .flag.flag-km-KH {
         background-image: url("../Images/icons/flags/Cambodian.png"); }
+
+.after-login .language-container {
+  margin-right: 0; }
 
 .sign-up {
   position: relative; }
@@ -600,35 +588,51 @@ select.form-control:focus {
       border-right: 16px solid #F8F9FA; }
 
 .summary-content .dashboard-section .group-one {
-  background-color: #EBF8FF; }
+  background-color: #fff1de;
+  border: 1px solid #AE8F56; }
   .summary-content .dashboard-section .group-one .img-icon {
-    background-color: #00A9C8; }
+    background-color: #AE8F56; }
+  .summary-content .dashboard-section .group-one .info-panel {
+    border-bottom: 1px solid #AE8F56; }
   .summary-content .dashboard-section .group-one .info-panel-content {
-    background-color: #00A9C8; }
+    background-color: #F9E4C7;
+    color: #AE8F56; }
 
 .summary-content .dashboard-section .group-two {
-  background-color: #F5F2FA; }
+  background-color: #E5F0FF;
+  border: 1px solid #3C7CE0; }
   .summary-content .dashboard-section .group-two .img-icon {
-    background-color: #6051A7; }
+    background-color: #3C7CE0; }
+  .summary-content .dashboard-section .group-two .info-panel {
+    border-bottom: 1px solid #3C7CE0; }
   .summary-content .dashboard-section .group-two .info-panel-content {
-    background-color: #6051A7; }
+    background-color: #B0CFFF;
+    color: #3C7CE0; }
 
 .summary-content .dashboard-section .group-three {
-  background-color: #FFF2E7; }
+  background-color: #ECFEEC;
+  border: 1px solid #6BA86A; }
   .summary-content .dashboard-section .group-three .img-icon {
-    background-color: #EB7816; }
+    background-color: #6BA86A; }
+  .summary-content .dashboard-section .group-three .info-panel {
+    border-bottom: 1px solid #6BA86A; }
   .summary-content .dashboard-section .group-three .info-panel-content {
-    background-color: #EB7816; }
+    background-color: #C3E4C2;
+    color: #6BA86A; }
 
 .summary-content .dashboard-section .group-four {
-  background-color: #FFEDEF; }
+  background-color: #EDE7F8;
+  border: 1px solid #9170C8; }
   .summary-content .dashboard-section .group-four .img-icon {
-    background-color: #FF3754; }
+    background-color: #9170C8; }
+  .summary-content .dashboard-section .group-four .info-panel {
+    border-bottom: 1px solid #9170C8; }
   .summary-content .dashboard-section .group-four .info-panel-content {
-    background-color: #FF3754; }
+    background-color: #CCBBE7;
+    color: #9170C8; }
 
 .summary-content .details-section-menu .menu {
-  border-bottom: 1px solid #B5D1FF;
+  border-bottom: 1px solid #E5C589;
   margin: 16px 0; }
   @media (max-width: 767px) {
     .summary-content .details-section-menu .menu {
@@ -643,16 +647,16 @@ select.form-control:focus {
   padding: 5px 12px;
   border-radius: 4px 4px 0px 0px;
   text-transform: capitalize;
-  font-weight: 600; }
+  font-weight: 600;
+  color: #333; }
   @media (max-width: 767px) {
     .summary-content .details-section-menu .menu-item {
       padding: 4px 8px;
       font-size: 12px;
       line-height: 18px; } }
   .summary-content .details-section-menu .menu-item.active, .summary-content .details-section-menu .menu-item:hover {
-    color: #001942;
-    border-bottom: 2px solid #001942;
-    background: #F7FAFF; }
+    border-bottom: 3px solid #AE8F56;
+    background: #FFF1DE; }
 
 .summary-content .table table thead tr.overview-table-total {
   background: #FFDCC8 !important; }
@@ -676,12 +680,7 @@ select.form-control:focus {
   background-color: #E2E2E2 !important; }
 
 .wrapper-after-login {
-  padding: 16px;
-  border: 1px solid #bcbcbc;
   border-top: none; }
-  @media (max-width: 767px) {
-    .wrapper-after-login {
-      padding: 8px; } }
   .wrapper-after-login .info-group {
     margin-top: 0 !important;
     margin-bottom: 0 !important; }
@@ -950,15 +949,18 @@ select.form-control:focus {
     height: 12px;
     width: 12px; }
 
-.content-menu .menu li a .content-dropdown-icon {
-  background: url("../Images/icons/dropdown-gray.svg") no-repeat;
-  display: inline-block;
-  height: 12px;
-  width: 12px;
-  margin-left: 8px; }
-
-.content-menu .menu li a:hover .content-dropdown-icon {
-  background: url("../Images/icons/dropdown-white.svg") no-repeat; }
+.content-menu .menu li a {
+  /*&:hover {
+                    .content-dropdown-icon {
+                        background: url("../Images/icons/dropdown-white.svg") no-repeat;
+                    }
+                }*/ }
+  .content-menu .menu li a .content-dropdown-icon {
+    background: url("../Images/icons/dropdown-gray.svg") no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 15px;
+    margin-left: 8px; }
 
 .content-menu .content-menu-mobile .show-name-menu {
   position: relative; }

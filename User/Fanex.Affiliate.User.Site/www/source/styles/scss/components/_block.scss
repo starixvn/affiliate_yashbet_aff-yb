@@ -84,3 +84,22 @@
     text-transform: uppercase;
     margin-bottom : 32px;
 }
+
+.after-sub-header {
+    background: #FFF1DE;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom : 12px;
+    span {
+        color: #967435;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.after-sub-body {
+    margin-left: 8px;
+    border-left: 1px solid #E5C589;
+    padding-left: 12px;
+}

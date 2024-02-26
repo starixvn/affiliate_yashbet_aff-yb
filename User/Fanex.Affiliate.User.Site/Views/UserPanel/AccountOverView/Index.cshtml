@@ -13,12 +13,14 @@
             <li><a href="javascript:;" data-name="MediaGallery" class="menu-item account-overview-menu-item" id="menuMediaGallery">@Lang.MediaGallery</a></li>
         </ul>
     </div>
-    <div class="bg-orange">
-        <span class="text"><strong>@Lang.LastLogin</strong> @(Model.LastLoginInfo.LastLoginDate?.ToString("dd-MMM-yyyy hh:mm tt"))</span>
-        <span class="text"><strong>@Lang.LastLoginIpAddress</strong> @(Model.LastLoginInfo.LastLoginIP)</span>
-        <span class="text"><strong>@(Lang.AffiliateID):</strong> @(Model.LastLoginInfo.AffCode)</span>
+    <div class="wraper-tab">
+        <div class="bg-orange">
+            <span class="text"><strong>@Lang.LastLogin</strong> @(Model.LastLoginInfo.LastLoginDate?.ToString("dd-MMM-yyyy hh:mm tt"))</span>
+            <span class="text"><strong>@Lang.LastLoginIpAddress</strong> @(Model.LastLoginInfo.LastLoginIP)</span>
+            <span class="text"><strong>@(Lang.AffiliateID):</strong> @(Model.LastLoginInfo.AffCode)</span>
+        </div>
+        <div id="account-overview-content"></div>
     </div>
-    <div id="account-overview-content"></div>
 </div>
 
 <script src="@Url.RenderLink("~/www/build/js/pages/account-overview.js")"></script>

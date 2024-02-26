@@ -11,7 +11,6 @@
     .menu {
         display: flex;
         white-space: nowrap;
-        overflow: auto;
 
         &-item {
             display: block;
@@ -29,14 +28,38 @@
 
         .menu {
             margin: 0 !important;
+            align-items: flex-end;
+
+            li {
+                margin-bottom: -1px;
+
+                &:first-child {
+                    a {
+                        border-left: 1px solid #E5C589;
+                    }
+                }
+            }
 
             li:not(:last-child) {
                 border-right: 1px solid #f9f9f9;
             }
 
             &-item {
-                border-radius: 5px 5px 0px 0px;
-                padding: 5px 10px;
+                padding: 6px 12px;
+                border-right: 1px solid #E5C589;
+                border-top: 1px solid #E5C589;
+                border-bottom: none;
+                color: #333;
+                font-weight: 400;
+
+                &.active, &:hover {
+                    background: #fff;
+                    border-top: 4px solid #E5C589;
+                    font-weight: 600;
+                    color: #333;
+                    border-radius: 6px 6px 0px 0px;
+                    border-color: #e5c589 #e5c589 #fff;
+                }
             }
         }
     }
@@ -46,6 +69,8 @@
         white-space: nowrap;
         overflow: auto;
         padding: 3px 0;
+        background: #E5C589;
+        margin-bottom: 16px;
 
         .text {
             padding: 0 10px;
@@ -70,50 +95,57 @@
     }
 }
 
+.wraper-tab {
+    border: 1px solid #E5C589;
+    padding: 12px;
+}
+
 .summary {
+    .custom-button {
+        padding: 8px 12px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 8px;
+        }
+    }
+
+    .select-date {
+        min-width: 133px;
+        border-radius: 100px;
+        border: 1px solid #a7a7a7;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+            border: none;
+            background: none;
+        }
+
+        .icon-date {
+            display: block;
+            height: 20px;
+        }
+    }
+
     .form-group {
         margin-bottom: 0;
 
         .form-wrapper {
             display: flex;
             align-items: center;
+            gap: 12px;
 
             .form-control {
                 width: 86px;
-                height: 30px;
+                height: 34px;
                 text-align: center;
                 color: #333333;
                 margin-bottom: 0;
-            }
-
-            .glyphicon-calendar {
-                font-size: 14px;
-                width: 30px;
-                height: 30px;
-                color: #FF5D00;
-                cursor: pointer;
-                background: #FFF3ED;
-                border-radius: 4px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 12px;
-
-                @include Mobile {
-                    margin: 0 8px;
-                }
-            }
-
-            button {
-                background: #FF5D00;
-                box-shadow: 0px 2px 5px rgba(101, 101, 101, 0.25);
-                border-radius: 4px;
-                height: 30px;
-
-                @include Mobile {
-                    width: 30%;
-                    padding: 4px 10px;
-                }
             }
         }
     }
@@ -140,28 +172,14 @@
                 flex-wrap: nowrap;
             }
 
-            .my-account {
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 30px;
-                color: $light-mode-bg;
-                text-transform: uppercase;
-                border-bottom: 1px solid #CFCFCF;
-                display: block;
-                margin-bottom: 12px;
-
-                @include Mobile {
-                    font-size: 16px;
-                    margin-bottom: 8px;
-                }
-            }
 
             .group {
                 display: flex;
                 width: 480px;
-                border-radius: 5px;
+                border-radius: 10px;
                 margin-bottom: 12px;
                 justify-content: space-between;
+                overflow: hidden;
 
                 @include Mobile {
                     margin-bottom: 8px;
@@ -177,9 +195,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border-radius: 5px;
+                border-radius: 5px 0 0 5px;
                 width: 90px;
-                height: 90px;
+                height: 91px;
 
                 @include Mobile {
                     width: 64px;
@@ -208,20 +226,14 @@
             }
 
             .group-panel {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 width: 81%;
-
                 .info-panel {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    padding: 7px 10px;
-                    border-bottom: 1px solid #D4DFE6;
-
-                    @include Mobile {
-                        padding: 2px 4px;
+                    min-height: 45px;
+                    span{
+                        padding-left : 12px;
                     }
 
                     &:last-child {
@@ -231,7 +243,7 @@
                     &-title {
                         font-size: 13px;
                         line-height: 16px;
-                        color: $light-mode-bg;
+                        color: #333;
                         font-weight: 600;
 
                         @include Mobile {
@@ -243,14 +255,13 @@
                     &-content {
                         font-weight: 700;
                         font-size: 18px;
-                        line-height: 24px;
-                        color: $page-title-color;
                         width: 100%;
                         max-width: 160px;
-                        display: block;
-                        padding: 3px 0;
                         text-align: center;
-                        border-radius: 4px;
+                        min-height: 45px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
 
                         @include Mobile {
                             font-size: 13px;

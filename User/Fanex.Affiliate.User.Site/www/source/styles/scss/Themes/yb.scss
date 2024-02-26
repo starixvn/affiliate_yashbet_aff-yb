@@ -69,21 +69,6 @@ header {
     display: inline-block;
     margin-right: 10px;
     vertical-align: middle;
-    /*    &.mobile {
-        display: none;
-    }
-
-    @media screen and (max-device-width: 480px) {
-        &.mobile {
-            display: block;
-            float: right;
-            margin-top: 4px;
-        }
-
-        &.desktop {
-            display: none;
-        }
-    }*/
     .select-language {
         border: 0;
         position: relative;
@@ -157,9 +142,15 @@ header {
     }
 }
 
+.after-login {
+    .language-container{
+        margin-right : 0;
+    }
+}
 //sign-up
 .sign-up {
     position: relative;
+
     .btn-signup {
         border-radius: 4px;
     }
@@ -888,56 +879,80 @@ select.form-control {
     .dashboard-section {
         .group-one {
             background-color: $account-overview-group-one;
+            border: 1px solid $account-overview-img-one;
 
             .img-icon {
                 background-color: $account-overview-img-one;
             }
 
+            .info-panel {
+                border-bottom: 1px solid $account-overview-img-one;
+            }
+
             .info-panel-content {
-                background-color: $account-overview-img-one;
+                background-color: #F9E4C7;
+                color: #AE8F56;
             }
         }
 
         .group-two {
             background-color: $account-overview-group-two;
+            border: 1px solid $account-overview-img-two;
 
             .img-icon {
                 background-color: $account-overview-img-two;
             }
 
+            .info-panel {
+                border-bottom: 1px solid $account-overview-img-two;
+            }
+
             .info-panel-content {
-                background-color: $account-overview-img-two;
+                background-color: #B0CFFF;
+                color: #3C7CE0;
             }
         }
 
         .group-three {
             background-color: $account-overview-group-three;
+            border: 1px solid $account-overview-img-three;
 
             .img-icon {
                 background-color: $account-overview-img-three;
             }
 
+            .info-panel {
+                border-bottom: 1px solid $account-overview-img-three;
+            }
+
             .info-panel-content {
-                background-color: $account-overview-img-three;
+                background-color: #C3E4C2;
+                color: #6BA86A;
             }
         }
 
         .group-four {
             background-color: $account-overview-group-four;
+            border: 1px solid $account-overview-img-four;
 
             .img-icon {
                 background-color: $account-overview-img-four;
             }
 
+            .info-panel {
+                border-bottom: 1px solid $account-overview-img-four;
+            }
+
             .info-panel-content {
-                background-color: $account-overview-img-four;
+                background-color: #CCBBE7;
+                color: #9170C8;
             }
         }
     }
 
     .details-section-menu {
         .menu {
-            border-bottom: 1px solid $subtab-item-bg-color-active;
+            border-bottom: 1px solid #E5C589;
             margin: 16px 0;
 
             @include Mobile {
@@ -963,17 +978,16 @@ select.form-control {
             border-radius: 4px 4px 0px 0px;
             text-transform: capitalize;
             font-weight: 600;
+            color: #333;
 
             @include Mobile {
                 padding: 4px 8px;
                 font-size: 12px;
                 line-height: 18px;
             }
-
             &.active, &:hover {
-                color: $light-color-text;
-                border-bottom: 2px solid #001942;
-                background: #F7FAFF;
+                border-bottom: 3px solid #AE8F56;
+                background: #FFF1DE;
             }
         }
     }
@@ -1017,14 +1031,7 @@ select.form-control {
 
 
 .wrapper-after-login {
-    padding: 16px;
-    border: 1px solid #bcbcbc;
     border-top: none;
-
-    @include Mobile {
-        padding: 8px;
-    }
-
     .info-group {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
@@ -1454,16 +1461,16 @@ select.form-control {
                 .content-dropdown-icon {
                     background: url("../../../../build/styles/Images/icons/dropdown-gray.svg") no-repeat;
                     display: inline-block;
-                    height: 12px;
-                    width: 12px;
+                    height: 20px;
+                    width: 15px;
                     margin-left: 8px;
                 }
 
-                &:hover {
+                /*&:hover {
                     .content-dropdown-icon {
                         background: url("../../../../build/styles/Images/icons/dropdown-white.svg") no-repeat;
                     }
-                }
+                }*/
             }
         }
     }
