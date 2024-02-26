@@ -564,10 +564,11 @@
     <Content Include="www\build\styles\Images\notify\error.svg" />
     <Content Include="www\build\styles\Images\notify\banner-um.svg" />
     <Content Include="www\build\styles\Images\notify\maintenance-yb.svg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.hi-IN.jpg" />
     <Content Include="www\build\styles\Images\products\product.mobile.bn-BD.jpg" />
     <Content Include="www\build\styles\Images\products\product.mobile.hi-IN.jpg" />
+    <Content Include="www\build\styles\Images\products\product.mobile.en-US.jpg" />
+    <Content Include="www\build\styles\Images\products\product.desktop.bn-BD.jpg" />
+    <Content Include="www\build\styles\Images\products\product.desktop.hi-IN.jpg" />
     <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.en-US.jpg" />
     <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.hi-IN.jpg" />
     <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.bn-BD.jpg" />
@@ -798,7 +799,6 @@
     <Content Include="www\build\styles\Images\icons\dropdown.svg" />
     <Content Include="www\build\styles\Images\account-overview\qr-disabled.png" />
     <Content Include="www\build\styles\Images\products\product.desktop.en-US.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.en-US.jpg" />
     <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.en-US.jpg" />
     <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />
     <Content Include="www\build\styles\Images\themes\yb.png" />
