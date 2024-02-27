@@ -618,13 +618,14 @@ input[type="checkbox"], input[type="radio"] {
     .language-container .language-list-wrapper .language-list {
       line-height: 15px;
       text-align: left;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      padding: 8px 4px; }
       .language-container .language-list-wrapper .language-list .language-item {
         padding: 6px 12px;
         width: 100%;
         display: flex;
         align-items: center;
-        color: #333;
+        color: #353E5B;
         height: 40px;
         font-weight: 400;
         font-size: 16px;
@@ -632,18 +633,14 @@ input[type="checkbox"], input[type="radio"] {
         .language-container .language-list-wrapper .language-list .language-item.active {
           font-weight: 500; }
         .language-container .language-list-wrapper .language-list .language-item:hover {
-          color: #262626;
+          color: #353E5B;
           text-decoration: none;
-          background: #DFEBFF;
-          border-color: #B5D1FF; }
+          background: #E1E1E1;
+          border-color: #E1E1E1; }
       .language-container .language-list-wrapper .language-list li:last-child .language-item {
         border-bottom: 0; }
-      .language-container .language-list-wrapper .language-list li:first-child .language-item {
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px; }
-      .language-container .language-list-wrapper .language-list li:last-child .language-item {
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px; }
+      .language-container .language-list-wrapper .language-list li .language-item {
+        border-radius: 4px; }
 
 .user-login {
   display: flex;
@@ -1949,8 +1946,9 @@ table + .button-group {
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 12px; }
-  .group-control-form .form-input, .group-control-form .form-area {
-    min-width: 200px; }
+  .group-control-form .group-input {
+    width: 100%;
+    max-width: 200px; }
 
 .form-filter .form-group {
   display: inline-flex;

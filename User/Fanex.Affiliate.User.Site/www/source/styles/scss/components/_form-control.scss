@@ -44,8 +44,9 @@
     flex-wrap: wrap;
     margin-bottom: 12px;
 
-    .form-input {
-        min-width : 200px;
+    .group-input {
+        width: 100%;
+        max-width: 200px;
     }
 }
 

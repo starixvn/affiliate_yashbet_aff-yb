@@ -40,11 +40,12 @@
       border-right: none;
       border-top: none;
       border-left: 1px solid #D1B37D;
-      border-bottom: none; }
+      border-bottom: none;
+      /*&:last-child {
+                        border-right: 1px solid #D1B37D;
+                    }*/ }
       .overview-table table thead .overview-table-header th:first-child {
         border-left: none; }
-      .overview-table table thead .overview-table-header th:last-child {
-        border-right: 1px solid #D1B37D; }
       @media screen and (max-width: 1024px) {
         .overview-table table thead .overview-table-header th {
           top: 0; } }
@@ -56,11 +57,12 @@
       font-weight: 700;
       border-left: 1px solid #D1B37D;
       border-top: none;
-      border-right: none; }
+      border-right: none;
+      /* &:last-child {
+                        border-right: 1px solid #D1B37D;
+                    }*/ }
       .overview-table table thead .overview-table-total th:first-child {
         border-left: none; }
-      .overview-table table thead .overview-table-total th:last-child {
-        border-right: 1px solid #D1B37D; }
       @media screen and (max-width: 1024px) {
         .overview-table table thead .overview-table-total th {
           top: 57px !important; } }
@@ -68,11 +70,13 @@
       padding: 5px 10px;
       vertical-align: top;
       border-right: none;
-      border-bottom: none; }
+      border-bottom: none;
+      /*         &:last-child {
+                    border-right: 1px solid #D1B37D;
+                }
+*/ }
       .overview-table table tr td:first-child {
         border-left: none; }
-      .overview-table table tr td:last-child {
-        border-right: 1px solid #D1B37D; }
       .overview-table table tr td a {
         font-size: 13px; }
     .overview-table table .parent-tr td.market-name {
@@ -80,6 +84,21 @@
       text-align: center; }
     .overview-table table .no-info {
       background: #FFF3ED; }
+  .overview-table .Processing {
+    color: #FF7D04;
+    font-weight: 700; }
+  .overview-table .Completed {
+    color: #27C3A7;
+    font-weight: 700; }
+  .overview-table .Approved {
+    color: #6BA86A;
+    font-weight: 700; }
+  .overview-table .Cancelled {
+    color: #F42A41;
+    font-weight: 700; }
+  .overview-table .Rejected {
+    color: #9840C1;
+    font-weight: 700; }
 
 #player-detail-table tr, .commission-report tr {
   min-width: 1620px; }

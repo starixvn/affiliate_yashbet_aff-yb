@@ -67,9 +67,9 @@
                         border-left: none;
                     }
 
-                    &:last-child {
+                    /*&:last-child {
                         border-right: 1px solid #D1B37D;
-                    }
+                    }*/
 
                     @include TableAndMobile {
                         top: 0;
@@ -92,9 +92,9 @@
                         border-left: none;
                     }
 
-                    &:last-child {
+                   /* &:last-child {
                         border-right: 1px solid #D1B37D;
-                    }
+                    }*/
 
                     @include TableAndMobile {
                         top: 57px !important;
@@ -114,10 +114,10 @@
                     border-left: none;
                 }
 
-                &:last-child {
+       /*         &:last-child {
                     border-right: 1px solid #D1B37D;
                 }
-
+*/
                 a {
                     font-size: 13px;
                 }
@@ -136,6 +136,31 @@
         .no-info {
             background: #FFF3ED;
         }
+    }
+
+    .Processing {
+        color: #FF7D04;
+        font-weight: 700;
+    }
+
+    .Completed {
+        color : #27C3A7;
+        font-weight: 700;
+    }
+
+    .Approved {
+        color : #6BA86A;
+        font-weight: 700;
+    }
+
+    .Cancelled {
+        color : #F42A41;
+        font-weight: 700;
+    }
+
+    .Rejected {
+        color : #9840C1;
+        font-weight: 700;
     }
 }
 
