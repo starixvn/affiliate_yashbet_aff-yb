@@ -43,12 +43,13 @@
             }
 
             .main-panel {
-                background: #F7FAFF;
-                border: 1px solid #ADB5BD;
+                background: #F5F5F5;
+                border: 1px solid #D2D2D2;
                 border-radius: 8px;
                 justify-content: space-between;
                 padding: 16px;
-                gap : 16px;
+                gap: 16px;
+
                 .qr-img img {
                     height: 100px;
                     width: 100px;
@@ -92,18 +93,19 @@
                         margin-right: 0;
 
                         .toggle {
-                            width: 37px !important;
-                            height: 10px !important;
+                            width: 24px !important;
+                            height: 15px !important;
                             margin-right: 0;
+                            border: none;
 
                             .toggle-group {
                                 .toggle-off {
-                                    width: 37px !important;
+                                    width: 24px !important;
                                     padding-left: 30px;
                                 }
 
                                 .toggle-on {
-                                    background: $light-mode-bg;
+                                    background: #219653;
                                     padding-right: 30px;
                                 }
 
@@ -121,10 +123,10 @@
 
                                 .toggle-handle {
                                     right: 9px;
-                                    width: 14px;
+                                    width: 7px;
                                     background: #fff !important;
                                     border-radius: 10px;
-                                    height: 6px;
+                                    height: 7px;
                                 }
                             }
                         }
@@ -159,7 +161,7 @@
 
 .qr-item .toggle-on, .qr-item .toggle-off {
     border-radius: 0;
-    height: 10px;
+    height: 15px;
 }
 
 .link-statistic {
@@ -178,7 +180,10 @@
                 text-decoration: none;
             }
         }
+
         tr {
+            background: #fff;
+
             &:nth-child(even) {
                 background: #E1E1E1 !important;
             }

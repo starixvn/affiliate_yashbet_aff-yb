@@ -145,8 +145,8 @@
         padding: 0 4px;
         margin-bottom: 8px; } }
     .qr-code .qr-panel .qr-item .main-panel {
-      background: #F7FAFF;
-      border: 1px solid #ADB5BD;
+      background: #F5F5F5;
+      border: 1px solid #D2D2D2;
       border-radius: 8px;
       justify-content: space-between;
       padding: 16px;
@@ -180,14 +180,15 @@
         .qr-code .qr-panel .qr-item .main-panel .qr-action .toggle-btn {
           margin-right: 0; }
           .qr-code .qr-panel .qr-item .main-panel .qr-action .toggle-btn .toggle {
-            width: 37px !important;
-            height: 10px !important;
-            margin-right: 0; }
+            width: 24px !important;
+            height: 15px !important;
+            margin-right: 0;
+            border: none; }
             .qr-code .qr-panel .qr-item .main-panel .qr-action .toggle-btn .toggle .toggle-group .toggle-off {
-              width: 37px !important;
+              width: 24px !important;
               padding-left: 30px; }
             .qr-code .qr-panel .qr-item .main-panel .qr-action .toggle-btn .toggle .toggle-group .toggle-on {
-              background: #fff;
+              background: #219653;
               padding-right: 30px; }
             .qr-code .qr-panel .qr-item .main-panel .qr-action .toggle-btn .toggle .toggle-group .btn-default {
               background: #BDBDBD;
@@ -196,10 +197,10 @@
               left: 9px; }
             .qr-code .qr-panel .qr-item .main-panel .qr-action .toggle-btn .toggle .toggle-group .toggle-handle {
               right: 9px;
-              width: 14px;
+              width: 7px;
               background: #fff !important;
               border-radius: 10px;
-              height: 6px; }
+              height: 7px; }
     .qr-code .qr-panel .qr-item .qr-footer {
       margin-top: 12px; }
       @media (max-width: 767px) {
@@ -218,7 +219,7 @@
 
 .qr-item .toggle-on, .qr-item .toggle-off {
   border-radius: 0;
-  height: 10px; }
+  height: 15px; }
 
 .link-statistic table {
   font-weight: 600;
@@ -230,8 +231,10 @@
   .link-statistic table td a {
     color: #025EB1;
     text-decoration: none; }
-  .link-statistic table tr:nth-child(even) {
-    background: #E1E1E1 !important; }
+  .link-statistic table tr {
+    background: #fff; }
+    .link-statistic table tr:nth-child(even) {
+      background: #E1E1E1 !important; }
   .link-statistic table .parent-tr td {
     background: #FFF1DE;
     font-weight: 400; }
