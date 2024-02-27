@@ -15,7 +15,14 @@
     <div>
         <div class="breadcrumb-container">
             <ol class="breadcrumb" id="dailyEarningBreadcrumb">
-                <li><a href="@Url.Content($"~/UserPanel/Main/#StatementHistory?baseCurrency={selectedBaseCurrency}")">@Lang.StatementHistory</a></li>
+                <li>
+                    <a href="@Url.Content($"~/UserPanel/Main/#StatementHistory?baseCurrency={selectedBaseCurrency}")">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M6.52268 9.16591L10.9927 4.69591L9.81435 3.51758L3.33268 9.99924L9.81435 16.4809L10.9927 15.3026L6.52268 10.8326H16.666V9.16591H6.52268Z" fill="#3C7CE0" />
+                        </svg>
+                        @Lang.StatementHistory
+                    </a>
+                </li>
             </ol>
         </div>
 

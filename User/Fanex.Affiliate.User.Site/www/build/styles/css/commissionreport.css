@@ -292,8 +292,10 @@
         top: 5px; }
         .table tbody tr > td .row-wrapper .chevron.left:before {
           transform: unset; }
-      .table tbody tr > td .row-wrapper .chevron.bottom:before {
-        transform: rotate(90deg); }
+      .table tbody tr > td .row-wrapper .chevron.bottom {
+        right: 5px; }
+        .table tbody tr > td .row-wrapper .chevron.bottom:before {
+          transform: rotate(90deg); }
   .table tbody tr > td a {
     text-decoration: none;
     color: #025EB1; }

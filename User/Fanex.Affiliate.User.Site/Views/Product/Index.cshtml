@@ -194,14 +194,18 @@
             @RazorHelper.RenderMovingTopButton()
         </div>
     </div>
+</div>
+
+<div class="container-table">
     <div class="table-casino">
         @{ Html.RenderPartial("~/Views/Product/_CasinoProductTable.cshtml"); }
     </div>
+</div>
 
+<div class="page-container">
     <p class="text-block-bottom">
         @Lang.AllBettingProducts.Replace("{0}", siteFriendlyName)
     </p>
-
     <div class="signup-block">
         <a href="@Url.Content("~/SignUp")" class="custom-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -211,6 +215,8 @@
         </a>
     </div>
 </div>
+
+
 
 <div class="modal fade leftmenu-dialog" tabindex="-1" role="dialog" id="leftmenu">
     <div class="modal-dialog modal-dialog-centered" role="document">

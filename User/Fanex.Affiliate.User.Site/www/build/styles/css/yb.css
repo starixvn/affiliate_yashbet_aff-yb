@@ -743,9 +743,9 @@ select.form-control:focus {
     }*/ }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  .news, .table-casino {
-    padding-left: 40px !important;
-    padding-right: 40px !important; }
+  .news, .container-table {
+    padding-left: 12px !important;
+    padding-right: 12px !important; }
   .menu .menu-item {
     padding-right: 15px; } }
 
@@ -794,7 +794,7 @@ select.form-control:focus {
       font-weight: 600;
       font-size: 1.4rem;
       line-height: 2.2rem; }
-  .table-casino {
+  .container-table {
     padding: 0 10px !important; }
   #btnLogin {
     display: none; }

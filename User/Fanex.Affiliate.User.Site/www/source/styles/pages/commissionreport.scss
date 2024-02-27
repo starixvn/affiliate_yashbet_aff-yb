@@ -78,12 +78,15 @@
                         &.left {
                             top: 5px;
 
+
                             &:before {
                                 transform: unset;
                             }
                         }
 
                         &.bottom {
+                            right: 5px;
+
                             &:before {
                                 transform: rotate(90deg);
                             }

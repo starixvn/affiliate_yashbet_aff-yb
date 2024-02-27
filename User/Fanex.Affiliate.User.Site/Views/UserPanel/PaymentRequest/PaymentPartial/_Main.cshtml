@@ -46,7 +46,9 @@
                     </button>
                 </div>
             </form>
-            @{ Html.RenderPartial("~/Views/UserPanel/PaymentRequest/PaymentPartial/_PaymentList.cshtml", Model); }
+            <div class="wraper-table">
+                @{ Html.RenderPartial("~/Views/UserPanel/PaymentRequest/PaymentPartial/_PaymentList.cshtml", Model); }
+            </div>
         </div>
     </div>
 </div>

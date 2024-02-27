@@ -159,6 +159,13 @@
   .group-control-form .group-input {
     width: 100%;
     max-width: 200px; }
+  .group-control-form .date-wrapper {
+    position: relative; }
+    .group-control-form .date-wrapper .icon-date-time {
+      position: absolute;
+      top: 8px;
+      right: 15px;
+      cursor: pointer; }
 
 .form-filter .form-group {
   display: inline-flex;
@@ -433,10 +440,11 @@ input[type="radio"], input[type="checkbox"] {
   height: 24px;
   width: 24px;
   display: block;
-  transition: all 0.25s; }
+  transition: all 0.25s;
+  border-radius: 2px; }
 
 .custom-checkbox input:checked ~ .checkmark {
-  background-color: #f42a41; }
+  background-color: #967435; }
 
 .checkmark:after {
   content: "";
@@ -447,7 +455,8 @@ input[type="radio"], input[type="checkbox"] {
   top: 0;
   width: 24px;
   height: 24px;
-  transition: all 0.25s, border-width 0.1s; }
+  transition: all 0.25s, border-width 0.1s;
+  border-radius: 2px; }
 
 .custom-checkbox input:checked ~ .checkmark:after {
   left: 0.45em;

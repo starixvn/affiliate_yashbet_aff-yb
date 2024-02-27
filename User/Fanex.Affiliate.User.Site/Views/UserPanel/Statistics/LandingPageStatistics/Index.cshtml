@@ -5,25 +5,29 @@
 @Html.InlineStyles("~/www/build/styles/css/statistics.css")
 
 @model Fanex.Affiliate.User.Core.ViewModels.UserPanel.Statistics.LandingPageStatisticsViewModel
-<div class="sub-content">
-    <div class="page-title">
-        <span class="text">@Lang.LandingPages</span>
+
+
+<div class="wraper-block">
+    <div class="group-title">
+        <h2 class="title-block">
+            <span class="text">@Lang.Referrals</span>
+        </h2>
     </div>
     <div class="info-group">
-        <div class="group-control-select-table">
-            <form class="form-inline form-filter">
-                <div class="form-group">
-                    <label>@Lang.Device:</label>
-                    <select id="DeviceType" class="form-control">
+        <form class="form form-filter">
+            <div class="group-control-form">
+                <div class="group-input">
+                    <label class="custom-label">@Lang.Device:</label>
+                    <select id="DeviceType" class="form-input form-select">
                         @foreach (var item in EnumHelper.GetSelectList(typeof(Fanex.Affiliate.User.Core.Enum.DeviceType)))
                         {
                             <option value="@item.Value">@Lang.ResourceManager.GetString(item.Text)</option>
                         }
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>@Lang.Language:</label>
-                    <select id="Language" class="form-control">
+                <div class="group-input">
+                    <label class="custom-label">@Lang.Language:</label>
+                    <select id="Language" class="form-input form-select">
                         <option value="">@Lang.All</option>
                         @foreach (var language in Model.LanguageList)
                         {
@@ -31,9 +35,9 @@
                         }
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>@Lang.Page:</label>
-                    <select id="SportCode" class="form-control">
+                <div class="group-input">
+                    <label class="custom-label">@Lang.Page:</label>
+                    <select id="Language" class="form-input form-select">
                         <option value="">@Lang.All</option>
                         @foreach (var page in Model.MemberSitePageList)
                         {
@@ -41,30 +45,42 @@
                         }
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>@Lang.From:</label>
-                    <div id="fromPicker" class="date-wrapper">
-                        <input readonly class="form-control" type="text" id="FromDate" value="@Model.FromDate.ToString("MM/dd/yyyy")" />
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>@Lang.To:</label>
-                    <div id="toPicker" class="date-wrapper">
-                        <input readonly class="form-control" type="text" id="ToDate" value="@Model.ToDate.ToString("MM/dd/yyyy")" />
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-submit btn-statistics" id="btnStatisticsSubmit">@Lang.Submit</button>
-            </form>
-        </div>
-        <div class="report-container">
-            <div class="table overview-table" id="statisticsTable">
-                @{ Html.RenderPartial("~/Views/UserPanel/Statistics/StatisticsPartial/_LandingPageStatisticsContent.cshtml", Model); }
-            </div>
 
-            <div id="statisticsDetailPager"></div>
-            <div class="table detail table-paging overview-table" id="statisticsDetailTable">
+                <div class="group-input">
+                    <label class="custom-label">@Lang.From:</label>
+                    <div id="fromPicker" class="date-wrapper">
+                        <input readonly class="form-input" type="text" id="FromDate" value="@Model.FromDate.ToString("MM/dd/yyyy")" />
+                        <span class="icon-date-time">
+                            <img src="~/www/build/styles/Images/icons/calendar.svg" alt="icon-date-time" />
+                        </span>
+                    </div>
+                </div>
+                <div class="group-input">
+                    <label class="custom-label">@Lang.To:</label>
+                    <div id="fromPicker" class="date-wrapper">
+                        <input readonly class="form-input" type="text" id="ToDate" value="@Model.ToDate.ToString("MM/dd/yyyy")" />
+                        <span class="icon-date-time">
+                            <img src="~/www/build/styles/Images/icons/calendar.svg" alt="icon-date-time" />
+                        </span>
+                    </div>
+                </div>
+
+                <button type="submit" class="custom-button" id="statisticsDetailTable">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M1.29657 6.2097C0.948574 6.0937 0.945241 5.90637 1.30324 5.78703L14.0279 1.5457C14.3806 1.42837 14.5826 1.6257 14.4839 1.97103L10.8479 14.695C10.7479 15.0477 10.5446 15.0597 10.3952 14.725L7.99924 9.33303L11.9992 3.9997L6.66591 7.9997L1.29657 6.2097Z" fill="white" />
+                    </svg>
+                    @Lang.Submit
+                </button>
+            </div>
+        </form>
+        <div class="report-container">
+            <div class="wraper-table">
+                <div class="table overview-table" id="statisticsTable">
+                    @{ Html.RenderPartial("~/Views/UserPanel/Statistics/StatisticsPartial/_LandingPageStatisticsContent.cshtml", Model); }
+                </div>
+                <div id="statisticsDetailPager"></div>
+                <div class="table detail table-paging overview-table" id="statisticsDetailTable">
+                </div>
             </div>
         </div>
     </div>

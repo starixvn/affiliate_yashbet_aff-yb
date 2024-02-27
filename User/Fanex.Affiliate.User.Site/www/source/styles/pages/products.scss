@@ -270,3 +270,19 @@
         padding: 20px 16px !important;
     }
 }
+
+.container-table {
+    max-width: calc(100% - 400px);
+    flex-basis: calc(100% - 400px);
+    margin: 0 auto;
+
+    @media (max-width: 1600px) {
+        max-width: 1224px;
+        padding : 0 12px;
+    }
+
+    @include TableAndMobile {
+        max-width: 1224px;
+        flex-basis: unset;
+    }
+}
