@@ -45,7 +45,7 @@
           .table .game-list tr .game-name {
             width: 150px;
             font-size: 16px; } }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           .table .game-list tr .game-name {
             width: 100%;
             text-align: left;

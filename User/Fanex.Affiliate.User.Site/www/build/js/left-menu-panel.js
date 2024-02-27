@@ -2,7 +2,8 @@
 
 var LeftMenuPanel = (function ($) {
     var activeClassName = "active";
-    var isOpenLeftMenuMobile = false;
+    var maxWidth = 1024;
+
     var lastScreenTop = 0;
 
     var _me = {
@@ -16,27 +17,24 @@ var LeftMenuPanel = (function ($) {
                 $("#leftmenu").modal();
             });
 
+            $('#leftmenu').on('shown.bs.modal', function (e) {
+                _me.handleActiveLeftMenuByScroll();
+            });
+
             $('a.left-menu-item').bind('click', function (e) {
                 window.removeEventListener("scroll", _me.handleActiveLeftMenuByScroll);
                 e.preventDefault();
 
+                $(this).blur();
                 var hrefTarget = $(this).attr("href");
 
-                _me.handelAnimate(hrefTarget);
                 _me.handleOpenMenuContent(hrefTarget);
+                _me.handelAnimate(hrefTarget);
 
                 setTimeout(function () {
                     $('#leftmenu').modal('hide');
                 }, 400);
             });
-        },
-
-        handleCloseLeftMenu: function handleCloseLeftMenu() {
-            isOpenLeftMenuMobile = false;
-            $('body').unbind("click");
-
-            $('.left-panel.active').removeClass('active');
-            $('body.overflow-left-panel').removeClass('overflow-left-panel');
         },
 
         handleActiveLeftMenuByScroll: function handleActiveLeftMenuByScroll() {
@@ -93,42 +91,28 @@ var LeftMenuPanel = (function ($) {
         },
 
         setActiveLeftMenu: function setActiveLeftMenu(hrefTarget, currentScreenTop) {
-            var leftMenuList = $("a.left-menu-item[href*=\"#\"]");
-            var activeLeftMenu = $("a.left-menu-item[href=\"" + hrefTarget + "\"]");
+            var preClasss = screen.width > maxWidth ? ".desktop" : ".mobile";
+
+            var leftMenuList = $(preClasss + "-left-panel-nav a.left-menu-item[href*=\"#\"]");
+            var activeLeftMenu = $(preClasss + "-left-panel-nav a.left-menu-item[href=\"" + hrefTarget + "\"]");
             var leftMenuNumbers = leftMenuList.length;
 
             if (leftMenuNumbers) {
-                $("a.left-menu-item.active").removeClass(activeClassName);
+                $(preClasss + "-left-panel-nav a.left-menu-item.active").removeClass(activeClassName);
                 activeLeftMenu.addClass(activeClassName);
 
                 var activeIndex = leftMenuList.index(activeLeftMenu);
-                var maxScrollTop = $('#left-panel-nav').outerHeight() + 24 - $('#left-panel-menu').outerHeight(); //24px of margin
-                var currentScrollTop = $('#left-panel-menu').scrollTop();
+                var maxScrollTop = $(preClasss + "-left-panel-nav").outerHeight() + $(preClasss + "-left-panel-menu .heading-left-panel").outerHeight() - $(preClasss + "-left-panel-menu").outerHeight();
+                var currentScrollTop = $(preClasss + "-left-panel-menu").scrollTop();
                 var newScrollTop = activeIndex / leftMenuNumbers * maxScrollTop;
 
-                if (lastScreenTop < currentScreenTop && currentScrollTop < newScrollTop || lastScreenTop > currentScreenTop && currentScrollTop > newScrollTop) {
-                    $('#left-panel-menu').stop().animate({
-                        scrollTop: newScrollTop
+                if (lastScreenTop <= currentScreenTop && currentScrollTop < newScrollTop || lastScreenTop >= currentScreenTop && currentScrollTop > newScrollTop) {
+                    $(preClasss + "-left-panel-menu").stop().animate({
+                        scrollTop: activeIndex > leftMenuNumbers / 2 ? newScrollTop + activeLeftMenu.outerHeight() : newScrollTop
                     }, 400);
                 }
 
                 lastScreenTop = currentScreenTop;
-            }
-        },
-
-        handleScrollLeftMenuInMobile: function handleScrollLeftMenuInMobile() {
-            var leftMenuList = $("a.left-menu-item[href*=\"#\"]");
-            var activeLeftMenu = $("a.left-menu-item.active");
-            var leftMenuNumbers = leftMenuList.length;
-
-            if (leftMenuNumbers) {
-                var activeIndex = leftMenuList.index(activeLeftMenu);
-                var maxScrollTop = $('#left-panel-nav').outerHeight() + 24 - $('#left-panel-menu').outerHeight();
-                var newScrollTop = activeIndex / leftMenuNumbers * maxScrollTop;
-
-                $('#left-panel-menu').stop().animate({
-                    scrollTop: newScrollTop
-                }, 400);
             }
         },
 

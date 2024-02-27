@@ -1,5 +1,7 @@
 ﻿var LeftMenuPanel = (function ($) {
     const activeClassName = "active";
+    const maxWidth = 1024;
+
     let lastScreenTop = 0;
 
     var _me = {
@@ -10,8 +12,12 @@
 
         initEvent: function () {
             $('.mobile-left-panel').click(function (e) {
-                $("#leftmenu").modal();                   
+                $("#leftmenu").modal();
             })
+
+            $('#leftmenu').on('shown.bs.modal', function (e) {
+                _me.handleActiveLeftMenuByScroll();
+            });
 
             $('a.parent-menu').click(function (e) {
                 e.preventDefault();
@@ -28,19 +34,14 @@
 
                 var hrefTarget = $(this).attr("href");
 
+                _me.handleOpenMenuContent(hrefTarget);
                 _me.handelAnimate(hrefTarget);
+
                 setTimeout(function () {
                     $('#leftmenu').modal('hide');
                 }, 400);
                 
             });
-        },
-
-        handleCloseLeftMenu: function () {
-            $('body').unbind("click");
-
-            $('.left-panel.active').removeClass('active');
-            $('body.overflow-left-panel').removeClass('overflow-left-panel');
         },
 
         handleActiveLeftMenuByScroll: function () {
@@ -76,24 +77,26 @@
         },
 
         setActiveLeftMenu: function (hrefTarget, currentScreenTop) {
-            const leftMenuList = $(`.sub-menu a.left-menu-item[href*="#"]`);
-            const activeLeftMenu = $(`.sub-menu a.left-menu-item[href="${hrefTarget}"]`);
+            let preClasss = screen.width > maxWidth ? ".desktop" : ".mobile";
+
+            const leftMenuList = $(`${preClasss}-left-panel-nav a.left-menu-item[href*="#"]`);
+            const activeLeftMenu = $(`${preClasss}-left-panel-nav a.left-menu-item[href="${hrefTarget}"]`);
             const leftMenuNumbers = leftMenuList.length;
 
             if (leftMenuNumbers) {
-                $(".sub-menu a.left-menu-item.active").removeClass(activeClassName);
+                $(`${preClasss}-left-panel-nav a.left-menu-item.active`).removeClass("active");
+
                 activeLeftMenu.addClass(activeClassName);
-                $("a.parent-menu.active").removeClass("active");
                 activeLeftMenu.parents("ul.sub-menu").prev("a.parent-menu").addClass("active");
 
                 const activeIndex = leftMenuList.index(activeLeftMenu);
-                const maxScrollTop = ($('#left-panel-nav').outerHeight() + 24) - $('#left-panel-menu').outerHeight(); //24px of margin
-                const currentScrollTop = $('#left-panel-menu').scrollTop();
+                const maxScrollTop = ($(`${preClasss}-left-panel-nav`).outerHeight() + $(`${preClasss}-left-panel-menu .heading-left-panel`).outerHeight()) - $(`${preClasss}-left-panel-menu`).outerHeight();
+                const currentScrollTop = $(`${preClasss}-left-panel-menu`).scrollTop();
                 const newScrollTop = (activeIndex / leftMenuNumbers) * maxScrollTop;
 
-                if ((lastScreenTop < currentScreenTop && currentScrollTop < newScrollTop) || (lastScreenTop > currentScreenTop && currentScrollTop > newScrollTop)) {
-                    $('#left-panel-menu').stop().animate({
-                        scrollTop: newScrollTop
+                if ((lastScreenTop <= currentScreenTop && currentScrollTop < newScrollTop) || (lastScreenTop >= currentScreenTop && currentScrollTop > newScrollTop)) {
+                    $(`${preClasss}-left-panel-menu`).stop().animate({
+                        scrollTop: activeIndex > (leftMenuNumbers / 2) ? newScrollTop + activeLeftMenu.outerHeight() : newScrollTop
                     }, 400);
                 }
 
@@ -101,19 +104,11 @@
             }
         },
 
-        handleScrollLeftMenuInMobile: function () {
-            const leftMenuList = $(`.sub-menu a.left-menu-item[href*="#"]`);
-            const activeLeftMenu = $(`.sub-menu a.left-menu-item.active`);
-            const leftMenuNumbers = leftMenuList.length;
+        handleOpenMenuContent: function (hrefTarget) {
+            var btnToggleMenuContent = $(hrefTarget).parents(".body-result").prev(".left-menu-title").children(".button-toggle");
 
-            if (leftMenuNumbers) {
-                const activeIndex = leftMenuList.index(activeLeftMenu);
-                const maxScrollTop = ($('#left-panel-nav').outerHeight() + 24) - $('#left-panel-menu').outerHeight();
-                const newScrollTop = (activeIndex / leftMenuNumbers) * maxScrollTop;
-
-                $('#left-panel-menu').stop().animate({
-                    scrollTop: newScrollTop
-                }, 400);
+            if (!btnToggleMenuContent.hasClass('open')) {
+                btnToggleMenuContent.trigger('click');
             }
         }
     };
