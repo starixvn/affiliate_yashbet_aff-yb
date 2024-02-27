@@ -62,7 +62,7 @@
       .content-menu .content-menu-mobile {
         display: inline-block; } }
     .content-menu .content-menu-mobile .show-name-menu {
-      background: #fff;
+      background: #E5C589;
       border-radius: 4px;
       padding: 6px 30px 6px 8px;
       color: #FFFFFF; }
@@ -90,7 +90,7 @@
         border-bottom: 1px solid #F8F9FA; }
         .content-menu .content-menu-mobile .dropdown-content-menu li a.active {
           background: #fff;
-          color: #FFFFFF; }
+          color: #E5C589; }
       .content-menu .content-menu-mobile .dropdown-content-menu li:first-child a {
         border-radius: 4px 4px 0 0; }
       .content-menu .content-menu-mobile .dropdown-content-menu li:last-child a {
@@ -147,6 +147,15 @@
 
 .form-group {
   margin-bottom: 5px; }
+
+.group-control-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px; }
+  .group-control-form .form-input, .group-control-form .form-area {
+    min-width: 200px; }
 
 .form-filter .form-group {
   display: inline-flex;

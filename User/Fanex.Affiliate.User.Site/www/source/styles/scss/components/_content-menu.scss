@@ -52,7 +52,8 @@
                 border: none;
 
                 li {
-                    border-bottom : 1px solid #AE8F56;
+                    border-bottom: 1px solid #AE8F56;
+
                     &:not(:last-child) {
                         border-right: none;
                     }
@@ -93,7 +94,7 @@
         }
 
         .show-name-menu {
-            background: $light-mode-bg;
+            background: #E5C589;
             border-radius: 4px;
             padding: 6px 30px 6px 8px;
             color: #FFFFFF;
@@ -128,7 +129,7 @@
 
                     &.active {
                         background: $light-mode-bg;
-                        color: #FFFFFF;
+                        color: #E5C589;
                     }
                 }
 

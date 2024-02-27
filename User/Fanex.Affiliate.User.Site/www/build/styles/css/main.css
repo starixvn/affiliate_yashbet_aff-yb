@@ -1943,6 +1943,15 @@ table + .button-group {
 .form-group {
   margin-bottom: 5px; }
 
+.group-control-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px; }
+  .group-control-form .form-input, .group-control-form .form-area {
+    min-width: 200px; }
+
 .form-filter .form-group {
   display: inline-flex;
   align-items: center;

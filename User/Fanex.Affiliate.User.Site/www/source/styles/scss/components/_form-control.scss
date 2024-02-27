@@ -37,6 +37,18 @@
     margin-bottom: 5px;
 }
 
+.group-control-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+
+    .form-input {
+        min-width : 200px;
+    }
+}
+
 .form-filter {
     .form-group {
         display: inline-flex;
