@@ -149,11 +149,11 @@
       border: 1px solid #ADB5BD;
       border-radius: 8px;
       justify-content: space-between;
-      padding: 16px; }
+      padding: 16px;
+      gap: 16px; }
       .qr-code .qr-panel .qr-item .main-panel .qr-img img {
         height: 100px;
-        width: 100px;
-        margin-right: 16px; }
+        width: 100px; }
       .qr-code .qr-panel .qr-item .main-panel .qr-action {
         margin-left: 0;
         width: 100%; }
@@ -227,13 +227,13 @@
   @media (max-width: 767px) {
     .link-statistic table {
       font-size: 12px; } }
-  .link-statistic table td {
-    background-color: #FFFFFF; }
-    .link-statistic table td a {
-      color: #025EB1;
-      text-decoration: none; }
+  .link-statistic table td a {
+    color: #025EB1;
+    text-decoration: none; }
+  .link-statistic table tr:nth-child(even) {
+    background: #E1E1E1 !important; }
   .link-statistic table .parent-tr td {
-    background: #EEEEEE;
+    background: #FFF1DE;
     font-weight: 400; }
 
 .marketing-banner .list-content {

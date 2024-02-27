@@ -48,11 +48,10 @@
                 border-radius: 8px;
                 justify-content: space-between;
                 padding: 16px;
-
+                gap : 16px;
                 .qr-img img {
                     height: 100px;
                     width: 100px;
-                    margin-right: 16px;
                 }
 
                 .qr-action {
@@ -174,17 +173,20 @@
         }
 
         td {
-            background-color: #FFFFFF;
-
             a {
                 color: #025EB1;
                 text-decoration: none;
             }
         }
+        tr {
+            &:nth-child(even) {
+                background: #E1E1E1 !important;
+            }
+        }
 
         .parent-tr {
             td {
-                background: #EEEEEE;
+                background: #FFF1DE;
                 font-weight: 400;
             }
         }
