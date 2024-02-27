@@ -2075,7 +2075,7 @@ input[type="radio"], input[type="checkbox"] {
     .radio-group {
       margin-top: 10px; } }
   .radio-group.spacing-bt {
-    margin-bottom: 16px; }
+    margin-bottom: 11px; }
     @media (max-width: 767px) {
       .radio-group.spacing-bt {
         margin-top: 20px; } }
@@ -2122,6 +2122,9 @@ input[type="radio"], input[type="checkbox"] {
 
 .form-area[disabled], .form-input[disabled], [disabled].form-area {
   cursor: not-allowed; }
+
+.form-area[disabled] {
+  background: #E1E1E1; }
 
 .validate-input {
   margin-top: 8px !important;

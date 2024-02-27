@@ -230,7 +230,7 @@ input[type="radio"], input[type="checkbox"] {
     }
 
     &.spacing-bt {
-        margin-bottom: 16px;
+        margin-bottom: 11px;
 
         @include Mobile {
             margin-top: 20px;
@@ -287,6 +287,10 @@ input[type="radio"], input[type="checkbox"] {
 
 .form-area[disabled], .form-input[disabled] {
     cursor: not-allowed;
+}
+
+.form-area[disabled] {
+    background: #E1E1E1;
 }
 
 .validate-input {
