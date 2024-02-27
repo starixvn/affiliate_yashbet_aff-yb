@@ -11,7 +11,7 @@
         <div id="monthPicker" class="form-wrapper">
             <div class="select-date">
                 <input readonly id="MonthDate" data-original-date="@now.ToString("MM/dd/yyyy")" class="form-control d-inline-block" type="text" value="@DateTimeHelper.NowDateTime.ToString("MMM-yyyy")" />
-                <span class="icon-date">
+                <span class="icon-date" id="monthPickerTrigger">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M5.83301 2.50016H2.49967C2.27866 2.50016 2.0667 2.58796 1.91042 2.74424C1.75414 2.90052 1.66634 3.11248 1.66634 3.3335V16.6668C1.66634 16.8878 1.75414 17.0998 1.91042 17.2561C2.0667 17.4124 2.27866 17.5002 2.49967 17.5002H17.4997C17.7207 17.5002 17.9326 17.4124 18.0889 17.2561C18.2452 17.0998 18.333 16.8878 18.333 16.6668V3.3335C18.333 3.11248 18.2452 2.90052 18.0889 2.74424C17.9326 2.58796 17.7207 2.50016 17.4997 2.50016H14.1663V0.833496H12.4997V2.50016H7.49967V0.833496H5.83301V2.50016ZM16.6663 7.50016V15.8335H3.33301V7.50016H16.6663ZM14.9997 9.16683H13.333V10.8335H14.9997V9.16683ZM14.9997 12.5002H13.333V14.1668H14.9997V12.5002ZM11.6663 9.16683H4.99967V10.8335H11.6663V9.16683ZM11.6663 12.5002H7.49967V14.1668H11.6663V12.5002Z" fill="#967435" />
                     </svg>
@@ -25,6 +25,7 @@
             </button>
         </div>
     </div>
+
     <div class="summary-content">
         <div class="dashboard-section" id="dashboard-section"></div>
 

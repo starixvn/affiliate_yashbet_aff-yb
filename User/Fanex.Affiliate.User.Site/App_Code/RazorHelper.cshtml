@@ -88,9 +88,9 @@
         <div class="items validate-group @(isVisible ? string.Empty : "hide")">
             <label class="custom-label">@label</label>
             <select class="form-input form-select" id="@id">
-                if (hasAllOption)
+                @if (hasAllOption)
                 {
-                <option value="">@Fanex.Affiliate.User.Core.Resources.Lang.All</option>
+                    <option value="">@Fanex.Affiliate.User.Core.Resources.Lang.All</option>
                 }
 
                 @foreach (var item in dataList)

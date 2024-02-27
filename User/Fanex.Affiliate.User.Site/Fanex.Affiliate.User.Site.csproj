@@ -514,7 +514,9 @@
       <DependentUpon>site.js</DependentUpon>
     </Content>
     <Content Include="www\build\js\validation.js" />
-    <Content Include="www\build\js\validation.min.js" />
+    <Content Include="www\build\js\validation.min.js">
+      <DependentUpon>validation.js</DependentUpon>
+    </Content>
     <Content Include="www\build\styles\css\pages\home.css" />
     <Content Include="www\build\styles\css\pages\home.min.css">
       <DependentUpon>home.css</DependentUpon>
@@ -580,6 +582,7 @@
     <Content Include="www\build\styles\Images\titlebg-right-mb.svg" />
     <Content Include="www\build\styles\Images\titlebg-right.svg" />
     <Content Include="www\source\js\lib\swiper.min.js" />
+    <Content Include="www\source\js\pages\account-overview\player-detail.js" />
     <Content Include="www\source\js\pages\term-and-condition.js" />
     <Content Include="www\source\js\pages\product.js" />
     <Content Include="www\source\js\pages\sharing-structure.js" />
@@ -822,8 +825,6 @@
     <Content Include="www\source\js\lib\jquery.validate.min.js" />
     <Content Include="www\source\js\lib\jquery.validate.unobtrusive.min.js" />
     <Content Include="www\source\js\lib\modernizr-webp.js" />
-    <Content Include="www\source\js\pages\account-overview\overview.js" />
-    <Content Include="www\source\js\pages\account-overview\player-detail.js" />
     <Content Include="www\source\js\pages\account-overview\summary.js" />
     <Content Include="www\source\js\pages\commission-report.js" />
     <Content Include="www\source\js\pages\forgotpassword.js" />
