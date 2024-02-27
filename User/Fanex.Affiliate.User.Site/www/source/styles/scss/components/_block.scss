@@ -15,6 +15,13 @@
     margin-bottom: 52px;
 }
 
+.wraper-block {
+    border-radius: 10px;
+    border: 1px solid #E5C589;
+    background: #FFF;
+    padding : 12px;
+}
+
 .group-title {
     text-align: center;
     margin-bottom: 32px;
@@ -22,6 +29,23 @@
         margin-bottom : 24px;
     }
 }
+
+.after-login {
+    .group-title {
+        text-align: left;
+        margin-bottom: 0;
+
+        .title-block {
+            margin-bottom : 12px;
+            span {
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
 .title-block {
     font-weight: 800;
     line-height: normal;
