@@ -9,25 +9,30 @@
 {
 
     var channelName = item.First().ChannelName;
-
-    <tr data-id='@item.Key' class='parent-item'>
-        <td class="text-center">@index</td>
-        <td class="text-bold">
-            <div class="flex">
-                <span class="flex-0">@channelName</span>
-                <div class="flex-middle">
-                    <button class="btn btn-transparent btn-dropdown-table">
-                    </button>
-                </div>
-            </div>
+    <tr>
+        <td class="sub-channel-table" colspan="4">
+            <table>
+                <tr data-id='@item.Key' class='parent-item'>
+                    <td class="stt text-center">@index</td>
+                    <td class="channel text-bold">
+                        <div class="flex">
+                            <span class="flex-0">@channelName</span>
+                            <div class="flex-middle">
+                                <button class="btn btn-transparent btn-dropdown-table">
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="number-of-link text-center text-bold">@item.Count()</td>
+                    <td class="lang text-center">-</td>
+                </tr>
+                @foreach (var link in item)
+                {
+                    @RenderLinkRow(link);
+                }
+            </table>
         </td>
-        <td class="text-center text-bold">@item.Count()</td>
-        <td class="text-center">-</td>
     </tr>
-    foreach (var link in item)
-    {
-        @RenderLinkRow(link);
-    }
 }
 
 @helper RenderLinkRow(Fanex.Affiliate.User.Core.DTO.MarketingChannelLink link)
@@ -39,7 +44,6 @@
         <td class="market-name">@link.MarketName</td>
     </tr>
 }
-
 
 <div class="wraper-table">
     <div id="channel-table" class="table overview-table marketing-table">

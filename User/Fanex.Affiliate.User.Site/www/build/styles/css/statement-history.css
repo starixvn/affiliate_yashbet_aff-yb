@@ -110,7 +110,7 @@
       position: -webkit-sticky;
       position: sticky;
       z-index: 100;
-      top: 50px !important;
+      top: 56px !important;
       font-weight: 700;
       border-left: 1px solid #D1B37D;
       border-top: none;
@@ -205,9 +205,6 @@
     width: 340px; }
   .marketing-table tr td {
     white-space: unset; }
-    .marketing-table tr td:last-child a {
-      display: block;
-      text-align: center; }
 
 .breadcrumb {
   background-color: #FFFFFF;

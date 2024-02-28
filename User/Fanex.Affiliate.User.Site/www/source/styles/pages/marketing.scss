@@ -4,9 +4,10 @@
 @import "../scss/components/pager";
 
 
-.form .form-columns.form-columns-2{
-    align-items : flex-end;
+.form .form-columns.form-columns-2 {
+    align-items: flex-end;
 }
+
 .overview-table table thead .overview-table-header th:last-child, .overview-table table tr td:last-child {
     border-right: none;
 }
@@ -174,25 +175,26 @@
             font-size: 12px;
         }
 
-        td {
-            a {
-                color: #025EB1;
-                text-decoration: none;
-            }
-        }
-
         tr {
-            background: #fff;
+            .sub-channel-table {
+                padding: 0;
+                border: none;
 
-            &:nth-child(even) {
-                background: #E1E1E1 !important;
-            }
-        }
+                .parent-item {
+                    background: unset;
+                }
 
-        .parent-tr {
-            td {
-                background: #FFF1DE;
-                font-weight: 400;
+                .parent-tr {
+                    td {
+                        background: #FFF1DE;
+                        font-weight: 400;
+
+                        a {
+                            color: #025EB1;
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
         }
     }

@@ -243,13 +243,6 @@
     tr {
         td {
             white-space: unset;
-
-            &:last-child {
-                a {
-                    display: block;
-                    text-align: center;
-                }
-            }
         }
     }
 }
