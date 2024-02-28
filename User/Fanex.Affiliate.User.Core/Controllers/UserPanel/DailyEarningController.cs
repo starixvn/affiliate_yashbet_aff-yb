@@ -47,7 +47,7 @@
             ViewBag.MonthDate = param.MonthDate;
             ViewBag.BaseCurrencies = _currencyRepository.GetBaseCurrencyList();
             ViewBag.SelectedBaseCurrency = param.BaseCurrency;
-            var viewPath = param.IsOnlyContent ? "UserPanel/StatementHistory/StatementHistoryPartial/_DailyEarningContent" : "UserPanel/StatementHistory/DailyEarning";
+            var viewPath = param.IsOnlyContent ? "~/Views/UserPanel/StatementHistory/StatementHistoryPartial/_DailyEarningContent.cshtml" : "~/Views/UserPanel/StatementHistory/DailyEarning.cshtml";
 
             return View(viewPath, viewModel);
 

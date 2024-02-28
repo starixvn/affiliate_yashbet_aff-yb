@@ -287,3 +287,6 @@ a:hover {
 
 .table table tr.total {
   background: #FFDCC8 !important; }
+
+.table table tr.child-statement {
+  background: #FFF1DE !important; }

@@ -15,16 +15,18 @@
         </h2>
     </div>
 
-    <div class="form form-inline form-filter">
-        <div class="items validate-group ">
-            <label class="custom-label">@Lang.BaseCurrency:</label>
-            <select class="form-input form-select" id="base-currency">
-                @foreach (var currency in baseCurrencies)
-                {
-                    var selected = currency.ExchangeId == defaultBaseCurrency ? "selected='selected'" : string.Empty;
-                    <option @selected value="@currency.ExchangeId">@currency.Code</option>
-                }
-            </select>
+    <div class="form">
+        <div class="group-control-form">
+            <div class="group-input">
+                <label class="custom-label">@Lang.BaseCurrency:</label>
+                <select class="form-input form-select" id="base-currency">
+                    @foreach (var currency in baseCurrencies)
+                    {
+                        var selected = currency.ExchangeId == defaultBaseCurrency ? "selected='selected'" : string.Empty;
+                        <option @selected value="@currency.ExchangeId">@currency.Code</option>
+                    }
+                </select>
+            </div>
         </div>
     </div>
 

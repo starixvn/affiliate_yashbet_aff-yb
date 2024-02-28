@@ -291,7 +291,7 @@ header {
   background: #FFFFFF;
   color: #333333; }
   .table table tr:hover {
-    background: #F5F5F5; }
+    background: #F5F5F5 !important; }
 
 .table table th, .table table td {
   border: 1px solid #D1B37D; }
@@ -676,7 +676,7 @@ select.form-control:focus {
     background: #FFF3ED; } }
 
 .table table tr:nth-child(even) {
-  background-color: #E2E2E2 !important; }
+  background-color: #E2E2E2; }
 
 .wrapper-after-login {
   border-top: none; }

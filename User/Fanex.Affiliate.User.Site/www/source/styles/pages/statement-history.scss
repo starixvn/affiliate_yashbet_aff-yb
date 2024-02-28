@@ -14,9 +14,10 @@
         line-height: 24px;
         color: #3C7CE0;
         display: inline-flex;
-        align-items : center;
-        svg{
-            margin-right : 10px;
+        align-items: center;
+
+        svg {
+            margin-right: 10px;
         }
     }
 }
@@ -25,8 +26,8 @@
     margin: 16px 0 -12px;
 }
 
-.form-filter{
-    max-width : 250px;
+.form-filter {
+    max-width: 250px;
 }
 
 #statementDataList {
@@ -95,6 +96,7 @@
             }
         }
     }
+
     .breadcrumb {
         margin-bottom: 12px;
     }
@@ -109,6 +111,14 @@ a:hover {
     margin-bottom: 16px;
 }
 
-.table table tr.total {
-    background: #FFDCC8 !important;
+.table table {
+    tr {
+        &.total {
+            background: #FFDCC8 !important;
+        }
+
+        &.child-statement {
+            background: #FFF1DE !important;
+        }
+    }
 }

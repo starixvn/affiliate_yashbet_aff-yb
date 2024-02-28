@@ -108,10 +108,6 @@
       border-right: 1px solid #D1B37D !important; }
     .table-casino .table-responsive tbody tr > :nth-child(2) {
       border-left: none; }
-    .table-casino .table-responsive tbody tr:nth-child(even) td:first-child {
-      background-color: #E1E1E1; }
-    .table-casino .table-responsive tbody tr:nth-child(odd) td:first-child {
-      background-color: #FFFFFF; }
     .table-casino .table-responsive tbody tr td:first-child {
       border-left: none; }
     .table-casino .table-responsive th {

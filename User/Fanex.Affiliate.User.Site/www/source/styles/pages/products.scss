@@ -179,14 +179,6 @@
         }
 
         tbody {
-            tr:nth-child(even) td:first-child {
-                background-color: #E1E1E1;
-            }
-
-            tr:nth-child(odd) td:first-child {
-                background-color: #FFFFFF;
-            }
-
             tr {
                 td {
                     &:first-child {

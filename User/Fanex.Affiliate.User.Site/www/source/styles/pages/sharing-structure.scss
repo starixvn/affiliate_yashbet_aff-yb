@@ -32,11 +32,11 @@
 
         tr {
             &:nth-child(odd) {
-                background: #E1E1E1 !important;
+                background: #E1E1E1;
             }
 
             &:nth-child(even) {
-                background: none !important;
+                background: none;
             }
 
             &:last-child {

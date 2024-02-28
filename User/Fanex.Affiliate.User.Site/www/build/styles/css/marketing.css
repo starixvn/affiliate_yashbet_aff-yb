@@ -233,10 +233,10 @@
     border: none; }
     .link-statistic table tr .sub-channel-table .parent-item {
       background: unset; }
-    .link-statistic table tr .sub-channel-table .parent-tr td {
+    .link-statistic table tr .sub-channel-table .parent-tr {
       background: #FFF1DE;
       font-weight: 400; }
-      .link-statistic table tr .sub-channel-table .parent-tr td a {
+      .link-statistic table tr .sub-channel-table .parent-tr a {
         color: #025EB1;
         text-decoration: none; }
 

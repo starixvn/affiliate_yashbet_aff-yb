@@ -447,7 +447,7 @@ header {
         color: #333333;
 
         &:hover {
-            background: $table-row-bg-color-hover;
+            background: $table-row-bg-color-hover !important;
         }
     }
 
@@ -1024,7 +1024,7 @@ select.form-control {
 }
 
 .table table tr:nth-child(even) {
-    background-color: $table-row-even-bg-color !important;
+    background-color: $table-row-even-bg-color;
 }
 
 

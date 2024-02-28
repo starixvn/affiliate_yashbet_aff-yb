@@ -2993,7 +2993,7 @@ input[type="radio"], input[type="checkbox"] {
   .info-group table {
     margin-top: 1.7rem; }
     .info-group table tr {
-      background: #FFFFFF !important; }
+      background: #FFFFFF; }
 
 @media screen and (min-width: 320px) and (max-width: 928px) and (orientation: landscape) {
   .left-panel.active {

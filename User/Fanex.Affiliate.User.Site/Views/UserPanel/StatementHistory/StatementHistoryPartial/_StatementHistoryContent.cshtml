@@ -8,7 +8,7 @@
     && DateTime.Compare(item.MonthDate, ViewBag.AvailableFromDate) > 0;
 
     var hasChildren = item.Children == null || item.Children.Count() > 0;
-    var displayClass = parentId != null ? "display-none" : "";
+    var displayClass = parentId != null ? "child-statement display-none" : "";
 
     <tr data-id='@id' data-parent='@parentId' class='@displayClass'>
         <td class="text-center">@index</td>
