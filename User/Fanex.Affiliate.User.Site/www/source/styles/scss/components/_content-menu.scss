@@ -54,6 +54,7 @@
 
                 li {
                     border: none;
+
                     a {
                         background: #fff;
                         border-radius: 4px;
@@ -95,25 +96,29 @@
         }
 
         .show-name-menu {
-            background: #E5C589;
-            border-radius: 4px;
-            padding: 6px 30px 6px 8px;
+            background: #AE8F56;
+            border-radius: 100px;
+            padding: 9px 32px 9px 16px;
             color: #FFFFFF;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.20);
+            font-weight: 700;
+            font-size: 16px;
         }
 
         .dropdown-content-menu {
             display: none;
             list-style: none;
-            padding-left: 0;
             background: #FFFFFF;
             box-shadow: 0px 3px 8px 3px rgba(164, 164, 164, 0.25);
-            border-radius: 4px;
+            border-radius: 10px;
             position: absolute;
-            top: 35px;
+            top: 40px;
             width: 100%;
-            min-width: 200px;
+            min-width: 240px;
             z-index: 9;
             margin-bottom: 0;
+            padding: 8px 4px;
+
 
             &.active {
                 display: inline-block;
@@ -123,27 +128,15 @@
                 a {
                     font-weight: 600;
                     text-decoration: none;
-                    color: #616161;
-                    padding: 6px 20px 6px 6px;
+                    color: #353E5B;
+                    padding: 6px 12px 6px 12px;
                     display: block;
-                    border-bottom: 1px solid #F8F9FA;
+                    font-size: 16px;
+                    border-radius: 4px;
 
                     &.active {
-                        background: $light-mode-bg;
-                        color: #E5C589;
-                    }
-                }
-
-                &:first-child {
-                    a {
-                        border-radius: 4px 4px 0 0;
-                    }
-                }
-
-                &:last-child {
-                    a {
-                        border-bottom: none;
-                        border-radius: 0 0 4px 4px;
+                        background: #E1E1E1;
+                        color: #353E5B;
                     }
                 }
             }
@@ -158,9 +151,9 @@
                     background: #FFFFFF;
                     box-shadow: 0px 3px 8px 3px rgba(164, 164, 164, 0.25);
                     border-radius: 4px;
-                    width: 150px;
+                    width: auto;
                     display: none;
-
+                    min-width : 120px;
                     &.active {
                         display: block;
                     }

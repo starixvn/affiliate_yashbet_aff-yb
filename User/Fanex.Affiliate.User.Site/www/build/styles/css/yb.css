@@ -968,8 +968,8 @@ select.form-control:focus {
     content: "";
     display: block;
     position: absolute;
-    top: 10px;
-    right: 8px;
+    top: 12px;
+    right: 12px;
     width: 12px;
     height: 12px; }
 
@@ -982,7 +982,7 @@ select.form-control:focus {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 5px;
+    top: 9px;
     right: 5px; }
   .content-menu .content-menu-mobile .dropdown-content-menu .parent-item.active i {
     background: url("../Images/icons/dropdown-white.svg") no-repeat center; }

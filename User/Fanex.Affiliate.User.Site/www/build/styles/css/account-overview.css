@@ -719,3 +719,6 @@ td {
 @media (max-width: 767px) {
   .summary-content {
     margin-top: 12px; } }
+
+#media-gallery #marketingPager {
+  margin-bottom: -12px; }

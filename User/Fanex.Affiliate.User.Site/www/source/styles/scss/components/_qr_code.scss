@@ -30,13 +30,15 @@
 
     label {
         margin: 0px;
+        font-weight: 600;
+        line-height: 30px;
     }
 }
 
 .qr-img{
     img{
-        height: 100px;
-        width: 100px;
+        height: 120px;
+        width: 120px;
         &.default{
             display: none;
         }
