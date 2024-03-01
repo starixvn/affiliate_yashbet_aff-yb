@@ -1,15 +1,2 @@
 ﻿.wraper-block {
   max-width: 1200px; }
-
-.after-login-container .group-button {
-  display: flex;
-  gap: 16px;
-  margin-top: 16px; }
-  @media (max-width: 767px) {
-    .after-login-container .group-button {
-      justify-content: center; } }
-  .after-login-container .group-button .custom-button {
-    padding: 8px 20px 8px 45px; }
-    @media (max-width: 767px) {
-      .after-login-container .group-button .custom-button {
-        justify-content: center; } }

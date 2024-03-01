@@ -16,21 +16,6 @@
     display : block;
 }
 
-
-.group-button {
-    display: flex;
-    gap: 16px;
-    margin-top: 16px;
-    margin-bottom: 52px;
-
-    @include Mobile {
-        justify-content: center;
-    }
-
-    .custom-button {
-        padding: 8px 20px 8px 45px;
-    }
-}
 .info-question {
     .body-result{
         padding-left : 8px;
