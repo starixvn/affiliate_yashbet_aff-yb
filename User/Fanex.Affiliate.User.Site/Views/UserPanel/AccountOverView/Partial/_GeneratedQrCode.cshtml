@@ -6,7 +6,7 @@
 
 @helper RenderQrItem(Fanex.Affiliate.User.Core.ViewModels.UserPanel.Marketing.QrCodeLinkViewModel item)
 {
-var defaultImg = Url.Content("~/www/build/styles/Images/account-overview/qr-disabled.png");
+var defaultImg = Url.Content("~/www/build/styles/Images/account-overview/qr-disabled.svg");
 var disabled = item.IsShow ? "" : "disabled";
 var checkStatus = item.IsShow ? "checked" : "";
 var downloadName = item.DisplayName + "_qrcode";

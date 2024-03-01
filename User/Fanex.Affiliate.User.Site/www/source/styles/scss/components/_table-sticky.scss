@@ -36,6 +36,7 @@
         border-collapse: separate;
         border-spacing: 0;
         font-size: 14px;
+        border-right: 0.25px solid #d1b37d;
 
         @include Mobile {
             font-size: 12px;
@@ -66,9 +67,6 @@
                     &:first-child {
                         border-left: none;
                     }
-                    /*&:last-child {
-                        border-right: 1px solid #D1B37D;
-                    }*/
 
                     @include TableAndMobile {
                         top: 0;
@@ -90,9 +88,6 @@
                     &:first-child {
                         border-left: none;
                     }
-                    /* &:last-child {
-                        border-right: 1px solid #D1B37D;
-                    }*/
 
                     @include TableAndMobile {
                         top: 57px !important;
@@ -111,10 +106,7 @@
                 &:first-child {
                     border-left: none;
                 }
-                /*         &:last-child {
-                    border-right: 1px solid #D1B37D;
-                }
-*/
+
                 a {
                     font-size: 13px;
                 }

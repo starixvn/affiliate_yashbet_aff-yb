@@ -51,12 +51,6 @@
     //  ]
     //},
     //{
-    //  "outputFileName": "www/build/js/pages/generated-qrcode.js",
-    //  "inputFiles": [
-    //    "www/source/js/pages/account-overview/marketingbase.js"
-    //  ]
-    //},
-    //{
     //  "outputFileName": "www/build/js/pages/referrerstatistics.js",
     //  "inputFiles": [
     //    "www/source/js/lib/pikaday.js",

@@ -525,6 +525,23 @@
     <Content Include="www\build\styles\css\sharing-structure.min.css">
       <DependentUpon>sharing-structure.css</DependentUpon>
     </Content>
+    <Content Include="www\build\styles\Images\account-overview\commission.svg" />
+    <Content Include="www\build\styles\Images\account-overview\copy-link.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-copy.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-facebook.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-line.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-qq.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-talk.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-telegram.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-twitter.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-weiboi.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-wechat.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-whatsapp.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-zalo.svg" />
+    <Content Include="www\build\styles\Images\account-overview\new-sign-up.svg" />
+    <Content Include="www\build\styles\Images\account-overview\qr-disabled.svg" />
+    <Content Include="www\build\styles\Images\account-overview\sub-aff.svg" />
+    <Content Include="www\build\styles\Images\account-overview\total-deposit.svg" />
     <Content Include="www\build\styles\Images\contact-us\email.svg" />
     <Content Include="www\build\styles\Images\contact-us\left-black-column.svg" />
     <Content Include="www\build\styles\Images\contact-us\left-column.svg" />
@@ -756,22 +773,6 @@
       <DependentUpon>font.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\Images\404-illus.png" />
-    <Content Include="www\build\styles\Images\account-overview\commission.png" />
-    <Content Include="www\build\styles\Images\account-overview\copy-link.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-copy.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-facebook.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-line.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-qq.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-subaff.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-talk.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-telegram.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-twitter.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-wechat.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-weiboi.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-whatsapp.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-zalo.png" />
-    <Content Include="www\build\styles\Images\account-overview\new-sign-up.png" />
-    <Content Include="www\build\styles\Images\account-overview\total-deposit.png" />
     <Content Include="www\build\styles\Images\contact-in-home\bg_contact.desktop.png" />
     <Content Include="www\build\styles\Images\contact-in-home\bg_contact.mobile.png" />
     <Content Include="www\build\styles\Images\contact-in-home\bg_contact.tablet.png" />
@@ -794,7 +795,6 @@
     <Content Include="www\build\styles\Images\icons\dropdown-table.svg" />
     <Content Include="www\build\styles\Images\icons\dropdown-white.svg" />
     <Content Include="www\build\styles\Images\icons\dropdown.svg" />
-    <Content Include="www\build\styles\Images\account-overview\qr-disabled.png" />
     <Content Include="www\build\styles\Images\products\product.desktop.en-US.jpg" />
     <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.en-US.jpg" />
     <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />

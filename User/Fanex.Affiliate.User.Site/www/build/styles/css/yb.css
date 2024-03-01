@@ -941,7 +941,7 @@ select.form-control:focus {
   .qr-footer .btn-copy-link:after {
     content: "";
     display: block;
-    background: url("../Images/account-overview/copy-link.png") no-repeat;
+    background: url("../Images/account-overview/copy-link.svg") no-repeat;
     position: absolute;
     top: 5px;
     left: 10px;
