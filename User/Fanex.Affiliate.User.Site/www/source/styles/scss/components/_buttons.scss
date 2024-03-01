@@ -136,8 +136,7 @@
     }
 
 
-    &-outline {
-        background-image: url('../../../build/styles/Images/icons/reset.svg');
+    &-outline, &-cancel {
         color: #F42A41;
         background-color: #fff;
         background-repeat: no-repeat;
@@ -151,6 +150,14 @@
             width: 50%;
             background-position: 40px center;
         }
+    }
+
+    &-outline {
+        background-image: url('../../../build/styles/Images/icons/reset.svg');
+    }
+
+    &-cancel {
+        background-image: url('../../../build/styles/Images/icons/file-cancel-line.svg');
     }
 
     &-dash {

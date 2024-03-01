@@ -1789,18 +1789,21 @@ ul.dash-style {
   .custom-button:hover {
     text-decoration: none;
     color: #fff; }
-  .custom-button-outline {
-    background-image: url("../Images/icons/reset.svg");
+  .custom-button-outline, .custom-button-cancel {
     color: #F42A41;
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: 20px center; }
-    .custom-button-outline:hover {
+    .custom-button-outline:hover, .custom-button-cancel:hover {
       color: #F42A41; }
     @media (max-width: 767px) {
-      .custom-button-outline {
+      .custom-button-outline, .custom-button-cancel {
         width: 50%;
         background-position: 40px center; } }
+  .custom-button-outline {
+    background-image: url("../Images/icons/reset.svg"); }
+  .custom-button-cancel {
+    background-image: url("../Images/icons/file-cancel-line.svg"); }
   .custom-button-dash {
     background-image: url("../Images/icons/send-plane-fill.svg");
     background-repeat: no-repeat;

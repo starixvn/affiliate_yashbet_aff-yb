@@ -565,7 +565,9 @@
     <Content Include="www\build\styles\Images\icons\affter-login-user.svg" />
     <Content Include="www\build\styles\Images\icons\arrow-down-s-fill.svg" />
     <Content Include="www\build\styles\Images\icons\btn-submit.svg" />
+    <Content Include="www\build\styles\Images\icons\calendar.svg" />
     <Content Include="www\build\styles\Images\icons\contacts-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\file-cancel-line.svg" />
     <Content Include="www\build\styles\Images\icons\lock-password-line.svg" />
     <Content Include="www\build\styles\Images\icons\login-box-fill-color.svg" />
     <Content Include="www\build\styles\Images\icons\login-box-fill.svg" />

@@ -2,6 +2,7 @@
     Layout = null;
 }
 @using Fanex.Affiliate.User.Core.CoreService
+@using Fanex.Affiliate.User.Core.Constants
 @model Fanex.Affiliate.User.Core.ViewModels.UserPanel.MyAccountViewModel
 
 @Html.InlineStyles("~/www/build/styles/css/my-account.css")
@@ -22,21 +23,22 @@
             </div>
             <div class="body-result">
                 <div class="form-group form-columns form-columns-2">
-                    <div class="items validate-group">
+                    <div class="items">
                         <label class="custom-label">@Lang.Username</label>
                         <input type="text" value="@Model.AccountInformation.UserName" class="form-input disable" />
                     </div>
-                    <div class="items validate-group">
+                    <div class="items">
                         <label class="custom-label">@Lang.AffiliateID</label>
                         <input type="text" value="@Model.AccountInformation.AffCode" class="form-input disable" />
                     </div>
                 </div>
+
                 <div class="form-group form-columns form-columns-2">
-                    <div class="items validate-group">
+                    <div class="itemsp">
                         <label class="custom-label">@Lang.Password</label>
-                        <div class="items validate-group preference-validation">
+                        <div class="items preference-validation">
                             <input type="password" value="@Lang.Password" class="form-input disable" />
-                            <a href="#" class="custom-button">
+                            <a href="@Url.Content("~/Password/Update")" class="custom-button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M1.33333 3.66667V2.662C1.33455 2.48692 1.4046 2.31934 1.52834 2.19548C1.65208 2.07161 1.81959 2.0014 1.99467 2H14.0053C14.3707 2 14.6667 2.29667 14.6667 2.662V13.338C14.6654 13.5131 14.5954 13.6807 14.4717 13.8045C14.3479 13.9284 14.1804 13.9986 14.0053 14H1.99467C1.81921 13.9998 1.651 13.93 1.52699 13.8059C1.40299 13.6817 1.33333 13.5135 1.33333 13.338V12.6667H13.3333V4.86667L8 9.66667L1.33333 3.66667ZM0 6.66667H3.33333V8H0V6.66667ZM0 10H5.33333V11.3333H0V10Z" fill="white" />
                                 </svg>
@@ -54,64 +56,85 @@
             </div>
             <div class="body-result">
                 <div class="form-group form-columns form-columns-2">
-                    <div class="items validate-group">
+                    <div class="items">
                         <label class="custom-label">@Lang.Address</label>
                         <input type="text" value="@Model.AccountInformation.Address" class="form-input disable" />
                     </div>
-                    <div class="items validate-group">
-                        <label class="custom-label">@Lang.Email</label>
-                        <input type="text" value="@Model.AccountInformation.Email" class="form-input disable" />
-                    </div>
-                </div>
-                <div class="form-group form-columns form-columns-2">
-                    <div class="items validate-group">
+                    <div class="items">
                         <label class="custom-label">@Lang.City</label>
                         <input type="text" value="@Model.AccountInformation.City" class="form-input disable" />
                     </div>
+                </div>
+                <div class="form-group form-columns form-columns-2">
+                    <div class="items">
+                        <label class="custom-label">@Lang.PostCode</label>
+                        <input type="text" value="@Model.AccountInformation.Postal" class="form-input disable" />
+                    </div>
+                    <div class="items">
+                        <label class="custom-label">@Lang.Country</label>
+                        <input type="text" value="@Model.AccountInformation.Country" class="form-input disable" />
+                    </div>
+                </div>
+                <div class="form-group form-columns form-columns-2">
+                    <div class="items">
+                        <label class="custom-label">@Lang.Email</label>
+                        <input type="text" value="@Model.AccountInformation.Email" class="form-input disable" />
+                    </div>
                     <div class="items validate-group">
-                        <label class="custom-label">@Lang.ContactNumber <span class="red-color">*</span></label>
+                        <label class="custom-label require">@Lang.ContactNumber</label>
                         @Html.TextBoxFor(p => p.AccountInformation.Phone, new { @id = "Phone", @Name = "Phone", @class = "form-input" })
                         @Html.ValidationMessage("Phone", new { @class = "validate-input hide" })
                     </div>
                 </div>
-                <div class="form-group form-columns form-columns-2">
-                    <div class="items validate-group">
-                        <label class="custom-label">@Lang.PostCode</label>
-                        <input type="text" value="@Model.AccountInformation.Postal" class="form-input disable" />
-                    </div>
-                    <div class="items validate-group">
-                        <label class="custom-label">Skype</label>
-                        <input type="text" value="" class="form-input" />
-                    </div>
-                </div>
+                @{
+                    var contactAppList = Model.AccountInformation.ContactAppList;
+                    if (contactAppList != null && contactAppList.Any())
+                    {
+                        var index = 0;
+                        var contactAppCount = contactAppList.Count();
+                        if (contactAppCount == 1)
+                        {
+                            var itemOnly = contactAppList.FirstOrDefault();
+                            <div class="form-group form-columns form-columns-2">
+                                @RazorHelper.RenderAppContactItem(itemOnly.Name, index, "", itemOnly.Value, contactAppCount == 1)
+                                @RazorHelper.RenderGender(Model.AccountInformation.Gender ? "checked" : "disabled", !Model.AccountInformation.Gender ? "checked" : "disabled")
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="form-group form-columns form-columns-2">
+                                @foreach (var item in contactAppList)
+                                {
+                                    var dependentField = $"ContactAppList[{(index == 0 ? "1" : "0")}].Value";
+                                    @RazorHelper.RenderAppContactItem(item.Name, index, dependentField, item.Value, contactAppCount == 1)
 
-                <div class="form-group form-columns form-columns-2">
+                                    index++;
+                                }
+                            </div>
 
+                            <div class="form-group form-columns form-columns-2">
+                                @RazorHelper.RenderGender(Model.AccountInformation.Gender ? "checked" : "disabled", !Model.AccountInformation.Gender ? "checked" : "disabled")
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        var sessionService = DependencyResolver.Current.GetService<ISessionService>();
+                        var currentLanguage = sessionService.CurrentLanguage;
 
+                        var secondAppName = AppContact.SecondAppContactList[currentLanguage];
 
-                    <div class="items validate-group">
-                        <label class="custom-label">@Lang.Country</label>
-                        <input type="text" value="@Model.AccountInformation.Country" class="form-input disable" />
-                    </div>
-                    <div class="items validate-group">
-                        <label class="custom-label" for="male">@Lang.Gender <span class="red-color">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-button">
-                                <input type="radio" name="Gender" id="male" value="True" checked />
-                                <span class="radio-circle"></span>
-                                <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Male</span>
-                            </label>
-                            <label class="radio-button">
-                                <input type="radio" name="Gender" id="female" value="False" />
-                                <span class="radio-circle"></span>
-                                <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Female</span>
-                            </label>
+                        <div class="form-group form-columns form-columns-2">
+                            @RazorHelper.RenderAppContactItem(AppContact.FirstAppContactName, 0, "ContactAppList[1].Value")
+                            @RazorHelper.RenderAppContactItem(secondAppName, 1, "ContactAppList[0].Value")
                         </div>
-                    </div>
-                </div>
+                        <div class="form-group form-columns form-columns-2">
+                            @RazorHelper.RenderGender(Model.AccountInformation.Gender ? "checked" : "disabled", !Model.AccountInformation.Gender ? "checked" : "disabled")
+                        </div>
+                    }
+                }
             </div>
         </div>
-
 
         <div class="info-question">
             <div class="title">
@@ -124,30 +147,81 @@
                             <label class="radio-button">
                                 <input type="radio" name="HasWebSite" id="hasWebSite" value="True" @(string.IsNullOrEmpty(Model.AccountInformation.SiteUrl) ? string.Empty : "checked") />
                                 <span class="radio-circle"></span>
-                                <span class="radio-label">@Lang.OwnWebsite <span class="red-color">*</span></span>
+                                <span class="radio-label require">@Lang.OwnWebsite</span>
                             </label>
                         </div>
                         <div class="input-url">
-                            <label for="SiteUrl" class="custom-label">@Lang.WebsiteURL <span class="red-warn">*</span></label>
+                            <label for="SiteUrl" class="custom-label require">@Lang.WebsiteURL</label>
                             <div class="group-input">
-                                @Html.TextBoxFor(p => p.AccountInformation.SiteUrl, new { @class = "form-input" })
-                                <span class="button-toggle button-toggle-open" id="btnAddUrl" title="@Lang.AddUrl"></span>
+                                @{
+                                    var attributes = new Dictionary<string, object>
+                                    {
+                                        ["id"] = "SiteUrl",
+                                        ["Name"] = "SiteUrl",
+                                        ["class"] = "form-input"
+                                    };
+
+                                    if (string.IsNullOrEmpty(Model.AccountInformation.SiteUrl))
+                                    {
+                                        attributes.Add("disabled", "disabled");
+                                    }
+                                }
+                                @Html.TextBoxFor(p => p.AccountInformation.SiteUrl, attributes)
+                                <span class="button-toggle button-toggle-open" id="btnAddUrl" title="@Lang.AddUrl" @(string.IsNullOrEmpty(Model.AccountInformation.SiteUrl) ? "disabled=\"disabled\"" : string.Empty)></span>
                             </div>
-                            @Html.ValidationMessageFor(x => x.AccountInformation.SiteUrl, string.Empty, new { @class = "validate-input hide" })
+                            @Html.ValidationMessage("SiteUrl", new { @class = "validate-input hide" })
                         </div>
+
+                        <input type="hidden" name="MoreSiteUrls" id="MoreSiteUrls" />
+
+                        @if (Model.AccountInformation.MoreWebsiteUrlList.Any())
+                        {
+                            var index = 2;
+                            foreach (var item in Model.AccountInformation.MoreWebsiteUrlList)
+                            {
+                                var name = $"MoreUrlInput{index}";
+                                <div class="input-url websiteInput" style="display: @(string.IsNullOrEmpty(Model.AccountInformation.SiteUrl) ? "none" : "block")">
+                                    <label for="@name" class="custom-label require moreWebsiteLabel">@Lang.WebsiteURL @(index)</label>
+                                    <div class="group-input">
+                                        <input class="form-input urlInput" name="@name" id="@name"
+                                               data-val="true" data-val-required="@Lang.WebsiteUrli.Replace("{i}", index.ToString())"
+                                               type="text" value="@item" />
+                                        <span type="button" class="button-toggle button-toggle-close btnDeleteUrl" title="@Lang.Del"></span>
+                                    </div>
+                                    <span class="field-validation-valid validate-input hide" data-valmsg-for="@name" data-valmsg-replace="true"></span>
+                                </div>
+
+                                index++;
+                            }
+                        }
                     </div>
                 </div>
                 <div class="form-group form-columns form-columns-2">
                     <div class="items validate-group">
                         <div class="radio-group spacing-bt">
                             <label class="radio-button">
-                                <input type="radio" name="HasWebSite" value="False" />
+                                <input type="radio" name="HasWebSite" value="False" @(string.IsNullOrEmpty(Model.AccountInformation.SiteUrl) ? "checked" : string.Empty) />
                                 <span class="radio-circle"></span>
                                 <span class="radio-label">@Lang.NoWebsite</span>
                             </label>
                         </div>
-                        @Html.TextAreaFor(p => p.AccountInformation.NoSiteDesc, new { @class = "form-area", @rows = 5, @disabled = "disabled", @placeholder = Lang.DescWebsite })
-                        @Html.ValidationMessageFor(p => p.AccountInformation.NoSiteDesc, string.Empty, new { @class = "validate-input hide" })
+                        @{
+                            var textareaAttributes = new Dictionary<string, object>
+                            {
+                                ["id"] = "NoSiteDesc",
+                                ["Name"] = "NoSiteDesc",
+                                ["class"] = "form-area",
+                                ["placeholder"] = Lang.DescWebsite,
+                                ["rows"] = 5
+                            };
+
+                            if (!string.IsNullOrEmpty(Model.AccountInformation.SiteUrl))
+                            {
+                                textareaAttributes.Add("disabled", "disabled");
+                            }
+                        }
+                        @Html.TextAreaFor(p => p.AccountInformation.NoSiteDesc, textareaAttributes)
+                        @Html.ValidationMessage("NoSiteDesc", new { @class = "validate-input hide" })
                     </div>
                 </div>
             </div>
@@ -159,22 +233,24 @@
             </div>
             <div class="body-result">
                 <div class="form-group form-columns form-columns-2">
-                    <div class="items validate-group">
+                    <div class="items">
                         <label class="custom-label">@Lang.Language</label>
                         <input type="text" value="@Model.AccountInformation.LanguageName" class="form-input disable" />
                     </div>
                     <div class="items validate-group">
                         <label class="custom-label">@Lang.DefaultBaseCurrency</label>
-                        <div class="items validate-group preference-validation">
+                        <div class="preference-validation">
                             @Html.DropDownListFor(p => p.AccountInformation.DefaultBaseCurrency, Model.BaseCurrencyList, new { @id = "DefaultBaseCurrency", @Name = "DefaultBaseCurrency", @class = "form-input form-select" })
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11 11V17H13V11H11ZM11 7V9H13V7H11Z" fill="#AE8F56" />
-                            </svg>
+                            <div title="@Lang.DefaultBaseCurrencyDetail">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM11 11V17H13V11H11ZM11 7V9H13V7H11Z" fill="#AE8F56" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="form-group form-columns form-columns-2">
-                    <div class="items validate-group">
+                    <div class="items">
                         <label class="custom-label">@Lang.AffiliateCurrency</label>
                         <input type="text" value="@Model.AccountInformation.AffCurrency" class="form-input disable" />
                     </div>
@@ -186,8 +262,6 @@
                 <span class="text">@Lang.PaymentInfor</span>
             </div>
             <div class="body-result">
-
-
                 <div class="form-group form-columns group-form group-custom-width">
                     <div class="form-text">
                         @Lang.PaymentMethod
@@ -200,326 +274,18 @@
                         </label>
                     </div>
                     <div class="form-group form-columns form-columns-2">
-                        <div class="items validate-group">
+                        <div class="items">
                             <label for="Player_UserName" class="custom-label">@SiteFriendlyNameHelper.ReplaceB2C(Lang.UsernameSignUp) <span class="red-color">* (@Lang.NonDepositedAccount)</span></label>
-                            <input id="PlayerUsername" name="PlayerUsername" class="form-input" type="text" value=""
-                                   data-val="true" data-val-required="@SiteFriendlyNameHelper.ReplaceB2C(Lang.BETUserNameIsRequired)" />
+                            <input type="text" value="@Model.AccountInformation.PlayerUsername" class="form-input disable" />
                         </div>
                     </div>
                 </div>
             </div>
             <div class="group-button">
-                <button class="custom-button custom-button-outline" id="btnReset" type="button">@Lang.Reset</button>
-                <button class="custom-button custom-button-dash" disabled id="btnSubmit" type="submit">@Lang.Submit</button>
+                <button class="custom-button custom-button-cancel" id="btnCancel" type="button">@Lang.Cancel</button>
+                <button class="custom-button custom-button-dash" id="btnMyAccountSubmit" type="submit">@Lang.Submit</button>
             </div>
         </div>
-
-
-
-
-        @*<hr />
-        <hr />
-
-
-        <div class="info-group">
-            <div class="title">
-                <span class="text">@Lang.ContactInfo</span>
-            </div>
-
-            <div class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.Gender</label>
-                    <div class="col-sm-4">
-                        <label class="radio-inline">
-                            <input type="radio" name="Gender" id="male" value="True" @(Model.AccountInformation.Gender ? "checked" : "disabled") /><span> @Lang.Male</span>
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="Gender" id="female" value="False" @(!Model.AccountInformation.Gender ? "checked" : "disabled") /><span> @Lang.Female</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.Address</label>
-                    <div class="col-sm-4">
-                        <p class="form-control-static">@Model.AccountInformation.Address</p>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.City</label>
-                    <div class="col-sm-4">
-                        <p class="form-control-static">@Model.AccountInformation.City</p>
-                    </div>
-                </div>
-
-                @if (Model.AccountInformation.IsRenderState)
-                {
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">@Lang.State</label>
-                        <div class="col-sm-4">
-                            <p class="form-control-static">@Model.AccountInformation.State</p>
-                        </div>
-                    </div>
-                }
-
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.PostCode</label>
-                    <div class="col-sm-4">
-                        <p class="form-control-static">@Model.AccountInformation.Postal</p>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.Country</label>
-                    <div class="col-sm-4">
-                        <p class="form-control-static">@Model.AccountInformation.Country</p>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.Email</label>
-                    <div class="col-sm-4">
-                        <p class="form-control-static">@Model.AccountInformation.Email</p>
-                    </div>
-                </div>
-
-                <div class="form-group validate-group">
-                    <label class="col-sm-3 require control-label">@Lang.ContactNumber</label>
-                    <div class="col-sm-4">
-                        @Html.TextBoxFor(p => p.AccountInformation.Phone, new { @id = "Phone", @Name = "Phone", @class = "form-control" })
-                    </div>
-                    <div class="col-sm-offset-3 col-sm-9">
-                        @Html.ValidationMessage("Phone", new { @class = "validate-input hide" })
-                    </div>
-                </div>
-
-                @if (Model.AccountInformation.ContactAppList != null && Model.AccountInformation.ContactAppList.Any())
-                {
-                    var contactAppCount = Model.AccountInformation.ContactAppList.Count();
-                    var index = 0;
-                    foreach (var item in Model.AccountInformation.ContactAppList)
-                    {
-                        var dependentField = $"ContactAppList[{(index == 0 ? 1 : 0)}].Value";
-                        <div class="form-group validate-group">
-                            <label class="col-sm-3 control-label @(contactAppCount == 1 ? "require" : string.Empty)">@item.Name</label>
-                            @if (contactAppCount == 2)
-                            {
-                                <div class="col-sm-4">
-                                    <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-control"
-                                           value="@Html.Raw(item.Value)"
-                                           data-val="true" data-val-requiredifnullorempty-dependentprop="@dependentField"
-                                           data-val-requiredifnullorempty="@Error.RequireIMAccount" />
-                                </div>
-                            }
-                            else
-                            {
-                                <div class="col-sm-4">
-                                    <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-control"
-                                           value="@Html.Raw(item.Value)"
-                                           data-val="true"
-                                           data-val-required="@Error.RequireIMAccount" />
-                                </div>
-                            }
-                            <div class="col-sm-offset-3 col-sm-9">
-                                <span class="field-validation-valid validate-input hide"
-                                      data-valmsg-for="@(contactAppCount == 2 ? dependentField : $"ContactAppList[{index}].Value")"
-                                      data-valmsg-replace="true"></span>
-                            </div>
-                            <input type="hidden" name="ContactAppList[@index].Name" value="@item.Name" />
-                            <input type="hidden" name="ContactAppList[@index].Order" value="@item.Order" />
-                        </div>
-
-                        index++;
-                    }
-                }
-                else
-                {
-                    var sessionService = DependencyResolver.Current.GetService<ISessionService>();
-                    @RazorHelper.RenderAppContact(sessionService.CurrentLanguage)
-                }
-            </div>
-        </div>
-
-        <div class="info-group website-info">
-            <div class="title">
-                <span class="text">@Lang.WebsiteInfor</span>
-            </div>
-
-            <div class="form-horizontal">
-                <div class="form-group">
-                    <div class="col-sm-4 full">
-                        <label class="radio-inline">
-                            <input type="radio" name="HasWebSite" id="hasWebSite" value="True" @(string.IsNullOrEmpty(Model.AccountInformation.SiteUrl) ? string.Empty : "checked") /><span> @Lang.OwnWebsite</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div id="websiteInfo">
-                    <div class="form-group validate-group">
-                        <label class="col-sm-3 control-label require">@Lang.WebsiteURL</label>
-                        <div class="col-sm-4">
-                            @{
-                                var attributes = new Dictionary<string, object>
-                                {
-                                    ["id"] = "SiteUrl",
-                                    ["Name"] = "SiteUrl",
-                                    ["class"] = "form-control"
-                                };
-
-                                if (string.IsNullOrEmpty(Model.AccountInformation.SiteUrl))
-                                {
-                                    attributes.Add("disabled", "disabled");
-                                }
-                            }
-                            @Html.TextBoxFor(p => p.AccountInformation.SiteUrl, attributes)
-                        </div>
-                        <div class="col-sm-1">
-                            <button type="button" class="btn btn-submit" id="btnAddUrl" title="@Lang.AddUrl" @(string.IsNullOrEmpty(Model.AccountInformation.SiteUrl) ? "disabled=\"disabled\"" : string.Empty)>
-                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                            </button>
-                        </div>
-
-                        <div class="col-sm-offset-3 col-sm-9">
-                            @Html.ValidationMessage("SiteUrl", new { @class = "validate-input hide" })
-                        </div>
-                    </div>
-
-                    <input type="hidden" name="MoreSiteUrls" id="MoreSiteUrls" />
-
-                    @if (Model.AccountInformation.MoreWebsiteUrlList.Any())
-                    {
-                        var index = 2;
-                        foreach (var item in Model.AccountInformation.MoreWebsiteUrlList)
-                        {
-                            var name = $"MoreUrlInput{index}";
-                            <div class="form-group validate-group websiteInput" style="display: @(string.IsNullOrEmpty(Model.AccountInformation.SiteUrl) ? "none" : "block")">
-                                <label class="col-sm-3 control-label require moreWebsiteLabel">@Lang.WebsiteURL @(index)</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control urlInput" name="@name"
-                                           data-val="true" data-val-required="@Lang.WebsiteUrli.Replace("{i}", index.ToString())"
-                                           type="text" value="@item" />
-                                </div>
-                                <div class="col-sm-1">
-                                    <button type="button" class="btn btn-submit btnDeleteUrl" title="@Lang.Del">
-                                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                                    </button>
-                                </div>
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <span class="field-validation-valid validate-input hide" data-valmsg-for="@name" data-valmsg-replace="true"></span>
-                                </div>
-                            </div>
-
-                            index++;
-                        }
-                    }
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-4 full">
-                        <label class="radio-inline">
-                            <input type="radio" name="HasWebSite" id="hasNoWebSite" value="False" @(string.IsNullOrEmpty(Model.AccountInformation.SiteUrl) ? "checked" : string.Empty)><span> @Lang.NoWebsite</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group validate-group">
-                    <label class="col-sm-3 control-label require">@SiteFriendlyNameHelper.ReplaceB2C(Lang.DescWebsite)</label>
-                    <div class="col-sm-4">
-                        @{
-                            var textareaAttributes = new Dictionary<string, object>
-                            {
-                                ["id"] = "NoSiteDesc",
-                                ["Name"] = "NoSiteDesc",
-                                ["class"] = "form-control",
-                                ["rows"] = 5
-                            };
-
-                            if (!string.IsNullOrEmpty(Model.AccountInformation.SiteUrl))
-                            {
-                                textareaAttributes.Add("disabled", "disabled");
-                            }
-                        }
-                        @Html.TextAreaFor(p => p.AccountInformation.NoSiteDesc, textareaAttributes)
-                    </div>
-                    <div class="col-sm-offset-3 col-sm-9">
-                        @Html.ValidationMessage("NoSiteDesc", new { @class = "validate-input hide" })
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-group">
-            <div class="title">
-                <span class="text">@Lang.Preference</span>
-            </div>
-            <div class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.Language</label>
-                    <div class="col-sm-4">
-                        <p class="form-control-static">@Model.AccountInformation.LanguageName</p>
-                    </div>
-                </div>
-            </div>
-            <div class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.AffiliateCurrency</label>
-                    <div class="col-sm-4">
-                        <p class="form-control-static">@Model.AccountInformation.AffCurrency</p>
-                    </div>
-                </div>
-            </div>
-            <div class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.DefaultBaseCurrency</label>
-                    <div class="col-sm-4">
-                        @Html.DropDownListFor(p => p.AccountInformation.DefaultBaseCurrency, Model.BaseCurrencyList, new { @id = "DefaultBaseCurrency", @Name = "DefaultBaseCurrency", @class = "form-control" })
-                    </div>
-                    <div class="info-container col-sm-1">
-                        <span title="@Lang.DefaultBaseCurrencyDetail" class="glyphicon glyphicon-info-sign"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-group">
-            <div class="title">
-                <span class="text">@Lang.PaymentInfor</span>
-            </div>
-            <div class="form-horizontal">
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">@Lang.PaymentMethod</label>
-                    <div class="col-sm-4">
-                        <label class="radio-inline">
-                            <input type="radio" checked /> <span>@SiteFriendlyNameHelper.ReplaceB2C(Lang._B2CPlayerAcc)</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-group validate-group">
-                    <label class="col-sm-3 control-label @(string.IsNullOrEmpty(Model.AccountInformation.PlayerUsername) ? "require" : string.Empty)">@Lang.Username</label>
-                    <div class="col-sm-4">
-                        @if (string.IsNullOrEmpty(Model.AccountInformation.PlayerUsername))
-                        {
-                            <input id="PlayerUsername" name="PlayerUsername" class="form-control" type="text" value=""
-                                   data-val="true" data-val-required="@SiteFriendlyNameHelper.ReplaceB2C(Lang.BETUserNameIsRequired)" />
-                        }
-                        else
-                        {
-                            <p class="form-control-static">@Model.AccountInformation.PlayerUsername</p>
-                        }
-                    </div>
-                    <div class="col-sm-offset-3 col-sm-9">
-                        <span class="field-validation-valid validate-input hide" data-valmsg-for="PlayerUsername" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="col-sm-offset-3 button-block">
-                    <button id="btnMyAccountSubmit" class="btn btn-submit" type="button">@Lang.Submit</button>
-                    <button id="btnCancel" class="btn btn-submit" type="button">@Lang.Cancel</button>
-                </div>
-            </div>
-        </div>*@
     </form>
 </div>
 

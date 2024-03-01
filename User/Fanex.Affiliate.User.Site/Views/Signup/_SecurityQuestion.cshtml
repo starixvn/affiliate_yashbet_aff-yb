@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Fanex.Affiliate.User.Core.DTO.SecurityQuestion>
 
 
-<label class="custom-label">@Lang.lblSecureQuestion <span class="red-color">*</span></label>
+<label class="custom-label require">@Lang.lblSecureQuestion</label>
 <select class="form-input form-select" name="QuestionId" id="QuestionId" data-val="true" data-val-required="@Lang.errSecQuestionEmpty">
     <option value="">@Lang.SelectOne</option>
     @foreach (var item in Model)

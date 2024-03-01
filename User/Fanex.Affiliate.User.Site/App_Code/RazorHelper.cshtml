@@ -102,70 +102,18 @@
     }
 }
 
-@helper RenderAppContact(string language)
-{
-    var firstAppName = Fanex.Affiliate.User.Core.Constants.AppContact.FirstAppContactName;
-    var secondAppContactList = Fanex.Affiliate.User.Core.Constants.AppContact.SecondAppContactList;
-
-    var hasTwoContactApp = secondAppContactList.ContainsKey(language);
-
-    <div class="form-group validate-group">
-        <label class="col-sm-3 control-label @(hasTwoContactApp ? string.Empty : "require")">@firstAppName</label>
-        @if (hasTwoContactApp)
-        {
-            <div class="col-sm-4">
-                <input type="text" name="ContactAppList[0].Value" id="ContactAppList[0].Value" class="form-control" value=""
-                       data-val="true" data-val-requiredifnullorempty-dependentprop="ContactAppList[1].Value"
-                       data-val-requiredifnullorempty="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
-            </div>
-        }
-        else
-        {
-            <div class="col-sm-4">
-                <input type="text" name="ContactAppList[0].Value" id="ContactAppList[0].Value" class="form-control" value=""
-                       data-val="true" data-val-required="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
-            </div>
-        }
-        <div class="col-sm-offset-3 col-sm-9">
-            <span class="field-validation-valid validate-input hide"
-                  data-valmsg-for="ContactAppList[@(hasTwoContactApp ? 0 : 1)].Value" data-valmsg-replace="true"></span>
-        </div>
-        <input type="hidden" name="ContactAppList[0].Name" value="@firstAppName" />
-        <input type="hidden" name="ContactAppList[0].Order" value="1" />
-    </div>
-
-    if (hasTwoContactApp)
-    {
-        var secondAppName = secondAppContactList[language];
-        <div class="form-group validate-group">
-            <label class="col-sm-3 control-label">@secondAppName</label>
-            <div class="col-sm-4">
-                <input type="text" name="ContactAppList[1].Value" id="ContactAppList[1].Value" class="form-control" value=""
-                       data-val="true" data-val-requiredifnullorempty-dependentprop="ContactAppList[0].Value"
-                       data-val-requiredifnullorempty="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
-            </div>
-            <div class="col-sm-offset-3 col-sm-9">
-                <span class="field-validation-valid validate-input hide"
-                      data-valmsg-for="ContactAppList[1].Value" data-valmsg-replace="true"></span>
-            </div>
-            <input type="hidden" name="ContactAppList[1].Name" value="@secondAppName" />
-            <input type="hidden" name="ContactAppList[1].Order" value="2" />
-        </div>
-    }
-}
-
-@helper RenderGenderSignUp()
+@helper RenderGender(string attrMale = "checked", string attrFemale = null)
 {
     <div class="items validate-group">
-        <label class="custom-label" for="male">@Fanex.Affiliate.User.Core.Resources.Lang.Gender <span class="red-color">*</span></label>
+        <label class="custom-label require" for="male">@Fanex.Affiliate.User.Core.Resources.Lang.Gender</label>
         <div class="radio-group">
             <label class="radio-button">
-                <input type="radio" name="Gender" id="male" value="True" checked />
+                <input type="radio" name="Gender" id="male" value="True" @attrMale />
                 <span class="radio-circle"></span>
                 <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Male</span>
             </label>
             <label class="radio-button">
-                <input type="radio" name="Gender" id="female" value="False" />
+                <input type="radio" name="Gender" id="female" value="False" @attrFemale />
                 <span class="radio-circle"></span>
                 <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Female</span>
             </label>
@@ -173,19 +121,16 @@
     </div>
 }
 
-@helper RenderAppContactSignUp(string name, int order, string dependentProp)
+@helper RenderAppContactItem(string name, int index, string dependentProp, string value = null, bool isOnlyOne = false)
 {
-    var index = order - 1;
-
     <div class="items validate-group">
-        <label for="ContactAppList[@index].Value" class="custom-label">@name</label>
-        <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-input" value=""
-               data-val="true" data-val-requiredifnullorempty-dependentprop="@dependentProp"
-               data-val-requiredifnullorempty="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
+        <label for="ContactAppList[@index].Value" class="custom-label @(isOnlyOne ? "require" : "")">@name</label>
+        <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-input" value="@value" data-val="true"
+               @(isOnlyOne ? "" : $"data-val-requiredifnullorempty-dependentprop=\"{dependentProp}\" data-val-requiredifnullorempty=\"{Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount}\"") />
         <span class="field-validation-valid validate-input hide"
               data-valmsg-for="ContactAppList[@index].Value" data-valmsg-replace="true"></span>
 
         <input type="hidden" name="ContactAppList[@index].Name" value="@name" />
-        <input type="hidden" name="ContactAppList[@index].Order" value="@order" />
+        <input type="hidden" name="ContactAppList[@index].Order" value="@(index + 1)" />
     </div>
 }

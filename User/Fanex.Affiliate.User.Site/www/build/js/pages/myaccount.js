@@ -20,17 +20,6 @@ var WebSite = (function ($) {
             $(".moreWebsiteLabel").each(function (i, item) {
                 var $item = $(item);
                 var labelText = webSiteLabel + ' ' + index;
-                $item.text(labelText);
-
-                index++;
-            });
-        },
-
-        reoderInputSignUpUrl: function (webSiteLabel) {
-            var index = 2;
-            $(".moreWebsiteLabel").each(function (i, item) {
-                var $item = $(item);
-                var labelText = webSiteLabel + ' ' + index + ' <span class="red-warn">*</span>';
                 $item.html(labelText);
 
                 index++;
@@ -40,32 +29,15 @@ var WebSite = (function ($) {
         deleteWebsiteUrl: function ($currentItem) {
             var $container = $currentItem.closest(".websiteInput");
             $container.remove();
+            _me.validateWebSiteGroup();
         },
 
         buildUrlInput: function (webSiteLabel, deleteLabel, errorMessage) {
             var currentItemCount = $("#websiteInfo .urlInput").length + 2;
             var name = "MoreUrlInput" + currentItemCount;
-            var inputItem = '<div class="form-group websiteInput">' +
-                    '<label class="col-sm-3 control-label require moreWebsiteLabel">' + webSiteLabel + ' ' + currentItemCount + '</label>' +
-                    '<div class="col-sm-4">' +
-                        '<input class="form-control urlInput" type="text" name="' + name + '" data-val="true" data-val-required="' + errorMessage + '" value="" />' +
-                    '</div>' +
-                    '<div class="col-sm-1">' +
-                        '<button type="button" class="btn btn-submit btnDeleteUrl" title="' + deleteLabel + '"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>' +
-                    '</div>' +
-                    '<div class="col-sm-offset-3 col-sm-9"><span class="field-validation-valid validate-input hide" data-valmsg-for="' + name + '" data-valmsg-replace="true"></span></div>' +
-                '</div>';
-
-            $("#websiteInfo").append(inputItem);
-            _me.reoderInputUrl(webSiteLabel);
-        },
-
-        buildUrlSignUpInput: function (webSiteLabel, deleteLabel, errorMessage) {
-            var currentItemCount = $("#websiteInfo .urlInput").length + 2;
-            var name = "MoreUrlInput" + currentItemCount;
             var inputItem =
                 '<div class="input-url websiteInput">' +
-                    '<label for="' + name + '" class="custom-label moreWebsiteLabel"></label>' +
+                    '<label for="' + name + '" class="custom-label require moreWebsiteLabel"></label>' +
                     '<div class="group-input">' +
                         '<input class="form-input urlInput" type="text" name="' + name + '" id="' + name + '" data-val="true" data-val-required="' + errorMessage + '" value="" />' +
                         '<span class="button-toggle button-toggle-close btnDeleteUrl" title="' + deleteLabel + '"></span>' +
@@ -74,22 +46,22 @@ var WebSite = (function ($) {
                 '</div>';
 
             $("#websiteInfo").append(inputItem);
-            _me.reoderInputSignUpUrl(webSiteLabel);
+            _me.reoderInputUrl(webSiteLabel);
         },
 
-        handleAddingUrl: function (lang, isSignUp) {
+        handleAddingUrl: function (lang) {
             var hasWebSite = _me.hasWebSite();
             var isValid = _me.validateWebSiteGroup();
 
             if (hasWebSite && isValid) {
-                _me.addMoreUrl(lang, isSignUp);
+                _me.addMoreUrl(lang);
             }
         },
 
-        addMoreUrl: function (lang, isSignUp) {
+        addMoreUrl: function (lang) {
             var currentItemCount = $("#websiteInfo .urlInput").length + 2;
             var errorMessage = lang.requiredMoreWebSiteUrl.replace("{i}", currentItemCount);
-            isSignUp ? _me.buildUrlSignUpInput(lang.webSiteUrl, lang.deleteLabel, errorMessage) : _me.buildUrlInput(lang.webSiteUrl, lang.deleteLabel, errorMessage);
+            _me.buildUrlInput(lang.webSiteUrl, lang.deleteLabel, errorMessage);
             setFocusForLastInput();
 
             _me.refreshFormValidation();
