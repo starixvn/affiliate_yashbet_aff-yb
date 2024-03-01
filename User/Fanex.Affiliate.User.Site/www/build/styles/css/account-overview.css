@@ -548,7 +548,8 @@ span.toggle-handle {
   overflow: auto;
   padding: 3px 0;
   background: #E5C589;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  border-radius: 3px; }
   .account-overview .bg-orange .text {
     padding: 0 10px;
     color: #333333; }

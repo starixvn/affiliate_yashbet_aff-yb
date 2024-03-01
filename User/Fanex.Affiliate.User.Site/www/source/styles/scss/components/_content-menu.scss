@@ -75,7 +75,7 @@
         }
 
         @include Tablet {
-            display: none;
+            display: flex;
         }
     }
 
@@ -92,7 +92,7 @@
         }
 
         @include Tablet {
-            display: inline-block;
+            display: none;
         }
 
         .show-name-menu {
