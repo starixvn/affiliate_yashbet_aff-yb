@@ -1547,6 +1547,12 @@ var MessageHistory = (function ($) {
                 var isChecked = $(this).prop("checked");
                 _me.toggleDate(isChecked);
             });
+
+            $('#mainMenu .parent .submenu-container').hover(function () {
+                $(this).addClass("hover");
+            }, function () {
+                $(this).removeClass("hover");
+            });
         },
 
         getParams: function () {

@@ -4,27 +4,8 @@
 @import '../scss/components/group-control';
 @import '../scss/components/table-sticky';
 
-.btn-submit {
-    margin-bottom: 5px;
-}
-
-.form-filter {
-    margin-bottom: 30px;
-}
-
-.checkbox {
-    margin: 0;
-
-    label {
-        margin: 0 !important;
-    }
-}
-
-#messagePager {
-    margin: 16px 0;
-
-    @include Mobile {
-        margin-top: 0;
-        margin-bottom: 8px;
+.disabled {
+    img {
+        opacity: 0.2;
     }
 }

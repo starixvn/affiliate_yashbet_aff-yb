@@ -562,20 +562,5 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   .marketing-table tr td {
     white-space: unset; }
 
-.btn-submit {
-  margin-bottom: 5px; }
-
-.form-filter {
-  margin-bottom: 30px; }
-
-.checkbox {
-  margin: 0; }
-  .checkbox label {
-    margin: 0 !important; }
-
-#messagePager {
-  margin: 16px 0; }
-  @media (max-width: 767px) {
-    #messagePager {
-      margin-top: 0;
-      margin-bottom: 8px; } }
+.disabled img {
+  opacity: 0.2; }
