@@ -1,5 +1,7 @@
 ﻿var StatementHistory = (function ($) {
     const _currentPage = "StatementHistory";
+    const _statementHistoryStateKey = "statementHistoryState";
+
     const urlMapping = [
         { transType: 201, url: "UserPanel/Main/#DailyEarning" },
         { transType: 204, url: "UserPanel/Main/#SubAffEarning" }
@@ -42,6 +44,10 @@
 
     var _me = {
         initialize: function () {
+            if (window.performance.navigation.type == window.performance.navigation.TYPE_RELOAD) {
+                sessionStorage.removeItem(_statementHistoryStateKey);
+            }
+
             _me.handleIfIsClickBreadcumb();
             initPager();
             _me.initEvent();
@@ -88,7 +94,7 @@
             const isClickBreadcumb = $("#isClickBreadcumb").val() === 'True';
 
             if (isClickBreadcumb) {
-                let statementHistoryState = sessionStorage.getItem("statementHistoryState");
+                let statementHistoryState = sessionStorage.getItem(_statementHistoryStateKey);
                 const oldState = JSON.parse(statementHistoryState) || { pageSize: _pageSize, pageIndex: _pageIndex, scrollY: _scrollY, expandElementList: _expandElementList }
 
                 _pageSize = oldState.pageSize;
@@ -111,14 +117,13 @@
         },
 
         handleUpdateExpandingElementByOldState: function (id) {
-            var btnGlyphicon = $(`[data-id="${id}"] span.glyphicon`)[0];
+            var btnGlyphicon = $(`[data-id="${id}"] button.btn-dropdown-table`)[0];
 
             if (!!btnGlyphicon) {
                 let childrenOfId = $(`tr[data-parent='${id}']`);
                 $(childrenOfId).toggleClass("display-none");
 
-                $(btnGlyphicon).toggleClass("glyphicon-chevron-right");
-                $(btnGlyphicon).toggleClass("glyphicon-chevron-down");
+                $(btnGlyphicon).toggleClass("active-btn");
             }
         },
 
@@ -129,7 +134,7 @@
                 scrollY: window.scrollY,
                 expandElementList: _expandElementList
             }
-            sessionStorage.setItem("statementHistoryState", JSON.stringify(param))
+            sessionStorage.setItem(_statementHistoryStateKey, JSON.stringify(param))
         },
 
         renderStatementHistory: function (params, isClickBreadcumb = false) {

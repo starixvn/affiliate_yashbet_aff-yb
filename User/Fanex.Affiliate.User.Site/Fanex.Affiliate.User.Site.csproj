@@ -417,6 +417,10 @@
     <Content Include="www\build\js\pages\channel-link-statistic.min.js">
       <DependentUpon>channel-link-statistic.js</DependentUpon>
     </Content>
+    <Content Include="www\build\js\pages\daily-earning.js" />
+    <Content Include="www\build\js\pages\daily-earning.min.js">
+      <DependentUpon>daily-earning.js</DependentUpon>
+    </Content>
     <Content Include="www\build\js\pages\forgotpassword.js" />
     <Content Include="www\build\js\pages\forgotpassword.min.js">
       <DependentUpon>forgotpassword.js</DependentUpon>
