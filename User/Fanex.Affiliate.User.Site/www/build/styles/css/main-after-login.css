@@ -494,7 +494,8 @@ input[type="radio"], input[type="checkbox"] {
     padding: 8px 12px;
     font-size: 14px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     .after-login-container .custom-button svg {
       margin-right: 8px; }
   .after-login-container .group-button {

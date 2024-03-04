@@ -21,13 +21,13 @@
 @section styles{
     @Html.InlineStyles("~/www/build/styles/css/update-password.css")
 }
-<div class="wraper-block" style="max-width: 1200px;">
+<div class="wraper-block">
     <div class="group-title">
         <h2 class="title-block">
             <span class="text">@Lang.ChangePass</span>
         </h2>
     </div>
-    <div>
+    <div style="max-width: 1200px;">
         <p>@Lang.ChangePassText</p>
         <div class="alert" role="alert" id="messageResult" style="display: none"></div>
 
@@ -39,8 +39,6 @@
                     @Html.PasswordFor(p => p.OldPassword, new { @class = "form-input", @autocomplete = "off" })
                     @Html.ValidationMessageFor(p => p.OldPassword, string.Empty, new { @class = "validate-input hide" })
                 </div>
-            </div>
-            <div class="form-group form-columns form-columns-2">
                 <div class="items validate-group">
                     <label for="NewPassword" class="custom-label require">@Lang.NewPass</label>
                     <input autocomplete="off" class="form-input"
