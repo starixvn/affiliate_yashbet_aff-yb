@@ -1,78 +1,1 @@
-﻿@{
-    Layout = null;
-}
-@using Fanex.Affiliate.User.Core.Constants
-@model Fanex.Affiliate.User.Core.ViewModels.BaseLayoutViewModel
-@{
-    var htmlString = Html.RenderPartialByLanguage($"~/Views/TermAndCondition/_Content", Model.CurrentLanguage, Model.SiteFriendlyName);
-    var siteName = Model.SiteName.ToLower();
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@Lang.TermAndCondition</title>
-    <link rel="icon" href=@Url.Content("~/favicon-"+ siteName +".ico")>
-    <script src="~/www/build/js/lib/jquery-3.3.1.min.js"></script>
-    <script>
-        window.jQuery || document.write('\x3Cscript src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">\x3C/script>')
-    </script>
-    <script src="~/www/build/js/lib/bootstrap.min.js"></script>
-
-    <link href="~/www/build/styles/css/bootstrap-3.3.7.min.css" rel="stylesheet" />
-
-    <link href="~/www/build/styles/fonts/materialdesignicons/font.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/www/build/styles/fonts/tahoma/font.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap">
-
-    <link href="@Url.RenderLink("~/www/build/styles/css/main.css")" rel="stylesheet" />
-    <link href="@Url.RenderLink("~/www/build/styles/css/" + siteName + ".css")" rel="stylesheet" />
-</head>
-<body>
-
-    <div class="main-container">
-        <div class="main">
-            <div class="page-container">
-                <div class="main-content main-content-left-panel left-panel-popup">
-                    @RazorHelper.RenderLeftPanel(Menu.TermAndConditionMenuList)
-                    <div class="content">
-                        <div class="page-title">
-                            <span class="text">@Lang.TermAndCondition</span>
-                        </div>
-
-                        @Html.Raw(htmlString)
-
-                        @RazorHelper.RenderMovingTopButton()
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    @Html.InlineScripts("~/www/build/js/lib/modernizr-webp.js")
-    @Html.InlineScripts("~/www/build/js/left-menu-panel.js")
-    @Html.InlineScripts("~/www/build/js/pages/term-and-condition.js")
-
-    <script>
-        $(window).scroll(function () {
-            var topPosition = 111;
-            if ($(this).scrollTop() >= topPosition) {
-                $(".mobile-left-panel").addClass("fixed");
-            }
-            else {
-                $(".mobile-left-panel").removeClass("fixed");
-            }
-
-            if ($(this).scrollTop() > 200) {
-                $('#moveToTop').fadeIn(200);
-            } else {
-                $('#moveToTop').fadeOut(200);
-            }
-        });
-    </script>
-</body>
-</html>
+﻿<table width="100%">    <tr>        <td valign="top" align="center" background="~/www/build/styles/Images/email/bgMain.png?v=002">            <table width="599" cellpadding="0" cellspacing="0" border="0">                <tr>                    <td height="88" background="~/www/build/styles/Images/email/banner.png?v=002"></td>                </tr>                @*<tr height="3">                        <td height="3" bgcolor="#ff0000"></td>                    </tr>*@                <tr>                    <td>                        <table width="100%" cellpadding="0" cellspacing="0" border="0">                            <tr bgcolor="#ffffff">                                <td width="100%" height="62" background="~/www/build/styles/Images/email/header.png?v=002">                                    &nbsp;&nbsp;                                    <strong style="color: rgb(255, 255, 255); padding-left : 15px; ">                                        <font style="font-size: 20px; font-family: Verdana,Arial,Helvetica,sans-serif; text-transform: uppercase; color : #333;">                                            Title&nbsp;                                        </font>                                    </strong>                                </td>                                @*<td bgcolor="#f9f9f9" width="117">&nbsp;</td>*@                            </tr>                        </table>                    </td>                </tr>                <tr>                    <td bgcolor="#ffffff">                        <br />                        <table width="100%" cellpadding="0" cellspacing="0" border="0">                            <tr>                                <td width="15">&nbsp;</td>                                <td>                                    <font style="font-size: 12px; font-family: Verdana,Arial,Helvetica,sans-serif; line-height: 22px;">                                        <div>                                            Dear CSD, <br /><br />                                            There is a new affiliate account awaiting approval. The details are as below: <br /><br />                                            ----------------------------------------------------------<br />                                            Full name:  <br />                                            Username:  <br />                                            <p>Site URL: </p>                                            <p>More site URLs: </p>                                            ----------------------------------------------------------<br /><br />                                            Please arrange to proceed. <br /><br />                                            Sincerely, <br /><br />                                            YashBet Affiliates Team<br />                                            <a href="mailto:abc@gmail.com">abc@gmail.com</a>                                        </div>                                    </font>                                </td>                                <td width="15">&nbsp;</td>                            </tr>                        </table>                        <table width="100%" cellpadding="0" cellspacing="0" border="0">                            <tr>                                <td width="395">&nbsp;</td>                                <td align="center" width="184" height="44" background="~/www/build/styles/Images/email/button.png?v=002">                                    <a href="~/www/build/styles/Images/email/" style="text-decoration: none; border: 0px; color: rgb(255, 255, 255); margin-left: 20px">                                        <font style="font-size: 20px; font-family: Verdana,Arial,Helvetica,sans-serif; line-height: 1.5">@Lang.Affiliate</font>                                    </a><br />                                </td>                                <td width="19">&nbsp;</td>                            </tr>                            <tr>                                <td colspan="3" height="30">&nbsp;</td>                            </tr>                            <tr>                                <td colspan="2" align="right" bgcolor="#E5C589" height="30" style="text-align: center">                                    <font style="font-size: 14px; color: #333333; font-family: Verdana,Arial,Helvetica,sans-serif;">                                        © Copyright 2024  |  Yashbet. All rights reserved  |  21+                                    </font>                                </td>                                <td width="5" bgcolor="#E5C589"></td>                            </tr>                        </table>                    </td>                </tr>            </table>            <table width="100%" cellpadding="0" cellspacing="0" border="0">                <tr>                    <td heght="20">&nbsp;</td>                </tr>                <tr>                    <td align="center" height="48" background="~/www/build/styles/Images/email/note.png?v=002">                        <font style="font-size: 14px; font-weight: 600; color: #967435; font-family: Verdana,Arial,Helvetica,sans-serif; ">                            @Lang.Thisisasystemau                        </font>                    </td>                </tr>            </table>        </td>    </tr></table></table>
