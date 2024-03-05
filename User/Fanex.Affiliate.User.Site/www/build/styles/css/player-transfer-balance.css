@@ -27,13 +27,13 @@
     border-right: 0.25px solid #d1b37d; }
     @media (max-width: 767px) {
       .overview-table table {
-        font-size: 12px; } }
+        font-size: 16px; } }
     @media (min-width: 768px) and (max-width: 1023px) {
       .overview-table table {
         min-width: 160rem; } }
     @media screen and (max-width: 1024px) {
       .overview-table table th {
-        font-size: 13px; } }
+        font-size: 16px; } }
     .overview-table table thead .overview-table-header th {
       position: -webkit-sticky;
       position: sticky;
@@ -74,6 +74,9 @@
     .overview-table table .parent-tr td.market-name {
       font-size: 13px;
       text-align: center; }
+      @media (max-width: 767px) {
+        .overview-table table .parent-tr td.market-name {
+          font-size: 16px; } }
     .overview-table table .no-info {
       background: #FFF3ED; }
   .overview-table .Processing {

@@ -954,7 +954,7 @@ select.form-control {
             margin: 16px 0;
 
             @include Mobile {
-                margin: 12px 0 8px 0;
+                margin: 16px 0;
             }
 
             &::-webkit-scrollbar {
@@ -980,7 +980,7 @@ select.form-control {
 
             @include Mobile {
                 padding: 4px 8px;
-                font-size: 12px;
+                font-size: 13px;
                 line-height: 18px;
             }
             &.active, &:hover {
@@ -1047,7 +1047,7 @@ select.form-control {
     }
 
     @include Mobile {
-        gap: 12px;
+        gap: 32px;
     }
 
     .column {

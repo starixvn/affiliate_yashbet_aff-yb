@@ -37,8 +37,10 @@
             <div class="group-panel">
                 <div class="info-panel">
                     <div class="info-panel-title">
-                        <span class="">@Lang.Commission</span>
-                        <span title="@Lang.P2pIncluded" class="glyphicon glyphicon-info-sign"></span>
+                        <div>
+                            @Lang.Commission
+                            <i title="@Lang.P2pIncluded" class="glyphicon glyphicon-info-sign"></i>
+                        </div>
                     </div>
                     <span class="info-panel-content">@Model.Commission.ToStringMoneyWithCurrencySymbol(currencySymbol)</span>
                 </div>

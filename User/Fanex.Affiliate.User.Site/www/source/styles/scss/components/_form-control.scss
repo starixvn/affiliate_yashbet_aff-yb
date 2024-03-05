@@ -47,6 +47,11 @@
     .group-input {
         width: 100%;
         max-width: 200px;
+
+        @include Mobile {
+            max-width: 100%;
+            justify-content : center;
+        }
     }
 
     .date-wrapper {
@@ -57,6 +62,14 @@
             top: 8px;
             right: 15px;
             cursor: pointer;
+        }
+    }
+
+    .custom-button{
+        @include Mobile{
+            width : 100% !important;
+            margin : 0 auto !important;
+            max-width : 200px !important;
         }
     }
 }
@@ -195,6 +208,12 @@ input[type="radio"], input[type="checkbox"] {
         .items {
             @include Mobile {
                 margin-bottom: 12px;
+            }
+
+            &.mobile-center-validate {
+                @include Mobile {
+                    text-align  :center;
+                }
             }
         }
     }
@@ -421,6 +440,7 @@ input[type="radio"], input[type="checkbox"] {
 
     @include Mobile {
         align-items: flex-start;
+        margin-top: 10px
     }
 }
 

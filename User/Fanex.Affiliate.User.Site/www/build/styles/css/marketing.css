@@ -210,10 +210,10 @@
               left: 9px; }
             .qr-code .qr-panel .qr-item .main-panel .qr-action .toggle-btn .toggle .toggle-group .toggle-handle {
               right: 9px;
-              width: 7px;
+              width: 14px;
               background: #fff !important;
               border-radius: 10px;
-              height: 7px; }
+              height: 13px; }
     .qr-code .qr-panel .qr-item .qr-footer {
       position: absolute;
       bottom: 0;
@@ -247,7 +247,7 @@
   line-height: 32px; }
   @media (max-width: 767px) {
     .link-statistic table {
-      font-size: 12px; } }
+      font-size: 16px; } }
   .link-statistic table tr .sub-channel-table {
     padding: 0;
     border: none; }
@@ -259,6 +259,9 @@
       .link-statistic table tr .sub-channel-table .parent-tr a {
         color: #025EB1;
         text-decoration: none; }
+        @media (max-width: 767px) {
+          .link-statistic table tr .sub-channel-table .parent-tr a {
+            font-size: 16px; } }
 
 .marketing-banner .list-content {
   margin: 0 auto; }

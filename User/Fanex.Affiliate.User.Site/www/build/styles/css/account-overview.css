@@ -160,7 +160,7 @@ label.checkbox.inline .toggle {
 
 .toggle.off .toggle-handle {
   right: unset;
-  left: 6px;
+  left: 8px;
   background-color: #333; }
 
 .toggle-on {
@@ -294,13 +294,13 @@ span.toggle-handle {
     border-right: 0.25px solid #d1b37d; }
     @media (max-width: 767px) {
       .overview-table table {
-        font-size: 12px; } }
+        font-size: 16px; } }
     @media (min-width: 768px) and (max-width: 1023px) {
       .overview-table table {
         min-width: 160rem; } }
     @media screen and (max-width: 1024px) {
       .overview-table table th {
-        font-size: 13px; } }
+        font-size: 16px; } }
     .overview-table table thead .overview-table-header th {
       position: -webkit-sticky;
       position: sticky;
@@ -341,6 +341,9 @@ span.toggle-handle {
     .overview-table table .parent-tr td.market-name {
       font-size: 13px;
       text-align: center; }
+      @media (max-width: 767px) {
+        .overview-table table .parent-tr td.market-name {
+          font-size: 16px; } }
     .overview-table table .no-info {
       background: #FFF3ED; }
   .overview-table .Processing {
@@ -515,7 +518,10 @@ span.toggle-handle {
     .account-overview #account-overview-menu .menu li {
       margin-bottom: -1px; }
       .account-overview #account-overview-menu .menu li:first-child a {
+        border-radius: 6px 0px 0px 0px;
         border-left: 1px solid #E5C589; }
+      .account-overview #account-overview-menu .menu li:last-child a {
+        border-radius: 0px 6px 0px 0px; }
     .account-overview #account-overview-menu .menu li:not(:last-child) {
       border-right: 1px solid #f9f9f9; }
     .account-overview #account-overview-menu .menu-item {
@@ -524,7 +530,12 @@ span.toggle-handle {
       border-top: 1px solid #E5C589;
       border-bottom: none;
       color: #333;
-      font-weight: 400; }
+      font-weight: 400;
+      background: #F1F1F1;
+      border-bottom: 1px solid #E5C589; }
+      @media (max-width: 767px) {
+        .account-overview #account-overview-menu .menu-item {
+          font-size: 14px; } }
       .account-overview #account-overview-menu .menu-item.active, .account-overview #account-overview-menu .menu-item:hover {
         background: #fff;
         border-top: 4px solid #E5C589;
@@ -560,13 +571,17 @@ span.toggle-handle {
   border-radius: 0px 6px 6px 6px; }
 
 .summary .select-date {
-  min-width: 133px;
+  min-width: 157px;
   border-radius: 100px;
   border: 1px solid #a7a7a7;
   padding-right: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media (max-width: 767px) {
+    .summary .select-date {
+      min-width: inherit;
+      width: 100%; } }
   .summary .select-date input {
     border: none;
     background: none; }
@@ -586,6 +601,12 @@ span.toggle-handle {
       text-align: center;
       color: #333333;
       margin-bottom: 0; }
+      @media (max-width: 767px) {
+        .summary .form-group .form-wrapper .form-control {
+          width: 100%;
+          text-align: left;
+          font-size: 14px;
+          padding-left: 15px; } }
 
 .summary-content {
   border-top: none;
@@ -596,7 +617,8 @@ span.toggle-handle {
     gap: 50px; }
     @media (max-width: 767px) {
       .summary-content .dashboard-section {
-        gap: 12px; } }
+        gap: 32px;
+        margin-bottom: 32px; } }
     @media (min-width: 768px) and (max-width: 1023px) {
       .summary-content .dashboard-section {
         gap: 16px; } }
@@ -613,8 +635,9 @@ span.toggle-handle {
       overflow: hidden; }
       @media (max-width: 767px) {
         .summary-content .dashboard-section .group {
-          margin-bottom: 8px;
-          width: auto; } }
+          margin-bottom: 12px;
+          width: auto;
+          display: block; } }
       @media only screen and (min-width: 1024px) and (max-width: 1366px) {
         .summary-content .dashboard-section .group {
           width: auto; } }
@@ -627,11 +650,13 @@ span.toggle-handle {
       height: 91px; }
       @media (max-width: 767px) {
         .summary-content .dashboard-section .img-icon {
-          width: 64px;
-          height: auto; }
+          width: 100%;
+          height: auto;
+          border-radius: 0;
+          padding: 8px 0; }
           .summary-content .dashboard-section .img-icon img {
-            width: 24px;
-            height: 24px; } }
+            width: 40px;
+            height: 40px; } }
       .summary-content .dashboard-section .img-icon .wrapper-img-icon {
         width: 60px;
         height: 60px;
@@ -645,9 +670,11 @@ span.toggle-handle {
             height: 38px; } }
     .summary-content .dashboard-section .group-panel {
       width: 85%; }
+      @media (max-width: 767px) {
+        .summary-content .dashboard-section .group-panel {
+          width: 100%; } }
       .summary-content .dashboard-section .group-panel .info-panel {
         display: flex;
-        align-items: center;
         justify-content: space-between;
         min-height: 45px; }
         .summary-content .dashboard-section .group-panel .info-panel span {
@@ -661,8 +688,9 @@ span.toggle-handle {
           font-weight: 600; }
           @media (max-width: 767px) {
             .summary-content .dashboard-section .group-panel .info-panel-title {
-              font-size: 11px;
-              line-height: 16px; } }
+              font-size: 14px;
+              line-height: 16px;
+              padding: 8px 12px; } }
         .summary-content .dashboard-section .group-panel .info-panel-content {
           font-weight: 700;
           font-size: 18px;
@@ -677,7 +705,7 @@ span.toggle-handle {
             .summary-content .dashboard-section .group-panel .info-panel-content {
               font-size: 13px;
               line-height: 18px;
-              max-width: 115px; } }
+              max-width: 170px; } }
   .summary-content .details-section-sticky {
     position: fixed;
     background: #f5f5f5;
@@ -713,3 +741,7 @@ td {
 
 #media-gallery #marketingPager {
   margin-bottom: -12px; }
+
+@media (max-width: 767px) {
+  .banner {
+    margin-top: 20px; } }

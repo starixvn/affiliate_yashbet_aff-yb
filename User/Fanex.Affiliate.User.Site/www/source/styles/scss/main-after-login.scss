@@ -19,7 +19,8 @@
         font-size: 14px;
         display: flex;
         align-items: center;
-        justify-content :center;
+        justify-content: center;
+
         svg {
             margin-right: 8px;
         }
@@ -30,6 +31,16 @@
 
         .custom-button {
             padding: 8px 20px 8px 45px;
+        }
+    }
+
+    .form {
+        .custom-button {
+            @include Mobile {
+                width: 100%;
+                margin: 0 auto;
+                max-width: 200px;
+            }
         }
     }
 }

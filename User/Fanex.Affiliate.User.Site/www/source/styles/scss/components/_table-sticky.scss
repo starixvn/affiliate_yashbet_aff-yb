@@ -39,7 +39,7 @@
         border-right: 0.25px solid #d1b37d;
 
         @include Mobile {
-            font-size: 12px;
+            font-size: 16px;
         }
 
         @include Tablet {
@@ -48,7 +48,7 @@
 
         th {
             @include TableAndMobile {
-                font-size: 13px;
+                font-size: 16px;
             }
         }
 
@@ -118,6 +118,10 @@
                 &.market-name {
                     font-size: 13px;
                     text-align: center;
+
+                    @include Mobile {
+                        font-size: 16px;
+                    }
                 }
             }
         }

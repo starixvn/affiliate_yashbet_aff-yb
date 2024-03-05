@@ -3,7 +3,7 @@
   margin: 16px 0; }
   @media (max-width: 767px) {
     .content-menu {
-      margin: 8px 0; } }
+      margin: 24px 0; } }
   .content-menu .menu {
     display: inline-flex;
     overflow: hidden;
@@ -159,6 +159,10 @@
   .group-control-form .group-input {
     width: 100%;
     max-width: 200px; }
+    @media (max-width: 767px) {
+      .group-control-form .group-input {
+        max-width: 100%;
+        justify-content: center; } }
   .group-control-form .date-wrapper {
     position: relative; }
     .group-control-form .date-wrapper .icon-date-time {
@@ -166,6 +170,11 @@
       top: 8px;
       right: 15px;
       cursor: pointer; }
+  @media (max-width: 767px) {
+    .group-control-form .custom-button {
+      width: 100% !important;
+      margin: 0 auto !important;
+      max-width: 200px !important; } }
 
 .form-filter .form-group {
   display: inline-flex;
@@ -254,6 +263,9 @@ input[type="radio"], input[type="checkbox"] {
   @media (max-width: 767px) {
     .form .form-columns .items {
       margin-bottom: 12px; } }
+  @media (max-width: 767px) {
+    .form .form-columns .items.mobile-center-validate {
+      text-align: center; } }
 
 .form .custom-label {
   color: #333;
@@ -431,7 +443,8 @@ input[type="radio"], input[type="checkbox"] {
   margin-top: 24px; }
   @media (max-width: 767px) {
     .custom-checkbox {
-      align-items: flex-start; } }
+      align-items: flex-start;
+      margin-top: 10px; } }
 
 .checkmark {
   position: relative;
@@ -502,3 +515,8 @@ input[type="radio"], input[type="checkbox"] {
     margin-bottom: 0; }
     .after-login-container .group-button .custom-button {
       padding: 8px 20px 8px 45px; }
+  @media (max-width: 767px) {
+    .after-login-container .form .custom-button {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 200px; } }

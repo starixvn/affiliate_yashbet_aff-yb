@@ -35,7 +35,14 @@
 
                 &:first-child {
                     a {
+                        border-radius: 6px 0px 0px 0px;
                         border-left: 1px solid #E5C589;
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        border-radius: 0px 6px 0px 0px;
                     }
                 }
             }
@@ -51,6 +58,12 @@
                 border-bottom: none;
                 color: #333;
                 font-weight: 400;
+                background: #F1F1F1;
+                border-bottom: 1px solid #E5C589;
+
+                @include Mobile {
+                    font-size: 14px;
+                }
 
                 &.active, &:hover {
                     background: #fff;
@@ -72,6 +85,7 @@
         background: #E5C589;
         margin-bottom: 16px;
         border-radius: 3px;
+
         .text {
             padding: 0 10px;
             color: #333333;
@@ -103,13 +117,18 @@
 
 .summary {
     .select-date {
-        min-width: 133px;
+        min-width: 157px;
         border-radius: 100px;
         border: 1px solid #a7a7a7;
         padding-right: 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include Mobile {
+            min-width: inherit;
+            width: 100%;
+        }
 
         input {
             border: none;
@@ -136,6 +155,13 @@
                 text-align: center;
                 color: #333333;
                 margin-bottom: 0;
+
+                @include Mobile {
+                    width: 100%;
+                    text-align: left;
+                    font-size: 14px;
+                    padding-left: 15px;
+                }
             }
         }
     }
@@ -150,7 +176,8 @@
             gap: 50px;
 
             @include Mobile {
-                gap: 12px;
+                gap: 32px;
+                margin-bottom: 32px;
             }
 
             @include Tablet {
@@ -172,8 +199,9 @@
                 overflow: hidden;
 
                 @include Mobile {
-                    margin-bottom: 8px;
+                    margin-bottom: 12px;
                     width: auto;
+                    display: block;
                 }
 
                 @include landscapeTablet {
@@ -190,12 +218,14 @@
                 height: 91px;
 
                 @include Mobile {
-                    width: 64px;
+                    width: 100%;
                     height: auto;
+                    border-radius: 0;
+                    padding: 8px 0;
 
                     img {
-                        width: 24px;
-                        height: 24px;
+                        width: 40px;
+                        height: 40px;
                     }
                 }
 
@@ -206,6 +236,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
                     @include Mobile {
                         width: 38px;
                         height: 38px;
@@ -215,13 +246,18 @@
 
             .group-panel {
                 width: 85%;
+
+                @include Mobile {
+                    width: 100%;
+                }
+
                 .info-panel {
                     display: flex;
-                    align-items: center;
                     justify-content: space-between;
                     min-height: 45px;
-                    span{
-                        padding-left : 12px;
+
+                    span {
+                        padding-left: 12px;
                     }
 
                     &:last-child {
@@ -235,8 +271,9 @@
                         font-weight: 600;
 
                         @include Mobile {
-                            font-size: 11px;
+                            font-size: 14px;
                             line-height: 16px;
+                            padding: 8px 12px;
                         }
                     }
 
@@ -254,7 +291,7 @@
                         @include Mobile {
                             font-size: 13px;
                             line-height: 18px;
-                            max-width: 115px;
+                            max-width: 170px;
                         }
                     }
                 }
@@ -316,5 +353,11 @@ td {
 #media-gallery {
     #marketingPager{
         margin-bottom: -12px;
+    }
+}
+
+.banner{
+    @include Mobile{
+        margin-top : 20px;
     }
 }
