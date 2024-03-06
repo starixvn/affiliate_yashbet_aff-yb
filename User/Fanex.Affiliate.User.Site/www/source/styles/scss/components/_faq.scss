@@ -69,6 +69,9 @@
         font-weight: 400;
         line-height: normal;
         margin-top: 12px;
+        margin-left: 8px;
+        padding-left: 12px;
+        border-left: 1px solid #E5C589;
 
         ul, ol {
             margin-left: 8px;
@@ -77,6 +80,16 @@
             li {
                 margin-bottom: 0;
             }
+        }
+    }
+}
+
+.after-login {
+    .info-question {
+        .body-result {
+            margin-left: 0;
+            padding-left: 0;
+            border-left: none;
         }
     }
 }
