@@ -555,6 +555,9 @@
     <Content Include="www\build\styles\Images\contact-us\telegram.svg" />
     <Content Include="www\build\styles\Images\contact-us\vector.svg" />
     <Content Include="www\build\styles\Images\contact-us\whatsapp.svg" />
+    <Content Include="www\build\styles\Images\email\banner.en-US.png" />
+    <Content Include="www\build\styles\Images\email\banner.bn-BD.png" />
+    <Content Include="www\build\styles\Images\email\banner.hi_IN.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.en-US.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.hi-IN.png" />
@@ -910,9 +913,6 @@
     <Content Include="www\source\js\site.js" />
     <Content Include="www\source\js\spec\layout.spec.js" />
     <Content Include="www\build\styles\Images\email\banner.png" />
-    <Content Include="www\build\styles\Images\email\banner_bn-BD.png" />
-    <Content Include="www\build\styles\Images\email\banner_en-US.png" />
-    <Content Include="www\build\styles\Images\email\banner_hi-IN.png" />
     <Content Include="www\build\styles\Images\email\bgMain.png" />
     <Content Include="www\build\styles\Images\email\button.png" />
     <Content Include="www\build\styles\Images\email\header.png" />

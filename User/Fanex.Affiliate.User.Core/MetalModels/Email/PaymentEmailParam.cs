@@ -1,4 +1,5 @@
 ﻿using Fanex.Affiliate.User.Core.Enum;
+using Fanex.Affiliate.User.Core.Extensions;
 using System;
 
 namespace Fanex.Affiliate.User.Core.MetalModels.Email
@@ -14,5 +15,7 @@ namespace Fanex.Affiliate.User.Core.MetalModels.Email
         public PaymentRequestType PaymentType { get; set; }
 
         public string DefaultCurrency { get; set; }
+
+        public string FormatedAmount => Amount.FormatDecimal();
     }
 }

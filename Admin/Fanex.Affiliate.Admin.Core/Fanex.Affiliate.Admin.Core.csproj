@@ -333,6 +333,7 @@
     <Compile Include="DTO\UserPanel\LogType.cs" />
     <Compile Include="DTO\UserPanel\SubAffiliate.cs" />
     <Compile Include="Exceptions\LicenseePaymentException.cs" />
+    <Compile Include="Extensions\NumberFormatter.cs" />
     <Compile Include="Infrasstructures\AuthenticatedHttpClientHandler.cs" />
     <Compile Include="MetaModels\Administrator\ChangeStatusParam.cs" />
     <Compile Include="MetaModels\Administrator\DeleteDepartmentParam.cs" />
