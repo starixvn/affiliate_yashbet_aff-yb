@@ -255,6 +255,11 @@
                     display: flex;
                     justify-content: space-between;
                     min-height: 45px;
+                    align-items: center;
+
+                    @include Mobile {
+                        align-items: unset;
+                    }
 
                     span {
                         padding-left: 12px;

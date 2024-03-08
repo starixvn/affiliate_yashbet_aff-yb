@@ -676,7 +676,11 @@ span.toggle-handle {
       .summary-content .dashboard-section .group-panel .info-panel {
         display: flex;
         justify-content: space-between;
-        min-height: 45px; }
+        min-height: 45px;
+        align-items: center; }
+        @media (max-width: 767px) {
+          .summary-content .dashboard-section .group-panel .info-panel {
+            align-items: unset; } }
         .summary-content .dashboard-section .group-panel .info-panel span {
           padding-left: 12px; }
         .summary-content .dashboard-section .group-panel .info-panel:last-child {
