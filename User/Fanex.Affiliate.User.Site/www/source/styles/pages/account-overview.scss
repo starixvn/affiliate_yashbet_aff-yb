@@ -257,13 +257,13 @@
                     min-height: 45px;
                     align-items: center;
 
-                    @include Mobile {
+/*                    @include Mobile {
                         align-items: unset;
-                    }
+                    }*/
 
-                    span {
+/*                    span {
                         padding-left: 12px;
-                    }
+                    }*/
 
                     &:last-child {
                         border-bottom: none;
@@ -274,6 +274,7 @@
                         line-height: 16px;
                         color: #333;
                         font-weight: 600;
+                        padding-left: 12px;
 
                         @include Mobile {
                             font-size: 14px;
