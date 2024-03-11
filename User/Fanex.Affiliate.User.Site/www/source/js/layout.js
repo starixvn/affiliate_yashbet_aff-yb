@@ -1,5 +1,5 @@
 var Layout = (function ($) {
-    const DEFAULT_SPEED = 20;
+    const DEFAULT_SPEED = 39;
     let isOpenMenuMobile = false;
     let isTriggerClick = false;
 
@@ -138,12 +138,10 @@ var Layout = (function ($) {
                     var $marquee = $("#marquee");
                     $marquee.html(response);
 
-                    const containerWidth = $("#marqueeContainer").outerWidth();
-                    const hotNewsWidth = $marquee.outerWidth();
-                    const speedRate = hotNewsWidth / containerWidth;
-                    const speed = speedRate < 1 ? DEFAULT_SPEED : (speedRate + 0.25) * DEFAULT_SPEED;
+                    const containerWidth = $("#marquee").outerWidth();
+                    var timeTaken = containerWidth / DEFAULT_SPEED;
 
-                    $marquee.css("animation-duration", speed + "s");
+                    $marquee.css("animation-duration", timeTaken + "s");
                 }
             });
         }

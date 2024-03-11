@@ -114,6 +114,12 @@
     background: #FFF1DE;
     padding: 8px;
     border-radius: 5px;
+    margin-bottom: 15px;
+
+    @include Mobile {
+        margin-bottom: 8px;
+    }
+
     span {
         color: #967435;
         font-size: 22px;

@@ -9,7 +9,7 @@
     var landingPages = (Model.RefLinks.FirstOrDefault()?.SitePages ?? new List<Fanex.Affiliate.User.Core.DTO.UserPanel.LandingPage>())
         .Select(l => new SelectListItem { Value = l.PageName, Text = l.PageCode });
 
-    var languages = Model.Languages.Select(l => new SelectListItem { Value = l.Code, Text = l.EnglishName, Selected = l.Code == ViewBag.SelectedLang });
+    var languages = Model.Languages.Select(l => new SelectListItem { Value = l.Code, Text = l.NativeName, Selected = l.Code == ViewBag.SelectedLang });
 
     var channels = new List<SelectListItem> { new SelectListItem { Text = Lang.AddNew, Value = "add-new" } };
     channels.AddRange(Model.Channels.Select(c => new SelectListItem { Value = c.Key, Text = c.Value }));
@@ -50,12 +50,14 @@
                     </div>
                 </div>
             </div>
-            <div class="qr-code block-after">
+            <div class="qr-code">
                 <div class="after-sub-header">
                     <span>@Lang.TrackingAndQrCode</span>
                 </div>
-                <div id="qr-code">
+                <div class="after-sub-body">
+                    <div id="qr-code">
 
+                    </div>
                 </div>
             </div>
         </div>

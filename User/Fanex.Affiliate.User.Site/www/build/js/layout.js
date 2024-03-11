@@ -1,7 +1,7 @@
 ﻿"use strict";
 
 var Layout = (function ($) {
-    var DEFAULT_SPEED = 20;
+    var DEFAULT_SPEED = 39;
     var isOpenMenuMobile = false;
     var isTriggerClick = false;
 
@@ -139,12 +139,10 @@ var Layout = (function ($) {
                     var $marquee = $("#marquee");
                     $marquee.html(response);
 
-                    var containerWidth = $("#marqueeContainer").outerWidth();
-                    var hotNewsWidth = $marquee.outerWidth();
-                    var speedRate = hotNewsWidth / containerWidth;
-                    var speed = speedRate < 1 ? DEFAULT_SPEED : (speedRate + 0.25) * DEFAULT_SPEED;
+                    var containerWidth = $("#marquee").outerWidth();
+                    var timeTaken = containerWidth / DEFAULT_SPEED;
 
-                    $marquee.css("animation-duration", speed + "s");
+                    $marquee.css("animation-duration", timeTaken + "s");
                 }
             });
         }

@@ -10,7 +10,7 @@
 <div class="wraper-block">
     <div class="group-title">
         <h2 class="title-block">
-            <span class="text">@Lang.Referrals</span>
+            <span class="text">@Lang.LandingPages</span>
         </h2>
     </div>
     <div class="info-group">
@@ -27,17 +27,11 @@
                 </div>
                 <div class="group-input">
                     <label class="custom-label">@Lang.Language:</label>
-                    <select id="Language" class="form-input form-select">
-                        <option value="">@Lang.All</option>
-                        @foreach (var language in Model.LanguageList)
-                        {
-                            <option value="@language.Value">@language.Text</option>
-                        }
-                    </select>
+                    @Html.DropDownList("language", Model.LanguageList, Lang.All, new { @class = "form-input form-select" })
                 </div>
                 <div class="group-input">
                     <label class="custom-label">@Lang.Page:</label>
-                    <select id="Language" class="form-input form-select">
+                    <select id="SportCode" class="form-input form-select">
                         <option value="">@Lang.All</option>
                         @foreach (var page in Model.MemberSitePageList)
                         {

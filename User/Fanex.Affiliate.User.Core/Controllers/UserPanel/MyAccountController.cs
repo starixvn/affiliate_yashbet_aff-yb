@@ -72,7 +72,7 @@
             }
 
             var preferredLanguage = newAccountInfo.PreferredLanguage;
-            var languageName = LanguageService.GetLanguageList().FirstOrDefault(l => l.Code.Equals(preferredLanguage))?.EnglishName ?? preferredLanguage;
+            var languageName = LanguageService.GetLanguageList().FirstOrDefault(l => l.Code.Equals(preferredLanguage))?.NativeName ?? preferredLanguage;
             newAccountInfo.LanguageName = SystemLanguage.GetLanguageText(languageName);
 
             var baseCurrencyList = _currencyRepository.GetBaseCurrencyList();
