@@ -94,7 +94,7 @@ var WebSite = (function ($) {
             var $mainUrlInput = $("#SiteUrl");
             $mainUrlInput.prop("disabled", !hasWebSite);
             $(".websiteInput").toggle(hasWebSite);
-            $("#btnAddUrl").prop("disabled", !hasWebSite);
+            $("#btnAddUrl").toggleClass("disabled", !hasWebSite);
 
             var $noSiteDesc = $("#NoSiteDesc");
             $noSiteDesc.prop("disabled", hasWebSite);

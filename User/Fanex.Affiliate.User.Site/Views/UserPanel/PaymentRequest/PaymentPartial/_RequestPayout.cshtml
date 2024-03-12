@@ -55,7 +55,7 @@
                 <div class="form-group form-columns form-columns-2">
                     <div class="items validate-group">
                         <label class="custom-label">@Lang.BalForward</label>
-                        <input type="text" value="@Model.BalBroughtForward.ToStringMoneyWithSymbol()" class="form-input disable" />
+                        <input type="text" value="@Model.BalBroughtForward.ToStringMoneyWithSymbol()" class="form-input disable" disabled />
                     </div>
                     <div class="items validate-group">
                         <label class="custom-label">@Lang.RequestAmt</label>
@@ -66,7 +66,7 @@
                     <div class="items validate-group">
 
                         <label class="custom-label">@Lang.MinWithdraw</label>
-                        <input type="text" value="@Model.MinAmount.ToStringMoneyWithSymbol()" class="form-input disable" />
+                        <input type="text" value="@Model.MinAmount.ToStringMoneyWithSymbol()" class="form-input disable" disabled />
                     </div>
                     <div class="items validate-group mobile-center-validate">
                         <button href="#" class="custom-button" type="submit">

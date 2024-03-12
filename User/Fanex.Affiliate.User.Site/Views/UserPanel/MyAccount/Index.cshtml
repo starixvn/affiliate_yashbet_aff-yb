@@ -25,11 +25,11 @@
                 <div class="form-group form-columns form-columns-2">
                     <div class="items">
                         <label class="custom-label">@Lang.Username</label>
-                        <input type="text" value="@Model.AccountInformation.UserName" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.UserName" class="form-input disable" disabled />
                     </div>
                     <div class="items">
                         <label class="custom-label">@Lang.AffiliateID</label>
-                        <input type="text" value="@Model.AccountInformation.AffCode" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.AffCode" class="form-input disable" disabled />
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@
                     <div class="itemsp">
                         <label class="custom-label">@Lang.Password</label>
                         <div class="items preference-validation">
-                            <input type="password" value="@Lang.Password" class="form-input disable" />
+                            <input type="password" value="@Lang.Password" class="form-input disable" disabled />
                             <a href="@Url.Content("~/Password/Update")" class="custom-button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path d="M1.33333 3.66667V2.662C1.33455 2.48692 1.4046 2.31934 1.52834 2.19548C1.65208 2.07161 1.81959 2.0014 1.99467 2H14.0053C14.3707 2 14.6667 2.29667 14.6667 2.662V13.338C14.6654 13.5131 14.5954 13.6807 14.4717 13.8045C14.3479 13.9284 14.1804 13.9986 14.0053 14H1.99467C1.81921 13.9998 1.651 13.93 1.52699 13.8059C1.40299 13.6817 1.33333 13.5135 1.33333 13.338V12.6667H13.3333V4.86667L8 9.66667L1.33333 3.66667ZM0 6.66667H3.33333V8H0V6.66667ZM0 10H5.33333V11.3333H0V10Z" fill="white" />
@@ -58,27 +58,27 @@
                 <div class="form-group form-columns form-columns-2">
                     <div class="items">
                         <label class="custom-label">@Lang.Address</label>
-                        <input type="text" value="@Model.AccountInformation.Address" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.Address" class="form-input disable" disabled />
                     </div>
                     <div class="items">
                         <label class="custom-label">@Lang.City</label>
-                        <input type="text" value="@Model.AccountInformation.City" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.City" class="form-input disable" disabled />
                     </div>
                 </div>
                 <div class="form-group form-columns form-columns-2">
                     <div class="items">
                         <label class="custom-label">@Lang.PostCode</label>
-                        <input type="text" value="@Model.AccountInformation.Postal" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.Postal" class="form-input disable" disabled />
                     </div>
                     <div class="items">
                         <label class="custom-label">@Lang.Country</label>
-                        <input type="text" value="@Model.AccountInformation.Country" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.Country" class="form-input disable" disabled />
                     </div>
                 </div>
                 <div class="form-group form-columns form-columns-2">
                     <div class="items">
                         <label class="custom-label">@Lang.Email</label>
-                        <input type="text" value="@Model.AccountInformation.Email" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.Email" class="form-input disable" disabled />
                     </div>
                     <div class="items validate-group">
                         <label class="custom-label require">@Lang.ContactNumber</label>
@@ -235,7 +235,7 @@
                 <div class="form-group form-columns form-columns-2">
                     <div class="items">
                         <label class="custom-label">@Lang.Language</label>
-                        <input type="text" value="@Model.AccountInformation.LanguageName" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.LanguageName" class="form-input disable" disabled />
                     </div>
                     <div class="items validate-group">
                         <label class="custom-label">@Lang.DefaultBaseCurrency</label>
@@ -252,7 +252,7 @@
                 <div class="form-group form-columns form-columns-2">
                     <div class="items">
                         <label class="custom-label">@Lang.AffiliateCurrency</label>
-                        <input type="text" value="@Model.AccountInformation.AffCurrency" class="form-input disable" />
+                        <input type="text" value="@Model.AccountInformation.AffCurrency" class="form-input disable" disabled />
                     </div>
                 </div>
             </div>
@@ -276,7 +276,7 @@
                     <div class="form-group form-columns form-columns-2">
                         <div class="items">
                             <label for="Player_UserName" class="custom-label">@SiteFriendlyNameHelper.ReplaceB2C(Lang.UsernameSignUp) <span class="red-color">* (@Lang.NonDepositedAccount)</span></label>
-                            <input type="text" value="@Model.AccountInformation.PlayerUsername" class="form-input disable" />
+                            <input type="text" value="@Model.AccountInformation.PlayerUsername" class="form-input disable" disabled />
                         </div>
                     </div>
                 </div>

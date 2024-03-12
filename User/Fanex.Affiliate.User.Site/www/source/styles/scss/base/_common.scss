@@ -106,6 +106,10 @@ label {
     pointer-events: none !important;
     border: none !important;
 }
+
+button:disabled, .button-toggle.disabled {
+    opacity: 0.5;
+}
 /*
 .main-content {
     .page-title {

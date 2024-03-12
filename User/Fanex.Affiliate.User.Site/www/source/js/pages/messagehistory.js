@@ -108,7 +108,8 @@
         },
 
         toggleDate: function (isDisabled) {
-            $(".date-wrapper > *").toggleClass("disabled", isDisabled);
+            $(".date-wrapper > .form-input").toggleClass("disable", isDisabled);
+            $(".date-wrapper > .icon-date-time").toggleClass("disabled", isDisabled);
         }
     }
 

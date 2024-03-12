@@ -94,7 +94,7 @@ var WebSite = (function ($) {
             var $mainUrlInput = $("#SiteUrl");
             $mainUrlInput.prop("disabled", !hasWebSite);
             $(".websiteInput").toggle(hasWebSite);
-            $("#btnAddUrl").prop("disabled", !hasWebSite);
+            $("#btnAddUrl").toggleClass("disabled", !hasWebSite);
 
             var $noSiteDesc = $("#NoSiteDesc");
             $noSiteDesc.prop("disabled", hasWebSite);
@@ -245,7 +245,7 @@ var SignUp = (function ($) {
             $("#hasWebSite").prop("checked", true);
             $("#NoSiteDesc").prop("disabled", true);
             $("#SiteUrl").prop("disabled", false);
-            $("#btnAddUrl").prop("disabled", false);
+            $("#btnAddUrl").toggleClass("disabled", false);
             $(".websiteInput").remove();
         },
 

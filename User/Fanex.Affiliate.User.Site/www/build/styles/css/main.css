@@ -2017,6 +2017,10 @@ label.require:after {
   border: none !important;
 }
 
+button:disabled, .button-toggle.disabled {
+  opacity: 0.5;
+}
+
 /*
 .main-content {
     .page-title {
@@ -2723,9 +2727,6 @@ input[type=radio], input[type=checkbox] {
 
 .form-area[disabled], .form-input[disabled] {
   cursor: not-allowed;
-}
-
-.form-area[disabled] {
   background: #E1E1E1;
 }
 

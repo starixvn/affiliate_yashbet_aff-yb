@@ -464,9 +464,6 @@ input[type=radio], input[type=checkbox] {
 
 .form-area[disabled], .form-input[disabled] {
   cursor: not-allowed;
-}
-
-.form-area[disabled] {
   background: #E1E1E1;
 }
 
