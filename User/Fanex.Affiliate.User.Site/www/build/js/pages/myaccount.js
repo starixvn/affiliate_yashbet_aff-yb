@@ -161,7 +161,8 @@ var MyAccount = (function ($) {
                 validator.element($(this));
             });
 
-            $("#btnMyAccountSubmit").on("click", function () {
+            $("#btnMyAccountSubmit").on("click", function (e) {
+                e.preventDefault();
                 _me.submit();
             });
 

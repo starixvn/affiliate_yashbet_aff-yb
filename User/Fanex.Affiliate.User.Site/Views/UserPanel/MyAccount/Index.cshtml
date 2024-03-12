@@ -96,7 +96,7 @@
                         {
                             var itemOnly = contactAppList.FirstOrDefault();
                             <div class="form-group form-columns form-columns-2">
-                                @RazorHelper.RenderAppContactItem(itemOnly.Name, index, "", itemOnly.Value, contactAppCount == 1)
+                                @RazorHelper.RenderAppContactItem(itemOnly.Name, index, "", itemOnly.Value, true)
                                 @RazorHelper.RenderGender(Model.AccountInformation.Gender ? "checked" : "disabled", !Model.AccountInformation.Gender ? "checked" : "disabled")
                             </div>
                         }
@@ -106,7 +106,7 @@
                                 @foreach (var item in contactAppList)
                                 {
                                     var dependentField = $"ContactAppList[{(index == 0 ? "1" : "0")}].Value";
-                                    @RazorHelper.RenderAppContactItem(item.Name, index, dependentField, item.Value, contactAppCount == 1)
+                                    @RazorHelper.RenderAppContactItem(item.Name, index, dependentField, item.Value, false)
 
                                     index++;
                                 }

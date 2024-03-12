@@ -90,10 +90,11 @@
         private IEnumerable<LandingPageStatistics> GetLandingPageStatisticsData(LandingPageStatisticsParam landingPageParam)
         {
             var dataList = StatisticsRepository.GetLandingPageStatistics(landingPageParam);
+            var languageList = LanguageService.GetLanguageList();
 
             foreach (var item in dataList)
             {
-                var language = LanguageService.GetLanguageList().FirstOrDefault(p => p.ShortedCode == item.LanguageCode);
+                var language = languageList.FirstOrDefault(p => p.ShortedCode == item.LanguageCode);
 
                 item.LanguageName = language == null ? item.LanguageCode : language.NativeName;
             }

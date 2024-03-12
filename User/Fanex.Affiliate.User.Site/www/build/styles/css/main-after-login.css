@@ -418,6 +418,12 @@ input[type=radio], input[type=checkbox] {
   position: relative;
   margin-right: 8px;
 }
+.radio-circle.disabled {
+  background: #e1e1e1;
+  cursor: no-drop;
+  border: 2px solid #70778a !important;
+  pointer-events: unset !important;
+}
 
 .radio-circle::before {
   content: "";

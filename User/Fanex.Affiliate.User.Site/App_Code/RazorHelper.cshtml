@@ -109,12 +109,12 @@
         <div class="radio-group">
             <label class="radio-button">
                 <input type="radio" name="Gender" id="male" value="True" @attrMale />
-                <span class="radio-circle"></span>
+                <span class="radio-circle @attrMale"></span>
                 <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Male</span>
             </label>
             <label class="radio-button">
                 <input type="radio" name="Gender" id="female" value="False" @attrFemale />
-                <span class="radio-circle"></span>
+                <span class="radio-circle @attrFemale"></span>
                 <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Female</span>
             </label>
         </div>
@@ -123,14 +123,26 @@
 
 @helper RenderAppContactItem(string name, int index, string dependentProp, string value = null, bool isOnlyOne = false)
 {
+    var messageErr = Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount;
+
     <div class="items validate-group">
-        <label for="ContactAppList[@index].Value" class="custom-label @(isOnlyOne ? "require" : "")">@name</label>
-        <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-input" value="@value" data-val="true"
-               @(isOnlyOne ? "" : $"data-val-requiredifnullorempty-dependentprop=\"{dependentProp}\" data-val-requiredifnullorempty=\"{Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount}\"") />
+        @if (isOnlyOne)
+        {
+            <label for="ContactAppList[@index].Value" class="custom-label require">@name</label>
+            <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-input"
+                   value="@value" data-val="true" data-val-required="@messageErr" />
+        }
+        else
+        {
+            <label for="ContactAppList[@index].Value" class="custom-label">@name</label>
+            <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-input"
+                   value="@value" data-val="true" data-val-requiredifnullorempty-dependentprop="@dependentProp" data-val-requiredifnullorempty="@messageErr" />
+        }
         <span class="field-validation-valid validate-input hide"
               data-valmsg-for="ContactAppList[@index].Value" data-valmsg-replace="true"></span>
 
         <input type="hidden" name="ContactAppList[@index].Name" value="@name" />
         <input type="hidden" name="ContactAppList[@index].Order" value="@(index + 1)" />
     </div>
+
 }
