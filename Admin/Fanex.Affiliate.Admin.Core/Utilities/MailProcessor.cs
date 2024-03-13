@@ -30,7 +30,7 @@
             }
         }
 
-        public void Send(string content, string mailTo, string subject, string shortedLanguageCode)
+        public void Send(string content, string mailTo, string subject)
         {
             var mailItem = new MailRecord
             {
@@ -41,7 +41,7 @@
                 MailCc = _appSetting.CcMail
             };
 
-            AppSettings.AppMailId = _appSetting.GetAppMailIdByShortedLanguageCode(shortedLanguageCode);
+            AppSettings.AppMailId = _appSetting.AppMailId;
             AppSettings.AppMailAddress = _appSetting.AppMailAddress;
 
             using (var client = new MailDeliver())

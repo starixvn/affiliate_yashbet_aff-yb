@@ -58,7 +58,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers
             var appSetting = new Mock<IAppSetting>();
             appSetting.Setup(a => a.Environment).Returns("UAT");
             appSetting.Setup(a => a.IsProduction).Returns(true);
-            appSetting.Setup(a => a.GetMailContactByShortedLanguageCode(It.IsAny<string>())).Returns("abc@gmail.com");
+            appSetting.Setup(a => a.MailContact).Returns("abc@gmail.com");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -86,7 +86,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers
             appSetting.Setup(a => a.Environment).Returns("UAT");
             appSetting.Setup(a => a.IsProduction).Returns(true);
             appSetting.Setup(a => a.DefaultShortedLanguageCode).Returns("en");
-            appSetting.Setup(a => a.GetMailContactByShortedLanguageCode(It.IsAny<string>())).Returns("abc@gmail.com");
+            appSetting.Setup(a => a.MailContact).Returns("abc@gmail.com");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -114,7 +114,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers
             appSetting.Setup(a => a.Environment).Returns("UAT");
             appSetting.Setup(a => a.IsProduction).Returns(true);
             appSetting.Setup(a => a.DefaultShortedLanguageCode).Returns("en");
-            appSetting.Setup(a => a.GetMailContactByShortedLanguageCode(It.IsAny<string>())).Returns("abc@gmail.com");
+            appSetting.Setup(a => a.MailContact).Returns("abc@gmail.com");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -142,7 +142,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers
             appSetting.Setup(a => a.Environment).Returns("UAT");
             appSetting.Setup(a => a.IsProduction).Returns(true);
             appSetting.Setup(a => a.DefaultShortedLanguageCode).Returns("en");
-            appSetting.Setup(a => a.GetMailContactByShortedLanguageCode(It.IsAny<string>())).Returns("abc@gmail.com");
+            appSetting.Setup(a => a.MailContact).Returns("abc@gmail.com");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -170,7 +170,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers
             appSetting.Setup(a => a.Environment).Returns("UAT");
             appSetting.Setup(a => a.IsProduction).Returns(true);
             appSetting.Setup(a => a.DefaultShortedLanguageCode).Returns("en");
-            appSetting.Setup(a => a.GetMailContactByShortedLanguageCode(It.IsAny<string>())).Returns("abc@gmail.com");
+            appSetting.Setup(a => a.MailContact).Returns("abc@gmail.com");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -217,7 +217,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers
             appSetting.Setup(a => a.Environment).Returns("UAT");
             appSetting.Setup(a => a.IsProduction).Returns(true);
             appSetting.Setup(a => a.DefaultShortedLanguageCode).Returns("en");
-            appSetting.Setup(a => a.GetMailContactByShortedLanguageCode(It.IsAny<string>())).Returns("abc@gmail.com");
+            appSetting.Setup(a => a.MailContact).Returns("abc@gmail.com");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();

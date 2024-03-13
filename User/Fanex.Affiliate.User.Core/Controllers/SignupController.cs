@@ -121,7 +121,7 @@
                     AffParentCode = affParentCode
                 };
 
-                var mailContact = _appSetting.GetMailContactByLanguageCode(signUpParam.PreferredLanguage ?? SessionService.CurrentLanguage);
+                var mailContact = _appSetting.MailContact;
                 var emailParam = new EmailBaseParam
                 {
                     MailContact = mailContact,

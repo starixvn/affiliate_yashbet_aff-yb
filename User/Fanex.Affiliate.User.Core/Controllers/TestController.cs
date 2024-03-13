@@ -30,7 +30,7 @@
         {
             _mailProcessor = mailProcessor;
             _appSetting = appSetting;
-            _mailContact = appSetting.GetMailContactByLanguageCode(sessionService.UserSession?.PreferredLanguage ?? sessionService.CurrentLanguage);
+            _mailContact = appSetting.MailContact;
             _userName = sessionService.UserSession?.UserName ?? "NovaAff0000";
         }
 
@@ -84,7 +84,7 @@
                 var content = GetEmailContent(criteria);
                 string Subject = GetSubject(criteria.Function);
 
-                _mailProcessor.Send(content, criteria.EmailAddress, Subject, criteria.Language);
+                _mailProcessor.Send(content, criteria.EmailAddress, Subject);
 
                 LanguageService.SetCulture(SystemLanguage.EnglishLanguageCode);
             }

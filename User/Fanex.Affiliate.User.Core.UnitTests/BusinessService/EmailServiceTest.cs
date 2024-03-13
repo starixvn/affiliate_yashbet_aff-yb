@@ -24,7 +24,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
         {
             MailProcessor = Substitute.For<IMailProcessor>();
             AppSetting = Substitute.For<IAppSetting>();
-            AppSetting.GetAppMailIdByLanguageCode(Arg.Any<string>()).Returns(AppMailId.ToString());
+            AppSetting.AppMailId.Returns(AppMailId.ToString());
             LangService = Substitute.For<ILanguageService>();
         }
 
@@ -41,7 +41,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<RecoverPasswordEmailParam>());
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailTemplateViewModel>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectForgetPass, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectForgetPass);
         }
 
         [Fact]
@@ -60,7 +60,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<RecoverPasswordEmailParam>());
             MailProcessor.DidNotReceive().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailTemplateViewModel>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectForgetPass, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectForgetPass);
         }
 
         [Fact]
@@ -76,7 +76,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<NewPasswordEmailParam>());
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailTemplateViewModel>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectNewPass, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectNewPass);
         }
 
         [Fact]
@@ -94,7 +94,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<NewPasswordEmailParam>());
             MailProcessor.DidNotReceive().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailTemplateViewModel>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectNewPass, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectNewPass);
         }
 
         [Theory]
@@ -112,7 +112,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<PaymentEmailParam>());
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailTemplateViewModel>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Arg.Compat.Is<string>(c => c.Contains(param.TransId.ToString())), Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Arg.Compat.Is<string>(c => c.Contains(param.TransId.ToString())));
         }
 
         [Theory]
@@ -132,7 +132,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<PaymentEmailParam>());
             MailProcessor.DidNotReceive().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailTemplateViewModel>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Arg.Compat.Is<string>(c => c.Contains(param.TransId.ToString())), Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Arg.Compat.Is<string>(c => c.Contains(param.TransId.ToString())));
         }
 
         [Fact]
@@ -147,7 +147,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
             service.SendNoticeEmailToCsd(param);
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<NoticeEmailParam>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Arg.Compat.Is<string>(c => c.Contains(param.UserName)), Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Arg.Compat.Is<string>(c => c.Contains(param.UserName)));
         }
 
         [Fact]
@@ -163,7 +163,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<VerificationAccountEmailParam>());
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailTemplateViewModel>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectVerificationAccount, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectVerificationAccount);
         }
 
         [Fact]
@@ -181,7 +181,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<VerificationAccountEmailParam>());
             MailProcessor.DidNotReceive().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailTemplateViewModel>());
-            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectVerificationAccount, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, param.MailTo, Lang.SubjectVerificationAccount);
         }
 
         private static RecoverPasswordEmailParam CreateRecoverEmailParam()

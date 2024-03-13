@@ -129,7 +129,7 @@ namespace Fanex.Affiliate.Admin.Core.Services.Payment
             PaymentRequestDetail paymentRequestDetail)
         {
 
-            emailParam.UserSiteUrl = SiteDomainHelper.GetUserSiteUrl(affInfo.AffType);
+            emailParam.UserSiteUrl = _appSetting.AffUserSiteURL;
             emailParam.FirstName = affInfo.FirstName;
             emailParam.MailTo = affInfo.Email;
             emailParam.IsHtml = !affInfo.MailOption;

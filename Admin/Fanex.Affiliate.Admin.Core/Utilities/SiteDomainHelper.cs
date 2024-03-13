@@ -1,5 +1,4 @@
 ﻿using Fanex.Affiliate.Admin.Core.Configurations;
-using Fanex.Affiliate.Admin.Core.Constants;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Web;
@@ -9,10 +8,10 @@ namespace Fanex.Affiliate.Admin.Core.Utilities
 {
     public static class SiteDomainHelper
     {
-        [SuppressMessage("Sonar Code Smell", "S3995:UriReturnValuesShouldNotBeStrings", Justification = "Reviewed. Suppression is OK here.")]
+        private static readonly IAppSetting appSetting = DependencyResolver.Current.GetService<IAppSetting>();
+
         public static string GetRootUrl(Controller controller)
         {
-            var appSetting = DependencyResolver.Current.GetService<IAppSetting>();
             var requestUrl = controller.Request.Url;
             var isUatOrProEnv = !appSetting.IsDev;
 
@@ -20,26 +19,8 @@ namespace Fanex.Affiliate.Admin.Core.Utilities
                 (requestUrl.IsDefaultPort || isUatOrProEnv ? string.Empty : ":" + requestUrl.Port) + controller.Url.Content("~/");
         }
 
-        [SuppressMessage("Sonar Code Smell", "S3995:UriReturnValuesShouldNotBeStrings", Justification = "Reviewed. Suppression is OK here.")]
-        public static string GetUserSiteUrl(int affType)
-        {
-            var appSetting = DependencyResolver.Current.GetService<IAppSetting>();
-
-            return affType == AffType.European ? appSetting.EuropeanAffSiteUrl : appSetting.AsianAffSiteUrl;
-        }
-
-        [SuppressMessage("Sonar Code Smell", "S3995:UriReturnValuesShouldNotBeStrings", Justification = "Reviewed. Suppression is OK here.")]
-        public static string GetUserInternalSiteUrl(int affType)
-        {
-            var appSetting = DependencyResolver.Current.GetService<IAppSetting>();
-
-            return affType == AffType.European ? appSetting.InternalEuropeanAffiliateUrl : appSetting.InternalAsianAffiliateUrl;
-        }
-
         private static string GetScheme(HttpRequestBase request)
         {
-            var appSetting = DependencyResolver.Current.GetService<IAppSetting>();
-
             if (appSetting != null && appSetting.IsProduction)
             {
                 return request.Url.Scheme;
@@ -50,7 +31,7 @@ namespace Fanex.Affiliate.Admin.Core.Utilities
 
         private static bool IsSecure(HttpRequestBase request)
         {
-            return request.IsSecureConnection || String.Equals(request.ServerVariables["HTTP_X_FORWARDED_PROTO"], "https", StringComparison.OrdinalIgnoreCase);
+            return request.IsSecureConnection || string.Equals(request.ServerVariables["HTTP_X_FORWARDED_PROTO"], "https", StringComparison.OrdinalIgnoreCase);
         }
     }
 }

@@ -20,7 +20,7 @@
         [HttpGet]
         public ActionResult Index()
         {
-            var mailContact = _appSetting.GetMailContactByLanguageCode(SessionService.CurrentLanguage);
+            var mailContact = _appSetting.MailContact;
 
             return View($"~/Views/ContactUs/Index.cshtml", model: mailContact);
         }

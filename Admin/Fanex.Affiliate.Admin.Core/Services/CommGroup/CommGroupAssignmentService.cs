@@ -1,4 +1,5 @@
-﻿using Fanex.Affiliate.Admin.Core.Constants;
+﻿using Fanex.Affiliate.Admin.Core.Configurations;
+using Fanex.Affiliate.Admin.Core.Constants;
 using Fanex.Affiliate.Admin.Core.DTO;
 using Fanex.Affiliate.Admin.Core.DTO.Email;
 using Fanex.Affiliate.Admin.Core.MetaModels.Affiliate;
@@ -14,6 +15,7 @@ namespace Fanex.Affiliate.Admin.Core.Services.CommGroup
 {
     public class CommGroupAssignmentService : ICommGroupAssignmentService
     {
+        private readonly IAppSetting _appSetting;
         private readonly ICommissionGroupRepository _commGroupRepository;
         private readonly IAffiliateService _affiliateService;
         private readonly IEmailService _emailService;
@@ -21,12 +23,14 @@ namespace Fanex.Affiliate.Admin.Core.Services.CommGroup
         private readonly IThirdPartyLicenseeService _thirdPartyLicenseeService;
 
         public CommGroupAssignmentService(
+            IAppSetting appSetting,
             ICommissionGroupRepository commGroupRepository,
             IAffiliateService affiliateService,
             IEmailService emailService,
             ICommGroupCommonService commGroupCommonService,
             IThirdPartyLicenseeService thirdPartyLicenseeService)
         {
+            _appSetting = appSetting;
             _commGroupRepository = commGroupRepository;
             _affiliateService = affiliateService;
             _emailService = emailService;
@@ -126,7 +130,7 @@ namespace Fanex.Affiliate.Admin.Core.Services.CommGroup
 
         private void SendEmailApprove(AffInformationEmail emailParam, AffInfoParam affInfo, string password, string affCode)
         {
-            emailParam.UserSiteUrl = SiteDomainHelper.GetUserSiteUrl(affInfo.AffType);
+            emailParam.UserSiteUrl = _appSetting.AffUserSiteURL;
             emailParam.Language = affInfo.PreferredLanguage;
             emailParam.FirstName = affInfo.FirstName;
             emailParam.UserName = affInfo.UserName;

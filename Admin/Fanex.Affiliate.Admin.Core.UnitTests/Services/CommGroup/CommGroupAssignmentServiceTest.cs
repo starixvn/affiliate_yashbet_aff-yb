@@ -99,7 +99,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.CommGroup
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.EuropeanAffSiteUrl).Returns("https://aff-yb.nexdev.net/YBUser");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("https://aff-yb.nexdev.net/YBUser");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -245,7 +245,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.CommGroup
             MockingHelper.SetUpHttpContextSession();
             MockingHelper.SetUpLogEngineEnviroment();
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.AsianAffSiteUrl).Returns("https://aff-yb.nexdev.net/YBUser");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("https://aff-yb.nexdev.net/YBUser");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -322,7 +322,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.CommGroup
             var fakeCommGroupCommonService = commGroupCommonService ?? Mock.Of<ICommGroupCommonService>();
             var fakeThirdPartyLicenseeservice = thirdPartyLicenseeService ?? Mock.Of<IThirdPartyLicenseeService>();
 
-            return new CommGroupAssignmentService(fakeCommGroupRepository, fakeAffiliateService, fakeEmailService, fakeCommGroupCommonService, fakeThirdPartyLicenseeservice);
+            return new CommGroupAssignmentService(Mock.Of<IAppSetting>(), fakeCommGroupRepository, fakeAffiliateService, fakeEmailService, fakeCommGroupCommonService, fakeThirdPartyLicenseeservice);
         }
 
         private static CreateUpdateCommissionGroupParam CreateValidCreateUpdateCommissionGroupParam()

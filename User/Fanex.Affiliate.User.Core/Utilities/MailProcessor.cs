@@ -29,7 +29,7 @@
             }
         }
 
-        public void Send(string content, string mailTo, string subject, string languageCode)
+        public void Send(string content, string mailTo, string subject)
         {
             var mailItem = new MailRecord
             {
@@ -40,7 +40,7 @@
                 MailCc = _appSetting.MailCc
             };
 
-            AppSettings.AppMailId = _appSetting.GetAppMailIdByLanguageCode(languageCode);
+            AppSettings.AppMailId = _appSetting.AppMailId;
             AppSettings.AppMailAddress = _appSetting.AppMailAddress;
 
             using (var client = new MailDeliver())

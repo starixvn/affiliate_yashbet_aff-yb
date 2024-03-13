@@ -151,7 +151,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers
         public void SendEmail_WhenCall_SendMailSuccess(string function)
         {
             //Arrange
-            AppSetting.GetAppMailIdByLanguageCode(Arg.Any<string>()).Returns("1");
+            AppSetting.AppMailId.Returns("1");
             SessionService.IsInternal.Returns(true);
             MockingHelper.SetUpEnviroment();
             var controller = CreateTestingEmailController();

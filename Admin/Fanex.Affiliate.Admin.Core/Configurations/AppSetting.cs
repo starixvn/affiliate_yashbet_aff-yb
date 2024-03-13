@@ -8,9 +8,8 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
     {
         public static IAppSetting Instance { get; } = new AppSetting();
 
-        public string InternalAsianAffiliateUrl => GetValue("internalAsianAffiliateURL");
-
-        public string InternalEuropeanAffiliateUrl => GetValue("internalEuropeanAffiliateURL");
+        public string InternalAffiliateUserSiteURL => GetValue("internalAffiliateUserSiteURL");
+        public string AffUserSiteURL => GetValue("AffiliateUserSiteURL");
 
         public string Environment => GetValue("Environment");
 
@@ -20,10 +19,6 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         public string BccMail => GetValue("bccMail");
 
-        public string EuropeanAffSiteUrl => GetValue("EuropeanAffiliateURL");
-
-        public string AsianAffSiteUrl => GetValue("AsianAffiliateURL");
-
         public string JsVersion => GetValue("JsVersion");
 
         public bool IsDev => Environment.Equals("DEV", StringComparison.OrdinalIgnoreCase);
@@ -32,13 +27,9 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         public string MailContact => GetValue("MailContact");
 
-        public string GetMailContactByShortedLanguageCode(string shortedLanguageCode) => GetValue("MailContact" + shortedLanguageCode) ?? MailContact;
-
         public string AppMailId => GetValue("app_mail_id");
 
         public string AppMailAddress => GetValue("app_mail_address");
-
-        public string GetAppMailIdByShortedLanguageCode(string shortedLanguageCode) => GetValue("app_mail_id_" + shortedLanguageCode) ?? AppMailId;
 
         public string SentryDsn => GetValue("Dsn");
 
@@ -77,10 +68,5 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
         public string MemberSiteApiPassword => GetValue("MemberSiteApiPassword");
 
         public bool IsUseMemberSiteProxy => Convert.ToBoolean(GetValue("IsUseProxyToGetMemberSiteApi"));
-
-        public string AffSiteUrl => GetValue("AffSiteUrl");
-
-        public string GetAffSiteUrlByShortedLanguageCode(string shortedLanguageCode) => GetValue("AffSiteUrl_" + shortedLanguageCode) ?? AffSiteUrl;
-
     }
 }

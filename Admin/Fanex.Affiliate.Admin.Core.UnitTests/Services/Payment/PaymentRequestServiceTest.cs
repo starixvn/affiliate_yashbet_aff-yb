@@ -96,7 +96,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.AsianAffSiteUrl).Returns("Asian");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("Asian");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -126,7 +126,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.EuropeanAffSiteUrl).Returns("Euro");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("Euro");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -227,7 +227,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             // Arrange
             var appSetting = new Mock<IAppSetting>();
             appSetting.Setup(a => a.MemberSiteId).Returns(1);
-            appSetting.Setup(a => a.EuropeanAffSiteUrl).Returns("Euro");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("Euro");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -264,7 +264,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             MockingHelper.SetUpLogEngineEnviroment();
             var appSetting = new Mock<IAppSetting>();
             appSetting.Setup(a => a.MemberSiteId).Returns(1);
-            appSetting.Setup(a => a.EuropeanAffSiteUrl).Returns("Euro");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("Euro");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -302,7 +302,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             MockingHelper.SetUpLogEngineEnviroment();
             var appSetting = new Mock<IAppSetting>();
             appSetting.Setup(a => a.MemberSiteId).Returns(1);
-            appSetting.Setup(a => a.EuropeanAffSiteUrl).Returns("Euro");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("Euro");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -339,7 +339,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             // Arrange
             var appSetting = new Mock<IAppSetting>();
             appSetting.Setup(a => a.MemberSiteId).Returns(1);
-            appSetting.Setup(a => a.EuropeanAffSiteUrl).Returns("Euro");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("Euro");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();

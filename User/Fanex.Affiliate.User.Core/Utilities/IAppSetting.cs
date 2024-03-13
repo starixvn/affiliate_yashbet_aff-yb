@@ -9,13 +9,9 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         string MailContact { get; }
 
-        string GetMailContactByLanguageCode(string languageCode);
-
         string AppMailId { get; }
 
         string AppMailAddress { get; }
-
-        string GetAppMailIdByLanguageCode(string languageCode);
 
         string Environment { get; }
 

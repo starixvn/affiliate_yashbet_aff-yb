@@ -84,7 +84,7 @@
                 var recoverEmailParam = new RecoverPasswordEmailParam
                 {
                     User = userInfo,
-                    MailContact = _appSetting.GetMailContactByLanguageCode(userInfo.PreferredLanguage),
+                    MailContact = _appSetting.MailContact,
                     MailTo = param.Email,
                     RootDomain = SiteDomainHelper.GetRootUrl(this, _appSetting),
                     Code = code
@@ -125,7 +125,7 @@
                     RootDomain = SiteDomainHelper.GetRootUrl(this, _appSetting),
                     NewPassword = newPassword,
                     MailTo = userInfo.Email,
-                    MailContact = _appSetting.GetMailContactByLanguageCode(userInfo.PreferredLanguage)
+                    MailContact = _appSetting.MailContact
                 };
 
                 _mailService.SendNewPasswordEmail(recoverEmailParam);

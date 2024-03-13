@@ -1,4 +1,5 @@
 ﻿using DNAide.Utils;
+using Fanex.Affiliate.Admin.Core.Configurations;
 using Fanex.Affiliate.Admin.Core.Constants;
 using Fanex.Affiliate.Admin.Core.DTO;
 using Fanex.Affiliate.Admin.Core.DTO.Affiliate;
@@ -16,17 +17,20 @@ namespace Fanex.Affiliate.Admin.Core.Services.Customer
 {
     public class CustomerLeftPanelService : ICustomerLeftPanelService
     {
+        private readonly IAppSetting _appSetting;
         private readonly IEmailService _emailService;
         private readonly IAffiliateService _affiliateService;
         private readonly ICustomerLeftPanelRepository _customerLeftPanelRepository;
         private readonly IThirdPartyLicenseeService _thirdPartyLicenseeService;
 
         public CustomerLeftPanelService(
+            IAppSetting appSetting,
             IEmailService emailService,
             IAffiliateService affiliateService,
             ICustomerLeftPanelRepository customerLeftPanelRepository,
             IThirdPartyLicenseeService thirdPartyLicenseeService)
         {
+            _appSetting = appSetting;
             _emailService = emailService;
             _affiliateService = affiliateService;
             _customerLeftPanelRepository = customerLeftPanelRepository;
@@ -37,7 +41,7 @@ namespace Fanex.Affiliate.Admin.Core.Services.Customer
             var affiliateInfo = _customerLeftPanelRepository.GetAffiliateInfoOnLeftPanel(affUserName);
             if (affiliateInfo != null)
             {
-                affiliateInfo.AffLink = GenerateUrl(affUserName, affiliateInfo.AffType, accId, accOnId, sessionId).ToString();
+                affiliateInfo.AffLink = GenerateUrl(affUserName, accId, accOnId, sessionId).ToString();
             }
             return affiliateInfo;
         }
@@ -118,7 +122,7 @@ namespace Fanex.Affiliate.Admin.Core.Services.Customer
 
         private void SendDisapprovedEmail(AffInformationEmail emailParam, AffiliateBasicInfo affInfo)
         {
-            emailParam.UserSiteUrl = SiteDomainHelper.GetUserSiteUrl(affInfo.AffType);
+            emailParam.UserSiteUrl = _appSetting.AffUserSiteURL;
             emailParam.Language = affInfo.PreferredLanguage;
             emailParam.FirstName = affInfo.FirstName;
             emailParam.MailTo = affInfo.Email;
@@ -127,11 +131,11 @@ namespace Fanex.Affiliate.Admin.Core.Services.Customer
             _emailService.SendDisapprovedEmail(emailParam);
         }
 
-        private static Uri GenerateUrl(string custName, int affType, string accId, string accOnId, string sessionId)
+        private Uri GenerateUrl(string custName, string accId, string accOnId, string sessionId)
         {
             var rndStr = Encryption.RandomString(6);
             var accKey = Generator.GenerateSHA512String(sessionId + rndStr);
-            var url = SiteDomainHelper.GetUserInternalSiteUrl(affType);
+            var url = _appSetting.InternalAffiliateUserSiteURL;
             url += "?chalengeStr=" + rndStr;
             url += "&accKey=" + accKey;
             url += "&custName=" + custName;

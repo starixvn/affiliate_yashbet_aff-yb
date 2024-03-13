@@ -36,13 +36,9 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         public string MailContact => GetValue("MailContact");
 
-        public string GetMailContactByLanguageCode(string languageCode) => GetValue("MailContact" + SystemLanguage.GetUppercaseShortedCode(languageCode)) ?? MailContact;
-
         public string AppMailId => GetValue("app_mail_id");
 
         public string AppMailAddress => GetValue("app_mail_address");
-
-        public string GetAppMailIdByLanguageCode(string languageCode) => GetValue("app_mail_id_" + SystemLanguage.GetUppercaseShortedCode(languageCode)) ?? AppMailId;
 
         public string MailCc => GetValue("MailCc");
 
