@@ -21,7 +21,7 @@
     var _me = {
         initialize: function () {
             _rootUrl = $("#RootUrl").val();
-            _language = $("#Language").val();
+            _language = $("#CurrentLanguage").val();
         },
         resolveRelativeUrl: function (url) {
             return _rootUrl + url;

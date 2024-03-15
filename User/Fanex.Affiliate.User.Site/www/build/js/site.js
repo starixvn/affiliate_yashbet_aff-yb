@@ -20,7 +20,7 @@ var Site = (function ($) {
     var _me = {
         initialize: function initialize() {
             _rootUrl = $("#RootUrl").val();
-            _language = $("#Language").val();
+            _language = $("#CurrentLanguage").val();
         },
         resolveRelativeUrl: function resolveRelativeUrl(url) {
             return _rootUrl + url;

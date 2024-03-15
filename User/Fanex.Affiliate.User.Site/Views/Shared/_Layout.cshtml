@@ -196,7 +196,7 @@
     </div>
 
     <input type="hidden" id="RootUrl" value="@Url.Content("~")" />
-    <input type="hidden" id="Language" value="@sessionService.CurrentLanguage" />
+    <input type="hidden" id="CurrentLanguage" value="@sessionService.CurrentLanguage" />
     @Html.Raw(Fanex.Logging.LogManager.RenderJavascriptLogger())
     <script>
         window.Lang = {
