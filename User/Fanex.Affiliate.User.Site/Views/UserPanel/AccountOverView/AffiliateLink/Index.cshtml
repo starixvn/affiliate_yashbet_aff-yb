@@ -7,7 +7,7 @@
     var availableDomains = (Model.RefLinks.FirstOrDefault()?.Domains ?? new List<Fanex.Affiliate.User.Core.DTO.UserPanel.Domain>())
         .Select(d => new SelectListItem { Value = d.DomainId.ToString(), Text = d.DomainName });
     var landingPages = (Model.RefLinks.FirstOrDefault()?.SitePages ?? new List<Fanex.Affiliate.User.Core.DTO.UserPanel.LandingPage>())
-        .Select(l => new SelectListItem { Value = l.PageName, Text = l.PageCode });
+        .Select(l => new SelectListItem { Value = l.PageCode, Text = l.PageName });
 
     var languages = Model.Languages.Select(l => new SelectListItem { Value = l.Code, Text = l.NativeName, Selected = l.Code == ViewBag.SelectedLang });
 
