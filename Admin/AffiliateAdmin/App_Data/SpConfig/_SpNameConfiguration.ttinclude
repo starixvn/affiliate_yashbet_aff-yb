@@ -6,7 +6,7 @@
 <#
 	var licenseeDbNameList = new System.Collections.Generic.Dictionary<string, string>
 	{
-		{"yb", "DBAFF.Affiliate_YashBet.wsv_nap"},
+		{"yb", "DBAFF.Affiliate_YashBet.wsv_aff"},
 	};
 
 	var environments = new string[] { "uat", "production", "sit", "local" };

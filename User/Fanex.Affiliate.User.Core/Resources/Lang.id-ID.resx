@@ -1775,9 +1775,6 @@ Jika Anda memiliki pertanyaan dan memerlukan bantuan sila &lt;a href='{0}'&gt;Hu
   <data name="FaqsTitle" xml:space="preserve">
     <value>Tanya Jawab</value>
   </data>
-  <data name="NonDepositedAccount" xml:space="preserve">
-    <value>akun non-deposit - jika sudah pernah Deposit, silakan buat baru khusus Afiliasi</value>
-  </data>
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>Verifikasi detail akun Anda</value>
   </data>

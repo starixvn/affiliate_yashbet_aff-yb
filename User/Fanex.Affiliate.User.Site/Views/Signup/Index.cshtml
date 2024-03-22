@@ -239,7 +239,7 @@
                                     </label>
                                 </div>
                                 <div class="items validate-group">
-                                    <label for="Player_UserName" class="custom-label">@SiteFriendlyNameHelper.ReplaceB2C(Lang.UsernameSignUp) <span class="red-color">* (@Lang.NonDepositedAccount)</span></label>
+                                    <label for="Player_UserName" class="custom-label">@SiteFriendlyNameHelper.ReplaceB2C(Lang.UsernameSignUp) <span class="red-color">*</span></label>
                                     @Html.TextBoxFor(p => p.Player_UserName, new { @class = "form-input", @autocomplete = "off" })
                                     @Html.ValidationMessageFor(x => x.Player_UserName, string.Empty, new { @class = "validate-input hide" })
                                 </div>

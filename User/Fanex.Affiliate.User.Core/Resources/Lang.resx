@@ -2103,9 +2103,6 @@ If you have any question and require any help, please do not hesitate to &lt;a h
   <data name="FaqsTitle" xml:space="preserve">
     <value>Frequently Asked Questions</value>
   </data>
-  <data name="NonDepositedAccount" xml:space="preserve">
-    <value>non-deposited account only</value>
-  </data>
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>Verification your account detail</value>
   </data>

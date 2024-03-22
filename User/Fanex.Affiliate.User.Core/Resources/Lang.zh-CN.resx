@@ -1787,9 +1787,6 @@ B2C合作伙伴团队。&lt;br/&gt;
   <data name="FaqsTitle" xml:space="preserve">
     <value>常见疑问</value>
   </data>
-  <data name="NonDepositedAccount" xml:space="preserve">
-    <value>仅限未存款玩家</value>
-  </data>
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>验证您的帐户详细信息</value>
   </data>
