@@ -6,7 +6,7 @@
 <#
 	var licenseeDbNameList = new System.Collections.Generic.Dictionary<string, string>
 	{
-		{"yb", "DBAFF.Affiliate_YashBet.wsv_aff"},
+		{"yb", "DBAFF.Affiliate_YashBet.wsv_afinet"},
 	};
 
 	var environments = new string[] { "uat", "production", "sit", "local" };
@@ -49,7 +49,7 @@
 			var generateSpNameText = allSpNames.Replace(
 									"DbName=\"\"", "DbName=\"" + this.DbName + "\"");
 			generateSpNameText = generateSpNameText.Replace(
-								"DbName=\"view\"", "DbName=\"" + this.DbName + "View\"");
+								"DbName=\"view\"", "DbName=\"" + this.DbName + "v\"");
 
 			spConfigs = spConfigs.Where (
 					x =>
