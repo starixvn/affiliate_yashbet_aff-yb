@@ -514,11 +514,27 @@ header {
         }
 
         .left-login-side {
-            width: 350px;
-            background: url("../../../../build/styles/Images/home/bg-left-login-mobile.png") no-repeat center center / cover;
+            width: 310px;
+            height: 460px;
+            background: url("../../../../build/styles/Images/home/bg-left-login.png") no-repeat center center / cover;
             padding: 16px 12px 23px;
 
-            .logo-text {
+
+            .title-welcome {
+                background: linear-gradient(90deg, #CD871F 14.07%, #F25E3D 91.85%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 44px;
+                font-weight: 800;
+                line-height: 45px;
+                text-align: center;
+                text-transform: uppercase;
+                margin-bottom: -1rem;
+                margin-top: 14.3rem;
+            }
+
+            .title-text {
                 font-size: 20px;
                 font-weight: 800;
                 line-height: normal;
@@ -627,9 +643,9 @@ header {
             font-style: italic;
             font-weight: 400;
             line-height: normal;
-            color : #AE8F56;
-            display : block;
-            text-align : center;
+            color: #AE8F56;
+            display: block;
+            text-align: center;
         }
 
         .btn {
@@ -1416,9 +1432,13 @@ select.form-control {
         .modal-content {
             .left-login-side {
                 width: 100%;
+                height: auto;
                 background: url("../../../../build/styles/Images/home/bg-left-login.mobile.png") no-repeat center center / cover;
+                .title-welcome {
+                    display: none;
+                }
 
-                .logo-text {
+                .title-text {
                     margin: 20px 0 16px;
                 }
 

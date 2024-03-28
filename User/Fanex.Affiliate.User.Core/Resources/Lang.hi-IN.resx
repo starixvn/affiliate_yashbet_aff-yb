@@ -2024,4 +2024,7 @@ B2C सहयोगी की टीम&lt;br/&gt;
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>अपना खाता विवरण सत्यापित करें</value>
   </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>स्वागत</value>
+  </data>
 </root>

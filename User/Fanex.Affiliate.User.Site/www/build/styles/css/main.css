@@ -1552,8 +1552,10 @@ label.require:after {
   margin: 0 0 10px 0; }
 
 .nounderline {
+  color: #333;
   text-decoration: none; }
-  .nounderline:hover {
+  .nounderline:hover, .nounderline:focus {
+    color: #333;
     text-decoration: none; }
 
 .adv .img-responsive {
@@ -2437,8 +2439,6 @@ input[type="radio"], input[type="checkbox"] {
     /* [3] */
     -ms-overflow-style: -ms-autohiding-scrollbar;
     /* [4] */ }
-  .login-dialog .modal-content .modal-banner {
-    text-align: center; }
   .header-top .logo {
     padding: 1.7rem 0; } }
 
@@ -2450,13 +2450,6 @@ input[type="radio"], input[type="checkbox"] {
 .login-dialog .modal-content {
   background-color: #000;
   padding: 5px; }
-  .login-dialog .modal-content .modal-banner {
-    margin-top: 15px; }
-    .login-dialog .modal-content .modal-banner .logo-text {
-      display: inline-block;
-      margin-left: 15px;
-      margin-right: 15px;
-      color: #fff; }
   .login-dialog .modal-content .login-side {
     border-left: 1px solid #ccc; }
 

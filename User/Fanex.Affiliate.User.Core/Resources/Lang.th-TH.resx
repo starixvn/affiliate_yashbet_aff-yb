@@ -1778,4 +1778,7 @@
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>ยืนยันรายละเอียดบัญชีของท่าน</value>
   </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>ยินดีต้อนรับ</value>
+  </data>
 </root>

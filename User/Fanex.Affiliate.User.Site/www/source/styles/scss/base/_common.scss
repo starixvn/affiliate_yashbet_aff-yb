@@ -39,9 +39,11 @@ label {
 }
 
 .nounderline {
+    color: #333;
     text-decoration: none;
 
-    &:hover {
+    &:hover, &:focus {
+        color: #333;
         text-decoration: none;
     }
 }

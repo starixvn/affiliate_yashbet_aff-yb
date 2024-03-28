@@ -2018,4 +2018,7 @@ Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>Sahkan butiran akaun anda</value>
   </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Selamat</value>
+  </data>
 </root>

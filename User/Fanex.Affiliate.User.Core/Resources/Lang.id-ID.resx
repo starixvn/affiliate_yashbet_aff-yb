@@ -1778,4 +1778,7 @@ Jika Anda memiliki pertanyaan dan memerlukan bantuan sila &lt;a href='{0}'&gt;Hu
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>Verifikasi detail akun Anda</value>
   </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Selamat datang</value>
+  </data>
 </root>

@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    Layout = "~/Views/Shared/_LayoutBeforeLogin.cshtml";
     ViewBag.Title = Lang.Home;
 }
 
@@ -60,10 +60,12 @@
 
     <div class="page-container">
         <div class="block apply-block">
-            <div class="image-apply">
-                <img src="@desktopApplyPath" alt="aplly" class="img-responsive show-pc" />
-                <img src="@mobileApplyPath" alt="aplly" class="img-responsive show-mobile" />
-            </div>
+            <a href="@Model.SignUpLink" class="nounderline">
+                <div class="image-apply">
+                    <img src="@desktopApplyPath" alt="aplly" class="img-responsive show-pc" />
+                    <img src="@mobileApplyPath" alt="aplly" class="img-responsive show-mobile" />
+                </div>
+            </a>
             <div class="text-apply">
                 @SiteFriendlyNameHelper.ReplaceB2C(Lang.AsAOneTwoBetYouWillEarnCommission)
             </div>
@@ -111,32 +113,36 @@
             </div>
             <div class="flex-2-column">
                 <div class="column column-left">
-                    <div class="card-items">
-                        <div class="new-bage">
-                            <img src="~/www/build/styles/Images/icons/star-fill.svg" alt="start" />
-                            <span>@Lang.New</span>
+                    <a class="nounderline @(Model.IsAuthenticated ? string.Empty : "mediaLoginLink")" href="@Model.BannerLink">
+                        <div class="card-items">
+                            <div class="new-bage">
+                                <img src="~/www/build/styles/Images/icons/star-fill.svg" alt="start" />
+                                <span>@Lang.New</span>
+                            </div>
+                            <div class="card-items-header">
+                                @Lang.NewBannerIsNowAvailable
+                            </div>
+                            <div class="card-items-body">
+                                @Lang.YouCanNowLogInYourAffiliateAccount
+                            </div>
                         </div>
-                        <div class="card-items-header">
-                            @Lang.NewBannerIsNowAvailable
-                        </div>
-                        <div class="card-items-body">
-                            @Lang.YouCanNowLogInYourAffiliateAccount
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="column column-right">
-                    <div class="card-items">
-                        <div class="new-bage">
-                            <img src="~/www/build/styles/Images/icons/star-fill.svg" alt="start" />
-                            <span>@Lang.New</span>
+                    <a href="@Url.Content("~/Promotion")" class="nounderline">
+                        <div class="card-items">
+                            <div class="new-bage">
+                                <img src="~/www/build/styles/Images/icons/star-fill.svg" alt="start" />
+                                <span>@Lang.New</span>
+                            </div>
+                            <div class="card-items-header">
+                                @SiteFriendlyNameHelper.ReplaceB2C(Lang.WhatNewInOneTwoBetPromotion)
+                            </div>
+                            <div class="card-items-body">
+                                @SiteFriendlyNameHelper.ReplaceB2C(Lang.GetToKnowHotPromotion)
+                            </div>
                         </div>
-                        <div class="card-items-header">
-                            @SiteFriendlyNameHelper.ReplaceB2C(Lang.WhatNewInOneTwoBetPromotion)
-                        </div>
-                        <div class="card-items-body">
-                            @SiteFriendlyNameHelper.ReplaceB2C(Lang.GetToKnowHotPromotion)
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

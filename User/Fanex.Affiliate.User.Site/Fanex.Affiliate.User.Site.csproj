@@ -199,9 +199,6 @@
       <HintPath>..\..\packages\SharpRaven.2.4.0\lib\net45\SharpRaven.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SimpleInjector.5.3.0\lib\net461\SimpleInjector.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
@@ -562,6 +559,7 @@
     <Content Include="www\build\styles\Images\home\apply\desktop.en-US.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.en-US.png" />
+    <Content Include="www\build\styles\Images\home\bg-left-login.png" />
     <Content Include="www\build\styles\Images\home\box.svg" />
     <Content Include="www\build\styles\Images\home\main-banners\banner-mb-1.jpg" />
     <Content Include="www\build\styles\Images\home\main-banners\banner-pc-1.jpg" />
@@ -789,7 +787,6 @@
     <Content Include="www\build\styles\Images\contact-in-home\line.png" />
     <Content Include="www\build\styles\Images\copy-link.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.mobile.png" />
-    <Content Include="www\build\styles\Images\home\bg-left-login.png" />
     <Content Include="www\build\styles\Images\home\bg-news.mobile.png" />
     <Content Include="www\build\styles\Images\home\bg-news.png" />
     <Content Include="www\build\styles\Images\home\hot-news\left-badge-after.png" />
@@ -962,7 +959,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LayoutAfterLogin.cshtml" />
     <Content Include="Views\Shared\_LayoutBeforeLogin.cshtml" />
-    <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="www\source\styles\scss\components\_flag.scss" />
     <Content Include="www\source\styles\scss\layout\_header.scss" />
     <Content Include="www\source\styles\scss\layout\_footer.scss" />

@@ -2036,4 +2036,7 @@ Mọi thắc mắc và yêu cầu xin vui lòng &lt;a href='{0}'&gt;liên hệ v
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>Xác minh chi tiết tài khoản của bạn</value>
   </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Chào mừng</value>
+  </data>
 </root>

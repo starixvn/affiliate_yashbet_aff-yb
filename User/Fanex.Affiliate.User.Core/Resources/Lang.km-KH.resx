@@ -2036,4 +2036,7 @@
   <data name="VerificationYourAccountDetail" xml:space="preserve">
     <value>ទៀងផ្ទាត់ព័ត៌មានលម្អិតគណនីរបស់អ្នក</value>
   </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>ស្វា​គម​ន៏​ការ​ត្រ</value>
+  </data>
 </root>
