@@ -251,12 +251,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Web.go-yb.production.config">
+    <Content Include="Web.go-yb.production.config">
       <DependentUpon>Web.go-yb.local.config</DependentUpon>
-    </None>
-    <None Include="Web.go-yb.uat.config">
+    </Content>
+    <Content Include="Web.go-yb.uat.config">
       <DependentUpon>Web.go-yb.local.config</DependentUpon>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

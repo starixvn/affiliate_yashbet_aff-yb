@@ -630,18 +630,18 @@
     <Content Include="Configurations\AppSetting\Transform\yb.production.config" />
     <Content Include="Configurations\AppSetting\Transform\yb.sit.config" />
     <Content Include="Configurations\AppSetting\Transform\yb.uat.config" />
-    <None Include="Configurations\Web\Web.user-yb.local.config">
+    <Content Include="Configurations\Web\Web.user-yb.local.config">
       <DependentUpon>Web.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\Web\Web.user-yb.production.config">
+    </Content>
+    <Content Include="Configurations\Web\Web.user-yb.production.config">
       <DependentUpon>Web.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\Web\Web.user-yb.sit.config">
+    </Content>
+    <Content Include="Configurations\Web\Web.user-yb.sit.config">
       <DependentUpon>Web.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\Web\Web.user-yb.uat.config">
+    </Content>
+    <Content Include="Configurations\Web\Web.user-yb.uat.config">
       <DependentUpon>Web.tt</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
