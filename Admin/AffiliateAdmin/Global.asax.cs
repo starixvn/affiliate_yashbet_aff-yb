@@ -13,7 +13,7 @@ namespace AffiliateAdmin
         void Application_Start(object sender, EventArgs e)
         {
             MvcHandler.DisableMvcResponseHeader = true;
-
+            AreaRegistration.RegisterAllAreas();
             IoCConfig.Register();
             SslConfig.RegisterHttpSecurityProtocol(); //Fix abort https request
 
@@ -24,7 +24,6 @@ namespace AffiliateAdmin
                   .WithSqlServer("~/App_Data/SpConfig/SpName.xml")
                   .Run();
 
-            AreaRegistration.RegisterAllAreas();
             LoggingConfig.RegisterSentry();
         }
 

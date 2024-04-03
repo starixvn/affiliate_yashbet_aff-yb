@@ -47,6 +47,10 @@ var AffYBTesting = (function ($) {
                     dataType: "json",
                     cache: false,
                     url: url,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        '__RequestVerificationToken': $('input[name=__RequestVerificationToken]').val()
+                    },
                     success: function success(response) {
                         if (response.Success) {
                             $("#resultContent").html("Send Successfully");

@@ -31,7 +31,7 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         public string AppMailAddress => GetValue("app_mail_address");
 
-        public string SentryDsn => GetValue("Dsn");
+        public string SentryDsn => GetValue("SentryDsn");
 
         public string LoggingCategory => GetValue("LoggingCategory");
 

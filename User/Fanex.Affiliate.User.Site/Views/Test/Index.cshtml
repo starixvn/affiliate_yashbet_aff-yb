@@ -13,6 +13,7 @@
     <link rel="icon" href=@Url.VersionedLink("~/favicon-" + siteName + ".ico")>
 </head>
 <body>
+    @Html.AntiForgeryToken()
     <div>
         <div>
             Format:
@@ -37,7 +38,7 @@
             </label>
             <label for="hiIN">
                 <input name="Language" id="hiIN" type="radio" value="hi-IN" />
-                India
+                Hindi
             </label>
         </div>
 

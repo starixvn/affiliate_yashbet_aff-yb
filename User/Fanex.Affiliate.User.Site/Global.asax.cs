@@ -14,8 +14,8 @@ namespace Fanex.Affiliate.User.Site
     {
         protected void Application_Start()
         {
-            IoCConfig.Register();
             AreaRegistration.RegisterAllAreas();
+            IoCConfig.Register();
 
             UMConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
@@ -32,8 +32,6 @@ namespace Fanex.Affiliate.User.Site
 
             LoggingConfig.RegisterSentry();
         }
-
-
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {

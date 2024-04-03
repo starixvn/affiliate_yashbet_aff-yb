@@ -68,6 +68,7 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult SendEmail(TestCriteria criteria)
         {
             if (!IsValidUser())
