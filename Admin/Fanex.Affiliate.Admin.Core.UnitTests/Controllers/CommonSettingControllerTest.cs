@@ -3,6 +3,7 @@ using Fanex.Affiliate.Admin.Core.DTO.MediaGallery;
 using Fanex.Affiliate.Admin.Core.Extensions;
 using Fanex.Affiliate.Admin.Core.Repository.MediaGallery;
 using Fanex.Affiliate.Admin.Core.Services.UserPanel;
+using Fanex.Affiliate.Admin.Core.UnitTests.TestHelper;
 using Moq;
 using System.Collections.Generic;
 using Xunit;
@@ -54,7 +55,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers
             var fakeLandingPageRepository = landingPageRepository ?? Mock.Of<ILandingPageRepository>();
             var faketrackingStatisticsService = trackingStatisticsService ?? Mock.Of<ITrackingStatisticsService>();
 
-            return new CommonSettingController(fakeLandingPageRepository, faketrackingStatisticsService);
+            return new CommonSettingController(MockingHelper.GetSessionService(), fakeLandingPageRepository, faketrackingStatisticsService);
         }
     }
 }
