@@ -63,6 +63,8 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         string MemberSiteApiPassword { get; }
 
+        int MemberSiteApiTokenCacheTimeOut { get; }
+
         bool IsUseMemberSiteProxy { get; }
     }
 }

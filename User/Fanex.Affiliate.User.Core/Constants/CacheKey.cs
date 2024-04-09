@@ -21,5 +21,7 @@
         public const string SubAffTextCategoryList = "Affiliate.SubAffTextCategoryList";
 
         public const string SubAffBannerCategoryList = "Affiliate.SubAffBannerCategoryList";
+
+        public const string TokenMemoryCache = "Affiliate.YB.TokenMemoryCache";
     }
 }

@@ -17,6 +17,7 @@ using ONEbook.UM.Transport;
 using Refit;
 using System;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Reflection;
 using System.Web.Compilation;
@@ -123,13 +124,14 @@ namespace Fanex.Affiliate.User.Site
         private static void RegisterMemberSiteApi(ContainerBuilder builder)
         {
             var appSetting = AppSetting.Instance;
-
-            var handler = new AuthenticatedHttpClientHandler(appSetting);
+            var cacheService = new MemoryCacheService(new MemoryCache(new MemoryCacheOptions()));
+            var handler = new AuthenticatedHttpClientHandler(appSetting, cacheService);
 
             builder.RegisterInstance(RestService.For<ILicenseeApi>(
                 new HttpClient(handler)
                 {
-                    BaseAddress = new Uri(appSetting.MemberSiteApiUrl)
+                    BaseAddress = new Uri(appSetting.MemberSiteApiUrl),
+                    
                 }));
 
             builder.RegisterInstance(RestService.For<IAccountApi>(

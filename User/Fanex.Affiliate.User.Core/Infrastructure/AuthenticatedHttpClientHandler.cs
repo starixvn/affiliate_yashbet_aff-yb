@@ -1,4 +1,6 @@
 ﻿using Fanex.Affiliate.User.Core.Apis;
+using Fanex.Affiliate.User.Core.Constants;
+using Fanex.Affiliate.User.Core.CoreService;
 using Fanex.Affiliate.User.Core.DTO.Api;
 using Fanex.Affiliate.User.Core.MetalModels.Api;
 using Fanex.Affiliate.User.Core.Utilities;
@@ -6,6 +8,7 @@ using Refit;
 using System;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -15,12 +18,17 @@ namespace Fanex.Affiliate.User.Core.Infrastructure
     {
         private readonly IAppSetting _appSetting;
         private readonly ITokenApi _tokenApi;
+        private readonly IMemoryCacheService _cacheService;
 
-        public AuthenticatedHttpClientHandler(IAppSetting appSetting)
+        public AuthenticatedHttpClientHandler(IAppSetting appSetting, IMemoryCacheService cacheService)
         {
-            _appSetting = appSetting;
+            _appSetting = appSetting ?? throw new ArgumentNullException(nameof(cacheService));
+
             base.Proxy = appSetting.IsUseMemberSiteProxy ? new WebProxy(new Uri(appSetting.MemberSiteProxyUrl)) : null;
+            base.AutomaticDecompression = AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+
             _tokenApi = TokenApiInstance(base.Proxy, appSetting.MemberSiteApiUrl);
+            _cacheService = cacheService ?? throw new ArgumentNullException(nameof(cacheService));
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
@@ -32,19 +40,20 @@ namespace Fanex.Affiliate.User.Core.Infrastructure
 
         private async Task SetJwtToken(HttpRequestMessage request)
         {
-            var tokenInfo = await GetJwtToken();
+            var token = _cacheService.Get<string>(CacheKey.TokenMemoryCache);
 
-            // Use the UriBuilder to parse and modify the url
-            var uriBuilder = new UriBuilder(request.RequestUri);
+            if (token == null)
+            {
+                var tokenInfo = await GetJwtTokenAsync();
+                token = tokenInfo.AccessToken;
 
-            uriBuilder.Query = string.IsNullOrEmpty(uriBuilder.Query)
-                ? $"access_token={tokenInfo.AccessToken}"
-                : $"{uriBuilder.Query.Trim('?')}&access_token={tokenInfo.AccessToken}";
+                _cacheService.Set(CacheKey.TokenMemoryCache, token, _appSetting.MemberSiteApiTokenCacheTimeOut);
+            }
 
-            request.RequestUri = uriBuilder.Uri;
+            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
         }
 
-        private async Task<TokenInfo> GetJwtToken()
+        private async Task<TokenInfo> GetJwtTokenAsync()
         {
             var tokenRequestParam = new TokenRequestParam
             {
@@ -54,8 +63,7 @@ namespace Fanex.Affiliate.User.Core.Infrastructure
 
             try
             {
-                var token = await _tokenApi.GetToken(tokenRequestParam);
-                return token;
+                return await _tokenApi.GetTokenAsync(tokenRequestParam);
 
             } catch (Exception ex)
             {

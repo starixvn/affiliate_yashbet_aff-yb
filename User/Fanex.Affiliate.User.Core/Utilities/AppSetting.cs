@@ -86,6 +86,8 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         public string MemberSiteApiPassword => GetValue("MemberSiteApiPassword");
 
+        public int MemberSiteApiTokenCacheTimeOut => Convert.ToInt32(GetValue("MemberSiteApiTokenCacheTimeOut"));
+
         public bool IsUseMemberSiteProxy => Convert.ToBoolean(GetValue("IsUseProxyToGetMemberSiteApi"));
 
         public string CurrencySymbol => GetValue("CurrencySymbol");

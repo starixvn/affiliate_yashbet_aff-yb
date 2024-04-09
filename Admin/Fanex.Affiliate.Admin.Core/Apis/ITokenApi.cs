@@ -8,6 +8,6 @@ namespace Fanex.Affiliate.Admin.Core.Apis
     public interface ITokenApi
     {
         [Post("/api/Auth")]
-        Task<TokenInfo> GetToken([Body] TokenRequestParam param);
+        Task<TokenInfo> GetTokenAsync([Body] TokenRequestParam param);
     }
 }

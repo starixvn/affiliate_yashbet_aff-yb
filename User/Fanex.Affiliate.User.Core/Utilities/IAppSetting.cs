@@ -79,6 +79,8 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         string MemberSiteApiPassword { get; }
 
+        int MemberSiteApiTokenCacheTimeOut { get; }
+
         bool IsUseMemberSiteProxy { get; }
 
         string CurrencySymbol { get; }
