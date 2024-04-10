@@ -53,9 +53,9 @@
                 let currentScreenTop = lastScreenTop;
 
                 for (let menu of leftMenus) {
-                    const offsetMenuTop = menu.offsetParent.offsetTop + menu.offsetTop;
+                    const offsetMenuTop = menu.offsetTop + (menu.offsetParent && menu.offsetParent.offsetTop);
 
-                    if (window.pageYOffset >= offsetMenuTop - 20) {
+                    if (window.scrollY >= offsetMenuTop - 20) {
                         activeMenuId = menu.getAttribute("id");
                         currentScreenTop = offsetMenuTop;
                     }

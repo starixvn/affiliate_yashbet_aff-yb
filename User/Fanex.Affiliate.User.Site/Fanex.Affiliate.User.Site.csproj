@@ -555,8 +555,10 @@
     <Content Include="www\build\styles\Images\email\banner.en-US.png" />
     <Content Include="www\build\styles\Images\email\banner.bn-BD.png" />
     <Content Include="www\build\styles\Images\email\banner.hi_IN.png" />
+    <Content Include="www\build\styles\Images\home\apply\desktop.bn-BD.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.en-US.png" />
+    <Content Include="www\build\styles\Images\home\apply\mobile.bn-BD.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.en-US.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.png" />

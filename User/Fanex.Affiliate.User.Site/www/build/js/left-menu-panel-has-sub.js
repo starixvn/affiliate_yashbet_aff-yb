@@ -61,9 +61,9 @@ var LeftMenuPanel = (function ($) {
                     for (var _iterator = leftMenus[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                         var menu = _step.value;
 
-                        var offsetMenuTop = menu.offsetParent.offsetTop + menu.offsetTop;
+                        var offsetMenuTop = menu.offsetTop + (menu.offsetParent && menu.offsetParent.offsetTop);
 
-                        if (window.pageYOffset >= offsetMenuTop - 20) {
+                        if (window.scrollY >= offsetMenuTop - 20) {
                             activeMenuId = menu.getAttribute("id");
                             currentScreenTop = offsetMenuTop;
                         }

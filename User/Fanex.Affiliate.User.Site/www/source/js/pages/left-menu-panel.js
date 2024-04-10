@@ -46,7 +46,7 @@
                 for (let section of sections) {
                     const sectionTop = section.offsetTop;
 
-                    if (window.pageYOffset >= sectionTop - (window.innerHeight * 1 / 5)) {
+                    if (window.scrollY >= sectionTop - (window.innerHeight * 1 / 5)) {
                         activeMenuId = section.getAttribute("id");
                         currentScreenTop = sectionTop;
                     }
