@@ -230,10 +230,8 @@
     <Compile Include="Helpers\Common.cs" />
     <Compile Include="Helpers\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Impl\GeneralAffiliateInfoService.cs" />
     <Compile Include="Services\Impl\TrackingSystemService.cs" />
     <Compile Include="Services\Impl\UnderMaintenanceService.cs" />
-    <Compile Include="Services\Interface\IGeneralAffiliateInfoService.cs" />
     <Compile Include="Services\Interface\ITrackingSystemService.cs" />
     <Compile Include="Services\Interface\IUnderMaintenanceService.cs" />
   </ItemGroup>

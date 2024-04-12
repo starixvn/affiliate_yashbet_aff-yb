@@ -22,7 +22,6 @@ namespace Fanex.Affiliate.Link.Controllers
         #region Services
 
         private readonly ITrackingSystemService _trackingSystemService;
-        private readonly IGeneralAffiliateInfoService _generalAffiliateInfoService;
 
         private const string LinkIsInvalidMessage = "This link does not exists. Please contact administrator!";
         private const string LinkIsIncorrectMessage = "This link is incorrect. Please contact administrator!";
@@ -34,7 +33,6 @@ namespace Fanex.Affiliate.Link.Controllers
         public HomeController()
         {
             _trackingSystemService = new TrackingSystemService();
-            _generalAffiliateInfoService = new GeneralAffiliateInfoService();
         }
 
         #endregion Constructor
@@ -60,10 +58,9 @@ namespace Fanex.Affiliate.Link.Controllers
         {
             try
             {
-                var affInfo = _generalAffiliateInfoService.GetGeneralAffiliateInfo(affCode: affCode);
                 var affDomain = GetFullAffDomain(GetOriginalUrl(), pageId);
 
-                return InsertAffiliate(affInfo.affId, affInfo.affCode, pageId, lang, affDomain);
+                return InsertAffiliate(affCode, pageId, lang, affDomain);
             }
             catch (Exception ex)
             {
@@ -73,7 +70,7 @@ namespace Fanex.Affiliate.Link.Controllers
             }
         }
 
-        private ActionResult InsertAffiliate(int affId, string affCode, string pageId, string lang, string affDomain)
+        private ActionResult InsertAffiliate(string affCode, string pageId, string lang, string affDomain)
         {
             if (Request.Url != null)
             {
@@ -91,7 +88,7 @@ namespace Fanex.Affiliate.Link.Controllers
                 var command = new TrackingSystemCommand
                 {
                     AffDomain = affDomain,
-                    AffId = affId,
+                    AffCode = affCode,
                     PageCode = pageId,
                     LanguageCode = lang,
                     DeviceType = GetDeviceType(),
@@ -157,17 +154,15 @@ namespace Fanex.Affiliate.Link.Controllers
         private string HandleRedirectUrl(string redirectUrl, string pageId, string languageCode, string affCode)
         {
             var redirectPattern = ConfigurationManager.AppSettings[$"Redirect_{pageId.ToLowerInvariant()}_pattern"];
+
             if (!string.IsNullOrEmpty(redirectPattern))
             {
                 var redirectUri = new Uri(redirectUrl);
                 var pathAndQueryString = redirectPattern.Replace("#language#", languageCode).Replace("#affCode#", affCode);
                 return $"{redirectUri.Scheme}://{redirectUri.Host}{pathAndQueryString}";
             }
-            else
-            {
-                var url = redirectUrl.Split('?');
-                return $"{url[0]}?affCode={affCode}";
-            }
+
+            return redirectUrl;
         }
 
         private string GetAllHeader(NameValueCollection headers)

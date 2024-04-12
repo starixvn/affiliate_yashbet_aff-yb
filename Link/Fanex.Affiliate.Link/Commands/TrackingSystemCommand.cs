@@ -7,7 +7,7 @@
     /// </summary>
     public class TrackingSystemCommand : NonQueryCommand
     {
-        public int AffId { get; set; }
+        public string AffCode { get; set; }
 
         public string AffDomain { get; set; }
 
