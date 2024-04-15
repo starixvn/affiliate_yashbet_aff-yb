@@ -228,8 +228,10 @@
     <Compile Include="BusinessService\AuthService.cs" />
     <Compile Include="BusinessService\CaptchaService.cs" />
     <Compile Include="BusinessService\CommissionReportService.cs" />
+    <Compile Include="BusinessService\CurrencyService.cs" />
     <Compile Include="BusinessService\ICaptchaService.cs" />
     <Compile Include="BusinessService\ICommissionReportService.cs" />
+    <Compile Include="BusinessService\ICurrencyService.cs" />
     <Compile Include="BusinessService\IPlayerTransferBalanceService.cs" />
     <Compile Include="BusinessService\IQrCodeGeneratorService.cs" />
     <Compile Include="BusinessService\ISecurityQuestionService.cs" />

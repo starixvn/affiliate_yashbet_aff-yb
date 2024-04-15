@@ -21,26 +21,26 @@
         private readonly IAppSetting _appSetting;
         private readonly ISessionService _sessionService;
         private readonly IStatementHistoryRepository _statementHistoryRepository;
-        private readonly ICurrencyRepository _currencyRepository;
+        private readonly ICurrencyService _currencyService;
 
         public StatementHistoryController(ISessionService sessionService,
             ILanguageService languageService,
             IAppSetting appSetting,
             IStatementHistoryRepository statementHistoryRepository,
-            ICurrencyRepository currencyRepository)
+            ICurrencyService currencyService)
             : base(sessionService, languageService)
         {
             _appSetting = appSetting;
             _sessionService = sessionService;
             _statementHistoryRepository = statementHistoryRepository;
-            _currencyRepository = currencyRepository;
+            _currencyService = currencyService;
         }
 
         [HttpGet]
         [AjaxOnly]
         public ActionResult Index(string baseCurrency)
         {
-            var baseCurrencies = _currencyRepository.GetBaseCurrencyList();
+            var baseCurrencies = _currencyService.GetBaseCurrencyList();
             var isClickBreadcumb = false;
             var baseCurrencyId = SessionService.UserSession.BaseCurrency;
 

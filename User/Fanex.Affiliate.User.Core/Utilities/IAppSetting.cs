@@ -83,6 +83,8 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         bool IsUseMemberSiteProxy { get; }
 
+        bool IsShowUusBaseCurrency { get; }
+
         string CurrencySymbol { get; }
 
         string CurrencyLabel { get; }

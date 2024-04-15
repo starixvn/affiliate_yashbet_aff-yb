@@ -90,6 +90,8 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         public bool IsUseMemberSiteProxy => Convert.ToBoolean(GetValue("IsUseProxyToGetMemberSiteApi"));
 
+        public bool IsShowUusBaseCurrency => Convert.ToBoolean(GetValue("IsShowUusBaseCurrency"));
+
         public string CurrencySymbol => GetValue("CurrencySymbol");
 
         public string CurrencyLabel => GetValue("CurrencyLabel");

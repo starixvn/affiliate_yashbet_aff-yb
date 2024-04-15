@@ -110,6 +110,7 @@ namespace Fanex.Affiliate.User.Site
             builder.RegisterType<SecurityQuestionRepository>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<SecurityQuestionService>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<AccountOverviewRepository>().AsImplementedInterfaces().InstancePerLifetimeScope();
+            builder.RegisterType<CurrencyService>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<CurrencyRepository>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<PlayerTransferBalanceService>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<PlayerTransferBalanceRespository>().AsImplementedInterfaces().InstancePerLifetimeScope();

@@ -155,14 +155,14 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
              IStatementHistoryRepository statementHistoryRepository = null,
              ISessionService sessionService = null,
              ILanguageService languageService = null,
-             ICurrencyRepository currencyRepository = null)
+             ICurrencyService currencyService = null)
         {
             var appSetting = Mock.Of<IAppSetting>();
             var fakeSessionService = sessionService ?? MockingHelper.GetSessionService();
             var fakeLanguageService = languageService ?? Mock.Of<ILanguageService>();
-            var fakeCurrencyRepository = currencyRepository ?? Mock.Of<ICurrencyRepository>();
+            var fakeCurrencyService = currencyService ?? Mock.Of<ICurrencyService>();
             var fakeStatementHistoryRepository = statementHistoryRepository ?? Mock.Of<IStatementHistoryRepository>();
-            var controller = new DailyEarningController(appSetting, fakeSessionService, fakeLanguageService, fakeStatementHistoryRepository, fakeCurrencyRepository);
+            var controller = new DailyEarningController(appSetting, fakeSessionService, fakeLanguageService, fakeStatementHistoryRepository, fakeCurrencyService);
 
             return MockingHelper.FakeController(controller) as DailyEarningController;
         }

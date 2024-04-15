@@ -22,7 +22,7 @@
             productList: @Html.Raw(Json.Encode(Model.ProductList)),
             currencyList: @Html.Raw(Json.Encode(Model.CurrencyList)),
             baseCurrencyList: @Html.Raw(Json.Encode(Model.BaseCurrencyList)),
-            isProduction: '@(appSetting.Environment)'.toLowerCase() === 'production',
+            isProduction: false, //'@(appSetting.Environment)'.toLowerCase() === 'production',
             customerStatistics: {}
         }
     </script>

@@ -22,6 +22,8 @@
 
         public const string SubAffBannerCategoryList = "Affiliate.SubAffBannerCategoryList";
 
+        public const string BaseCurrencyList = "Affiliate.YB.BaseCurrencyList";
+
         public const string TokenMemoryCache = "Affiliate.YB.TokenMemoryCache";
     }
 }

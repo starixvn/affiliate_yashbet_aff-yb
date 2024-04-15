@@ -21,7 +21,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
         private readonly ISessionService SessionService;
         private readonly ILanguageService LanguageService;
         private readonly ICommissionReportService CommissionService;
-        private readonly ICurrencyRepository CurrencyRepo;
+        private readonly ICurrencyService CurrencyRepo;
 
         public RevenueReportControllerTest()
         {
@@ -29,7 +29,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
             SessionService = NSubtituteMockingHelper.FakeSessionService();
             LanguageService = Substitute.For<ILanguageService>();
             CommissionService = Substitute.For<ICommissionReportService>();
-            CurrencyRepo = Substitute.For<ICurrencyRepository>();
+            CurrencyRepo = Substitute.For<ICurrencyService>();
         }
 
 

@@ -15,18 +15,18 @@ namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
     {
         private readonly IAppSetting _appSetting;
         private readonly IStatementHistoryRepository _statementHistoryRepository;
-        private readonly ICurrencyRepository _currencyRepository;
+        private readonly ICurrencyService _currencyService;
 
         public SubAffEarningController(
             IAppSetting appSetting,
             ISessionService sessionService,
             ILanguageService languageService,
             IStatementHistoryRepository statementHistoryRepository,
-            ICurrencyRepository currencyRepository) : base(sessionService, languageService)
+            ICurrencyService currencyService) : base(sessionService, languageService)
         {
             _appSetting = appSetting;
             _statementHistoryRepository = statementHistoryRepository;
-            _currencyRepository = currencyRepository;
+            _currencyService = currencyService;
         }
 
         [AjaxOnly]
@@ -54,7 +54,7 @@ namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
 
             ViewBag.MonthDate = param.MonthDate;
             ViewBag.Breadcrumb = breadcrumb;
-            ViewBag.BaseCurrencies = _currencyRepository.GetBaseCurrencyList();
+            ViewBag.BaseCurrencies = _currencyService.GetBaseCurrencyList();
             ViewBag.SelectedBaseCurrency = param.BaseCurrency;
             var path = param.IsOnlyContent
                 ? "~/Views/UserPanel/StatementHistory/StatementHistoryPartial/_SubAffEarningContent.cshtml"

@@ -24,7 +24,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
         private readonly ILanguageService LanguageService;
         private readonly IAppSetting AppSetting;
         private readonly IStatementHistoryRepository Repo;
-        private readonly ICurrencyRepository CurrencyRepo;
+        private readonly ICurrencyService CurrencyService;
 
         public StatementHistoryControllerTest()
         {
@@ -32,7 +32,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
             LanguageService = NSubtituteMockingHelper.FakeLanguageService();
             AppSetting = Substitute.For<IAppSetting>();
             Repo = Substitute.For<IStatementHistoryRepository>();
-            CurrencyRepo = Substitute.For<ICurrencyRepository>();
+            CurrencyService = Substitute.For<ICurrencyService>();
         }
 
         [Theory]
@@ -40,7 +40,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
         [InlineData("abc")]
         public void Index_WhenCallWithNoParm_ReturnCorrectViewWithDefaultValue(string baseCurrency)
         {
-            CurrencyRepo.GetBaseCurrencyList().Returns(new List<Currency> { new Currency { ExchangeId = 123, Code = "USD" } });
+            CurrencyService.GetBaseCurrencyList().Returns(new List<Currency> { new Currency { ExchangeId = 123, Code = "USD" } });
             var defaultParam = new StatementHistoryParam
             {
                 AffId = SessionService.UserSession.AffId,
@@ -245,6 +245,6 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
         }
 
         private StatementHistoryController CreateController()
-            => new StatementHistoryController(SessionService, LanguageService, AppSetting, Repo, CurrencyRepo);
+            => new StatementHistoryController(SessionService, LanguageService, AppSetting, Repo, CurrencyService);
     }
 }
