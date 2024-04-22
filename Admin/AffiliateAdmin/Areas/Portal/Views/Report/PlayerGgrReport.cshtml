@@ -9,7 +9,7 @@
             productList: @Html.Raw(Json.Encode(Model.ProductList)),
             today: '@DateTimeOffset.Now.ToOffset(new TimeSpan(8, 0, 0)).ToString("MM/dd/yyyy")',
             baseCurrencyList: @Html.Raw(Json.Encode(Model.BaseCurrencyList)),
-            isProduction: false, //'@(AppSetting.Instance.Environment)'.toLowerCase() === 'production',
+            isProduction: '@(AppSetting.Instance.Environment)'.toLowerCase() === 'production',
         }
     </script>
     <script type="text/javascript" src="@Url.VersionedLink("~/Areas/Portal/www/dist/js/pages/report.js")"></script>

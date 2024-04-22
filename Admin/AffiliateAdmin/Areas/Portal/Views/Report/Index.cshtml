@@ -17,7 +17,7 @@
             currencyList: @Html.Raw(Json.Encode(Model.CurrencyList)),
             baseCurrencyList: @Html.Raw(Json.Encode(Model.BaseCurrencyList)),
             paymentCurrencyList: @Html.Raw(Json.Encode(Model.PaymentCurrencyList)),
-            isProduction: false, //'@(appSetting.Environment)'.toLowerCase() === 'production',
+            isProduction: '@(appSetting.Environment)'.toLowerCase() === 'production',
             commGroupList: @Html.Raw(Json.Encode(Model.CommGroupList)),
         }
     </script>
