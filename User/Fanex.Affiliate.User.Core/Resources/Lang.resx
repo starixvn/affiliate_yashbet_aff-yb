@@ -1714,7 +1714,7 @@ If you have any question and require any help, please do not hesitate to &lt;a h
     <value>Rebate</value>
   </data>
   <data name="PleaseDirectAnyComment" xml:space="preserve">
-    <value>Please direct any comments or questions to following contact points:</value>
+    <value>Please direct any comments or questions to following contact point:</value>
   </data>
   <data name="AConfirmationEmail" xml:space="preserve">
     <value>A Confirmation Email is sending to your Email.</value>
