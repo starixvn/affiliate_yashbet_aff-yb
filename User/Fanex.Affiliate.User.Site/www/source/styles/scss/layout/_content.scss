@@ -326,7 +326,7 @@ $height-hotnew: 30px;
 
 // --------------------------------- image responsive ------------------- //
 .adv-contact {
-    background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.desktop.png");
+    background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.desktop.png");
     position: relative;
     z-index: 1;
 
@@ -344,7 +344,7 @@ $height-hotnew: 30px;
 }
 /*
 .adv-contact {
-    background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.webp");
+    background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.webp");
 }*/
 
 .adv-contact {
@@ -427,7 +427,7 @@ $height-hotnew: 30px;
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
     .adv-contact {
         padding: 6px 27% 18px 18px;
-        background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.tablet2.png");
+        background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.tablet2.png");
 
         .text-1 {
             margin-top: 13px;
@@ -449,7 +449,7 @@ $height-hotnew: 30px;
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
     .adv-contact {
         padding: 17px 27% 26px 26px;
-        background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.tablet.png");
+        background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.tablet.png");
 
         .text-3 {
             padding-right: 130px;
@@ -476,7 +476,7 @@ $height-hotnew: 30px;
 
     .adv-contact {
         padding: 7px 31% 7px 7px;
-        background-image: url("../../../../www/build/styles/Images/contact-in-home/bg_contact.mobile.png");
+        background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.mobile.png");
 
         .text-1 {
             margin-top: 0;

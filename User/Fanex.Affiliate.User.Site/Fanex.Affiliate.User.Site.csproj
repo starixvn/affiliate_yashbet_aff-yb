@@ -556,11 +556,11 @@
     <Content Include="www\build\styles\Images\email\banner.bn-BD.png" />
     <Content Include="www\build\styles\Images\email\banner.hi_IN.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.bn-BD.png" />
-    <Content Include="www\build\styles\Images\home\apply\desktop.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.en-US.png" />
+    <Content Include="www\build\styles\Images\home\apply\desktop.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.bn-BD.png" />
-    <Content Include="www\build\styles\Images\home\apply\mobile.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\mobile.en-US.png" />
+    <Content Include="www\build\styles\Images\home\apply\mobile.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.png" />
     <Content Include="www\build\styles\Images\home\box.svg" />
     <Content Include="www\build\styles\Images\home\main-banners\banner-mb-1.jpg" />
@@ -599,8 +599,8 @@
     <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.bn-BD.jpg" />
     <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.bn-BD.jpg" />
     <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.hi-IN.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.bn-BD.png" />
+    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.hi-IN.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.en-US.png" />
     <Content Include="www\build\styles\Images\themes\yb.svg" />
     <Content Include="www\build\styles\Images\titlebg-left-mb.svg" />
@@ -782,11 +782,11 @@
       <DependentUpon>font.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\Images\404-illus.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\bg_contact.desktop.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\bg_contact.mobile.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\bg_contact.tablet.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\bg_contact.tablet2.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\line.png" />
+    <Content Include="www\build\styles\Images\home\contacts\bg_contact.desktop.png" />
+    <Content Include="www\build\styles\Images\home\contacts\bg_contact.mobile.png" />
+    <Content Include="www\build\styles\Images\home\contacts\bg_contact.tablet.png" />
+    <Content Include="www\build\styles\Images\home\contacts\bg_contact.tablet2.png" />
+    <Content Include="www\build\styles\Images\home\contacts\line.png" />
     <Content Include="www\build\styles\Images\copy-link.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.mobile.png" />
     <Content Include="www\build\styles\Images\home\bg-news.mobile.png" />
