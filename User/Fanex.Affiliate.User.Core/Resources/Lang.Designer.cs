@@ -3571,6 +3571,15 @@ namespace Fanex.Affiliate.User.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Page not found!.
+        /// </summary>
+        public static string PageNotFound {
+            get {
+                return ResourceManager.GetString("PageNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pakistan.
         /// </summary>
         public static string Pakistan {

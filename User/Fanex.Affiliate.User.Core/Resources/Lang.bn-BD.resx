@@ -2040,4 +2040,7 @@ B2C Affiliates এ দল&lt;br/&gt;
   <data name="Welcome" xml:space="preserve">
     <value>স্বাগতম</value>
   </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>পৃষ্ঠা খুঁজে পাওয়া যায়নি!</value>
+  </data>
 </root>

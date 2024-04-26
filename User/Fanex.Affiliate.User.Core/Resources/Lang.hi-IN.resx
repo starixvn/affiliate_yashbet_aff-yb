@@ -2027,4 +2027,7 @@ B2C सहयोगी की टीम&lt;br/&gt;
   <data name="Welcome" xml:space="preserve">
     <value>स्वागत</value>
   </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>पृष्ठ नहीं मिला!</value>
+  </data>
 </root>

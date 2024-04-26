@@ -2112,4 +2112,7 @@ If you have any question and require any help, please do not hesitate to &lt;a h
   <data name="Welcome" xml:space="preserve">
     <value>Welcome</value>
   </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Page not found!</value>
+  </data>
 </root>
