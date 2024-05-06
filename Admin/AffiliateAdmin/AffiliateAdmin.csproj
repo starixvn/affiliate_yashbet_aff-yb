@@ -285,7 +285,7 @@
     <Content Include="Areas\Portal\www\config-utils\layoutEntry.js" />
     <Content Include="Areas\Portal\www\dist\imgs\email\banner.bn-BD.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\banner.en-US.png" />
-    <Content Include="Areas\Portal\www\dist\imgs\email\banner.hi_IN.png" />
+    <Content Include="Areas\Portal\www\dist\imgs\email\banner.hi-IN.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\banner.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\bgMain.png" />
     <Content Include="Areas\Portal\www\dist\imgs\email\button.png" />

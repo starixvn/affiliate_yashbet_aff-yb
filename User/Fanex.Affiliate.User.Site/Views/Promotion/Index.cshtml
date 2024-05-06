@@ -14,15 +14,15 @@
 @{
     var bannerSrc = Url.Content($"~/www/build/styles/images/promotion-banners/promotion");
 
-    var orgBannerSrc = $"{bannerSrc}.desktop.{Model.CurrentLanguage}.jpg?v=176179";
-    var mobileBannerSrc = $"{bannerSrc}.mobile.{Model.CurrentLanguage}.jpg?v=176179";
+    var orgBannerSrc = $"{bannerSrc}.desktop.{Model.CurrentLanguage}.png?v=176179";
+    var mobileBannerSrc = $"{bannerSrc}.mobile.{Model.CurrentLanguage}.png?v=176179";
 }
 
 <div class="banner">
     <a href="~/Signup/Index">
         <picture>
-            <source media="(max-width:480px)" srcset="@(mobileBannerSrc)" type="image/jpeg" />
-            <source srcset="@(orgBannerSrc)" type="image/jpeg" />
+            <source media="(max-width:480px)" srcset="@(mobileBannerSrc)" type="image/png" />
+            <source srcset="@(orgBannerSrc)" type="image/png" />
             <img class="img-item img-responsive" src="@(orgBannerSrc)" alt="@Lang.Promotion" />
         </picture>
     </a>

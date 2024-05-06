@@ -552,9 +552,9 @@
     <Content Include="www\build\styles\Images\contact-us\telegram.svg" />
     <Content Include="www\build\styles\Images\contact-us\vector.svg" />
     <Content Include="www\build\styles\Images\contact-us\whatsapp.svg" />
-    <Content Include="www\build\styles\Images\email\banner.en-US.png" />
     <Content Include="www\build\styles\Images\email\banner.bn-BD.png" />
-    <Content Include="www\build\styles\Images\email\banner.hi_IN.png" />
+    <Content Include="www\build\styles\Images\email\banner.en-US.png" />
+    <Content Include="www\build\styles\Images\email\banner.hi-IN.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.bn-BD.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.en-US.png" />
     <Content Include="www\build\styles\Images\home\apply\desktop.hi-IN.png" />
@@ -594,11 +594,12 @@
     <Content Include="www\build\styles\Images\products\product.mobile.en-US.jpg" />
     <Content Include="www\build\styles\Images\products\product.desktop.bn-BD.jpg" />
     <Content Include="www\build\styles\Images\products\product.desktop.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.en-US.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.hi-IN.jpg" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.bn-BD.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.en-US.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.hi-IN.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.bn-BD.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.en-US.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.hi-IN.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.bn-BD.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.hi-IN.png" />
     <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.en-US.png" />
@@ -804,7 +805,6 @@
     <Content Include="www\build\styles\Images\icons\dropdown-white.svg" />
     <Content Include="www\build\styles\Images\icons\dropdown.svg" />
     <Content Include="www\build\styles\Images\products\product.desktop.en-US.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.en-US.jpg" />
     <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />
     <Content Include="www\build\styles\Images\themes\yb.png" />
     <Content Include="www\source\js\layout-after-login.js" />
