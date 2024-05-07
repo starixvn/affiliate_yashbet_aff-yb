@@ -3218,26 +3218,26 @@ input[type=radio], input[type=checkbox] {
   background: linear-gradient(90deg, #D1B37D 1.78%, #FFEBD0 100%);
   font-weight: 700;
 }
-.left-panel .menu .navbar-nav li .sub-menu {
+.left-panel .menu .navbar-nav li .sub-menu-group {
   list-style: initial;
   padding-left: 50px;
 }
-.left-panel .menu .navbar-nav li .sub-menu li a {
+.left-panel .menu .navbar-nav li .sub-menu-group li a {
   display: block;
   text-decoration: none;
   padding: 8px 0;
 }
-.left-panel .menu .navbar-nav li .sub-menu li a.active {
+.left-panel .menu .navbar-nav li .sub-menu-group li a.active {
   font-weight: 700;
   background: none;
 }
-.left-panel .menu .navbar-nav li .sub-menu li a.active:after {
+.left-panel .menu .navbar-nav li .sub-menu-group li a.active:after {
   display: none;
 }
-.left-panel .menu .navbar-nav li .sub-menu li a:hover {
+.left-panel .menu .navbar-nav li .sub-menu-group li a:hover {
   background: none;
 }
-.left-panel .menu .navbar-nav li .sub-menu li:last-child {
+.left-panel .menu .navbar-nav li .sub-menu-group li:last-child {
   margin-bottom: 0;
 }
 .left-panel .menu .navbar-nav li:first-child a {

@@ -23,12 +23,12 @@
                 e.preventDefault();
                 $(this).blur();
 
-                $(this).next("ul.sub-menu").stop().animate({
+                $(this).next("ul.sub-menu-group").stop().animate({
                     height: "toggle", opacity: "toggle"
                 }, 600);
             });
 
-            $('ul.sub-menu a.left-menu-item').click(function (e) {
+            $('a.sub-menu').click(function (e) {
                 window.removeEventListener("scroll", _me.handleActiveLeftMenuByScroll);
                 e.preventDefault();
 
@@ -84,10 +84,10 @@
             const leftMenuNumbers = leftMenuList.length;
 
             if (leftMenuNumbers) {
-                $(`${preClasss}-left-panel-nav a.left-menu-item.active`).removeClass("active");
+                $(`${preClasss}-left-panel-nav a.left-menu-item.active`).removeClass(activeClassName);
 
                 activeLeftMenu.addClass(activeClassName);
-                activeLeftMenu.parents("ul.sub-menu").prev("a.parent-menu").addClass("active");
+                activeLeftMenu.parents("ul.sub-menu-group").prev("a.parent-menu").addClass(activeClassName);
 
                 const activeIndex = leftMenuList.index(activeLeftMenu);
                 const maxScrollTop = ($(`${preClasss}-left-panel-nav`).outerHeight() + $(`${preClasss}-left-panel-menu .heading-left-panel`).outerHeight()) - $(`${preClasss}-left-panel-menu`).outerHeight();

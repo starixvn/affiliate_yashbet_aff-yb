@@ -40,5 +40,60 @@ namespace Fanex.Affiliate.User.Core.Constants
             { "MarketingAndTracking", Lang.MarketingAndTracking },
             { "RevenueSharePayment", Lang.RevenueSharePayment }
         };
+
+        public static IDictionary<string, PrarentMenu> ProductMenuList => new Dictionary<string, PrarentMenu>
+        {
+            { "SportbookProducts", SportbookProductsMenu },
+            { "CasinoProducts", CasinoProductsMenu }
+        };
+
+        private static readonly PrarentMenu SportbookProductsMenu = new PrarentMenu
+        {
+            Title = Lang.SportbookProducts,
+            SubMenuList = new Dictionary<string, string>
+            {
+                { "Sportsbook", Lang.Sportsbook },
+                { "VirtualSports", Lang.VirtualSports },
+                { "NumberGame", Lang.NumberGame },
+                { "RngKeno", Lang.RngKeno }
+            }
+        };
+
+        private static readonly PrarentMenu CasinoProductsMenu = new PrarentMenu
+        {
+            Title = Lang.CasinoProducts,
+            SubMenuList = new Dictionary<string, string>
+            {
+                { "AsiaGaming", Lang.AsiaGaming },
+                { "AdvantPlay", Lang.AdvantPlay },
+                { "AeSexy", Lang.AeSexy },
+                { "Allbet", Lang.Allbet },
+                { "AstroTech", Lang.AstroTech },
+                { "Cq9", Lang.Cq9 },
+                { "DreamGaming", Lang.DreamGaming },
+                { "Ebet", Lang.Ebet },
+                { "GamePlayInteractive", Lang.GamePlayInteractive },
+                { "Habanero", Lang.Habanero },
+                { "ISoftBetPragmaticPlay", Lang.ISoftBetPragmaticPlay },
+                { "Jili", Lang.Jili },
+                { "Joker", Lang.Joker },
+                { "MicroGaming", Lang.MicroGaming },
+                { "N2Live", Lang.N2Live },
+                { "Playtech", Lang.Playtech },
+                { "RedTiger", Lang.RedTiger },
+                { "SaGaming", Lang.SaGaming },
+                { "SabaCasino", Lang.SabaCasino },
+                { "SpadeGaming", Lang.SpadeGaming },
+                { "WmCasino", Lang.WmCasino },
+                { "YggDrasil", Lang.YggDrasil }
+            }
+        };
+    }
+
+    public class PrarentMenu
+    {
+        public string Title { get; set; }
+
+        public IDictionary<string, string> SubMenuList { get; set; }
     }
 }
