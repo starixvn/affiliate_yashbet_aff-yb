@@ -565,7 +565,7 @@ header {
 
             .btn-signup {
                 margin: 0 auto;
-                max-width: 150px;
+                max-width: 200px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -574,9 +574,7 @@ header {
                 color: #967435;
                 font-size: 20px;
                 font-weight: 700;
-                line-height: 1;
                 text-transform: lowercase !important;
-                height: 44px;
                 padding: 6px 8px 6px 8px;
 
                 svg {
@@ -649,18 +647,14 @@ header {
         }
 
         .btn {
-            height: 38px;
-            line-height: 38px;
-
             &.btn-login-mobile {
-                margin-top: 5px;
+                margin: 0 auto;
                 padding: 0 !important;
                 background: #F42A41;
                 color: #fff;
                 border: 1px solid #F42A41;
                 font-size: 20px;
                 font-weight: 700;
-                line-height: normal;
                 text-transform: capitalize !important;
                 display: flex;
                 align-items: center;

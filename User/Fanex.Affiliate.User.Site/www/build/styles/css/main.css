@@ -3103,9 +3103,8 @@ input[type=radio], input[type=checkbox] {
   display: inline-block;
 }
 .login-dialog .modal-body .btn {
-  margin-top: 10px;
-  height: 28px;
-  line-height: 28px;
+  height: 44px;
+  line-height: 44px;
 }
 .login-dialog .modal-body .captcha-input {
   display: inline-block;
