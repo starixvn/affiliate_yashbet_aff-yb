@@ -23,6 +23,9 @@ namespace Fanex.Affiliate.Link.Controllers
 
         private readonly ITrackingSystemService _trackingSystemService;
 
+        private const string BENGALI_SHORTED_CODE = "bn";
+        private const string BENGALI_COUNTRY_CODE = "bd";
+
         private const string LinkIsInvalidMessage = "This link does not exists. Please contact administrator!";
         private const string LinkIsIncorrectMessage = "This link is incorrect. Please contact administrator!";
 
@@ -153,16 +156,22 @@ namespace Fanex.Affiliate.Link.Controllers
 
         private string HandleRedirectUrl(string redirectUrl, string pageId, string languageCode, string affCode)
         {
+            var customLanguageCode = languageCode;
+            if (string.Equals(BENGALI_SHORTED_CODE, languageCode, StringComparison.OrdinalIgnoreCase))
+            {
+                customLanguageCode = BENGALI_COUNTRY_CODE;
+            }
+
             var redirectPattern = ConfigurationManager.AppSettings[$"Redirect_{pageId.ToLowerInvariant()}_pattern"];
 
             if (!string.IsNullOrEmpty(redirectPattern))
             {
                 var redirectUri = new Uri(redirectUrl);
-                var pathAndQueryString = redirectPattern.Replace("#language#", languageCode).Replace("#affCode#", affCode);
+                var pathAndQueryString = redirectPattern.Replace("#language#", customLanguageCode).Replace("#affCode#", affCode);
                 return $"{redirectUri.Scheme}://{redirectUri.Host}{pathAndQueryString}";
             }
 
-            return redirectUrl;
+            return redirectUrl.Replace($"/{languageCode}/", $"/{customLanguageCode}/");
         }
 
         private string GetAllHeader(NameValueCollection headers)
