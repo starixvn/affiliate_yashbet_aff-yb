@@ -1,4 +1,6 @@
-﻿namespace Fanex.Affiliate.Admin.Core.DTO.Email
+﻿using Fanex.Affiliate.Admin.Core.Extensions;
+
+namespace Fanex.Affiliate.Admin.Core.DTO.Email
 {
     public class PaymentRequestUpdateEmail : EmailBase
     {
@@ -13,5 +15,7 @@
         public bool IsApproved { get; set; }
 
         public string DefaultCurrency { get; set; }
+
+        public string FormatedAmount => Amount.FormatDecimal();
     }
 }

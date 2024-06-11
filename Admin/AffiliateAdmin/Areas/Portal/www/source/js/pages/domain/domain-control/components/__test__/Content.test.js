@@ -130,7 +130,7 @@ describe('domain control - components - Content ', () => {
         dataRow.find('Button').at(1).simulate('click');
 
         expect(props.setShouldResetScrollPosition).toHaveBeenCalledWith(false);
-        expect(wrapper.setState).toHaveBeenCalledWith({ message: `Are you sure you want to delete this domain setting?`, isConfirmPopup: true, selectedDomainId: 89 });
+        expect(wrapper.setState).toHaveBeenCalledWith({ message: `Are you sure you want to delete this domain control?`, isConfirmPopup: true, selectedDomainId: 89 });
     });
 
     it('_handleEditDomain - should be called when click edit button', () => {

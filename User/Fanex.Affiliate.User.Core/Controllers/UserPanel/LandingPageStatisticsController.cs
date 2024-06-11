@@ -1,9 +1,5 @@
 ﻿namespace Fanex.Affiliate.User.Core.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web.Mvc;
     using Constants;
     using DTO.UserPanel;
     using Fanex.Affiliate.User.Core.BusinessService;
@@ -11,6 +7,10 @@
     using Fanex.Affiliate.User.Core.Repository.UserPanel;
     using Filters;
     using MetalModels.UserPanel;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
     using Utilities;
     using ViewModels.UserPanel.Statistics;
 
@@ -52,7 +52,7 @@
 
             var viewModel = new LandingPageStatisticsViewModel
             {
-                LanguageList = MarketingHelper.GetLanguageList(LanguageService.GetLanguageList(SessionService.IsInternal), userSession.PreferredLanguage),
+                LanguageList = MarketingHelper.GetLanguageList(LanguageService.GetLanguageList(SessionService.IsInternal)),
                 MemberSitePageList = MarketingService.GetLandingPageList(isInternal),
                 FromDate = landingPageParam.FromDate,
                 ToDate = landingPageParam.ToDate,
@@ -90,10 +90,11 @@
         private IEnumerable<LandingPageStatistics> GetLandingPageStatisticsData(LandingPageStatisticsParam landingPageParam)
         {
             var dataList = StatisticsRepository.GetLandingPageStatistics(landingPageParam);
+            var languageList = LanguageService.GetLanguageList();
 
             foreach (var item in dataList)
             {
-                var language = LanguageService.GetLanguageList().FirstOrDefault(p => p.ShortedCode == item.LanguageCode);
+                var language = languageList.FirstOrDefault(p => p.ShortedCode == item.LanguageCode);
 
                 item.LanguageName = language == null ? item.LanguageCode : language.NativeName;
             }

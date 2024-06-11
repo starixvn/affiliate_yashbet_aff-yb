@@ -151,9 +151,6 @@
       <HintPath>..\..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SimpleInjector.5.3.0\lib\net461\SimpleInjector.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -226,12 +223,15 @@
   <ItemGroup>
     <Compile Include="Apis\IAccountApi.cs" />
     <Compile Include="Apis\ILicenseeApi.cs" />
+    <Compile Include="Apis\ITokenApi.cs" />
     <Compile Include="BusinessService\AccountService.cs" />
     <Compile Include="BusinessService\AuthService.cs" />
     <Compile Include="BusinessService\CaptchaService.cs" />
     <Compile Include="BusinessService\CommissionReportService.cs" />
+    <Compile Include="BusinessService\CurrencyService.cs" />
     <Compile Include="BusinessService\ICaptchaService.cs" />
     <Compile Include="BusinessService\ICommissionReportService.cs" />
+    <Compile Include="BusinessService\ICurrencyService.cs" />
     <Compile Include="BusinessService\IPlayerTransferBalanceService.cs" />
     <Compile Include="BusinessService\IQrCodeGeneratorService.cs" />
     <Compile Include="BusinessService\ISecurityQuestionService.cs" />
@@ -253,8 +253,8 @@
     <Compile Include="BusinessService\VerificationService.cs" />
     <Compile Include="Constants\Apis\ApiConstant.cs" />
     <Compile Include="Constants\Apis\CustomerStatus.cs" />
+    <Compile Include="Constants\AppContact.cs" />
     <Compile Include="Constants\CalculatedType.cs" />
-    <Compile Include="Constants\CommGroupName.cs" />
     <Compile Include="Constants\CommissionType.cs" />
     <Compile Include="Constants\ControllerName.cs" />
     <Compile Include="Constants\ErrCodes.cs" />
@@ -269,6 +269,8 @@
     <Compile Include="DTO\Api\AccountApiResult.cs" />
     <Compile Include="DTO\Api\ApiResultInfo.cs" />
     <Compile Include="DTO\Api\CustomerBalanceInfo.cs" />
+    <Compile Include="DTO\Api\TokenInfo.cs" />
+    <Compile Include="MetalModels\Api\TokenRequestParam.cs" />
     <Compile Include="DTO\UserPanel\MarketingPageStatistics.cs" />
     <Compile Include="DTO\UserPanel\PlayerTransferBalance\PlayerTransferBalanceHistoryInfo.cs" />
     <Compile Include="DTO\UserPanel\PlayerTransferBalance\PlayerTransferBalanceHistoryResult.cs" />
@@ -297,7 +299,6 @@
     <Compile Include="Controllers\UserPanel\SubAffLinkController.cs" />
     <Compile Include="Controllers\UserPanel\SubAffMediaGalleryController.cs" />
     <Compile Include="Controllers\UserPanel\SummaryController.cs" />
-    <Compile Include="Controllers\UserPanel\TrackingStatisticsController.cs" />
     <Compile Include="Controllers\UserPanel\AffiliateLinkController.cs" />
     <Compile Include="Controllers\UserPanel\MediaGalleryController.cs" />
     <Compile Include="Controllers\UserPanel\MarketingController.cs" />
@@ -423,7 +424,6 @@
     <Compile Include="DTO\UserPanel\ReferrerStatistics.cs" />
     <Compile Include="DTO\UserPanel\StatementHistory.cs" />
     <Compile Include="DTO\UserPanel\StatisticsBase.cs" />
-    <Compile Include="DTO\UserPanel\TrackingStatistics.cs" />
     <Compile Include="DTO\UserSession.cs" />
     <Compile Include="DTO\ResultInfo.cs" />
     <Compile Include="DTO\VerificationAccount\VerificationInfo.cs" />
@@ -482,7 +482,6 @@
     <Compile Include="MetalModels\UserPanel\StatisticsBySiteBaseParam.cs" />
     <Compile Include="MetalModels\UserPanel\StatisticsDetailBySiteParam.cs" />
     <Compile Include="MetalModels\UserPanel\StatisticsOverviewParam.cs" />
-    <Compile Include="MetalModels\UserPanel\TrackingStatisticsDetailParam.cs" />
     <Compile Include="MetalModels\UserSignUpParam.cs" />
     <Compile Include="MetalModels\VerificationAccountParam.cs" />
     <Compile Include="MetalModels\VerificationOtpParam.cs" />
@@ -593,7 +592,6 @@
     <Compile Include="ViewModels\UserPanel\Statistics\LandingPageStatisticsViewModel.cs" />
     <Compile Include="ViewModels\UserPanel\Statistics\MarketingPageStatisticsViewModel.cs" />
     <Compile Include="ViewModels\UserPanel\Statistics\ReferrerStatisticsViewModel.cs" />
-    <Compile Include="ViewModels\UserPanel\Statistics\TrackingStatisticsViewModel.cs" />
     <Compile Include="ViewModels\UserPanel\SubAffComViewModel.cs" />
     <Compile Include="ViewModels\UserPanel\TransMoneyRequestViewModel.cs" />
     <Compile Include="ViewModels\VerificationAccountViewModel.cs" />

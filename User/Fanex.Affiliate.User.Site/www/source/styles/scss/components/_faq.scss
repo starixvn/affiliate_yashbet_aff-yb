@@ -1,0 +1,95 @@
+﻿.info-question {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .title {
+        border-radius: 5px;
+        background: #FFF1DE;
+        padding: 5px 0 5px 40px;
+        position: relative;
+
+        .text {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: normal;
+            color: #967435;
+
+            @include TableAndMobile {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .button-toggle {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        cursor: pointer;
+
+        @include TableAndMobile {
+            top: 8px;
+        }
+
+        &.open {
+            &:before {
+                display: none;
+            }
+        }
+
+        &:before, &:after {
+            content: '';
+            display: block;
+            background: #333;
+            position: absolute;
+        }
+
+        &:after {
+            height: 2px;
+            width: 12px;
+            top: 10px;
+            left: 5px;
+        }
+
+        &:before {
+            height: 12px;
+            width: 2px;
+            top: 5px;
+            left: 10px;
+        }
+    }
+
+    .body-result {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 12px;
+        margin-left: 8px;
+        padding-left: 12px;
+        border-left: 1px solid #E5C589;
+
+        ul, ol {
+            margin-left: 8px;
+            margin-bottom: 0;
+
+            li {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.after-login {
+    .info-question {
+        .body-result {
+            margin-left: 0;
+            padding-left: 0;
+            border-left: none;
+        }
+    }
+}

@@ -1,11 +1,5 @@
 ﻿namespace Fanex.Affiliate.User.Core.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using System.Web;
-    using System.Web.Mvc;
     using BusinessService;
     using CoreService;
     using DTO;
@@ -13,6 +7,12 @@
     using MetalModels.Email;
     using Newtonsoft.Json;
     using Resources;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using System.Web;
+    using System.Web.Mvc;
     using Utilities;
 
     public class SignupController : BaseController
@@ -121,7 +121,7 @@
                     AffParentCode = affParentCode
                 };
 
-                var mailContact = _appSetting.GetMailContactByLanguageCode(signUpParam.PreferredLanguage ?? SessionService.CurrentLanguage);
+                var mailContact = _appSetting.MailContact;
                 var emailParam = new EmailBaseParam
                 {
                     MailContact = mailContact,

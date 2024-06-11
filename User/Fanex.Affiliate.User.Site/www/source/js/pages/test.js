@@ -1,4 +1,4 @@
-﻿var AffB2CTesting = (function ($) {
+﻿var AffYBTesting = (function ($) {
     function getUrl(actionName) {
         var rootAction = $("#rootAction").val();
         var format = $('input[name=Format]:checked').val() || "cshtml";
@@ -9,7 +9,7 @@
 
     return {
         initialize: function () {
-            AffB2CTesting.initEvent();
+            AffYBTesting.initEvent();
         },
 
         initEvent: function () {
@@ -45,6 +45,10 @@
                     dataType: "json",
                     cache: false,
                     url: url,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        '__RequestVerificationToken': $('input[name=__RequestVerificationToken]').val()
+                    },
                     success: function (response) {
                         if (response.Success) {
                             $("#resultContent").html("Send Successfully");
@@ -60,4 +64,4 @@
     };
 })(jQuery);
 
-AffB2CTesting.initialize();
+AffYBTesting.initialize();

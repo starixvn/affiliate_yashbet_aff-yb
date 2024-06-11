@@ -26,7 +26,7 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         public string JsVersion => GetValue("JsVersion");
 
-        public string PromotionYashBetLink => GetValue("PromotionYashBetLink");
+        public string PromotionYBLink => GetValue("PromotionYBLink");
 
         public bool IsEuroSite => AllowedAffiliateTypes.Any(t => t == AffiliateType.European.ToString("D"));
 
@@ -34,17 +34,11 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         public string BannerDomain => GetValue("BannerDomain");
 
-        public string MediaScriptUrl => GetValue("MediaScriptUrl");
-
         public string MailContact => GetValue("MailContact");
-
-        public string GetMailContactByLanguageCode(string languageCode) => GetValue("MailContact" + SystemLanguage.GetUppercaseShortedCode(languageCode)) ?? MailContact;
 
         public string AppMailId => GetValue("app_mail_id");
 
         public string AppMailAddress => GetValue("app_mail_address");
-
-        public string GetAppMailIdByLanguageCode(string languageCode) => GetValue("app_mail_id_" + SystemLanguage.GetUppercaseShortedCode(languageCode)) ?? AppMailId;
 
         public string MailCc => GetValue("MailCc");
 
@@ -88,9 +82,15 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         public string MemberSiteProxyUrl => GetValue("MemberSiteProxyUrl");
 
-        public string MemberSiteApiAuthenticationKey => GetValue("MemberSiteApiAuthenticationKey");
+        public string MemberSiteApiUsername => GetValue("MemberSiteApiUsername");
+
+        public string MemberSiteApiPassword => GetValue("MemberSiteApiPassword");
+
+        public int MemberSiteApiTokenCacheTimeOut => Convert.ToInt32(GetValue("MemberSiteApiTokenCacheTimeOut"));
 
         public bool IsUseMemberSiteProxy => Convert.ToBoolean(GetValue("IsUseProxyToGetMemberSiteApi"));
+
+        public bool IsShowUusBaseCurrency => Convert.ToBoolean(GetValue("IsShowUusBaseCurrency"));
 
         public string CurrencySymbol => GetValue("CurrencySymbol");
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Fanex.Affiliate.User.Core.Constants;
+﻿using Fanex.Affiliate.User.Core.Constants;
 using Fanex.Affiliate.User.Core.CoreService;
 using Fanex.Affiliate.User.Core.DTO;
 using Fanex.Affiliate.User.Core.DTO.UserPanel;
@@ -15,6 +11,10 @@ using Fanex.Affiliate.User.Core.Repository.UserPanel;
 using Fanex.Affiliate.User.Core.Resources;
 using Fanex.Affiliate.User.Core.Utilities;
 using Fanex.Affiliate.User.Core.ViewModels.UserPanel.Marketing;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace Fanex.Affiliate.User.Core.BusinessService
 {
@@ -151,25 +151,6 @@ namespace Fanex.Affiliate.User.Core.BusinessService
             return bannerList;
         }
 
-        public IEnumerable<MarketingItem> GetTextList(MarketingTextParam textParam)
-        {
-            var textList = _marketingRepository.GetTextList(textParam);
-
-            foreach (var text in textList)
-            {
-                text.Message = HttpContext.Current.Server.HtmlDecode(text.Message.Replace("\r\n", "<br/>").Replace("\n", "<br/>"));
-                text.ScriptSrc = $"{textParam.ScriptUrl}?textId={text.TextId}&targetId={textParam.TargetId}";
-                var language = _languageService.GetLanguageList().FirstOrDefault(l => l.EnglishName.MatchWith(text.Language));
-
-                if (language != null)
-                {
-                    text.RedirectLink = GenerateLink(textParam, language.ShortedCode);
-                }
-            }
-
-            return textList;
-        }
-
         public IEnumerable<LandingPage> GetLandingPageList(bool isInternal = false, AffiliateLinkType linkType = AffiliateLinkType.AffiliateLink)
         {
             var isTargetToMember = linkType == AffiliateLinkType.AffiliateLink;
@@ -278,7 +259,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
 
             var result = template.Replace("{scheme}", scheme)
                                 .Replace("{domain}", selectedDomain.DomainName)
-                                .Replace("{custid}", linkParam.AffCode.ToString())
+                                .Replace("{affCode}", linkParam.AffCode.ToString())
                                 .Replace("{target}", HttpUtility.UrlPathEncode(linkParam.SelectedPage))
                                 .Replace("{lang}", shortedLanguageCode)
                                 .Replace("{channel}", linkParam.SelectedChannel);

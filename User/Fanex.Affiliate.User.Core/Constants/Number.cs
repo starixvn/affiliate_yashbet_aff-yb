@@ -8,9 +8,13 @@
 
         public const int Two = 2;
 
+        public const int Six = 6;
+
         public const int Ten = 10;
 
-        public const int Fourteen = 14;
+        public const int Eleven = 11;
+
+        public const int Twelve = 12;
 
         public const int Fifteen = 15;
 

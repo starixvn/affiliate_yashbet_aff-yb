@@ -1,27 +1,40 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    Layout = "~/Views/Shared/_LayoutBeforeLogin.cshtml";
 }
 
 @section styles {
     <link rel="stylesheet" href="@Url.RenderLink("~/www/build/styles/css/notify.css")" />
 }
 
-<div class="main-content">
-    <div class="content">
-        <div class="page-notify page-notify-error">
-            <img src="~/www/source/styles/Images/notify/Error.png" alt="Error" class="img-responsive" />
-            <div class="content-page">
-                <h2>Sorry! The System Is Not Available</h2>
-                <ul>
-                    <li>
-                        We are sorry. The system is currently unavailable. Please try again later or contact administrator.
-                    </li>
-                    <li>
-                        Chúng tôi thành thật xin lỗi ,vì hệ thống đang tiến hành bảo trì.
-                        Xin vui lòng thử lại trong giây lát sau hoặc liên hệ hỗ trợ trực tuyến
-                    </li>
-                </ul>
-            </div>
+<div class="page-container">
+    <div class="page-notify page-notify-error">
+        <div class="img-top-notify">
+            <img src="~/www/build/styles/Images/notify/error.svg" alt="Error" class="img-responsive" />
+        </div>
+        <div class="content-page">
+            <ul class="cont">
+                <li>
+                    <span class="img-lang"><img src="~/www/build/styles/Images/icons/flags/England.png" alt="England" /></span>
+                    <span class="text-lang">
+                        We are sorry. The system is currently unavailable.<br />
+                        Please try again later or contact administrator.
+                    </span>
+                </li>
+                @*<li>
+                    <span class="img-lang"><img src="~/www/build/styles/Images/icons/flags/Hindi.png" alt="Hindi" /></span>
+                    <span class="text-lang">
+                        हमें खेद है। सिस्टम वर्तमान में अनुपलब्ध है<br />
+                        कृपया बाद में पुन: प्रयास करें या व्यवस्थापक से संपर्क करें
+                    </span>
+                </li>*@
+                <li>
+                    <span class="img-lang"><img src="~/www/build/styles/Images/icons/flags/Bangladeshi.png" alt="Bangladesh" /></span>
+                    <span class="text-lang">
+                        আমরা দুঃখিত। সিস্টেমটি বর্তমানে অনুপলভ্য<br />
+                        অনুগ্রহ করে পরে আবার চেষ্টা করুন বা প্রশাসকের সাথে যোগাযোগ করুন।
+                    </span>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

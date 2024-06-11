@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
+﻿
 namespace Fanex.Affiliate.Admin.Core.Configurations
 {
     public interface IAppSetting
@@ -8,21 +7,13 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         string MailContact { get; }
 
-        string GetMailContactByShortedLanguageCode(string shortedLanguageCode);
-
         string AppMailId { get; }
 
         string AppMailAddress { get; }
 
-        string GetAppMailIdByShortedLanguageCode(string shortedLanguageCode);
+        string InternalAffiliateUserSiteURL { get; }
 
-        string InternalEuropeanAffiliateUrl { get; }
-
-        string InternalAsianAffiliateUrl { get; }
-
-        string EuropeanAffSiteUrl { get; }
-
-        string AsianAffSiteUrl { get; }
+        string AffUserSiteURL { get; }
 
         string Environment { get; }
 
@@ -68,13 +59,12 @@ namespace Fanex.Affiliate.Admin.Core.Configurations
 
         string MemberSiteProxyUrl { get; }
 
-        string MemberSiteApiAuthenticationKey { get; }
+        string MemberSiteApiUsername { get; }
+
+        string MemberSiteApiPassword { get; }
+
+        int MemberSiteApiTokenCacheTimeOut { get; }
 
         bool IsUseMemberSiteProxy { get; }
-
-        string AffSiteUrl { get; }
-
-        [SuppressMessage("Major Code Smell", "S3995:URI return values should not be strings", Justification = "Reviewed. Suppression is OK here.")]
-        string GetAffSiteUrlByShortedLanguageCode(string shortedLanguageCode);
     }
 }

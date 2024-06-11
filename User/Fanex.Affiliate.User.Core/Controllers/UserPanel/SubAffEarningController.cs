@@ -1,12 +1,12 @@
-﻿using System.Linq;
-using System.Web.Mvc;
-using Fanex.Affiliate.User.Core.BusinessService;
+﻿using Fanex.Affiliate.User.Core.BusinessService;
 using Fanex.Affiliate.User.Core.CoreService;
 using Fanex.Affiliate.User.Core.Filters;
 using Fanex.Affiliate.User.Core.MetalModels.UserPanel;
 using Fanex.Affiliate.User.Core.Repository.UserPanel;
 using Fanex.Affiliate.User.Core.Utilities;
 using Fanex.Affiliate.User.Core.ViewModels.UserPanel;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
 {
@@ -15,18 +15,18 @@ namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
     {
         private readonly IAppSetting _appSetting;
         private readonly IStatementHistoryRepository _statementHistoryRepository;
-        private readonly ICurrencyRepository _currencyRepository;
+        private readonly ICurrencyService _currencyService;
 
         public SubAffEarningController(
             IAppSetting appSetting,
             ISessionService sessionService,
             ILanguageService languageService,
             IStatementHistoryRepository statementHistoryRepository,
-            ICurrencyRepository currencyRepository) : base(sessionService, languageService)
+            ICurrencyService currencyService) : base(sessionService, languageService)
         {
             _appSetting = appSetting;
             _statementHistoryRepository = statementHistoryRepository;
-            _currencyRepository = currencyRepository;
+            _currencyService = currencyService;
         }
 
         [AjaxOnly]
@@ -54,11 +54,11 @@ namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
 
             ViewBag.MonthDate = param.MonthDate;
             ViewBag.Breadcrumb = breadcrumb;
-            ViewBag.BaseCurrencies = _currencyRepository.GetBaseCurrencyList();
+            ViewBag.BaseCurrencies = _currencyService.GetBaseCurrencyList();
             ViewBag.SelectedBaseCurrency = param.BaseCurrency;
             var path = param.IsOnlyContent
-                ? "UserPanel/StatementHistory/StatementHistoryPartial/_SubAffEarningContent"
-                : "UserPanel/StatementHistory/SubAffEarning";
+                ? "~/Views/UserPanel/StatementHistory/StatementHistoryPartial/_SubAffEarningContent.cshtml"
+                : "~/Views/UserPanel/StatementHistory/SubAffEarning.cshtml";
             return View(path, vms);
         }
     }

@@ -1,13 +1,23 @@
-﻿.overview-table {
+﻿.wraper-table {
+    border-radius: 10px;
+    border: 1px solid #E5C589;
+    overflow: hidden;
+}
+
+.player-detail-pager {
+    .page-container {
+        border: none;
+        border-top: 1px solid #D1B37D;
+    }
+}
+
+.overview-table {
     position: relative;
     width: 100%;
     z-index: 1;
     margin: auto;
-
-    @include TableAndMobile {
-        overflow: auto;
-        max-height: 600px;
-    }
+    overflow: auto;
+    max-height: 600px;
 
     &.reset-top {
         thead {
@@ -25,11 +35,11 @@
         margin: auto;
         border-collapse: separate;
         border-spacing: 0;
-        border-right: 1px solid #C7C7C7;
         font-size: 14px;
+        border-right: 0.25px solid #d1b37d;
 
         @include Mobile {
-            font-size: 12px;
+            font-size: 16px;
         }
 
         @include Tablet {
@@ -38,7 +48,7 @@
 
         th {
             @include TableAndMobile {
-                font-size: 13px;
+                font-size: 16px;
             }
         }
 
@@ -50,6 +60,13 @@
                     z-index: 100;
                     top: 0;
                     border-right: none;
+                    border-top: none;
+                    border-left: 1px solid #D1B37D;
+                    border-bottom: none;
+
+                    &:first-child {
+                        border-left: none;
+                    }
 
                     @include TableAndMobile {
                         top: 0;
@@ -62,25 +79,38 @@
                     position: -webkit-sticky;
                     position: sticky;
                     z-index: 100;
-                    top: 50px !important;
-                    border-right: none;
+                    top: 48px !important;
                     font-weight: 700;
+                    border-left: 1px solid #D1B37D;
+                    border-top: none;
+                    border-right: none;
+
+                    &:first-child {
+                        border-left: none;
+                    }
 
                     @include TableAndMobile {
-                        top: 57px !important;
+                        /*top: 57px !important;*/
+                        top: 75px !important;
                     }
                 }
             }
         }
 
-        td {
-            padding: 5px 10px;
-            vertical-align: top;
-            border-top: none !important;
-            border-right: none !important;
+        tr {
+            td {
+                padding: 5px 10px;
+                vertical-align: top;
+                border-right: none;
+                border-bottom: none;
 
-            a {
-                font-size: 13px;
+                &:first-child {
+                    border-left: none;
+                }
+
+                a {
+                    font-size: 13px;
+                }
             }
         }
 
@@ -89,6 +119,10 @@
                 &.market-name {
                     font-size: 13px;
                     text-align: center;
+
+                    @include Mobile {
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -96,6 +130,31 @@
         .no-info {
             background: #FFF3ED;
         }
+    }
+
+    .Processing {
+        color: #FF7D04;
+        font-weight: 700;
+    }
+
+    .Completed {
+        color: #27C3A7;
+        font-weight: 700;
+    }
+
+    .Approved {
+        color: #6BA86A;
+        font-weight: 700;
+    }
+
+    .Cancelled {
+        color: #F42A41;
+        font-weight: 700;
+    }
+
+    .Rejected {
+        color: #9840C1;
+        font-weight: 700;
     }
 }
 
@@ -178,13 +237,6 @@
     tr {
         td {
             white-space: unset;
-
-            &:last-child {
-                a {
-                    display: block;
-                    text-align: center;
-                }
-            }
         }
     }
 }

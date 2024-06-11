@@ -883,7 +883,12 @@
     <value>แบบฟอร์มการสมัคร</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>ขอบคุณที่ส่งใบสมัครของคุณมายัง พันธมิตร B2C &lt;br/&gt;&lt;br/&gt; เมื่อทางเราได้พิจารณาเนื้อหาเวบไซด์และข้อมูล ว่าเหมาะสม เราจะทำการแจ้งคุณถึงสถานะ &lt;br/&gt;&lt;br/&gt; ภายใน 5 วันทำการ และคุณจะสามารถเข้าใช้ระบบพันธมิตรของเราได้คะ &lt;br/&gt;&lt;br/&gt; ด้วยความนับถือ &lt;br/&gt;&lt;br/&gt; ทีมงานพันธมิตร B2C.&lt;br/&gt;&lt;br/&gt;ถ้าคุณมีคำถามหรือต้องการความช่วยเหลือ กรุณา&lt;a href='{0}'&gt;อย่าลังเลที่จะติดต่อเรา&lt;/a&gt;.</value>
+    <value>ขอบคุณที่ส่งใบสมัครของคุณมายัง พันธมิตร B2C&lt;br/&gt;
+เมื่อทางเราได้พิจารณาเนื้อหาเวบไซด์และข้อมูล ว่าเหมาะสม เราจะทำการแจ้งคุณถึงสถานะ &lt;br/&gt;
+ภายใน 5 วันทำการ และคุณจะสามารถเข้าใช้ระบบพันธมิตรของเราได้คะ &lt;br/&gt;
+ด้วยความนับถือ &lt;br/&gt;
+ทีมงานพันธมิตร B2C.&lt;br/&gt;
+ถ้าคุณมีคำถามหรือต้องการความช่วยเหลือ กรุณา&lt;a href='{0}'&gt;อย่าลังเลที่จะติดต่อเรา&lt;/a&gt;.</value>
   </data>
   <data name="Rejected" xml:space="preserve">
     <value>ถูกปฏิเสธแล้ว</value>
@@ -904,7 +909,7 @@
     <value>การขอจ่ายเงิน เสร็จสมบูรณ์แล้ว</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>กรุณากรอกทุกช่องที่มีเครื่องหมาย &lt;font color="red"&gt;*&lt;/font&gt; ระบุไว้</value>
+    <value>กรุณากรอกทุกช่องที่มีเครื่องหมาย &lt;span class="red-color"&gt;*&lt;/span&gt; ระบุไว้</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>ลบข้อความ</value>
@@ -1203,7 +1208,7 @@
   <data name="TermAndCondition" xml:space="preserve">
     <value>ข้อกำหนดและเงื่อนไข</value>
   </data>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>โครงสร้างรายได้ส่วนแบ่ง</value>
   </data>
   <data name="Product" xml:space="preserve">
@@ -1227,7 +1232,7 @@
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>ข่าวสารพันธมิตรของ B2C</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
+  <data name="New" xml:space="preserve">
     <value>ข่าวสาร</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
@@ -1306,7 +1311,7 @@
     <value>สมัครเข้าร่วมโปรแกรมพันธมิตร โปรโมทและรับรายได้สูงสุด {0} ทุกเดือน!</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>สมัครตอนนี้!</value>
+    <value>สมัครตอนนี้</value>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
     <value>ยินดีต้อนรับเข้าสู่โปรแกรมพันธมิตรค่ะ!</value>
@@ -1421,9 +1426,6 @@
   </data>
   <data name="YourRevenueShare" xml:space="preserve">
     <value>ส่วนแบ่งรายได้ของคุณ</value>
-  </data>
-  <data name="SupportTime" xml:space="preserve">
-    <value>Working Time:&lt;br/&gt;Monday - Saturday | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7</value>
   </data>
   <data name="AConfirmationEmail" xml:space="preserve">
     <value>อีเมลยืนยันกำลังส่งไปยังอีเมลของคุณ</value>
@@ -1766,5 +1768,17 @@
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>ลืม?</value>
+  </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>SOALAN LAZIM</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>ยืนยันรายละเอียดบัญชีของท่าน</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>ยินดีต้อนรับ</value>
   </data>
 </root>

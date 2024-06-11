@@ -108,9 +108,9 @@ exports[`player ggr report - GridData  should render correctly 1`] = `
         >
           <td
             className="freeze-column freeze-column-0"
-            title="N88AFF001"
+            title="YBAFF001"
           >
-            N88AFF001
+            YBAFF001
           </td>
           <td
             className="freeze-column freeze-column-1"

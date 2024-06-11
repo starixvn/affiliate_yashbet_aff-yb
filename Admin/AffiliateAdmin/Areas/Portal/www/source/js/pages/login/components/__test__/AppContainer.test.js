@@ -8,18 +8,10 @@ import * as utils from '../../../../modules/utils';
 describe('Login - components - AppContainer', () => {
     beforeEach(() => {
         window.initialState = jest.fn();
-        window.initialState.licenseeName = 'Nova88';
+        window.initialState.licenseeName = 'YashBet';
     })
 
     it('render correctly', () => {
-        const result = shallow(<AppContainer />);
-        result.setState({ year: '2019' });
-
-        expect(result).toMatchSnapshot();
-    });
-
-    it('render correctly with is not Nova88', () => {
-        window.initialState.licenseeName = 'Bwing';
         const result = shallow(<AppContainer />);
         result.setState({ year: '2019' });
 
@@ -54,15 +46,6 @@ describe('Login - components - AppContainer', () => {
         wrapper.find('Input[type="password"][name="password"][id="password"]').simulate('change', event);
 
         expect(wrapper.setState).toHaveBeenCalledWith({ password: '123' });
-    });
-
-    it('_handleChangeMode - should call setState when change mode', () => {
-        const wrapper = shallow(<AppContainer />);
-        wrapper.setState = jest.fn();
-
-        wrapper.find('input[type="checkbox"][id="switch"]').simulate('change');
-
-        expect(wrapper.setState).toHaveBeenCalledWith({ isLightMode: false });
     });
 
     it('handlePressEnter - should call handleSubmit when press Enter in userName input', () => {

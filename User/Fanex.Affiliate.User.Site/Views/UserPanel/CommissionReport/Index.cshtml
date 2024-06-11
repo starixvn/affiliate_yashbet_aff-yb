@@ -9,39 +9,45 @@
 @model bool
 
 @Html.InlineStyles("~/www/build/styles/css/commissionreport.css")
-<div class="sub-content">
-    <div class="page-title">
-        <span class="text">@Lang.CommissionReport</span>
+<div class="wraper-block">
+    <div class="group-title">
+        <h2 class="title-block">
+            <span class="text">@Lang.CommissionReport</span>
+        </h2>
     </div>
+    <form class="form">
+        <div class="group-control-form">
+            <div class="group-input">
+                <label class="custom-label">@Lang.Year</label>
+                <select class="form-input form-select" id="year">
 
-    <div class="info-group">
-        <div class="group-control-select-table">
-            <form class="form-inline">
-                <div class="form-group">
-                    <label>@Lang.Year:</label>
-                    <select class="form-control" id="year">
-
-                        @for (var i = currentYear; i >= 2020; i--)
-                        {
-                            var temp = i == currentYear ? "selected='selected'" : string.Empty;
-                            <option @temp value="@i">@i</option>
-                        }
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>@Lang.BaseCurrency:</label>
-                    <select class="form-control" id="base-currency">
-                        @foreach (var currency in baseCurrencies)
-                        {
-                            var selected = currency.ExchangeId == defaultBaseCurrency ? "selected='selected'" : string.Empty;
-                            <option @selected value="@currency.ExchangeId">@currency.Code</option>
-                        }
-                    </select>
-                </div>
-                <button type="button" class="btn btn-submit" id="btnSubmit">@Lang.Submit</button>
-            </form>
+                    @for (var i = currentYear; i >= 2020; i--)
+                    {
+                        var temp = i == currentYear ? "selected='selected'" : string.Empty;
+                        <option @temp value="@i">@i</option>
+                    }
+                </select>
+            </div>
+            <div class="group-input">
+                <label class="custom-label">@Lang.BaseCurrency:</label>
+                <select class="form-input form-select" id="base-currency">
+                    @foreach (var currency in baseCurrencies)
+                    {
+                        var selected = currency.ExchangeId == defaultBaseCurrency ? "selected='selected'" : string.Empty;
+                        <option @selected value="@currency.ExchangeId">@currency.Code</option>
+                    }
+                </select>
+            </div>
+            <button type="submit" class="custom-button" id="btnSubmit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M1.29657 6.2097C0.948574 6.0937 0.945241 5.90637 1.30324 5.78703L14.0279 1.5457C14.3806 1.42837 14.5826 1.6257 14.4839 1.97103L10.8479 14.695C10.7479 15.0477 10.5446 15.0597 10.3952 14.725L7.99924 9.33303L11.9992 3.9997L6.66591 7.9997L1.29657 6.2097Z" fill="white" />
+                </svg>
+                @Lang.Submit
+            </button>
         </div>
-        <div class="report-container">
+    </form>
+    <div class="report-container">
+        <div class="wraper-table">
             <div class="commission-report table overview-table">
                 <table id="dataTable">
                     <thead>
@@ -183,7 +189,6 @@
             </div>
         </div>
     </div>
-
     <script>
         var langResource = {
             noInfo: '@Lang.NoInfo',
@@ -195,3 +200,4 @@
 
     <script src="@Url.RenderLink("~/www/build/js/pages/commission-report.js")"></script>
 </div>
+

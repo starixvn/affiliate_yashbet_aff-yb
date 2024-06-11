@@ -19,7 +19,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
     {
         private readonly IAppSetting AppSetting;
         private readonly ISessionService SessionService;
-        private readonly ICurrencyRepository CurrencyRepository;
+        private readonly ICurrencyService CurrencyService;
         private readonly ILanguageService LanguageService;
         private readonly IStatementHistoryRepository StatementHistoryRepository;
 
@@ -29,7 +29,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
             SessionService = NSubtituteMockingHelper.FakeSessionService();
             LanguageService = NSubtituteMockingHelper.FakeLanguageService();
             StatementHistoryRepository = Substitute.For<IStatementHistoryRepository>();
-            CurrencyRepository = Substitute.For<ICurrencyRepository>();
+            CurrencyService = Substitute.For<ICurrencyService>();
         }
         [Fact]
         public void Index_WhenCallWith_ReturnCorrectView()
@@ -44,7 +44,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
                 }
             });
 
-            var controller = new SubAffEarningController(AppSetting, SessionService, LanguageService, StatementHistoryRepository, CurrencyRepository);
+            var controller = new SubAffEarningController(AppSetting, SessionService, LanguageService, StatementHistoryRepository, CurrencyService);
 
             //Action
             var result = controller.Index(new SubAffComParam { MonthDate = new DateTime(2020, 12, 08) }) as ViewResult;
@@ -67,7 +67,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
                     SubAffCommission = 500m
                 }
             });
-            var controller = new SubAffEarningController(AppSetting, SessionService, LanguageService, StatementHistoryRepository, CurrencyRepository);
+            var controller = new SubAffEarningController(AppSetting, SessionService, LanguageService, StatementHistoryRepository, CurrencyService);
 
             //Action
             var result = controller.Index(new SubAffComParam { IsOnlyContent = true, RequestPage = "abc", MonthDate = null }) as ViewResult;

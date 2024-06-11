@@ -1,6 +1,9 @@
 ﻿using Fanex.Affiliate.User.Core.BusinessService;
+using Fanex.Affiliate.User.Core.UnitTests.TestHelper;
 using Fanex.Affiliate.User.Core.Utilities;
 using NSubstitute;
+using System.IO;
+using System.Web;
 using Xunit;
 
 namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
@@ -37,6 +40,8 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
         [Fact]
         public void IsValid_WhenUseSecretCaptchaInLocal_ReturnTrue()
         {
+            MockingHelper.SetUpEnviroment();
+            MockingHelper.SetUpLogEngineEnviroment();
             var service = CreateService();
             var secretCaptcha = "1111";
             AppSetting.GetValue("AllowAutomationCaptchaCode").Returns("1");
@@ -51,6 +56,8 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
         [Fact]
         public void IsValid_WhenUseSecretCaptchaOnPermitedIpAddress_ReturnTrue()
         {
+            MockingHelper.SetUpEnviroment();
+            MockingHelper.SetUpLogEngineEnviroment();
             var service = CreateService();
             var secretCaptcha = "1111";
             var ipAddress = "202.73.231.33";

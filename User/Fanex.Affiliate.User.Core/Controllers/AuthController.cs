@@ -16,8 +16,8 @@ namespace Fanex.Affiliate.User.Core.Controllers
 {
     public class AuthController : AuthBaseController
     {
-        private const int CaptchaImgWidth = 65;
-        private const int CaptchaImgHeight = 26;
+        private const int CaptchaImgWidth = 56;
+        private const int CaptchaImgHeight = 28;
 
         public AuthController(
             ISessionService sessionService,

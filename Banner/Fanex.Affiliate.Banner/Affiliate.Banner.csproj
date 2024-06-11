@@ -201,10 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="12monitor.aspx" />
-    <Content Include="App_Data\SpNames.xml" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\affiliate.text.js" />
-    <Content Include="Scripts\SwfVersDetection.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -212,9 +209,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Web.yb-banner.uat.config">
-      <DependentUpon>Web.yb-banner.local.config</DependentUpon>
-    </None>
+    <Content Include="Web.banner-yb.production.config">
+      <DependentUpon>Web.banner-yb.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.banner-yb.uat.config">
+      <DependentUpon>Web.banner-yb.local.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -228,12 +228,9 @@
     <Content Include="Affiliate.Banner.ruleset" />
     <None Include="Properties\PublishProfiles\a.pubxml" />
     <Content Include="Views\Home\Error.cshtml" />
-    <Content Include="Web.yb-banner.local.config">
+    <Content Include="Web.banner-yb.local.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Web.yb-banner.production.config">
-      <DependentUpon>Web.yb-banner.local.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\packages\SonarAnalyzer.CSharp.6.7.1.4347\analyzers\Google.Protobuf.dll" />

@@ -199,9 +199,6 @@
       <HintPath>..\..\packages\SharpRaven.2.4.0\lib\net45\SharpRaven.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SimpleInjector.5.3.0\lib\net461\SimpleInjector.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
@@ -314,7 +311,6 @@
     <AdditionalFiles Include="..\..\.sonarlint\aff.yb.usersite\CSharp\SonarLint.xml">
       <Link>SonarLint.xml</Link>
     </AdditionalFiles>
-    <Content Include="12monitor.aspx" />
     <Content Include="App_Data\SpConfig\SpName.user-yb.local.xml">
       <DependentUpon>_SpName.tt</DependentUpon>
     </Content>
@@ -386,116 +382,9 @@
     <Content Include="App_Data\SpConfig\_SpNameOriginal.xml">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Configurations\AppSetting\AppSetting.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AppSetting.txt</LastGenOutput>
-    </None>
-    <Content Include="Configurations\Web\Web.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Web.txt</LastGenOutput>
-    </Content>
-    <Content Include="favicon-yb.ico" />
-    <Content Include="Global.asax" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="karma.conf.js" />
-    <Content Include="Configurations\AppSetting\Transform\yb.local.config" />
-    <Content Include="Configurations\Web\Transform\yb.local.config" />
-    <Content Include="Configurations\ConnectionString\ConnectionString.user-yb.local.config" />
-    <Content Include="Configurations\AppSetting\Transform\yb.production.config" />
-    <Content Include="Configurations\AppSetting\Transform\yb.sit.config" />
-    <Content Include="Configurations\AppSetting\Transform\yb.uat.config" />
-    <None Include="Configurations\Web\Web.user-yb.local.config">
-      <DependentUpon>Web.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\Web\Web.user-yb.production.config">
-      <DependentUpon>Web.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\Web\Web.user-yb.sit.config">
-      <DependentUpon>Web.tt</DependentUpon>
-    </None>
-    <None Include="Configurations\Web\Web.user-yb.uat.config">
-      <DependentUpon>Web.tt</DependentUpon>
-    </None>
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="AppSetting.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Code\RazorHelper.cshtml" />
-    <Content Include="Views\Shared\Email\RecoverPassword\Content.en-US.cshtml" />
-    <Content Include="Views\Shared\Email\RecoverPassword\Content.id-ID.cshtml" />
-    <Content Include="Views\Shared\Email\RecoverPassword\Content.th-TH.cshtml" />
-    <Content Include="Views\Shared\Email\RecoverPassword\Content.vi-VN.cshtml" />
-    <Content Include="Views\Shared\Email\RecoverPassword\Content.zh-CN.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentCancel\Content.en-US.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentCancel\Content.id-ID.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentCancel\Content.th-TH.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentCancel\Content.vi-VN.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentCancel\Content.zh-CN.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentRequest\Content.en-US.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentRequest\Content.id-ID.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentRequest\Content.th-TH.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentRequest\Content.vi-VN.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentRequest\Content.zh-CN.cshtml" />
-    <Content Include="Views\Shared\Email\NewPassword\Content.en-US.cshtml" />
-    <Content Include="Views\Shared\Email\NewPassword\Content.id-ID.cshtml" />
-    <Content Include="Views\Shared\Email\NewPassword\Content.th-TH.cshtml" />
-    <Content Include="Views\Shared\Email\NewPassword\Content.vi-VN.cshtml" />
-    <Content Include="Views\Shared\Email\NewPassword\Content.zh-CN.cshtml" />
-    <Content Include="Views\Shared\Email\Csd\Content.en-US.cshtml" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="www\build\js\account-overview.js" />
-    <Content Include="www\build\js\account-overview.min.js">
-      <DependentUpon>account-overview.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\affiliate-link.js" />
-    <Content Include="www\build\js\affiliate-link.min.js">
-      <DependentUpon>affiliate-link.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\changepassword.js" />
-    <Content Include="www\build\js\changepassword.min.js">
-      <DependentUpon>changepassword.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\channel-link-statistic.js" />
-    <Content Include="www\build\js\channel-link-statistic.min.js">
-      <DependentUpon>channel-link-statistic.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\contactus.js" />
-    <Content Include="www\build\js\contactus.min.js">
-      <DependentUpon>contactus.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\daily-earning.js" />
-    <Content Include="www\build\js\daily-earning.min.js">
-      <DependentUpon>daily-earning.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\forgotpassword.js" />
-    <Content Include="www\build\js\forgotpassword.min.js">
-      <DependentUpon>forgotpassword.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\generated-qrcode.js" />
-    <Content Include="www\build\js\generated-qrcode.min.js">
-      <DependentUpon>generated-qrcode.js</DependentUpon>
-    </Content>
     <Content Include="www\build\js\jquery.extension.js" />
     <Content Include="www\build\js\jquery.extension.min.js">
       <DependentUpon>jquery.extension.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\landingpagestatistics.js" />
-    <Content Include="www\build\js\landingpagestatistics.min.js">
-      <DependentUpon>landingpagestatistics.js</DependentUpon>
     </Content>
     <Content Include="www\build\js\layout-after-login.js" />
     <Content Include="www\build\js\layout-after-login.min.js">
@@ -513,6 +402,272 @@
     <Content Include="www\build\js\left-menu-panel.min.js">
       <DependentUpon>left-menu-panel.js</DependentUpon>
     </Content>
+    <Content Include="www\build\js\pages\account-overview.js" />
+    <Content Include="www\build\js\pages\account-overview.min.js">
+      <DependentUpon>account-overview.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\affiliate-link.js" />
+    <Content Include="www\build\js\pages\affiliate-link.min.js">
+      <DependentUpon>affiliate-link.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\channel-link-statistic.js" />
+    <Content Include="www\build\js\pages\channel-link-statistic.min.js">
+      <DependentUpon>channel-link-statistic.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\daily-earning.js" />
+    <Content Include="www\build\js\pages\daily-earning.min.js">
+      <DependentUpon>daily-earning.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\forgotpassword.js" />
+    <Content Include="www\build\js\pages\forgotpassword.min.js">
+      <DependentUpon>forgotpassword.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\generated-qrcode.js" />
+    <Content Include="www\build\js\pages\generated-qrcode.min.js">
+      <DependentUpon>generated-qrcode.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\landingpagestatistics.js" />
+    <Content Include="www\build\js\pages\landingpagestatistics.min.js">
+      <DependentUpon>landingpagestatistics.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\marketing-statistics.js" />
+    <Content Include="www\build\js\pages\marketing-statistics.min.js">
+      <DependentUpon>marketing-statistics.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\mediagallery.js" />
+    <Content Include="www\build\js\pages\mediagallery.min.js">
+      <DependentUpon>mediagallery.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\messagehistory.js" />
+    <Content Include="www\build\js\pages\messagehistory.min.js">
+      <DependentUpon>messagehistory.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\myaccount.js" />
+    <Content Include="www\build\js\pages\myaccount.min.js">
+      <DependentUpon>myaccount.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\payment-request.js" />
+    <Content Include="www\build\js\pages\payment-request.min.js">
+      <DependentUpon>payment-request.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\player-detail.js" />
+    <Content Include="www\build\js\pages\player-detail.min.js">
+      <DependentUpon>player-detail.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\player-transfer-balance-history.js" />
+    <Content Include="www\build\js\pages\player-transfer-balance-history.min.js">
+      <DependentUpon>player-transfer-balance-history.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\player-transfer-balance.js" />
+    <Content Include="www\build\js\pages\player-transfer-balance.min.js">
+      <DependentUpon>player-transfer-balance.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\referrerstatistics.js" />
+    <Content Include="www\build\js\pages\referrerstatistics.min.js">
+      <DependentUpon>referrerstatistics.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\sharing-structure.js" />
+    <Content Include="www\build\js\pages\sharing-structure.min.js">
+      <DependentUpon>sharing-structure.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\signup.js" />
+    <Content Include="www\build\js\pages\signup.min.js">
+      <DependentUpon>signup.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\statement-history.js" />
+    <Content Include="www\build\js\pages\statement-history.min.js">
+      <DependentUpon>statement-history.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\sub-affiliate-earning.js" />
+    <Content Include="www\build\js\pages\sub-affiliate-earning.min.js">
+      <DependentUpon>sub-affiliate-earning.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\summary.js" />
+    <Content Include="www\build\js\pages\summary.min.js">
+      <DependentUpon>summary.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\term-and-codition.js" />
+    <Content Include="www\build\js\pages\term-and-codition.min.js">
+      <DependentUpon>term-and-codition.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\term-and-condition.js" />
+    <Content Include="www\build\js\pages\term-and-condition.min.js">
+      <DependentUpon>term-and-condition.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\test.js" />
+    <Content Include="www\build\js\pages\test.min.js">
+      <DependentUpon>test.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pages\user-panel.js" />
+    <Content Include="www\build\js\pages\user-panel.min.js">
+      <DependentUpon>user-panel.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\pagetracking.js" />
+    <Content Include="www\build\js\pagetracking.min.js">
+      <DependentUpon>pagetracking.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\recheckin.js" />
+    <Content Include="www\build\js\recheckin.min.js">
+      <DependentUpon>recheckin.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\site.js" />
+    <Content Include="www\build\js\site.min.js">
+      <DependentUpon>site.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\js\validation.js" />
+    <Content Include="www\build\js\validation.min.js">
+      <DependentUpon>validation.js</DependentUpon>
+    </Content>
+    <Content Include="www\build\styles\css\pages\home.css" />
+    <Content Include="www\build\styles\css\pages\home.min.css">
+      <DependentUpon>home.css</DependentUpon>
+    </Content>
+    <Content Include="www\build\styles\css\sharing-structure.css" />
+    <Content Include="www\build\styles\css\sharing-structure.min.css">
+      <DependentUpon>sharing-structure.css</DependentUpon>
+    </Content>
+    <Content Include="www\build\styles\Images\account-overview\commission.svg" />
+    <Content Include="www\build\styles\Images\account-overview\copy-link.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-copy.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-facebook.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-line.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-qq.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-talk.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-telegram.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-twitter.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-weiboi.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-wechat.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-whatsapp.svg" />
+    <Content Include="www\build\styles\Images\account-overview\icon-zalo.svg" />
+    <Content Include="www\build\styles\Images\account-overview\new-sign-up.svg" />
+    <Content Include="www\build\styles\Images\account-overview\qr-disabled.svg" />
+    <Content Include="www\build\styles\Images\account-overview\sub-aff.svg" />
+    <Content Include="www\build\styles\Images\account-overview\total-deposit.svg" />
+    <Content Include="www\build\styles\Images\contact-us\email.svg" />
+    <Content Include="www\build\styles\Images\contact-us\left-black-column.svg" />
+    <Content Include="www\build\styles\Images\contact-us\left-column.svg" />
+    <Content Include="www\build\styles\Images\contact-us\livechat.svg" />
+    <Content Include="www\build\styles\Images\contact-us\right-black-column.svg" />
+    <Content Include="www\build\styles\Images\contact-us\right-column.svg" />
+    <Content Include="www\build\styles\Images\contact-us\telegram.svg" />
+    <Content Include="www\build\styles\Images\contact-us\vector.svg" />
+    <Content Include="www\build\styles\Images\contact-us\whatsapp.svg" />
+    <Content Include="www\build\styles\Images\email\banner.bn-BD.png" />
+    <Content Include="www\build\styles\Images\email\banner.en-US.png" />
+    <Content Include="www\build\styles\Images\email\banner.hi-IN.png" />
+    <Content Include="www\build\styles\Images\home\apply\desktop.bn-BD.png" />
+    <Content Include="www\build\styles\Images\home\apply\desktop.en-US.png" />
+    <Content Include="www\build\styles\Images\home\apply\desktop.hi-IN.png" />
+    <Content Include="www\build\styles\Images\home\apply\mobile.bn-BD.png" />
+    <Content Include="www\build\styles\Images\home\apply\mobile.en-US.png" />
+    <Content Include="www\build\styles\Images\home\apply\mobile.hi-IN.png" />
+    <Content Include="www\build\styles\Images\home\bg-left-login.png" />
+    <Content Include="www\build\styles\Images\home\box.svg" />
+    <Content Include="www\build\styles\Images\home\main-banners\banner-mb-1.jpg" />
+    <Content Include="www\build\styles\Images\home\main-banners\banner-pc-1.jpg" />
+    <Content Include="www\build\styles\Images\home\titlebg.png" />
+    <Content Include="www\build\styles\Images\home\what-new.png" />
+    <Content Include="www\build\styles\Images\icons\account-pin-box-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\achment.svg" />
+    <Content Include="www\build\styles\Images\icons\affter-login-user.svg" />
+    <Content Include="www\build\styles\Images\icons\arrow-down-s-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\btn-submit.svg" />
+    <Content Include="www\build\styles\Images\icons\calendar.svg" />
+    <Content Include="www\build\styles\Images\icons\contacts-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\file-cancel-line.svg" />
+    <Content Include="www\build\styles\Images\icons\lock-password-line.svg" />
+    <Content Include="www\build\styles\Images\icons\login-box-fill-color.svg" />
+    <Content Include="www\build\styles\Images\icons\login-box-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\logo-login-popup.svg" />
+    <Content Include="www\build\styles\Images\icons\reset.svg" />
+    <Content Include="www\build\styles\Images\icons\send-plane-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\star-fill.svg" />
+    <Content Include="www\build\styles\Images\icons\user-line.svg" />
+    <Content Include="www\build\styles\Images\icons\u_pen.svg" />
+    <Content Include="www\build\styles\Images\line.svg" />
+    <Content Include="www\build\styles\Images\notify\404.svg" />
+    <Content Include="www\build\styles\Images\notify\error.svg" />
+    <Content Include="www\build\styles\Images\notify\banner-um.svg" />
+    <Content Include="www\build\styles\Images\notify\maintenance-yb.svg" />
+    <Content Include="www\build\styles\Images\products\product.mobile.bn-BD.jpg" />
+    <Content Include="www\build\styles\Images\products\product.mobile.hi-IN.jpg" />
+    <Content Include="www\build\styles\Images\products\product.mobile.en-US.jpg" />
+    <Content Include="www\build\styles\Images\products\product.desktop.bn-BD.jpg" />
+    <Content Include="www\build\styles\Images\products\product.desktop.hi-IN.jpg" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.bn-BD.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.en-US.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.hi-IN.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.bn-BD.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.en-US.png" />
+    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.hi-IN.png" />
+    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.bn-BD.png" />
+    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.hi-IN.png" />
+    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.en-US.png" />
+    <Content Include="www\build\styles\Images\themes\yb.svg" />
+    <Content Include="www\build\styles\Images\titlebg-left-mb.svg" />
+    <Content Include="www\build\styles\Images\titlebg-left.svg" />
+    <Content Include="www\build\styles\Images\titlebg-right-mb.svg" />
+    <Content Include="www\build\styles\Images\titlebg-right.svg" />
+    <Content Include="www\source\js\lib\swiper.min.js" />
+    <Content Include="www\source\js\pages\account-overview\player-detail.js" />
+    <Content Include="www\source\js\pages\term-and-condition.js" />
+    <Content Include="www\source\js\pages\product.js" />
+    <Content Include="www\source\js\pages\sharing-structure.js" />
+    <Content Include="www\source\styles\scss\vendors\swiper.css" />
+    <None Include="Configurations\AppSetting\AppSetting.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AppSetting.txt</LastGenOutput>
+    </None>
+    <Content Include="Configurations\Web\Web.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Web.txt</LastGenOutput>
+    </Content>
+    <Content Include="favicon-yb.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Configurations\AppSetting\Transform\yb.local.config" />
+    <Content Include="Configurations\Web\Transform\yb.local.config" />
+    <Content Include="Configurations\ConnectionString\ConnectionString.user-yb.local.config" />
+    <Content Include="Configurations\AppSetting\Transform\yb.production.config" />
+    <Content Include="Configurations\AppSetting\Transform\yb.sit.config" />
+    <Content Include="Configurations\AppSetting\Transform\yb.uat.config" />
+    <Content Include="Configurations\Web\Web.user-yb.local.config">
+      <DependentUpon>Web.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\Web\Web.user-yb.production.config">
+      <DependentUpon>Web.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\Web\Web.user-yb.sit.config">
+      <DependentUpon>Web.tt</DependentUpon>
+    </Content>
+    <Content Include="Configurations\Web\Web.user-yb.uat.config">
+      <DependentUpon>Web.tt</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="AppSetting.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Code\RazorHelper.cshtml" />
+    <Content Include="Views\Shared\Email\RecoverPassword\Content.en-US.cshtml" />
+    <Content Include="Views\Shared\Email\PaymentCancel\Content.en-US.cshtml" />
+    <Content Include="Views\Shared\Email\PaymentRequest\Content.en-US.cshtml" />
+    <Content Include="Views\Shared\Email\NewPassword\Content.en-US.cshtml" />
+    <Content Include="Views\Shared\Email\Csd\Content.en-US.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="www\build\js\lib\bootstrap.min.js" />
     <Content Include="www\build\js\lib\bootstrap2-toggle.js" />
     <Content Include="www\build\js\lib\bootstrap2-toggle.min.js">
@@ -525,30 +680,6 @@
     <Content Include="www\build\js\lib\modernizr-webp.js" />
     <Content Include="www\build\js\lib\modernizr-webp.min.js">
       <DependentUpon>modernizr-webp.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\login.js" />
-    <Content Include="www\build\js\login.min.js">
-      <DependentUpon>login.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\marketing-statistics.js" />
-    <Content Include="www\build\js\marketing-statistics.min.js">
-      <DependentUpon>marketing-statistics.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\mediagallery.js" />
-    <Content Include="www\build\js\mediagallery.min.js">
-      <DependentUpon>mediagallery.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\messagehistory.js" />
-    <Content Include="www\build\js\messagehistory.min.js">
-      <DependentUpon>messagehistory.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\myaccount.js" />
-    <Content Include="www\build\js\myaccount.min.js">
-      <DependentUpon>myaccount.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\overview.js" />
-    <Content Include="www\build\js\overview.min.js">
-      <DependentUpon>overview.js</DependentUpon>
     </Content>
     <Content Include="www\build\js\pages\changepassword.js" />
     <Content Include="www\build\js\pages\changepassword.min.js">
@@ -577,50 +708,6 @@
     <Content Include="www\build\js\pages\verification-account.js" />
     <Content Include="www\build\js\pages\verification-account.min.js">
       <DependentUpon>verification-account.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\pagetracking.js" />
-    <Content Include="www\build\js\pagetracking.min.js">
-      <DependentUpon>pagetracking.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\payment-request.js" />
-    <Content Include="www\build\js\payment-request.min.js">
-      <DependentUpon>payment-request.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\player-detail.js" />
-    <Content Include="www\build\js\player-detail.min.js">
-      <DependentUpon>player-detail.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\player-transfer-balance-history.js" />
-    <Content Include="www\build\js\player-transfer-balance-history.min.js">
-      <DependentUpon>player-transfer-balance-history.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\player-transfer-balance.js" />
-    <Content Include="www\build\js\player-transfer-balance.min.js">
-      <DependentUpon>player-transfer-balance.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\revenue-structure.js" />
-    <Content Include="www\build\js\revenue-structure.min.js">
-      <DependentUpon>revenue-structure.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\signup.js" />
-    <Content Include="www\build\js\signup.min.js">
-      <DependentUpon>signup.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\sub-affiliate-earning.js" />
-    <Content Include="www\build\js\sub-affiliate-earning.min.js">
-      <DependentUpon>sub-affiliate-earning.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\summary.js" />
-    <Content Include="www\build\js\summary.min.js">
-      <DependentUpon>summary.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\user-panel.js" />
-    <Content Include="www\build\js\user-panel.min.js">
-      <DependentUpon>user-panel.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\validation.js" />
-    <Content Include="www\build\js\validation.min.js">
-      <DependentUpon>validation.js</DependentUpon>
     </Content>
     <Content Include="www\build\styles\css\bootstrap-3.3.7.min.css" />
     <Content Include="www\build\styles\css\commissionreport.css" />
@@ -687,12 +774,8 @@
     <Content Include="www\build\styles\css\yb.min.css">
       <DependentUpon>yb.css</DependentUpon>
     </Content>
-    <Content Include="www\build\styles\fonts\Montserrat\font.css" />
-    <Content Include="www\build\styles\fonts\Montserrat\font.min.css">
-      <DependentUpon>font.css</DependentUpon>
-    </Content>
-    <Content Include="www\build\styles\fonts\myriadPro\font.css" />
-    <Content Include="www\build\styles\fonts\myriadPro\font.min.css">
+    <Content Include="www\build\styles\fonts\materialdesignicons\font.css" />
+    <Content Include="www\build\styles\fonts\materialdesignicons\font.min.css">
       <DependentUpon>font.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\fonts\tahoma\font.css" />
@@ -700,53 +783,13 @@
       <DependentUpon>font.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\Images\404-illus.png" />
-    <Content Include="www\build\styles\Images\account-overview\commission.png" />
-    <Content Include="www\build\styles\Images\account-overview\copy-link.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-copy.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-facebook.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-line.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-qq.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-subaff.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-talk.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-telegram.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-twitter.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-wechat.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-weiboi.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-whatsapp.png" />
-    <Content Include="www\build\styles\Images\account-overview\icon-zalo.png" />
-    <Content Include="www\build\styles\Images\account-overview\new-sign-up.png" />
-    <Content Include="www\build\styles\Images\account-overview\total-deposit.png" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.bn-BD.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.km-KH.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.vi-VN.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.zh-CN.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.en-US.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.hi-IN.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.id-ID.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.ms-MY.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.desktop.th-TH.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.bn-BD.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.km-KH.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.vi-VN.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.zh-CN.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.en-US.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.hi-IN.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.id-ID.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.ms-MY.svg" />
-    <Content Include="www\build\styles\Images\apply\3step.mobile.th-TH.svg" />
-    <Content Include="www\build\styles\Images\contact-in-home\bg_contact.desktop.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\bg_contact.mobile.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\bg_contact.tablet.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\bg_contact.tablet2.png" />
-    <Content Include="www\build\styles\Images\contact-in-home\line.png" />
-    <Content Include="www\build\styles\Images\contact-us\email.png" />
-    <Content Include="www\build\styles\Images\contact-us\telegram.png" />
-    <Content Include="www\build\styles\Images\contact-us\whatsapp.png" />
+    <Content Include="www\build\styles\Images\home\contacts\bg_contact.desktop.png" />
+    <Content Include="www\build\styles\Images\home\contacts\bg_contact.mobile.png" />
+    <Content Include="www\build\styles\Images\home\contacts\bg_contact.tablet.png" />
+    <Content Include="www\build\styles\Images\home\contacts\bg_contact.tablet2.png" />
+    <Content Include="www\build\styles\Images\home\contacts\line.png" />
     <Content Include="www\build\styles\Images\copy-link.png" />
-    <Content Include="www\build\styles\Images\gift.svg" />
-    <Content Include="www\build\styles\Images\header-bg.png" />
     <Content Include="www\build\styles\Images\home\bg-left-login.mobile.png" />
-    <Content Include="www\build\styles\Images\home\bg-left-login.png" />
     <Content Include="www\build\styles\Images\home\bg-news.mobile.png" />
     <Content Include="www\build\styles\Images\home\bg-news.png" />
     <Content Include="www\build\styles\Images\home\hot-news\left-badge-after.png" />
@@ -754,87 +797,15 @@
     <Content Include="www\build\styles\Images\home\hot-news\left-badge.png" />
     <Content Include="www\build\styles\Images\home\hot-news\right-badge.mobile.png" />
     <Content Include="www\build\styles\Images\home\hot-news\right-badge.png" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.km-KH.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.vi-VN.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.en-US.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.id-ID.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.km-KH.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.vi-VN.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.en-US.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.id-ID.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.ms-MY.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.th-TH.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.mobile.zh-CN.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.ms-MY.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.th-TH.jpg" />
-    <Content Include="www\build\styles\Images\home\main-banners\main.desktop.zh-CN.jpg" />
-    <Content Include="www\build\styles\Images\icons\flags\Cambodian.png" />
-    <Content Include="www\build\styles\Images\icons\flags\China.png" />
     <Content Include="www\build\styles\Images\icons\flags\Bangladeshi.png" />
     <Content Include="www\build\styles\Images\icons\flags\England.png" />
     <Content Include="www\build\styles\Images\icons\flags\Hindi.png" />
-    <Content Include="www\build\styles\Images\icons\flags\Indonesia.png" />
-    <Content Include="www\build\styles\Images\icons\flags\Malaysia.png" />
-    <Content Include="www\build\styles\Images\icons\flags\Taiwan.png" />
-    <Content Include="www\build\styles\Images\icons\flags\Thailand.png" />
-    <Content Include="www\build\styles\Images\icons\flags\Vietnam.png" />
     <Content Include="www\build\styles\Images\icons\dropdown-gray.svg" />
     <Content Include="www\build\styles\Images\icons\dropdown-table.svg" />
     <Content Include="www\build\styles\Images\icons\dropdown-white.svg" />
     <Content Include="www\build\styles\Images\icons\dropdown.svg" />
-    <Content Include="www\build\styles\Images\ipad-login.svg" />
-    <Content Include="www\build\styles\Images\account-overview\qr-disabled.png" />
-    <Content Include="www\build\styles\Images\notify\maintenance-yb.png" />
-    <Content Include="www\build\styles\Images\notify\note_icon.png" />
-    <Content Include="www\build\styles\Images\products\product.desktop.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.km-KH.jpg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.vi-VN.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.km-KH.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.vi-VN.jpg" />
     <Content Include="www\build\styles\Images\products\product.desktop.en-US.jpg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.id-ID.jpg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.ms-MY.jpg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.th-TH.jpg" />
-    <Content Include="www\build\styles\Images\products\product.desktop.zh-CN.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.en-US.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.id-ID.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.ms-MY.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.th-TH.jpg" />
-    <Content Include="www\build\styles\Images\products\product.mobile.zh-CN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.km-KH.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.vi-VN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.bn-BD.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.km-KH.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.vi-VN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.en-US.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.id-ID.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.ms-MY.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.th-TH.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.desktop.zh-CN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.en-US.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.hi-IN.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.id-ID.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.ms-MY.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.th-TH.jpg" />
-    <Content Include="www\build\styles\Images\promotion-banners\promotion.mobile.zh-CN.jpg" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.vi-VN.png" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.km-KH.png" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.bn-BD.png" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.en-US.png" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.hi-IN.png" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.id-ID.png" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.ms-MY.png" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.zh-CN.png" />
-    <Content Include="www\build\styles\Images\revenue-share-structure\revenue_share_hierarchy.th-TH.png" />
+    <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />
     <Content Include="www\build\styles\Images\themes\yb.png" />
     <Content Include="www\source\js\layout-after-login.js" />
     <Content Include="www\source\js\lib\bootstrap2-toggle.js" />
@@ -846,12 +817,11 @@
     <Content Include="www\source\js\pages\PlayerTransferBalance\player-transfer-balance.js" />
     <Content Include="www\source\js\pages\promotion.js" />
     <Content Include="www\source\js\pages\statistics\marketing-statistics.js" />
-    <Content Include="www\source\styles\Images\arrrow.png" />
+    <Content Include="www\source\styles\fonts\materialdesignicons\font.css" />
+    <Content Include="www\build\styles\Images\arrrow.png" />
     <Content Include="www\build\styles\Images\icon-1.png" />
     <Content Include="www\build\styles\Images\icon-2.png" />
     <Content Include="www\build\styles\Images\icon-3.png" />
-    <Content Include="www\build\styles\Images\notify\note_icon.gif" />
-    <Content Include="www\build\styles\Images\themes\yb-qrcode.png" />
     <Content Include="www\source\js\components\authhelper.js" />
     <Content Include="www\source\js\components\clipboard.js" />
     <Content Include="www\source\js\components\clipboard.min.js" />
@@ -863,44 +833,14 @@
     <Content Include="www\source\js\lib\jquery.validate.min.js" />
     <Content Include="www\source\js\lib\jquery.validate.unobtrusive.min.js" />
     <Content Include="www\source\js\lib\modernizr-webp.js" />
-    <Content Include="www\source\js\pages\account-overview\overview.js" />
-    <Content Include="www\source\js\pages\account-overview\player-detail.js" />
     <Content Include="www\source\js\pages\account-overview\summary.js" />
     <Content Include="www\source\js\pages\commission-report.js" />
     <Content Include="www\source\js\pages\forgotpassword.js" />
     <Content Include="www\source\js\pages\messagehistory.js" />
     <Content Include="www\source\js\pages\payment-request.js" />
-    <Content Include="www\build\js\recheckin.js" />
-    <Content Include="www\build\js\recheckin.min.js">
-      <DependentUpon>recheckin.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\referrerstatistics.js" />
-    <Content Include="www\build\js\referrerstatistics.min.js">
-      <DependentUpon>referrerstatistics.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\site.js" />
-    <Content Include="www\build\js\site.min.js">
-      <DependentUpon>site.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\statement-history.js" />
-    <Content Include="www\build\js\statement-history.min.js">
-      <DependentUpon>statement-history.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\test.js" />
-    <Content Include="www\build\js\test.min.js">
-      <DependentUpon>test.js</DependentUpon>
-    </Content>
-    <Content Include="www\build\js\trackingstatistics.js" />
-    <Content Include="www\build\js\trackingstatistics.min.js">
-      <DependentUpon>trackingstatistics.js</DependentUpon>
-    </Content>
     <Content Include="www\build\styles\css\account-overview.css" />
     <Content Include="www\build\styles\css\account-overview.min.css">
       <DependentUpon>account-overview.css</DependentUpon>
-    </Content>
-    <Content Include="www\build\styles\css\bootstrap.css" />
-    <Content Include="www\build\styles\css\bootstrap.min.css">
-      <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\css\contact-us.css" />
     <Content Include="www\build\styles\css\contact-us.min.css">
@@ -921,10 +861,6 @@
     <Content Include="www\build\styles\css\main.css" />
     <Content Include="www\build\styles\css\main.min.css">
       <DependentUpon>main.css</DependentUpon>
-    </Content>
-    <Content Include="www\build\styles\css\materialdesignicons.css" />
-    <Content Include="www\build\styles\css\materialdesignicons.min.css">
-      <DependentUpon>materialdesignicons.css</DependentUpon>
     </Content>
     <Content Include="www\build\styles\css\media-gallery.css" />
     <Content Include="www\build\styles\css\media-gallery.min.css">
@@ -947,7 +883,6 @@
     <Content Include="www\build\styles\css\statistics.min.css">
       <DependentUpon>statistics.css</DependentUpon>
     </Content>
-    <Content Include="www\build\styles\fonts\font_bebas\Flat-it License.txt" />
     <Content Include="www\build\styles\fonts\glypicons\glyphicons-halflings-regular.svg" />
     <Content Include="www\source\js\components\monthpicker.js" />
     <Content Include="www\source\js\components\pager.js" />
@@ -968,7 +903,6 @@
     <Content Include="www\source\js\pages\statement-history.js" />
     <Content Include="www\source\js\pages\statistics\landingpagestatistics.js" />
     <Content Include="www\source\js\pages\statistics\referrerstatistics.js" />
-    <Content Include="www\source\js\pages\statistics\trackingstatistics.js" />
     <Content Include="www\source\js\pages\sub-affiliate-earning.js" />
     <Content Include="www\source\js\pages\test.js" />
     <Content Include="www\source\js\pages\account-overview\affiliate-link.js" />
@@ -977,50 +911,14 @@
     <Content Include="www\source\js\recheckin.js" />
     <Content Include="www\source\js\site.js" />
     <Content Include="www\source\js\spec\layout.spec.js" />
-    <Content Include="www\source\styles\fonts\bootstrap\glyphicons-halflings-regular.svg" />
-    <Content Include="www\source\styles\fonts\font_bebas\Flat-it License.txt" />
-    <Content Include="www\source\styles\fonts\Montserrat\font.css" />
-    <Content Include="www\source\styles\fonts\myriadPro\font.css" />
-    <Content Include="www\source\styles\Images\arrow_drop_down.png" />
-    <Content Include="www\source\styles\Images\bootstrap-formhelpers-countries.flags.png" />
-    <Content Include="www\source\styles\Images\email\banner.png" />
-    <Content Include="www\source\styles\Images\email\banner_vi-VN.png" />
-    <Content Include="www\source\styles\Images\email\banner_bn-BD.png" />
-    <Content Include="www\source\styles\Images\email\banner_km-KH.png" />
-    <Content Include="www\source\styles\Images\email\banner_ms-MY.png" />
-    <Content Include="www\source\styles\Images\email\banner_en-US.png" />
-    <Content Include="www\source\styles\Images\email\banner_hi-IN.png" />
-    <Content Include="www\source\styles\Images\email\banner_id-ID.png" />
-    <Content Include="www\source\styles\Images\email\banner_th-TH.png" />
-    <Content Include="www\source\styles\Images\email\banner_zh-CN.png" />
-    <Content Include="www\source\styles\Images\email\bgMain.png" />
-    <Content Include="www\source\styles\Images\email\button.png" />
-    <Content Include="www\source\styles\Images\email\header.png" />
-    <Content Include="www\source\styles\Images\email\note.png" />
-    <Content Include="www\source\styles\Images\gift.png" />
-    <Content Include="www\source\styles\Images\gift.svg" />
-    <Content Include="www\source\styles\Images\ipad-login.png" />
-    <Content Include="www\source\styles\Images\ipad-login.svg" />
-    <Content Include="www\source\styles\Images\mode\darkmode.svg" />
-    <Content Include="www\source\styles\Images\mode\lightmode.svg" />
-    <Content Include="www\source\styles\Images\notify\404.png" />
-    <Content Include="www\source\styles\Images\notify\bgMain.jpg" />
-    <Content Include="www\source\styles\Images\notify\Error.png" />
-    <Content Include="www\source\styles\Images\notify\icon.png" />
-    <Content Include="www\source\styles\Images\notify\iconnf.png" />
-    <Content Include="www\source\styles\Images\notify\sry.png" />
-    <Content Include="www\source\styles\Images\notify\srynf.png" />
-    <Content Include="www\source\styles\Images\shadown.png" />
-    <Content Include="www\source\styles\scss\vendors\animate\animate.css" />
-    <Content Include="www\source\styles\scss\vendors\animate\animate.min.css" />
+    <Content Include="www\build\styles\Images\email\banner.png" />
+    <Content Include="www\build\styles\Images\email\bgMain.png" />
+    <Content Include="www\build\styles\Images\email\button.png" />
+    <Content Include="www\build\styles\Images\email\header.png" />
+    <Content Include="www\build\styles\Images\email\note.png" />
     <Content Include="www\source\styles\pages\password.scss" />
     <Content Include="www\source\styles\scss\components\_login-dialog.scss" />
     <Content Include="www\source\styles\scss\components\_marquee.scss" />
-    <Content Include="www\source\styles\fonts\materialdesignicons\materialdesignicons-webfont.woff2" />
-    <Content Include="www\source\styles\fonts\materialdesignicons\materialdesignicons-webfont.ttf" />
-    <Content Include="www\source\styles\fonts\materialdesignicons\materialdesignicons-webfont.woff" />
-    <Content Include="www\source\styles\fonts\materialdesignicons\materialdesignicons-webfont.eot" />
-    <Content Include="www\source\styles\scss\components\materialdesignicons.scss" />
     <Content Include="www\source\styles\scss\components\_loader.scss" />
     <Content Include="Views\News\_LatestHotNews.cshtml" />
     <Content Include="www\source\styles\pages\signup.scss" />
@@ -1029,61 +927,27 @@
     <Content Include="www\source\styles\scss\base\_pureicon.scss" />
     <Content Include="www\source\styles\scss\base\_media.scss" />
     <Content Include="www\source\styles\fonts\tahoma\font.css" />
-    <Content Include="www\source\styles\fonts\tahoma\Tahoma-Regular.ttf" />
-    <Content Include="www\source\styles\fonts\tahoma\Tahoma-Bold.TTF" />
-    <Content Include="www\source\styles\fonts\tahoma\TAHOMABD.TTF" />
-    <Content Include="www\source\styles\fonts\tahoma\TAHOMA_0.TTF" />
     <Content Include="www\build\styles\fonts\tahoma\Tahoma-Regular.ttf" />
     <Content Include="www\build\styles\fonts\tahoma\Tahoma-Bold.TTF" />
     <Content Include="www\build\styles\fonts\tahoma\TAHOMABD.TTF" />
     <Content Include="www\build\styles\fonts\tahoma\TAHOMA_0.TTF" />
-    <Content Include="www\build\styles\fonts\myriadPro\MYRIADPROREGULAR.eot" />
-    <Content Include="www\build\styles\fonts\myriadPro\MYRIADPROREGULAR.ttf" />
-    <Content Include="www\build\styles\fonts\myriadPro\MYRIADPROREGULAR.woff" />
-    <Content Include="www\source\styles\fonts\myriadPro\MYRIADPROREGULAR.eot" />
-    <Content Include="www\source\styles\fonts\myriadPro\MYRIADPROREGULAR.ttf" />
-    <Content Include="www\source\styles\fonts\myriadPro\MYRIADPROREGULAR.woff" />
-    <Content Include="www\build\styles\fonts\myriadPro\Myriad-Pro-Bold.ttf" />
-    <Content Include="www\source\styles\fonts\myriadPro\Myriad-Pro-Bold.ttf" />
-    <Content Include="www\build\styles\fonts\myriadPro\Myriad-Pro-Italic.ttf" />
-    <Content Include="www\source\styles\fonts\myriadPro\Myriad-Pro-Italic.ttf" />
     <Content Include="packages.config" />
     <Content Include="Views\Shared\Email\VerificationAccount\Content.en-US.cshtml" />
-    <Content Include="Views\Shared\Email\VerificationAccount\Content.id-ID.cshtml" />
-    <Content Include="Views\Shared\Email\VerificationAccount\Content.th-TH.cshtml" />
-    <Content Include="Views\Shared\Email\VerificationAccount\Content.vi-VN.cshtml" />
-    <Content Include="Views\Shared\Email\VerificationAccount\Content.zh-CN.cshtml" />
     <Content Include="Views\Signup\_SecurityQuestion.cshtml" />
-    <Content Include="Views\UserPanel\AccountOverView\Partial\_BannerFilter.cshtml" />
     <Content Include="Views\UserPanel\AccountOverView\Partial\_BannerList.cshtml" />
-    <Content Include="Views\UserPanel\AccountOverView\Partial\_LinkForm.cshtml" />
-    <Content Include="Views\UserPanel\AccountOverView\Partial\_SearchForm.cshtml" />
-    <Content Include="Views\UserPanel\AccountOverView\Partial\_TextLink.cshtml" />
-    <Content Include="Views\UserPanel\AccountOverView\Partial\_TextList.cshtml" />
     <Content Include="Views\UserPanel\AccountOverView\Partial\_GeneratedQrCode.cshtml" />
     <Content Include="www\source\styles\scss\base\_flex.scss" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="www\source\styles\scss\abstracts\_variables.scss" />
     <Content Include="www\source\styles\scss\themes\yb.scss" />
-    <Content Include="www\source\styles\fonts\myriadPro\Myriad-Pro-Semibold.ttf" />
-    <Content Include="www\build\styles\fonts\myriadPro\Myriad-Pro-Semibold.ttf" />
-    <Content Include="Views\CommissionStructure\_Content.en-US.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.id-ID.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.th-TH.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.zh-CN.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.en-US.cshtml" />
     <Content Include="Views\Faq\_Content.en-US.cshtml" />
-    <Content Include="Views\Faq\_Content.id-ID.cshtml" />
-    <Content Include="Views\Faq\_Content.th-TH.cshtml" />
-    <Content Include="Views\Faq\_Content.zh-CN.cshtml" />
     <Content Include="www\source\styles\scss\components\_toogle-button.scss" />
     <Content Include="www\source\styles\scss\components\_qr_code.scss" />
     <Content Include="Views\Product\_Content.en-US.cshtml" />
-    <Content Include="Views\Product\_Content.id-ID.cshtml" />
-    <Content Include="Views\Product\_Content.th-TH.cshtml" />
-    <Content Include="Views\Product\_Content.zh-CN.cshtml" />
     <Content Include="Views\Product\_CarouselItems.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.hi-IN.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.hi-IN.cshtml" />
     <Content Include="Views\Faq\_Content.hi-IN.cshtml" />
     <Content Include="Views\Product\_Content.hi-IN.cshtml" />
     <Content Include="Views\Shared\Email\NewPassword\Content.hi-IN.cshtml" />
@@ -1091,38 +955,21 @@
     <Content Include="Views\Shared\Email\PaymentRequest\Content.hi-IN.cshtml" />
     <Content Include="Views\Shared\Email\RecoverPassword\Content.hi-IN.cshtml" />
     <Content Include="Views\Shared\Email\VerificationAccount\Content.hi-IN.cshtml" />
-    <Content Include="Views\Product\_Content.ms-MY.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.ms-MY.cshtml" />
-    <Content Include="Views\Faq\_Content.ms-MY.cshtml" />
-    <Content Include="Views\Shared\Email\NewPassword\Content.ms-MY.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentCancel\Content.ms-MY.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentRequest\Content.ms-MY.cshtml" />
-    <Content Include="Views\Shared\Email\RecoverPassword\Content.ms-MY.cshtml" />
-    <Content Include="Views\Shared\Email\VerificationAccount\Content.ms-MY.cshtml" />
     <Content Include="Views\Promotion\_Content.en-US.cshtml" />
-    <Content Include="Views\Promotion\_Content.id-ID.cshtml" />
-    <Content Include="Views\Promotion\_Content.th-TH.cshtml" />
-    <Content Include="Views\Promotion\_Content.zh-CN.cshtml" />
     <Content Include="Views\Promotion\_Content.hi-IN.cshtml" />
-    <Content Include="Views\Promotion\_Content.ms-MY.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LayoutAfterLogin.cshtml" />
     <Content Include="Views\Shared\_LayoutBeforeLogin.cshtml" />
-    <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <Content Include="www\source\styles\scss\components\_flag.scss" />
     <Content Include="www\source\styles\scss\layout\_header.scss" />
     <Content Include="www\source\styles\scss\layout\_footer.scss" />
     <Content Include="www\source\styles\scss\layout\_content.scss" />
     <Content Include="Views\Auth\AuthenticationForm.cshtml" />
-    <Content Include="Views\CommissionStructure\_ExampleTable.cshtml" />
-    <Content Include="Views\CommissionStructure\_RevenueShareTable.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_ExampleTable.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_RevenueShareTable.cshtml" />
     <Content Include="Views\TermAndCondition\_Content.en-US.cshtml" />
     <Content Include="Views\TermAndCondition\_Content.hi-IN.cshtml" />
-    <Content Include="Views\TermAndCondition\_Content.id-ID.cshtml" />
-    <Content Include="Views\TermAndCondition\_Content.ms-MY.cshtml" />
-    <Content Include="Views\TermAndCondition\_Content.th-TH.cshtml" />
-    <Content Include="Views\TermAndCondition\_Content.zh-CN.cshtml" />
     <Content Include="www\source\styles\pages\maintenance.scss" />
     <Content Include="www\source\styles\scss\components\_alert.scss" />
     <Content Include="www\source\styles\scss\layout\_banner.scss" />
@@ -1135,7 +982,7 @@
     <Content Include="www\source\styles\scss\main-after-login.scss" />
     <Content Include="www\source\styles\pages\update-password.scss" />
     <Content Include="www\source\styles\scss\components\_left-panel-menu.scss" />
-    <Content Include="Views\CommissionStructure\Index.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\Index.cshtml" />
     <Content Include="Views\ContactUs\Index.cshtml" />
     <Content Include="www\source\styles\pages\contact-us.scss" />
     <Content Include="Views\Faq\Index.cshtml" />
@@ -1195,39 +1042,31 @@
     <Content Include="Views\UserPanel\Statistics\LandingPageStatistics\Index.cshtml" />
     <Content Include="Views\UserPanel\Statistics\MarketingPageStatistics\Index.cshtml" />
     <Content Include="Views\UserPanel\Statistics\ReferrersStatistics\Index.cshtml" />
-    <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_TrackingStatisticsContent.cshtml" />
     <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_MarketingPageStatsticsContent.cshtml" />
     <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_ReferrersStatisticsContent.cshtml" />
     <Content Include="Views\UserPanel\Statistics\StatisticsPartial\_LandingPageStatisticsContent.cshtml" />
-    <Content Include="Views\UserPanel\Statistics\TrackingStatistics\Index.cshtml" />
     <Content Include="Views\Password\RecoverPasswordResult.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.vi-VN.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.km-KH.cshtml" />
-    <Content Include="Views\CommissionStructure\_Content.bn-BD.cshtml" />
-    <Content Include="Views\Faq\_Content.km-KH.cshtml" />
-    <Content Include="Views\Faq\_Content.vi-VN.cshtml" />
+    <Content Include="Views\RevenueSharingStructure\_Content.bn-BD.cshtml" />
     <Content Include="Views\Faq\_Content.bn-BD.cshtml" />
-    <Content Include="Views\Product\_Content.vi-VN.cshtml" />
     <Content Include="Views\Product\_Content.bn-BD.cshtml" />
-    <Content Include="Views\Product\_Content.km-KH.cshtml" />
-    <Content Include="Views\Promotion\_Content.vi-VN.cshtml" />
     <Content Include="Views\Promotion\_Content.bn-BD.cshtml" />
-    <Content Include="Views\Promotion\_Content.km-KH.cshtml" />
-    <Content Include="Views\TermAndCondition\_Content.vi-VN.cshtml" />
-    <Content Include="Views\TermAndCondition\_Content.km-KH.cshtml" />
     <Content Include="Views\TermAndCondition\_Content.bn-BD.cshtml" />
-    <Content Include="Views\Shared\Email\NewPassword\Content.km-KH.cshtml" />
     <Content Include="Views\Shared\Email\NewPassword\Content.bn-BD.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentCancel\Content.km-KH.cshtml" />
     <Content Include="Views\Shared\Email\PaymentCancel\Content.bn-BD.cshtml" />
     <Content Include="Views\Shared\Email\PaymentRequest\Content.bn-BD.cshtml" />
-    <Content Include="Views\Shared\Email\PaymentRequest\Content.km-KH.cshtml" />
-    <Content Include="Views\Shared\Email\RecoverPassword\Content.km-KH.cshtml" />
     <Content Include="Views\Shared\Email\RecoverPassword\Content.bn-BD.cshtml" />
     <Content Include="Views\Shared\Email\VerificationAccount\Content.bn-BD.cshtml" />
-    <Content Include="Views\Shared\Email\VerificationAccount\Content.km-KH.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Product\_CasinoProductTable.cshtml" />
+    <Content Include="www\build\styles\fonts\materialdesignicons\materialdesignicons-webfont.eot" />
+    <Content Include="www\build\styles\fonts\materialdesignicons\materialdesignicons-webfont.ttf" />
+    <Content Include="www\build\styles\fonts\materialdesignicons\materialdesignicons-webfont.woff" />
+    <Content Include="www\build\styles\fonts\materialdesignicons\materialdesignicons-webfont.woff2" />
+    <Content Include="www\source\styles\scss\components\_block.scss" />
+    <Content Include="www\build\styles\Images\home\main-banners\banner-pc-1.webp" />
+    <Content Include="www\source\styles\scss\components\_faq.scss" />
+    <Content Include="www\source\styles\pages\sharing-structure.scss" />
+    <Content Include="www\build\styles\Images\home\main-banners\banner-mb-1.webp" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -1243,223 +1082,25 @@
     </Content>
     <Content Include="Fanex.Affiliate.User.Site.ruleset" />
     <Content Include="package.json" />
-    <Content Include="www\source\styles\fonts\font_bebas\BEBAS___.TTF" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Light.ttf" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Medium.eot" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Medium.ttf" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Medium.woff" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Medium.woff2" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Regular.eot" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Regular.ttf" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Regular.woff" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-Regular.woff2" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-SemiBold.eot" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-SemiBold.ttf" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-SemiBold.woff" />
-    <Content Include="www\source\styles\fonts\Montserrat\Montserrat-SemiBold.woff2" />
     <Content Include="www\source\styles\scss\abstracts\_mixins.scss" />
-    <Content Include="www\source\styles\scss\base\_animations.scss" />
     <Content Include="www\source\styles\scss\base\_base.scss" />
-    <Content Include="www\source\styles\scss\base\_font.scss" />
     <Content Include="www\source\styles\scss\base\_normalize.scss" />
     <Content Include="www\source\styles\scss\base\_typography.scss" />
     <Content Include="www\source\styles\scss\components\_buttons.scss" />
     <Content Include="www\source\styles\scss\components\_table.scss" />
     <Content Include="www\source\styles\scss\main.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\animate.css.map" />
-    <Content Include="www\source\styles\scss\vendors\animate\animate.min.css.map" />
-    <Content Include="www\source\styles\scss\vendors\animate\animate.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\attention-seekers.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_bounce.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_flash.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_jello.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_pulse.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_rubberBand.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_shake.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_swing.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_tada.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_attention-seekers\_wobble.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-entrances\bouncing-entrances.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-entrances\_bounceIn.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-entrances\_bounceInDown.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-entrances\_bounceInLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-entrances\_bounceInRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-entrances\_bounceInUp.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-exits\bouncing-exits.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-exits\_bounceOut.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-exits\_bounceOutDown.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-exits\_bounceOutLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-exits\_bounceOutRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_bouncing-exits\_bounceOutUp.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\fading-entrances.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeIn.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeInDown.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeInDownBig.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeInLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeInLeftBig.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeInRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeInRightBig.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeInUp.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-entrances\_fadeInUpBig.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\fading-exits.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOut.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOutDown.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOutDownBig.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOutLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOutLeftBig.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOutRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOutRightBig.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOutUp.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_fading-exits\_fadeOutUpBig.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_flippers\flippers.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_flippers\_flip.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_flippers\_flipInX.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_flippers\_flipInY.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_flippers\_flipOutX.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_flippers\_flipOutY.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_lightspeed\lightspeed.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_lightspeed\_lightSpeedIn.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_lightspeed\_lightSpeedOut.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_properties.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-entrances\rotating-entrances.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-entrances\_rotateIn.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-entrances\_rotateInDownLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-entrances\_rotateInDownRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-entrances\_rotateInUpLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-entrances\_rotateInUpRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-exits\rotating-exits.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-exits\_rotateOut.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-exits\_rotateOutDownLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-exits\_rotateOutDownRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-exits\_rotateOutUpLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_rotating-exits\_rotateOutUpRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-entrances\sliding-entrances.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-entrances\_slideInDown.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-entrances\_slideInLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-entrances\_slideInRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-entrances\_slideInUp.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-exits\sliding-exits.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-exits\_slideOutDown.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-exits\_slideOutLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-exits\_slideOutRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_sliding-exits\_slideOutUp.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_specials\specials.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_specials\_hinge.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_specials\_rollIn.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_specials\_rollOut.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-entrances\zooming-entrances.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-entrances\_zoomIn.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-entrances\_zoomInDown.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-entrances\_zoomInLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-entrances\_zoomInRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-entrances\_zoomInUp.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-exits\zooming-exits.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-exits\_zoomOut.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-exits\_zoomOutDown.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-exits\_zoomOutLeft.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-exits\_zoomOutRight.scss" />
-    <Content Include="www\source\styles\scss\vendors\animate\_zooming-exits\_zoomOutUp.scss" />
     <Content Include="www\source\styles\scss\vendors\bootstrap-3.3.7.min.css" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_alerts.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_background-variant.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_border-radius.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_buttons.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_center-block.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_clearfix.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_forms.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_gradients.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_grid-framework.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_grid.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_hide-text.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_image.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_labels.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_list-group.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_nav-divider.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_nav-vertical-align.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_opacity.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_pagination.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_panels.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_progress-bar.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_reset-filter.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_reset-text.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_resize.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_responsive-visibility.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_size.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_tab-focus.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_table-row.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_text-emphasis.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_text-overflow.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\mixins\_vendor-prefixes.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_alerts.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_badges.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_breadcrumbs.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_button-groups.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_buttons.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_carousel.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_close.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_code.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_component-animations.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_dropdowns.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_forms.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_glyphicons.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_grid.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_input-groups.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_jumbotron.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_labels.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_list-group.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_media.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_mixins.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_modals.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_navbar.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_navs.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_normalize.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_pager.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_pagination.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_panels.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_popovers.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_print.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_progress-bars.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_responsive-embed.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_responsive-utilities.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_scaffolding.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_tables.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_theme.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_thumbnails.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_tooltip.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_type.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_utilities.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_variables.scss" />
-    <Content Include="www\source\styles\scss\vendors\bootstrap\_wells.scss" />
     <Content Include="www\source\styles\scss\vendors\pikaday.css" />
-    <Content Include="www\source\styles\scss\vendors\_bootstrap.scss" />
-    <Content Include="www\build\styles\fonts\font_bebas\BEBAS___.TTF" />
     <Content Include="www\build\styles\fonts\glypicons\glyphicons-halflings-regular.eot" />
     <Content Include="www\build\styles\fonts\glypicons\glyphicons-halflings-regular.ttf" />
     <Content Include="www\build\styles\fonts\glypicons\glyphicons-halflings-regular.woff" />
     <Content Include="www\build\styles\fonts\glypicons\glyphicons-halflings-regular.woff2" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Light.ttf" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Medium.eot" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Medium.ttf" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Medium.woff" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Medium.woff2" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Regular.eot" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Regular.ttf" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Regular.woff" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-Regular.woff2" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-SemiBold.eot" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-SemiBold.ttf" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-SemiBold.woff" />
-    <Content Include="www\build\styles\fonts\Montserrat\Montserrat-SemiBold.woff2" />
     <Content Include="Views\UserPanel\AccountOverView\Index.cshtml" />
     <Content Include="www\source\styles\scss\layout\_menu.scss" />
     <Content Include="Views\UserPanel\MyAccount\Index.cshtml" />
     <Content Include="www\source\styles\scss\components\_form-control.scss" />
     <Content Include="www\source\styles\pages\home.scss" />
     <Content Include="www\source\styles\pages\faq.scss" />
-    <Content Include="www\source\styles\fonts\bootstrap\glyphicons-halflings-regular.eot" />
-    <Content Include="www\source\styles\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
-    <Content Include="www\source\styles\fonts\bootstrap\glyphicons-halflings-regular.woff" />
-    <Content Include="www\source\styles\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
     <Content Include="www\source\styles\scss\base\_common.scss" />
     <Content Include="Views\Test\Preview.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />

@@ -66,6 +66,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
             var RedNumber = _appSetting.RedNumberRGB;
             var GreenNumber = _appSetting.GreenNumberRGB;
             var BlueNumber = _appSetting.BlueNumberRGB;
+            var backgroundColor = Color.FromArgb(RedNumber, GreenNumber, BlueNumber);
 
             byte[] buffer = null;
 
@@ -78,17 +79,17 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 graphics.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
                 graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-                graphics.Clear(Color.FromArgb(RedNumber, GreenNumber, BlueNumber));
+                graphics.Clear(backgroundColor);
 
                 if (isComplex)
                 {
-                    DrawComplexImage(captcha, width, height, graphics, random);
+                    DrawComplexImage(captcha, width, height, graphics, random, backgroundColor);
                 }
                 else
                 {
                     // Add captcha
-                    var font = new Font("Montserrat", Number.Fourteen);
-                    graphics.DrawString(captcha, font, Brushes.White, random.Next(Number.Two, Number.Ten), random.Next(Number.Zero, Number.Two));
+                    var font = new Font("Open Sans", Number.Ten, FontStyle.Bold);
+                    graphics.DrawString(captcha, font, Brushes.Black, x: Number.Ten, y: (float)Number.Six);
                 }
 
                 for (int i = 0; i < Number.Fifty; i++)
@@ -106,13 +107,13 @@ namespace Fanex.Affiliate.User.Core.BusinessService
             return buffer;
         }
 
-        private void DrawComplexImage(string captcha, int width, int height, Graphics graphics, Random random)
+        private void DrawComplexImage(string captcha, int width, int height, Graphics graphics, Random random, Color color)
         {
             var rectangleF = new RectangleF(0, 0, width, height);
             var brush = new HatchBrush(
                 hatchStyleList[random.Next(hatchStyleList.Length - 1)],
                 CreateRandomColor(random, Number.OneFiveZero, Number.TwoDoubleFive),
-                Color.White);
+                color);
             graphics.FillRectangle(brush, rectangleF);
             var matrix = new Matrix();
 

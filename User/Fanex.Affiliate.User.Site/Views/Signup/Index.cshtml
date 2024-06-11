@@ -5,10 +5,13 @@
     var sessionService = DependencyResolver.Current.GetService<ISessionService>();
     var languageService = DependencyResolver.Current.GetService<ILanguageService>();
     var currentLanguage = sessionService.CurrentLanguage;
+
+    var secondAppName = AppContact.SecondAppContactList[currentLanguage];
 }
 
 @using Fanex.Affiliate.User.Core.CoreService
 @using Fanex.Affiliate.User.Core.BusinessService
+@using Fanex.Affiliate.User.Core.Constants
 
 @model Fanex.Affiliate.User.Core.MetalModels.UserSignUpParam
 
@@ -26,325 +29,236 @@
         }
     </script>
     <script src="@Url.RenderLink("~/www/build/js/validation.js")"></script>
-    @Html.InlineScripts("~/www/build/js/signup.js")
+    @Html.InlineScripts("~/www/build/js/pages/signup.js")
 }
 
-<div class="content sign-up-page">
-    @if (Model.IsValidParentCode)
-    {
-        <div class="page-title">
-            <span class="text">@Lang.RegisForm</span>
-        </div>
-
-        <div class="alert alert-success" role="alert" id="messageSuccess" style="display: none;">
-            <p class="text-center"><b>@Html.Raw(Lang.UnderReview)</b></p>
-            @Html.Raw(string.Format(SiteFriendlyNameHelper.ReplaceB2C(Lang.RegisSuccess), Url.Content("~/ContactUs")))
-        </div>
-
-        <div class="alert alert-danger" role="alert" id="messageError" style="display: none"></div>
-
-        <div id="mainContent">
-            <div>
-                <p>@SiteFriendlyNameHelper.ReplaceB2C(Lang.CompleteForm)</p>
-                <p>@Html.Raw(Lang.RequireInfo)</p>
+<div class="page-container">
+    <div class="main-content">
+        <div class="sign-up-page">
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span class="text">@Lang.RegisForm</span>
+                </h2>
             </div>
 
-            @using (Html.BeginForm("Index", "Signup", FormMethod.Post, new { @id = "accountForm", @class = "form-horizontal" }))
-            {
-                @Html.AntiForgeryToken()
-                <div class="info-group">
-                    <div class="title">
-                        <span class="text">@Lang.ContactInfo</span>
+            <div class="alert alert-success" role="alert" id="messageSuccess" style="display: none;">
+                @Html.Raw(Lang.UnderReview)<br />
+                @Html.Raw(string.Format(SiteFriendlyNameHelper.ReplaceB2C(Lang.RegisSuccess), Url.Content("~/ContactUs")))
+            </div>
+
+            <div id="mainContent">
+                @using (Html.BeginForm("Index", "Signup", FormMethod.Post, new { @id = "accountForm", @class = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="top-text">
+                        @SiteFriendlyNameHelper.ReplaceB2C(Lang.CompleteForm)<br />
+                        @Html.Raw(Lang.RequireInfo)
                     </div>
-
-                    <div class="form-group half-col half-col-left ">
-                        <label class="col-sm-3 control-label require">@Lang.FName</label>
-                        <div class="col-sm-4">
-                            @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
+                    <div class="alert alert-danger" role="alert" id="messageError" style="display: none;"></div>
+                    <div class="info-question">
+                        <div class="title">
+                            <span class="text">@Lang.ContactInfo</span>
                         </div>
-                        <div class="col-sm-offset-3 col-sm-9">
-                            @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "help-block hide" })
-                        </div>
-                    </div>
-
-                    <div class="form-group half-col">
-                        <label class="col-sm-3 control-label require">@Lang.LName</label>
-                        <div class="col-sm-4">
-                            @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
-                        </div>
-                        <div class="col-sm-offset-3 col-sm-9">
-                            @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "help-block hide" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label require">@Lang.Gender</label>
-                        <div class="col-sm-4">
-                            <label class="radio-inline">
-                            <input type="radio" name="Gender" id="male" value="True" checked /> <span>@Lang.Male</span>
-                            </label>
-                            <label class="radio-inline">
-                            <input type="radio" name="Gender" id="female" value="False" /> <span>@Lang.Female</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label require">@Lang.EmailSignup</label>
-                        <div class="col-sm-4">
-                            @Html.TextBoxFor(p => p.Email, new { @class = "form-control emailInput" })
-                        </div>
-                        <div class="col-sm-offset-3 col-sm-9">
-                            @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "help-block hide" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label require">@Lang.ReEmail</label>
-                        <div class="col-sm-4">
-                            @Html.TextBoxFor(p => p.VerifyEmail, new { @class = "form-control emailInput" })
-                        </div>
-                        <div class="col-sm-offset-3 col-sm-9">
-                            @Html.ValidationMessageFor(x => x.VerifyEmail, string.Empty, new { @class = "help-block hide" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label require">@Lang.ContactNumber</label>
-                        <div class="col-sm-4">
-                            @Html.TextBoxFor(p => p.Phone, new { @class = "form-control" })
-                        </div>
-                        <div class="col-sm-offset-3 col-sm-9">
-                            @Html.ValidationMessageFor(x => x.Phone, string.Empty, new { @class = "help-block hide" })
-                        </div>
-                    </div>
-
-                    @RazorHelper.RenderAppContact(currentLanguage)
-                </div>
-
-                <div class="info-group">
-                    <div class="title">
-                        <span class="text">@Lang.MailingInfor</span>
-                    </div>
-
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label require">@Lang.Address</label>
-                            <div class="col-sm-4">
-                                @Html.TextBoxFor(p => p.Address, new { @class = "form-control" })
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.Address, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label require">@Lang.City</label>
-                            <div class="col-sm-4">
-                                @Html.TextBoxFor(p => p.City, new { @class = "form-control" })
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.City, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-
-                        @if (currentLanguage.Equals("zh-CN") || currentLanguage.Equals("zh-TW"))
-                        {
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label require">@Lang.State</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control" name="State" id="State" type="text" data-val="true" data-val-required="@Lang.StateIsRequired" />
+                        <div class="body-result">
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group">
+                                    <label for="FirstName" class="custom-label require">@Lang.FName</label>
+                                    @Html.TextBoxFor(p => p.FirstName, new { @class = "form-input" })
+                                    @Html.ValidationMessageFor(x => x.FirstName, string.Empty, new { @class = "validate-input hide" })
                                 </div>
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <span class="field-validation-valid help-block hide" data-valmsg-for="State" data-valmsg-replace="true"></span>
-                                </div>
-                            </div>
-                        }
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label require">@Lang.PostCode</label>
-                            <div class="col-sm-4">
-                                @Html.TextBoxFor(p => p.Postal, new { @class = "form-control" })
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.Postal, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label require">@Lang.Country</label>
-                            <div class="col-sm-4">
-                                <select class="form-control" name="Country" id="Country" data-val="true" data-val-required="@Lang.CountryErr">
-                                    @{ Html.RenderPartial("~/Views/Signup/_CountryOption.cshtml"); }
-                                </select>
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.Country, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-group website-info">
-                    <div class="title">
-                        <span class="text">@Lang.WebsiteInfor</span>
-                    </div>
-
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <div class="col-sm-4 full">
-                                <label class="radio-inline">
-                                    <input type="radio" name="HasWebSite" value="True" checked="checked" id="hasWebSite" /> <span>@Lang.OwnWebsite</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div id="websiteInfo">
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label require">@Lang.WebsiteURL</label>
-                                <div class="col-sm-4">
-                                    @Html.TextBoxFor(p => p.SiteUrl, new { @class = "form-control" })
-                                </div>
-                                <div class="col-sm-1">
-                                    <button type="button" class="btn btn-submit btn-add-web" id="btnAddUrl" title="@Lang.AddUrl"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-                                </div>
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    @Html.ValidationMessageFor(p => p.SiteUrl, string.Empty, new { @class = "help-block hide" })
+                                <div class="items validate-group">
+                                    <label for="LastName" class="custom-label require">@Lang.LName</label>
+                                    @Html.TextBoxFor(p => p.LastName, new { @class = "form-input" })
+                                    @Html.ValidationMessageFor(x => x.LastName, string.Empty, new { @class = "validate-input hide" })
                                 </div>
                             </div>
 
-                            <input type="hidden" name="MoreSiteUrls" id="MoreSiteUrls" />
-                        </div>
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group">
+                                    <label for="EmailSignup" class="custom-label require">@Lang.EmailSignup</label>
+                                    @Html.TextBoxFor(p => p.Email, new { @class = "form-input" })
+                                    @Html.ValidationMessageFor(x => x.Email, string.Empty, new { @class = "validate-input hide" })
+                                </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-4 full">
-                                <label class="radio-inline">
-                                    <input type="radio" name="HasWebSite" value="False" /> <span>@Lang.NoWebsite</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label require">@SiteFriendlyNameHelper.ReplaceB2C(Lang.DescWebsite)</label>
-                            <div class="col-sm-4">
-                                @Html.TextAreaFor(p => p.NoSiteDesc, new { @class = "form-control", @rows = 5, @disabled = "disabled" })
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(p => p.NoSiteDesc, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-group">
-                    <div class="title">
-                        <span class="text">@Lang.Preference</span>
-                    </div>
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label require">@Lang.Language</label>
-                            <div class="col-sm-4">
-                                <select class="form-control" name="PreferredLanguage" id="PreferredLanguage" data-val="true" data-val-required="@Lang.PreferLangErr">
-                                    <option value="">@Lang.SelectOne</option>
-                                    @foreach (var item in languageService.GetLanguageList())
-                                    {
-                                        <option value="@item.Code">@item.NativeName</option>
-                                    }
-                                </select>
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.PreferredLanguage, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            @{Html.RenderAction("SecurityQuestion", "Signup");}
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.QuestionId, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label require">@Lang.lblYourAnswer</label>
-                            <div class="col-sm-4">
-                                @Html.TextBoxFor(p => p.Answer, new { @class = "form-control" })
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.Answer, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label require">@Lang.Validation</label>
-                            <div class="col-sm-4 preference-validation">
-                                @Html.TextBoxFor(p => p.Captcha, new { @class = "form-control", @autocomplete = "off" })
-                                <div class="captcha">
-                                    <div class="validation-value"><img id="signupCaptcha" src="" alt="captcha" /></div>
+                                <div class="items validate-group">
+                                    <label for="ReEmail" class="custom-label require">@Lang.ReEmail</label>
+                                    @Html.TextBoxFor(p => p.VerifyEmail, new { @class = "form-input" })
+                                    @Html.ValidationMessageFor(x => x.VerifyEmail, string.Empty, new { @class = "validate-input hide" })
                                 </div>
                             </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.Captcha, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="info-group">
-                    <div class="title">
-                        <span class="text">@Lang.PaymentInfor</span>
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group">
+                                    <label for="Phone" class="custom-label require">@Lang.ContactNumber</label>
+                                    @Html.TextBoxFor(p => p.Phone, new { @class = "form-input", @autocomplete = "off" })
+                                    @Html.ValidationMessageFor(x => x.Phone, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+                                @RazorHelper.RenderAppContactItem(AppContact.FirstAppContactName, 0, "ContactAppList[1].Value")
+                            </div>
+                            <div class="form-group form-columns form-columns-2">
+                                @RazorHelper.RenderAppContactItem(secondAppName, 1, "ContactAppList[0].Value")
+                                @RazorHelper.RenderGender()
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-horizontal">
-                        <div class="form-group payment-method">
-                            <label class="col-sm-3 control-label">@Lang.PaymentMethod</label>
-                            <div class="col-sm-4">
-                                <label class="radio-inline">
-                                    <input type="radio" name="Method" checked /> <span>@(SiteFriendlyNameHelper.ReplaceB2C(Lang._B2CPlayerAcc))</span>
-                                </label>
-                            </div>
+                    <div class="info-question">
+                        <div class="title">
+                            <span class="text">@Lang.MailingInfor</span>
                         </div>
-                        <div class="form-group payment-username">
-                            <label class="col-sm-3 control-label require">@SiteFriendlyNameHelper.ReplaceB2C(Lang.UsernameSignUp)</label>
-                            <div class="col-sm-4 preference-validation">
-                                @Html.TextBoxFor(p => p.Player_UserName, new { @class = "form-control", @autocomplete = "off" })
-                            </div>
-                            <div class="col-sm-offset-3 col-sm-9">
-                                @Html.ValidationMessageFor(x => x.Player_UserName, string.Empty, new { @class = "help-block hide" })
-                            </div>
-                        </div>
+                        <div class="body-result">
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group">
+                                    <label for="Address" class="custom-label require">@Lang.Address</label>
+                                    @Html.TextBoxFor(p => p.Address, new { @class = "form-input" })
+                                    @Html.ValidationMessageFor(x => x.Address, string.Empty, new { @class = "validate-input hide" })
+                                </div>
 
-                        <div class="form-group agree-box">
-                            <div class="checkbox chk-agree">
-                                <label>
-                                    <input type="checkbox" name="Agree" id="chkAgree" />@SiteFriendlyNameHelper.ReplaceB2C(Lang.IagreetotheTerm)
-                                </label>
+                                <div class="items validate-group">
+                                    <label for="City" class="custom-label require">@Lang.City</label>
+                                    @Html.TextBoxFor(p => p.City, new { @class = "form-input" })
+                                    @Html.ValidationMessageFor(x => x.City, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+                            </div>
+
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group">
+                                    <label for="Postal" class="custom-label require">@Lang.PostCode</label>
+                                    @Html.TextBoxFor(p => p.Postal, new { @class = "form-input" })
+                                    @Html.ValidationMessageFor(x => x.Postal, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+
+                                <div class="items validate-group">
+                                    <label for="City" class="custom-label require">@Lang.Country</label>
+                                    <select class="form-input form-select" name="Country" id="Country" data-val="true" data-val-required="@Lang.CountryErr">
+                                        @{ Html.RenderPartial("~/Views/Signup/_CountryOption.cshtml"); }
+                                    </select>
+                                    @Html.ValidationMessageFor(x => x.Country, string.Empty, new { @class = "validate-input hide" })
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="info-question">
+                        <div class="title">
+                            <span class="text">@Lang.WebsiteInfor</span>
+                        </div>
+                        <div class="body-result">
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group" id="websiteInfo">
+                                    <div class="radio-group spacing-bt">
+                                        <label class="radio-button">
+                                            <input type="radio" name="HasWebSite" value="True" checked id="hasWebSite" />
+                                            <span class="radio-circle"></span>
+                                            <span class="radio-label require">@Lang.OwnWebsite</span>
+                                        </label>
+                                    </div>
+                                    <div class="input-url">
+                                        <label for="SiteUrl" class="custom-label require">@Lang.WebsiteURL</label>
+                                        <div class="group-input">
+                                            @Html.TextBoxFor(p => p.SiteUrl, new { @class = "form-input" })
+                                            <span class="button-toggle button-toggle-open" id="btnAddUrl" title="@Lang.AddUrl"></span>
+                                        </div>
+                                        @Html.ValidationMessageFor(x => x.SiteUrl, string.Empty, new { @class = "validate-input hide" })
+                                    </div>
 
-                        <div class="button-block">
-                            <button class="btn btn-submit" id="btnSubmit" type="submit" disabled>@Lang.Submit</button>
-                            <button class="btn btn-submit" id="btnReset" type="reset">@Lang.Reset</button>
+                                    <input type="hidden" name="MoreSiteUrls" id="MoreSiteUrls" />
+                                </div>
+                            </div>
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group">
+                                    <div class="radio-group spacing-bt">
+                                        <label class="radio-button">
+                                            <input type="radio" name="HasWebSite" value="False" />
+                                            <span class="radio-circle"></span>
+                                            <span class="radio-label">@Lang.NoWebsite</span>
+                                        </label>
+                                    </div>
+                                    @Html.TextAreaFor(p => p.NoSiteDesc, new { @class = "form-area", @rows = 5, @disabled = "disabled", @placeholder = Lang.DescWebsite })
+                                    @Html.ValidationMessageFor(p => p.NoSiteDesc, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
-        </div>
-    }
-    else
-    {
-        <div class="page-title">
-            <span class="text">@Lang.Error</span>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="error-content">
-                    <div class="img-support">
-                        <img class="img-responsive" src="~/www/build/styles/Images/404-illus.png" alt="404-illus"/>
+                    <div class="info-question">
+                        <div class="title">
+                            <span class="text">@Lang.Preference</span>
+                        </div>
+                        <div class="body-result">
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group">
+                                    <label for="PreferredLanguage" class="custom-label require">@Lang.Language</label>
+                                    <select class="form-input form-select" name="PreferredLanguage" id="PreferredLanguage" data-val="true" data-val-required="@Lang.PreferLangErr">
+                                        <option value="">@Lang.SelectOne</option>
+                                        @foreach (var item in languageService.GetLanguageList())
+                                        {
+                                            <option value="@item.Code">@item.NativeName</option>
+                                        }
+                                    </select>
+                                    @Html.ValidationMessageFor(x => x.Language, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+                                <div class="items validate-group">
+                                    @{Html.RenderAction("SecurityQuestion", "Signup");}
+                                    @Html.ValidationMessageFor(x => x.QuestionId, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+                            </div>
+                            <div class="form-group form-columns form-columns-2">
+                                <div class="items validate-group">
+                                    <label for="lblYourAnswer" class="custom-label require">@Lang.lblYourAnswer</label>
+                                    @Html.TextBoxFor(p => p.Answer, new { @class = "form-input" })
+                                    @Html.ValidationMessageFor(x => x.Answer, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+
+                                <div class="items validate-group">
+                                    <label class="custom-label">@Lang.Validation</label>
+                                    <div class="items validate-group preference-validation">
+                                        @Html.TextBoxFor(p => p.Captcha, new { @class = "form-input", @autocomplete = "off" })
+                                        <div class="captcha">
+                                            <div class="validation-value"><img id="signupCaptcha" src="" alt="captcha" /></div>
+                                        </div>
+                                    </div>
+                                    @Html.ValidationMessageFor(x => x.Captcha, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="error-text">
-                        <p class="text-center">@Html.Raw($"{Lang.InvalidLink} <a href={Url.Content("~/SignUp/Index")}>{Lang.ClickHere}</a>")</p>
+                    <div class="info-question">
+                        <div class="title">
+                            <span class="text">@Lang.PaymentInfor</span>
+                        </div>
+                        <div class="body-result">
+
+
+                            <div class="form-group form-columns group-form group-custom-width">
+                                <div class="form-text">
+                                    @Lang.PaymentMethod
+                                </div>
+                                <div class="radio-group spacing-bt">
+                                    <label class="radio-button">
+                                        <input type="radio" name="Method" checked />
+                                        <span class="radio-circle"></span>
+                                        <span class="radio-label">@(SiteFriendlyNameHelper.ReplaceB2C(Lang._B2CPlayerAcc)) </span>
+                                    </label>
+                                </div>
+                                <div class="items validate-group">
+                                    <label for="Player_UserName" class="custom-label">@SiteFriendlyNameHelper.ReplaceB2C(Lang.UsernameSignUp) <span class="red-color">*</span></label>
+                                    @Html.TextBoxFor(p => p.Player_UserName, new { @class = "form-input", @autocomplete = "off" })
+                                    @Html.ValidationMessageFor(x => x.Player_UserName, string.Empty, new { @class = "validate-input hide" })
+                                </div>
+                            </div>
+                        </div>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="chkAgree" name="Agree" />
+                            <span class="checkmark"></span>
+                            <span class="text-checkbox">@SiteFriendlyNameHelper.ReplaceB2C(Lang.IagreetotheTerm)</span>
+                        </label>
+                        <div class="group-button">
+                            <button class="custom-button custom-button-outline" id="btnReset" type="button">@Lang.Reset</button>
+                            <button class="custom-button custom-button-dash" disabled id="btnSubmit" type="submit">@Lang.Submit</button>
+                        </div>
                     </div>
-                </div>
+
+                    @RazorHelper.RenderMovingTopButton()
+                }
             </div>
         </div>
-    }
+    </div>
 </div>

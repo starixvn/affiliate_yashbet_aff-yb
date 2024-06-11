@@ -892,7 +892,12 @@
     <value>Mẫu đăng ký</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>Cám ơn bạn đã gửi thông tin đăng ký.&lt;br/&gt;&lt;br/&gt;Các trang web và thông tin về đơn của bạn sẽ được nhóm B2C Affiliate xem xét để đảm bảo rằng nội dung là phù hợp để quảng cáo sản phẩm của chúng tôi.&lt;br/&gt;&lt;br/&gt;Trong vòng 5 ngày, chúng tôi sẽ có thể cung cấp cho bạn quyết định liên quan đến đơn của bạn. Nếu bạn được chấp thuận, bạn sẽ có toàn quyền truy cập vào chương trình hội viên của chúng tôi.&lt;br /&gt;&lt;br /&gt;Trân trọng!&lt;br /&gt;&lt;br /&gt;Nhóm quản lý hội viên B2C.&lt;br/&gt;&lt;br/&gt;Mọi thắc mắc và yêu cầu xin vui lòng &lt;a href='{0}'&gt;liên hệ với chúng tôi&lt;/a&gt;.</value>
+    <value>Cám ơn bạn đã gửi thông tin đăng ký.&lt;br/&gt;
+Các trang web và thông tin về đơn của bạn sẽ được nhóm B2C Affiliate xem xét để đảm bảo rằng nội dung là phù hợp để quảng cáo sản phẩm của chúng tôi.&lt;br/&gt;
+Trong vòng 5 ngày, chúng tôi sẽ có thể cung cấp cho bạn quyết định liên quan đến đơn của bạn. Nếu bạn được chấp thuận, bạn sẽ có toàn quyền truy cập vào chương trình hội viên của chúng tôi.&lt;br/&gt;
+Trân trọng!&lt;br/&gt;
+Nhóm quản lý hội viên B2C.&lt;br/&gt;
+Mọi thắc mắc và yêu cầu xin vui lòng &lt;a href='{0}'&gt;liên hệ với chúng tôi&lt;/a&gt;.</value>
   </data>
   <data name="Rejected" xml:space="preserve">
     <value>Bị từ chối</value>
@@ -913,7 +918,7 @@
     <value>Yêu cầu thanh toán thành công!</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>Các trường có dấu &lt;font color="red"&gt;*&lt;/font&gt; phải được hoàn tất</value>
+    <value>Các trường có dấu &lt;span class="red-color"&gt;*&lt;/span&gt; phải được hoàn tất</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>Đặt lại</value>
@@ -1215,7 +1220,7 @@
   <data name="TermAndCondition" xml:space="preserve">
     <value>ĐIỀU KHOẢN &amp; ĐIỀU KIỆN</value>
   </data>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>Cấu Trúc Hoa Hồng</value>
   </data>
   <data name="Product" xml:space="preserve">
@@ -1245,8 +1250,8 @@
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>Tin tức Đại lý B2C</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>MỚI!</value>
+  <data name="New" xml:space="preserve">
+    <value>MỚI</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>Banner quảng cáo đã có!</value>
@@ -1330,7 +1335,7 @@
     <value>Đăng ký chương trình đại lý và hưởng hoa hồng đến {0}!</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>Tham gia ngay!</value>
+    <value>Tham gia ngay</value>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
     <value>Chào Mừng Bạn Đã Trở Lại !</value>
@@ -1605,12 +1610,6 @@
   <data name="Rebate" xml:space="preserve">
     <value>Khuyến Mãi Hoàn Trả</value>
   </data>
-  <data name="SupportTime" xml:space="preserve">
-    <value>Thời Gian Làm Việc:&lt;br/&gt;Thứ Hai - Thứ Bảy | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7</value>
-  </data>
-  <data name="Phone" xml:space="preserve">
-    <value>Điện Thoại</value>
-  </data>
   <data name="PleaseDirectAnyComment" xml:space="preserve">
     <value>Nếu có bất kỳ góp ý hay thắc mắc nào, vui lòng liên hệ:</value>
   </data>
@@ -1770,29 +1769,14 @@
   <data name="MiniGames" xml:space="preserve">
     <value>Mini Games</value>
   </data>
-  <data name="WithMonthlyReward" xml:space="preserve">
-    <value>* Với phần thưởng hàng tháng!</value>
-  </data>
-  <data name="StartEarningNow" xml:space="preserve">
-    <value>Kiếm Tiền &lt;br&gt;Ngay Nào!</value>
-  </data>
-  <data name="CommissionInBanner" xml:space="preserve">
-    <value>Hoa Hồng</value>
-  </data>
   <data name="EmailTittleVerificationAccount" xml:space="preserve">
     <value>Xác minh chi tiết tài khoản của bạn</value>
   </data>
   <data name="SubjectVerificationAccount" xml:space="preserve">
     <value>Chương trình Đại lý B2C - Xác minh chi tiết tài khoản của bạn</value>
   </data>
-  <data name="WithAttractiveReward" xml:space="preserve">
-    <value>* Với phần thưởng hấp dẫn!</value>
-  </data>
   <data name="CompanyNetProfit" xml:space="preserve">
     <value>Tiền lãi ròng của công ty (₫)</value>
-  </data>
-  <data name="FiveMillionAndAbove" xml:space="preserve">
-    <value>5.000.000 trở lên</value>
   </data>
   <data name="TotalActivePlayer" xml:space="preserve">
     <value>Tổng số thành viên hoạt động</value>
@@ -2042,5 +2026,17 @@
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>Quên?</value>
+  </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>Câu hỏi thường gặp</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>Xác minh chi tiết tài khoản của bạn</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Chào mừng</value>
   </data>
 </root>

@@ -19,9 +19,9 @@ exports[`landing page statistics - components - Detail render correctly with hav
             onClick={[Function]}
             sortable={false}
             sorting={false}
-            title="https://aff-b2c.nexdev.net/N88User/UserPanel/Main/#MediaGallery"
+            title="https://aff-yb.nexdev.net/YBUser/UserPanel/Main/#MediaGallery"
           >
-            https://aff-b2c.nexdev.net/N88User/UserPanel/Main/#MediaGallery
+            https://aff-yb.nexdev.net/YBUser/UserPanel/Main/#MediaGallery
           </t>
           <t
             asc={true}

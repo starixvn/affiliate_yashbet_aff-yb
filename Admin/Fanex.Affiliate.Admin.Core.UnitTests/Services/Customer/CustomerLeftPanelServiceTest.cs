@@ -44,7 +44,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.InternalAsianAffiliateUrl).Returns("http://localhost:55690/Auth/AdminLogin");
+            appSetting.Setup(a => a.InternalAffiliateUserSiteURL).Returns("http://localhost:55690/Auth/AdminLogin");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -71,7 +71,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.InternalEuropeanAffiliateUrl).Returns("http://localhost:55690/Auth/AdminLogin");
+            appSetting.Setup(a => a.InternalAffiliateUserSiteURL).Returns("http://localhost:55690/Auth/AdminLogin");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -221,7 +221,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.AsianAffSiteUrl).Returns("https://aff-yb.nexdev.net/YBUser");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("https://aff-yb.nexdev.net/YBUser");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -253,7 +253,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.AsianAffSiteUrl).Returns("https://aff-yb.nexdev.net/YBUser");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("https://aff-yb.nexdev.net/YBUser");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -285,7 +285,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         {
             // Arrange
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.AsianAffSiteUrl).Returns("https://aff-yb.nexdev.net/YBUser");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("https://aff-yb.nexdev.net/YBUser");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -321,7 +321,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
             MockingHelper.SetUpHttpContextSession();
             MockingHelper.SetUpLogEngineEnviroment();
             var appSetting = new Mock<IAppSetting>();
-            appSetting.Setup(a => a.AsianAffSiteUrl).Returns("https://aff-yb.nexdev.net/YBUser");
+            appSetting.Setup(a => a.AffUserSiteURL).Returns("https://aff-yb.nexdev.net/YBUser");
 
             var builder = new ContainerBuilder();
             builder.RegisterInstance(appSetting.Object).As<IAppSetting>();
@@ -380,7 +380,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
             var fakeCustomerLeftPanelRepository = customerLeftPanelRepository ?? Mock.Of<ICustomerLeftPanelRepository>();
             var fakeThirdPartyLicenseeService = thirdPartyLicenseeService ?? Mock.Of<IThirdPartyLicenseeService>();
 
-            return new CustomerLeftPanelService(fakeEmailService, fakeAffiliateService, fakeCustomerLeftPanelRepository, fakeThirdPartyLicenseeService);
+            return new CustomerLeftPanelService(Mock.Of<IAppSetting>(), fakeEmailService, fakeAffiliateService, fakeCustomerLeftPanelRepository, fakeThirdPartyLicenseeService);
         }
     }
 }

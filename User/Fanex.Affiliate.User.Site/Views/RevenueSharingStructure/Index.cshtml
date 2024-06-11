@@ -1,0 +1,35 @@
+﻿@using Fanex.Affiliate.User.Core.Constants
+@model Fanex.Affiliate.User.Core.ViewModels.RevenueSharingStructureViewModel
+
+@{
+    ViewBag.Title = Lang.RevenueSharingStructure;
+    Layout = "~/Views/Shared/_LayoutBeforeLogin.cshtml";
+}
+@{
+    var htmlString = Html.RenderPartialByLanguage("~/Views/RevenueSharingStructure/_Content", Model.CurrentLanguage, Model).ToHtmlString();
+}
+@section styles{
+    <link href="@Url.RenderLink("~/www/build/styles/css/sharing-structure.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    @Html.InlineScripts("~/www/build/js/left-menu-panel.js")
+    @Html.InlineScripts("~/www/build/js/pages/sharing-structure.js")
+}
+
+<div class="page-container">
+    <div class="main-content">
+        @RazorHelper.RenderLeftPanel(Menu.RevenueSharingMenuList)
+        <div class="content">
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span class="text">@Lang.RevenueSharingStructure</span>
+                </h2>
+            </div>
+
+            @Html.Raw(htmlString)
+
+            @RazorHelper.RenderMovingTopButton()
+        </div>
+    </div>
+</div>

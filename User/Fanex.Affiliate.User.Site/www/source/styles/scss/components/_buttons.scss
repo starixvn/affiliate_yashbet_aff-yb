@@ -1,7 +1,7 @@
 ﻿.btn {
     display: inline-block;
     padding: 0 8px;
-    height: 25px;
+    height: 28px;
     line-height: 1;
     text-transform: uppercase;
     transition: all .2s ease;
@@ -23,14 +23,11 @@
     padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 15px;
-
-    @media (max-width: 768px) {
-    }
 }
 
 .btn-signup, .btn-login, .btn-link, .btn-login-mobile {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 24px;
 
     &:focus {
         outline: none;
@@ -66,23 +63,9 @@
     line-height: 1.42857;
 }
 
-.btn-move-top {
-    background: #dcdc1a;
-    opacity: 0.3;
-
-    &:hover {
-        background: #fbfb07;
-        opacity: 1;
-    }
-
-    &:focus {
-        outline: none;
-    }
-}
 
 .btn-login-mobile {
     display: inline-block;
-    margin-right: 8px !important;
 }
 
 .btn-transparent {
@@ -94,6 +77,30 @@
         color: cornflowerblue;
     }
 }
+
+.button-bg {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 8px 20px 8px 45px;
+    border-radius : 100px;
+    display : inline-block;
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.view-more{
+    @include Mobile{
+        text-align : center;
+    }
+}
+
+
+
+
 
 @media (min-width: 992px) {
     #mobileLogin {
@@ -109,4 +116,77 @@
         align-items: center;
         justify-content: center;
     }
-} 
+}
+
+.group-button {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 52px;
+
+    @include Mobile {
+        justify-content: center;
+    }
+
+    .custom-button {
+        padding: 8px 20px 8px 45px;
+    }
+}
+
+.custom-button {
+    background: #F42A41;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid #f42a41;
+    white-space: nowrap;
+
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+    &-outline, &-cancel {
+        color: #F42A41;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: 20px center;
+
+        &:hover {
+            color: #F42A41;
+        }
+
+        @include Mobile {
+            width: 50%;
+            background-position: 40px center;
+        }
+    }
+
+    &-outline {
+        background-image: url('../../../build/styles/Images/icons/reset.svg');
+    }
+
+    &-cancel {
+        background-image: url('../../../build/styles/Images/icons/file-cancel-line.svg');
+    }
+
+    &-dash {
+        background-image: url('../../../build/styles/Images/icons/send-plane-fill.svg');
+        background-repeat: no-repeat;
+        background-position: 20px center;
+
+        @include Mobile {
+            width: 50%;
+            background-position: 30px center;
+        }
+    }
+}
+.custom-button[disabled] {
+    cursor: no-drop;
+}

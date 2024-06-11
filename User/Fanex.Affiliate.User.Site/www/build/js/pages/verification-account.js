@@ -50,7 +50,7 @@ var VerificationAccount = (function () {
     var _countdownResendCodeTimeoutId = null;
     var INTERVAL_SENDCODE_SECOND = 60;
     var REFRESH_CAPTCHA_INTERVAL = 600000;
-    var _originalSendCodeText = null;
+    var _originalSendCodeHtml = null;
 
     function registerRefreshCaptcha() {
         function refreshCaptcha() {
@@ -81,7 +81,7 @@ var VerificationAccount = (function () {
 
     var _me = {
         initialize: function () {
-            _originalSendCodeText = $('#btnSendCode').text();
+            _originalSendCodeHtml = $('#btnSendCode').html();
             _me.initEvent();
             registerRefreshCaptcha();
         },
@@ -168,11 +168,11 @@ var VerificationAccount = (function () {
         countDown: function (second) {
             clearTimeout(_countdownResendCodeTimeoutId);
             if (second === 0) {
-                $('#btnSendCode').text(_originalSendCodeText);
+                $('#btnSendCode').html(_originalSendCodeHtml);
                 $('#btnSendCode').prop('disabled', false);
                 $('#Email').prop('disabled', false);
             } else {
-                $('#btnSendCode').text(_originalSendCodeText + ' (' + second + ')');
+                $('#btnSendCode').html(_originalSendCodeHtml + ' (' + second + ')');
                 _countdownResendCodeTimeoutId = setTimeout(_me.countDown, 1000, --second);
             }
         },

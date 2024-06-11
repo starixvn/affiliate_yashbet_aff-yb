@@ -6,7 +6,7 @@
 
 @helper RenderQrItem(Fanex.Affiliate.User.Core.ViewModels.UserPanel.Marketing.QrCodeLinkViewModel item)
 {
-var defaultImg = Url.Content("~/www/build/styles/Images/account-overview/qr-disabled.png");
+var defaultImg = Url.Content("~/www/build/styles/Images/account-overview/qr-disabled.svg");
 var disabled = item.IsShow ? "" : "disabled";
 var checkStatus = item.IsShow ? "checked" : "";
 var downloadName = item.DisplayName + "_qrcode";
@@ -26,21 +26,48 @@ var selectedLinkType = (int)ViewBag.SelectedLinkType;
                 <img class="qrcode" src="@item.QrCode" alt="QR code" />
             </div>
             <div class="qr-action">
-                <div class="flex space-between">
+                <div class="flex space-between lang-button-toggle">
                     <div><label>@item.Language.NativeName</label></div>
                     <div class="toggle-btn"><input class="toggle-link" type="checkbox" data-toggle="toggle" data-width="27" @checkStatus /></div>
                 </div>
                 <div class="qr-btn-group">
-                    <button @disabled class="btn-copy-qr">@Lang.CopyQRCode</button>
+                    <button @disabled class="btn-copy-qr">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4.66667 4.00065V2.00065C4.66667 1.82384 4.7369 1.65427 4.86193 1.52925C4.98695 1.40422 5.15652 1.33398 5.33333 1.33398H13.3333C13.5101 1.33398 13.6797 1.40422 13.8047 1.52925C13.9298 1.65427 14 1.82384 14 2.00065V11.334C14 11.5108 13.9298 11.6804 13.8047 11.8054C13.6797 11.9304 13.5101 12.0007 13.3333 12.0007H11.3333V14.0007C11.3333 14.3687 11.0333 14.6673 10.662 14.6673H2.67133C2.58342 14.6678 2.49626 14.651 2.41488 14.6177C2.3335 14.5845 2.25949 14.5355 2.19711 14.4735C2.13472 14.4116 2.0852 14.3379 2.05137 14.2568C2.01754 14.1756 2.00009 14.0886 2 14.0007L2.002 4.66732C2.002 4.29932 2.302 4.00065 2.67333 4.00065H4.66667ZM6 4.00065H11.3333V10.6673H12.6667V2.66732H6V4.00065ZM4.66667 7.33398V8.66732H8.66667V7.33398H4.66667ZM4.66667 10.0007V11.334H8.66667V10.0007H4.66667Z" fill="white" />
+                        </svg>
+                        @Lang.CopyQRCode
+                    </button>
                     <button class="btn-save-img" @disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2.66667 2H11.3333L13.8047 4.47133C13.9297 4.59633 14 4.76587 14 4.94267V13.3333C14 13.5101 13.9298 13.6797 13.8047 13.8047C13.6797 13.9298 13.5101 14 13.3333 14H2.66667C2.48986 14 2.32029 13.9298 2.19526 13.8047C2.07024 13.6797 2 13.5101 2 13.3333V2.66667C2 2.48986 2.07024 2.32029 2.19526 2.19526C2.32029 2.07024 2.48986 2 2.66667 2ZM8 12C8.53043 12 9.03914 11.7893 9.41421 11.4142C9.78929 11.0391 10 10.5304 10 10C10 9.46957 9.78929 8.96086 9.41421 8.58579C9.03914 8.21071 8.53043 8 8 8C7.46957 8 6.96086 8.21071 6.58579 8.58579C6.21071 8.96086 6 9.46957 6 10C6 10.5304 6.21071 11.0391 6.58579 11.4142C6.96086 11.7893 7.46957 12 8 12ZM3.33333 3.33333V6H10V3.33333H3.33333Z" fill="#AE8F56" />
+                        </svg>
                         @Lang.SaveQRCode
+                    </button>
+                </div>
+                <div class="qr-footer">
+                    <button class="btn-copy-link" @disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="26" viewBox="0 0 9 26" fill="none">
+                            <g filter="url(#filter0_i_2911_3776)">
+                                <path d="M3.23971 4.94185C3.67712 2.09874 6.12344 0 9 0V0V26H0L3.23971 4.94185Z" fill="#E5EFFF" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_i_2911_3776" x="0" y="0" width="9" height="26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dx="1" dy="0.8" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.823529 0 0 0 0 0.823529 0 0 0 0 0.823529 0 0 0 1 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_2911_3776" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        @Lang.CopyLink
                     </button>
                 </div>
             </div>
         </div>
-        <div class="qr-footer">
-            <button class="btn-copy-link" @disabled>@Lang.CopyLink</button>
-        </div>
+        
     </div>
 }
 
@@ -55,4 +82,4 @@ var selectedLinkType = (int)ViewBag.SelectedLinkType;
 </div>
 <script src="@Url.RenderLink("~/www/build/js/lib/bootstrap2-toggle.js")"></script>
 <script src="~/www/source/js/components/clipboard.min.js"></script>
-<script src="@Url.RenderLink("~/www/build/js/generated-qrcode.js")"></script>
+<script src="@Url.RenderLink("~/www/build/js/pages/generated-qrcode.js")"></script>

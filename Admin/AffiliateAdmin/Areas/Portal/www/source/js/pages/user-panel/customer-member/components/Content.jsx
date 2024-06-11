@@ -12,7 +12,8 @@ export class Content extends PureComponent {
         super(props);
 
         this.state = {
-            data: null
+            data: null,
+            canViewMemberEmail: false
         }
     }
 
@@ -30,8 +31,8 @@ export class Content extends PureComponent {
         const postParam = { ...param, affId: this.props.affId };
         const data = await this.props.fetchData(postParam);
 
-        this.setState({ data: data ? data.MainData : null });
-        this.props.setPagingOption({ TotalItem: data ? data.TotalItem : 0, PageIndex: param.pageIndex, PageSize: param.pageSize });
+        this.setState({ data: data ? data.EntityResult.MainData : null, canViewMemberEmail: data && data.CanViewMemberEmail });
+        this.props.setPagingOption({ TotalItem: data ? data.EntityResult.TotalItem : 0, PageIndex: param.pageIndex, PageSize: param.pageSize });
 
         this.props.toggleLoaderUserPanel(false);
     }
@@ -42,14 +43,14 @@ export class Content extends PureComponent {
         this.fetchData(newParam);
     }
 
-    _renderHeader() {
+    _renderHeader(canViewMemberEmail) {
         return (
             <Row>
                 <Cell header={true} colWidth={30}>#</Cell>
                 <Cell header={true} colWidth={100} title={resource.UserName}>{resource.UserName}</Cell>
                 <Cell header={true} colWidth={100} title={resource.FirstName}>{resource.FirstName}</Cell>
                 <Cell header={true} colWidth={100} title={resource.LastName}>{resource.LastName}</Cell>
-                {this.props.canViewMemberEmail && (<Cell header={true} colWidth={100} title={resource.EmailAddress}>{resource.EmailAddress}</Cell>)}
+                {canViewMemberEmail && (<Cell header={true} colWidth={100} title={resource.EmailAddress}>{resource.EmailAddress}</Cell>)}
                 <Cell header={true} colWidth={50} title={resource.Currency}>{resource.Currency}</Cell>
                 <Cell header={true} colWidth={100} title={resource.RegisterDate}>{resource.RegisterDate}</Cell>
             </Row>
@@ -78,7 +79,7 @@ export class Content extends PureComponent {
         return dataRows;
     }
 
-    _buildDataRow(dataItem, rowNumber) {
+    _buildDataRow(dataItem, rowNumber, canViewMemberEmail) {
         const userName = htmlDecode(dataItem.UserName);
         const firstName = htmlDecode(dataItem.FirstName);
         const lastName = htmlDecode(dataItem.LastName);
@@ -89,7 +90,7 @@ export class Content extends PureComponent {
                 <Cell title={userName}>{userName}</Cell>
                 <Cell title={firstName}>{firstName}</Cell>
                 <Cell title={lastName}>{lastName}</Cell>
-                {this.props.canViewMemberEmail && (<Cell title={email}>{email}</Cell>)}
+                {canViewMemberEmail && (<Cell title={email}>{email}</Cell>)}
                 <Cell className="text-center" title={dataItem.CurrencyName}>{dataItem.CurrencyName}</Cell>
                 <Cell className="text-center" title={dataItem.RegisteredDateString}>{dataItem.RegisteredDateString}</Cell>
             </Row>
@@ -98,15 +99,15 @@ export class Content extends PureComponent {
 
     render() {
         const { pagingOption } = this.props;
-        const { data } = this.state;
+        const { data, canViewMemberEmail } = this.state;
 
         return data && (
             <div className="table-responsive table-striped my-2">
                 <Table
                     maxWidth={maxWidth}
                     bodyHeight={300}
-                    header={this._renderHeader()}
-                    body={this._renderDataSection(data)}
+                    header={this._renderHeader(canViewMemberEmail)}
+                    body={this._renderDataSection(data, canViewMemberEmail)}
                     containerPadding={10}
                     isPaging={true}
                     pageOption={pagingOption}
@@ -118,10 +119,10 @@ export class Content extends PureComponent {
 }
 
 function mapStateToProps({ affCommonInfo, member }) {
-    const { param, canViewMemberEmail, pagingOption } = member;
+    const { param, pagingOption } = member;
     const { affId } = affCommonInfo;
 
-    return Object.assign({}, { affId, param, pagingOption, canViewMemberEmail });
+    return Object.assign({}, { affId, param, pagingOption });
 }
 
 function mapDispatchToProps(dispatch) {

@@ -28,7 +28,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services
         {
             MailProcessor = Substitute.For<IMailProcessor>();
             AppSetting = Substitute.For<IAppSetting>();
-            AppSetting.GetAppMailIdByShortedLanguageCode(Arg.Any<string>()).Returns("3");
+            AppSetting.AppMailId.Returns("3");
             LanguageService = Substitute.For<ILanguageService>();
         }
 
@@ -62,7 +62,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services
 
             //Assert
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailBase>());
-            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), Lang.EmailSubjectAffInfor, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), Lang.EmailSubjectAffInfor);
         }
 
         [Fact]
@@ -95,7 +95,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services
 
             //Assert
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<EmailBase>());
-            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), Lang.EmailSubjectAffInfor, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), Lang.EmailSubjectAffInfor);
         }
 
         [Fact]
@@ -118,7 +118,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services
 
             //Assert
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<PaymentRequestUpdateEmail>());
-            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), string.Format(Lang.EmailSubjectPaymentRequestApproved, emailParam.TransId), Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), string.Format(Lang.EmailSubjectPaymentRequestApproved, emailParam.TransId));
         }
 
         [Fact]
@@ -140,7 +140,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services
 
             //Assert
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<PaymentRequestUpdateEmail>());
-            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), string.Format(Lang.EmailSubjectPaymentRequestRejected, emailParam.TransId), Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), string.Format(Lang.EmailSubjectPaymentRequestRejected, emailParam.TransId));
         }
 
         [Fact]
@@ -161,7 +161,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services
 
             //Assert
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<AffInformationEmail>());
-            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), Lang.EmailSubjectAffDisapproved, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), Lang.EmailSubjectAffDisapproved);
         }
 
         [Fact]
@@ -181,7 +181,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services
 
             //Assert
             MailProcessor.Received().BuildTemplateContent(Arg.Compat.Any<string>(), Arg.Compat.Any<string>(), Arg.Compat.Any<AffInformationEmail>());
-            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), Lang.EmailSubjectAffDisapproved, Arg.Compat.Any<string>());
+            MailProcessor.Received().Send(mainContent, Arg.Compat.Any<string>(), Lang.EmailSubjectAffDisapproved);
         }
 
         private EmailService CreateEmailService()

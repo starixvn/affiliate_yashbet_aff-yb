@@ -176,7 +176,7 @@ describe('user account actions', () => {
     it('should create action to getPaymentMethod', async () => {
         const paymentMethod = {
             PaymentMethods: [
-                { Key: 'Player', Value: 'Bwing Player Account' },
+                { Key: 'Player', Value: 'YashBet Player Account' },
                 { key: 'Moneybookers', value: 'Moneybookers' },
                 { key: 'Wire', value: 'Bank Transfer' }
             ],

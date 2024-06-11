@@ -20,7 +20,7 @@ var Site = (function ($) {
     var _me = {
         initialize: function initialize() {
             _rootUrl = $("#RootUrl").val();
-            _language = $("#Language").val();
+            _language = $("#CurrentLanguage").val();
         },
         resolveRelativeUrl: function resolveRelativeUrl(url) {
             return _rootUrl + url;
@@ -99,7 +99,7 @@ var Site = (function ($) {
 
         toggleErrorMessage: function toggleErrorMessage($container, isValid) {
             $container.toggleClass("has-error", !isValid);
-            $container.find(".help-block").toggleClass("hide", isValid);
+            $container.find(".validate-input").toggleClass("hide", isValid);
         },
 
         changeLanguage: function changeLanguage(selectedLanguage) {

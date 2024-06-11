@@ -9,13 +9,9 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         string MailContact { get; }
 
-        string GetMailContactByLanguageCode(string languageCode);
-
         string AppMailId { get; }
 
         string AppMailAddress { get; }
-
-        string GetAppMailIdByLanguageCode(string languageCode);
 
         string Environment { get; }
 
@@ -31,15 +27,13 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         string JsVersion { get; }
 
-        string PromotionYashBetLink { get; }
+        string PromotionYBLink { get; }
 
         bool IsEuroSite { get; }
 
         string TextLinkTemplate { get; }
 
         string BannerDomain { get; }
-
-        string MediaScriptUrl { get; }
 
         string MailCc { get; }
 
@@ -81,9 +75,15 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
         string MemberSiteProxyUrl { get; }
 
-        string MemberSiteApiAuthenticationKey { get; }
+        string MemberSiteApiUsername { get; }
+
+        string MemberSiteApiPassword { get; }
+
+        int MemberSiteApiTokenCacheTimeOut { get; }
 
         bool IsUseMemberSiteProxy { get; }
+
+        bool IsShowUusBaseCurrency { get; }
 
         string CurrencySymbol { get; }
 

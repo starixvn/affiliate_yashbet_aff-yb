@@ -7,28 +7,6 @@
 .btn-statistics {
     margin-right: 0;
 }
-
-#statisticsDetailTable {
-    margin-top: 15px;
-}
-
-#statisticsDetailPager {
-    //width: 70%;
-    margin: 4rem 0 1.6rem;
-
-    @include TableAndMobile {
-        width: 100%;
-    }
-
-    @include Mobile {
-        margin: 2.4rem 0 .8rem;
-    }
-
-    & + #statisticsDetailTable {
-        margin-top: 0;
-    }
-}
-
 .overview-table {
     //width: 70%;
     margin: 0;
@@ -36,6 +14,10 @@
     @include TableAndMobile {
         width: 100% !important;
     }
+}
+
+.group-checkbox{
+    max-width : 260px !important;
 }
 
 #TrackingCode {

@@ -21,9 +21,11 @@
 @import "./components/login-dialog";
 @import './components/left-panel-menu';
 @import './components/alert';
+@import './components/block';
+@import './components/faq';
 
 #statementPager {
-    margin: 16px 0;
+    margin: 16px 0 0;
 }
 
 .main.after-login {
@@ -35,12 +37,13 @@
 
 .main-content {
     display: flex;
-    gap: 4.8rem;
-    margin: 2.4rem auto;
+    gap: 2.4rem;
+    margin: 4rem auto;
     justify-content: center;
 
-    @include Tablet {
+    @include TableAndMobile {
         gap: 2rem;
+        margin: 3.2rem auto 0;
     }
 
     @media only screen and (max-width: 1199px) {
@@ -48,11 +51,10 @@
     }
 
     .content {
-        max-width: 90rem;
-        width: 100%;
+        width: calc(100% - 332px);
 
         @include TableAndMobile {
-            padding-top: 5.6rem;
+            width: 100%;
         }
     }
 
@@ -180,30 +182,11 @@
         margin-top: 1.7rem;
 
         tr {
-            background: #FFFFFF !important;
+            background: #FFFFFF;
         }
     }
 }
 
-.moving-block {
-    bottom: 14.6rem;
-
-    @media screen and (max-width: 1199px) {
-        right: 0;
-    }
-
-    .btn-move-top {
-        background: #FFFFFF;
-        box-shadow: 0px 6px 7px rgba(77, 77, 77, 0.25);
-        width: 4rem;
-        height: 4rem;
-        opacity: 1;
-
-        i {
-            color: #FF5D00;
-        }
-    }
-}
 
 @media screen and (min-width: 320px) and (max-width: 928px) and (orientation: landscape) {
     .left-panel.active {

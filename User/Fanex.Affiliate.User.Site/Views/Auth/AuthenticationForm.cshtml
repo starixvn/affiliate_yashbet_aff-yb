@@ -10,18 +10,29 @@
         <div class="login-before user-login">
             <div class="group">
                 <span class="mdi mdi-account"></span>
-                <input class="text-field" id="txtUsername" type="text" placeholder="@Lang.Username" />
+                <div class="text-field">
+                    <input id="txtUsername" type="text" placeholder="@Lang.Username" />
+                </div>
             </div>
             <div class="group">
                 <span class="mdi mdi-lock"></span>
-                <input class="text-field" id="txtPassword" type="password" placeholder="@Lang.Password" />
+                <div class="text-field">
+                    <input id="txtPassword" type="password" placeholder="@Lang.Password" />
+                    <a class="btn-forgot" tabindex="-1" href="@Url.Content("~/Password")">@Lang.Forgot</a>
+                </div>
             </div>
-            <input class="text-field validation" id="txtValidation" type="text" placeholder="@Lang.Validation" />
+            <div class="group">
+                <span class="mdi mdi-edit"></span>
+                <div class="text-field field-validate">
+                    <input class="validation" id="txtValidation" type="text" placeholder="@Lang.Validation" />
+                </div>
+            </div>
+            
             <div class="validation-value"><img src="@Url.Content("~/Auth/CaptchaImage")" alt="captcha" id="captchaImg" /></div>
-            <a class="btn btn-forgot" href="@Url.Content("~/Password")">
+            @*<a class="btn btn-forgot" href="@Url.Content("~/Password")">
                 <span class="mdi mdi-lock-open"></span>
                 <span class="title-forgot">@Lang.ForgetPassword</span>
-            </a>
+            </a>*@
             @Html.AntiForgeryToken()
             @if (!string.IsNullOrEmpty(Model.PublicKey))
             {

@@ -4,6 +4,6 @@
     {
         string BuildTemplateContent(string path, string pathBackup, object model);
 
-        void Send(string content, string mailTo, string subject, string shortedLanguageCode);
+        void Send(string content, string mailTo, string subject);
     }
 }

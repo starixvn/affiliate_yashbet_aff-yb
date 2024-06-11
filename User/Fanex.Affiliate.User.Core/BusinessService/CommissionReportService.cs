@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using Fanex.Affiliate.User.Core.Constants;
+﻿using Fanex.Affiliate.User.Core.Constants;
 using Fanex.Affiliate.User.Core.DTO.UserPanel;
 using Fanex.Affiliate.User.Core.MetalModels.UserPanel;
 using Fanex.Affiliate.User.Core.Repository.UserPanel;
 using Fanex.Affiliate.User.Core.Resources;
 using Fanex.Affiliate.User.Core.ViewModels.UserPanel;
+using System.Linq;
 
 namespace Fanex.Affiliate.User.Core.BusinessService
 {

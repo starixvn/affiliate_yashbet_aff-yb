@@ -35,7 +35,9 @@ namespace Fanex.Affiliate.User.Core.Constants
 
         public const string EnglishLanguageCode = "en-US";
 
-        public const string IndonesiaLanguageCode = "id-ID";
+        public const string IndiaLanguageCode = "hi-IN";
+
+        public const string BangladeshLanguageCode = "bn-BD";
 
         public static string GetUppercaseShortedCode(string languageCode)
         {

@@ -9,7 +9,6 @@
     using MetalModels.Email;
     using MetalModels.UserPanel;
     using Resources;
-    using System;
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web.Mvc;
@@ -74,7 +73,7 @@
 
                 var emailParam = new PaymentEmailParam
                 {
-                    MailContact = _appSetting.GetMailContactByLanguageCode(SessionService.UserSession.PreferredLanguage),
+                    MailContact = _appSetting.MailContact,
                     DefaultCurrency = _appSetting.DefaultCurrency,
                     RootDomain = SiteDomainHelper.GetRootUrl(this, _appSetting)
                 };
@@ -108,7 +107,7 @@
 
                 var emailParam = new PaymentEmailParam
                 {
-                    MailContact = _appSetting.GetMailContactByLanguageCode(SessionService.UserSession.PreferredLanguage),
+                    MailContact = _appSetting.MailContact,
                     DefaultCurrency = _appSetting.DefaultCurrency,
                     RootDomain = SiteDomainHelper.GetRootUrl(this, _appSetting),
                     Amount = cancelParam.Amount,

@@ -2,15 +2,11 @@
     overflow-x: hidden;
 }
 
-.main {
-    display: flex;
-    flex: 1 1 auto;
-    min-height: 1px;
-}
-
 .page-container {
-    max-width: calc(100% - 400px);
-    flex-basis: calc(100% - 400px);
+    /*max-width: calc(100% - 400px);
+    flex-basis: calc(100% - 400px);*/
+    max-width : 1224px;
+    padding : 0 12px;
     margin: 0 auto;
 }
 
@@ -286,47 +282,29 @@ $height-hotnew: 30px;
     }
 }
 .hot-news {
-    display: flex;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
     position: relative;
+    padding: 8px 0;
+    @include Mobile {
+        padding: 4px 0;
+    }
 
     .inner {
-        max-width: 1320px;
+        max-width: 1224px;
         display: flex;
         flex: 1;
         margin: 0 auto;
+        padding: 0 12px;
     }
 
     .title {
         position: relative;
-        padding: 0 30px;
-        height: $height-hotnew;
-        line-height: $height-hotnew;
-        margin-right: 35px;
         margin-left: 0;
-        padding-left: 44px;
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 700;
 
-        &:before {
-            content: url("../../../../../www/build/styles/Images/home/hot-news/left-badge-after.png");
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        &:after {
-            content: url("../../../../../www/build/styles/Images/home/hot-news/right-badge.png");
-            width: 40px;
-            height: 30px;
-            border: 0 !important;
-            position: absolute;
-            top: 0;
-            right: -32px;
+        img {
+            margin-right: 8px;
         }
     }
 
@@ -336,8 +314,7 @@ $height-hotnew: 30px;
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        padding: 0 10px;
-        line-height: $height-hotnew;
+        padding: 0 12px;
         font-size: 14px;
         color: #333333;
 
@@ -349,7 +326,7 @@ $height-hotnew: 30px;
 
 // --------------------------------- image responsive ------------------- //
 .adv-contact {
-    background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.desktop.png");
+    background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.desktop.png");
     position: relative;
     z-index: 1;
 
@@ -367,7 +344,7 @@ $height-hotnew: 30px;
 }
 /*
 .adv-contact {
-    background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.webp");
+    background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.webp");
 }*/
 
 .adv-contact {
@@ -388,7 +365,6 @@ $height-hotnew: 30px;
 
     .text-1 {
         margin-top: 10px;
-        font-size: 23px;
         font-style: italic;
         font-weight: 700;
         font-size: 20px;
@@ -451,7 +427,7 @@ $height-hotnew: 30px;
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
     .adv-contact {
         padding: 6px 27% 18px 18px;
-        background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.tablet2.png");
+        background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.tablet2.png");
 
         .text-1 {
             margin-top: 13px;
@@ -473,7 +449,7 @@ $height-hotnew: 30px;
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
     .adv-contact {
         padding: 17px 27% 26px 26px;
-        background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.tablet.png");
+        background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.tablet.png");
 
         .text-3 {
             padding-right: 130px;
@@ -487,28 +463,8 @@ $height-hotnew: 30px;
             font-size: 12px;
             height: 26px;
             line-height: 26px;
-            margin-left: 18px;
-            margin-right: 18px;
             padding: 0;
             z-index: 2;
-
-            &:before {
-                content: "";
-                background: url("../../../../../www/build/styles/Images/home/hot-news/left-badge.mobile.png") no-repeat center center / cover;
-                width: 26px;
-                height: 26px;
-                left: -18px;
-                z-index: -2;
-            }
-
-            &:after {
-                content: "";
-                background: url("../../../../../www/build/styles/Images/home/hot-news/right-badge.mobile.png") no-repeat center center/ cover;
-                width: 26px;
-                height: 26px;
-                right: -18px;
-                z-index: -2;
-            }
         }
 
         .message {
@@ -520,10 +476,9 @@ $height-hotnew: 30px;
 
     .adv-contact {
         padding: 7px 31% 7px 7px;
-        background-image: url("../../../../../www/build/styles/Images/contact-in-home/bg_contact.mobile.png");
+        background-image: url("../../../../www/build/styles/Images/home/contacts/bg_contact.mobile.png");
 
         .text-1 {
-            margin-bottom: 0;
             margin-top: 0;
             font-size: 14px;
             line-height: 18px;

@@ -78,7 +78,7 @@ exports[`user account - components - sections - Payment render correctly 1`] = `
       }
       xl={2}
     >
-      Bwing User Name
+      YashBet User Name
     </Label>
     <Col
       sm={5}

@@ -21,7 +21,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
         private readonly IAppSetting AppSetting;
         private readonly ISessionService sessionService;
         private readonly IAccountRepository accountRepository;
-        private readonly ICurrencyRepository currencyRepository;
+        private readonly ICurrencyService currencyService;
         private readonly IPlayerTransferBalanceService playerTransferBalanceService;
 
         public PlayerTransferBalanceHistoryControllerTest()
@@ -29,7 +29,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
             AppSetting = Substitute.For<IAppSetting>();
             sessionService = NSubtituteMockingHelper.FakeSessionService();
             accountRepository = Substitute.For<IAccountRepository>();
-            currencyRepository = Substitute.For<ICurrencyRepository>();
+            currencyService = Substitute.For<ICurrencyService>();
             playerTransferBalanceService = Substitute.For<IPlayerTransferBalanceService>();
         }
 
@@ -60,7 +60,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
         public void GetHistory_WhenCall_ReturnCorrectView(int playerCurrencyId)
         {
             accountRepository.GetAccountInfo(Arg.Compat.Any<int>()).Returns(new AccountInformation { PlayerCurrencyId = playerCurrencyId });
-            currencyRepository.GetBaseCurrencyList().Returns(new List<Currency>
+            currencyService.GetBaseCurrencyList().Returns(new List<Currency>
             {
                 new Currency { ExchangeId = 1, Code = "USD"},
                 new Currency { ExchangeId = 3, Code = "IDR"}
@@ -110,7 +110,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
         private PlayerTransferBalanceHistoryController CreateController()
         {
 
-            var controler = new PlayerTransferBalanceHistoryController(AppSetting, sessionService, null, currencyRepository, playerTransferBalanceService, accountRepository);
+            var controler = new PlayerTransferBalanceHistoryController(AppSetting, sessionService, null, currencyService, playerTransferBalanceService, accountRepository);
 
             return MockingHelper.FakeController(controler) as PlayerTransferBalanceHistoryController;
         }

@@ -1,17 +1,17 @@
 ﻿(function ($) {
     $.validator.setDefaults({
         highlight: function (element) {
-            var $container = $(element).closest(".form-group");
+            var $container = $(element).closest(".validate-group");
             $container.addClass("has-error");
-            $container.find(".help-block").removeClass("hide");
+            $container.find(".validate-input").removeClass("hide");
         },
         unhighlight: function (element) {
-            var $container = $(element).closest(".form-group");
+            var $container = $(element).closest(".validate-group");
             $container.removeClass("has-error");
-            $container.find(".help-block").addClass("hide");
+            $container.find(".validate-input").addClass("hide");
         },
         errorElement: 'span',
-        errorClass: 'help-block hide'
+        errorClass: 'validate-input hide'
     });
 
     $.validator.unobtrusive.adapters.add("requiredbychecked", ["dependentprop", "checked"],

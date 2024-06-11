@@ -5,46 +5,60 @@
 @Html.InlineStyles("~/www/build/styles/css/statistics.css")
 
 @model Fanex.Affiliate.User.Core.ViewModels.UserPanel.Statistics.MarketingPageStatisticsViewModel
-<div class="sub-content">
-    <div class="page-title">
-        <span class="text">@Lang.MarketLinkStatistics</span>
+
+<div class="wraper-block">
+    <div class="group-title">
+        <h2 class="title-block">
+            <span class="text">@Lang.MarketLinkStatistics</span>
+        </h2>
     </div>
     <div class="info-group">
-        <div class="group-control-select-table">
-            <form class="form-inline form-filter">
-                <div class="form-group">
-                    <label>@Lang.From:</label>
+        <form class="form form-filter">
+            <div class="group-control-form">
+                <div class="group-input">
+                    <label class="custom-label">@Lang.From:</label>
                     <div id="fromPicker" class="date-wrapper">
-                        <input readonly id="FromDate" class="form-control" type="text" value="@Model.FromDate.ToString("MM/dd/yyyy")" />
-                        <span class="glyphicon glyphicon-calendar"></span>
+                        <input readonly id="FromDate" class="form-input" type="text" value="@Model.FromDate.ToString("MM/dd/yyyy")" />
+                        <span class="icon-date-time">
+                            <img src="~/www/build/styles/Images/icons/calendar.svg" alt="icon-date-time" />
+                        </span>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>@Lang.To:</label>
+                <div class="group-input">
+                    <label class="custom-label">@Lang.To:</label>
                     <div id="toPicker" class="date-wrapper">
-                        <input readonly id="ToDate" class="form-control" type="text" value="@Model.ToDate.ToString("MM/dd/yyyy")" />
-                        <span class="glyphicon glyphicon-calendar"></span>
+                        <input readonly id="ToDate" class="form-input" type="text" value="@Model.ToDate.ToString("MM/dd/yyyy")" />
+                        <span class="icon-date-time">
+                            <img src="~/www/build/styles/Images/icons/calendar.svg" alt="icon-date-time" />
+                        </span>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>@Lang.Language:</label>
-                    @Html.DropDownList("language", (IEnumerable<SelectListItem>)ViewBag.Languages, Lang.All, new { @class = "form-control" })
+                <div class="group-input">
+                    <label class="custom-label">@Lang.Language:</label>
+                    @Html.DropDownList("Language", (IEnumerable<SelectListItem>)ViewBag.Languages, Lang.All, new { @class = "form-input form-select" })
                 </div>
-                <div class="checkbox form-group">
-                    <label class="text-bold">
-                        <input id="includeInActive" type="checkbox" />
-                        @Lang.IncludeInActiveLink
+                <div class="group-input group-checkbox">
+                    <label class="custom-checkbox">
+                        <input id="includeInActive" type="checkbox" name="includeInActive">
+                        <span class="checkmark"></span>
+                        <span class="text-checkbox">@Lang.IncludeInActiveLink</span>
                     </label>
                 </div>
-                <button type="button" class="btn btn-submit btn-statistics" id="btnStatisticsSubmit">@Lang.Submit</button>
-            </form>
-        </div>
-        <div class="report-container">
-            <div class="table overview-table marketing-statistics" id="statisticsTable">
+                <button type="button" class="custom-button" id="btnStatisticsSubmit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M1.29657 6.2097C0.948574 6.0937 0.945241 5.90637 1.30324 5.78703L14.0279 1.5457C14.3806 1.42837 14.5826 1.6257 14.4839 1.97103L10.8479 14.695C10.7479 15.0477 10.5446 15.0597 10.3952 14.725L7.99924 9.33303L11.9992 3.9997L6.66591 7.9997L1.29657 6.2097Z" fill="white" />
+                    </svg>
+                    @Lang.Submit
+                </button>
             </div>
-
+        </form>
+        <div class="report-container">
+            <div class="wraper-table">
+                <div class="table overview-table marketing-statistics" id="statisticsTable">
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="@Url.RenderLink("~/www/build/js/marketing-statistics.js")"></script>
+    <script src="@Url.RenderLink("~/www/build/js/pages/marketing-statistics.js")"></script>
 </div>

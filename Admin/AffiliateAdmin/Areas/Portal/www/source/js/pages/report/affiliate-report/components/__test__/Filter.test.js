@@ -486,12 +486,12 @@ describe('affiliate report - Filter ', () => {
         ];
         const props = { ...defaultProps, productList }
         const componentInstance = new Filter(props);
-        componentInstance.state.userName = 'Bwing';
+        componentInstance.state.userName = 'YashBet';
         componentInstance.state.selectedCommGroup = 1;
 
         const result = componentInstance._buildMainReportTitle(!isCheckedAllProduct);
 
-        expect(result).toEqual("AFFILIATE REPORT - Affiliate contains 'Bwing' - Base Currency VND - All Linked Acc. Currencies - All languages - Sportsbook - All Revenue Group - FROM " + now.getMonth() + '/' + now.getFullYear() + ' TO ' + now.getMonth() + '/' + now.getFullYear());
+        expect(result).toEqual("AFFILIATE REPORT - Affiliate contains 'YashBet' - Base Currency VND - All Linked Acc. Currencies - All languages - Sportsbook - All Revenue Group - FROM " + now.getMonth() + '/' + now.getFullYear() + ' TO ' + now.getMonth() + '/' + now.getFullYear());
     });
 
     it('_buildMonthOnMonthReportTile - return corrected value with correct parameter', () => {
@@ -510,12 +510,12 @@ describe('affiliate report - Filter ', () => {
 
         const props = { ...defaultProps, productList }
         const componentInstance = new Filter(props);
-        componentInstance.state.userName = 'Bwing';
+        componentInstance.state.userName = 'YashBet';
         componentInstance.state.isGetAll = true;
 
         const result = componentInstance._buildMonthOnMonthReportTile(!isCheckedAllProduct);
 
-        expect(result).toEqual('MONTH ON MONTH - Bwing - Base Currency VND - Sportsbook - Get All Dates');
+        expect(result).toEqual('MONTH ON MONTH - YashBet - Base Currency VND - Sportsbook - Get All Dates');
     });
 
 

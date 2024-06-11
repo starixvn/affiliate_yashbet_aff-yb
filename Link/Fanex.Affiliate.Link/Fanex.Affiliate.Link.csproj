@@ -230,10 +230,8 @@
     <Compile Include="Helpers\Common.cs" />
     <Compile Include="Helpers\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Impl\GeneralAffiliateInfoService.cs" />
     <Compile Include="Services\Impl\TrackingSystemService.cs" />
     <Compile Include="Services\Impl\UnderMaintenanceService.cs" />
-    <Compile Include="Services\Interface\IGeneralAffiliateInfoService.cs" />
     <Compile Include="Services\Interface\ITrackingSystemService.cs" />
     <Compile Include="Services\Interface\IUnderMaintenanceService.cs" />
   </ItemGroup>
@@ -251,13 +249,14 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Web.yb-go.uat.config">
-      <DependentUpon>Web.yb-go.local.config</DependentUpon>
-    </None>
+    <Content Include="Web.go-yb.production.config">
+      <DependentUpon>Web.go-yb.local.config</DependentUpon>
+    </Content>
+    <Content Include="Web.go-yb.uat.config">
+      <DependentUpon>Web.go-yb.local.config</DependentUpon>
+    </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
@@ -281,11 +280,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Fanex.Affiliate.Link.ruleset" />
-    <Content Include="Web.yb-go.local.config" />
+    <Content Include="Web.go-yb.local.config" />
     <Content Include="Views\UnderMaintenance\Index.cshtml" />
-    <None Include="Web.yb-go.production.config">
-      <DependentUpon>Web.yb-go.local.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\..\packages\SonarAnalyzer.CSharp.6.7.1.4347\analyzers\Google.Protobuf.dll" />

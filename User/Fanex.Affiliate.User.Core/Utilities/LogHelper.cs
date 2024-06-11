@@ -2,6 +2,7 @@
 using Fanex.Data;
 using Fanex.Logging;
 using Newtonsoft.Json;
+using Refit;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -26,6 +27,8 @@ namespace Fanex.Affiliate.User.Core.Utilities
 
             AddDatabaseInfo(content, exception);
             AddExceptionInfo(content, exception, LimitedLevelOfInnerException);
+
+            AddApiException(content, exception);
 
             LogService.Error(content.ToString(), exception);
         }
@@ -94,6 +97,19 @@ namespace Fanex.Affiliate.User.Core.Utilities
             foreach (var item in dbInfo)
             {
                 builder.AppendLine($"{item.Key}: {item.Value}");
+            }
+        }
+
+        private static void AddApiException(StringBuilder content, Exception ex)
+        {
+            if (ex is ApiException apiException)
+            {
+                content.AppendLine();
+                content.AppendLine("API EXCEPTION INFO");
+                content.AppendLine($"StatusCode: {apiException.StatusCode}");
+                content.AppendLine($"Content: {apiException.Content}");
+                content.AppendLine($"Header: ${apiException.ContentHeaders}");
+                content.AppendLine($"Request: {apiException.RequestMessage}");
             }
         }
 

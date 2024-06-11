@@ -4,7 +4,7 @@
     }
 
     function initMonthPicker() {
-        let today = $("#ToDay").val();
+        const today = $("#ToDay").val();
         const sixMonthAgo = new Date(today);
         sixMonthAgo.setMonth(sixMonthAgo.getMonth() - 6);
 
@@ -16,6 +16,9 @@
                 $("#MonthDate").data("original-date", date);
             }
         });
+
+        const now = new Date(today);
+        $(`.mp-btn-month[data-month="${now.getMonth()}"]`).trigger('click');
     }
 
     var _me = {

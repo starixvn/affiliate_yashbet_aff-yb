@@ -115,7 +115,7 @@
             $("#hasWebSite").prop("checked", true);
             $("#NoSiteDesc").prop("disabled", true);
             $("#SiteUrl").prop("disabled", false);
-            $("#btnAddUrl").prop("disabled", false);
+            $("#btnAddUrl").toggleClass("disabled", false);
             $(".websiteInput").remove();
         },
 

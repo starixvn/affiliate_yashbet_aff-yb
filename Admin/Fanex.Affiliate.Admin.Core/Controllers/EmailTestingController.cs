@@ -74,11 +74,10 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
             {
                 _languageService.SetCulture(language);
                 var content = GetEmailContent(language, function, format);
-                var shortedLanguageCode = GetShortedLanguageCode(language);
 
                 var subject = GetSubject(function);
 
-                _mailProcessor.Send(content, emailAddress, subject, shortedLanguageCode);
+                _mailProcessor.Send(content, emailAddress, subject);
                 _languageService.SetCulture("en-US");
             }
             catch (Exception ex)
@@ -156,9 +155,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
 
         private object GetModelByFunction(string functionName, string languageCode)
         {
-            var shortedLanguageCode = GetShortedLanguageCode(languageCode);
-
-            var mailContact = _appSetting.GetMailContactByShortedLanguageCode(shortedLanguageCode);
+            var mailContact = _appSetting.MailContact;
 
             switch (functionName)
             {
@@ -167,7 +164,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
                     {
                         MailContact = mailContact,
                         SiteFriendlyName = _appSetting.SiteFriendlyName,
-                        UserSiteUrl = _appSetting.GetAffSiteUrlByShortedLanguageCode(shortedLanguageCode),
+                        UserSiteUrl = _appSetting.AffUserSiteURL,
                         FirstName = _firstName
                     };
                 case "AffiliateInformation":
@@ -175,7 +172,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
                     {
                         MailContact = mailContact,
                         SiteFriendlyName = _appSetting.SiteFriendlyName,
-                        UserSiteUrl = _appSetting.GetAffSiteUrlByShortedLanguageCode(shortedLanguageCode),
+                        UserSiteUrl = _appSetting.AffUserSiteURL,
                         FirstName = _firstName,
                         UserName = "NOVA00000",
                         Password = "qwrfsdg"
@@ -205,14 +202,6 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
                 default:
                     return null;
             }
-        }
-
-        private string GetShortedLanguageCode(string languageCode)
-        {
-            var shortedLanguageCode = _languageService.GetLanguageList()
-                .FirstOrDefault(l => string.Equals(l.LanguageCode, languageCode, StringComparison.OrdinalIgnoreCase))?.ShortedLanguageCode ?? _appSetting.DefaultShortedLanguageCode;
-
-            return shortedLanguageCode.ToUpperInvariant();
         }
     }
 }

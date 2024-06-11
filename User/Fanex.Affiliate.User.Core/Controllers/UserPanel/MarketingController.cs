@@ -1,11 +1,5 @@
 ﻿namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Drawing;
-    using System.Linq;
-    using System.Text.RegularExpressions;
-    using System.Web.Mvc;
     using Constants;
     using DTO.UserPanel;
     using Extensions;
@@ -18,6 +12,12 @@
     using Fanex.Affiliate.User.Core.Utilities;
     using Filters;
     using MetalModels.UserPanel;
+    using System;
+    using System.Collections.Generic;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+    using System.Web.Mvc;
     using ViewModels.UserPanel.Marketing;
 
     [CustomAuthorize]
@@ -71,15 +71,12 @@
             var selectedDomain = MarketingService.GetAvailableDomainList(userSession.AffId, bannerParam.TargetId, SessionService.IsInternal)
                                                     .FirstOrDefault(d => d.DomainId == bannerParam.SelectedDomainId);
 
-            var bannerSettingKey = userSession.PreferredLanguage.Replace("-", string.Empty).ToUpperInvariant();
-
             bannerParam.AffId = userSession.AffId;
             bannerParam.AffCode = userSession.AffCode;
             bannerParam.AffType = userSession.AffType;
             bannerParam.SelectedDomain = selectedDomain;
             bannerParam.TextLinkTemplate = MarketingService.GetTextLinkTemplate(bannerParam.TargetId);
-            bannerParam.BannerDomain = AppSetting.GetValue($"BannerDomain{bannerSettingKey}") ??
-                AppSetting.BannerDomain;
+            bannerParam.BannerDomain = AppSetting.BannerDomain;
             bannerParam.Language = GetEnglishName(bannerParam.Language);
 
             var bannerList = GetBannerList(bannerParam);
@@ -225,8 +222,8 @@
 
         private Image GetQrCodeIcon()
         {
-            var logoPath = HttpContext.Server.MapPath($"~/www/build/styles/Images/themes/logo.png");
-            var qrLogoPath = HttpContext.Server.MapPath($"~/www/build/styles/Images/themes/logo-qrcode.png");
+            var logoPath = HttpContext.Server.MapPath($"~/www/build/styles/Images/themes/{AppSetting.SiteName}.png");
+            var qrLogoPath = HttpContext.Server.MapPath($"~/www/build/styles/Images/themes/{AppSetting.SiteName}-qrcode.png");
             var path = FileSystem.Exists(qrLogoPath) ? qrLogoPath : logoPath;
 
             return QrCodeGeneratorService.GetImage(path);

@@ -75,14 +75,11 @@
     let element;
 
     switch(controllerName) {
-        case 'PaymentRequest': case 'RevenueGroup': case 'EmailHistory':
+        case 'PaymentRequest': case 'RevenueGroup':
             element = document.getElementById('Affiliate');
             break;
         case 'Report': case 'PlayerGgrReport': case 'TransferReport':
             element = document.getElementById('Report');
-            break;
-        case 'ActiveMember':
-            element = document.getElementById('Member');
             break;
         case 'TextList': case 'LandingPageList':
             element = document.getElementById('MediaGallery');

@@ -9,46 +9,34 @@
     @Html.InlineStyles("~/www/build/styles/css/contact-us.css")
 }
 
-<div class="main-content">
-    <div class="content">
-        <div class="page-title">
-            <span class="text">@Lang.ContactUs</span>
-        </div>
-        <div class="slogan">
-            <p>@Html.Raw(Lang.PleaseDirectAnyComment)</p>
-        </div>
-        <div class="grid-contact-info">
-            <div class="contact-items">
-                <ul class="info-social">
-                    <li>
-                        <img src="~/www/build/styles/Images/contact-us/email.png" alt="@Lang.EmailContactUs" />
-                        <span>@Lang.EmailContactUs</span>
-                    </li>
-                    <li><a href=@("mailto:" + Model)>@Model</a></li>
-                </ul>
+<div class="page-container">
+    <div class="main-content">
+        <div class="content">
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span class="text">@Lang.ContactUs</span>
+                </h2>
             </div>
-            <div class="contact-items">
-                <ul class="info-social">
-                    <li>
-                        <img src="~/www/build/styles/Images/contact-us/telegram.png" alt="@Lang.Telegram" />
-                        <span>@Lang.Telegram</span>
-                    </li>
-                    <li><a href="https://t.me/YashBetaffiliate">https://t.me/YashBetaffiliate</a></li>
-                </ul>
+            <div class="slogan">
+                <p>@Html.Raw(Lang.PleaseDirectAnyComment)</p>
             </div>
-            <div class="contact-items">
-                <ul class="info-social">
-                    <li>
-                        <img src="~/www/build/styles/Images/contact-us/whatsapp.png" alt="@Lang.Whatsapp" />
-                        <span>@Lang.Whatsapp</span>
-                    </li>
-                    <li><a href="https://cli.re/YashBetaffiliate">https://cli.re/YashBetaffiliate</a></li>
-                </ul>
+            <div class="img-contact">
+                <img src="~/www/build/styles/Images/contact-us/vector.svg" alt="Alternate Text" class="img-responsive" />
+                <div class="date-time-info">
+                    <p class="text-center">@Html.Raw(Lang.SupportTimeYB)</p>
+                </div>
             </div>
-        </div>
-
-        <div class="date-time-info">
-            <p class="text-center">@Html.Raw(Lang.SupportTimeYB)</p>
+            <div class="grid-contact-info">
+                <div class="contact-items">
+                    <div class="info-social">
+                        <div class="icon-social"><img src="~/www/build/styles/Images/contact-us/livechat.svg" alt="@Lang.LiveChat" /></div>
+                        <div class="contact-detail">
+                            <span>@Lang.LiveChat</span>
+                            <a href="https://direct.lc.chat/14077497/12">direct.lc.chat/14077497/12</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

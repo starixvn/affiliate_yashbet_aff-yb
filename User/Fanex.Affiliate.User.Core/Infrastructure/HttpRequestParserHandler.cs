@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Fanex.Affiliate.User.Core.DTO.VerificationAccount;
+using Fanex.Affiliate.User.Core.Utilities;
+using System;
 using System.Collections.Specialized;
 using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
-using Fanex.Affiliate.User.Core.DTO.VerificationAccount;
-using Fanex.Affiliate.User.Core.Utilities;
 
 namespace Fanex.Affiliate.User.Core.Infrastructure
 {

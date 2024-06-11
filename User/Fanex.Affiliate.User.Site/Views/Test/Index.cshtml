@@ -13,6 +13,7 @@
     <link rel="icon" href=@Url.VersionedLink("~/favicon-" + siteName + ".ico")>
 </head>
 <body>
+    @Html.AntiForgeryToken()
     <div>
         <div>
             Format:
@@ -35,33 +36,9 @@
                 <input name="Language" id="bnBD" type="radio" value="bn-BD" />
                 Bangladeshi
             </label>
-            <label for="kmKH">
-                <input name="Language" id="kmKH" type="radio" value="km-KH" />
-                Cambodian
-            </label>
-            <label for="idID">
-                <input name="Language" id="idID" type="radio" value="id-ID" />
-                Indonesian
-            </label>
-            <label for="thTH">
-                <input name="Language" id="thTH" type="radio" value="th-TH" />
-                Thai
-            </label>
-            <label for="viVN">
-                <input name="Language" id="viVN" type="radio" value="vi-VN" />
-                Vietnamese
-            </label>
-            <label for="zhCN">
-                <input name="Language" id="zhCN" type="radio" value="zh-CN" />
-                Chinese Simplified
-            </label>
             <label for="hiIN">
                 <input name="Language" id="hiIN" type="radio" value="hi-IN" />
-                India
-            </label>
-            <label for="msMY">
-                <input name="Language" id="msMY" type="radio" value="ms-MY" />
-                Malay
+                Hindi
             </label>
         </div>
 
@@ -108,6 +85,6 @@
 
     <input id="rootAction" type="hidden" value="@Url.Content("~/")" />
     <script src="~/www/build/js/lib/jquery-3.3.1.min.js"></script>
-    <script src="~/www/build/js/test.js"></script>
+    <script src="~/www/build/js/pages/test.js"></script>
 </body>
 </html>

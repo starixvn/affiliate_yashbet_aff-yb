@@ -4,6 +4,7 @@ using Fanex.Affiliate.User.Core.Apis;
 using Fanex.Affiliate.User.Core.BusinessService;
 using Fanex.Affiliate.User.Core.CoreService;
 using Fanex.Affiliate.User.Core.Infrastructure;
+using Fanex.Affiliate.User.Core.MetalModels.Api;
 using Fanex.Affiliate.User.Core.Repository;
 using Fanex.Affiliate.User.Core.Repository.UserPanel;
 using Fanex.Affiliate.User.Core.Utilities;
@@ -109,6 +110,7 @@ namespace Fanex.Affiliate.User.Site
             builder.RegisterType<SecurityQuestionRepository>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<SecurityQuestionService>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<AccountOverviewRepository>().AsImplementedInterfaces().InstancePerLifetimeScope();
+            builder.RegisterType<CurrencyService>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<CurrencyRepository>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<PlayerTransferBalanceService>().AsImplementedInterfaces().InstancePerLifetimeScope();
             builder.RegisterType<PlayerTransferBalanceRespository>().AsImplementedInterfaces().InstancePerLifetimeScope();
@@ -123,17 +125,14 @@ namespace Fanex.Affiliate.User.Site
         private static void RegisterMemberSiteApi(ContainerBuilder builder)
         {
             var appSetting = AppSetting.Instance;
-            var handler = new AuthenticatedHttpClientHandler(appSetting.MemberSiteApiAuthenticationKey)
-            {
-                Proxy = appSetting.IsUseMemberSiteProxy
-                            ? new WebProxy(new Uri(appSetting.MemberSiteProxyUrl))
-                            : null
+            var cacheService = new MemoryCacheService(new MemoryCache(new MemoryCacheOptions()));
+            var handler = new AuthenticatedHttpClientHandler(appSetting, cacheService);
 
-            };
             builder.RegisterInstance(RestService.For<ILicenseeApi>(
                 new HttpClient(handler)
                 {
-                    BaseAddress = new Uri(appSetting.MemberSiteApiUrl)
+                    BaseAddress = new Uri(appSetting.MemberSiteApiUrl),
+                    
                 }));
 
             builder.RegisterInstance(RestService.For<IAccountApi>(

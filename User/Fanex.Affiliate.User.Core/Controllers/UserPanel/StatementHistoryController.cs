@@ -1,9 +1,5 @@
 ﻿namespace Fanex.Affiliate.User.Core.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web.Mvc;
     using Fanex.Affiliate.User.Core.BusinessService;
     using Fanex.Affiliate.User.Core.Constants;
     using Fanex.Affiliate.User.Core.CoreService;
@@ -13,6 +9,10 @@
     using Fanex.Affiliate.User.Core.ViewModels.UserPanel;
     using Filters;
     using MetalModels.UserPanel;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
 
     [CustomAuthorize]
     public class StatementHistoryController : BaseController
@@ -21,26 +21,26 @@
         private readonly IAppSetting _appSetting;
         private readonly ISessionService _sessionService;
         private readonly IStatementHistoryRepository _statementHistoryRepository;
-        private readonly ICurrencyRepository _currencyRepository;
+        private readonly ICurrencyService _currencyService;
 
         public StatementHistoryController(ISessionService sessionService,
             ILanguageService languageService,
             IAppSetting appSetting,
             IStatementHistoryRepository statementHistoryRepository,
-            ICurrencyRepository currencyRepository)
+            ICurrencyService currencyService)
             : base(sessionService, languageService)
         {
             _appSetting = appSetting;
             _sessionService = sessionService;
             _statementHistoryRepository = statementHistoryRepository;
-            _currencyRepository = currencyRepository;
+            _currencyService = currencyService;
         }
 
         [HttpGet]
         [AjaxOnly]
         public ActionResult Index(string baseCurrency)
         {
-            var baseCurrencies = _currencyRepository.GetBaseCurrencyList();
+            var baseCurrencies = _currencyService.GetBaseCurrencyList();
             var isClickBreadcumb = false;
             var baseCurrencyId = SessionService.UserSession.BaseCurrency;
 

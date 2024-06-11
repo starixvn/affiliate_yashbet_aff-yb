@@ -1,29 +1,22 @@
 var Layout = (function ($) {
-    var DEFAULT_SPEED = 20;
-
-    function initSlider() {
-        //var $mainBanner = $('#mainBanner');
-        //$mainBanner.carousel();
-    }
+    const DEFAULT_SPEED = 39;
+    let isOpenMenuMobile = false;
+    let isTriggerClick = false;
 
     var _me = {
         initialize: function () {
-            initSlider();
             _me.registerAjaxHandlerError();
             _me.initEvent();
             _me.renderHotNews();
         },
         initEvent: function () {
             $("#selectedLanguage").on("click", function (e) {
-                if ($(this).hasClass('active')) {
-                    $(this).blur();
-                } else {
+                if (!$(this).hasClass('active')) {
                     $(this).addClass("active");
+                    window.addEventListener("click", _me.handleCloseLanguageDropdown, true);
+                } else {
+                    $(this).removeClass("active");
                 }
-            });
-
-            $("#selectedLanguage").on("blur", function (e) {
-                $(this).removeClass("active");
             });
 
             $("#languageList").on("click", ".language-item", function () {
@@ -73,6 +66,16 @@ var Layout = (function ($) {
                     $('#moveToTop').fadeOut(200);
                 }
             });
+        },
+
+        handleCloseLanguageDropdown: function handleCloseLanguageDropdown(e) {
+            var languageBtn = $("#selectedLanguage");
+            var isOpened = languageBtn.hasClass('active');
+
+            if (isOpened) {
+                !languageBtn.has(e.target).length && languageBtn.removeClass("active");
+                window.removeEventListener("click", _me.handleCloseLanguageDropdown, isOpened);
+            }
         },
 
         handleBindingClickBodyEvent: function () {
@@ -135,12 +138,10 @@ var Layout = (function ($) {
                     var $marquee = $("#marquee");
                     $marquee.html(response);
 
-                    const containerWidth = $("#marqueeContainer").outerWidth();
-                    const hotNewsWidth = $marquee.outerWidth();
-                    const speedRate = hotNewsWidth / containerWidth;
-                    const speed = speedRate < 1 ? DEFAULT_SPEED : (speedRate + 0.25) * DEFAULT_SPEED;
+                    const containerWidth = $("#marquee").outerWidth();
+                    var timeTaken = containerWidth / DEFAULT_SPEED;
 
-                    $marquee.css("animation-duration", speed + "s");
+                    $marquee.css("animation-duration", timeTaken + "s");
                 }
             });
         }

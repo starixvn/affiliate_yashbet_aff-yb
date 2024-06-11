@@ -30,7 +30,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
             {
                 param.CanViewMemberEmail = _sessionService.UserPermissionList.Any(i => i.FunctionName.Equals(Function.MemberEmail, StringComparison.OrdinalIgnoreCase));
 
-                return GenerateJsonNetResult(_customerMemberService.GetCustomerMember(param));
+                return GenerateJsonNetResult( new { EntityResult = _customerMemberService.GetCustomerMember(param), param.CanViewMemberEmail });
             }
 
             return new JsonNetResult();

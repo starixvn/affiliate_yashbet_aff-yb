@@ -17,8 +17,8 @@ namespace Fanex.Affiliate.User.Core.Controllers
 {
     public class VerificationAccountController : AuthBaseController
     {
-        private const int CaptchaImgWidth = 100;
-        private const int CaptchaImgHeight = 28;
+        private const int CaptchaImgWidth = 80;
+        private const int CaptchaImgHeight = 36;
 
         private readonly IVerificationService _verificationService;
 
@@ -157,7 +157,7 @@ namespace Fanex.Affiliate.User.Core.Controllers
                 IntervalInMinute = Convert.ToInt32(AppSetting.GetValue("SendCodeIntervalInMinute")),
                 VerificationEmailParam = new VerificationAccountEmailParam
                 {
-                    MailContact = AppSetting.GetMailContactByLanguageCode(verificationSession.PreferredLanguage ?? SessionService.CurrentLanguage),
+                    MailContact = AppSetting.MailContact,
                     RootDomain = SiteDomainHelper.GetRootUrl(this, AppSetting),
                     Ip = RequestHelper.GetClientIPAddress(Request)
                 }

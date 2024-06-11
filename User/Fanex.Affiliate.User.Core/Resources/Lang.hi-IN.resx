@@ -120,7 +120,7 @@
   <data name="Home" xml:space="preserve">
     <value>होम</value>
   </data>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>रेवनू शेरिंग स्ट्रक्चर</value>
   </data>
   <data name="TermAndCondition" xml:space="preserve">
@@ -172,7 +172,7 @@
     <value>&lt;strong&gt;सोमवार - शनिवार&lt;/strong&gt;&lt;br&gt;11:00 पूर्वाह्न - 08:00 अपराह्न (जीएमटी +8)</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>अब शामिल हों!</value>
+    <value>अब शामिल हों</value>
   </data>
   <data name="Sportsbook" xml:space="preserve">
     <value>खेल पुस्तक</value>
@@ -261,8 +261,8 @@
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>नया बैनर अब उपलब्ध है!</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>खबर!</value>
+  <data name="New" xml:space="preserve">
+    <value>खबर</value>
   </data>
   <data name="YouCanNowLogInYourAffiliateAccount" xml:space="preserve">
     <value>अपनी वेबसाइट के प्रचार के लिए नए बैनर लेने के लिए अब आप अपने संबद्ध खाते में लॉग इन कर सकते हैं।</value>
@@ -385,7 +385,7 @@
     <value>अपने B2C संबद्ध खाते के लिए पंजीकरण करने के लिए कृपया इस फॉर्म को पूरा करें।</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>&lt;font color="red"&gt;*&lt;/font&gt; चिह्नित फ़ील्ड को पूरा किया जाना चाहिए</value>
+    <value>&lt;span class="red-color"&gt;*&lt;/span&gt; चिह्नित फ़ील्ड को पूरा किया जाना चाहिए</value>
   </data>
   <data name="ContactInfo" xml:space="preserve">
     <value>संपर्क जानकारी</value>
@@ -1090,11 +1090,11 @@
     <value>आवेदन की समीक्षा की जा रही है</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>अपना आवेदन जमा करने के लिए धन्यवाद।&lt;br/&gt;&lt;br/&gt;
-B2C सहयोगी पर आपकी वेबसाइट और आवेदन विवरण की टीम द्वारा समीक्षा की जाएगी यह सुनिश्चित करने के लिए कि सामग्री हमारे उत्पादों को बढ़ावा देने के लिए उपयुक्त है।&lt;br/&gt;&lt;br/&gt;
-5 दिनों के भीतर हम आपको आपके आवेदन के संबंध में निर्णय प्रदान करने में सक्षम होंगे। यदि आप स्वीकृत हो जाते हैं, तो आप हमारे संबद्ध कार्यक्रम तक पूर्ण पहुंच का आनंद ले सकेंगे।&lt;br/&gt;&lt;br/&gt;
-सादर,&lt;br/&gt;&lt;br/&gt;
-B2C सहयोगी की टीम&lt;br/&gt;&lt;br/&gt;
+    <value>अपना आवेदन जमा करने के लिए धन्यवाद।&lt;br/&gt;
+B2C सहयोगी पर आपकी वेबसाइट और आवेदन विवरण की टीम द्वारा समीक्षा की जाएगी यह सुनिश्चित करने के लिए कि सामग्री हमारे उत्पादों को बढ़ावा देने के लिए उपयुक्त है।&lt;br/&gt;
+5 दिनों के भीतर हम आपको आपके आवेदन के संबंध में निर्णय प्रदान करने में सक्षम होंगे। यदि आप स्वीकृत हो जाते हैं, तो आप हमारे संबद्ध कार्यक्रम तक पूर्ण पहुंच का आनंद ले सकेंगे।&lt;br/&gt;
+सादर,&lt;br/&gt;
+B2C सहयोगी की टीम&lt;br/&gt;
 यदि आपका कोई प्रश्न है और किसी सहायता की आवश्यकता है, तो कृपया &lt;a href='{0}'&gt;हमसे संपर्क करें&lt;/a&gt; में संकोच न करें।</value>
   </data>
   <data name="YouDontHaveTheEmail" xml:space="preserve">
@@ -1757,9 +1757,6 @@ B2C सहयोगी की टीम&lt;br/&gt;&lt;br/&gt;
   <data name="none" xml:space="preserve">
     <value>कोई नहीं</value>
   </data>
-  <data name="Phone" xml:space="preserve">
-    <value>फ़ोन</value>
-  </data>
   <data name="Signup" xml:space="preserve">
     <value>साइन अप करें</value>
   </data>
@@ -2017,5 +2014,20 @@ B2C सहयोगी की टीम&lt;br/&gt;&lt;br/&gt;
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>भूल गए?</value>
+  </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>सामान्य प्रश्नोत्तर</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>अपना खाता विवरण सत्यापित करें</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>स्वागत</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>पृष्ठ नहीं मिला!</value>
   </data>
 </root>

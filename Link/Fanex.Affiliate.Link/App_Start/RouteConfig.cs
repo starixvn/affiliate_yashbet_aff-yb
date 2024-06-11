@@ -28,26 +28,13 @@
                 });
 
             routes.MapRoute(
-               name: "NewLink",
-               url: "{pageId}/AffId/{affCode}/{lang}/index.html",
-               defaults:
-               new
-               {
-                   controller = "Home",
-                   action = "NewLink",
-                   pageId = UrlParameter.Optional,
-                   affCode = UrlParameter.Optional,
-                   lang = UrlParameter.Optional
-               });
-
-            routes.MapRoute(
                name: "ChannelLink",
-               url: "{pageId}/AffCode/{affCode}/{lang}/{channel}/index.html",
+               url: "{pageId}/{affCode}/{lang}/{channel}/index.html",
                defaults:
                new
                {
                    controller = "Home",
-                   action = "NewLink",
+                   action = "Link",
                    pageId = UrlParameter.Optional,
                    affCode = UrlParameter.Optional,
                    lang = UrlParameter.Optional,
@@ -55,44 +42,17 @@
                });
 
             routes.MapRoute(
-               name: "NewLinkAffCode",
-               url: "{pageId}/AffCode/{affCode}/{lang}/index.html",
-               defaults:
-               new
-               {
-                   controller = "Home",
-                   action = "NewLink",
-                   pageId = UrlParameter.Optional,
-                   affCode = UrlParameter.Optional,
-                   lang = UrlParameter.Optional
-               });
-
-            routes.MapRoute(
                name: "Link",
-               url: "{affId}/{pageId}/{lang}/index.html",
+               url: "{pageId}/{affCode}/{lang}/index.html",
                defaults:
                new
                {
                    controller = "Home",
                    action = "Link",
-                   affId = UrlParameter.Optional,
                    pageId = UrlParameter.Optional,
+                   affCode = UrlParameter.Optional,
                    lang = UrlParameter.Optional
                });
-
-            routes.MapRoute(
-                name: "OldLink",
-                url: "{affId}/{pageId}/{lang}/{deviceType}/index.html",
-                defaults:
-                new
-                {
-                    controller = "Home",
-                    action = "Link",
-                    affId = UrlParameter.Optional,
-                    pageId = UrlParameter.Optional,
-                    lang = UrlParameter.Optional,
-                    deviceType = UrlParameter.Optional
-                });
 
             routes.IgnoreRoute("go");
         }

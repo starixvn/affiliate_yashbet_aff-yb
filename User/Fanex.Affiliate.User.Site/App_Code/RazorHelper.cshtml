@@ -2,7 +2,9 @@
 {
     <div class="moving-block">
         <button type="button" class="btn btn-circle btn-move-top" id="moveToTop" onclick="(function (event) { window.scrollTo({ top: 0, behavior: 'smooth' }); })(event);" style="display: none;">
-            <img src="~/www/source/styles/Images/arrrow.png" alt="back-to-top" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12.9997 7.828V20H10.9997V7.828L5.63568 13.192L4.22168 11.778L11.9997 4L19.7777 11.778L18.3637 13.192L12.9997 7.828Z" fill="white" />
+            </svg>
         </button>
     </div>
 }
@@ -12,7 +14,7 @@
     foreach (var item in menuList)
     {
         <li>
-            <a class="left-menu-item" href="#@item.Key">
+            <a class="parent-menu menu-item left-menu-item" href="#@item.Key">
                 @item.Value
             </a>
         </li>
@@ -22,11 +24,17 @@
 @helper RenderLeftPanel(IDictionary<string, string> menuList)
 {
     <div class="mobile-left-panel">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+            <path d="M7.33333 3.1665H14V4.49984H7.33333V3.1665ZM7.33333 5.83317H11.3333V7.1665H7.33333V5.83317ZM7.33333 9.83317H14V11.1665H7.33333V9.83317ZM7.33333 12.4998H11.3333V13.8332H7.33333V12.4998ZM2 3.1665H6V7.1665H2V3.1665ZM3.33333 4.49984V5.83317H4.66667V4.49984H3.33333ZM2 9.83317H6V13.8332H2V9.83317ZM3.33333 11.1665V12.4998H4.66667V11.1665H3.33333Z" fill="white" />
+        </svg>
         <span>@Fanex.Affiliate.User.Core.Resources.Lang.ListCategory</span>
     </div>
-    <div class="left-panel" id="left-panel-menu">
-        <div class="menu">
-            <ul class="nav navbar-nav" id="left-panel-nav">
+    <div class="left-panel">
+        <div class="menu desktop-left-panel-menu">
+            <div class="heading-left-panel">
+                @Fanex.Affiliate.User.Core.Resources.Lang.ListCategory
+            </div>
+            <ul class="nav navbar-nav desktop-left-panel-nav">
                 @RenderLeftPanelItems(menuList)
             </ul>
         </div>
@@ -36,10 +44,89 @@
             <div class="modal-content">
                 <div class="modal-main-content">
                     <div class="modal-body">
-                        <div class="left-panel">
+                        <div class="left-panel mobile-left-panel-menu">
                             <div class="menu">
-                                <ul class="nav navbar-nav">
+                                <div class="heading-left-panel">
+                                    @Fanex.Affiliate.User.Core.Resources.Lang.ListCategory
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                                            <path d="M13.9999 12.4713L19.7749 6.69629L21.4245 8.34596L15.6495 14.121L21.4245 19.896L19.7749 21.5456L13.9999 15.7706L8.22486 21.5456L6.5752 19.896L12.3502 14.121L6.5752 8.34596L8.22486 6.69629L13.9999 12.4713Z" fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <ul class="nav navbar-nav mobile-left-panel-nav">
                                     @RenderLeftPanelItems(menuList)
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@helper RenderLeftPanelParentItems(IDictionary<string, Fanex.Affiliate.User.Core.Constants.PrarentMenu> parentMenuList)
+{
+    foreach (var parentItem in parentMenuList)
+    {
+        <a class="parent-menu menu-item left-menu-item" href="javascript:;">
+            @parentItem.Value.Title
+        </a>
+        <ul class="sub-menu-group">
+            @foreach (var subItem in parentItem.Value.SubMenuList)
+            {
+                <li>
+                    <a class="sub-menu menu-item left-menu-item" href="#@subItem.Key">
+                        @subItem.Value
+                    </a>
+                </li>
+            }
+        </ul>
+    }
+}
+
+@helper RenderParentLeftPanel(IDictionary<string, Fanex.Affiliate.User.Core.Constants.PrarentMenu> parentMenuList)
+{
+    <div class="left-panel">
+        <div class="menu desktop-left-panel-menu">
+            <div class="heading-left-panel">
+                @Fanex.Affiliate.User.Core.Resources.Lang.ListCategory
+            </div>
+            <ul class="nav navbar-nav desktop-left-panel-nav">
+                <li>
+                    @RenderLeftPanelParentItems(parentMenuList)
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mobile-left-panel">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+            <path d="M7.33333 3.1665H14V4.49984H7.33333V3.1665ZM7.33333 5.83317H11.3333V7.1665H7.33333V5.83317ZM7.33333 9.83317H14V11.1665H7.33333V9.83317ZM7.33333 12.4998H11.3333V13.8332H7.33333V12.4998ZM2 3.1665H6V7.1665H2V3.1665ZM3.33333 4.49984V5.83317H4.66667V4.49984H3.33333ZM2 9.83317H6V13.8332H2V9.83317ZM3.33333 11.1665V12.4998H4.66667V11.1665H3.33333Z" fill="white" />
+        </svg>
+        <span>@Fanex.Affiliate.User.Core.Resources.Lang.ListCategory</span>
+    </div>
+
+    <div class="modal fade leftmenu-dialog" tabindex="-1" role="dialog" id="leftmenu">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-main-content">
+                    <div class="modal-body">
+                        <div class="left-panel mobile-left-panel-menu">
+                            <div class="menu">
+                                <div class="heading-left-panel">
+                                    @Fanex.Affiliate.User.Core.Resources.Lang.ListCategory
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                                            <path d="M13.9999 12.4713L19.7749 6.69629L21.4245 8.34596L15.6495 14.121L21.4245 19.896L19.7749 21.5456L13.9999 15.7706L8.22486 21.5456L6.5752 19.896L12.3502 14.121L6.5752 8.34596L8.22486 6.69629L13.9999 12.4713Z" fill="white" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <ul class="nav navbar-nav mobile-left-panel-nav">
+                                    <li>
+                                        @RenderLeftPanelParentItems(parentMenuList)
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -47,14 +134,17 @@
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
-    </div><!-- /.modal-->
+    </div><!-- /.modal -->
 }
 
 @helper RenderHotNews()
 {
     <div class="hot-news">
         <div class="inner">
-            <div class="title">@Fanex.Affiliate.User.Core.Resources.Lang.HotNews</div>
+            <div class="title">
+                <img src="~/www/build/styles/Images/icons/achment.svg" alt="achment" />
+                @Fanex.Affiliate.User.Core.Resources.Lang.HotNews
+            </div>
             <div class="message">
                 <div class="marquee-container" id="marqueeContainer"><p class="marquee-content" id="marquee"></p></div>
             </div>
@@ -66,84 +156,64 @@
 {
     if (dataList != null)
     {
-        <div class="form-group flex-sm-boostrap flex-center @(isVisible ? string.Empty : "hide")">
-            <label class="control-label">@label</label>
-            <div class="control-input">
-                <select class="form-control" id="@id">
-                    @if (hasAllOption)
-                    {
-                        <option value="">@Fanex.Affiliate.User.Core.Resources.Lang.All</option>
-                    }
+        <div class="items validate-group @(isVisible ? string.Empty : "hide")">
+            <label class="custom-label">@label</label>
+            <select class="form-input form-select" id="@id">
+                @if (hasAllOption)
+                {
+                    <option value="">@Fanex.Affiliate.User.Core.Resources.Lang.All</option>
+                }
 
-                    @foreach (var item in dataList)
-                    {
-                        <option value="@item.Value" @(item.Selected ? "selected" : string.Empty)>@item.Text</option>
-                    }
-                </select>
-            </div>
+                @foreach (var item in dataList)
+                {
+                    <option value="@item.Value" @(item.Selected ? "selected" : string.Empty)>@item.Text</option>
+                }
+            </select>
         </div>
     }
 }
 
-@helper RenderAppContact(string language)
+@helper RenderGender(string attrMale = "checked", string attrFemale = null)
 {
-    const string firstAppName = "Skype";
-    var secondAppContactList = new Dictionary<string, string>
-    {
-        ["en-US"] = "Facebook",
-        ["ms-MY"] = "Facebook",
-        ["zh-CN"] = "QQ",
-        ["zh-TW"] = "QQ",
-        ["vi-VN"] = "Zalo",
-        ["th-TH"] = "Line",
-        ["id-ID"] = "WhatsApp",
-        ["hi-IN"] = "WhatsApp",
-        ["ko-KR"] = "Telegram",
-        ["ja-JP"] = "Facebook"
-    };
-    var hasTwoContactApp = secondAppContactList.ContainsKey(language);
+    <div class="items validate-group">
+        <label class="custom-label require" for="male">@Fanex.Affiliate.User.Core.Resources.Lang.Gender</label>
+        <div class="radio-group">
+            <label class="radio-button">
+                <input type="radio" name="Gender" id="male" value="True" @attrMale />
+                <span class="radio-circle @attrMale"></span>
+                <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Male</span>
+            </label>
+            <label class="radio-button">
+                <input type="radio" name="Gender" id="female" value="False" @attrFemale />
+                <span class="radio-circle @attrFemale"></span>
+                <span class="radio-label">@Fanex.Affiliate.User.Core.Resources.Lang.Female</span>
+            </label>
+        </div>
+    </div>
+}
 
-    <div class="form-group">
-        <label class="col-sm-3 control-label @(hasTwoContactApp ? string.Empty : "require")">@firstAppName</label>
-        @if (hasTwoContactApp)
+@helper RenderAppContactItem(string name, int index, string dependentProp, string value = null, bool isOnlyOne = false)
+{
+    var messageErr = Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount;
+
+    <div class="items validate-group">
+        @if (isOnlyOne)
         {
-            <div class="col-sm-4">
-                <input type="text" name="ContactAppList[0].Value" id="ContactAppList[0].Value" class="form-control" value=""
-                       data-val="true" data-val-requiredifnullorempty-dependentprop="ContactAppList[1].Value"
-                       data-val-requiredifnullorempty="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
-            </div>
+            <label for="ContactAppList[@index].Value" class="custom-label require">@name</label>
+            <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-input"
+                   value="@value" data-val="true" data-val-required="@messageErr" />
         }
         else
         {
-            <div class="col-sm-4">
-                <input type="text" name="ContactAppList[0].Value" id="ContactAppList[0].Value" class="form-control" value=""
-                       data-val="true" data-val-required="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
-            </div>
+            <label for="ContactAppList[@index].Value" class="custom-label">@name</label>
+            <input type="text" name="ContactAppList[@index].Value" id="ContactAppList[@index].Value" class="form-input"
+                   value="@value" data-val="true" data-val-requiredifnullorempty-dependentprop="@dependentProp" data-val-requiredifnullorempty="@messageErr" />
         }
-        <div class="col-sm-offset-3 col-sm-9">
-            <span class="field-validation-valid help-block hide"
-                  data-valmsg-for="ContactAppList[@(hasTwoContactApp ? 0 : 1)].Value" data-valmsg-replace="true"></span>
-        </div>
-        <input type="hidden" name="ContactAppList[0].Name" value="@firstAppName" />
-        <input type="hidden" name="ContactAppList[0].Order" value="1" />
+        <span class="field-validation-valid validate-input hide"
+              data-valmsg-for="ContactAppList[@index].Value" data-valmsg-replace="true"></span>
+
+        <input type="hidden" name="ContactAppList[@index].Name" value="@name" />
+        <input type="hidden" name="ContactAppList[@index].Order" value="@(index + 1)" />
     </div>
 
-    if (secondAppContactList.ContainsKey(language))
-    {
-        var secondAppName = secondAppContactList[language];
-        <div class="form-group">
-            <label class="col-sm-3 control-label">@secondAppName</label>
-            <div class="col-sm-4">
-                <input type="text" name="ContactAppList[1].Value" id="ContactAppList[1].Value" class="form-control" value=""
-                       data-val="true" data-val-requiredifnullorempty-dependentprop="ContactAppList[0].Value"
-                       data-val-requiredifnullorempty="@Fanex.Affiliate.User.Core.Resources.Error.RequireIMAccount" />
-            </div>
-            <div class="col-sm-offset-3 col-sm-9">
-                <span class="field-validation-valid help-block hide"
-                      data-valmsg-for="ContactAppList[1].Value" data-valmsg-replace="true"></span>
-            </div>
-            <input type="hidden" name="ContactAppList[1].Name" value="@secondAppName" />
-            <input type="hidden" name="ContactAppList[1].Order" value="2" />
-        </div>
-    }
 }

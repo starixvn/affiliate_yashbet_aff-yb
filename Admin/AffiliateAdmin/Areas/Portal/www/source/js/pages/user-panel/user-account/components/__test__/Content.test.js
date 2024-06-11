@@ -21,7 +21,7 @@ describe('user account - components - Content', () => {
         State: "700000",
         Postcode: "700000",
         Country: "Viet Nam",
-        SiteUrl: "nova88.com",
+        SiteUrl: "yashbet.com",
         MoreSiteUrls: "www.sportsbookie.com;www.gzyyy.com;www.123.com",
         NoSiteDescription: "",
         PreferredPayment: "Player",
@@ -42,7 +42,7 @@ describe('user account - components - Content', () => {
 
     const paymentMethod = {
         PaymentMethods: [
-            { Key: 'Player', Value: 'Bwing Player Account' },
+            { Key: 'Player', Value: 'YashBet Player Account' },
             { key: 'Moneybookers', value: 'Moneybookers' },
             { key: 'Wire', value: 'Bank Transfer' }
         ],
@@ -56,7 +56,7 @@ describe('user account - components - Content', () => {
         moreSiteUrlsList: ["www.sportsbookie.com", "www.gzyyy.com", "www.123.com"],
         getUserAccountInfo: jest.fn(() => userAccountInfo),
         getPaymentMethod: jest.fn(() => paymentMethod, () => paymentMethod),
-        licenseeName: 'Bwing'
+        licenseeName: 'YashBet'
     }
 
     it('render correctly', () => {

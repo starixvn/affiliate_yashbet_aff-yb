@@ -8,7 +8,7 @@
     && DateTime.Compare(item.MonthDate, ViewBag.AvailableFromDate) > 0;
 
     var hasChildren = item.Children == null || item.Children.Count() > 0;
-    var displayClass = parentId != null ? "display-none" : "";
+    var displayClass = parentId != null ? "child-statement display-none" : "";
 
     <tr data-id='@id' data-parent='@parentId' class='@displayClass'>
         <td class="text-center">@index</td>
@@ -47,51 +47,53 @@
     </tr>
 }
 
-<div class="table overview-table">
-    <table>
-        <thead>
-            <tr class="overview-table-header">
-                <th width="5%"></th>
-                <th>@Lang.Date</th>
-                <th>@Lang.Type</th>
-                <th>@Lang.Amount</th>
-                <th>@Lang.Status</th>
-                <th>@Lang.Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{
-                if (Model != null && Model.Any())
-                {
-                    var index = (int)ViewBag.StartRowNumber;
-                    var id = 1;
-
-                    foreach (var item in Model)
+<div class="wraper-table">
+    <div class="table overview-table">
+        <table>
+            <thead>
+                <tr class="overview-table-header">
+                    <th width="5%"></th>
+                    <th width="23%">@Lang.Date</th>
+                    <th width="15%">@Lang.Type</th>
+                    <th width="12%">@Lang.Amount</th>
+                    <th width="12%">@Lang.Status</th>
+                    <th>@Lang.Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model != null && Model.Any())
                     {
-                        @RenderItem(item, id, index: index);
-                        if (item.Children != null)
-                        {
-                            var parentId = id;
-                            foreach (var child in item.Children)
-                            {
-                                id++;
-                                @RenderItem(child, id, parentId: parentId)
-                            }
-                        }
+                        var index = (int)ViewBag.StartRowNumber;
+                        var id = 1;
 
-                        index++;
-                        id++;
+                        foreach (var item in Model)
+                        {
+                            @RenderItem(item, id, index: index);
+                            if (item.Children != null)
+                            {
+                                var parentId = id;
+                                foreach (var child in item.Children)
+                                {
+                                    id++;
+                                    @RenderItem(child, id, parentId: parentId)
+                                }
+                            }
+
+                            index++;
+                            id++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td class="text-center no-info" colspan="6">@Lang.NoInfo</td>
+                        </tr>
                     }
                 }
-                else
-                {
-                    <tr>
-                        <td class="text-center no-info" colspan="6">@Lang.NoInfo</td>
-                    </tr>
-                }
-            }
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <input type="hidden" id="TotalItem" value="@ViewBag.TotalItem" />

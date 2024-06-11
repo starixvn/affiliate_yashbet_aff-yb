@@ -36,13 +36,12 @@ namespace Fanex.Affiliate.Admin.Core.Services
         {
             const string TemplateName = "AffiliateInformation";
             var language = emailParam.Language;
-            var shortedLanguageCode = GetShortedLanguageCode(language);
 
             var model = new AffInformationEmail
             {
-                MailContact = GetMailContactByLanguageCode(shortedLanguageCode),
+                MailContact = _appSetting.MailContact,
                 SiteFriendlyName = _appSetting.SiteFriendlyName,
-                UserSiteUrl = _appSetting.GetAffSiteUrlByShortedLanguageCode(shortedLanguageCode),
+                UserSiteUrl = _appSetting.AffUserSiteURL,
                 FirstName = emailParam.FirstName,
                 UserName = emailParam.UserName,
                 Password = emailParam.Password,
@@ -55,7 +54,7 @@ namespace Fanex.Affiliate.Admin.Core.Services
                 GetEmailHtmlContent(content, Lang.EmailTitleAffInfor, language, emailParam.RootUrl) :
                 content;
 
-            _mailProcessor.Send(contentToSend, emailParam.MailTo, Lang.EmailSubjectAffInfor, shortedLanguageCode);
+            _mailProcessor.Send(contentToSend, emailParam.MailTo, Lang.EmailSubjectAffInfor);
         }
 
         private string GetEmailTextContent(string templateName, string prefrerredLanguage, object model)
@@ -73,7 +72,7 @@ namespace Fanex.Affiliate.Admin.Core.Services
             var viewModel = new EmailTemplateViewModel
             {
                 RootUrl = domain,
-                UserSiteUrl = _appSetting.AsianAffSiteUrl,
+                UserSiteUrl = _appSetting.AffUserSiteURL,
                 ImageRootUrl = string.Format(TemplateString.EmailImageRootPath, domain),
                 Language = language,
                 Content = content,
@@ -89,8 +88,8 @@ namespace Fanex.Affiliate.Admin.Core.Services
         {
             var language = emailParam.Language;
             _languageService.SetCulture(language);
-            var shortedLanguageCode = GetShortedLanguageCode(language);
-            emailParam.MailContact = GetMailContactByLanguageCode(shortedLanguageCode);
+
+            emailParam.MailContact = _appSetting.MailContact;
             emailParam.SiteFriendlyName = _appSetting.SiteFriendlyName;
             emailParam.DefaultCurrency = _appSetting.DefaultCurrency;
 
@@ -106,7 +105,7 @@ namespace Fanex.Affiliate.Admin.Core.Services
                 GetEmailHtmlContent(content, title, language, emailParam.RootUrl) :
                 content;
 
-            _mailProcessor.Send(contentToSend, emailParam.MailTo, subject, shortedLanguageCode);
+            _mailProcessor.Send(contentToSend, emailParam.MailTo, subject);
             _languageService.SetCulture(_appSetting.DefaultLanguageCode);
         }
 
@@ -121,11 +120,10 @@ namespace Fanex.Affiliate.Admin.Core.Services
         {
             const string TemplateName = "AffiliateDisapproved";
             var language = emailParam.Language;
-            var shortedLanguageCode = GetShortedLanguageCode(language);
 
             var model = new AffInformationEmail
             {
-                MailContact = GetMailContactByLanguageCode(shortedLanguageCode),
+                MailContact = _appSetting.MailContact,
                 SiteFriendlyName = _appSetting.SiteFriendlyName,
                 FirstName = emailParam.FirstName
             };
@@ -136,20 +134,7 @@ namespace Fanex.Affiliate.Admin.Core.Services
                 GetEmailHtmlContent(content, Lang.EmailTitleAffDisapproved, language, emailParam.RootUrl) :
                 content;
 
-            _mailProcessor.Send(contentToSend, emailParam.MailTo, Lang.EmailSubjectAffDisapproved, shortedLanguageCode);
-        }
-
-        private string GetMailContactByLanguageCode(string shortedLanguageCode)
-        {
-            return _appSetting.GetMailContactByShortedLanguageCode(shortedLanguageCode);
-        }
-
-        private string GetShortedLanguageCode(string languageCode)
-        {
-            var shortedLanguageCode = _languageService.GetLanguageList()
-                .FirstOrDefault(l => string.Equals(l.LanguageCode, languageCode, StringComparison.OrdinalIgnoreCase))?.ShortedLanguageCode ?? _appSetting.DefaultShortedLanguageCode;
-
-            return shortedLanguageCode.ToUpperInvariant();
+            _mailProcessor.Send(contentToSend, emailParam.MailTo, Lang.EmailSubjectAffDisapproved);
         }
     }
 }

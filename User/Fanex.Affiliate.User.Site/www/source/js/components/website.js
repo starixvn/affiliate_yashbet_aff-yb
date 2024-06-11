@@ -20,7 +20,7 @@
             $(".moreWebsiteLabel").each(function (i, item) {
                 var $item = $(item);
                 var labelText = webSiteLabel + ' ' + index;
-                $item.text(labelText);
+                $item.html(labelText);
 
                 index++;
             });
@@ -29,20 +29,20 @@
         deleteWebsiteUrl: function ($currentItem) {
             var $container = $currentItem.closest(".websiteInput");
             $container.remove();
+            _me.validateWebSiteGroup();
         },
 
         buildUrlInput: function (webSiteLabel, deleteLabel, errorMessage) {
             var currentItemCount = $("#websiteInfo .urlInput").length + 2;
             var name = "MoreUrlInput" + currentItemCount;
-            var inputItem = '<div class="form-group websiteInput">' +
-                    '<label class="col-sm-3 control-label require moreWebsiteLabel">' + webSiteLabel + ' ' + currentItemCount + '</label>' +
-                    '<div class="col-sm-4">' +
-                        '<input class="form-control urlInput" type="text" name="' + name + '" data-val="true" data-val-required="' + errorMessage + '" value="" />' +
+            var inputItem =
+                '<div class="input-url websiteInput">' +
+                    '<label for="' + name + '" class="custom-label require moreWebsiteLabel"></label>' +
+                    '<div class="group-input">' +
+                        '<input class="form-input urlInput" type="text" name="' + name + '" id="' + name + '" data-val="true" data-val-required="' + errorMessage + '" value="" />' +
+                        '<span class="button-toggle button-toggle-close btnDeleteUrl" title="' + deleteLabel + '"></span>' +
                     '</div>' +
-                    '<div class="col-sm-1">' +
-                        '<button type="button" class="btn btn-submit btnDeleteUrl" title="' + deleteLabel + '"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>' +
-                    '</div>' +
-                    '<div class="col-sm-offset-3 col-sm-9"><span class="field-validation-valid help-block hide" data-valmsg-for="' + name + '" data-valmsg-replace="true"></span></div>' +
+                    '<span class="field-validation-valid validate-input hide" data-valmsg-for="' + name + '" data-valmsg-replace="true"></span></div>' +
                 '</div>';
 
             $("#websiteInfo").append(inputItem);
@@ -94,7 +94,7 @@
             var $mainUrlInput = $("#SiteUrl");
             $mainUrlInput.prop("disabled", !hasWebSite);
             $(".websiteInput").toggle(hasWebSite);
-            $("#btnAddUrl").prop("disabled", !hasWebSite);
+            $("#btnAddUrl").toggleClass("disabled", !hasWebSite);
 
             var $noSiteDesc = $("#NoSiteDesc");
             $noSiteDesc.prop("disabled", hasWebSite);

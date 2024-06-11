@@ -5,14 +5,29 @@
 .breadcrumb {
     background-color: #FFFFFF;
     border: 1px solid #CED4DA;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    padding: 6px 12px;
 
     a {
-        font-weight: 400;
-        font-size: 16px;
+        font-weight: 600;
+        font-size: 14px;
         line-height: 24px;
-        color: #025EB1;
+        color: #3C7CE0;
+        display: inline-flex;
+        align-items: center;
+
+        svg {
+            margin-right: 10px;
+        }
     }
+}
+
+#statementPager {
+    margin: 16px 0 -12px;
+}
+
+.form-filter {
+    max-width: 250px;
 }
 
 #statementDataList {
@@ -62,8 +77,6 @@
 
 @include Mobile {
     .form-inline {
-        margin-bottom: 0 !important;
-
         .form-group {
             flex-direction: column;
             width: 100%;
@@ -84,11 +97,6 @@
         }
     }
 
-    #statementPager {
-        margin-top: 0;
-        margin-bottom: 8px;
-    }
-
     .breadcrumb {
         margin-bottom: 12px;
     }
@@ -103,6 +111,14 @@ a:hover {
     margin-bottom: 16px;
 }
 
-.table table tr.total {
-    background: #FFDCC8 !important;
+.table table {
+    tr {
+        &.total {
+            background: #FFDCC8 !important;
+        }
+
+        &.child-statement {
+            background: #FFF1DE !important;
+        }
+    }
 }

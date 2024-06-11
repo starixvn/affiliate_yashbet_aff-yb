@@ -14,6 +14,12 @@
                 _me.submit();
                 return false;
             });
+
+            $('#mainMenu .parent .submenu-container').hover(function () {
+                $(this).addClass("hover");
+            }, function () {
+                $(this).removeClass("hover");
+            });
         },
 
         submit: function () {

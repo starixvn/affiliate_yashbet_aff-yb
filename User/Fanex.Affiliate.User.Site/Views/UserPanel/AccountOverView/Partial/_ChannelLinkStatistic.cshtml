@@ -9,25 +9,30 @@
 {
 
     var channelName = item.First().ChannelName;
-
-    <tr data-id='@item.Key' class='parent-item'>
-        <td class="text-center">@index</td>
-        <td class="text-bold">
-            <div class="flex">
-                <span class="flex-0">@channelName</span>
-                <div class="flex-middle">
-                    <button class="btn btn-transparent btn-dropdown-table">
-                    </button>
-                </div>
-            </div>
+    <tr>
+        <td class="sub-channel-table" colspan="4">
+            <table>
+                <tr data-id='@item.Key' class='parent-item'>
+                    <td class="stt text-center">@index</td>
+                    <td class="channel text-bold">
+                        <div class="flex">
+                            <span class="flex-0">@channelName</span>
+                            <div class="flex-middle">
+                                <button class="btn btn-transparent btn-dropdown-table">
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="number-of-link text-center text-bold">@item.Count()</td>
+                    <td class="lang text-center">-</td>
+                </tr>
+                @foreach (var link in item)
+                {
+                    @RenderLinkRow(link);
+                }
+            </table>
         </td>
-        <td class="text-center text-bold">@item.Count()</td>
-        <td class="text-center">-</td>
     </tr>
-    foreach (var link in item)
-    {
-        @RenderLinkRow(link);
-    }
 }
 
 @helper RenderLinkRow(Fanex.Affiliate.User.Core.DTO.MarketingChannelLink link)
@@ -40,37 +45,38 @@
     </tr>
 }
 
-
-<div id="channel-table" class="table overview-table marketing-table">
-    <table>
-        <thead>
-            <tr class="overview-table-header">
-                <th class="stt"></th>
-                <th class="channel">@Lang.Channel</th>
-                <th class="number-of-link text-right">@Lang.NumberOfLink </th>
-                <th class="lang">@Lang.Language</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{
-                if (Model != null && Model.Any())
-                {
-                    var id = 1;
-
-                    foreach (var item in Model)
+<div class="wraper-table">
+    <div id="channel-table" class="table overview-table marketing-table">
+        <table>
+            <thead>
+                <tr class="overview-table-header">
+                    <th class="stt"></th>
+                    <th class="channel">@Lang.Channel</th>
+                    <th class="number-of-link text-right">@Lang.NumberOfLink </th>
+                    <th class="lang">@Lang.Language</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model != null && Model.Any())
                     {
-                        @RenderItem(item, id);
-                        id++;
+                        var id = 1;
+
+                        foreach (var item in Model)
+                        {
+                            @RenderItem(item, id);
+                            id++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td class="text-center no-info" colspan="4">@Lang.NoInfo</td>
+                        </tr>
                     }
                 }
-                else
-                {
-                    <tr>
-                        <td class="text-center no-info" colspan="4">@Lang.NoInfo</td>
-                    </tr>
-                }
-            }
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </div>
-<script src="@Url.RenderLink("~/www/build/js/channel-link-statistic.js")"></script>
+<script src="@Url.RenderLink("~/www/build/js/pages/channel-link-statistic.js")"></script>

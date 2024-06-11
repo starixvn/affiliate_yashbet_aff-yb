@@ -23,17 +23,17 @@
         private const string TraditionalChineseCode = "zh-TW";
         private readonly ISessionService _sessionService;
         private readonly IAccountRepository _accountRepository;
-        private readonly ICurrencyRepository _currencyRepository;
+        private readonly ICurrencyService _currencyService;
 
         public MyAccountController(ISessionService sessionService,
             ILanguageService languageService,
             IAccountRepository accountRepository,
-            ICurrencyRepository currencyRepository)
+            ICurrencyService currencyService)
             : base(sessionService, languageService)
         {
             _sessionService = sessionService;
             _accountRepository = accountRepository;
-            _currencyRepository = currencyRepository;
+            _currencyService = currencyService;
         }
         [HttpGet]
         [AjaxOnly]
@@ -72,10 +72,10 @@
             }
 
             var preferredLanguage = newAccountInfo.PreferredLanguage;
-            var languageName = LanguageService.GetLanguageList().FirstOrDefault(l => l.Code.Equals(preferredLanguage))?.EnglishName ?? preferredLanguage;
+            var languageName = LanguageService.GetLanguageList().FirstOrDefault(l => l.Code.Equals(preferredLanguage))?.NativeName ?? preferredLanguage;
             newAccountInfo.LanguageName = SystemLanguage.GetLanguageText(languageName);
 
-            var baseCurrencyList = _currencyRepository.GetBaseCurrencyList();
+            var baseCurrencyList = _currencyService.GetBaseCurrencyList();
 
             var model = new MyAccountViewModel
             {

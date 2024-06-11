@@ -20,28 +20,37 @@
 </div>
 
 <div id="paymentList">
-    <div class="info-group">
+    <div class="info-question">
         <div class="title">
             <span class="text">@Lang.RecentPayment</span>
         </div>
-    </div>
-    <div class="group-control-select-table">
-        <form class="form-inline" id="paymentListForm">
-            <div class="form-group">
-                <label>@Lang.Year</label>
-                <select class="form-control" id="year">
+        <div class="body-result">
+            <form class="form" id="paymentListForm">
+                <div class="group-control-form">
+                    <div class="group-input">
+                        <label class="custom-label">@Lang.Year</label>
+                        <select class="form-input form-select" id="year">
 
-                    @for (var i = currentYear; i >= 2020; i--)
-                    {
-                        var temp = i == currentYear ? "selected='selected'" : string.Empty;
-                        <option @temp value="@i">@i</option>
-                    }
-                </select>
+                            @for (var i = currentYear; i >= 2020; i--)
+                            {
+                                var temp = i == currentYear ? "selected='selected'" : string.Empty;
+                                <option @temp value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+                    <button type="submit" class="custom-button" id="btnSubmit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M1.29657 6.2097C0.948574 6.0937 0.945241 5.90637 1.30324 5.78703L14.0279 1.5457C14.3806 1.42837 14.5826 1.6257 14.4839 1.97103L10.8479 14.695C10.7479 15.0477 10.5446 15.0597 10.3952 14.725L7.99924 9.33303L11.9992 3.9997L6.66591 7.9997L1.29657 6.2097Z" fill="white" />
+                        </svg>
+                        @Lang.Submit
+                    </button>
+                </div>
+            </form>
+            <div class="wraper-table">
+                @{ Html.RenderPartial("~/Views/UserPanel/PaymentRequest/PaymentPartial/_PaymentList.cshtml", Model); }
             </div>
-            <button type="submit" class="btn btn-submit" id="btnSubmit">@Lang.Submit</button>
-        </form>
+        </div>
     </div>
-    @{ Html.RenderPartial("~/Views/UserPanel/PaymentRequest/PaymentPartial/_PaymentList.cshtml", Model); }
 </div>
 
 <script type="text/javascript">

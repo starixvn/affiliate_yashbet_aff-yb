@@ -2,9 +2,7 @@
 import { Alert, Form, FormGroup, Label, Input } from 'reactstrap';
 
 import { post } from '../../../modules/ajaxRequest';
-import { resolveClientUrl, changeMode, renderMode } from '../../../modules/utils';
-
-const nova88 = 'Nova88';
+import { resolveClientUrl } from '../../../modules/utils';
 
 export default class AppContainer extends PureComponent {
     constructor(props) {
@@ -17,16 +15,7 @@ export default class AppContainer extends PureComponent {
             isShowMessage: false,
             message: '',
             year: now.getFullYear(),
-            isLightMode: true,
             isClickedLogin: false
-        }
-    }
-
-    componentDidMount() {
-        if (window.initialState.licenseeName === nova88) {
-            const isLightMode = renderMode();
-
-            this.setState({ isLightMode });
         }
     }
 
@@ -96,31 +85,18 @@ export default class AppContainer extends PureComponent {
         this.setState({ [target.name]: target.value });
     }
 
-    _handleChangeMode = () => {
-        const { isLightMode } = this.state;
-
-        changeMode(isLightMode);
-        this.setState({ isLightMode: !isLightMode });
-    }
-
     render() {
-        const { userName, password, isShowMessage, message, year, isLightMode } = this.state;
+        const { userName, password, isShowMessage, message, year } = this.state;
         const { licenseeName } = window.initialState;
 
         return (
             <div className="login-container">
-                {/* <div className="lgRight"></div> */}
                 <div className="lgRp">
                     <div className="login-header">
                         <div>
                             <div>Welcome to {licenseeName}<span> Login</span></div>
                             <p>Please sign in to continue to work</p>
                         </div>
-                        {
-                            licenseeName === nova88 && <div className="switch-mode-theme">
-                                <input type="checkbox" id="switch" checked={!isLightMode} onChange={this._handleChangeMode} /><Label for="switch"></Label>
-                            </div>
-                        }
                     </div>
                     <div className="war-box">
                         <Alert color='danger' isOpen={isShowMessage}>
@@ -130,7 +106,6 @@ export default class AppContainer extends PureComponent {
 
                     <Form tag="form" className="form-login" autoComplete="false">
                         <FormGroup>
-                            {/* <span className="icUser">&nbsp;</span> */}
                             <Label for="userName" className="form-login-text">User Name</Label>
                             <div>
                                 <Input type="text" name="userName" id="userName" value={userName}
@@ -139,7 +114,6 @@ export default class AppContainer extends PureComponent {
                         </FormGroup>
 
                         <FormGroup>
-                            {/* <span className="icPass">&nbsp;</span> */}
                             <Label for="passWord" className="form-login-text">Password</Label>
                             <div>
                                 <Input type="password" name="password" id="password" autoComplete="false"

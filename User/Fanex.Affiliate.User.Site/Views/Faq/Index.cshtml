@@ -16,17 +16,22 @@
 
 @section scripts{
     @Html.InlineScripts("~/www/build/js/left-menu-panel.js")
+    @Html.InlineScripts("~/www/build/js/pages/sharing-structure.js")
 }
 
-<div class="main-content main-content-left-panel">
-    @RazorHelper.RenderLeftPanel(Menu.FaqMenuList)
-    <div class="content">
-        <div class="page-title">
-            <span class="text">@Lang.Faqs</span>
+<div class="page-container">
+    <div class="main-content main-content-left-panel">
+        @RazorHelper.RenderLeftPanel(Menu.FaqMenuList)
+        <div class="content">
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span class="text">@Lang.FaqsTitle</span>
+                </h2>
+            </div>
+
+            @Html.Raw(htmlString)
+
+            @RazorHelper.RenderMovingTopButton()
         </div>
-
-        @Html.Raw(htmlString)
-
-        @RazorHelper.RenderMovingTopButton()
     </div>
 </div>

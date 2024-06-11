@@ -59,6 +59,12 @@
                 var isChecked = $(this).prop("checked");
                 _me.toggleDate(isChecked);
             });
+
+            $('#mainMenu .parent .submenu-container').hover(function () {
+                $(this).addClass("hover");
+            }, function () {
+                $(this).removeClass("hover");
+            });
         },
 
         getParams: function () {
@@ -102,7 +108,8 @@
         },
 
         toggleDate: function (isDisabled) {
-            $(".date-wrapper > *").toggleClass("disabled", isDisabled);
+            $(".date-wrapper > .form-input").toggleClass("disable", isDisabled);
+            $(".date-wrapper > .icon-date-time").toggleClass("disabled", isDisabled);
         }
     }
 

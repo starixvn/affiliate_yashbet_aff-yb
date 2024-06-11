@@ -28,8 +28,6 @@ namespace Fanex.Affiliate.User.Core.BusinessService
 
         IEnumerable<MarketingItem> GetBannerList(MarketingBannerParam bannerParam);
 
-        IEnumerable<MarketingItem> GetTextList(MarketingTextParam textParam);
-
         IEnumerable<LandingPage> GetLandingPageList(bool isInternal = false, AffiliateLinkType linkType = AffiliateLinkType.AffiliateLink);
 
         ResultInfo<MarketingChannel> AddMarketingChannel(int userId, string channelName);

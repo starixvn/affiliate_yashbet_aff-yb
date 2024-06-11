@@ -21,53 +21,44 @@
 @section styles{
     @Html.InlineStyles("~/www/build/styles/css/update-password.css")
 }
-<div class="sub-content" style="padding-bottom: 30px;">
-    <div class="page-title">
-        <span class="text">@Lang.ChangePass</span>
+<div class="wraper-block">
+    <div class="group-title">
+        <h2 class="title-block">
+            <span class="text">@Lang.ChangePass</span>
+        </h2>
     </div>
-
-    <div>
+    <div style="max-width: 1200px;">
         <p>@Lang.ChangePassText</p>
         <div class="alert" role="alert" id="messageResult" style="display: none"></div>
 
-        <form id="updatePasswordForm" class="form-horizontal">
+        <form id="updatePasswordForm" class="form">
             @Html.AntiForgeryToken()
-            <div class="form-group">
-                <label class="col-sm-3 control-label require">@Lang.OldPass</label>
-                <div class="col-sm-3">
-                    @Html.PasswordFor(p => p.OldPassword, new { @class = "form-control", @autocomplete = "off" })
+            <div class="form-group form-columns form-columns-2">
+                <div class="items validate-group">
+                    <label for="OldPassword" class="custom-label require">@Lang.OldPass</label>
+                    @Html.PasswordFor(p => p.OldPassword, new { @class = "form-input", @autocomplete = "off" })
+                    @Html.ValidationMessageFor(p => p.OldPassword, string.Empty, new { @class = "validate-input hide" })
                 </div>
-                <div class="col-sm-offset-3 col-sm-9">
-                    @Html.ValidationMessageFor(p => p.OldPassword, string.Empty, new { @class = "help-block hide" })
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label require">@Lang.NewPass</label>
-                <div class="col-sm-3">
-                    <input autocomplete="off" class="form-control"
+                <div class="items validate-group">
+                    <label for="NewPassword" class="custom-label require">@Lang.NewPass</label>
+                    <input autocomplete="off" class="form-input"
                            data-val="true"
                            data-val-regex="@Lang.PassCheck" data-val-regex-pattern="^(?=.*\d+.*\d+)(?=.*[a-zA-Z].*[a-zA-Z]).{6,}$"
                            data-val-required="@Lang.NewPasswordisre" id="NewPassword" name="NewPassword" type="password" />
-                </div>
-                <div class="col-sm-offset-3 col-sm-9">
-                    @Html.ValidationMessageFor(p => p.NewPassword, string.Empty, new { @class = "help-block hide" })
+                    @Html.ValidationMessageFor(p => p.NewPassword, string.Empty, new { @class = "validate-input hide" })
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-sm-3 control-label require">@Lang.RePass</label>
-                <div class="col-sm-3">
-                    @Html.PasswordFor(p => p.ConfirmNewPassword, new { @class = "form-control", @autocomplete = "off" })
-                </div>
-                <div class="col-sm-offset-3 col-sm-9">
-                    @Html.ValidationMessageFor(p => p.ConfirmNewPassword, string.Empty, new { @class = "help-block hide" })
+            <div class="form-group form-columns form-columns-2">
+                <div class="items validate-group">
+                    <label for="ConfirmNewPassword" class="custom-label require">@Lang.RePass</label>
+                    @Html.PasswordFor(p => p.ConfirmNewPassword, new { @class = "form-input", @autocomplete = "off" })
+                    @Html.ValidationMessageFor(p => p.ConfirmNewPassword, string.Empty, new { @class = "validate-input hide" })
                 </div>
             </div>
 
-            <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-5 button-block">
-                    <button type="submit" id="btnSubmit" class="btn btn-submit">@Lang.Submit</button>
-                    <button type="button" id="btnCancel" class="btn btn-submit">@Lang.Cancel</button>
-                </div>
+            <div class="group-button">
+                <button class="custom-button custom-button-cancel" id="btnCancel" type="button">@Lang.Cancel</button>
+                <button class="custom-button custom-button-dash" id="btnSubmit" type="submit">@Lang.Submit</button>
             </div>
         </form>
 

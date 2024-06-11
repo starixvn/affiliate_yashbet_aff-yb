@@ -21,7 +21,7 @@
     var _me = {
         initialize: function () {
             _rootUrl = $("#RootUrl").val();
-            _language = $("#Language").val();
+            _language = $("#CurrentLanguage").val();
         },
         resolveRelativeUrl: function (url) {
             return _rootUrl + url;
@@ -78,7 +78,7 @@
 
         toggleErrorMessage: function ($container, isValid) {
             $container.toggleClass("has-error", !isValid);
-            $container.find(".help-block").toggleClass("hide", isValid);
+            $container.find(".validate-input").toggleClass("hide", isValid);
         },
 
         changeLanguage: function (selectedLanguage) {

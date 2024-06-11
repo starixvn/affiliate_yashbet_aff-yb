@@ -24,13 +24,13 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers.UserPanel
             ISessionService sessionService = null,
             IAccountRepository accountRepository = null,
             ILanguageService languageService = null,
-            ICurrencyRepository currencyRepository = null)
+            ICurrencyService currencyService = null)
         {
             var fakeSessionService = sessionService ?? MockingHelper.GetSessionService();
             var fakeAccountRepository = accountRepository ?? (new Mock<IAccountRepository>()).Object;
             var fakeLanguageService = languageService ?? Mock.Of<ILanguageService>();
-            var fakeCurrencyRepository = currencyRepository ?? Mock.Of<ICurrencyRepository>();
-            var controller = new MyAccountController(fakeSessionService, fakeLanguageService, fakeAccountRepository, fakeCurrencyRepository);
+            var fakeCurrencyService = currencyService ?? Mock.Of<ICurrencyService>();
+            var controller = new MyAccountController(fakeSessionService, fakeLanguageService, fakeAccountRepository, fakeCurrencyService);
             return MockingHelper.FakeController(controller) as MyAccountController;
         }
 

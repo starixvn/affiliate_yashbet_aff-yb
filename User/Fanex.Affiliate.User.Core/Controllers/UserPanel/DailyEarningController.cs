@@ -7,7 +7,6 @@
     using Fanex.Affiliate.User.Core.Utilities;
     using Filters;
     using MetalModels.UserPanel;
-    using System;
     using System.Web.Mvc;
     using ViewModels.UserPanel;
 
@@ -16,19 +15,19 @@
     {
         private readonly IAppSetting _appSetting;
         private readonly IStatementHistoryRepository _statementHistoryRepository;
-        private readonly ICurrencyRepository _currencyRepository;
+        private readonly ICurrencyService _currencyService;
 
         public DailyEarningController(
             IAppSetting appSetting,
             ISessionService sessionService,
             ILanguageService languageService,
             IStatementHistoryRepository statementHistoryRepository,
-            ICurrencyRepository currencyRepository
+            ICurrencyService currencyService
             ) : base(sessionService, languageService)
         {
             _appSetting = appSetting;
             _statementHistoryRepository = statementHistoryRepository;
-            _currencyRepository = currencyRepository;
+            _currencyService = currencyService;
         }
 
         [AjaxOnly]
@@ -46,9 +45,9 @@
                 SelectedProduct = param.ProductId.Value
             };
             ViewBag.MonthDate = param.MonthDate;
-            ViewBag.BaseCurrencies = _currencyRepository.GetBaseCurrencyList();
+            ViewBag.BaseCurrencies = _currencyService.GetBaseCurrencyList();
             ViewBag.SelectedBaseCurrency = param.BaseCurrency;
-            var viewPath = param.IsOnlyContent ? "UserPanel/StatementHistory/StatementHistoryPartial/_DailyEarningContent" : "UserPanel/StatementHistory/DailyEarning";
+            var viewPath = param.IsOnlyContent ? "~/Views/UserPanel/StatementHistory/StatementHistoryPartial/_DailyEarningContent.cshtml" : "~/Views/UserPanel/StatementHistory/DailyEarning.cshtml";
 
             return View(viewPath, viewModel);
 

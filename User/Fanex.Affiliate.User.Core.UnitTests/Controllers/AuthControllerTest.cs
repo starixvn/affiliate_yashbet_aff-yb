@@ -322,7 +322,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.Controllers
             var result = controller.AdminLogin(param) as RedirectResult;
 
             AuthService.ReceivedWithAnyArgs().SignIn(default(string), false);
-            Assert.Contains("UserPanel/Main/#AccountOverView", result.Url);
+            Assert.Contains("~/Views/UserPanel/Main/#AccountOverView", result.Url);
         }
 
         [Fact]

@@ -128,7 +128,7 @@ namespace Fanex.Affiliate.User.Core.UnitTests.BusinessService
 
         private static void SetUpContext(string lang = null)
         {
-            var query = String.IsNullOrWhiteSpace(lang) ? null : $"lang={lang}";
+            var query = string.IsNullOrWhiteSpace(lang) ? null : $"lang={lang}";
             var request = new HttpRequest("111", "http://127.0.0.1:8080/controller/action", query);
             var response = new HttpResponse(new StringWriter());
             HttpContext.Current = new HttpContext(request, response);

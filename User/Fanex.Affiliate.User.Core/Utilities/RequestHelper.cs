@@ -19,7 +19,7 @@ namespace Fanex.Affiliate.User.Core.Utilities
                 ip = "127.0.0.1";
             }
 
-            return ip;
+            return ip ?? string.Empty;
         }
 
         private static string GetForwardedIPAddress(string ips)

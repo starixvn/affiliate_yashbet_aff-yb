@@ -120,7 +120,7 @@
   <data name="Home" xml:space="preserve">
     <value>LAMAN UTAMA</value>
   </data>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>STRUKTUR PENGAGIHAN KEUNTUNGAN</value>
   </data>
   <data name="Product" xml:space="preserve">
@@ -180,8 +180,8 @@
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>Sepanduk baru kini tersedia!</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>TERBARU!</value>
+  <data name="New" xml:space="preserve">
+    <value>TERBARU</value>
   </data>
   <data name="WhatNewInOneTwoBetPromotion" xml:space="preserve">
     <value>Apakah yang terbaru dalam Promosi B2C !</value>
@@ -388,7 +388,7 @@
     <value>Sila lengkapkan borang ini untuk mendaftar akaun affiliate B2C anda.</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>Medan bertanda &lt;font color="red"&gt;*&lt;/font&gt; mesti dilengkapkan</value>
+    <value>Medan bertanda &lt;span class="red-color"&gt;*&lt;/span&gt; mesti dilengkapkan</value>
   </data>
   <data name="ContactInfo" xml:space="preserve">
     <value>Maklumat Perhubungan</value>
@@ -580,11 +580,11 @@
     <value>Permohonan Dalam Semakan</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>Terima kasih kerana menghantar permohonan anda.&lt;br/&gt;&lt;br/&gt;
-Laman web dan butiran permohonan anda akan disemak oleh pasukan di B2C Affiliates untuk memastikan kandungan sesuai untuk mempromosikan produk kami.&lt;br/&gt;&lt;br/&gt;
-Dalam masa 5 hari kami sepatutnya dapat memberi anda keputusan berkenaan dengan permohonan anda. Jika anda diluluskan, anda akan dapat menikmati akses penuh kepada affiliate program kami.&lt;br /&gt;&lt;br /&gt;
-Salam,&lt;br /&gt;&lt;br /&gt;
-Pasukan di B2C Affiliates&lt;br/&gt;&lt;br/&gt;
+    <value>Terima kasih kerana menghantar permohonan anda.&lt;br/&gt;
+Laman web dan butiran permohonan anda akan disemak oleh pasukan di B2C Affiliates untuk memastikan kandungan sesuai untuk mempromosikan produk kami.&lt;br/&gt;
+Dalam masa 5 hari kami sepatutnya dapat memberi anda keputusan berkenaan dengan permohonan anda. Jika anda diluluskan, anda akan dapat menikmati akses penuh kepada affiliate program kami.&lt;br/&gt;
+Salam,&lt;br/&gt;
+Pasukan di B2C Affiliates&lt;br/&gt;
 Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan teragak-agak untuk &lt;a href='{0}'&gt;Hubungi Kami&lt;/a&gt;.</value>
   </data>
   <data name="YouDontHaveTheEmail" xml:space="preserve">
@@ -1338,7 +1338,7 @@ Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan
     <value>Whatsapp</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>SERTAI SEKARANG!</value>
+    <value>Sertai sekarang</value>
   </data>
   <data name="PasswordIsRequired" xml:space="preserve">
     <value>Kata laluan diperlukan</value>
@@ -2008,5 +2008,17 @@ Jika anda mempunyai sebarang soalan dan memerlukan sebarang bantuan, sila jangan
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>Lupa?</value>
+  </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>SOALAN LAZIM</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>Sahkan butiran akaun anda</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Selamat</value>
   </data>
 </root>

@@ -1,15 +1,13 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    Layout = "~/Views/Shared/_LayoutBeforeLogin.cshtml";
     ViewBag.Title = Lang.Home;
 }
 
 @model Fanex.Affiliate.User.Core.ViewModels.HomeViewModel
 
 @{
-    var desktopBannerPath = Url.Content($"~/www/build/styles/Images/home/main-banners/main.desktop.{Model.Language}");
-    var mobileBannerPath = Url.Content($"~/www/build/styles/Images/home/main-banners/main.mobile.{Model.Language}");
-    var advMobile = Url.Content($"~/www/build/styles/Images/apply/3step.mobile.{Model.Language}");
-    var advDesktop = Url.Content($"~/www/build/styles/Images/apply/3step.desktop.{Model.Language}");
+    var desktopApplyPath = Url.Content($"~/www/build/styles/Images/home/apply/desktop.{Model.Language}.png");
+    var mobileApplyPath = Url.Content($"~/www/build/styles/Images/home/apply/mobile.{Model.Language}.png");
 }
 
 @section styles{
@@ -21,89 +19,135 @@
 }
 
 <div class="content home-page">
-    <div id="mainBanner" class="carousel slide banner-center" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <picture>
-                    <source media="(max-width:767px)" srcset="@(mobileBannerPath + ".jpg?v=185005v01")" type="image/jpeg" />
-                    <source srcset="@(desktopBannerPath + ".jpg?v=185005v01")" type="image/jpeg" />
-                    <img class="img-item img-responsive" src="@(desktopBannerPath + ".jpg?v=185005v01")" alt="Main Banner" />
-                </picture>
+
+    <div class="swiper top-banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a class="nounderline home-banner-tracking-flat show-pc">
+                    <picture>
+                        <source srcset="~/www/build/styles/Images/home/main-banners/banner-pc-1.webp" type="image/webp" />
+                        <source srcset="~/www/build/styles/Images/home/main-banners/banner-pc-1.jpg" type="image/jpeg" />
+                        <img class="img-item img-responsive" src="~/www/build/styles/Images/home/main-banners/banner-pc-1.jpg" alt="Actived Home Banner" />
+                    </picture>
+                </a>
+                <a class="nounderline home-banner-tracking-flat show-mobile">
+                    <picture>
+                        <source srcset="~/www/build/styles/Images/home/main-banners/banner-mb-1.webp" type="image/webp" />
+                        <source srcset="~/www/build/styles/Images/home/main-banners/banner-mb-1.jpg" type="image/jpeg" />
+                        <img class="img-item img-responsive" src="~/www/build/styles/Images/home/main-banners/banner-mb-1.jpg" alt="Actived Home Banner" />
+                    </picture>
+                </a>
+            </div>
+            @*<div class="swiper-slide">
+                <a class="nounderline home-banner-tracking-flat show-pc">
+                    <picture>
+                        <source srcset="~/www/build/styles/Images/home/main-banners/banner-pc-1.webp" type="image/webp" />
+                        <source srcset="~/www/build/styles/Images/home/main-banners/banner-pc-1.jpg" type="image/jpeg" />
+                        <img class="img-item img-responsive" src="~/www/build/styles/Images/home/main-banners/banner-pc-1.jpg" alt="Actived Home Banner" />
+                    </picture>
+                </a>
+                <a class="nounderline home-banner-tracking-flat show-mobile">
+                    <picture>
+                        <source srcset="~/www/build/styles/Images/home/main-banners/banner-mb-1.webp" type="image/webp" />
+                        <source srcset="~/www/build/styles/Images/home/main-banners/banner-mb-1.jpg" type="image/jpeg" />
+                        <img class="img-item img-responsive" src="~/www/build/styles/Images/home/main-banners/banner-mb-1.jpg" alt="Actived Home Banner" />
+                    </picture>
+                </a>
+            </div>*@
+        </div>
+        @*<div class="swiper-pagination"></div>*@
+    </div>
+
+    <div class="page-container">
+        <div class="block apply-block">
+            <a href="@Model.SignUpLink" class="nounderline">
+                <div class="image-apply">
+                    <img src="@desktopApplyPath" alt="aplly" class="img-responsive show-pc" />
+                    <img src="@mobileApplyPath" alt="aplly" class="img-responsive show-mobile" />
+                </div>
+            </a>
+            <div class="text-apply">
+                @SiteFriendlyNameHelper.ReplaceB2C(Lang.AsAOneTwoBetYouWillEarnCommission)
             </div>
         </div>
-    </div>
-    @RazorHelper.RenderHotNews()
-    <div class="news flex-column">
-        <div class="item-wrapper first">
-            <div class="card">
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <span class="icon"><img src="~/www/build/styles/Images/icon-1.png" alt="icon-1" /></span>
-                        <span class="text">@SiteFriendlyNameHelper.ReplaceB2C(Lang.ApplyOneTwoBetAffiliate)</span>
-                    </h4>
-                    <a href="@Model.SignUpLink" class="nounderline">
-                        <div class="img-content">
-                            <picture>
-                                <source media="(max-width:767px)" srcset="@(advMobile + ".svg?v=191310v01")" type="image/svg+xml" />
-                                <source srcset="@(advDesktop + ".svg?v=191310v01")" type="image/svg+xml" />
-                                <img class="img-item img-responsive" src="@(advDesktop + ".svg?v=191310v01")" alt="Adv Banner" />
-                            </picture>
+        <div class="block what-new-block">
+            <div class="flex-2-column">
+                <div class="column column-left">
+                    <div class="group-contact">
+                        <div class="group-title show-pc">
+                            <h2 class="title-block">
+                                <span>@Lang.WhatNewInAffiliate</span>
+                            </h2>
                         </div>
-                        <p class="text-content">
-                            @SiteFriendlyNameHelper.ReplaceB2C(Lang.AsAOneTwoBetYouWillEarnCommission)
-                        </p>
+                        <div class="slogan-block">
+                            @Lang.CannotGetEnough
+                        </div>
+                        <div class="heading-block">
+                            @Lang.YourCurrentCommision
+                        </div>
+                        <div class="txt-block">
+                            @Lang.ContactYourAffilliateSupportTeam
+                        </div>
+                        <div class="view-more">
+                            <a href="@Url.Content("~/ContactUs")" class="button-bg">@Lang.ContactNow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column column-right">
+                    <div class="group-title show-mobile">
+                        <h2 class="title-block">
+                            <span>@Lang.WhatNewInAffiliate</span>
+                        </h2>
+                    </div>
+                    <div class="img-what-new">
+                        <img src="~/www/build/styles/Images/home/what-new.png" alt="aplly" class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block news-block">
+            <div class="group-title">
+                <h2 class="title-block">
+                    <span>@SiteFriendlyNameHelper.ReplaceB2C(Lang.OneTwoBetAffiliateNews)</span>
+                </h2>
+            </div>
+            <div class="flex-2-column">
+                <div class="column column-left">
+                    <a class="nounderline @(Model.IsAuthenticated ? string.Empty : "mediaLoginLink")" href="@Model.BannerLink">
+                        <div class="card-items">
+                            <div class="new-bage">
+                                <img src="~/www/build/styles/Images/icons/star-fill.svg" alt="start" />
+                                <span>@Lang.New</span>
+                            </div>
+                            <div class="card-items-header">
+                                @Lang.NewBannerIsNowAvailable
+                            </div>
+                            <div class="card-items-body">
+                                @Lang.YouCanNowLogInYourAffiliateAccount
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column column-right">
+                    <a href="@Url.Content("~/Promotion")" class="nounderline">
+                        <div class="card-items">
+                            <div class="new-bage">
+                                <img src="~/www/build/styles/Images/icons/star-fill.svg" alt="start" />
+                                <span>@Lang.New</span>
+                            </div>
+                            <div class="card-items-header">
+                                @SiteFriendlyNameHelper.ReplaceB2C(Lang.WhatNewInOneTwoBetPromotion)
+                            </div>
+                            <div class="card-items-body">
+                                @SiteFriendlyNameHelper.ReplaceB2C(Lang.GetToKnowHotPromotion)
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
         </div>
-
-        <div class="item-wrapper">
-            <div class="card">
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <span class="icon"><img src="~/www/build/styles/Images/icon-2.png" alt="icon-2" /></span>
-                        <span class="text">@Lang.WhatNewInAffiliate</span>
-                    </h4>
-                    <div class="card-body">
-                        <a href="@Url.Content("~/ContactUs")" class="img-content adv-contact">
-                            <p class="text-1">@Lang.CannotGetEnough</p>
-                            <p class="text-2">@Lang.YourCurrentCommision</p>
-                            <span class="line"></span>
-                            <p class="text-3">@Lang.ContactYourAffilliateSupportTeam</p>
-                            <span class="btn">@Lang.ContactNow</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="item-wrapper last">
-            <div class="card" id="affiliateNews">
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <span class="icon"><img src="~/www/build/styles/Images/icon-3.png" alt="icon-3" /></span>
-                        <span class="text">@SiteFriendlyNameHelper.ReplaceB2C(Lang.OneTwoBetAffiliateNews)</span>
-                    </h4>
-                    <div class="text-content">
-                        <ul class="news-content">
-                            <li>
-                                <a class="nounderline mediaLink @(Model.IsAuthenticated ? string.Empty : "mediaLoginLink")" href="@Model.BannerLink">
-                                    <span class="news-title">@Lang.NewBannerIsNowAvailable <span class="text-red" style="text-decoration:underline;">@Lang.NewWithExclamationPoint</span></span>
-                                    <span>@Lang.YouCanNowLogInYourAffiliateAccount </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="@Url.Content("~/Promotion")" target="_blank" class="nounderline">
-                                    <span class="news-title">@SiteFriendlyNameHelper.ReplaceB2C(Lang.WhatNewInOneTwoBetPromotion) <span class="text-red" style="text-decoration:underline;">@Lang.NewWithExclamationPoint</span></span>
-                                    <span>@SiteFriendlyNameHelper.ReplaceB2C(Lang.GetToKnowHotPromotion)</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
 </div>
 
 <input type="hidden" id="shortedLangCode" value="@Model.ShortedLanguageCode" />

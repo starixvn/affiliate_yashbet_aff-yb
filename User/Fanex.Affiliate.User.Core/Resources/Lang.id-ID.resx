@@ -886,7 +886,12 @@
     <value>Formulir Permohonan</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>Terima kasih telah mengajukan permohonan Anda.&lt;br/&gt;&lt;br/&gt;Rincian situs web dan permohonan Anda akan ditinjau ulang oleh tim Afiliasi B2C untuk memastikan bahwa konten dimaksud sesuai untuk mempromosikan produk kami.&lt;br/&gt;&lt;br/&gt;Dalam 5 hari kami akan memberitahu mengenai keputusan atas permohonan Anda. Jika disetujui, Anda dapat menikmati akses penuh ke program afiliasi kami.&lt;br /&gt;&lt;br /&gt;Salam Hormat,&lt;br /&gt;&lt;br /&gt;Tim Afiliasi B2C.&lt;br/&gt;&lt;br/&gt;Jika Anda memiliki pertanyaan dan memerlukan bantuan sila &lt;a href='{0}'&gt;Hubungi Kami&lt;/a&gt;.</value>
+    <value>Terima kasih telah mengajukan permohonan Anda.&lt;br/&gt;
+Rincian situs web dan permohonan Anda akan ditinjau ulang oleh tim Afiliasi B2C untuk memastikan bahwa konten dimaksud sesuai untuk mempromosikan produk kami.&lt;br/&gt;
+Dalam 5 hari kami akan memberitahu mengenai keputusan atas permohonan Anda. Jika disetujui, Anda dapat menikmati akses penuh ke program afiliasi kami.&lt;br/&gt;
+Salam Hormat,&lt;br/&gt;
+Tim Afiliasi B2C.&lt;br/&gt;
+Jika Anda memiliki pertanyaan dan memerlukan bantuan sila &lt;a href='{0}'&gt;Hubungi Kami&lt;/a&gt;.</value>
   </data>
   <data name="Rejected" xml:space="preserve">
     <value>Ditolak</value>
@@ -907,7 +912,7 @@
     <value>Permintaan Pembayaran Berhasil!</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>Kolom yang bertanda &lt;font color="red"&gt;*&lt;/font&gt; harus diisi.</value>
+    <value>Kolom yang bertanda &lt;span class="red-color"&gt;*&lt;/span&gt; harus diisi.</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
@@ -1206,7 +1211,7 @@
   <data name="TermAndCondition" xml:space="preserve">
     <value>syarat dan ketentuan</value>
   </data>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>Struktur Pembagian Pendapatan</value>
   </data>
   <data name="Product" xml:space="preserve">
@@ -1230,8 +1235,8 @@
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>Berita affiliasi B2C</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>Baru!</value>
+  <data name="New" xml:space="preserve">
+    <value>Baru</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>Spanduk baru tersedia sekarang !!</value>
@@ -1309,7 +1314,7 @@
     <value>Daftar Afiliasi dan hasilkan komisi hingga {0}!</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>DAFTAR SEKARANG!</value>
+    <value>Daftar sekarang</value>
   </data>
   <data name="WelcomeBack" xml:space="preserve">
     <value>Selamat datang kembali!</value>
@@ -1430,9 +1435,6 @@
   </data>
   <data name="YourRevenueShare" xml:space="preserve">
     <value>Pembagian Penghasilan Anda</value>
-  </data>
-  <data name="SupportTime" xml:space="preserve">
-    <value>Working Time:&lt;br/&gt;Monday - Saturday | &lt;strong&gt;10:00h-19:00h&lt;/strong&gt;&lt;br&gt;GMT +7</value>
   </data>
   <data name="AConfirmationEmail" xml:space="preserve">
     <value>Email konfirmasi dikirimkan ke email Anda.</value>
@@ -1766,5 +1768,17 @@
   </data>
   <data name="AdvantPlay" xml:space="preserve">
     <value>Advant Play</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>Lupa?</value>
+  </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>Tanya Jawab</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>Verifikasi detail akun Anda</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Selamat datang</value>
   </data>
 </root>

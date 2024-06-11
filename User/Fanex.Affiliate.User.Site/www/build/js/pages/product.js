@@ -1,14 +1,15 @@
-﻿"use strict";
+﻿'use strict';
 
 var Product = (function ($) {
-    function initSlider() {
-        //var $productBanner = $('#productBanner');
-        //$productBanner.carousel();
-    }
-
     var _me = {
         initialize: function initialize() {
-            initSlider();
+            _me.initEvent();
+        },
+        initEvent: function initEvent() {
+            $('.info-question .button-toggle').addClass("open");
+            $('.button-toggle').click(function () {
+                $(this).toggleClass('open').parent().next().slideToggle(300);
+            });
         }
     };
 

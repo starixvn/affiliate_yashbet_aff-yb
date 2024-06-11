@@ -48,7 +48,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 emailContent = GetEmailHtmlContent(emailContent, Lang.EmailTitlePasswordRecovery, preferredLanguage, emailParam.RootDomain);
             }
 
-            _mailProcessor.Send(emailContent, emailParam.MailTo, Lang.SubjectForgetPass, preferredLanguage);
+            _mailProcessor.Send(emailContent, emailParam.MailTo, Lang.SubjectForgetPass);
 
             ResetLanguage(prevLanguage);
         }
@@ -66,7 +66,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 emailContent = GetEmailHtmlContent(emailContent, Lang.EmailTitleNewPassword, preferredLanguage, emailParam.RootDomain);
             }
 
-            _mailProcessor.Send(emailContent, emailParam.MailTo, Lang.SubjectNewPass, preferredLanguage);
+            _mailProcessor.Send(emailContent, emailParam.MailTo, Lang.SubjectNewPass);
 
             ResetLanguage(prevLanguage);
         }
@@ -87,7 +87,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 emailContent = GetEmailHtmlContent(emailContent, isCancel ? Lang.EmailTitlePaymentCancel : Lang.EmailTitlePayment, preferredLanguage, emailParam.RootDomain);
             }
 
-            _mailProcessor.Send(emailContent, emailParam.MailTo, subject, preferredLanguage);
+            _mailProcessor.Send(emailContent, emailParam.MailTo, subject);
 
             ResetLanguage(prevLanguage);
         }
@@ -102,7 +102,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
             var emailContent = GetEmailTextContent(TemplateName, SystemLanguage.EnglishLanguageCode, emailParam);
 
             var subject = string.Format(Lang.CsdSubject, emailParam.UserName);
-            _mailProcessor.Send(emailContent, emailParam.MailTo, subject, preferredLanguage);
+            _mailProcessor.Send(emailContent, emailParam.MailTo, subject);
 
             ResetLanguage(prevLanguage);
         }
@@ -119,7 +119,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
                 emailContent = GetEmailHtmlContent(emailContent, Lang.EmailTittleVerificationAccount, preferredLanguage, emailParam.RootDomain);
             }
 
-            _mailProcessor.Send(emailContent, emailParam.MailTo, Lang.SubjectVerificationAccount, preferredLanguage);
+            _mailProcessor.Send(emailContent, emailParam.MailTo, Lang.SubjectVerificationAccount);
 
             ResetLanguage(prevLanguage);
         }

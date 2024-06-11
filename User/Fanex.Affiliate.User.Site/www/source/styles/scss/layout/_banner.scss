@@ -1,474 +1,91 @@
-﻿@mixin textBorder($color, $size) {
-    text-shadow: -#{$size}px -#{$size}px 0 $color, #{$size}px -#{$size}px 0 $color, -#{$size}px #{$size}px 0 $color, #{$size}px #{$size}px 0 $color;
-}
-
-.carousel.slide {
-    .carousel-control {
-        width: 2.5rem;
-        background: transparent;
-        text-shadow: 0 0 #fff;
-
-        .chevron {
-            background: rgba(255,255,255,.5);
-            top: calc(50% - 24px);
-            width: 100%;
-            padding: 10px 0;
-        }
-    }
-
-    .carousel-inner {
-        > .item {
-            height: 100%;
-            //position: relative;
-            .img-responsive {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-}
-
-.banner-text {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    max-width: 650px;
-
-    .txt-lang {
-        color: #fff;
-        margin: 0;
-        line-height: 1.2;
-    }
-
-    .text-logo {
-        color: #EB7816;
-    }
-
-    h2 {
-        font-size: 56px;
-        //letter-spacing: 0.04em;
-        margin-bottom: 11px !important;
-    }
-
-    h3 {
-        font-size: 36px;
-        font-weight: 900;
-        text-transform: uppercase;
-        //letter-spacing: 0.04em;
-        margin: 0;
-        color: #fff;
-    }
-
-    h5 {
-        font-size: 20px;
-        font-weight: normal;
-        letter-spacing: 0.02em;
-        margin-bottom: 12px;
-    }
-
-    .nounderline {
-        //background: linear-gradient(180deg, #FFA470 0%, #FF5D00 65.83%);
-        text-transform: uppercase;
-        font-weight: 900;
-        text-align: center;
-        display: inline-block;
-        color: #000;
-    }
-}
-
-.casino-banner {
-    &-text {
-        max-width: 35rem;
-        padding-bottom: 1.5rem;
-    }
-
-    &-btn {
-        width: 20.6rem;
-        height: 5.05rem;
-        display: inline-block;
-        background-size: cover;
-        text-align: center;
-        padding-top: 1.5rem;
-
-        .btn-text {
-            width: 12rem;
-            height: 2rem;
-        }
-    }
-
-    @media screen and (max-width: 767px) {
-        &-text {
-            max-width: 24rem;
-        }
-
-        &-btn {
-            width: 12.25rem;
-            height: 3rem;
-            padding-top: 0.5rem;
-
-            .btn-text {
-                width: 7.5rem;
-                height: 1.2rem;
-            }
-        }
-    }
-
-    @media screen and (max-width: 530px) {
-        &-text {
-            max-width: 16rem;
-        }
-    }
-
-    @media screen and (max-width: 374px) {
-        &-text {
-            max-width: 14rem;
-        }
-    }
-}
-
-.no-webp .casino-banner {
-    &-btn {
-        background-image: url('../../../../www/build/styles/Images/casino-banners/btn-background.png');
-
-        &:hover {
-            background-image: url("../../../../www/build/styles/Images/casino-banners/btn-background-hover.png");
-        }
-    }
-}
-
-.webp .casino-banner {
-    &-btn {
-        background-image: url('../../../../www/build/styles/Images/casino-banners/btn-background.webp');
-
-        &:hover {
-            background-image: url("../../../../www/build/styles/Images/casino-banners/btn-background-hover.webp");
-        }
-    }
-}
-
-.banner-side {
-    background: #010187;
-
-    > img {
-        margin: 0;
-    }
-}
-
-.no-webp .banner-commission-structure {
-    background-image: url("../../../../www/build/styles/Images/bg-Commission-Structure_Banner.png");
-}
-
-.webp .banner-commission-structure {
-    background-image: url("../../../../www/build/styles/Images/bg-Commission-Structure_Banner.webp");
-}
-
-.banner-commission-structure {
-    display: block;
-    max-width: 600px;
+﻿@import '../abstracts/mixins';
+.swiper {
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
-    padding: 30px 20px 70px 30px;
-    font-family: "Myriad Pro", sans-serif;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-align: left;
-
-    .text-content {
-        font-weight: 600;
-        line-height: 1;
-        transform: rotate(-5deg);
-
-        &.cn {
-            .text-small {
-                margin-left: 0;
-            }
-        }
-
-        .text-big-yellow {
-            position: relative;
-            display: inline-block;
-            margin-left: 10px;
-            font-size: 60px;
-            color: #FFFF28;
-            text-shadow: rgb(91, 69, 10) 1px 0px 0px, rgb(91, 69, 10) 0.540302px 0.841471px 0px, rgb(91, 69, 10) -0.416147px 0.909297px 0px, rgb(91, 69, 10) -0.989992px 0.14112px 0px, rgb(91, 69, 10) -0.653644px -0.756802px 0px, rgb(91, 69, 10) 0.283662px -0.958924px 0px, rgb(91, 69, 10) 0.96017px -0.279415px 0px;
-        }
-
-        .text-big-white {
-            font-size: 25px;
-            color: #fff;
-            text-shadow: rgb(91, 69, 10) 1px 0px 0px, rgb(91, 69, 10) 0.540302px 0.841471px 0px, rgb(91, 69, 10) -0.416147px 0.909297px 0px, rgb(91, 69, 10) -0.989992px 0.14112px 0px, rgb(91, 69, 10) -0.653644px -0.756802px 0px, rgb(91, 69, 10) 0.283662px -0.958924px 0px, rgb(91, 69, 10) 0.96017px -0.279415px 0px;
-            font-style: italic;
-        }
-
-        .text-small-white {
-            //margin-bottom: 0;
-            font-size: 20px;
-            color: #fff;
-            text-shadow: rgb(91, 69, 10) 1px 0px 0px, rgb(91, 69, 10) 0.540302px 0.841471px 0px, rgb(91, 69, 10) -0.416147px 0.909297px 0px, rgb(91, 69, 10) -0.989992px 0.14112px 0px, rgb(91, 69, 10) -0.653644px -0.756802px 0px, rgb(91, 69, 10) 0.283662px -0.958924px 0px, rgb(91, 69, 10) 0.96017px -0.279415px 0px;
-            font-style: italic;
-        }
-
-        .text-small {
-            margin-left: 20px;
-            margin-bottom: 0;
-        }
-
-        .text-yellow {
-            position: relative;
-            display: inline-block;
-            font-size: 40px;
-            color: #FFFF28;
-            text-shadow: rgb(91, 69, 10) 1px 0px 0px, rgb(91, 69, 10) 0.540302px 0.841471px 0px, rgb(91, 69, 10) -0.416147px 0.909297px 0px, rgb(91, 69, 10) -0.989992px 0.14112px 0px, rgb(91, 69, 10) -0.653644px -0.756802px 0px, rgb(91, 69, 10) 0.283662px -0.958924px 0px, rgb(91, 69, 10) 0.96017px -0.279415px 0px;
-            font-weight: 600;
-            font-style: normal;
-        }
-    }
-
-    @media screen and (max-width: 767px) {
-        padding-left: 15px;
-
-        .text-content {
-            .text-big-yellow {
-                font-size: 40px;
-            }
-
-            .text-big-white {
-                font-size: 18px;
-            }
-
-            .text-small-white {
-                font-size: 15px;
-            }
-
-            .text-yellow {
-                font-size: 30px;
-            }
-        }
-    }
-}
-
-.no-webp .banner-product-sport {
-    background-image: url("../../../../www/build/styles/Images/products/bg-sports_affiliate.jpg?v=000001");
-}
-
-.webp .banner-product-sport {
-    background-image: url("../../../../www/build/styles/Images/products/bg-sports_affiliate.webp?v=000001");
-}
-
-.no-webp .banner-product-casino {
-    background-image: url("../../../../www/build/styles/Images/products/bg-casino_affiliate.jpg?v=000001");
-}
-
-.webp .banner-product-casino {
-    background-image: url("../../../../www/build/styles/Images/products/bg-casino_affiliate.webp?v=000001");
-}
-
-.banner-product {
-    display: flex;
-    max-width: 1120px;
-    height: 300px;
-    margin: 0 auto;
-    padding: 50px 10px;
-    font-family: Tahoma, sans-serif;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-align: left;
-    background-size: cover;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
     position: relative;
 
-    .text-red {
-        font-weight: 500;
-        line-height: 1.204;
-        font-size: 4rem;
-        color: #ffffff;
-        line-height: 1.204545;
-        position: absolute;
-        text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.5);
-        top: 50%;
-        -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-        transform: translate(0, -50%);
+    .swiper-slide {
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
+    .swiper-pagination {
 
         span {
-            font-weight: 600;
-            color: #FFD235;
-            font-size: 109.091%;
-            display: block;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-    }
+            margin: 0 4px;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #fff;
+            background: transparent;
+            opacity: 1;
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        height: 200px;
-    }
+            @include Mobile {
+                border: 1px solid #fff;
+                background: transparent;
+                width: 8px;
+                height: 8px;
+            }
 
-    @media screen and (max-width: 767px) {
-        height: 120px;
-    }
+            &:hover {
+                background: #fff;
 
-    &.banner-product-sport {
-        flex-direction: column;
-        justify-content: center;
-
-
-        .text-red {
-            text-align: left;
-            left: 76px;
-            max-width: 52%;
-        }
-
-        @media screen and (max-width: 1500px) {
-            .text-red {
-                max-width: 57%;
-                left: 20px;
-                font-size: 3rem;
+                @include Mobile {
+                    background: #fff;
+                }
             }
         }
 
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
-            .text-red {
-                //margin-bottom: -170px
-            }
-        }
+        .swiper-pagination-bullet-active {
+            background: #fff;
 
-        @media screen and (max-width: 767px) {
-            .text-red {
-                left: 10px;
-                font-size: 2rem;
-            }
-        }
-
-        @media screen and (max-width: 530px) {
-            .text-red {
-                font-size: 16px;
-                max-width: 58%;
+            @include Mobile {
+                border: 1px solid #fff;
             }
         }
     }
 
-    &.banner-product-casino {
-        .text-red {
-            text-align: right;
-            right: 49px;
-            margin: 3px 0 0 0;
-            padding: 0;
-            max-width: 53%;
-        }
+    .swiper-button-next {
+        right: 0;
+    }
 
-        @media screen and (max-width: 1500px) {
-            .text-red {
-                max-width: 57%;
-                right: 35px;
-                font-size: 30px;
-            }
-        }
+    .swiper-button-prev {
+        left: 0;
+    }
 
-        @media screen and (max-width: 991px) {
-            .text-red {
-                right: 25px;
-                font-size: 22px;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            .text-red {
-                right: 10px;
-                font-size: 22px;
-            }
-        }
-
-
-
-        @media screen and (max-width:600px) {
-            .text-red {
-                right: 15px;
-                font-size: 17px;
-            }
-        }
-
-        @media screen and (max-width: 530px) {
-            .text-red {
-                right: 15px;
-                max-width: 58%;
-                font-size: 15px;
-            }
-        }
-
-        @media screen and (max-width: 374px) {
-            .text-red {
-                //margin-top: -4.25rem;
-                //margin-left: -1.75rem;
-            }
-        }
+    .swiper-button-next, .swiper-button-prev {
+        background-image: none;
+        margin-top: -18px;
     }
 }
 
-.no-webp .banner-terms-condition {
-    background-image: url("../../../../www/build/styles/Images/bg-Terms_&_conditions_banner.png");
-}
 
-.webp .banner-terms-condition {
-    background-image: url("../../../../www/build/styles/Images/bg-Terms_&_conditions_banner.webp");
-}
-
-.no-webp .banner-faqs {
-    background-image: url("../../../../www/build/styles/Images/bg-FAQ_banner.png");
-}
-
-.webp .banner-faqs {
-    background-image: url("../../../../www/build/styles/Images/bg-FAQ_banner.webp");
-}
-
-.banner-terms-condition, .banner-faqs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 570px;
-    height: 95px;
-    margin: 0 auto;
-    padding-left: 108px;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    p {
-        margin: 0;
-        font-size: 22px;
-        font-weight: 600;
-        line-height: 1;
+.top-banner {
+    .swiper-slide {
+        position: relative;
     }
 
-    @media screen and (max-width: 767px) {
-        padding-left: 70px;
-        height: 65px;
-        width: 350px;
-
-        p {
-            font-size: 13px;
+    img {
+       /* @include Tablet {
+            min-height: 240px;
         }
+
+        @include Mobile {
+            min-height: 270px;
+        }*/
     }
 
-    @media screen and (max-width: 320px) {
-        height: 52px;
-        width: 100%;
-        padding-left: 60px;
-    }
-}
+    .swiper-pagination {
+        bottom: 30px !important;
 
-.banner-faqs {
-    padding-left: 130px;
-
-    @media screen and (max-width: 767px) {
-        width: 330px;
-        padding-left: 80px;
-    }
-
-    @media screen and (max-width: 375px) {
-        width: 100%;
-        justify-content: flex-start;
-        padding-top: 17px;
-        height: 55px;
+        @include Mobile {
+            bottom: 15px !important;
+        }
     }
 }

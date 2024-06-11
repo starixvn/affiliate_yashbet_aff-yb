@@ -1,9 +1,4 @@
-﻿@model bool
-@{
-    var isShowPgSoft = Model;
-}
-
-<div class="table table-responsive table-scroll">
+﻿<div class="table table-responsive table-scroll">
     <table>
         <thead>
             <tr>
@@ -299,27 +294,6 @@
                 <td></td>
                 <td></td>
             </tr>
-            @if (isShowPgSoft)
-            {
-                <tr>
-                    <td class="text-uppercase">@Lang.PgSoft</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="text-center"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            }
             <tr>
                 <td class="text-uppercase">@Lang.Playtech</td>
                 <td class="text-center"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>

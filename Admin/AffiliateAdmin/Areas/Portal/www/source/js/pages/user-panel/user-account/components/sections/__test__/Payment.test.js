@@ -37,7 +37,7 @@ describe('user account - components - sections - Payment', () => {
         userAccountInfo,
         setUserAccountInfo: jest.fn(),
         paymentMethodList: [{ Key: 123, Value: 'ABC' }],
-        licenseeName: 'Bwing'
+        licenseeName: 'YashBet'
     }
 
     it('render correctly', () => {

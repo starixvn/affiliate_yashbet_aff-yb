@@ -4,7 +4,6 @@ namespace Fanex.Affiliate.Link.Controllers
 {
     using System;
     using System.Collections.Specialized;
-    using System.Globalization;
     using System.Text;
     using System.Web.Mvc;
     using Commands;
@@ -23,7 +22,9 @@ namespace Fanex.Affiliate.Link.Controllers
         #region Services
 
         private readonly ITrackingSystemService _trackingSystemService;
-        private readonly IGeneralAffiliateInfoService _generalAffiliateInfoService;
+
+        private const string BENGALI_SHORTED_CODE = "bn";
+        private const string BENGALI_COUNTRY_CODE = "bd";
 
         private const string LinkIsInvalidMessage = "This link does not exists. Please contact administrator!";
         private const string LinkIsIncorrectMessage = "This link is incorrect. Please contact administrator!";
@@ -35,7 +36,6 @@ namespace Fanex.Affiliate.Link.Controllers
         public HomeController()
         {
             _trackingSystemService = new TrackingSystemService();
-            _generalAffiliateInfoService = new GeneralAffiliateInfoService();
         }
 
         #endregion Constructor
@@ -57,31 +57,13 @@ namespace Fanex.Affiliate.Link.Controllers
             return View();
         }
 
-        public ActionResult Link(string affId, string pageId, string lang = null, string deviceType = null)
+        public ActionResult Link(string pageId, string affCode = null, string lang = null, string channel = null)
         {
             try
             {
-                var affInfo = _generalAffiliateInfoService.GetGeneralAffiliateInfo(affId: Convert.ToInt32(affId));
-                var affDomain = GetFullAffDomain(GetOriginalUrl(), affId.ToString());
-
-                return InsertAffiliate(affInfo.affId, affInfo.affCode, pageId, lang, affDomain);
-            }
-            catch(Exception ex)
-            {
-                LogService.Error($"{ex.Message}", ex);
-                ViewBag.Result = LinkIsIncorrectMessage;
-                return View("Link");
-            }
-        }
-
-        public ActionResult NewLink(string pageId, string affCode = null, string lang = null)
-        {
-            try
-            {
-                var affInfo = _generalAffiliateInfoService.GetGeneralAffiliateInfo(affCode: affCode);
                 var affDomain = GetFullAffDomain(GetOriginalUrl(), pageId);
 
-                return InsertAffiliate(affInfo.affId, affInfo.affCode, pageId, lang, affDomain);
+                return InsertAffiliate(affCode, pageId, lang, affDomain);
             }
             catch (Exception ex)
             {
@@ -91,7 +73,7 @@ namespace Fanex.Affiliate.Link.Controllers
             }
         }
 
-        private ActionResult InsertAffiliate(int affId, string affCode, string pageId, string lang, string affDomain)
+        private ActionResult InsertAffiliate(string affCode, string pageId, string lang, string affDomain)
         {
             if (Request.Url != null)
             {
@@ -109,7 +91,7 @@ namespace Fanex.Affiliate.Link.Controllers
                 var command = new TrackingSystemCommand
                 {
                     AffDomain = affDomain,
-                    AffId = affId,
+                    AffCode = affCode,
                     PageCode = pageId,
                     LanguageCode = lang,
                     DeviceType = GetDeviceType(),
@@ -174,18 +156,22 @@ namespace Fanex.Affiliate.Link.Controllers
 
         private string HandleRedirectUrl(string redirectUrl, string pageId, string languageCode, string affCode)
         {
+            var customLanguageCode = languageCode;
+            if (string.Equals(BENGALI_SHORTED_CODE, languageCode, StringComparison.OrdinalIgnoreCase))
+            {
+                customLanguageCode = BENGALI_COUNTRY_CODE;
+            }
+
             var redirectPattern = ConfigurationManager.AppSettings[$"Redirect_{pageId.ToLowerInvariant()}_pattern"];
+
             if (!string.IsNullOrEmpty(redirectPattern))
             {
                 var redirectUri = new Uri(redirectUrl);
-                var pathAndQueryString = redirectPattern.Replace("#language#", languageCode).Replace("#affCode#", affCode);
+                var pathAndQueryString = redirectPattern.Replace("#language#", customLanguageCode).Replace("#affCode#", affCode);
                 return $"{redirectUri.Scheme}://{redirectUri.Host}{pathAndQueryString}";
             }
-            else
-            {
-                var url = redirectUrl.Split('?');
-                return $"{url[0]}?affCode={affCode}";
-            }
+
+            return redirectUrl.Replace($"/{languageCode}/", $"/{customLanguageCode}/");
         }
 
         private string GetAllHeader(NameValueCollection headers)

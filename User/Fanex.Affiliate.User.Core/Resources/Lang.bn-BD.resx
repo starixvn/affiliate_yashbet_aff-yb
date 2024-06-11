@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CommissionStructure" xml:space="preserve">
+  <data name="RevenueSharingStructure" xml:space="preserve">
     <value>রাজস্ব ভাগাভাগি কাঠামো </value>
   </data>
   <data name="ListCategory" xml:space="preserve">
@@ -168,8 +168,8 @@
   <data name="OneTwoBetAffiliateNews" xml:space="preserve">
     <value>B2C এফিলিয়াটস খবর</value>
   </data>
-  <data name="NewWithExclamationPoint" xml:space="preserve">
-    <value>নতুন!</value>
+  <data name="New" xml:space="preserve">
+    <value>নতুন</value>
   </data>
   <data name="NewBannerIsNowAvailable" xml:space="preserve">
     <value>নতুন ব্যানার এখন পাওয়া যাচ্ছে।</value>
@@ -244,7 +244,7 @@
     <value>দ্বিতীয়</value>
   </data>
   <data name="JoinNow" xml:space="preserve">
-    <value>এখনই যোগ দিন!</value>
+    <value>এখনই যোগ দিন</value>
   </data>
   <data name="Sportsbook" xml:space="preserve">
     <value>খেলাধূলার বই</value>
@@ -658,7 +658,7 @@
     <value>আপনার B2C অ্যাফিলিয়েট অ্যাকাউন্টের জন্য নিবন্ধন করতে অনুগ্রহ করে এই ফর্মটি পূরণ করুন।</value>
   </data>
   <data name="RequireInfo" xml:space="preserve">
-    <value>&lt;font color="red"&gt;*&lt;/font&gt; চিহ্নিত ক্ষেত্রগুলি অবশ্যই সম্পূর্ণ করতে হবে</value>
+    <value>&lt;span class="red-color"&gt;*&lt;/span&gt; চিহ্নিত ক্ষেত্রগুলি অবশ্যই সম্পূর্ণ করতে হবে</value>
   </data>
   <data name="ContactInfo" xml:space="preserve">
     <value>যোগাযোগের তথ্য</value>
@@ -1357,7 +1357,12 @@
     <value>রিভিউ অধীনে আবেদন</value>
   </data>
   <data name="RegisSuccess" xml:space="preserve">
-    <value>আপনার আবেদন জমা দেওয়ার জন্য আপনাকে ধন্যবাদ.&lt;br/&gt;&lt;br/&gt;বিষয়বস্তু আমাদের পণ্যের প্রচারের জন্য উপযুক্ত কিনা তা নিশ্চিত করতে B2C অ্যাফিলিয়েটস-এর টিম আপনার ওয়েবসাইট এবং আবেদনের বিবরণ পর্যালোচনা করবে।&lt;br/&gt;&lt;br/&gt;5 দিনের মধ্যে আমরা আপনাকে আপনার আবেদনের বিষয়ে একটি সিদ্ধান্ত প্রদান করতে সক্ষম হব। আপনি অনুমোদিত হলে, আপনি আমাদের অধিভুক্ত প্রোগ্রাম সম্পূর্ণ অ্যাক্সেস উপভোগ করতে সক্ষম হবে.&lt;br /&gt;&lt;br /&gt;শুভেচ্ছান্তে,&lt;br /&gt;&lt;br /&gt;B2C Affiliates এ দল&lt;br/&gt;&lt;br/&gt;আপনার যদি কোনো প্রশ্ন থাকে এবং কোনো সাহায্যের প্রয়োজন হয়, অনুগ্রহ করে &lt;a href='{0}'&gt;আমাদের সাথে যোগাযোগ করুন&lt;/a&gt; করতে দ্বিধা করবেন না।</value>
+    <value>আপনার আবেদন জমা দেওয়ার জন্য আপনাকে ধন্যবাদ.&lt;br/&gt;
+বিষয়বস্তু আমাদের পণ্যের প্রচারের জন্য উপযুক্ত কিনা তা নিশ্চিত করতে B2C অ্যাফিলিয়েটস-এর টিম আপনার ওয়েবসাইট এবং আবেদনের বিবরণ পর্যালোচনা করবে।&lt;br/&gt;
+5 দিনের মধ্যে আমরা আপনাকে আপনার আবেদনের বিষয়ে একটি সিদ্ধান্ত প্রদান করতে সক্ষম হব। আপনি অনুমোদিত হলে, আপনি আমাদের অধিভুক্ত প্রোগ্রাম সম্পূর্ণ অ্যাক্সেস উপভোগ করতে সক্ষম হবে.&lt;br/&gt;
+শুভেচ্ছান্তে,&lt;br/&gt;
+B2C Affiliates এ দল&lt;br/&gt;
+আপনার যদি কোনো প্রশ্ন থাকে এবং কোনো সাহায্যের প্রয়োজন হয়, অনুগ্রহ করে &lt;a href='{0}'&gt;আমাদের সাথে যোগাযোগ করুন&lt;/a&gt; করতে দ্বিধা করবেন না।</value>
   </data>
   <data name="YouDontHaveTheEmail" xml:space="preserve">
     <value>আপনার ইমেল ঠিকানা নেই. প্রশাসকের সাথে যোগাযোগ করুন!</value>
@@ -2022,5 +2027,20 @@
   </data>
   <data name="TcGaming" xml:space="preserve">
     <value>TC-GAMING</value>
+  </data>
+  <data name="Forgot" xml:space="preserve">
+    <value>ভুলে গেছেন?</value>
+  </data>
+  <data name="FaqsTitle" xml:space="preserve">
+    <value>এফ এ কি উ এস</value>
+  </data>
+  <data name="VerificationYourAccountDetail" xml:space="preserve">
+    <value>আপনার অ্যাকাউন্ট বিশদ যাচাইকরণ</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>স্বাগতম</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>পৃষ্ঠা খুঁজে পাওয়া যায়নি!</value>
   </data>
 </root>

@@ -331,11 +331,12 @@ namespace Fanex.Affiliate.Admin.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nova88.
+        ///   Looks up a localized string similar to YashBet.
         /// </summary>
-        public static string Nova88 {
+        public static string YashBet
+        {
             get {
-                return ResourceManager.GetString("Nova88", resourceCulture);
+                return ResourceManager.GetString("YashBet", resourceCulture);
             }
         }
         

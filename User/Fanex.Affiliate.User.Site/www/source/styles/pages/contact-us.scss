@@ -1,109 +1,143 @@
 ﻿@import '../scss/abstracts/mixins';
+@import '../scss/components/faq';
 
-.main-content {
-    justify-content: center;
-
-    @include Mobile {
-        margin-top: 12px;
-    }
-
-    .content {
-        padding-top: 0;
-    }
+.content {
+    width: 100% !important;
 }
 
-.grid-contact-info {
-    display: grid;
-    grid-template-columns: repeat(3, 28.4rem);
-    grid-gap: 2.4rem;
-    margin-top: 1.1rem;
-    justify-content: center;
+.main-content {
+    display: block;
+    margin-bottom: 52px;
+}
+
+.group-title{
+    margin-bottom : 24px;
+}
+
+.page-heading {
+    margin-bottom: 12px;
+}
+.slogan{
+    margin-top : 0;
+    text-align :center;
+    @include TableAndMobile{
+        font-size : 16px;
+    }
+}
+.img-contact {
+    text-align: center;
+    margin-bottom: 48px;
 
     @include Mobile {
-        grid-template-columns: repeat(1,22rem);
-        margin-top: .3rem;
+        margin-bottom: 24px;
     }
 
-    @include Tablet {
-        grid-template-columns: repeat(3,22rem);
-    }
-
-    .contact-items {
-        background: #FFFFFF;
-        box-shadow: 0px 4px 27px 1px rgba(163, 163, 163, 0.25);
-        border-radius: 8px;
-
-        .info-social {
-            list-style: none;
-            padding: 2.4rem;
-            margin-bottom: 0;
-
-            @include TableAndMobile {
-                padding: 1.6rem;
-            }
-
-            li {
-                display: flex;
-                align-items: center;
-
-                &:first-child {
-                    margin-bottom: 3px
-                }
-
-                img {
-                    @include Mobile {
-                        width: 3rem;
-                    }
-                }
-
-                span {
-                    color: #EA5500;
-                    font-weight: 600;
-                    font-size: 2.8rem;
-                    margin-left: 1rem;
-
-                    @include Mobile {
-                        margin-left: .6rem;
-                        font-size: 1.8rem;
-                        line-height: 2.8rem;
-                    }
-
-                    @include Tablet {
-                        font-size: 2rem;
-                    }
-                }
-
-                a {
-                    font-weight: 400;
-                    font-size: 1.4rem;
-                    line-height: 2.2rem;
-                    text-decoration: none;
-                    overflow-wrap: break-word;
-                    max-width: 24rem;
-
-                    @include TableAndMobile {
-                        font-size: 1.2rem;
-                        line-height: 1.8rem;
-                        max-width: 19rem;
-                    }
-                }
-            }
+    img {
+        margin: 24px auto;
+        @include Mobile{
+            max-width : 215px;
         }
     }
 }
-
 .date-time-info {
     padding: 0;
 
     p {
         margin-bottom: 0;
-        font-size: 2rem;
-        line-height: 3rem;
-        margin-top: 2.4rem;
+        font-size: 20px;
+        line-height: normal;
+        text-transform : uppercase;
+    }
+}
 
-        @include Mobile {
-            font-size: 1.6rem;
-            line-height: 2.4rem;
+
+.grid-contact-info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 12px;
+    justify-content: center;
+    max-width: 960px;
+    margin: 70px auto 52px;
+
+    @include Mobile {
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 16px;
+        margin: 20px auto 52px;
+    }
+
+    @include Tablet {
+        grid-template-columns: repeat(3,auto);
+    }
+
+    .contact-items {
+        position: relative;
+
+        .icon-social {
+            display: block;
+            background: linear-gradient(90deg, #000 0%, #3E3E3E 62.94%);
+            padding: 20px;
+            border-radius: 100px;
+            border: 6px solid #fff;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translate(50%,-50%);
+
+            @include Mobile {
+                transform: unset;
+                position: unset;
+                padding: 10px;
+                border: 3px solid #fff;
+            }
+
+            img {
+                @include Mobile {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+
+        .info-social {
+            list-style: none;
+            padding: 60px 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #F9E4C7;
+            margin-bottom: 0;
+            text-align: center;
+            border-radius: 10px;
+            justify-content: center;
+
+            @include Mobile {
+                padding: 12px;
+                justify-content: flex-start;
+                text-align : left;
+            }
+
+            .contact-detail {
+                span {
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: normal;
+                    display: block;
+                    @include Mobile{
+                        font-size : 24px;
+                    }
+                }
+
+                a {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: normal;
+                    color: #5B91E4;
+
+                    @include Tablet {
+                        font-size: 13px;
+                    }
+                }
+            }
         }
     }
 }

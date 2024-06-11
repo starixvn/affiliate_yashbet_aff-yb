@@ -16,21 +16,21 @@ namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
     {
         private readonly IAppSetting _appSetting;
         private readonly IPlayerTransferBalanceService _playerTransferService;
-        private readonly ICurrencyRepository _currencyRepo;
+        private readonly ICurrencyService _currencyService;
         private readonly IAccountRepository _accRepository;
 
         public PlayerTransferBalanceHistoryController(
             IAppSetting appSetting,
             ISessionService sessionService,
             ILanguageService languageService,
-            ICurrencyRepository currencyRepository,
+            ICurrencyService currencyService,
             IPlayerTransferBalanceService playerTransferBalanceService,
             IAccountRepository accountRepository)
             : base(sessionService, languageService)
         {
             _appSetting = appSetting;
             _playerTransferService = playerTransferBalanceService;
-            _currencyRepo = currencyRepository;
+            _currencyService = currencyService;
             _accRepository = accountRepository;
         }
 
@@ -62,7 +62,7 @@ namespace Fanex.Affiliate.User.Core.Controllers.UserPanel
             var affInfo = _accRepository.GetAccountInfo(SessionService.UserSession.AffId);
             var baseCurrencyId = affInfo.PlayerCurrencyId;
 
-            var currencies = _currencyRepo.GetBaseCurrencyList();
+            var currencies = _currencyService.GetBaseCurrencyList();
             var currencyName = currencies.FirstOrDefault(c => c.ExchangeId == baseCurrencyId)?.Code;
             var affId = SessionService.UserSession.AffId;
             ViewBag.BaseCurrency = currencyName;

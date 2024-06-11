@@ -37,7 +37,7 @@ export class Content extends PureComponent {
 
     _handleDeleteDomain = (selectedDomainId) => {
         this.props.setShouldResetScrollPosition(false);
-        this.setState({ message: `Are you sure you want to delete this domain setting?`, isConfirmPopup: true, selectedDomainId });
+        this.setState({ message: `Are you sure you want to delete this domain control?`, isConfirmPopup: true, selectedDomainId });
     }
 
     _handleEditDomain = (domainId, marketId, affDomainId, redirectDomainId, isUsed) => {
@@ -131,7 +131,7 @@ export class Content extends PureComponent {
     render() {
         const { gridData, shouldResetScrollPosition, selectedMarket, affDomainList, redirectDomainList, marketList } = this.props;
         const { message, isConfirmPopup } = this.state;
-        const languageCode = selectedMarket || (marketList[0].LanguageCode || 'en-US');
+        const languageCode = selectedMarket || (marketList.length && marketList[0].LanguageCode || 'en-US');
 
         return gridData && (
             <div className="data-content">

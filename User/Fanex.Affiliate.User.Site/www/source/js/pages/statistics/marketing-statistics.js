@@ -52,7 +52,7 @@
             let params = {
                 fromDate: $('#FromDate').val(),
                 toDate: $('#ToDate').val(),
-                language: $('#language').val(),
+                language: $('#Language').val(),
                 includeInActiveLink: $('#includeInActive').is(':checked')
             };
 

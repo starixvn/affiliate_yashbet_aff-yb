@@ -24,8 +24,9 @@
     <script src="~/www/build/js/lib/bootstrap.min.js"></script>
 
     <link href="~/www/build/styles/css/bootstrap-3.3.7.min.css" rel="stylesheet" />
-    <link href="~/www/build/styles/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
 
+    <link href="~/www/build/styles/fonts/materialdesignicons/font.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/www/build/styles/fonts/tahoma/font.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap">
 
     <link href="@Url.RenderLink("~/www/build/styles/css/main.css")" rel="stylesheet" />
@@ -53,18 +54,8 @@
     </div>
 
     @Html.InlineScripts("~/www/build/js/lib/modernizr-webp.js")
-    <script>
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            var $button = document.getElementById("moveToTop");
-            if ($button) {
-                var display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? 'block' : 'none';
-                $button.style.display = display;
-            }
-        }
-    </script>
     @Html.InlineScripts("~/www/build/js/left-menu-panel.js")
+    @Html.InlineScripts("~/www/build/js/pages/term-and-condition.js")
 
     <script>
         $(window).scroll(function () {
@@ -74,6 +65,12 @@
             }
             else {
                 $(".mobile-left-panel").removeClass("fixed");
+            }
+
+            if ($(this).scrollTop() > 200) {
+                $('#moveToTop').fadeIn(200);
+            } else {
+                $('#moveToTop').fadeOut(200);
             }
         });
     </script>
