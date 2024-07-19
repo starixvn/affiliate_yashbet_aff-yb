@@ -9,7 +9,7 @@
 		{"yb", "DBAFF.Affiliate_YashBet.wsv_afinet"},
 	};
 
-	var environments = new string[] { "uat", "production", "sit", "local" };
+	var environments = new string[] { "uat", "production", "local" };
 
 	var sites = new List<SiteInfo>();
 

@@ -262,9 +262,6 @@
     <Content Include="App_Data\SpConfig\SpName.admin-yb.production.xml">
       <DependentUpon>_SpName.tt</DependentUpon>
     </Content>
-    <Content Include="App_Data\SpConfig\SpName.admin-yb.sit.xml">
-      <DependentUpon>_SpName.tt</DependentUpon>
-    </Content>
     <Content Include="App_Data\SpConfig\SpName.admin-yb.uat.xml">
       <DependentUpon>_SpName.tt</DependentUpon>
     </Content>
@@ -1341,9 +1338,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Web.admin-yb.production.config">
-      <DependentUpon>Web.admin-yb.local.config</DependentUpon>
-    </Content>
-    <Content Include="Web.admin-yb.sit.config">
       <DependentUpon>Web.admin-yb.local.config</DependentUpon>
     </Content>
     <Content Include="Web.admin-yb.uat.config">
