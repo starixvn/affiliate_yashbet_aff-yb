@@ -317,9 +317,6 @@
     <Content Include="App_Data\SpConfig\SpName.user-yb.production.xml">
       <DependentUpon>_SpName.tt</DependentUpon>
     </Content>
-    <Content Include="App_Data\SpConfig\SpName.user-yb.sit.xml">
-      <DependentUpon>_SpName.tt</DependentUpon>
-    </Content>
     <Content Include="App_Data\SpConfig\SpName.user-yb.uat.xml">
       <DependentUpon>_SpName.tt</DependentUpon>
     </Content>
@@ -343,25 +340,16 @@
     <Content Include="Configurations\AppSetting\AppSetting.user-yb.production.config">
       <DependentUpon>AppSetting.tt</DependentUpon>
     </Content>
-    <Content Include="Configurations\AppSetting\AppSetting.user-yb.sit.config">
-      <DependentUpon>AppSetting.tt</DependentUpon>
-    </Content>
     <Content Include="Configurations\AppSetting\AppSetting.user-yb.uat.config">
       <DependentUpon>AppSetting.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\ConnectionString\ConnectionString.user-yb.production.config">
       <DependentUpon>ConnectionString.user-yb.local.config</DependentUpon>
     </Content>
-    <Content Include="Configurations\ConnectionString\ConnectionString.user-yb.sit.config">
-      <DependentUpon>ConnectionString.user-yb.local.config</DependentUpon>
-    </Content>
     <Content Include="Configurations\ConnectionString\ConnectionString.user-yb.uat.config">
       <DependentUpon>ConnectionString.user-yb.local.config</DependentUpon>
     </Content>
     <Content Include="Configurations\Web\Transform\yb.production.config">
-      <DependentUpon>yb.local.config</DependentUpon>
-    </Content>
-    <Content Include="Configurations\Web\Transform\yb.sit.config">
       <DependentUpon>yb.local.config</DependentUpon>
     </Content>
     <Content Include="Configurations\Web\Transform\yb.uat.config">
@@ -631,15 +619,11 @@
     <Content Include="Configurations\Web\Transform\yb.local.config" />
     <Content Include="Configurations\ConnectionString\ConnectionString.user-yb.local.config" />
     <Content Include="Configurations\AppSetting\Transform\yb.production.config" />
-    <Content Include="Configurations\AppSetting\Transform\yb.sit.config" />
     <Content Include="Configurations\AppSetting\Transform\yb.uat.config" />
     <Content Include="Configurations\Web\Web.user-yb.local.config">
       <DependentUpon>Web.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\Web\Web.user-yb.production.config">
-      <DependentUpon>Web.tt</DependentUpon>
-    </Content>
-    <Content Include="Configurations\Web\Web.user-yb.sit.config">
       <DependentUpon>Web.tt</DependentUpon>
     </Content>
     <Content Include="Configurations\Web\Web.user-yb.uat.config">
