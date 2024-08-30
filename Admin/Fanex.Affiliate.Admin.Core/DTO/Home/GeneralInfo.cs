@@ -20,8 +20,6 @@
 
         public int SuspendedAffiliateNumber { get; set; }
 
-        public int ClosedAffiliateNumber { get; set; }
-
         public int AllMemberDepositNumber { get; set; }
 
         public decimal AllDepositNumber { get; set; }
@@ -45,8 +43,6 @@
         public int DisapprovedAffiliateMonthNumber { get; set; }
 
         public int SuspendedAffiliateMonthNumber { get; set; }
-
-        public int ClosedAffiliateMonthNumber { get; set; }
 
         public int AllMemberDepositMonthNumber { get; set; }
 

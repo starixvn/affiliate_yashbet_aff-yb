@@ -11,7 +11,7 @@ exports[`user account - components - sections - Additional render correctly 1`] 
   >
     <Label
       className="required"
-      for="address"
+      htmlFor="address"
       sm={3}
       tag="label"
       widths={
@@ -57,7 +57,7 @@ exports[`user account - components - sections - Additional render correctly 1`] 
   >
     <Label
       className="required"
-      for="city"
+      htmlFor="city"
       sm={3}
       tag="label"
       widths={
@@ -103,7 +103,7 @@ exports[`user account - components - sections - Additional render correctly 1`] 
   >
     <Label
       className=""
-      for="state"
+      htmlFor="state"
       sm={3}
       tag="label"
       widths={
@@ -149,7 +149,7 @@ exports[`user account - components - sections - Additional render correctly 1`] 
   >
     <Label
       className="required"
-      for="postcode"
+      htmlFor="postcode"
       sm={3}
       tag="label"
       widths={
@@ -194,7 +194,7 @@ exports[`user account - components - sections - Additional render correctly 1`] 
   >
     <Label
       className="required"
-      for="country"
+      htmlFor="country"
       sm={3}
       tag="label"
       widths={
@@ -1272,7 +1272,7 @@ exports[`user account - components - sections - Additional render correctly 1`] 
   >
     <Label
       className=""
-      for="question"
+      htmlFor="question"
       sm={3}
       tag="label"
       widths={
@@ -1316,7 +1316,7 @@ exports[`user account - components - sections - Additional render correctly 1`] 
   >
     <Label
       className=""
-      for="answer"
+      htmlFor="answer"
       sm={3}
       tag="label"
       widths={

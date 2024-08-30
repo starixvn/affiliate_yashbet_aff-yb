@@ -69,7 +69,6 @@
     <Setting Key="Aff_Admin_AffiliateAdjustment_Ins" SpName="Aff_Admin_AffiliateAdjustment_Ins" DbName="DBAFF.Affiliate_YashBet.wsv_afinet" />
     <Setting Key="Aff_Admin_AffiliatePreferredLanguage_Upd" SpName="Aff_Admin_AffiliatePreferredLanguage_Upd" DbName="DBAFF.Affiliate_YashBet.wsv_afinet" />
     <Setting Key="Aff_Admin_AffiliateStatus_Upd" SpName="Aff_Admin_AffiliateStatus_Upd" DbName="DBAFF.Affiliate_YashBet.wsv_afinet" />
-    <Setting Key="Aff_Admin_AffiliateClosed_Upd" SpName="Aff_Admin_AffiliateClosed_Upd" DbName="DBAFF.Affiliate_YashBet.wsv_afinet" />
     <Setting Key="Aff_Admin_AffiliateAffType_Upd" SpName="Aff_Admin_AffiliateAffType_Upd" DbName="DBAFF.Affiliate_YashBet.wsv_afinet" />
     <Setting Key="Aff_Admin_AffiliateInfo_Upd" SpName="Aff_Admin_AffiliateInfo_Upd" DbName="DBAFF.Affiliate_YashBet.wsv_afinet" />
     <Setting Key="Aff_SubAffiliate_Commission_Sel" SpName="Aff_SubAffiliate_Commission_Sel" DbName="DBAFF.Affiliate_YashBet.wsv_afinet" />

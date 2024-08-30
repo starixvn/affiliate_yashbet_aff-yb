@@ -91,7 +91,7 @@ exports[`Adjustment - components - Content render correctly with isValidAmount i
     >
       <Label
         className="required"
-        for="amount"
+        htmlFor="amount"
         sm={4}
         tag="label"
         widths={
@@ -137,7 +137,7 @@ exports[`Adjustment - components - Content render correctly with isValidAmount i
     >
       <Label
         className="align-self-center"
-        for="description"
+        htmlFor="description"
         sm={4}
         tag="label"
         widths={
@@ -312,7 +312,7 @@ exports[`Adjustment - components - Content render correctly with isValidAmount i
     >
       <Label
         className="required"
-        for="amount"
+        htmlFor="amount"
         sm={4}
         tag="label"
         widths={
@@ -358,7 +358,7 @@ exports[`Adjustment - components - Content render correctly with isValidAmount i
     >
       <Label
         className="align-self-center"
-        for="description"
+        htmlFor="description"
         sm={4}
         tag="label"
         widths={

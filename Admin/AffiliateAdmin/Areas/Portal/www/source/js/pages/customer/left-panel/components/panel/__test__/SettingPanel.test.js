@@ -15,7 +15,6 @@ describe('left panel - components - panel - SettingPanel', () => {
         FirstName: "bb",
         Gender: true,
         GroupId: 102,
-        IsClosed: false,
         LastLoginDateText: "04/11/2019 22:24:00",
         LastLoginIp: "10.18.200.125",
         LastName: "B2CAFF226",
@@ -30,35 +29,9 @@ describe('left panel - components - panel - SettingPanel', () => {
         Status: "Approved"
     };
 
-    const affInfoClosed = {
-        AffId: 1219631,
-        AffLink: "http://localhost:55690/Auth/AdminLogin?chalengeStr=5omp0h&accKey=6B8465&custName=B2CAFF016&accId=1000000026&accOnId=8405",
-        AffName: "B2CAFF016",
-        AffType: 2,
-        BalanceBf: 0,
-        CommGroupName: "",
-        ContactApps: '[{"Name":"MSN/YM/QQ","Value":"123123123","Order":0}]',
-        FirstName: "",
-        Gender: null,
-        GroupId: 0,
-        IsClosed: true,
-        LastLoginDateText: "01/01/1900 00:00:00",
-        LastLoginIp: "10.10.12.12",
-        LastName: "",
-        MoreSiteUrl: "",
-        NoSiteDescription: "",
-        Phone: "123456789",
-        PreferredLanguage: "en-US",
-        SiteUrl: "http://www.12345678.com",
-        IsDisabledTransfer: false,
-        TransferLimit: 0,
-        PlayerCurrency: 'USD',
-        Status: "Disapproved"
-    }
-
     const affName = 'B2CAFF226';
     const defaultProps = {
-        affiliateInfo: affInfoClosed,
+        affiliateInfo,
         affName,
         affTypeList: [
             { AffTypeId: 1, AffTypeName: "Asian" }
@@ -82,7 +55,7 @@ describe('left panel - components - panel - SettingPanel', () => {
 
     it('render correctly with ulimited transfer setting', () => {
         window.globalVariables = { permissions: [{ FunctionName: "[TransferPlayerSetting]", IsHost: true}]}
-        const props = Object.assign({}, defaultProps, { affiliateInfo: { ...affInfoClosed, TransferLimit: 100000000000 } })
+        const props = Object.assign({}, defaultProps, { affiliateInfo: { ...affiliateInfo, TransferLimit: 100000000000 } })
         const result = shallow(<SettingPanel {...props} />);
 
         expect(result).toMatchSnapshot();
@@ -223,53 +196,6 @@ describe('left panel - components - panel - SettingPanel', () => {
         expect(props.getAffiliateInfo).toHaveBeenCalledWith(affName);
         expect(wrapper.setState).toHaveBeenCalledWith({ messageNotification: "The status has been updated successfully!", isConfirmPopup: false });
     });
-
-    //it('handleOpenCloseAff - should call setState with open status', async () => {
-    //    const wrapper = shallow(<SettingPanel {...defaultProps} isApproved={true}/>);
-    //    wrapper.setState = jest.fn();
-
-    //    await wrapper.find('Button').at(1).simulate('click');
-
-    //    expect(wrapper.setState).toHaveBeenCalledWith({ messageNotification: "Are you sure you want to open this affiliate?", isConfirmPopup: true, isConfirmStatus: false, isClosed: false});
-    //});
-
-    //it('handleOpenCloseAff - should call wrapper.setState with close status', async () => {
-    //    const props = Object.assign({}, defaultProps, { affiliateInfo });
-    //    const wrapper = shallow(<SettingPanel {...props} isApproved={true}/>);
-    //    wrapper.setState = jest.fn();
-
-    //    await wrapper.find('Button').at(1).simulate('click');
-
-    //    expect(wrapper.setState).toHaveBeenCalledWith({ messageNotification: "Are you sure you want to close this affiliate?", isConfirmPopup: true, isConfirmStatus: false, isClosed: true});
-    //});
-
-    //it('_openCloseAff - should call updateClosedStatus and setState', async () => {
-    //    const data = { IsSuccessful: false, Message: 'Update status is failed!' };
-    //    const updateClosedStatus = jest.fn(() => data);
-    //    const props = Object.assign({}, defaultProps, { updateClosedStatus });
-    //    const wrapper = shallow(<SettingPanel {...props} isApproved={true}/>);
-    //    wrapper.setState = jest.fn();
-
-    //    await wrapper.instance()._openCloseAff(false);
-
-    //    expect(props.updateClosedStatus).toHaveBeenCalledWith({ AffId: 1219631, IsClosed: false });
-    //    expect(wrapper.setState).toHaveBeenCalledWith({ messageNotification: 'Update status is failed!', isConfirmPopup: false });
-    //});
-
-    //it('_openCloseAff - should call updateClosedStatus, getAffiliateInfo and setState', async () => {
-    //    const data = { IsSuccessful: true, Message: '' };
-    //    const updateClosedStatus = jest.fn(() => data);
-    //    const getAffiliateInfo = jest.fn();
-    //    const props = Object.assign({}, defaultProps, { updateClosedStatus, getAffiliateInfo });
-    //    const wrapper = shallow(<SettingPanel {...props} isApproved={true}/>);
-    //    wrapper.setState = jest.fn();
-
-    //    await wrapper.instance()._openCloseAff(false);
-
-    //    expect(props.updateClosedStatus).toHaveBeenCalledWith({ AffId: 1219631, IsClosed: false });
-    //    expect(props.getAffiliateInfo).toHaveBeenCalledWith(affName);
-    //    expect(wrapper.setState).toHaveBeenCalledWith({ messageNotification: "The status has been updated successfully!", isConfirmPopup: false });
-    //});
 
     it('handleChangeAffType - should call updateAffType and wrapper.setState', async () => {
         const event = {

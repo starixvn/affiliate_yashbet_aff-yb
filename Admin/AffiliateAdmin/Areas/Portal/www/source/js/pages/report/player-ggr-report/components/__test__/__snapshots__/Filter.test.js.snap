@@ -14,7 +14,7 @@ exports[`player ggr report - component - Filter -  should render correctly 1`] =
     >
       <Label
         className="mr-sm-2"
-        for="Affiliate"
+        htmlFor="Affiliate"
         tag="label"
         widths={
           Array [
@@ -44,7 +44,7 @@ exports[`player ggr report - component - Filter -  should render correctly 1`] =
     >
       <Label
         className="mr-sm-2"
-        for="Player"
+        htmlFor="Player"
         tag="label"
         widths={
           Array [

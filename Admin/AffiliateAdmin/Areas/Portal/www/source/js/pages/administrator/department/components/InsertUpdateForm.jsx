@@ -126,14 +126,14 @@ export class InsertUpdateForm extends PureComponent {
                             </Alert>
                             <Form tag="form" className="mb-5" autoComplete="off">
                                 <FormGroup row className="mb-2">
-                                    <Label for="departmentName" sm={4} className="required">Department Name</Label>
+                                    <Label htmlFor="departmentName" sm={4} className="required">Department Name</Label>
                                     <Col sm={8}>
                                         <Input type="text" name="departmentName" className="mt-2" value={departmentName} onChange={this._handleChange}
                                             onKeyPress={this._handleKeyPress} />
                                     </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                    <Label for="description" sm={4}>{headerText.Description}</Label>
+                                    <Label htmlFor="description" sm={4}>{headerText.Description}</Label>
                                     <Col sm={8}>
                                         <Input type="text" name="description" className="mt-2" value={description} onChange={this._handleChange}
                                             onKeyPress={this._handleKeyPress} />

@@ -52,7 +52,7 @@ export class Filter extends React.Component {
             <div className="filter-container py-0">
                 <Form inline tag="div">
                     <FormGroup className="my-2 mr-sm-2">
-                        <Label for="memberType" className="mr-sm-2">{resource.Member}</Label>
+                        <Label htmlFor="memberType" className="mr-sm-2">{resource.Member}</Label>
                         <Input type="select" name="memberType" id="memberType" value={memberType} onChange={this.handleChangeInput}>
                             <option key="memberType-0" value="0">Select</option>
                             {

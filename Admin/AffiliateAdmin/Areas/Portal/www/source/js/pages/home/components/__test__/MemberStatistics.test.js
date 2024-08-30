@@ -22,8 +22,6 @@ describe('home - components - MemberStatistics', () => {
             ApprovedAffiliateMonthNumber: 0,
             ApprovedAffiliateNumber: 236,
             BannerNumber: 32,
-            ClosedAffiliateMonthNumber: 0,
-            ClosedAffiliateNumber: 837,
             DisapprovedAffiliateMonthNumber: 0,
             DisapprovedAffiliateNumber: 1016,
             FlashBannerNumber: 9,

@@ -151,7 +151,7 @@ export class InsertUpdateForm extends PureComponent {
                             </Alert>
                             <Form tag="form" className="mb-5" autoComplete="off">
                                 <FormGroup row className="mb-2">
-                                    <Label for="pageName" sm={7} className="required">{headerText.LandingPageName}</Label>
+                                    <Label htmlFor="pageName" sm={7} className="required">{headerText.LandingPageName}</Label>
                                     <Col sm={5}>
                                         <Input type="text" name="pageName" className="input-required mt-2" value={pageName} onChange={this._handleChange}
                                             onKeyPress={(e) => this._handleKeyPress(e, isValid)} invalid={isClickedSubmit && !pageNameValidation.isValid} />
@@ -160,7 +160,7 @@ export class InsertUpdateForm extends PureComponent {
                                     </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                    <Label for="pageCode" sm={7} className="required">{headerText.LandingPageCode}</Label>
+                                    <Label htmlFor="pageCode" sm={7} className="required">{headerText.LandingPageCode}</Label>
                                     <Col sm={5}>
                                         <Input type="text" name="pageCode" className="input-required mt-2" value={pageCode} onChange={this._handleChange}
                                             onKeyPress={(e) => this._handleKeyPress(e, isValid)} invalid={isClickedSubmit && !pageCodeValidation.isValid} />

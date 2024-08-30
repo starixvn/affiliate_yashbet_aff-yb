@@ -137,7 +137,7 @@ export class ChangePasswordForm extends PureComponent {
                             </Alert>
                             <Form tag="form" className="mb-5" autoComplete="off">
                                 <FormGroup row className="mb-2">
-                                    <Label for="Password" sm={4} className="required">{resource.Password}:</Label>
+                                    <Label htmlFor="Password" sm={4} className="required">{resource.Password}:</Label>
                                     <Col sm={8}>
                                         <Input type="password" className="input-required" name="password" id="Password" autoComplete="false"
                                             value={password} onKeyPress={(e) => this._handlePressEnter(isValid, e)} onChange={this.handleChange} invalid={isClickedSubmit && !passwordValidation.isValid} />
@@ -147,7 +147,7 @@ export class ChangePasswordForm extends PureComponent {
                                 </FormGroup>
 
                                 <FormGroup row className="mb-2">
-                                    <Label for="ConfirmPassword" sm={4} className="required">{resource.ConfirmPassword}:</Label>
+                                    <Label htmlFor="ConfirmPassword" sm={4} className="required">{resource.ConfirmPassword}:</Label>
                                     <Col sm={8}>
                                         <Input type="password" className="input-required" name="confirmPassword" id="ConfirmPassword" autoComplete="false"
                                             value={confirmPassword} onKeyPress={(e) => this._handlePressEnter(isValid, e)} onChange={this.handleChange} invalid={isClickedSubmit && !confirmPasswordValidation.isValid} />

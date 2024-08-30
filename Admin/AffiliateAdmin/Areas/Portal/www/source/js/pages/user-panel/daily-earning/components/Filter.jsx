@@ -87,7 +87,7 @@ export class Filter extends PureComponent {
                     {
                         !isProduction && currencyList && currencyList.length !== 0 &&
                         <FormGroup className="mr-sm-2">
-                            <Label for="Currency" className="mr-2">{globalResource.Currency}</Label>
+                            <Label htmlFor="Currency" className="mr-2">{globalResource.Currency}</Label>
                             <MultipleSelect
                                 dataSource={currencyList}
                                 keyField="key"

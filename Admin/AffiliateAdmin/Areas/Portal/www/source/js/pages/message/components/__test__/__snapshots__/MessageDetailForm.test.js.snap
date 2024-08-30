@@ -103,7 +103,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="text-right"
-                for="important"
+                htmlFor="important"
                 sm={2}
                 tag="label"
                 widths={
@@ -149,7 +149,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentCn"
+                htmlFor="MessageContentCn"
                 sm={2}
                 tag="label"
                 widths={
@@ -194,7 +194,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEn"
+                htmlFor="MessageContentEn"
                 sm={2}
                 tag="label"
                 widths={
@@ -239,7 +239,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEs"
+                htmlFor="MessageContentEs"
                 sm={2}
                 tag="label"
                 widths={
@@ -284,7 +284,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentId"
+                htmlFor="MessageContentId"
                 sm={2}
                 tag="label"
                 widths={
@@ -329,7 +329,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentJp"
+                htmlFor="MessageContentJp"
                 sm={2}
                 tag="label"
                 widths={
@@ -374,7 +374,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentKr"
+                htmlFor="MessageContentKr"
                 sm={2}
                 tag="label"
                 widths={
@@ -419,7 +419,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTh"
+                htmlFor="MessageContentTh"
                 sm={2}
                 tag="label"
                 widths={
@@ -464,7 +464,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTw"
+                htmlFor="MessageContentTw"
                 sm={2}
                 tag="label"
                 widths={
@@ -509,7 +509,7 @@ exports[`message - components - MessageDetailForm  render correctly with current
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentVi"
+                htmlFor="MessageContentVi"
                 sm={2}
                 tag="label"
                 widths={
@@ -565,9 +565,9 @@ exports[`message - components - MessageDetailForm  render correctly with current
             fetchData={[Function]}
             messages={
               Object {
-                "AreYouSureDeleteItems": "Are you sure to delete the selected email(s)?",
+                "AreYouSureDeleteItems": "Are you sure to delete the selected message(s)?",
                 "AreYouWant": "Are you sure you want to update this message?",
-                "DeleteItemsSuccessfully": "Delete Email(s) Successfully",
+                "DeleteItemsSuccessfully": "Delete Message(s) Successfully",
                 "PleaseEnter": "Please enter the content of message, one language at least.",
                 "PleaseSelect": "Please select items to delete",
               }
@@ -692,7 +692,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="text-right"
-                for="important"
+                htmlFor="important"
                 sm={2}
                 tag="label"
                 widths={
@@ -738,7 +738,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentCn"
+                htmlFor="MessageContentCn"
                 sm={2}
                 tag="label"
                 widths={
@@ -783,7 +783,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEn"
+                htmlFor="MessageContentEn"
                 sm={2}
                 tag="label"
                 widths={
@@ -828,7 +828,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEs"
+                htmlFor="MessageContentEs"
                 sm={2}
                 tag="label"
                 widths={
@@ -873,7 +873,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentId"
+                htmlFor="MessageContentId"
                 sm={2}
                 tag="label"
                 widths={
@@ -918,7 +918,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentJp"
+                htmlFor="MessageContentJp"
                 sm={2}
                 tag="label"
                 widths={
@@ -963,7 +963,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentKr"
+                htmlFor="MessageContentKr"
                 sm={2}
                 tag="label"
                 widths={
@@ -1008,7 +1008,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTh"
+                htmlFor="MessageContentTh"
                 sm={2}
                 tag="label"
                 widths={
@@ -1053,7 +1053,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTw"
+                htmlFor="MessageContentTw"
                 sm={2}
                 tag="label"
                 widths={
@@ -1098,7 +1098,7 @@ exports[`message - components - MessageDetailForm  render correctly with insert 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentVi"
+                htmlFor="MessageContentVi"
                 sm={2}
                 tag="label"
                 widths={
@@ -1263,7 +1263,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="text-right"
-                for="important"
+                htmlFor="important"
                 sm={2}
                 tag="label"
                 widths={
@@ -1309,7 +1309,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentCn"
+                htmlFor="MessageContentCn"
                 sm={2}
                 tag="label"
                 widths={
@@ -1354,7 +1354,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEn"
+                htmlFor="MessageContentEn"
                 sm={2}
                 tag="label"
                 widths={
@@ -1399,7 +1399,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEs"
+                htmlFor="MessageContentEs"
                 sm={2}
                 tag="label"
                 widths={
@@ -1444,7 +1444,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentId"
+                htmlFor="MessageContentId"
                 sm={2}
                 tag="label"
                 widths={
@@ -1489,7 +1489,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentJp"
+                htmlFor="MessageContentJp"
                 sm={2}
                 tag="label"
                 widths={
@@ -1534,7 +1534,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentKr"
+                htmlFor="MessageContentKr"
                 sm={2}
                 tag="label"
                 widths={
@@ -1579,7 +1579,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTh"
+                htmlFor="MessageContentTh"
                 sm={2}
                 tag="label"
                 widths={
@@ -1624,7 +1624,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTw"
+                htmlFor="MessageContentTw"
                 sm={2}
                 tag="label"
                 widths={
@@ -1669,7 +1669,7 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentVi"
+                htmlFor="MessageContentVi"
                 sm={2}
                 tag="label"
                 widths={
@@ -1725,9 +1725,9 @@ exports[`message - components - MessageDetailForm  render correctly with not sho
             fetchData={[Function]}
             messages={
               Object {
-                "AreYouSureDeleteItems": "Are you sure to delete the selected email(s)?",
+                "AreYouSureDeleteItems": "Are you sure to delete the selected message(s)?",
                 "AreYouWant": "Are you sure you want to update this message?",
-                "DeleteItemsSuccessfully": "Delete Email(s) Successfully",
+                "DeleteItemsSuccessfully": "Delete Message(s) Successfully",
                 "PleaseEnter": "Please enter the content of message, one language at least.",
                 "PleaseSelect": "Please select items to delete",
               }
@@ -1852,7 +1852,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="text-right"
-                for="important"
+                htmlFor="important"
                 sm={2}
                 tag="label"
                 widths={
@@ -1898,7 +1898,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentCn"
+                htmlFor="MessageContentCn"
                 sm={2}
                 tag="label"
                 widths={
@@ -1943,7 +1943,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEn"
+                htmlFor="MessageContentEn"
                 sm={2}
                 tag="label"
                 widths={
@@ -1988,7 +1988,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEs"
+                htmlFor="MessageContentEs"
                 sm={2}
                 tag="label"
                 widths={
@@ -2033,7 +2033,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentId"
+                htmlFor="MessageContentId"
                 sm={2}
                 tag="label"
                 widths={
@@ -2078,7 +2078,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentJp"
+                htmlFor="MessageContentJp"
                 sm={2}
                 tag="label"
                 widths={
@@ -2123,7 +2123,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentKr"
+                htmlFor="MessageContentKr"
                 sm={2}
                 tag="label"
                 widths={
@@ -2168,7 +2168,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTh"
+                htmlFor="MessageContentTh"
                 sm={2}
                 tag="label"
                 widths={
@@ -2213,7 +2213,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTw"
+                htmlFor="MessageContentTw"
                 sm={2}
                 tag="label"
                 widths={
@@ -2258,7 +2258,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentVi"
+                htmlFor="MessageContentVi"
                 sm={2}
                 tag="label"
                 widths={
@@ -2314,9 +2314,9 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             fetchData={[Function]}
             messages={
               Object {
-                "AreYouSureDeleteItems": "Are you sure to delete the selected email(s)?",
+                "AreYouSureDeleteItems": "Are you sure to delete the selected message(s)?",
                 "AreYouWant": "Are you sure you want to update this message?",
-                "DeleteItemsSuccessfully": "Delete Email(s) Successfully",
+                "DeleteItemsSuccessfully": "Delete Message(s) Successfully",
                 "PleaseEnter": "Please enter the content of message, one language at least.",
                 "PleaseSelect": "Please select items to delete",
               }
@@ -2441,7 +2441,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="text-right"
-                for="important"
+                htmlFor="important"
                 sm={2}
                 tag="label"
                 widths={
@@ -2487,7 +2487,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentCn"
+                htmlFor="MessageContentCn"
                 sm={2}
                 tag="label"
                 widths={
@@ -2532,7 +2532,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEn"
+                htmlFor="MessageContentEn"
                 sm={2}
                 tag="label"
                 widths={
@@ -2577,7 +2577,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentEs"
+                htmlFor="MessageContentEs"
                 sm={2}
                 tag="label"
                 widths={
@@ -2622,7 +2622,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentId"
+                htmlFor="MessageContentId"
                 sm={2}
                 tag="label"
                 widths={
@@ -2667,7 +2667,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentJp"
+                htmlFor="MessageContentJp"
                 sm={2}
                 tag="label"
                 widths={
@@ -2712,7 +2712,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentKr"
+                htmlFor="MessageContentKr"
                 sm={2}
                 tag="label"
                 widths={
@@ -2757,7 +2757,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTh"
+                htmlFor="MessageContentTh"
                 sm={2}
                 tag="label"
                 widths={
@@ -2802,7 +2802,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentTw"
+                htmlFor="MessageContentTw"
                 sm={2}
                 tag="label"
                 widths={
@@ -2847,7 +2847,7 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             >
               <Label
                 className="d-flex justify-content-end align-items-center text-right"
-                for="MessageContentVi"
+                htmlFor="MessageContentVi"
                 sm={2}
                 tag="label"
                 widths={
@@ -2903,9 +2903,9 @@ exports[`message - components - MessageDetailForm  render correctly with update 
             fetchData={[Function]}
             messages={
               Object {
-                "AreYouSureDeleteItems": "Are you sure to delete the selected email(s)?",
+                "AreYouSureDeleteItems": "Are you sure to delete the selected message(s)?",
                 "AreYouWant": "Are you sure you want to update this message?",
-                "DeleteItemsSuccessfully": "Delete Email(s) Successfully",
+                "DeleteItemsSuccessfully": "Delete Message(s) Successfully",
                 "PleaseEnter": "Please enter the content of message, one language at least.",
                 "PleaseSelect": "Please select items to delete",
               }

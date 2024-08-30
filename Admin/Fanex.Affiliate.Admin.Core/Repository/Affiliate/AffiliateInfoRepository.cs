@@ -101,7 +101,6 @@ namespace Fanex.Affiliate.Admin.Core.Repository.Affiliate
                 Member = reader["NoOfMember"] == DBNull.Value ? (int?)null : reader.ToInt("NoOfMember"),
                 CommissionGroup = reader["GroupName"] == DBNull.Value ? "N/A" : reader.ToString("GroupName"),
                 IsFavorite = Convert.ToBoolean(reader["IsFavorite"]),
-                IsClosed = reader.ToBool("IsClosed"),
                 Currency = reader.ToString("Currency"),
                 PlayerCurrency = reader.ToString("PlayerCurrency"),
                 Phone = reader.ToString("Phone"),

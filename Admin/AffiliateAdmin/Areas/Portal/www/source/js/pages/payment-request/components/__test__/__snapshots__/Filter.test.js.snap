@@ -53,7 +53,7 @@ exports[`payment request - components - Filter  render correctly with SearchBy O
     >
       <Label
         className="mr-sm-2"
-        for="status"
+        htmlFor="status"
         tag="label"
         widths={
           Array [

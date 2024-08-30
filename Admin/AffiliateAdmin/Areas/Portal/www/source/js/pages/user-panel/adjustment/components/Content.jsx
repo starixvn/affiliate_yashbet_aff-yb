@@ -142,14 +142,14 @@ export class Content extends PureComponent {
                         <Label sm={8}>{formatDecimalWithCurrencySymbol(balanceBf)}</Label>
                     </FormGroup>
                     <FormGroup row className={isValidAmount ? "mb-2" : "mb-2 has-error"}>
-                        <Label for="amount" sm={4} className="required">{resource.Amount}</Label>
+                        <Label htmlFor="amount" sm={4} className="required">{resource.Amount}</Label>
                         <Col sm={8}>
                             <Input type="text" name="amount" id="amount" className="text-right h-75"
                                 value={amount} onChange={this.handleChangeAmount} onKeyPress={this.handlePressEnter} />
                         </Col>
                     </FormGroup>
                     <FormGroup row className="mb-3">
-                        <Label for="description" sm={4} className="align-self-center">{resource.Description}</Label>
+                        <Label htmlFor="description" sm={4} className="align-self-center">{resource.Description}</Label>
                         <Col sm={8}>
                             <Input type="textarea" name="description" id="description" rows="6"
                                 value={description} onChange={this.handleChange} />

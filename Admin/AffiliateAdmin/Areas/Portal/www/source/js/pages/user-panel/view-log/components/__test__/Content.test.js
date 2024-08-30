@@ -23,7 +23,7 @@ describe('view log - components - Content', () => {
         {
             Id: 10279106,
             UpdatedBy: "AAwalter",
-            Description: "Update Affiliate's Closed Status. IsClosed=0",
+            Description: "Update Affiliate's Status",
             Action: "User Info",
             Ip: "::1",
             DateText: "06/06/2019 03:42:42 AM"
@@ -31,7 +31,7 @@ describe('view log - components - Content', () => {
         {
             Id: 10279105,
             UpdatedBy: "AAwalter",
-            Description: "Update Affiliate's Closed Status. IsClosed=1",
+            Description: "Update Affiliate's Status",
             Action: "User Info",
             Ip: "::1",
             DateText: "06/06/2019 03:42:38 AM"

@@ -78,7 +78,7 @@ export class Filter extends PureComponent {
             <div className="filter-container my-2 pb-0">
                 <Form inline tag="div">
                     <FormGroup className="mr-sm-3 pb-2">
-                        <Label for="userType" className="mr-sm-2">{headerText.UserType}</Label>
+                        <Label htmlFor="userType" className="mr-sm-2">{headerText.UserType}</Label>
                         <Input type="select" name="userType" id="userType" value={userType} onChange={this._handleChange}>
                             <option key={'userType-all'} value={allUserType}>{globalResource.All}</option>
                             {
@@ -89,7 +89,7 @@ export class Filter extends PureComponent {
                         </Input>
                     </FormGroup>
                     <FormGroup className="mr-sm-3 pb-2">
-                        <Label for="category" className="mr-sm-2">{headerText.Category}</Label>
+                        <Label htmlFor="category" className="mr-sm-2">{headerText.Category}</Label>
                         <Input type="select" name="category" id="category" value={category} onChange={this._handleChangeCategory}>
                             <option key={'category-all'} value="">{globalResource.All}</option>
                             {
@@ -102,7 +102,7 @@ export class Filter extends PureComponent {
                     {
                         subCategoryList && (
                             <FormGroup className="mr-sm-3 pb-2">
-                                <Label for="subCategory" className="mr-sm-2">{headerText.SubCategory}</Label>
+                                <Label htmlFor="subCategory" className="mr-sm-2">{headerText.SubCategory}</Label>
                                 <Input type="select" name="subCategory" id="subCategory" value={subCategory} onChange={this._handleChange}>
                                     <option key={'subCategory-all'} value="">{globalResource.All}</option>
                                     {
@@ -115,7 +115,7 @@ export class Filter extends PureComponent {
                         )
                     }
                     <FormGroup className="mr-sm-3 pb-2">
-                        <Label for="language" className="mr-sm-2">{headerText.Language}</Label>
+                        <Label htmlFor="language" className="mr-sm-2">{headerText.Language}</Label>
                         <Input type="select" name="language" id="language" value={language} onChange={this._handleChange}>
                             <option key={'language-all'} value="">{globalResource.All}</option>
                             {
@@ -126,7 +126,7 @@ export class Filter extends PureComponent {
                         </Input>
                     </FormGroup>
                     <FormGroup className="mr-sm-3 pb-2">
-                        <Label for="currency" className="mr-sm-2">{headerText.Currency}</Label>
+                        <Label htmlFor="currency" className="mr-sm-2">{headerText.Currency}</Label>
                         <Input type="select" name="currency" id="currency" value={currency} onChange={this._handleChange} disabled={isDisableCurrency}>
                             <option key={'currency-all'} value="">{globalResource.All}</option>
                             {
@@ -139,7 +139,7 @@ export class Filter extends PureComponent {
                     {
                         affTypeList && (
                             <FormGroup className="mr-sm-3 pb-2">
-                                <Label for="affType" className="mr-sm-2">{headerText.AffType}</Label>
+                                <Label htmlFor="affType" className="mr-sm-2">{headerText.AffType}</Label>
                                 <Input type="select" name="affType" id="affType" value={affType} onChange={this._handleChange}>
                                     {
                                         affTypeList.map(item => {
@@ -151,7 +151,7 @@ export class Filter extends PureComponent {
                         )
                     }
                     <FormGroup className="mr-sm-3 pb-2">
-                        <Label for="deviceType" className="mr-sm-2">{headerText.Device}</Label>
+                        <Label htmlFor="deviceType" className="mr-sm-2">{headerText.Device}</Label>
                         <Input type="select" name="deviceType" id="deviceType" value={deviceType} onChange={this._handleChange}>
                             <option key={'deviceType-all'} value="">{globalResource.All}</option>
                             {
@@ -162,7 +162,7 @@ export class Filter extends PureComponent {
                         </Input>
                     </FormGroup>
                     <FormGroup className="mr-sm-3 pb-2">
-                        <Label for="size" className="mr-sm-2">{headerText.Size}</Label>
+                        <Label htmlFor="size" className="mr-sm-2">{headerText.Size}</Label>
                         <Input type="select" name="size" id="size" value={size} onChange={(e) => this.setState({ size: e.target.value })}>
                             <option key={'size-all'} value="">{globalResource.All}</option>
                             {

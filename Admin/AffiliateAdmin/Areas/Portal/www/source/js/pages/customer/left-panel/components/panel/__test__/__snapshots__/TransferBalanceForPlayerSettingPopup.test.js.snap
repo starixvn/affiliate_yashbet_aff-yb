@@ -111,7 +111,7 @@ exports[`left panel - TransferBalanceForPlayerSettingPopup component -  should r
                 type="checkbox"
               />
               <Label
-                for="isEnable"
+                htmlFor="isEnable"
                 tag="label"
                 widths={
                   Array [
@@ -428,7 +428,7 @@ exports[`left panel - TransferBalanceForPlayerSettingPopup component -  should r
                 type="checkbox"
               />
               <Label
-                for="isEnable"
+                htmlFor="isEnable"
                 tag="label"
                 widths={
                   Array [

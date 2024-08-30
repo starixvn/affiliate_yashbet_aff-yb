@@ -165,7 +165,7 @@ export class GridData extends Component {
 
         const isFavorite = dataItem.IsFavorite
         const checkFavorite = isFavorite ? "favor-check" : "favor-uncheck";
-        const classNameFavorite = (isApproved || status == "closed") ? checkFavorite : "";
+        const classNameFavorite = isApproved ? checkFavorite : "";
 
         return (
             <tr key={`dataRow-${index}`}>

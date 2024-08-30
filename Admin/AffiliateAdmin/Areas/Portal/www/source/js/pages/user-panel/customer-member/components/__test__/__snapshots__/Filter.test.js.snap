@@ -14,7 +14,7 @@ exports[`customer member - components - Filter render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="memberType"
+        htmlFor="memberType"
         tag="label"
         widths={
           Array [

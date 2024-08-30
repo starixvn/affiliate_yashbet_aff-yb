@@ -101,7 +101,7 @@ exports[`daily earning - components - Filter render correctly 1`] = `
     >
       <Label
         className="mr-2"
-        for="Currency"
+        htmlFor="Currency"
         tag="label"
         widths={
           Array [

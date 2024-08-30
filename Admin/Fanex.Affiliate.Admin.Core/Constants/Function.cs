@@ -31,5 +31,9 @@
         public const string TransferPlayerSetting = "[HideTransferPlayerSetting]"; //Hide Transfer Player
 
         public const string TransferPlayerReport = "[HideTransferPlayerReport]"; //Hide Transfer Player
+
+        public const string EditAffStatus = "[EditAffiliateStatus]";
+
+        public const string EditAffDetails = "[EditAffiliateDetails]";
     }
 }

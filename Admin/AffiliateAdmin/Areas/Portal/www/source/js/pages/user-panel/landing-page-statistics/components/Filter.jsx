@@ -75,7 +75,7 @@ export class Filter extends React.Component {
             <div className="filter-container py-0">
                 <Form inline tag="div">
                     <FormGroup className="mr-sm-2 my-2">
-                        <Label for="selectedPage" className="mr-sm-2">{headerTitle.Page}</Label>
+                        <Label htmlFor="selectedPage" className="mr-sm-2">{headerTitle.Page}</Label>
                         <Input type="select" name="selectedPage" id="selectedPage" value={selectedPage} onChange={this.handleChange}>
                             <option value="">{globalResource.All}</option>
                             {
@@ -86,7 +86,7 @@ export class Filter extends React.Component {
                         </Input>
                     </FormGroup>
                     <FormGroup className="mr-sm-2 my-2">
-                        <Label for="languageCode" className="mr-sm-2">{headerTitle.Language}</Label>
+                        <Label htmlFor="languageCode" className="mr-sm-2">{headerTitle.Language}</Label>
                         <Input type="select" name="languageCode" id="languageCode" value={languageCode} onChange={this.handleChange}>
                             <option value="">{globalResource.All}</option>
                             {
@@ -109,7 +109,7 @@ export class Filter extends React.Component {
                             onChange={this.handleChangeToDate} />
                     </FormGroup>
                     <FormGroup className="mr-sm-2 my-2">
-                        <Label for="deviceType" className="mr-sm-2">{headerTitle.Device}</Label>
+                        <Label htmlFor="deviceType" className="mr-sm-2">{headerTitle.Device}</Label>
                         <Input type="select" name="deviceType" id="deviceType" value={deviceType} onChange={this.handleChange}>
                             {
                                 Object.keys(deviceTypes).map(key => {

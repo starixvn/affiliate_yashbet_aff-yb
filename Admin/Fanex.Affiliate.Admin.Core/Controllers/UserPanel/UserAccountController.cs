@@ -79,7 +79,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
             return new JsonNetResult();
         }
 
-        [FunctionAuthorize(FunctionName = Function.Affiliate, IsHost = true)]
+        [FunctionAuthorize(FunctionName = Function.Affiliate, FunctionNameOption = Function.EditAffDetails, IsHost = true)]
         [HttpPost]
         [ValidateAntiForgeryHeader]
         public async Task<ActionResult> UpdateUserAccount(UserAccountParam param)

@@ -132,7 +132,7 @@ export class Filter extends Component {
             <div className="filter-container">
                 <Form inline tag="div">
                     <FormGroup className="my-2 mr-sm-2">
-                        <Label for="SearchBy" className="mr-sm-2">{resource.SearchBy}</Label>
+                        <Label htmlFor="SearchBy" className="mr-sm-2">{resource.SearchBy}</Label>
                         <MultipleSelect
                             dataSource={commGroupList}
                             keyField="key"
@@ -201,7 +201,7 @@ export class Filter extends Component {
                     </FormGroup>
 
                     <FormGroup className="my-2 mr-sm-2">
-                        <Label for="SortBy" className="mr-sm-2">{resource.SortBy}</Label>
+                        <Label htmlFor="SortBy" className="mr-sm-2">{resource.SortBy}</Label>
                         <Input type="select" name="selectedSortBy" id="SortBy" value={selectedSortBy} onChange={this.handleChange} >
                             {
                                 Object.keys(sortByList).map(sortBy => {
@@ -219,7 +219,7 @@ export class Filter extends Component {
                     </FormGroup>
 
                     <FormGroup className="my-2 mr-sm-2">
-                        <Label for="SortBy" className="mr-sm-2">{resource.DisplayedColumns}</Label>
+                        <Label htmlFor="SortBy" className="mr-sm-2">{resource.DisplayedColumns}</Label>
                         <MultipleSelect
                             dataSource={columnList}
                             keyField="columnKey"

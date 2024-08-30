@@ -79,7 +79,7 @@ export class Filter extends PureComponent {
         return (
             <React.Fragment>
                 <FormGroup className="mr-sm-3">
-                    <Label for="status" className="mr-sm-2">{resource.Status}</Label>
+                    <Label htmlFor="status" className="mr-sm-2">{resource.Status}</Label>
                     <Input type="select" name="status" value={status} onChange={this.handleChange} disabled={isGetAll}>
                         <option value="">{globalResource.All}</option>
                         {

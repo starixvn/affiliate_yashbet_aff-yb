@@ -29,7 +29,6 @@ export const resource = {
     Setting: 'Setting',
     AffiliateType: 'Affiliate Type',
     Status: 'Status',
-    Closed: 'Closed',
     CurrentOnlineList: 'Current Online List',
     Index: '#',
     Ip: 'IP',

@@ -43,7 +43,7 @@ export class Personal extends PureComponent {
     _renderGenderForm(isMale) {
         return (
             <FormGroup row>
-                <Label for={name} sm={3} xl={2} className="required">Gender</Label>
+                <Label htmlFor={name} sm={3} xl={2} className="required">Gender</Label>
                 <Col sm={9} xl={10}>
                     <FormGroup check className="d-inline-block mr-3">
                         <Label check>

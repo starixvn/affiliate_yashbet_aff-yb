@@ -52,12 +52,6 @@ export const updateStatus = (param) => async () => {
     return await handleRequestUpdate(url, param);
 }
 
-export const updateClosedStatus = (param) => async () => {
-    const url = 'Portal/CustomerLeftPanel/UpdateClosedStatus';
-
-    return await handleRequestUpdate(url, param);
-}
-
 export const getTransferLimitSetting = (affId) => async () => {
     const url = 'Portal/CustomerLeftPanel/GetTransferLimitSetting';
     const response = await post(url, { affId });

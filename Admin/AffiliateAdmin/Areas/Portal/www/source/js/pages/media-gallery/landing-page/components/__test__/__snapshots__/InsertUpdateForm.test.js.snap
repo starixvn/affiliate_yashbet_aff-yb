@@ -96,7 +96,7 @@ exports[`landing page list - components - InsertUpdateForm  render correctly wit
           >
             <Label
               className="required"
-              for="pageName"
+              htmlFor="pageName"
               sm={7}
               tag="label"
               widths={
@@ -141,7 +141,7 @@ exports[`landing page list - components - InsertUpdateForm  render correctly wit
           >
             <Label
               className="required"
-              for="pageCode"
+              htmlFor="pageCode"
               sm={7}
               tag="label"
               widths={
@@ -312,7 +312,7 @@ exports[`landing page list - components - InsertUpdateForm  render correctly wit
           >
             <Label
               className="required"
-              for="pageName"
+              htmlFor="pageName"
               sm={7}
               tag="label"
               widths={
@@ -368,7 +368,7 @@ exports[`landing page list - components - InsertUpdateForm  render correctly wit
           >
             <Label
               className="required"
-              for="pageCode"
+              htmlFor="pageCode"
               sm={7}
               tag="label"
               widths={
@@ -539,7 +539,7 @@ exports[`landing page list - components - InsertUpdateForm  render correctly wit
           >
             <Label
               className="required"
-              for="pageName"
+              htmlFor="pageName"
               sm={7}
               tag="label"
               widths={
@@ -584,7 +584,7 @@ exports[`landing page list - components - InsertUpdateForm  render correctly wit
           >
             <Label
               className="required"
-              for="pageCode"
+              htmlFor="pageCode"
               sm={7}
               tag="label"
               widths={

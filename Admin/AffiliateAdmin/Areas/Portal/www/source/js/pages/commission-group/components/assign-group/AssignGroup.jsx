@@ -110,7 +110,7 @@ export default class AssignGroup extends Component {
                         </Col>
                     </FormGroup>
                     <FormGroup row>
-                        <Label className="font-weight-bold" for="isPrivateGroup" xs="4">Use private group: </Label>
+                        <Label className="font-weight-bold" htmlFor="isPrivateGroup" xs="4">Use private group: </Label>
                         <Col xs="5">
                             <FormGroup check>
                                 <Label check>

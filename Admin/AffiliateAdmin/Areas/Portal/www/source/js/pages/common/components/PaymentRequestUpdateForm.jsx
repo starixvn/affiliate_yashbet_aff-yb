@@ -221,7 +221,7 @@ export class PaymentRequestUpdateForm extends PureComponent {
                             <h6 className="font-weight-bold">{resource.AdminNote}</h6>
                         </legend>
                         <FormGroup>
-                            <Label for="AdminDesc">{resource.VisibleAdmin}</Label>
+                            <Label htmlFor="AdminDesc">{resource.VisibleAdmin}</Label>
                             <Input type="textarea" name="AdminDesc" rows="6" disabled={!isProcessing} value={htmlDecode(AdminDesc)} onChange={this.handleChange} />
                         </FormGroup>
                     </fieldset>
@@ -232,7 +232,7 @@ export class PaymentRequestUpdateForm extends PureComponent {
                             <h6 className="font-weight-bold">{resource.AffiliateNote}</h6>
                         </legend>
                         <FormGroup>
-                            <Label for="AffDesc">{resource.VisibleAffiliate}</Label>
+                            <Label htmlFor="AffDesc">{resource.VisibleAffiliate}</Label>
                             <Input type="textarea" name="AffDesc" rows="6" disabled={!isProcessing} value={htmlDecode(AffDesc)} onChange={this.handleChange} />
                         </FormGroup>
                     </fieldset>

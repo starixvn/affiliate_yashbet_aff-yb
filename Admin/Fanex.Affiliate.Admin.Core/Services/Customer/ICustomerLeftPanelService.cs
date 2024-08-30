@@ -19,8 +19,6 @@ namespace Fanex.Affiliate.Admin.Core.Services.Customer
 
         Task<ResultInfo> UpdateStatus(UpdateStatusParam param, AffInformationEmail emailParam);
 
-        ResultInfo UpdateClosedStatus(UpdateClosedStatusParam param);
-
         TransferLimitSettingInfo GetTransferLimitSetting(int affId);
 
         ResultInfo UpdateTransferLimitSetting(TransferLimitSettingParam param);

@@ -154,14 +154,14 @@ export class EditMemberPopup extends PureComponent {
                             </Alert>
                             <Form tag="form" className="mb-4" autoComplete="off">
                                 <FormGroup row>
-                                    <Label for="isRemoved" sm={5} className="required">Status:</Label>
+                                    <Label htmlFor="isRemoved" sm={5} className="required">Status:</Label>
                                     <Col sm={5}>
                                         <Input type="checkbox" className="mt-3 ml-0" name="isRemoved" id="isRemoved" checked={isRemoved} onClick={() => this.handleCheckRemoved(isRemoved)} />
                                     </Col>
                                 </FormGroup>
 
                                 <FormGroup row className="mb-2">
-                                    <Label for="isInclude" sm={5} className="required">Current Month Report:</Label>
+                                    <Label htmlFor="isInclude" sm={5} className="required">Current Month Report:</Label>
                                     <Col sm={5}>
                                         <Input type="select" className="mt-2" name="isInclude" id="isInclude" value={isInclude ? "0" : "1"} onChange={this.handleChangeSelectBox}>
                                             <option key="include" value="0">Include</option>

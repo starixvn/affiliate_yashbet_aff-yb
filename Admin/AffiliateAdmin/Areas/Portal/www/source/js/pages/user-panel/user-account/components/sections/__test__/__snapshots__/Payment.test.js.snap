@@ -9,7 +9,7 @@ exports[`user account - components - sections - Payment render correctly 1`] = `
     tag="div"
   >
     <Label
-      for="preferredPayment"
+      htmlFor="preferredPayment"
       sm={3}
       tag="label"
       widths={
@@ -64,7 +64,7 @@ exports[`user account - components - sections - Payment render correctly 1`] = `
   >
     <Label
       className="required"
-      for="playerUsername"
+      htmlFor="playerUsername"
       sm={3}
       tag="label"
       widths={

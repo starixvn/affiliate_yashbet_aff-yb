@@ -96,7 +96,7 @@ exports[`note - components - InsertUpdateNoteForm  render correctly with add Not
           >
             <Label
               className="d-flex justify-content-center align-items-center required"
-              for="noteContent"
+              htmlFor="noteContent"
               sm={3}
               tag="label"
               widths={
@@ -268,7 +268,7 @@ exports[`note - components - InsertUpdateNoteForm  render correctly with update 
           >
             <Label
               className="d-flex justify-content-center align-items-center required"
-              for="noteContent"
+              htmlFor="noteContent"
               sm={3}
               tag="label"
               widths={

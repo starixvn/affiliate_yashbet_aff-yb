@@ -14,7 +14,7 @@ exports[`affiliate report - Filter  should render correctly when currentMainView
     >
       <Label
         className="mr-sm-2"
-        for="Affiliate"
+        htmlFor="Affiliate"
         tag="label"
         widths={
           Array [
@@ -347,7 +347,7 @@ exports[`affiliate report - Filter  should render correctly when currentMainView
     >
       <Label
         className="mr-sm-2"
-        for="SortBy"
+        htmlFor="SortBy"
         tag="label"
         widths={
           Array [
@@ -451,7 +451,7 @@ exports[`affiliate report - Filter  should render correctly when currentMainView
     >
       <Label
         className="mr-sm-2"
-        for="Affiliate"
+        htmlFor="Affiliate"
         tag="label"
         widths={
           Array [
@@ -667,7 +667,7 @@ exports[`affiliate report - Filter  should render correctly when currentMainView
     >
       <Label
         className="mr-sm-2"
-        for="SortBy"
+        htmlFor="SortBy"
         tag="label"
         widths={
           Array [

@@ -473,7 +473,7 @@ export class EditBannerForm extends PureComponent {
                                         isInsert && <Label className="d-block">[Maximum files: 10]</Label>
                                     }                                    <br />
                                     <FormGroup row className="mb-2">
-                                        <Label sm={3} for="file" className={isInsert ? "required" : ""}>File</Label>
+                                        <Label sm={3} htmlFor="file" className={isInsert ? "required" : ""}>File</Label>
                                         <Col sm={9} >
                                             <InputFile id="file" className={`border ${(isInsert && isDisabled) || files.length === 0 ? "text-danger" : "text-success"}`}
                                                 lblText="No file choosen"
@@ -485,7 +485,7 @@ export class EditBannerForm extends PureComponent {
                                     </FormGroup>
                                     {
                                         isInsert && <FormGroup row className="mb-2">
-                                            <Label sm={3} for="userType">{headerText.UserType}</Label>
+                                            <Label sm={3} htmlFor="userType">{headerText.UserType}</Label>
                                             <Col sm={5}>
                                                 <Input type="select" name="userType" id="userType" value={userType} onChange={this._handleChange}>
                                                     {
@@ -498,7 +498,7 @@ export class EditBannerForm extends PureComponent {
                                         </FormGroup>
                                     }
                                     <FormGroup row className="mb-2">
-                                        <Label sm={3} for="category" className="required">{headerText.Category}</Label>
+                                        <Label sm={3} htmlFor="category" className="required">{headerText.Category}</Label>
                                         <Col sm={5}>
                                             <MultipleSelect
                                                 dataSource={categoryList}
@@ -513,7 +513,7 @@ export class EditBannerForm extends PureComponent {
                                     {
                                         hasSubCategory && (
                                             <FormGroup row className="mb-2">
-                                                <Label sm={3} for="subCategory" className="required">{headerText.SubCategory}</Label>
+                                                <Label sm={3} htmlFor="subCategory" className="required">{headerText.SubCategory}</Label>
                                                 <Col sm={5}>
                                                     <MultipleSelect
                                                         dataSource={subCategoryList}
@@ -528,7 +528,7 @@ export class EditBannerForm extends PureComponent {
                                         )
                                     }
                                     <FormGroup row className="mb-2">
-                                        <Label sm={3} for="language">{headerText.Language}</Label>
+                                        <Label sm={3} htmlFor="language">{headerText.Language}</Label>
                                         <Col sm={5}>
                                             <Input type="select" name="language" id="language" value={language} onChange={this._handleChange}>
                                                 {
@@ -542,7 +542,7 @@ export class EditBannerForm extends PureComponent {
                                     {
                                         !isDisableCurrency && (
                                             <FormGroup row className="mb-2">
-                                                <Label sm={3} for="currency" className="required">{headerText.Currency}</Label>
+                                                <Label sm={3} htmlFor="currency" className="required">{headerText.Currency}</Label>
                                                 <Col sm={5}>
                                                     <MultipleSelect
                                                         dataSource={currencyList}
@@ -556,7 +556,7 @@ export class EditBannerForm extends PureComponent {
                                             </FormGroup>)
                                     }
                                     <FormGroup row className="mb-2">
-                                        <Label sm={3} for="affType" className="required">{headerText.AffType}</Label>
+                                        <Label sm={3} htmlFor="affType" className="required">{headerText.AffType}</Label>
                                         <Col sm={5}>
                                             <MultipleSelect
                                                 dataSource={affTypeList}
@@ -569,7 +569,7 @@ export class EditBannerForm extends PureComponent {
                                         </Col>
                                     </FormGroup>
                                     <FormGroup row className="mb-2">
-                                        <Label sm={3} for="deviceType" className="required">{headerText.Device}</Label>
+                                        <Label sm={3} htmlFor="deviceType" className="required">{headerText.Device}</Label>
                                         <Col sm={5}>
                                             <MultipleSelect
                                                 dataSource={deviceTypeList}
@@ -586,7 +586,7 @@ export class EditBannerForm extends PureComponent {
                                             let inputFileName = `inputFileName${index}`;
 
                                             return (<FormGroup row className="mb-2" key={`FileName${index + 1}`}>
-                                                <Label sm={3} for={inputFileName}>{`File Name ${index + 1}`}</Label>
+                                                <Label sm={3} htmlFor={inputFileName}>{`File Name ${index + 1}`}</Label>
                                                 <Col sm={7}>
                                                     <Input type="text"
                                                         name={inputFileName}
@@ -606,7 +606,7 @@ export class EditBannerForm extends PureComponent {
                                             </FormGroup>)
                                         }) : (
                                                 <FormGroup row className="mb-2">
-                                                    <Label sm={3} for="inputFileName">File Name</Label>
+                                                    <Label sm={3} htmlFor="inputFileName">File Name</Label>
                                                     <Col sm={7}>
                                                         <Input type="text"
                                                             name="inputFileName"

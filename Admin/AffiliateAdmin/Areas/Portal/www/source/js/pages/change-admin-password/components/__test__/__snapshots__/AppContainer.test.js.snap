@@ -59,7 +59,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="oldPassword"
+          htmlFor="oldPassword"
           sm={4}
           tag="label"
           widths={
@@ -107,7 +107,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="newPassword"
+          htmlFor="newPassword"
           sm={4}
           tag="label"
           widths={
@@ -155,7 +155,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="confirmPassword"
+          htmlFor="confirmPassword"
           sm={4}
           tag="label"
           widths={
@@ -278,7 +278,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="oldPassword"
+          htmlFor="oldPassword"
           sm={4}
           tag="label"
           widths={
@@ -337,7 +337,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="newPassword"
+          htmlFor="newPassword"
           sm={4}
           tag="label"
           widths={
@@ -396,7 +396,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="confirmPassword"
+          htmlFor="confirmPassword"
           sm={4}
           tag="label"
           widths={
@@ -530,7 +530,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="oldPassword"
+          htmlFor="oldPassword"
           sm={4}
           tag="label"
           widths={
@@ -578,7 +578,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="newPassword"
+          htmlFor="newPassword"
           sm={4}
           tag="label"
           widths={
@@ -637,7 +637,7 @@ exports[`change admin password - components - AppContainer render correctly with
       >
         <Label
           className="required text-right"
-          for="confirmPassword"
+          htmlFor="confirmPassword"
           sm={4}
           tag="label"
           widths={

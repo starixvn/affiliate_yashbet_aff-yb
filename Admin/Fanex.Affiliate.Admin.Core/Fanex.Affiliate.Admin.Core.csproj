@@ -334,6 +334,7 @@
     <Compile Include="DTO\UserPanel\SubAffiliate.cs" />
     <Compile Include="Exceptions\LicenseePaymentException.cs" />
     <Compile Include="Extensions\NumberFormatter.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Infrasstructures\AuthenticatedHttpClientHandler.cs" />
     <Compile Include="MetaModels\Administrator\ChangeStatusParam.cs" />
     <Compile Include="MetaModels\Administrator\DeleteDepartmentParam.cs" />
@@ -403,7 +404,6 @@
     <Compile Include="MetaModels\CommissionGroup\GetGroupListParam.cs" />
     <Compile Include="MetaModels\Customer\CustomerStatisticsParam.cs" />
     <Compile Include="MetaModels\Customer\UpdateAffTypeParam.cs" />
-    <Compile Include="MetaModels\Customer\UpdateClosedStatusParam.cs" />
     <Compile Include="MetaModels\Customer\UpdateLanguageParam.cs" />
     <Compile Include="MetaModels\Customer\UpdateStatusParam.cs" />
     <Compile Include="MetaModels\MediaGallery\DeleteLandingPageParam.cs" />

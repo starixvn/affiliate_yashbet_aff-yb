@@ -6,7 +6,7 @@ import Panel from '../Panel';
 import { Row, Col, Button } from 'reactstrap';
 
 import { resource, status, messages, statusForSuspend, approved } from '../../libs/constants';
-import { updateAffType, updateClosedStatus, updateStatus, getAffiliateInfo, getTransferLimitSetting } from '../../actions';
+import { updateAffType, updateStatus, getAffiliateInfo, getTransferLimitSetting } from '../../actions';
 import CommissionGroupPopup from '../../../../common/components/CommissionGroupPopup';
 import NotificationPopup from '../../../../common/components/NotificationPopup';
 import TransferBalanceForPlayerSettingPopup from './TransferBalanceForPlayerSettingPopup';
@@ -26,7 +26,6 @@ export class SettingPanel extends PureComponent {
             isChangingAffStatus: false,
             isAssignCommissionGroup: false,
             selectedStatus: '',
-            isClosed: false,
             messageNotification: '',
             isConfirmPopup: true,
             isConfirmStatus: true,
@@ -68,14 +67,10 @@ export class SettingPanel extends PureComponent {
     handleCloseNotificationPopup = (confirmResult) => {
         this.setState({ messageNotification: '' });
 
-        const { isConfirmStatus, selectedStatus, isClosed } = this.state;
+        const { isConfirmStatus, selectedStatus } = this.state;
         if (isConfirmStatus && confirmResult && selectedStatus) {
             this._saveStatus(selectedStatus);
         }
-
-        //if (!isConfirmStatus && confirmResult) {
-        //    this._openCloseAff(isClosed);
-        //}
     }
 
     handleChangeStatus = (event) => {
@@ -98,26 +93,6 @@ export class SettingPanel extends PureComponent {
             }
         }
     }
-
-    // handleOpenCloseAff = () => {
-    //     const { affiliateInfo } = this.props;
-    //     const isClosed = !affiliateInfo.IsClosed;
-
-    //     this.setState({ messageNotification: `Are you sure you want to ${isClosed ? 'close' : 'open'} this affiliate?`, isConfirmPopup: true, isConfirmStatus: false, isClosed });
-    // }
-
-    // _openCloseAff = async (isClosed) => {
-    //     const param = { AffId: this.props.affiliateInfo.AffId, IsClosed: isClosed };
-    //     const result = await this.props.updateClosedStatus(param);
-
-    //     if (result.IsSuccessful) {
-    //         this.setState({ messageNotification: messages.statusUpdatedSuccess, isConfirmPopup: false });
-    //         this.props.getAffiliateInfo(this.props.affName);
-    //     }
-    //     else {
-    //         this.setState({ messageNotification: result.Message, isConfirmPopup: false });
-    //     }
-    // }
 
     handleChangeAffType = async (event) => {
         const affType = event.target.value;
@@ -231,17 +206,6 @@ export class SettingPanel extends PureComponent {
                         </Fragment>
                     )
                 }
-                {/* {
-                    isApproved && (
-                        <Row>
-                            <Col>{resource.Closed}</Col>
-                            <Col className="text-right text-primary">
-                                <Button color="link" className="left-panel-btn-link btn-closed" onClick={this.handleOpenCloseAff}>
-                                    {affiliateInfo.IsClosed ? resource.Yes : resource.No}
-                                </Button>
-                            </Col>
-                        </Row>)
-                } */}
                 {
                     !!messageNotification && <NotificationPopup
                         message={messageNotification}
@@ -261,7 +225,7 @@ function mapStateToProps({ leftPanel }) {
 };
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ getAffiliateInfo, updateAffType, updateClosedStatus, updateStatus, getTransferLimitSetting }, dispatch);
+    return bindActionCreators({ getAffiliateInfo, updateAffType, updateStatus, getTransferLimitSetting }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SettingPanel);

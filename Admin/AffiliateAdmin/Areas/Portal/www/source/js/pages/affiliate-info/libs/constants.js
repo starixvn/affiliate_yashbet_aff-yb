@@ -7,8 +7,7 @@ export const statusList = {
     Pending: "Pending",
     Approved: "Approved",
     Disapproved: "Disapproved",
-    Suspended: "Suspended",
-    Closed: "Closed"
+    Suspended: "Suspended"
 }
 
 export const defaultSortBy = 1;

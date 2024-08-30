@@ -42,8 +42,6 @@ export const defaultGeneralInfo = {
     ApprovedAffiliateMonthNumber: 0,
     ApprovedAffiliateNumber: 0,
     BannerNumber: 0,
-    ClosedAffiliateMonthNumber: 0,
-    ClosedAffiliateNumber: 0,
     DisapprovedAffiliateMonthNumber: 0,
     DisapprovedAffiliateNumber: 0,
     PlayerBannerNum: 0,

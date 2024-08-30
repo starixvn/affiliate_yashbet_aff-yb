@@ -76,9 +76,9 @@ exports[`view log - components - Content render correctly 1`] = `
               onClick={[Function]}
               sortable={false}
               sorting={false}
-              title="Update Affiliate's Closed Status. IsClosed=0"
+              title="Update Affiliate's Status"
             >
-              Update Affiliate's Closed Status. IsClosed=0
+              Update Affiliate's Status
             </t>
             <t
               asc={true}
@@ -166,9 +166,9 @@ exports[`view log - components - Content render correctly 1`] = `
               onClick={[Function]}
               sortable={false}
               sorting={false}
-              title="Update Affiliate's Closed Status. IsClosed=1"
+              title="Update Affiliate's Status"
             >
-              Update Affiliate's Closed Status. IsClosed=1
+              Update Affiliate's Status
             </t>
             <t
               asc={true}

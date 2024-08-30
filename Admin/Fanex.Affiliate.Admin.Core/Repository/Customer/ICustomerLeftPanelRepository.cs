@@ -17,8 +17,6 @@ namespace Fanex.Affiliate.Admin.Core.Repository.Customer
 
         ResultInfo UpdateStatus(UpdateStatusParam param);
 
-        ResultInfo UpdateClosedStatus(UpdateClosedStatusParam param);
-
         TransferLimitSettingInfo GetTransferLimitSetting(int affId);
 
         ResultInfo UpdateTransferLimitSetting(TransferLimitSettingParam param);
