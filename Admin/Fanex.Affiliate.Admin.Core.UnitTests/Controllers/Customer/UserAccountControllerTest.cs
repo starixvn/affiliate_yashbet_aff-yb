@@ -1,11 +1,13 @@
 ﻿using Fanex.Affiliate.Admin.Core.Controllers.UserPanel;
 using Fanex.Affiliate.Admin.Core.DTO;
+using Fanex.Affiliate.Admin.Core.DTO.Customer;
 using Fanex.Affiliate.Admin.Core.DTO.UserPanel;
 using Fanex.Affiliate.Admin.Core.Extensions;
 using Fanex.Affiliate.Admin.Core.MetaModels.UserPanel;
 using Fanex.Affiliate.Admin.Core.Services.Common;
 using Fanex.Affiliate.Admin.Core.Services.UserPanel;
 using Fanex.Affiliate.Admin.Core.UnitTests.TestHelper;
+using Fanex.Affiliate.Admin.Core.ViewModels.Customer;
 using Moq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -140,6 +142,40 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers.Customer
             // Assert
             Assert.False(data.IsSuccessful);
             Assert.Equal("", data.Message);
+        }
+
+        [Fact]
+        public void GetPaymentMethod_WhenCall_ReturnCorrectData()
+        {
+            // Arrange
+            var userAccountService = new Mock<IUserAccountService>();
+            userAccountService.Setup(t => t.GetPaymentMethod()).Returns((new List<PaymentMethodInfo> { new PaymentMethodInfo { PaymentId = "123", PaymentName = "abc" } }, 100m));
+            var controller = CreateUserAccountController(userAccountService: userAccountService.Object);
+
+            // Action
+            var result = controller.GetPaymentMethod() as JsonNetResult;
+            var entityResult = result.Data as PaymentMethodViewModel;
+
+            // Assert
+            Assert.Single(entityResult.PaymentMethods);
+            Assert.Equal(100m, entityResult.MinAmount);
+        }
+
+        [Fact]
+        public void GetPaymentMethod_WhenCall_ReturnEmptyData()
+        {
+            // Arrange
+            var userAccountService = new Mock<IUserAccountService>();
+            userAccountService.Setup(t => t.GetPaymentMethod()).Returns((new List<PaymentMethodInfo>(), 0m));
+            var controller = CreateUserAccountController(userAccountService: userAccountService.Object);
+
+            // Action
+            var result = controller.GetPaymentMethod() as JsonNetResult;
+            var entityResult = result.Data as PaymentMethodViewModel;
+
+            // Assert
+            Assert.Empty(entityResult.PaymentMethods);
+            Assert.Equal(0m, entityResult.MinAmount);
         }
 
         private UserAccountController CreateUserAccountController(

@@ -187,7 +187,7 @@ describe('user account actions', () => {
 
         const result = await actions['getPaymentMethod']()();
 
-        expect(ajaxRequest.post).toHaveBeenCalledWith('Portal/PaymentRequest/GetPaymentMethod');
+        expect(ajaxRequest.post).toHaveBeenCalledWith('Portal/UserPanel/UserAccount/GetPaymentMethod');
 
         expect(result).toEqual(paymentMethod);
     })
@@ -197,7 +197,7 @@ describe('user account actions', () => {
 
         const result = await actions['getPaymentMethod']()();
 
-        expect(ajaxRequest.post).toHaveBeenCalledWith('Portal/PaymentRequest/GetPaymentMethod');
+        expect(ajaxRequest.post).toHaveBeenCalledWith('Portal/UserPanel/UserAccount/GetPaymentMethod');
         expect(result).toEqual(null);
     })
 });

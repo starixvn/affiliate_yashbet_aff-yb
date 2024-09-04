@@ -1,10 +1,12 @@
 ﻿using Fanex.Affiliate.Admin.Core.Configurations;
 using Fanex.Affiliate.Admin.Core.Constants;
 using Fanex.Affiliate.Admin.Core.DTO;
+using Fanex.Affiliate.Admin.Core.DTO.Customer;
 using Fanex.Affiliate.Admin.Core.DTO.UserPanel;
 using Fanex.Affiliate.Admin.Core.MetaModels.UserPanel;
 using Fanex.Affiliate.Admin.Core.Repository.UserPanel;
 using Fanex.Affiliate.Admin.Core.Resources;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Fanex.Affiliate.Admin.Core.Services.UserPanel
@@ -29,6 +31,11 @@ namespace Fanex.Affiliate.Admin.Core.Services.UserPanel
         public UserAccount GetUserAccountInfo(int affId)
         {
             return _userAccountRepository.GetUserAccountInfo(affId);
+        }
+
+        public (IEnumerable<PaymentMethodInfo> paymentMethods, decimal minAmount) GetPaymentMethod()
+        {
+            return _userAccountRepository.GetPaymentMethod();
         }
 
         public async Task<ResultInfo> UpdateUserAccountAsync(UserAccountParam param)

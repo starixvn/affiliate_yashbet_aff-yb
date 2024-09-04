@@ -1,7 +1,6 @@
 ﻿using Fanex.Affiliate.Admin.Core.DTO;
 using Fanex.Affiliate.Admin.Core.DTO.Payment;
 using Fanex.Affiliate.Admin.Core.MetaModels.Payment;
-using System.Collections.Generic;
 
 namespace Fanex.Affiliate.Admin.Core.Repository.Payment
 {
@@ -12,7 +11,5 @@ namespace Fanex.Affiliate.Admin.Core.Repository.Payment
         PaymentRequestDetail GetPaymentRequestDetail(long transId);
 
         ResultInfo UpdatePaymentRequest(PaymentRequestUpdateParam param);
-
-        (IEnumerable<PaymentMethodInfo> paymentMethods, decimal minAmount) GetPaymentMethod();
     }
 }

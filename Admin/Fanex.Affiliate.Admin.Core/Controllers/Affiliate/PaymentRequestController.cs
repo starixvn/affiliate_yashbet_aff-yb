@@ -10,9 +10,7 @@ using Fanex.Affiliate.Admin.Core.Resources;
 using Fanex.Affiliate.Admin.Core.Services.Common;
 using Fanex.Affiliate.Admin.Core.Services.Payment;
 using Fanex.Affiliate.Admin.Core.Utilities;
-using Fanex.Affiliate.Admin.Core.ViewModels.Payment;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -109,22 +107,6 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.Affiliate
             }
 
             return GenerateErrResult("Transaction not exists!");
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryHeader]
-        public ActionResult GetPaymentMethod()
-        {
-            var paymentInfo = _paymentRequestService.GetPaymentMethod();
-            var paymentMethods = paymentInfo.paymentMethods
-                .Select(m => new KeyValuePair<string, string>(m.PaymentId, m.PaymentName));
-            var viewModel = new PaymentMethodViewModel
-            {
-                MinAmount = paymentInfo.minAmount,
-                PaymentMethods = paymentMethods
-            };
-
-            return GenerateJsonNetResult(viewModel);
         }
     }
 }

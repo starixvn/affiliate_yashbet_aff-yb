@@ -13,7 +13,6 @@ using Fanex.Affiliate.Admin.Core.Repository;
 using Fanex.Affiliate.Admin.Core.Services.Common;
 using Fanex.Affiliate.Admin.Core.Services.Payment;
 using Fanex.Affiliate.Admin.Core.UnitTests.TestHelper;
-using Fanex.Affiliate.Admin.Core.ViewModels.Payment;
 using Moq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -179,40 +178,6 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers.Affiliate
             // Assert
             Assert.False(resultInfo.IsSuccessful);
             Assert.Equal("Transaction not exists!", resultInfo.Message);
-        }
-
-        [Fact]
-        public void GetPaymentMethod_WhenCall_ReturnCorrectData()
-        {
-            // Arrange
-            var paymentRequestService = new Mock<IPaymentService>();
-            paymentRequestService.Setup(t => t.GetPaymentMethod()).Returns((new List<PaymentMethodInfo> { new PaymentMethodInfo { PaymentId = "123", PaymentName = "abc" } }, 100m));
-            var controller = CreatePaymentRequestController(paymentRequestService: paymentRequestService.Object);
-
-            // Action
-            var result = controller.GetPaymentMethod() as JsonNetResult;
-            var entityResult = result.Data as PaymentMethodViewModel;
-
-            // Assert
-            Assert.Single(entityResult.PaymentMethods);
-            Assert.Equal(100m, entityResult.MinAmount);
-        }
-
-        [Fact]
-        public void GetPaymentMethod_WhenCall_ReturnEmptyData()
-        {
-            // Arrange
-            var paymentRequestService = new Mock<IPaymentService>();
-            paymentRequestService.Setup(t => t.GetPaymentMethod()).Returns((new List<PaymentMethodInfo>(), 0m));
-            var controller = CreatePaymentRequestController(paymentRequestService: paymentRequestService.Object);
-
-            // Action
-            var result = controller.GetPaymentMethod() as JsonNetResult;
-            var entityResult = result.Data as PaymentMethodViewModel;
-
-            // Assert
-            Assert.Empty(entityResult.PaymentMethods);
-            Assert.Equal(0m, entityResult.MinAmount);
         }
 
         private PaymentRequestController CreatePaymentRequestController(
