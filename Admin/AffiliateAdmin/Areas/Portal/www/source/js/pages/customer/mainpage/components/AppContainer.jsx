@@ -7,6 +7,7 @@ import AppLayout from '../../../../layouts/AppLayout';
 import LeftPanel from '../../left-panel/components/AppContainer';
 import UserPanel from '../../user-panel/components/UserPanel';
 import { setSelectedUserPanel } from '../../user-panel/actions';
+import { setUserPanelMenuCookie } from '../../../../modules/utils';
 
 export const CustomerStatistics = React.lazy(() =>
     import(/* webpackChunkName: "customer-statistics" */ '../../customer-statistics/components/AppContainer'));
@@ -14,6 +15,12 @@ export const CustomerStatistics = React.lazy(() =>
 export const AppContainer = (props) => {
     const { affId, selectedUserPanel, status } = props;
     const isPending = status && (status.toLowerCase() === 'pending' || status.toLowerCase() === 'disapproved');
+
+    const handleClickUserPanelMenu = (userPanelMenu) => {
+        setUserPanelMenuCookie(userPanelMenu);
+
+        props.setSelectedUserPanel(userPanelMenu);
+    }
 
     return (
         <AppLayout>
@@ -36,7 +43,7 @@ export const AppContainer = (props) => {
                                 <div className="user-panel">
                                     {
                                         selectedUserPanel &&
-                                        <UserPanel selectedUserPanel={selectedUserPanel} onClickMenu={props.setSelectedUserPanel} isPending={isPending} />
+                                        <UserPanel selectedUserPanel={selectedUserPanel} onClickMenu={handleClickUserPanelMenu} isPending={isPending} />
                                     }
                                 </div>
                             </div>

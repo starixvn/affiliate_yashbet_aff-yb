@@ -18,6 +18,14 @@ export const getCookie = (cookieName) => {
     return "";
 }
 
+export const getUserPanelMenuCookie = () => {
+    return getCookie("selectedUserPanelMenu");
+}
+
+export const setUserPanelMenuCookie = (selectedUserPanel) => {
+    document.cookie = "selectedUserPanelMenu=" + selectedUserPanel + "; path=/Portal/Customer";
+}
+
 export const formatUnit = (value) => {
     return value < 10 ? '0' + value : value;
 }

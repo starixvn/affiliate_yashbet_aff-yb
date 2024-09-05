@@ -4,8 +4,9 @@ import { bindActionCreators } from 'redux';
 import { setAffName } from '../actions';
 import { getAffiliateInfo } from '../../mainpage/actions/loadingDataAction';
 import { globalResource } from '../../../../modules/globalResource';
+import { setUserPanelMenuCookie } from '../../../../modules/utils';
 
-import { Col, Button, Form, Input, FormGroup } from 'reactstrap';
+import { Button, Form, Input, FormGroup } from 'reactstrap';
 
 export class SearchBox extends PureComponent {
     constructor(props) {
@@ -35,6 +36,7 @@ export class SearchBox extends PureComponent {
     }
 
     handleClick = (event) => {
+        setUserPanelMenuCookie('');
         event.preventDefault();
         const { affName } = this.state;
 
