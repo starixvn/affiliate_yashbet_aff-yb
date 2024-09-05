@@ -13,8 +13,6 @@ namespace Fanex.Affiliate.Admin.Core.Attributes
     {
         public string FunctionName { get; set; }
 
-        public string FunctionNameOption { get; set; }
-
         public bool IsHost { get; set; }
 
         public override void OnActionExecuting(ActionExecutingContext filterContext)
@@ -53,8 +51,7 @@ namespace Fanex.Affiliate.Admin.Core.Attributes
             var sessionService = DependencyResolver.Current.GetService<ISessionService>();
             var permissionList = sessionService.UserPermissionList;
 
-            return permissionList.Any(i => (i.FunctionName.MatchWith(this.FunctionName) || i.FunctionName.MatchWith(this.FunctionNameOption))
-                                    && (i.IsHost || i.IsHost == IsHost));
+            return permissionList.Any(i => i.FunctionName.MatchWith(this.FunctionName) && (i.IsHost || i.IsHost == IsHost));
         }
     }
 }

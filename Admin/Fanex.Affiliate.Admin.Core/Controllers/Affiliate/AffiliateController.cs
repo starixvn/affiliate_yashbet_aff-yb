@@ -96,7 +96,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.Affiliate
 
         [HttpPost]
         [ValidateAntiForgeryHeader]
-        [FunctionAuthorize(FunctionName = Function.Affiliate, FunctionNameOption = Function.EditAffDetails, IsHost = true)]
+        [FunctionAuthorize(FunctionName = Function.EditAffDetails, IsHost = true)]
         public ActionResult ChangePassword(PasswordParam param)
         {
             if (ModelState.IsValid)
