@@ -11,7 +11,7 @@ import { toggleLoader } from '../../../actions/loaderAction';
 import { post } from '../../../modules/ajaxRequest';
 import { format, formatDecimal } from '../../../modules/numberFormat';
 import { updateObjectInArray } from '../../../modules/dataHandler';
-import { resolveClientUrl } from '../../../modules/utils';
+import { resolveClientUrl, clearUserPanelMenuCookie } from '../../../modules/utils';
 import { convertSelectedColumnList } from '../libs/utils';
 import { htmlDecode } from '../../../modules/htmlHelper';
 import NotificationPopup from '../../common/components/NotificationPopup';
@@ -27,6 +27,10 @@ export class GridData extends Component {
         }
 
         this.tableRef = createRef();
+    }
+
+    componentDidMount() {
+        clearUserPanelMenuCookie();
     }
 
     componentDidUpdate(prevProps) {

@@ -28,6 +28,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
 
         [HttpPost]
         [ValidateAntiForgeryHeader]
+        [UnauthorizedPropertyCensor]
         public ActionResult GetUserAccountInfo(int affId)
         {
             if (affId >= Validation.MinId)

@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Fanex.Affiliate.Admin.Core.Attributes;
+using Fanex.Affiliate.Admin.Core.Constants;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -60,8 +62,10 @@ namespace Fanex.Affiliate.Admin.Core.DTO.UserPanel
 
         public string BankAccountNumber { get; set; }
 
+        [PermissionCheck(Function.SecurityQa)]
         public string Question { get; set; }
 
+        [PermissionCheck(Function.SecurityQa)]
         public string Answer { get; set; }
 
         public bool? MailOption { get; set; }

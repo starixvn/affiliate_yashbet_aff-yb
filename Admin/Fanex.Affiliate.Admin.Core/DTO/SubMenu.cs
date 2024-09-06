@@ -7,6 +7,8 @@
 
         public string Url { get; set; }
 
+        public string FunctionName { get; set; }
+
         public bool IsActive { get; set; }
     }
 }
