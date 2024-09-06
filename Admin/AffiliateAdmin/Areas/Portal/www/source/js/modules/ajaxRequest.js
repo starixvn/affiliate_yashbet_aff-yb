@@ -20,11 +20,11 @@ axios.interceptors.response.use(response => Promise.resolve(response),
 
             switch (status) {
                 case 401:
-                    alert("You are not authorized on this function.");
+                    alert("Your session was expired! Please login again.");
                     location.reload(true);
                     break;
                 case 403:
-                    alert("Your session was expired! Please login again.");
+                    alert("You are not authorized on this function.");
                     location.reload(true);
                     break;
                 case 500:
