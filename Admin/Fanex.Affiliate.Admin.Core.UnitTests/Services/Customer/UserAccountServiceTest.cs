@@ -1,6 +1,7 @@
 ﻿using Fanex.Affiliate.Admin.Core.Configurations;
 using Fanex.Affiliate.Admin.Core.DTO;
 using Fanex.Affiliate.Admin.Core.DTO.Api;
+using Fanex.Affiliate.Admin.Core.DTO.Customer;
 using Fanex.Affiliate.Admin.Core.DTO.UserPanel;
 using Fanex.Affiliate.Admin.Core.MetaModels.UserPanel;
 using Fanex.Affiliate.Admin.Core.Repository.UserPanel;
@@ -133,6 +134,22 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
             // Assert
             Assert.False(result.IsSuccessful);
             Assert.Equal("Update is failed!", result.Message);
+        }
+
+        [Fact]
+        public void GetPaymentMethod_WhenCall_ReturnCorrectData()
+        {
+            // Arrange
+            var userAccountRepository = new Mock<IUserAccountRepository>();
+            userAccountRepository.Setup(t => t.GetPaymentMethod()).Returns((new List<PaymentMethodInfo> { new PaymentMethodInfo { PaymentId = "123", PaymentName = "abc" } }, 100m));
+            var service = CreateUserAccountService(userAccountRepository: userAccountRepository.Object);
+
+            // Action
+            var (paymentMethods, minAmount) = service.GetPaymentMethod();
+
+            // Assert
+            Assert.Single(paymentMethods);
+            Assert.Equal(100m, minAmount);
         }
 
         private static UserAccountService CreateUserAccountService(

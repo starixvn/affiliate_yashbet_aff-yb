@@ -181,24 +181,6 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Customer
         }
 
         [Fact]
-        public void UpdateClosedStatus_WhenCall_ReturnCorrectData()
-        {
-            // Arrange
-            var param = new UpdateClosedStatusParam();
-            UpdateClosedStatusParam passedParam = null;
-            var repository = new Mock<ICustomerLeftPanelRepository>();
-            repository.Setup(comm => comm.UpdateClosedStatus(param)).Returns(new ResultInfo()).Callback<UpdateClosedStatusParam>(p => passedParam = p);
-            var service = CreateCustomerLeftPanelService(customerLeftPanelRepository: repository.Object);
-
-            // Action
-            var result = service.UpdateClosedStatus(param);
-
-            // Assert
-            Assert.True(result.IsSuccessful);
-            Assert.Equal(param, passedParam);
-        }
-
-        [Fact]
         public void UpdateLanguage_WhenCall_ReturnCorrectData()
         {
             // Arrange

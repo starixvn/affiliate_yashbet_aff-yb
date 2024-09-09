@@ -44,8 +44,18 @@ export class EditPolicyForm extends PureComponent {
         const { checkedPolicies } = this.state;
         const { individualPermission, groupPermission } = checkedPolicies[funcId];
 
-        const newPermission = (name === 'HasHost' && checked) ? Object.assign({}, isGroupPolicy ? groupPermission : individualPermission, { HasHost: true, HasRead: true })
-            : Object.assign({}, isGroupPolicy ? groupPermission : individualPermission, { [name]: checked });
+        let newPolicy = { [name]: checked };
+
+        if (name === 'HasRead' && !checked) {
+            newPolicy = { HasRead: false, HasHost: false };
+
+        }
+        if (name === 'HasHost' && checked) {
+            newPolicy = { HasHost: true, HasRead: true };
+        }
+
+        const newPermission = Object.assign({}, isGroupPolicy ? groupPermission : individualPermission, newPolicy);
+
         const newCheckedPolicies = Object.assign({}, checkedPolicies, {
             [funcId]: {
                 individualPermission: isGroupPolicy ? individualPermission : newPermission,

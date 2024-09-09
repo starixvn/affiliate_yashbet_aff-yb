@@ -74,15 +74,7 @@ exports[`home - components - AffiliateStatistics render correctly 1`] = `
         >
           <strong />
         </a>
-         Suspended / 
-        <a
-          href="/Portal/Affiliate?Status=Closed&IsFromHome=true"
-        >
-          <strong>
-            837
-          </strong>
-        </a>
-         Closed
+         Suspended
       </span>
     </Col>
   </Row>
@@ -147,11 +139,7 @@ exports[`home - components - AffiliateStatistics render correctly with this mont
         </strong>
          Disapproved / 
         <strong />
-         Suspended / 
-        <strong>
-          0
-        </strong>
-         Closed
+         Suspended
       </span>
     </Col>
   </Row>

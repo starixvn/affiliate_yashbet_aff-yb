@@ -1,4 +1,4 @@
-﻿namespace Fanex.Affiliate.Admin.Core.DTO.Payment
+﻿namespace Fanex.Affiliate.Admin.Core.DTO.Customer
 {
     public class PaymentMethodInfo
     {

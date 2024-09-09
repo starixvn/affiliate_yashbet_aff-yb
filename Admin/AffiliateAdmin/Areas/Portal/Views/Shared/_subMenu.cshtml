@@ -1,10 +1,16 @@
-﻿
+﻿﻿@using Fanex.Affiliate.Admin.Core.Services.Common;
 @model IEnumerable<Fanex.Affiliate.Admin.Core.DTO.SubMenu>
+
+@{ var sessionService = DependencyResolver.Current.GetService<ISessionService>();
+                var permissions = sessionService.UserPermissionList; }
 <ul class="nav">
     @foreach (var item in Model)
     {
-        <li class="nav-item">
-            <a class="nav-link @(item.IsActive? "active" : string.Empty)" href="@item.Url" target="_self">@item.Name</a>
-        </li>
-    }
+        if (string.IsNullOrEmpty(item.FunctionName) || permissions.Any(p => p.FunctionName == item.FunctionName))
+        {
+<li class="nav-item">
+    <a class="nav-link @(item.IsActive? "active" : string.Empty)" href="@item.Url" target="_self">@item.Name</a>
+</li>
+}
+}
 </ul>

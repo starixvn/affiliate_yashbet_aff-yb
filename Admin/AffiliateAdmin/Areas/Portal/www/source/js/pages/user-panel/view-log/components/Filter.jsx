@@ -63,7 +63,7 @@ export class Filter extends React.Component {
                 <Form inline tag="div">
                     {
                         logTypeList && <FormGroup className="mr-sm-2">
-                            <Label for="logType" className="mr-sm-2">{headerText.Type}</Label>
+                            <Label htmlFor="logType" className="mr-sm-2">{headerText.Type}</Label>
                             <Input type="select" name="logType" id="logType" value={logType} onChange={this.handleChange}>
                                 <option value="0">{globalResource.All}</option>
                                 {

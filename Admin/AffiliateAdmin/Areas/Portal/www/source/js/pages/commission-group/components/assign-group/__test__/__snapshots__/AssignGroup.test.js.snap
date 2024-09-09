@@ -175,7 +175,7 @@ exports[`commission group - AssignGroup Should render correctly with isSuccess s
     >
       <Label
         className="font-weight-bold"
-        for="isPrivateGroup"
+        htmlFor="isPrivateGroup"
         tag="label"
         widths={
           Array [

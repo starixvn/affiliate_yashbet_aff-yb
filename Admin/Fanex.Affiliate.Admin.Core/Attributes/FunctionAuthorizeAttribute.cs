@@ -1,4 +1,5 @@
 ﻿using Fanex.Affiliate.Admin.Core.Constants;
+using Fanex.Affiliate.Admin.Core.Extensions;
 using Fanex.Affiliate.Admin.Core.Services.Common;
 using System;
 using System.Linq;
@@ -21,12 +22,7 @@ namespace Fanex.Affiliate.Admin.Core.Attributes
 
             if (!string.IsNullOrEmpty(FunctionName) && !isSkipCheckAuthorization)
             {
-                var sessionService = DependencyResolver.Current.GetService<ISessionService>();
-                var permissionList = sessionService.UserPermissionList;
-                var hasPerimission = permissionList.Any(i =>
-                i.FunctionName.Equals(this.FunctionName, StringComparison.OrdinalIgnoreCase)
-                && (i.IsHost || i.IsHost == IsHost)
-                );
+                var hasPerimission = HasPerimission();
 
                 if (!hasPerimission)
                 {
@@ -48,6 +44,14 @@ namespace Fanex.Affiliate.Admin.Core.Attributes
             }
 
             base.OnActionExecuting(filterContext);
+        }
+
+        private bool HasPerimission()
+        {
+            var sessionService = DependencyResolver.Current.GetService<ISessionService>();
+            var permissionList = sessionService.UserPermissionList;
+
+            return permissionList.Any(i => i.FunctionName.MatchWith(this.FunctionName) && (i.IsHost || i.IsHost == IsHost));
         }
     }
 }

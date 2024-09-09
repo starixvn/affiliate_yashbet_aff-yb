@@ -14,7 +14,7 @@ exports[`affiliate info - Filter  should render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="SearchBy"
+        htmlFor="SearchBy"
         tag="label"
         widths={
           Array [
@@ -122,12 +122,6 @@ exports[`affiliate info - Filter  should render correctly 1`] = `
         >
           Suspended
         </option>
-        <option
-          key="status-Closed"
-          value="Closed"
-        >
-          Closed
-        </option>
       </Input>
     </FormGroup>
     <FormGroup
@@ -206,7 +200,7 @@ exports[`affiliate info - Filter  should render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="SortBy"
+        htmlFor="SortBy"
         tag="label"
         widths={
           Array [
@@ -291,7 +285,7 @@ exports[`affiliate info - Filter  should render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="SortBy"
+        htmlFor="SortBy"
         tag="label"
         widths={
           Array [

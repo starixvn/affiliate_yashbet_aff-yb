@@ -324,7 +324,7 @@
     <Compile Include="DTO\MediaGallery\MediaGalleryFilterItem.cs" />
     <Compile Include="DTO\Member\MemberInfo.cs" />
     <Compile Include="DTO\Member\PlayerActionInfo.cs" />
-    <Compile Include="DTO\Payment\PaymentMethod.cs" />
+    <Compile Include="DTO\Customer\PaymentMethod.cs" />
     <Compile Include="DTO\Report\PlayerGgrProductInfo.cs" />
     <Compile Include="DTO\Report\PlayerGgrReport.cs" />
     <Compile Include="DTO\Report\TransferReport.cs" />
@@ -334,6 +334,7 @@
     <Compile Include="DTO\UserPanel\SubAffiliate.cs" />
     <Compile Include="Exceptions\LicenseePaymentException.cs" />
     <Compile Include="Extensions\NumberFormatter.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Infrasstructures\AuthenticatedHttpClientHandler.cs" />
     <Compile Include="MetaModels\Administrator\ChangeStatusParam.cs" />
     <Compile Include="MetaModels\Administrator\DeleteDepartmentParam.cs" />
@@ -403,7 +404,6 @@
     <Compile Include="MetaModels\CommissionGroup\GetGroupListParam.cs" />
     <Compile Include="MetaModels\Customer\CustomerStatisticsParam.cs" />
     <Compile Include="MetaModels\Customer\UpdateAffTypeParam.cs" />
-    <Compile Include="MetaModels\Customer\UpdateClosedStatusParam.cs" />
     <Compile Include="MetaModels\Customer\UpdateLanguageParam.cs" />
     <Compile Include="MetaModels\Customer\UpdateStatusParam.cs" />
     <Compile Include="MetaModels\MediaGallery\DeleteLandingPageParam.cs" />
@@ -618,7 +618,7 @@
     <Compile Include="ViewModels\GetCommissionGroupViewModel.cs" />
     <Compile Include="ViewModels\MediaGallery\BannerListViewModel.cs" />
     <Compile Include="ViewModels\Member\MemberListViewModel.cs" />
-    <Compile Include="ViewModels\Payment\PaymentMethodViewModel.cs" />
+    <Compile Include="ViewModels\Customer\PaymentMethodViewModel.cs" />
     <Compile Include="ViewModels\Report\ReportCommonViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

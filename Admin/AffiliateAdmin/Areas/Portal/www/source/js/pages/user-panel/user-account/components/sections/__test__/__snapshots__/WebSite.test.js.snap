@@ -40,7 +40,7 @@ exports[`user account - components - sections - WebSite render correctly 1`] = `
       >
         <Label
           className="required"
-          for="siteUrl"
+          htmlFor="siteUrl"
           sm={3}
           tag="label"
           widths={
@@ -96,7 +96,7 @@ exports[`user account - components - sections - WebSite render correctly 1`] = `
       >
         <Label
           className="required"
-          for="0"
+          htmlFor="0"
           sm={3}
           tag="label"
           widths={
@@ -157,7 +157,7 @@ exports[`user account - components - sections - WebSite render correctly 1`] = `
       >
         <Label
           className="required"
-          for="1"
+          htmlFor="1"
           sm={3}
           tag="label"
           widths={
@@ -218,7 +218,7 @@ exports[`user account - components - sections - WebSite render correctly 1`] = `
       >
         <Label
           className="required"
-          for="2"
+          htmlFor="2"
           sm={3}
           tag="label"
           widths={
@@ -309,7 +309,7 @@ exports[`user account - components - sections - WebSite render correctly 1`] = `
       >
         <Label
           className="required"
-          for="noSiteDescription"
+          htmlFor="noSiteDescription"
           sm={3}
           tag="label"
           widths={
@@ -399,7 +399,7 @@ exports[`user account - components - sections - WebSite render correctly when ha
       >
         <Label
           className="required"
-          for="siteUrl"
+          htmlFor="siteUrl"
           sm={3}
           tag="label"
           widths={
@@ -455,7 +455,7 @@ exports[`user account - components - sections - WebSite render correctly when ha
       >
         <Label
           className="required"
-          for="0"
+          htmlFor="0"
           sm={3}
           tag="label"
           widths={
@@ -516,7 +516,7 @@ exports[`user account - components - sections - WebSite render correctly when ha
       >
         <Label
           className="required"
-          for="1"
+          htmlFor="1"
           sm={3}
           tag="label"
           widths={
@@ -577,7 +577,7 @@ exports[`user account - components - sections - WebSite render correctly when ha
       >
         <Label
           className="required"
-          for="2"
+          htmlFor="2"
           sm={3}
           tag="label"
           widths={
@@ -668,7 +668,7 @@ exports[`user account - components - sections - WebSite render correctly when ha
       >
         <Label
           className="required"
-          for="noSiteDescription"
+          htmlFor="noSiteDescription"
           sm={3}
           tag="label"
           widths={

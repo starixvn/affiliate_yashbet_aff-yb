@@ -10,9 +10,7 @@ using Fanex.Affiliate.Admin.Core.Resources;
 using Fanex.Affiliate.Admin.Core.Services.Common;
 using Fanex.Affiliate.Admin.Core.Services.Payment;
 using Fanex.Affiliate.Admin.Core.Utilities;
-using Fanex.Affiliate.Admin.Core.ViewModels.Payment;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -37,9 +35,9 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.Affiliate
         {
             var subMenu = new List<SubMenu>
             {
-                new SubMenu { Name = Lang.AffiliateInfo, Url = Url.Content("~/Portal/Affiliate") },
-                new SubMenu { Name = Lang.PaymentRequest, Url = Url.Content("~/Portal/PaymentRequest"), IsActive = true },
-                new SubMenu { Name = Lang.CommGroup, Url = Url.Content("~/Portal/RevenueGroup") }
+                new SubMenu { Name = Lang.AffiliateInfo, Url = Url.Content("~/Portal/Affiliate"), FunctionName = Function.Affiliate },
+                new SubMenu { Name = Lang.PaymentRequest, Url = Url.Content("~/Portal/PaymentRequest"), FunctionName = Function.Payment, IsActive = true },
+                new SubMenu { Name = Lang.CommGroup, Url = Url.Content("~/Portal/RevenueGroup"), FunctionName = Function.RevenueGroup }
             };
 
             param.SubMenuList = subMenu;
@@ -109,22 +107,6 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.Affiliate
             }
 
             return GenerateErrResult("Transaction not exists!");
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryHeader]
-        public ActionResult GetPaymentMethod()
-        {
-            var paymentInfo = _paymentRequestService.GetPaymentMethod();
-            var paymentMethods = paymentInfo.paymentMethods
-                .Select(m => new KeyValuePair<string, string>(m.PaymentId, m.PaymentName));
-            var viewModel = new PaymentMethodViewModel
-            {
-                MinAmount = paymentInfo.minAmount,
-                PaymentMethods = paymentMethods
-            };
-
-            return GenerateJsonNetResult(viewModel);
         }
     }
 }

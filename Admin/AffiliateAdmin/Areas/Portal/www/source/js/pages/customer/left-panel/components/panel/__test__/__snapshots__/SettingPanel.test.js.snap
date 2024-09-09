@@ -42,7 +42,7 @@ exports[`left panel - components - panel - SettingPanel render correctly 1`] = `
             "display": "none",
           }
         }
-        value={2}
+        value={1}
       >
         <option
           key="affinfo-type-1"
@@ -62,7 +62,7 @@ exports[`left panel - components - panel - SettingPanel render correctly 1`] = `
         }
         tag="button"
       >
-        2
+        Asian
       </Button>
     </Col>
   </Row>
@@ -107,7 +107,7 @@ exports[`left panel - components - panel - SettingPanel render correctly 1`] = `
               "display": "none",
             }
           }
-          value="Disapproved"
+          value="Approved"
         >
           <option
             key="status-Approved"
@@ -139,12 +139,12 @@ exports[`left panel - components - panel - SettingPanel render correctly 1`] = `
           }
           tag="button"
         >
-          Disapproved
+          Approved
         </Button>
       </div>
       <CommissionGroupPopup
-        affId={1219631}
-        affName="B2CAFF016"
+        affId={1271808}
+        affName="B2CAFF226"
         isNewAffiliate={true}
         isPrivateGroup={false}
         setShowPopupCommGroup={[Function]}
@@ -351,7 +351,7 @@ exports[`left panel - components - panel - SettingPanel render correctly with ul
             "display": "none",
           }
         }
-        value={2}
+        value={1}
       >
         <option
           key="affinfo-type-1"
@@ -371,7 +371,7 @@ exports[`left panel - components - panel - SettingPanel render correctly with ul
         }
         tag="button"
       >
-        2
+        Asian
       </Button>
     </Col>
   </Row>
@@ -416,7 +416,7 @@ exports[`left panel - components - panel - SettingPanel render correctly with ul
               "display": "none",
             }
           }
-          value="Disapproved"
+          value="Approved"
         >
           <option
             key="status-Approved"
@@ -448,12 +448,12 @@ exports[`left panel - components - panel - SettingPanel render correctly with ul
           }
           tag="button"
         >
-          Disapproved
+          Approved
         </Button>
       </div>
       <CommissionGroupPopup
-        affId={1219631}
-        affName="B2CAFF016"
+        affId={1271808}
+        affName="B2CAFF226"
         isNewAffiliate={true}
         isPrivateGroup={false}
         setShowPopupCommGroup={[Function]}

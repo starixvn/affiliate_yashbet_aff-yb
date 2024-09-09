@@ -274,41 +274,6 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Controllers.Customer
             Assert.Equal("Update Status is failed!", data.Message);
         }
 
-        [Fact]
-        public void UpdateClosedStatus_WhenCallWithValidParam_ExcuteSuccessfully()
-        {
-            // Arrange
-            var param = new UpdateClosedStatusParam { AffId = 1271808, IsClosed = true };
-            UpdateClosedStatusParam passedParam = null;
-            var customerLeftPanelService = new Mock<ICustomerLeftPanelService>();
-            customerLeftPanelService.Setup(s => s.UpdateClosedStatus(param)).Returns(new ResultInfo()).Callback<UpdateClosedStatusParam>(p => passedParam = p);
-            var controller = CreateCustomerLeftPanelController(customerLeftPanelService: customerLeftPanelService.Object);
-
-            // Action
-            var result = controller.UpdateClosedStatus(param) as JsonNetResult;
-            var data = result.Data as ResultInfo;
-
-            // Assert
-            Assert.True(data.IsSuccessful);
-            Assert.Equal(param.AffId, passedParam.AffId);
-        }
-
-        [Fact]
-        public void UpdateClosedStatus_WhenCallWithInvalidParam_ReturnError()
-        {
-            // Arrange
-            var controller = CreateCustomerLeftPanelController();
-            controller.ModelState.AddModelError("Error01", string.Empty);
-
-            // Action
-            var result = controller.UpdateClosedStatus(new UpdateClosedStatusParam()) as JsonNetResult;
-            var data = result.Data as ResultInfo;
-
-            // Assert
-            Assert.False(data.IsSuccessful);
-            Assert.Equal("Update Closed Status is failed!", data.Message);
-        }
-
         private CustomerLeftPanelController CreateCustomerLeftPanelController(
             ISessionService sessionService = null,
             ICustomerLeftPanelService customerLeftPanelService = null

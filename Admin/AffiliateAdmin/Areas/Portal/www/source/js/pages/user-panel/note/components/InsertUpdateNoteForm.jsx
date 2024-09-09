@@ -122,7 +122,7 @@ export class InsertUpdateNoteForm extends PureComponent {
                             </Alert>
                             <Form tag="form" className="mb-5" autoComplete="off">
                                 <FormGroup row className="mb-2">
-                                    <Label for="noteContent" sm={3} className="d-flex justify-content-center align-items-center required">Content</Label>
+                                    <Label htmlFor="noteContent" sm={3} className="d-flex justify-content-center align-items-center required">Content</Label>
                                     <Col sm={9}>
                                         <Input type="textarea" className="input-required" name="noteContent" id="noteContent" rows="8"
                                             value={htmlDecode(this.state.noteContent)} onChange={this.handleChange} invalid={isClickedSubmit && !validationResult.isValid} />

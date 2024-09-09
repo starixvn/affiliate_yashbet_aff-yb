@@ -4,6 +4,7 @@ import { post } from '../../../../modules/ajaxRequest';
 import { setSelectedUserPanel } from '../../user-panel/actions';
 import { userPanelMenuKey } from '../../common/modules/constants';
 import { setIsValidUserName, toggleLoaderLeftPanel } from '../../left-panel/actions';
+import { getUserPanelMenuCookie } from '../../../../modules/utils';
 
 export const receiveLeftMenuInfo = (data) => {
     return {
@@ -19,8 +20,9 @@ export const setAffCommonInfo = (data) => {
     }
 }
 
-export const getAffiliateInfo = (affName, selectedUserPanel = userPanelMenuKey.statementHistory) => async (dispatch) => {
+export const getAffiliateInfo = (affName, selectedUserPanel) => async (dispatch) => {
     dispatch(toggleLoaderLeftPanel(true));
+    var userPanelMenu = selectedUserPanel || getUserPanelMenuCookie() || userPanelMenuKey.statementHistory
 
     const url = 'Portal/CustomerLeftPanel/GetAffiliateInfo';
     const param = { affUsername: affName };
@@ -30,7 +32,7 @@ export const getAffiliateInfo = (affName, selectedUserPanel = userPanelMenuKey.s
     const affCommonInfo = data && { affId: data.AffId, affName, status: data.Status, isDepositFeePercent: data.IsDepositFeePercent, isWithdrawalFeePercent: data.IsWithdrawalFeePercent };
     dispatch(setAffCommonInfo(affCommonInfo));
     dispatch(receiveLeftMenuInfo(data));
-    data && dispatch(setSelectedUserPanel(selectedUserPanel));
+    data && dispatch(setSelectedUserPanel(userPanelMenu));
     dispatch(setIsValidUserName(!!data));
 
     dispatch(toggleLoaderLeftPanel(false));

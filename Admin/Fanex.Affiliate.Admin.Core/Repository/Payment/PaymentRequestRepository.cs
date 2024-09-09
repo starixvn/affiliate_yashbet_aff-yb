@@ -3,7 +3,6 @@ using Fanex.Affiliate.Admin.Core.DTO;
 using Fanex.Affiliate.Admin.Core.DTO.Payment;
 using Fanex.Affiliate.Admin.Core.MetaModels.Payment;
 using Fanex.Common.Extensions;
-using System;
 using System.Collections.Generic;
 
 namespace Fanex.Affiliate.Admin.Core.Repository.Payment
@@ -111,23 +110,6 @@ namespace Fanex.Affiliate.Admin.Core.Repository.Payment
                 objectDb.ExecuteNonQuery();
 
                 return GetResultInfo(objectDb);
-            }
-        }
-
-        public (IEnumerable<PaymentMethodInfo> paymentMethods, decimal minAmount) GetPaymentMethod()
-        {
-            const string SpKey = "Aff_PaymentMethod_Sel";
-
-            using (var objectDb = GetObjectDb(SpKey))
-            {
-                objectDb.SetParameterValue("MinAmount", DefaultValue.Int);
-
-                var paymentMethods = objectDb.Query<PaymentMethodInfo>();
-                var minAmount = objectDb.GetParameterValue("MinAmount");
-
-                var minAmountDecimal = minAmount == DBNull.Value ? 0 : Convert.ToDecimal(minAmount);
-
-                return (paymentMethods, minAmountDecimal);
             }
         }
     }

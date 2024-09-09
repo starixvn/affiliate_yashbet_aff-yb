@@ -87,7 +87,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
 
         [ValidateAntiForgeryHeader]
         [HttpPost]
-        [FunctionAuthorize(FunctionName = Function.Affiliate, IsHost = true)]
+        [FunctionAuthorize(FunctionName = Function.EditAffDetails, IsHost = true)]
         public ActionResult UpdateLanguage(UpdateLanguageParam param)
         {
             if (ModelState.IsValid)
@@ -121,7 +121,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
 
         [ValidateAntiForgeryHeader]
         [HttpPost]
-        [FunctionAuthorize(FunctionName = Function.Affiliate, IsHost = true)]
+        [FunctionAuthorize(FunctionName = Function.EditAffStatus, IsHost = true)]
         public async Task<ActionResult> UpdateStatus(UpdateStatusParam param)
         {
             if (ModelState.IsValid)
@@ -142,20 +142,6 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
                 return GenerateJsonNetResult(await _customerLeftPanelService.UpdateStatus(updateStatusParam, emailParam));
             }
             return GenerateErrResult("Update Status is failed!");
-        }
-
-        [ValidateAntiForgeryHeader]
-        [HttpPost]
-        [FunctionAuthorize(FunctionName = Function.Affiliate, IsHost = true)]
-        public ActionResult UpdateClosedStatus(UpdateClosedStatusParam param)
-        {
-            if (ModelState.IsValid)
-            {
-                AssignUserInfoParam(param);
-
-                return GenerateJsonNetResult(_customerLeftPanelService.UpdateClosedStatus(param));
-            }
-            return GenerateErrResult("Update Closed Status is failed!");
         }
 
         private void AssignUserInfoParam(UserInfoParam param)

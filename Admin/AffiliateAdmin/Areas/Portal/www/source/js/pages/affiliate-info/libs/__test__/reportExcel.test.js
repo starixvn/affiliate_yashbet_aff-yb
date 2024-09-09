@@ -37,7 +37,6 @@ describe('affiliate info - Report Excel ', () => {
         BalanceBf: -4439.0000,
         Member: 6,
         IsFavorite: true,
-        IsClosed: false,
         NoOfSubAff: 2,
         ParentAffName: 'ABC',
         RegistrationDateText: "05/22/2008 06:49:00",
@@ -60,7 +59,6 @@ describe('affiliate info - Report Excel ', () => {
         NoOfSubAff: null,
         ParentAffName: '',
         IsFavorite: true,
-        IsClosed: false,
         RegistrationDateText: "05/22/2008 06:49:00",
         ApprovalDateText: "05/22/2008 06:50:00"
     };

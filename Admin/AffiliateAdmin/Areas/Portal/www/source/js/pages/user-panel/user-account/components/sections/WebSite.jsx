@@ -82,7 +82,7 @@ export class WebSite extends PureComponent {
                     moreSiteUrlsList.map((value, index) => {
                         return (
                             <FormGroup row key={`siteUrl${index} ${123}`}>
-                                <Label for={`${index}`} sm={3} xl={2} className="required">Website URL {index + 2}</Label>
+                                <Label htmlFor={`${index}`} sm={3} xl={2} className="required">Website URL {index + 2}</Label>
                                 <Col sm={5} xl={6}>
                                     <input className="form-control" disabled={!hasWebSite} name={index} value={value} onChange={this.handleChangeMoreUrl} ref={this.moreSiteUrlRefs[index]} />
                                 </Col>
@@ -110,7 +110,7 @@ export class WebSite extends PureComponent {
                         </Label>
                         </FormGroup>
                         <FormGroup row className="pt-1">
-                            <Label for="siteUrl" sm={3} xl={2} className="required">Website URL</Label>
+                            <Label htmlFor="siteUrl" sm={3} xl={2} className="required">Website URL</Label>
                             <Col sm={5} xl={6}>
                                 <Input type="text" name="siteUrl" disabled={!hasWebSite} value={userAccountInfo.SiteUrl} onChange={this.handleChange} />
                             </Col>
@@ -127,7 +127,7 @@ export class WebSite extends PureComponent {
                         </Label>
                         </FormGroup>
                         <FormGroup row className="pt-1">
-                            <Label for="noSiteDescription" sm={3} xl={2} className="required">{`Please describe how you would like to promote ${this.props.licenseeName} if you don't have the URL`}</Label>
+                            <Label htmlFor="noSiteDescription" sm={3} xl={2} className="required">{`Please describe how you would like to promote ${this.props.licenseeName} if you don't have the URL`}</Label>
                             <Col sm={6} xl={7}>
                                 <Input type="textarea" disabled={hasWebSite} style={{ height: 70 }} id="noSiteDescription" name="noSiteDescription" value={userAccountInfo.NoSiteDescription} onChange={this.handleChange} />
                             </Col>

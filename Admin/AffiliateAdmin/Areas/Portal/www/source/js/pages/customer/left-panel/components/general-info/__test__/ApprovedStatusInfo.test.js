@@ -15,7 +15,6 @@ describe('left panel - components - general-info - ApprovedStatusInfo', () => {
         FirstName: "bb",
         Gender: true,
         GroupId: 102,
-        IsClosed: false,
         LastLoginDateText: "04/11/2019 22:24:00",
         LastLoginIp: "10.18.200.125",
         LastName: "B2CAFF226",

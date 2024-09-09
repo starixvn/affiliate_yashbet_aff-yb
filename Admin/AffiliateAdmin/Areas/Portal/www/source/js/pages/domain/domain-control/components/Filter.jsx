@@ -19,7 +19,7 @@ export const Filter = (props) => {
         <div className="filter-container my-2">
             <Form inline tag="div">
                 <FormGroup className="mr-sm-3">
-                    <Label for="market" className="mr-sm-2">{headerText.Market}</Label>
+                    <Label htmlFor="market" className="mr-sm-2">{headerText.Market}</Label>
                     <Input type="select" name="market" value={market} onChange={(e) => setMarket(e.target.value)}>
                         <option key={'market-all'} value={''}>{globalResource.All}</option>
                         {

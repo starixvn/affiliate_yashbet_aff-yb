@@ -164,43 +164,6 @@ describe('left panel - actions', () => {
         expect(result).toEqual(submitFail);
     })
 
-    it('should create action to updateClosedStatus with correct parameter', async () => {
-        const expectedResponse = {
-            data: {
-                Code: 0,
-                IsSuccessful: true,
-                Message: ""
-            },
-            status: 200
-        };
-
-        ajaxRequest.post = jest.fn(() => Promise.resolve(expectedResponse));
-
-        const param = {
-            AffId: 1271808,
-            IsClosed: true
-        }
-
-        const result = await actions['updateClosedStatus'](param)();
-
-        expect(ajaxRequest.post).toHaveBeenCalledWith('Portal/CustomerLeftPanel/UpdateClosedStatus', param);
-        expect(result).toEqual(expectedResponse.data);
-    })
-
-    it('should create action to updateClosedStatus with incorrect parameter', async () => {
-        ajaxRequest.post = jest.fn();
-        const param = {
-            AffId: 123456,
-            IsClosed: true
-        }
-
-        const result = await actions['updateClosedStatus'](param)();
-
-        expect(ajaxRequest.post).toHaveBeenCalledWith('Portal/CustomerLeftPanel/UpdateClosedStatus', param);
-
-        expect(result).toEqual(submitFail);
-    })
-
     it('should create action to getTransferLimitSetting with correct parameter', async () => {
         const expectedResponse = {
             data: [],

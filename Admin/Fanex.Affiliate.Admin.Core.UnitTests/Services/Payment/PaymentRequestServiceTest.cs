@@ -152,22 +152,6 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
         }
 
         [Fact]
-        public void GetPaymentMethod_WhenCall_ReturnCorrectData()
-        {
-            // Arrange
-            var paymentRequestRepository = new Mock<IPaymentRequestRepository>();
-            paymentRequestRepository.Setup(t => t.GetPaymentMethod()).Returns((new List<PaymentMethodInfo> { new PaymentMethodInfo { PaymentId = "123", PaymentName = "abc" } }, 100m));
-            var controller = CreatePaymentRequestService(paymentRequestRepository: paymentRequestRepository.Object);
-
-            // Action
-            var (paymentMethods, minAmount) = controller.GetPaymentMethod();
-
-            // Assert
-            Assert.Single(paymentMethods);
-            Assert.Equal(100m, minAmount);
-        }
-
-        [Fact]
         public void HandlePaymentRequest_WhenCallWithInvalidCustomer_ReturnError()
         {
             // Arrange
@@ -185,10 +169,10 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             licenseeService.Setup(a => a.CheckCustomerIsValid(It.IsAny<MemberSiteCustomerInfo>())).Returns(new ResultInfo { Code = 4 });
             licenseeService.Setup(a => a.UnlockUser(It.IsAny<int>())).Returns(Task.FromResult(new ResultInfo { Code = ErrCode.GeneralErrorCode }));
 
-            var controller = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
+            var service = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
 
             // Action
-            var result = controller.HandlePaymentRequest(new PaymentRequestUpdateParam(), new PaymentRequestUpdateEmail());
+            var result = service.HandlePaymentRequest(new PaymentRequestUpdateParam(), new PaymentRequestUpdateEmail());
 
             // Assert
             Assert.False(result.Result.IsSuccessful);
@@ -212,10 +196,10 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             licenseeService.Setup(a => a.GetMemberSiteCustomerInfo(It.IsAny<string>(), It.IsAny<int>())).Returns(Task.FromResult(new MemberSiteCustomerInfo()));
             licenseeService.Setup(a => a.CheckCustomerIsValid(It.IsAny<MemberSiteCustomerInfo>())).Returns(new ResultInfo { Code = ErrCode.GeneralErrorCode });
 
-            var controller = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
+            var service = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
 
             // Action
-            var result = controller.HandlePaymentRequest(new PaymentRequestUpdateParam(), new PaymentRequestUpdateEmail());
+            var result = service.HandlePaymentRequest(new PaymentRequestUpdateParam(), new PaymentRequestUpdateEmail());
 
             // Assert
             Assert.False(result.Result.IsSuccessful);
@@ -248,10 +232,10 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             licenseeService.Setup(a => a.GetMemberSiteCustomerInfo(It.IsAny<string>(), It.IsAny<int>())).Returns(Task.FromResult(new MemberSiteCustomerInfo()));
             licenseeService.Setup(a => a.CheckCustomerIsValid(It.IsAny<MemberSiteCustomerInfo>())).Returns(new ResultInfo());
 
-            var controller = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
+            var service = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
 
             // Action
-            var result = controller.HandlePaymentRequest(new PaymentRequestUpdateParam(), new PaymentRequestUpdateEmail());
+            var result = service.HandlePaymentRequest(new PaymentRequestUpdateParam(), new PaymentRequestUpdateEmail());
 
             // Assert
             Assert.True(result.Result.IsSuccessful);
@@ -286,10 +270,10 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             licenseeService.Setup(a => a.CheckCustomerIsValid(It.IsAny<MemberSiteCustomerInfo>())).Returns(new ResultInfo());
             licenseeService.Setup(l => l.UpdatePaymentRequest(It.IsAny<PaymentRequestInfo>())).Returns(Task.FromResult(new ResultInfo()));
 
-            var controller = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
+            var service = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
 
             // Action
-            var result = controller.HandlePaymentRequest(new PaymentRequestUpdateParam { IsApproved = true }, new PaymentRequestUpdateEmail());
+            var result = service.HandlePaymentRequest(new PaymentRequestUpdateParam { IsApproved = true }, new PaymentRequestUpdateEmail());
 
             // Assert
             Assert.True(result.Result.IsSuccessful);
@@ -324,10 +308,10 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             licenseeService.Setup(a => a.CheckCustomerIsValid(It.IsAny<MemberSiteCustomerInfo>())).Returns(new ResultInfo());
             licenseeService.Setup(l => l.UpdatePaymentRequest(It.IsAny<PaymentRequestInfo>())).Returns(Task.FromResult(new ResultInfo { Code = ErrCode.GeneralErrorCode }));
 
-            var controller = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
+            var service = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
 
             // Action
-            var result = controller.HandlePaymentRequest(new PaymentRequestUpdateParam { IsApproved = true }, new PaymentRequestUpdateEmail());
+            var result = service.HandlePaymentRequest(new PaymentRequestUpdateParam { IsApproved = true }, new PaymentRequestUpdateEmail());
 
             // Assert
             Assert.False(result.Result.IsSuccessful);
@@ -361,10 +345,10 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Services.Payment
             licenseeService.Setup(a => a.CheckCustomerIsValid(It.IsAny<MemberSiteCustomerInfo>())).Returns(new ResultInfo());
             licenseeService.Setup(l => l.UpdatePaymentRequest(It.IsAny<PaymentRequestInfo>())).Returns(Task.FromResult(new ResultInfo { Code = ErrCode.GeneralErrorCode })).Callback<PaymentRequestInfo>(p => throw new System.Exception());
 
-            var controller = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
+            var service = CreatePaymentRequestService(null, affiliateService.Object, paymentRequestRepository.Object, licenseeService.Object, appSetting.Object);
 
             // Action
-            var result = controller.HandlePaymentRequest(new PaymentRequestUpdateParam { IsApproved = true }, new PaymentRequestUpdateEmail());
+            var result = service.HandlePaymentRequest(new PaymentRequestUpdateParam { IsApproved = true }, new PaymentRequestUpdateEmail());
 
             // Assert
             Assert.Single(result.Exception.InnerExceptions);

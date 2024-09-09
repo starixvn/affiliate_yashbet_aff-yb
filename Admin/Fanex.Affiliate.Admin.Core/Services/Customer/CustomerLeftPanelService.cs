@@ -75,11 +75,6 @@ namespace Fanex.Affiliate.Admin.Core.Services.Customer
             return _customerLeftPanelRepository.UpdateAffType(param);
         }
 
-        public ResultInfo UpdateClosedStatus(UpdateClosedStatusParam param)
-        {
-            return _customerLeftPanelRepository.UpdateClosedStatus(param);
-        }
-
         public ResultInfo UpdateLanguage(UpdateLanguageParam param)
         {
             return _customerLeftPanelRepository.UpdateLanguage(param);

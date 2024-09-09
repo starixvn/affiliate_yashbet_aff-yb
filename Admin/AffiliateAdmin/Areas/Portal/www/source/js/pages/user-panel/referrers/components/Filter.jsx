@@ -83,7 +83,7 @@ export class Filter extends PureComponent {
                             onChange={this.handleChangeToDate} />
                     </FormGroup>
                     <FormGroup className="mr-sm-2">
-                        <Label for="deviceType" className="mr-sm-2">{headerText.Device}</Label>
+                        <Label htmlFor="deviceType" className="mr-sm-2">{headerText.Device}</Label>
                         <Input type="select" name="deviceType" id="deviceType" value={deviceType} onChange={this.handleChange}>
                             {
                                 Object.keys(deviceTypes).map(key => {

@@ -96,7 +96,7 @@ exports[`domain - components - DomainPopup  render correctly with insert 1`] = `
           >
             <Label
               className="required"
-              for="domainName"
+              htmlFor="domainName"
               sm={4}
               tag="label"
               widths={
@@ -298,7 +298,7 @@ exports[`domain - components - DomainPopup  render correctly with update 1`] = `
           >
             <Label
               className="required"
-              for="domainName"
+              htmlFor="domainName"
               sm={4}
               tag="label"
               widths={

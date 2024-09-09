@@ -11,7 +11,7 @@ exports[`user account - components - sections - Personal render correctly 1`] = 
   >
     <Label
       className=""
-      for="username"
+      htmlFor="username"
       sm={3}
       tag="label"
       widths={
@@ -55,7 +55,7 @@ exports[`user account - components - sections - Personal render correctly 1`] = 
   >
     <Label
       className="required"
-      for="firstName"
+      htmlFor="firstName"
       sm={3}
       tag="label"
       widths={
@@ -101,7 +101,7 @@ exports[`user account - components - sections - Personal render correctly 1`] = 
   >
     <Label
       className="required"
-      for="lastName"
+      htmlFor="lastName"
       sm={3}
       tag="label"
       widths={
@@ -146,7 +146,7 @@ exports[`user account - components - sections - Personal render correctly 1`] = 
   >
     <Label
       className="required"
-      for="nodejs"
+      htmlFor="nodejs"
       sm={3}
       tag="label"
       widths={
@@ -239,7 +239,7 @@ exports[`user account - components - sections - Personal render correctly 1`] = 
   >
     <Label
       className="required"
-      for="email"
+      htmlFor="email"
       sm={3}
       tag="label"
       widths={
@@ -285,7 +285,7 @@ exports[`user account - components - sections - Personal render correctly 1`] = 
   >
     <Label
       className="required"
-      for="phone"
+      htmlFor="phone"
       sm={3}
       tag="label"
       widths={
@@ -331,7 +331,7 @@ exports[`user account - components - sections - Personal render correctly 1`] = 
   >
     <Label
       className=""
-      for="MSN/YM/QQ"
+      htmlFor="MSN/YM/QQ"
       sm={3}
       tag="label"
       widths={

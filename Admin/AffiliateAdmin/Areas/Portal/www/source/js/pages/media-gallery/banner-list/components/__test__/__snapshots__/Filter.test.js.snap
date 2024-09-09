@@ -14,7 +14,7 @@ exports[`banner list - components - Filter  render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="userType"
+        htmlFor="userType"
         tag="label"
         widths={
           Array [
@@ -61,7 +61,7 @@ exports[`banner list - components - Filter  render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="category"
+        htmlFor="category"
         tag="label"
         widths={
           Array [
@@ -102,7 +102,7 @@ exports[`banner list - components - Filter  render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="language"
+        htmlFor="language"
         tag="label"
         widths={
           Array [
@@ -149,7 +149,7 @@ exports[`banner list - components - Filter  render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="currency"
+        htmlFor="currency"
         tag="label"
         widths={
           Array [
@@ -196,7 +196,7 @@ exports[`banner list - components - Filter  render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="affType"
+        htmlFor="affType"
         tag="label"
         widths={
           Array [
@@ -237,7 +237,7 @@ exports[`banner list - components - Filter  render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="deviceType"
+        htmlFor="deviceType"
         tag="label"
         widths={
           Array [
@@ -284,7 +284,7 @@ exports[`banner list - components - Filter  render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="size"
+        htmlFor="size"
         tag="label"
         widths={
           Array [
@@ -357,7 +357,7 @@ exports[`banner list - components - Filter  render correctly with Casino's subca
     >
       <Label
         className="mr-sm-2"
-        for="userType"
+        htmlFor="userType"
         tag="label"
         widths={
           Array [
@@ -404,7 +404,7 @@ exports[`banner list - components - Filter  render correctly with Casino's subca
     >
       <Label
         className="mr-sm-2"
-        for="category"
+        htmlFor="category"
         tag="label"
         widths={
           Array [
@@ -445,7 +445,7 @@ exports[`banner list - components - Filter  render correctly with Casino's subca
     >
       <Label
         className="mr-sm-2"
-        for="subCategory"
+        htmlFor="subCategory"
         tag="label"
         widths={
           Array [
@@ -486,7 +486,7 @@ exports[`banner list - components - Filter  render correctly with Casino's subca
     >
       <Label
         className="mr-sm-2"
-        for="language"
+        htmlFor="language"
         tag="label"
         widths={
           Array [
@@ -533,7 +533,7 @@ exports[`banner list - components - Filter  render correctly with Casino's subca
     >
       <Label
         className="mr-sm-2"
-        for="currency"
+        htmlFor="currency"
         tag="label"
         widths={
           Array [
@@ -580,7 +580,7 @@ exports[`banner list - components - Filter  render correctly with Casino's subca
     >
       <Label
         className="mr-sm-2"
-        for="affType"
+        htmlFor="affType"
         tag="label"
         widths={
           Array [
@@ -621,7 +621,7 @@ exports[`banner list - components - Filter  render correctly with Casino's subca
     >
       <Label
         className="mr-sm-2"
-        for="deviceType"
+        htmlFor="deviceType"
         tag="label"
         widths={
           Array [
@@ -668,7 +668,7 @@ exports[`banner list - components - Filter  render correctly with Casino's subca
     >
       <Label
         className="mr-sm-2"
-        for="size"
+        htmlFor="size"
         tag="label"
         widths={
           Array [
@@ -741,7 +741,7 @@ exports[`banner list - components - Filter  render correctly with Sportbook's su
     >
       <Label
         className="mr-sm-2"
-        for="userType"
+        htmlFor="userType"
         tag="label"
         widths={
           Array [
@@ -788,7 +788,7 @@ exports[`banner list - components - Filter  render correctly with Sportbook's su
     >
       <Label
         className="mr-sm-2"
-        for="category"
+        htmlFor="category"
         tag="label"
         widths={
           Array [
@@ -829,7 +829,7 @@ exports[`banner list - components - Filter  render correctly with Sportbook's su
     >
       <Label
         className="mr-sm-2"
-        for="subCategory"
+        htmlFor="subCategory"
         tag="label"
         widths={
           Array [
@@ -870,7 +870,7 @@ exports[`banner list - components - Filter  render correctly with Sportbook's su
     >
       <Label
         className="mr-sm-2"
-        for="language"
+        htmlFor="language"
         tag="label"
         widths={
           Array [
@@ -917,7 +917,7 @@ exports[`banner list - components - Filter  render correctly with Sportbook's su
     >
       <Label
         className="mr-sm-2"
-        for="currency"
+        htmlFor="currency"
         tag="label"
         widths={
           Array [
@@ -964,7 +964,7 @@ exports[`banner list - components - Filter  render correctly with Sportbook's su
     >
       <Label
         className="mr-sm-2"
-        for="affType"
+        htmlFor="affType"
         tag="label"
         widths={
           Array [
@@ -1005,7 +1005,7 @@ exports[`banner list - components - Filter  render correctly with Sportbook's su
     >
       <Label
         className="mr-sm-2"
-        for="deviceType"
+        htmlFor="deviceType"
         tag="label"
         widths={
           Array [
@@ -1052,7 +1052,7 @@ exports[`banner list - components - Filter  render correctly with Sportbook's su
     >
       <Label
         className="mr-sm-2"
-        for="size"
+        htmlFor="size"
         tag="label"
         widths={
           Array [

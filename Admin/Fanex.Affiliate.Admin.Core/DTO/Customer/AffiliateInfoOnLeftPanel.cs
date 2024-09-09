@@ -48,8 +48,6 @@ namespace Fanex.Affiliate.Admin.Core.DTO.Customer
 
         public string Status { get; set; }
 
-        public bool IsClosed { get; set; }
-
         public int AffType { get; set; }
 
         public string PreferredLanguage { get; set; }

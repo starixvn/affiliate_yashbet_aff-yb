@@ -230,44 +230,6 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Repository.Customer
         }
 
         [Fact]
-        public void UpdateClosedStatus_WhenCallWithInvalidParam_UpdateSuccessfully()
-        {
-            // Arrange
-            var repository = new Mock<CustomerLeftPanelRepository> { CallBase = true };
-            var objectDb = new Mock<IObjectDb>();
-            objectDb.Setup(obj => obj.ExecuteNonQuery(null, null)).Returns(0);
-            objectDb.Setup(obj => obj.GetParameterValue("ErrCode")).Returns(DBNull.Value);
-            objectDb.Setup(obj => obj.GetParameterValue("ErrMsg")).Returns(string.Empty);
-            repository.Setup(re => re.GetObjectDb("Aff_Admin_AffiliateClosed_Upd", 120)).Returns(objectDb.Object);
-
-            // Action
-            var result = repository.Object.UpdateClosedStatus(new UpdateClosedStatusParam());
-
-            // Assert
-            Assert.True(result.IsSuccessful);
-        }
-
-        [Fact]
-        public void UpdateClosedStatus_WhenCallWithValidParam_UpdateIsFailed()
-        {
-            // Arrange
-            var message = "Update is failed.";
-            var repository = new Mock<CustomerLeftPanelRepository> { CallBase = true };
-            var objectDb = new Mock<IObjectDb>();
-            objectDb.Setup(obj => obj.ExecuteNonQuery(null, null)).Returns(0);
-            objectDb.Setup(obj => obj.GetParameterValue("ErrCode")).Returns(-999);
-            objectDb.Setup(obj => obj.GetParameterValue("ErrMsg")).Returns(message);
-            repository.Setup(re => re.GetObjectDb("Aff_Admin_AffiliateClosed_Upd", 120)).Returns(objectDb.Object);
-
-            // Action
-            var result = repository.Object.UpdateClosedStatus(new UpdateClosedStatusParam());
-
-            // Assert
-            Assert.False(result.IsSuccessful);
-            Assert.Equal(message, result.Message);
-        }
-
-        [Fact]
         public void UpdateLanguage_WhenCallWithInvalidParam_UpdateSuccessfully()
         {
             // Arrange
@@ -360,7 +322,6 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Repository.Customer
                 ["GroupName"] = "Test",
                 ["ContactApps"] = "test",
                 ["Gender"] = true,
-                ["Closed"] = false,
                 ["LastLoginDate"] = new DateTime(2019, 11, 24),
                 ["LastLoginIp"] = "::1",
                 ["MoreSiteUrls"] = "test",
@@ -390,7 +351,6 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Repository.Customer
                 ["GroupName"] = "Test",
                 ["ContactApps"] = "test",
                 ["Gender"] = true,
-                ["Closed"] = false,
                 ["LastLoginDate"] = DBNull.Value,
                 ["LastLoginIp"] = "::1",
                 ["MoreSiteUrls"] = "test",

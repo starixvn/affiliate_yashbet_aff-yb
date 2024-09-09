@@ -111,21 +111,21 @@ export class Filter extends Component {
             <div className="filter-container">
                 <Form inline tag="div">
                     <FormGroup className="my-sm-1 mr-sm-2">
-                        <Label for="TransId" className="mr-sm-2">Trans. Id</Label>
+                        <Label htmlFor="TransId" className="mr-sm-2">Trans. Id</Label>
                         <Input type="text" name="transId" id="TransId" maxLength="9"
                             onKeyPress={this.handlePressEnter}
                             onChange={this.handleChangeTransId}
                             value={transId} />
                     </FormGroup>
                     <FormGroup className="my-sm-1 mr-sm-2">
-                        <Label for="Affiliate" className="mr-sm-2">{headerText.AffName}</Label>
+                        <Label htmlFor="Affiliate" className="mr-sm-2">{headerText.AffName}</Label>
                         <Input type="text" name="affName" id="Affiliate" maxLength="30"
                             onKeyPress={this.handlePressEnter}
                             onChange={this.handleChange}
                             value={affName} />
                     </FormGroup>
                     <FormGroup className="my-sm-1 mr-sm-2">
-                        <Label for="Player" className="mr-sm-2">{headerText.PlayerName}</Label>
+                        <Label htmlFor="Player" className="mr-sm-2">{headerText.PlayerName}</Label>
                         <Input type="text" name="playerName" id="Player" maxLength="30"
                             onKeyPress={this.handlePressEnter}
                             onChange={this.handleChange}

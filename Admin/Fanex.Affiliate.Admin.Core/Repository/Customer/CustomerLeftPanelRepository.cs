@@ -39,7 +39,6 @@ namespace Fanex.Affiliate.Admin.Core.Repository.Customer
                             CommGroupName = reader.ToString("GroupName"),
                             ContactApps = reader.ToString("ContactApps"),
                             Gender = reader.ToBool("Gender"),
-                            IsClosed = reader.ToBool("Closed"),
                             LastLoginDate = reader["LastLoginDate"] == DBNull.Value ? (DateTime?)null : reader.ToDateTime("LastLoginDate"),
                             LastLoginIp = reader.ToString("LastLoginIp"),
                             MoreSiteUrl = reader.ToString("MoreSiteUrls"),
@@ -136,25 +135,6 @@ namespace Fanex.Affiliate.Admin.Core.Repository.Customer
                 {
                     Code = code == DBNull.Value ? 0 : Convert.ToInt32(code),
                 };
-            }
-        }
-
-        public ResultInfo UpdateClosedStatus(UpdateClosedStatusParam param)
-        {
-            const string SpKey = "Aff_Admin_AffiliateClosed_Upd";
-
-            using (var objectDb = GetObjectDb(SpKey))
-            {
-                objectDb.SetParameterValue(Field.AffId, param.AffId);
-                objectDb.SetParameterValue(Field.UserId, param.UserId);
-                objectDb.SetParameterValue("IsClosed", param.IsClosed);
-                objectDb.SetParameterValue("IP", param.Ip);
-
-                AssignResultOutputParam(objectDb);
-
-                objectDb.ExecuteNonQuery();
-
-                return GetResultInfo(objectDb);
             }
         }
 

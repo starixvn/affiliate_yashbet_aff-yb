@@ -289,7 +289,7 @@ export class Filter extends Component {
             <div className="filter-container">
                 <Form inline tag="div">
                     <FormGroup className="my-sm-1 mr-sm-2">
-                        <Label for="Affiliate" className="mr-sm-2">Affiliate</Label>
+                        <Label htmlFor="Affiliate" className="mr-sm-2">Affiliate</Label>
                         <Input type="text" name="userName" id="Affiliate" maxLength="30"
                             onKeyPress={this.handlePressEnter}
                             onChange={this.handleChange}
@@ -411,7 +411,7 @@ export class Filter extends Component {
                         )
                     }
                     <FormGroup className="my-sm-1 mr-sm-2">
-                        <Label for="SortBy" className="mr-sm-2">Sort By</Label>
+                        <Label htmlFor="SortBy" className="mr-sm-2">Sort By</Label>
                         <Input type="select" name="sortBy" id="SortBy" value={sortBy} onChange={this.handleChange}>
                             {
                                 Object.keys(sortByData).map(k => {

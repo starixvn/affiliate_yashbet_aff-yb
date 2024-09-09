@@ -109,7 +109,7 @@ export default class AppContainer extends PureComponent {
                     </Alert>
                     <Form tag="form" className="my-2" autoComplete="off">
                         <FormGroup row className="mb-2">
-                            <Label for="oldPassword" sm={4} className="required text-right">Old Password</Label>
+                            <Label htmlFor="oldPassword" sm={4} className="required text-right">Old Password</Label>
                             <Col sm={8}>
                                 <Input type="password" className="input-required mt-1" name="oldPassword" id="oldPassword" autoComplete="false"
                                     value={oldPassword} onKeyPress={(e) => this._handlePressEnter(isValid, e)} onChange={this._handleChange} invalid={isClickedSubmit && !isValidOldPassword} />
@@ -118,7 +118,7 @@ export default class AppContainer extends PureComponent {
                             </Col>
                         </FormGroup>
                         <FormGroup row className="mb-2">
-                            <Label for="newPassword" sm={4} className="required text-right">New Password</Label>
+                            <Label htmlFor="newPassword" sm={4} className="required text-right">New Password</Label>
                             <Col sm={8}>
                                 <Input type="password" className="input-required mt-1" name="newPassword" id="newPassword" autoComplete="false"
                                     value={newPassword} onKeyPress={(e) => this._handlePressEnter(isValid, e)} onChange={this._handleChange} invalid={isClickedSubmit && !newPasswordValidation.isValid} />
@@ -128,7 +128,7 @@ export default class AppContainer extends PureComponent {
                         </FormGroup>
 
                         <FormGroup row className="mb-2">
-                            <Label for="confirmPassword" sm={4} className="required text-right">Confirm Password</Label>
+                            <Label htmlFor="confirmPassword" sm={4} className="required text-right">Confirm Password</Label>
                             <Col sm={8}>
                                 <Input type="password" className="input-required mt-1" name="confirmPassword" id="confirmPassword" autoComplete="false"
                                     value={confirmPassword} onKeyPress={(e) => this._handlePressEnter(isValid, e)} onChange={this._handleChange} invalid={isClickedSubmit && !confirmPasswordValidation.isValid} />

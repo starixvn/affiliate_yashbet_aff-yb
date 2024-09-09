@@ -23,7 +23,7 @@ export class Additional extends PureComponent {
     _renderCountry(country) {
         return (
             <FormGroup row>
-                <Label for="country" sm={3} xl={2} className="required">Country</Label>
+                <Label htmlFor="country" sm={3} xl={2} className="required">Country</Label>
                 <Col sm={9} xl={10}>
                     <Input type="select" id="country" name="country" value={country} onChange={this.handleChange}>
                         <option value="">Select One</option>

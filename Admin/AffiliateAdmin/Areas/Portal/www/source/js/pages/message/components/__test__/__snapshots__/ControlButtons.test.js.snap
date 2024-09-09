@@ -17,9 +17,9 @@ exports[`message - components - ControlButtons  render correctly 1`] = `
       isOpenNotification={true}
       messages={
         Object {
-          "AreYouSureDeleteItems": "Are you sure to delete the selected email(s)?",
+          "AreYouSureDeleteItems": "Are you sure to delete the selected message(s)?",
           "AreYouWant": "Are you sure you want to update this message?",
-          "DeleteItemsSuccessfully": "Delete Email(s) Successfully",
+          "DeleteItemsSuccessfully": "Delete Message(s) Successfully",
           "PleaseEnter": "Please enter the content of message, one language at least.",
           "PleaseSelect": "Please select items to delete",
         }

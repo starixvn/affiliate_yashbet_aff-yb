@@ -62,11 +62,6 @@ namespace Fanex.Affiliate.Admin.Core.Services.Payment
             return result;
         }
 
-        public (IEnumerable<PaymentMethodInfo> paymentMethods, decimal minAmount) GetPaymentMethod()
-        {
-            return _paymentRequestRepository.GetPaymentMethod();
-        }
-
         public async Task<ResultInfo> HandlePaymentRequest(PaymentRequestUpdateParam param, PaymentRequestUpdateEmail emailParam)
         {
             var siteId = _appSetting.MemberSiteId;

@@ -5,6 +5,7 @@ using Fanex.Affiliate.Admin.Core.Extensions;
 using Fanex.Affiliate.Admin.Core.MetaModels.UserPanel;
 using Fanex.Affiliate.Admin.Core.Services.Common;
 using Fanex.Affiliate.Admin.Core.Services.UserPanel;
+using Fanex.Affiliate.Admin.Core.ViewModels.Customer;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
 
         [HttpPost]
         [ValidateAntiForgeryHeader]
+        [UnauthorizedPropertyCensor]
         public ActionResult GetUserAccountInfo(int affId)
         {
             if (affId >= Validation.MinId)
@@ -79,7 +81,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
             return new JsonNetResult();
         }
 
-        [FunctionAuthorize(FunctionName = Function.Affiliate, IsHost = true)]
+        [FunctionAuthorize(FunctionName = Function.EditAffDetails, IsHost = true)]
         [HttpPost]
         [ValidateAntiForgeryHeader]
         public async Task<ActionResult> UpdateUserAccount(UserAccountParam param)
@@ -131,6 +133,26 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
             }
 
             return GenerateModelStateErrResult();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryHeader]
+        public ActionResult GetPaymentMethod()
+        {
+            var paymentInfo = _userAccountService.GetPaymentMethod();
+            var paymentMethods = paymentInfo.paymentMethods
+                .Select(m => new KeyValuePair<string, string>(m.PaymentId, m.PaymentName));
+            var vms = new PaymentMethodViewModel
+            {
+                MinAmount = paymentInfo.minAmount,
+                PaymentMethods = paymentMethods
+            };
+
+            var result = new JsonNetResult
+            {
+                Data = vms
+            };
+            return result;
         }
     }
 }

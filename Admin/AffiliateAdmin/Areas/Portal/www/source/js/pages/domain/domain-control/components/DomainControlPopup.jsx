@@ -93,7 +93,7 @@ export class DomainControlPopup extends PureComponent {
                             </Alert>
                             <Form tag="form" className="mb-5" autoComplete="off">
                                 <FormGroup row className="mb-2">
-                                    <Label for="marketId" sm={4}>Market</Label>
+                                    <Label htmlFor="marketId" sm={4}>Market</Label>
                                     <Col sm={8}>
                                         <Input type="select" name="marketId" className="mt-1" value={selectedDomain.marketId} onChange={this._handleChange}>
                                             {
@@ -105,7 +105,7 @@ export class DomainControlPopup extends PureComponent {
                                     </Col>
                                 </FormGroup>
                                 <FormGroup row className="mb-2">
-                                    <Label for="affDomainId" sm={4}>Aff Domain</Label>
+                                    <Label htmlFor="affDomainId" sm={4}>Aff Domain</Label>
                                     <Col sm={8}>
                                         <Input type="select" name="affDomainId" className="mt-1" value={selectedDomain.affDomainId} onChange={this._handleChange}>
                                             {
@@ -117,7 +117,7 @@ export class DomainControlPopup extends PureComponent {
                                     </Col>
                                 </FormGroup>
                                 <FormGroup row className="mb-2">
-                                    <Label for="redirectDomainId" sm={4}>Redirect Domain</Label>
+                                    <Label htmlFor="redirectDomainId" sm={4}>Redirect Domain</Label>
                                     <Col sm={8}>
                                         <Input type="select" name="redirectDomainId" className="mt-1" value={selectedDomain.redirectDomainId} onChange={this._handleChange}>
                                             {

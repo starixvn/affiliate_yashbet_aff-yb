@@ -96,7 +96,7 @@ exports[`department list - components - InsertUpdateForm  render correctly with 
           >
             <Label
               className="required"
-              for="departmentName"
+              htmlFor="departmentName"
               sm={4}
               tag="label"
               widths={
@@ -139,7 +139,7 @@ exports[`department list - components - InsertUpdateForm  render correctly with 
             tag="div"
           >
             <Label
-              for="description"
+              htmlFor="description"
               sm={4}
               tag="label"
               widths={
@@ -297,7 +297,7 @@ exports[`department list - components - InsertUpdateForm  render correctly with 
           >
             <Label
               className="required"
-              for="departmentName"
+              htmlFor="departmentName"
               sm={4}
               tag="label"
               widths={
@@ -340,7 +340,7 @@ exports[`department list - components - InsertUpdateForm  render correctly with 
             tag="div"
           >
             <Label
-              for="description"
+              htmlFor="description"
               sm={4}
               tag="label"
               widths={
@@ -498,7 +498,7 @@ exports[`department list - components - InsertUpdateForm  render correctly with 
           >
             <Label
               className="required"
-              for="departmentName"
+              htmlFor="departmentName"
               sm={4}
               tag="label"
               widths={
@@ -541,7 +541,7 @@ exports[`department list - components - InsertUpdateForm  render correctly with 
             tag="div"
           >
             <Label
-              for="description"
+              htmlFor="description"
               sm={4}
               tag="label"
               widths={

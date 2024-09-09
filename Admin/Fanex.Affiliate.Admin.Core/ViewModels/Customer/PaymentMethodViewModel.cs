@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Fanex.Affiliate.Admin.Core.ViewModels.Payment
+namespace Fanex.Affiliate.Admin.Core.ViewModels.Customer
 {
     public class PaymentMethodViewModel
     {

@@ -14,7 +14,7 @@ exports[`landing page statistics - components - Filter render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="selectedPage"
+        htmlFor="selectedPage"
         tag="label"
         widths={
           Array [
@@ -66,7 +66,7 @@ exports[`landing page statistics - components - Filter render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="languageCode"
+        htmlFor="languageCode"
         tag="label"
         widths={
           Array [
@@ -232,7 +232,7 @@ exports[`landing page statistics - components - Filter render correctly 1`] = `
     >
       <Label
         className="mr-sm-2"
-        for="deviceType"
+        htmlFor="deviceType"
         tag="label"
         widths={
           Array [

@@ -4,7 +4,6 @@
 // Generated helper templates
 // Generated items
 // D:\Nexcel\aff-yb\Admin\AffiliateAdmin\App_Data\SpConfig\SpName.admin-yb.local.xml
-// D:\Nexcel\aff-yb\Admin\AffiliateAdmin\App_Data\SpConfig\SpName.admin-yb.sit.xml
 // D:\Nexcel\aff-yb\Admin\AffiliateAdmin\App_Data\SpConfig\SpName.admin-yb.production.xml
 // D:\Nexcel\aff-yb\Admin\AffiliateAdmin\App_Data\SpConfig\SpName.admin-yb.uat.xml
 // D:\Nexcel\aff-yb\Admin\AffiliateAdmin\App_Data\SpConfig\SpName.xml

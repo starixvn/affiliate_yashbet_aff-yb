@@ -95,7 +95,7 @@ exports[`domain control - components - DomainControlPopup  render correctly with
             tag="div"
           >
             <Label
-              for="marketId"
+              htmlFor="marketId"
               sm={4}
               tag="label"
               widths={
@@ -147,7 +147,7 @@ exports[`domain control - components - DomainControlPopup  render correctly with
             tag="div"
           >
             <Label
-              for="affDomainId"
+              htmlFor="affDomainId"
               sm={4}
               tag="label"
               widths={
@@ -203,7 +203,7 @@ exports[`domain control - components - DomainControlPopup  render correctly with
             tag="div"
           >
             <Label
-              for="redirectDomainId"
+              htmlFor="redirectDomainId"
               sm={4}
               tag="label"
               widths={
@@ -416,7 +416,7 @@ exports[`domain control - components - DomainControlPopup  render correctly with
             tag="div"
           >
             <Label
-              for="marketId"
+              htmlFor="marketId"
               sm={4}
               tag="label"
               widths={
@@ -468,7 +468,7 @@ exports[`domain control - components - DomainControlPopup  render correctly with
             tag="div"
           >
             <Label
-              for="affDomainId"
+              htmlFor="affDomainId"
               sm={4}
               tag="label"
               widths={
@@ -524,7 +524,7 @@ exports[`domain control - components - DomainControlPopup  render correctly with
             tag="div"
           >
             <Label
-              for="redirectDomainId"
+              htmlFor="redirectDomainId"
               sm={4}
               tag="label"
               widths={

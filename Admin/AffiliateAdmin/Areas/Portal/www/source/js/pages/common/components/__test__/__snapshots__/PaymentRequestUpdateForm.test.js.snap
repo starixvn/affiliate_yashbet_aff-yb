@@ -567,7 +567,7 @@ exports[`common - components - PaymentRequestUpdateForm render correctly 1`] = `
                 tag="div"
               >
                 <Label
-                  for="AdminDesc"
+                  htmlFor="AdminDesc"
                   tag="label"
                   widths={
                     Array [
@@ -618,7 +618,7 @@ exports[`common - components - PaymentRequestUpdateForm render correctly 1`] = `
                 tag="div"
               >
                 <Label
-                  for="AffDesc"
+                  htmlFor="AffDesc"
                   tag="label"
                   widths={
                     Array [
@@ -1248,7 +1248,7 @@ exports[`common - components - PaymentRequestUpdateForm render correctly with no
                 tag="div"
               >
                 <Label
-                  for="AdminDesc"
+                  htmlFor="AdminDesc"
                   tag="label"
                   widths={
                     Array [
@@ -1299,7 +1299,7 @@ exports[`common - components - PaymentRequestUpdateForm render correctly with no
                 tag="div"
               >
                 <Label
-                  for="AffDesc"
+                  htmlFor="AffDesc"
                   tag="label"
                   widths={
                     Array [

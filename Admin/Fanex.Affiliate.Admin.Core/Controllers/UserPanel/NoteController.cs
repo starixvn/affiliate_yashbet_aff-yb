@@ -36,6 +36,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
 
         [HttpPost]
         [ValidateAntiForgeryHeader]
+        [FunctionAuthorize(FunctionName = Function.Note)]
         public ActionResult GetNoteContentById(int affId, int noteId)
         {
             if (affId >= Validation.MinId && noteId >= Validation.MinId)
@@ -47,7 +48,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
             return new JsonNetResult();
         }
 
-        [FunctionAuthorize(FunctionName = Function.Affiliate, IsHost = true)]
+        [FunctionAuthorize(FunctionName = Function.Note, IsHost = true)]
         [HttpPost]
         [ValidateAntiForgeryHeader]
         public ActionResult InsertNote(InsertUpdateNoteParam param)
@@ -62,7 +63,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
             return GenerateErrResult("Insert Note is failed!");
         }
 
-        [FunctionAuthorize(FunctionName = Function.Affiliate, IsHost = true)]
+        [FunctionAuthorize(FunctionName = Function.Note, IsHost = true)]
         [HttpPost]
         [ValidateAntiForgeryHeader]
         public ActionResult UpdateNote(InsertUpdateNoteParam param)
