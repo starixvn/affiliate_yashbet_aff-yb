@@ -6,5 +6,7 @@ namespace Fanex.Affiliate.Admin.Core.Utilities.CommGroup
     public interface ICommGroupValidation
     {
         ResultInfo ValidateCommGroup(CommGroupSettingParam commGroup);
+
+        bool HasPermissionAssignOnAff(int userId, int affId);
     }
 }

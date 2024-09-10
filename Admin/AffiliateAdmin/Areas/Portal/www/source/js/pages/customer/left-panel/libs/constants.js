@@ -1,4 +1,4 @@
-export const approved = 'approved';
+const approved = 'approved';
 
 export const status = {
     Approved: approved,

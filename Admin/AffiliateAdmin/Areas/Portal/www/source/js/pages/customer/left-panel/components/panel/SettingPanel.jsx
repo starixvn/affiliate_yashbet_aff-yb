@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import Panel from '../Panel';
 import { Row, Col, Button } from 'reactstrap';
 
-import { resource, status, messages, statusForSuspend, approved } from '../../libs/constants';
+import { resource, status, messages, statusForSuspend } from '../../libs/constants';
 import { updateAffType, updateStatus, getAffiliateInfo, getTransferLimitSetting } from '../../actions';
 import CommissionGroupPopup from '../../../../common/components/CommissionGroupPopup';
 import NotificationPopup from '../../../../common/components/NotificationPopup';
@@ -78,10 +78,12 @@ export class SettingPanel extends PureComponent {
     }
 
     _saveStatus = async (selectedStatus) => {
-        if (selectedStatus && !this.props.affiliateInfo.GroupId && selectedStatus.toLowerCase() === approved) {
+        const { affiliateInfo } = this.props;
+
+        if (selectedStatus && selectedStatus.toLowerCase() === status.Approved && !affiliateInfo.AffCode) {
             this.setState({ isAssignCommissionGroup: true });
         } else {
-            const param = Object.assign({}, { AffId: this.props.affiliateInfo.AffId, Status: selectedStatus });
+            const param = Object.assign({}, { AffId: affiliateInfo.AffId, Status: selectedStatus });
             const result = await this.props.updateStatus(param);
 
             if (result.IsSuccessful) {

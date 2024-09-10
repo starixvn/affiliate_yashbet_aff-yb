@@ -592,7 +592,7 @@
     <Compile Include="Services\UserPanel\TrackingStatisticsService.cs" />
     <Compile Include="Services\UserPanel\UserAccountService.cs" />
     <Compile Include="Services\UserPanel\ViewLogService.cs" />
-    <Compile Include="Utilities\CommGroup\CommGroupValidationHelper.cs" />
+    <Compile Include="Utilities\CommGroup\CommGroupValidation.cs" />
     <Compile Include="Utilities\CommGroup\ICommGroupValidation.cs" />
     <Compile Include="Utilities\CryptographyHelper.cs" />
     <Compile Include="Utilities\Generator.cs" />
