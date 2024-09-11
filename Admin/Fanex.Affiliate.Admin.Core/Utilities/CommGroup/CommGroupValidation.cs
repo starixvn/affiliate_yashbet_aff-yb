@@ -1,22 +1,45 @@
 ﻿using Fanex.Affiliate.Admin.Core.Constants;
 using Fanex.Affiliate.Admin.Core.DTO;
+using Fanex.Affiliate.Admin.Core.Extensions;
 using Fanex.Affiliate.Admin.Core.MetaModels.CommissionGroup;
 using Fanex.Affiliate.Admin.Core.Repository;
+using Fanex.Affiliate.Admin.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Fanex.Affiliate.Admin.Core.Utilities.CommGroup
 {
-    public class CommGroupValidationHelper : ICommGroupValidation
+    public class CommGroupValidation : ICommGroupValidation
     {
         private const string brElementHtml = "<br />";
 
+        private readonly IAuthRepository _authRepository;
+        private readonly IAffiliateService _affiliateService;
         private readonly IProductRepository _productRepository;
 
-        public CommGroupValidationHelper(IProductRepository productRepository)
+        public CommGroupValidation(
+            IAuthRepository authRepository,
+            IAffiliateService affiliateService,
+            IProductRepository productRepository)
         {
+            _authRepository = authRepository;
+            _affiliateService = affiliateService;
             _productRepository = productRepository;
+        }
+
+        public bool HasPermissionAssignOnAff(int userId, int affId)
+        {
+            var affInfo = _affiliateService.GetAffiliateBasicInfo(affId);
+
+            if (string.IsNullOrEmpty(affInfo.AffCode))
+            {
+                var permissionList = _authRepository.GetPermissionList(userId);
+
+                return permissionList.Any(i => i.FunctionName.MatchWith(Function.EditAffStatus) && i.IsHost);
+            }
+
+            return true;
         }
 
         public ResultInfo ValidateCommGroup(CommGroupSettingParam commGroup)

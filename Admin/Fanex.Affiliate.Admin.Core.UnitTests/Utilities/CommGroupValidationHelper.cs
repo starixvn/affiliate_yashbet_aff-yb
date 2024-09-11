@@ -1,6 +1,7 @@
 ﻿using Fanex.Affiliate.Admin.Core.DTO;
 using Fanex.Affiliate.Admin.Core.MetaModels.CommissionGroup;
 using Fanex.Affiliate.Admin.Core.Repository;
+using Fanex.Affiliate.Admin.Core.Services;
 using Fanex.Affiliate.Admin.Core.Utilities.CommGroup;
 using Moq;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using Xunit;
 
 namespace Fanex.Affiliate.Admin.Core.UnitTests.Utilities
 {
-    public class CommGroupValidationHelperTest
+    public class CommGroupValidationHelper
     {
         [Fact]
         public void ValidateCommGroup_WhenCall_ExcuteSucceed()
@@ -280,8 +281,10 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Utilities
             Assert.False(result.IsSuccessful);
         }
 
-        private static CommGroupValidationHelper CreateCommGroupValidationHelper()
+        private static CommGroupValidation CreateCommGroupValidationHelper()
         {
+            var authRepository = new Mock<IAuthRepository>();
+            var affiliateService = new Mock<IAffiliateService>();
             var productRepository = new Mock<IProductRepository>();
             productRepository.Setup(p => p.GetProductList()).Returns(new List<Product>
             {
@@ -290,7 +293,7 @@ namespace Fanex.Affiliate.Admin.Core.UnitTests.Utilities
                 new Product { ProductId = 3 }
             });
 
-            return new CommGroupValidationHelper(productRepository.Object);
+            return new CommGroupValidation(authRepository.Object, affiliateService.Object, productRepository.Object);
         }
         private static CommGroupSettingParam CreateValidCommGroupSettingParam()
         {
