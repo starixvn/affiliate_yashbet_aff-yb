@@ -24,8 +24,6 @@
 
         public const string Domain = "[Domain]";
 
-        public const string ActiveMembers = "[ActiveMembers]";
-
         public const string MemberEmail = "[MemberEmail]";
 
         public const string TransferPlayerSetting = "[HideTransferPlayerSetting]"; //Hide Transfer Player

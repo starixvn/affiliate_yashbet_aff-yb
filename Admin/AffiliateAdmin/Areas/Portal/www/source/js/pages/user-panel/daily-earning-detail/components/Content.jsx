@@ -86,10 +86,10 @@ export class Content extends PureComponent {
         const rebate = formatDecimal(dataItem.Rebate);
 
         return (
-            <Row>
+            <Row key={rowNumber}>
                 {rowNumber && <Cell className="text-center" title={rowNumber}>{rowNumber}</Cell>}
                 {rowNumber && <Cell className="text-center" title={dataItem.UserName}>{dataItem.UserName}</Cell>}
-                <Cell className="text-center" title={dataItem.IbcUserName} colSpan={!rowNumber && 3}>{dataItem.IbcUserName}</Cell>
+                <Cell className="text-center" title={dataItem.IbcUserName} colSpan={!rowNumber ? 3 : 1}>{dataItem.IbcUserName}</Cell>
                 <Cell className={productColumnClassName} title={ggr}>{ggr}</Cell>
                 <Cell className="text-right" title={deposit}>{deposit}</Cell>
                 <Cell className="text-right" title={withdrawal}>{withdrawal}</Cell>

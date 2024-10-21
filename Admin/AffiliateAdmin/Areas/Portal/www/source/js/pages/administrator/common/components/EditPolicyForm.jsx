@@ -203,7 +203,9 @@ export class EditPolicyForm extends PureComponent {
                             <div className="policy-list-content table-responsive mb-2">
                                 <Table className="policy-data-table">
                                     {this._renderHeader()}
-                                    {this._renderDataSection(data)}
+                                    <tbody>
+                                        {this._renderDataSection(data)}
+                                    </tbody>
                                 </Table>
                             </div>
 
