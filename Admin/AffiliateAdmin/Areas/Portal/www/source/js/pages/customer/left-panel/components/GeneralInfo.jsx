@@ -15,7 +15,7 @@ export const GeneralInfo = (props) => {
     const { affiliateInfo } = props;
     const status = affiliateInfo.Status.toLowerCase();
     const isApproved = status === statusForSuspend.Approved || status === statusForSuspend.Suspended;
-    const siteUrl = affiliateInfo.SiteUrl.indexOf('http://') === -1 ? 'http://' + affiliateInfo.SiteUrl : affiliateInfo.SiteUrl;
+    const siteUrl = htmlDecode(affiliateInfo.SiteUrl.indexOf('http://') === -1 ? 'http://' + affiliateInfo.SiteUrl : affiliateInfo.SiteUrl);
 
     const _handleClickParentAffiliate = (parentAffName) => {
         props.setAffName(parentAffName);
@@ -60,7 +60,7 @@ export const GeneralInfo = (props) => {
             </Row>
             <Row>
                 <Col sm={5} className="pr-0">{resource.ContactNumber}</Col>
-                <Col sm={7} className='text-right'>{affiliateInfo.Phone}</Col>
+                <Col sm={7} className='text-right'>{htmlDecode(affiliateInfo.Phone)}</Col>
             </Row>
             <ContactApp />
             <Row>
@@ -74,8 +74,8 @@ export const GeneralInfo = (props) => {
             <Row>
                 <Col sm={5}>{resource.WebsiteUrl}</Col>
                 <Col sm={7} className='text-right text-truncate'>
-                    <a target='_blank' title={htmlDecode(siteUrl)} href={`http://anonym.to/?${htmlDecode(siteUrl)}`}>
-                        {affiliateInfo.SiteUrl.replace('http://', '').replace('www.', '')}
+                    <a target='_blank' title={siteUrl} href={`http://anonym.to/?${siteUrl}`}>
+                        {htmlDecode(affiliateInfo.SiteUrl.replace('http://', '').replace('www.', ''))}
                     </a>
                 </Col>
             </Row>
