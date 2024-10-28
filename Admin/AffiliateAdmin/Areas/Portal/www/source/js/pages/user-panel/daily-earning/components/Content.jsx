@@ -86,7 +86,7 @@ export class Content extends PureComponent {
         return (
             <Row key={`date-${dataItem.Date}`}>
                 {rowNumber && <Cell className="text-center" title={rowNumber}>{rowNumber}</Cell>}
-                <Cell className="text-center" title={dataItem.Date} colSpan={!rowNumber && 2}>
+                <Cell className="text-center" title={dataItem.Date} colSpan={!rowNumber ? 2 : 1}>
                     {rowNumber ?
                         (<Button className="p-0" color="link"
                             onClick={() => this.props.redirectToDailyEarningDetail(dailyEarningDetailParam)}>{dataItem.Date}</Button>) :

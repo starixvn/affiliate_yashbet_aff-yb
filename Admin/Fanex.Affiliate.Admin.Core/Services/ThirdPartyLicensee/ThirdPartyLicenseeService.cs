@@ -34,6 +34,11 @@ namespace Fanex.Affiliate.Admin.Core.Services.ThirdPartyLicensee
                 AffiliateCode = affInfo.AffCode,
                 AffiliateName = affInfo.UserName,
                 UserName = affInfo.PlayerUsername,
+                FirstName = affInfo.FirstName,
+                LastName = affInfo.LastName,
+                ContactNumber = affInfo.ContactNumber,
+                Email = affInfo.Email,
+                Status = affInfo.Status,
                 CustId = affInfo.PlayerCustId,
                 ParentAffiliate = affInfo.ParentAffiliateName,
                 SiteId = _appSetting.MemberSiteId
