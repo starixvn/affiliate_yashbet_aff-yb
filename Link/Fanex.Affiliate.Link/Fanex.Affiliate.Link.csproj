@@ -216,6 +216,7 @@
     <Compile Include="App_Start\LoggingConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UMConfig.cs" />
+    <Compile Include="Constants\HeaderKey.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Commands\TrackingSystemCommand.cs" />
     <Compile Include="Controllers\UnderMaintenanceController.cs" />
@@ -223,6 +224,7 @@
     <Compile Include="DataAccess\Impl\TrackingSystemDataAccess.cs" />
     <Compile Include="DataAccess\Interface\IGeneralAffiliateInfoDataAccess.cs" />
     <Compile Include="DataAccess\Interface\ITrackingSystemDataAccess.cs" />
+    <Compile Include="Extensions\HttpRequestExtensions.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -236,7 +238,7 @@
     <Compile Include="Services\Interface\IUnderMaintenanceService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="12monitor.aspx" />
+    <Content Include="HealthCheck.aspx" />
     <Content Include="App_Data\SpNames.xml" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
