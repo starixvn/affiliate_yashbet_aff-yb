@@ -370,6 +370,7 @@
     <Content Include="App_Data\SpConfig\_SpNameOriginal.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="HealthCheck.aspx" />
     <Content Include="www\build\js\jquery.extension.js" />
     <Content Include="www\build\js\jquery.extension.min.js">
       <DependentUpon>jquery.extension.js</DependentUpon>

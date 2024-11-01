@@ -56,9 +56,9 @@ namespace Fanex.Affiliate.User.Core.BusinessService
         public string GenerateCaptcha()
             => new Random().Next(RANDOM_BEGIN_NUMBER, RANDOM_END_NUMBER).ToString();
 
-        public bool IsValid(string inputCaptcha, string sessionCaptcha, string userHostAddress)
+        public bool IsValid(string inputCaptcha, string sessionCaptcha, string clientIp)
         {
-            return inputCaptcha == sessionCaptcha || IsValidSecretCaptcha(inputCaptcha, userHostAddress);
+            return inputCaptcha == sessionCaptcha || IsValidSecretCaptcha(inputCaptcha, clientIp);
         }
 
         public byte[] GenerateImageBuffer(string captcha, int width, int height, bool isComplex = false)
@@ -143,7 +143,7 @@ namespace Fanex.Affiliate.User.Core.BusinessService
         }
 
 
-        private bool IsValidSecretCaptcha(string inputCaptcha, string userHostAddress)
+        private bool IsValidSecretCaptcha(string inputCaptcha, string clientIp)
         {
             var isAllowAutomationCaptchaCode = _appSetting.GetValue("AllowAutomationCaptchaCode") == "1";
             var secretCaptcha = _appSetting.GetValue("SecretCaptcha");
@@ -151,18 +151,16 @@ namespace Fanex.Affiliate.User.Core.BusinessService
             return isAllowAutomationCaptchaCode &&
                 !string.IsNullOrWhiteSpace(secretCaptcha) &&
                 inputCaptcha == secretCaptcha &&
-                IsValidHostAddress(userHostAddress);
+                IsValidClientIp(clientIp);
         }
 
-        private bool IsValidHostAddress(string userHostAddress)
+        private bool IsValidClientIp(string clientIp)
         {
-            var forwardedIP = RequestHelper.GetClientIPAddress();
-
-            LogHelper.WriteInfo($"Client IP {userHostAddress}(forwarded IP {forwardedIP}) using static Captcha to access!");
+            LogHelper.WriteInfo($"Client IP {clientIp} - using static Captcha to access!");
 
             var companyIpRegex = _appSetting.GetValue("CompanyIP");
 
-            return _appSetting.IsLocal || Regex.IsMatch(forwardedIP, companyIpRegex) || Regex.IsMatch(userHostAddress, companyIpRegex);
+            return _appSetting.IsLocal || Regex.IsMatch(clientIp, companyIpRegex);
         }
 
         private static Color CreateRandomColor(Random random, int min, int max)

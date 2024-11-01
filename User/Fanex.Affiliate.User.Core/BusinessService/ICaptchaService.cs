@@ -4,7 +4,7 @@
     {
         string GenerateCaptcha();
 
-        bool IsValid(string inputCaptcha, string sessionCaptcha, string userHostAddress);
+        bool IsValid(string inputCaptcha, string sessionCaptcha, string clientIp);
 
         byte[] GenerateImageBuffer(string captcha, int width, int height, bool isComplex = false);
     }

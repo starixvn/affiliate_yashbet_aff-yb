@@ -3,6 +3,7 @@
     using BusinessService;
     using CoreService;
     using DTO;
+    using Fanex.Affiliate.User.Core.Extensions;
     using MetalModels;
     using MetalModels.Email;
     using Newtonsoft.Json;
@@ -79,7 +80,7 @@
         {
             var result = new ResultInfo { IsOk = false };
             var affParentCode = HttpContext.Request.Cookies[ParentCodeCookieName]?.Value;
-            if (!_captchaService.IsValid(param.Captcha, SessionService.SignUpCaptchaCode, Request.UserHostAddress))
+            if (!_captchaService.IsValid(param.Captcha, SessionService.SignUpCaptchaCode, Request.GetClientIP()))
             {
                 result.Message = Lang.ValidationCode;
             }
@@ -116,7 +117,7 @@
                     State = Server.HtmlEncode(param.State),
                     Language = SessionService.CurrentLanguage,
                     AffType = _appSetting.AllowedAffiliateTypes.FirstOrDefault(),
-                    Ip = Request.UserHostAddress,
+                    Ip = Request.GetClientIP(),
                     IsLocal = _appSetting.IsLocal,
                     AffParentCode = affParentCode
                 };

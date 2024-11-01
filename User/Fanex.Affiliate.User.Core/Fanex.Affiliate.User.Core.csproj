@@ -259,6 +259,7 @@
     <Compile Include="Constants\ControllerName.cs" />
     <Compile Include="Constants\ErrCodes.cs" />
     <Compile Include="Constants\GMT.cs" />
+    <Compile Include="Constants\HeaderKey.cs" />
     <Compile Include="Constants\Menu.cs" />
     <Compile Include="Constants\TransferBalanceStatus.cs" />
     <Compile Include="Controllers\BaseLayoutController.cs" />
@@ -270,6 +271,7 @@
     <Compile Include="DTO\Api\ApiResultInfo.cs" />
     <Compile Include="DTO\Api\CustomerBalanceInfo.cs" />
     <Compile Include="DTO\Api\TokenInfo.cs" />
+    <Compile Include="Extensions\HttpRequestExtension.cs" />
     <Compile Include="MetalModels\Api\TokenRequestParam.cs" />
     <Compile Include="DTO\UserPanel\MarketingPageStatistics.cs" />
     <Compile Include="DTO\UserPanel\PlayerTransferBalance\PlayerTransferBalanceHistoryInfo.cs" />
@@ -574,7 +576,6 @@
     <Compile Include="CoreService\MemoryCacheService.cs" />
     <Compile Include="Utilities\MarketingHelper.cs" />
     <Compile Include="Utilities\Parser.cs" />
-    <Compile Include="Utilities\RequestHelper.cs" />
     <Compile Include="Utilities\SiteDomainHelper.cs" />
     <Compile Include="DTO\UserPanel\AccountInformation.cs" />
     <Compile Include="Utilities\SymmetricEncryptionUtility.cs" />
