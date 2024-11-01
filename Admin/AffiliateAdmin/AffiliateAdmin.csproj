@@ -255,7 +255,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="whoami.aspx" />
+    <Content Include="HealthCheck.aspx" />
     <Content Include="App_Data\SpConfig\SpName.admin-yb.local.xml">
       <DependentUpon>_SpName.tt</DependentUpon>
     </Content>

@@ -58,7 +58,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
         public ActionResult Login(LoginParam param)
         {
             param.UserHostName = HttpContext.Request.UserHostName;
-            param.Ip = Request.UserHostAddress;
+            param.Ip = Request.GetClientIP();
 
             var result = _authRepository.Login(param);
 

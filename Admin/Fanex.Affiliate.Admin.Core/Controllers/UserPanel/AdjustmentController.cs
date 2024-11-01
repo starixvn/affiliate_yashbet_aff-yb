@@ -1,5 +1,6 @@
 ﻿using Fanex.Affiliate.Admin.Core.Attributes;
 using Fanex.Affiliate.Admin.Core.Constants;
+using Fanex.Affiliate.Admin.Core.Extensions;
 using Fanex.Affiliate.Admin.Core.MetaModels.UserPanel;
 using Fanex.Affiliate.Admin.Core.Resources;
 using Fanex.Affiliate.Admin.Core.Services.Common;
@@ -49,11 +50,10 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
                     var adjustmentParam = new AdjustmentParam
                     {
                         AffId = param.AffId,
-                        UserId = SessionService.UserId,
-                        Ip = Request.UserHostAddress,
                         Amount = param.Amount,
                         Description = Server.HtmlEncode(param.Description)
                     };
+                    AssignUserInfoParam(adjustmentParam);
 
                     return GenerateJsonNetResult(_adjustmentService.InsertAdjustment(adjustmentParam));
                 }
