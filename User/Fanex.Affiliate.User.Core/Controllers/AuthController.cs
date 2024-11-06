@@ -2,6 +2,7 @@
 using Fanex.Affiliate.User.Core.CoreService;
 using Fanex.Affiliate.User.Core.DTO;
 using Fanex.Affiliate.User.Core.DTO.VerificationAccount;
+using Fanex.Affiliate.User.Core.Extensions;
 using Fanex.Affiliate.User.Core.Filters;
 using Fanex.Affiliate.User.Core.MetalModels;
 using Fanex.Affiliate.User.Core.Repository.UserPanel;
@@ -67,7 +68,7 @@ namespace Fanex.Affiliate.User.Core.Controllers
                 return Json(requestValidation);
             }
 
-            userParam.LoginIp = RequestHelper.GetClientIPAddress(Request);
+            userParam.LoginIp = Request.GetClientIP();
             userParam.Language = SessionService.CurrentLanguage;
             userParam.UserAgent = Request.UserAgent;
             userParam.IsVerifyingAccount = false;
@@ -114,7 +115,7 @@ namespace Fanex.Affiliate.User.Core.Controllers
                 var hashedPassword = Generator.GenerateSHA512String(adminSessionId + loginParam.ChalengeStr);
                 if (string.Equals(loginParam.AccKey, hashedPassword))
                 {
-                    var clientIpAddress = RequestHelper.GetClientIPAddress(Request);
+                    var clientIpAddress = Request.GetClientIP();
                     var userLoginParam = new UserLoginParam
                     {
                         UserName = loginParam.CustName,

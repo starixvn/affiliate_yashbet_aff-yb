@@ -242,6 +242,7 @@
     <Compile Include="Constants\Deduction.cs" />
     <Compile Include="Constants\Field.cs" />
     <Compile Include="Constants\Function.cs" />
+    <Compile Include="Constants\HeaderKey.cs" />
     <Compile Include="Constants\Money.cs" />
     <Compile Include="Constants\PaymentMethod.cs" />
     <Compile Include="Constants\DefaultValue.cs" />
@@ -333,6 +334,7 @@
     <Compile Include="DTO\UserPanel\LogType.cs" />
     <Compile Include="DTO\UserPanel\SubAffiliate.cs" />
     <Compile Include="Exceptions\LicenseePaymentException.cs" />
+    <Compile Include="Extensions\HttpRequestExtension.cs" />
     <Compile Include="Extensions\NumberFormatter.cs" />
     <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Infrasstructures\AuthenticatedHttpClientHandler.cs" />

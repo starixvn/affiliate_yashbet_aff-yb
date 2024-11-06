@@ -1,4 +1,5 @@
 ﻿using Fanex.Affiliate.User.Core.CoreService;
+using Fanex.Affiliate.User.Core.Extensions;
 using Fanex.Data;
 using Fanex.Logging;
 using Newtonsoft.Json;
@@ -69,6 +70,7 @@ namespace Fanex.Affiliate.User.Core.Utilities
                    .AppendLine("BrowserVer: " + request.Browser.Version)
                    .AppendLine("Agent: " + request.UserAgent)
                    .AppendLine("IP Address: " + request.UserHostAddress)
+                   .AppendLine("Actual IP Address: " + request.GetClientIP())
                    .AppendLine($"Source:{exception.Source}")
                    .AppendLine($"TargetSite:{exception.TargetSite}");
 

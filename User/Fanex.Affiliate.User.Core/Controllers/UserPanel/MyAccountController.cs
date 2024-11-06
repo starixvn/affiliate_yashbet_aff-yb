@@ -5,6 +5,7 @@
     using DTO.UserPanel;
     using Fanex.Affiliate.User.Core.BusinessService;
     using Fanex.Affiliate.User.Core.CoreService;
+    using Fanex.Affiliate.User.Core.Extensions;
     using Fanex.Affiliate.User.Core.Repository.UserPanel;
     using Fanex.Affiliate.User.Core.Utilities;
     using Fanex.Affiliate.User.Core.ViewModels.UserPanel;
@@ -114,7 +115,7 @@
                 SiteUrl = Server.HtmlEncode(model.SiteUrl ?? string.Empty),
                 MoreSiteUrls = Server.HtmlEncode(model.MoreSiteUrls ?? string.Empty),
                 NoSiteDesc = Server.HtmlEncode(model.NoSiteDesc ?? string.Empty),
-                Ip = Request.UserHostAddress,
+                Ip = Request.GetClientIP(),
                 Language = _sessionService.CurrentLanguage,
                 DefaultBaseCurrency = model.DefaultBaseCurrency,
                 ContactApps = JsonConvert.SerializeObject(model.ContactAppList.Select(p => new ContactApp

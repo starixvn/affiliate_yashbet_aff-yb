@@ -1,6 +1,7 @@
 ﻿using Fanex.Affiliate.Admin.Core.Attributes;
 using Fanex.Affiliate.Admin.Core.Constants;
 using Fanex.Affiliate.Admin.Core.DTO;
+using Fanex.Affiliate.Admin.Core.Extensions;
 using Fanex.Affiliate.Admin.Core.MetaModels.CommissionGroup;
 using Fanex.Affiliate.Admin.Core.Repository;
 using Fanex.Affiliate.Admin.Core.Resources;
@@ -115,7 +116,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.Affiliate
                 var createParam = new CreateUpdateCommissionGroupParam
                 {
                     UserId = SessionService.UserId,
-                    Ip = Request.UserHostAddress,
+                    Ip = Request.GetClientIP(),
                     GroupName = Server.HtmlEncode(commGroup.GroupName.Trim()),
                     Description = Server.HtmlEncode(commGroup.Description?.Trim()),
                     TierSettingList = commGroup.TierSettingList,
@@ -153,7 +154,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.Affiliate
                     UserId = SessionService.UserId,
                     GroupId = commGroup.GroupId,
                     GroupName = Server.HtmlEncode(commGroup.GroupName.Trim()),
-                    Ip = Request.UserHostAddress,
+                    Ip = Request.GetClientIP(),
                     Description = Server.HtmlEncode(commGroup.Description?.Trim()),
                     TierSettingList = commGroup.TierSettingList,
                     P2pDeductionList = commGroup.P2pDeductionList,

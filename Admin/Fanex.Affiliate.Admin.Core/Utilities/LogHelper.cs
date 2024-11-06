@@ -1,4 +1,5 @@
-﻿using Fanex.Data;
+﻿using Fanex.Affiliate.Admin.Core.Extensions;
+using Fanex.Data;
 using Fanex.Logging;
 using Refit;
 using System;
@@ -46,7 +47,8 @@ namespace Fanex.Affiliate.Admin.Core.Utilities
                    .AppendLine("Browser: " + request.Browser.Type)
                    .AppendLine("BrowserVer: " + request.Browser.Version)
                    .AppendLine("Agent: " + request.UserAgent)
-                   .AppendLine("IP Address: " + request.UserHostAddress);
+                   .AppendLine("IP Address: " + request.UserHostAddress)
+                   .AppendLine("Actual IP Address: " + request.GetClientIP());
 
             builder.AppendLine("UserName: " + HttpContext.Current.Session["UserName"]);
 

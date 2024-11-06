@@ -2,6 +2,7 @@
 using Fanex.Affiliate.User.Core.CoreService;
 using Fanex.Affiliate.User.Core.DTO;
 using Fanex.Affiliate.User.Core.DTO.Auth;
+using Fanex.Affiliate.User.Core.Extensions;
 using Fanex.Affiliate.User.Core.MetalModels;
 using Fanex.Affiliate.User.Core.Repository.UserPanel;
 using Fanex.Affiliate.User.Core.Resources;
@@ -50,7 +51,7 @@ namespace Fanex.Affiliate.User.Core.Controllers
                 return GetErrorResult(string.Join(", ", ModelState.Values.SelectMany(x => x.Errors).Select(x => x.ErrorMessage)));
             }
 
-            if (!_captchaService.IsValid(inputCaptcha, sessionCaptcha, Request.UserHostAddress))
+            if (!_captchaService.IsValid(inputCaptcha, sessionCaptcha, Request.GetClientIP()))
             {
                 return GetErrorResult(Lang.ValidationCode);
             }

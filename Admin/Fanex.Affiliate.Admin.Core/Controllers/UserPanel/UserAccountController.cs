@@ -91,8 +91,6 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
                 var userAccountParam = new UserAccountParam
                 {
                     AffId = param.AffId,
-                    UserId = SessionService.UserId,
-                    Ip = Request.UserHostAddress,
                     FirstName = Server.HtmlEncode(param.FirstName),
                     LastName = Server.HtmlEncode(param.LastName),
                     Gender = param.Gender,
@@ -118,6 +116,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers.UserPanel
                     MailOption = param.MailOption,
                     HasWebSite = param.HasWebSite,
                 };
+                AssignUserInfoParam(userAccountParam);
 
                 if (param.ContactAppList != null)
                 {

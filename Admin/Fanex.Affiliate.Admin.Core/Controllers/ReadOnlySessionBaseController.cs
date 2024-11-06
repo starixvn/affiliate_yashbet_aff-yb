@@ -1,4 +1,5 @@
-﻿using Fanex.Affiliate.Admin.Core.MetaModels;
+﻿using Fanex.Affiliate.Admin.Core.Extensions;
+using Fanex.Affiliate.Admin.Core.MetaModels;
 using Fanex.Affiliate.Admin.Core.Services.Common;
 using System.Web.Mvc;
 using System.Web.SessionState;
@@ -20,7 +21,7 @@ namespace Fanex.Affiliate.Admin.Core.Controllers
         protected void AssignUserInfoParam(UserInfoParam param)
         {
             param.UserId = SessionService.UserId;
-            param.Ip = Request.UserHostAddress;
+            param.Ip = Request.GetClientIP();
         }
     }
 }
