@@ -1,13 +1,12 @@
 ﻿namespace Fanex.Affiliate.Link
 {
+    using Fanex.Affiliate.Link.App_Start;
+    using Fanex.Affiliate.Link.Helpers;
+    using Fanex.Data;
     using System;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
-    using Fanex.Affiliate.Link.App_Start;
-    using Fanex.Affiliate.Link.Helpers;
-    using Fanex.Data;
-    using Fanex.Data.SqlServer;
 
     /// <summary>
     /// Global for Affiliate link.
@@ -25,7 +24,7 @@
 
             DbSettingProviderManager
                 .StartNewSession()
-                .WithSqlServer("~/App_Data/SpNames.xml")
+                .Register(true)
                 .Run();
         }
 

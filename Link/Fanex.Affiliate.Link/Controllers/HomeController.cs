@@ -2,10 +2,6 @@
 
 namespace Fanex.Affiliate.Link.Controllers
 {
-    using System;
-    using System.Collections.Specialized;
-    using System.Text;
-    using System.Web.Mvc;
     using Commands;
     using Fanex.Affiliate.Link.Extensions;
     using Fanex.Logging;
@@ -13,6 +9,10 @@ namespace Fanex.Affiliate.Link.Controllers
     using ONEbook.UM.AspNetMVC.Filters;
     using Services.Impl;
     using Services.Interface;
+    using System;
+    using System.Collections.Specialized;
+    using System.Text;
+    using System.Web.Mvc;
 
     /// <summary>
     /// Home controller for affiliate link.

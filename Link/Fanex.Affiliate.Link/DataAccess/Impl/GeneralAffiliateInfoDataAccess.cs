@@ -1,17 +1,27 @@
 ﻿namespace Fanex.Affiliate.Link.DataAccess.Impl
 {
-    using System;
-    using System.Data;
-    using Fanex.Affiliate.Link.Commands;
+    using Fanex.Affiliate.Link.Criterias;
     using Fanex.Affiliate.Link.DataAccess.Interface;
-    using Fanex.Data;
-    using Fanex.Data.SqlServer;
+    using Fanex.Affiliate.Link.DTOs;
+    using Fanex.Data.Repository;
 
     /// <summary>
     /// Tracking statistics.
     /// </summary>
     public class GeneralAffiliateInfoDataAccess : IGeneralAffiliateInfoDataAccess
     {
+        private readonly IDynamicRepository _dynamicRepository;
+
+        public GeneralAffiliateInfoDataAccess()
+            : this(null)
+        {
+        }
+
+        public GeneralAffiliateInfoDataAccess(IDynamicRepository dynamicRepository)
+        {
+            _dynamicRepository = dynamicRepository ?? new DynamicRepository();
+        }
+
         /// <summary>
         /// Insert statistics into database.
         /// </summary>
@@ -19,23 +29,14 @@
         /// <returns>Success or fail.</returns>
         public (int affId, string affCode) GetGeneralAffiliateInfo(int? affId = null, string affCode = null)
         {
-            const string uSpKey = "Aff_Get_GeneralAffInfo";
-
-            using (var objectDb = new SqlObjectDb(uSpKey))
+            var criteria = new GeneralAffiliateInfoCriteria
             {
-                objectDb.SetParameterValue("AffId", affId);
-                objectDb.SetParameterValue("AffCode", affCode);
+                AffId = affId,
+                AffCode = affCode,
+            };
 
-                using (var reader = objectDb.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        return (Convert.ToInt32(reader["AffId"]), Convert.ToString(reader["AffCode"]));
-                    }
-
-                    return (0,string.Empty);
-                }
-            }
+            var affInfo = _dynamicRepository.Get<AffiliateInfo>(criteria);
+            return (affInfo.AffId, affInfo.AffCode);
         }
     }
 }

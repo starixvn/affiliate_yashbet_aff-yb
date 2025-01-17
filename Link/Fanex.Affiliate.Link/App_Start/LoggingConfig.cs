@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using Fanex.Logging;
+﻿using Fanex.Logging;
 using Fanex.Logging.Sentry.RavenClient;
 using SharpRaven;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
 
 namespace Fanex.Affiliate.Link
 {
