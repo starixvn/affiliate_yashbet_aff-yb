@@ -6,7 +6,7 @@
     /// <summary>
     /// Route configuration.
     /// </summary>
-    public class RouteConfig
+    public static class RouteConfig
     {
         /// <summary>
         /// Register Routes.

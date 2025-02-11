@@ -115,7 +115,14 @@
 
             var deviceKey = _deviceMapping.Keys.FirstOrDefault(key => userAgent.ToLower().Contains(key));
 
-            return string.IsNullOrEmpty(deviceKey) ? (IsMobile() ? "Mobile" : @"Computer/Laptop") : _deviceMapping[deviceKey];
+            if (IsMobile())
+            {
+                return string.IsNullOrEmpty(deviceKey) ? ("Mobile") : _deviceMapping[deviceKey];
+            }
+            else
+            {
+                return string.IsNullOrEmpty(deviceKey) ? (@"Computer/Laptop") : _deviceMapping[deviceKey];
+            }
         }
 
         /// <summary>

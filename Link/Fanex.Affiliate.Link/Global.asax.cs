@@ -6,7 +6,9 @@
     using System;
     using System.Web;
     using System.Web.Mvc;
+    using System.Web.Razor.Parser.SyntaxTree;
     using System.Web.Routing;
+    using System.Web.UI.WebControls;
 
     /// <summary>
     /// Global for Affiliate link.
@@ -16,16 +18,15 @@
         protected void Application_Start()
         {
             LoggingConfig.RegisterSentry();
+            DbSettingProviderManager
+                        .StartNewSession()
+                        .Register(true)
+                        .Run();
 
             UMConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
-            DbSettingProviderManager
-                .StartNewSession()
-                .Register(true)
-                .Run();
         }
 
         /// <summary>

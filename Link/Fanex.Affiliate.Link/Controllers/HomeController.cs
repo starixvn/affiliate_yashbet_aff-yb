@@ -58,7 +58,7 @@ namespace Fanex.Affiliate.Link.Controllers
             return View();
         }
 
-        public ActionResult Link(string pageId, string affCode = null, string lang = null, string channel = null)
+        public ActionResult Link(string pageId, string affCode = null, string lang = null)
         {
             try
             {
@@ -127,7 +127,7 @@ namespace Fanex.Affiliate.Link.Controllers
             return View("Link");
         }
 
-        private string GetFullAffDomain(string url, string endPointOfAffDomain)
+        private static string GetFullAffDomain(string url, string endPointOfAffDomain)
         {
             if (byte.Parse(ConfigurationManager.AppSettings["RemovePortFromUrl"]) == 1)
             {
@@ -150,12 +150,12 @@ namespace Fanex.Affiliate.Link.Controllers
             return $"{scheme}://{host}{path}";
         }
 
-        private byte GetDeviceType()
+        private static byte GetDeviceType()
         {
             return (byte)(Common.IsMobile() ? 1 : 0);
         }
 
-        private string HandleRedirectUrl(string redirectUrl, string pageId, string languageCode, string affCode)
+        private static string HandleRedirectUrl(string redirectUrl, string pageId, string languageCode, string affCode)
         {
             var customLanguageCode = languageCode;
             if (string.Equals(BENGALI_SHORTED_CODE, languageCode, StringComparison.OrdinalIgnoreCase))
@@ -175,7 +175,7 @@ namespace Fanex.Affiliate.Link.Controllers
             return redirectUrl.Replace($"/{languageCode}/", $"/{customLanguageCode}/");
         }
 
-        private string GetAllHeader(NameValueCollection headers)
+        private static string GetAllHeader(NameValueCollection headers)
         {
             var builder = new StringBuilder();
             foreach (var key in headers.AllKeys)

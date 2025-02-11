@@ -10,7 +10,7 @@ namespace Fanex.Affiliate.Link.Helpers
 {
     public static class LogHelper
     {
-        private const int LimitedLevelOfInnerException = 3;
+        private const int LimitedLevelOfInnerException = 5;
 
         public static void WriteError(Exception exception, string additionalMessage = null)
         {
@@ -88,7 +88,8 @@ namespace Fanex.Affiliate.Link.Helpers
 
             if (exception.InnerException != null && limitedInnerException > 0)
             {
-                AddExceptionInfo(builder, exception.InnerException, --limitedInnerException);
+                var innerExceptionLevel = limitedInnerException - 1;
+                AddExceptionInfo(builder, exception.InnerException, innerExceptionLevel);
             }
         }
     }
